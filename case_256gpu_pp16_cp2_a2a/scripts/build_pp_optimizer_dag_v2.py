@@ -261,7 +261,12 @@ def main() -> None:
         output / "PP_OPTIMIZER_DAG_V2.md",
     )
     _atomic_text(
-        _html(result, metrics, page_title="PP + RS/AG 校准 DAG v2"),
+        _html(
+            result,
+            metrics,
+            page_title="PP + RS/AG 校准 DAG v2",
+            focus_critical_lane=True,
+        ),
         output / "pp_optimizer_dag_v2.html",
     )
     print(

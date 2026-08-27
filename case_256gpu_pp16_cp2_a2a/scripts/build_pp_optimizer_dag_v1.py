@@ -165,10 +165,23 @@ def _html(
     result: object,
     metrics: pd.Series,
     page_title: str = "PP + Optimizer RS/AG 合并 DAG v1",
+    focus_critical_lane: bool = False,
 ) -> str:
     timeline = result.combined_timeline[
         result.combined_timeline["pp_lane"].ge(0)
     ].copy()
+    critical_event = timeline.sort_values(
+        ["predicted_end_ns", "pp_lane"], kind="stable"
+    ).iloc[-1]
+    critical_lane = int(critical_event["pp_lane"])
+    critical_ranks = sorted(
+        int(rank)
+        for rank in timeline[
+            timeline["pp_lane"].eq(critical_lane) & timeline["rank"].ge(0)
+        ]["rank"].unique()
+    )
+    if focus_critical_lane:
+        timeline = timeline[timeline["pp_lane"].eq(critical_lane)].copy()
     columns = [
         "node_id",
         "source_model",
@@ -194,25 +207,56 @@ def _html(
             "observedProfilerMs": float(metrics["observed_profiler_step_ms"]),
             "predictedMfu": float(metrics["predicted_mfu_pct"]),
             "actualMfu": float(metrics["actual_mfu_pct_fixed_flops"]),
+            "viewMode": "critical" if focus_critical_lane else "selectable",
+            "criticalLane": critical_lane,
+            "criticalRanks": critical_ranks,
+            "criticalNode": str(critical_event["node_id"]),
+            "criticalCategory": str(critical_event["category"]),
+            "criticalRank": int(critical_event["rank"]),
+            "criticalStage": int(critical_event["pp_stage"]),
+            "criticalEndMs": (
+                int(critical_event["predicted_end_ns"])
+                - int(metrics["step_start_ns"])
+            )
+            / 1e6,
             "events": timeline[columns].to_dict(orient="records"),
         },
         separators=(",", ":"),
     ).replace("</", "<\\/")
+
+    if focus_critical_lane:
+        scope = f"""<div class="scope-panel">
+<span class="scope-kicker">展示范围</span>
+<strong>尾部关键流水线 · lane {critical_lane}</strong>
+<span>自动选择包含全局最晚完成节点的 lane；完整展示 PP15→PP0。</span>
+<code>ranks {', '.join(str(rank) for rank in critical_ranks)}</code>
+<small>该选择只控制结果展示，不改变 DAG、ProfilerStep 或 MFU。</small>
+</div>"""
+        selection_script = """function selectedEvents(){return DATA.events;}"""
+        selection_listener = ""
+        view_note = "每行对应关键流水线中的一个 PP stage；RS/AG 接在各 rank 的 B3 之后。"
+    else:
+        scope = """<label class="scope-panel selector-panel"><span class="scope-kicker">展示范围</span><strong>Pipeline replica</strong><select id="lane" aria-label="Pipeline replica"></select><small>仅切换结果视图，不改变模型。</small></label>"""
+        selection_script = """const sel=document.querySelector('#lane');for(let i=0;i<16;i++){const o=document.createElement('option');o.value=i;o.textContent='lane '+i;sel.appendChild(o)}function selectedEvents(){return DATA.events.filter(e=>e.pp_lane===+sel.value);}"""
+        selection_listener = "sel.addEventListener('change',render);"
+        view_note = "选择一条 pipeline replica 后，每行对应其中一个 PP stage；RS/AG 接在各 rank 的 B3 之后。"
+
     return f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{page_title}</title><style>
-body{{font-family:system-ui,-apple-system,sans-serif;margin:0;background:#f5f7fb;color:#172033}}main{{padding:22px;max-width:1540px;margin:auto}}h1{{margin:0 0 8px}}.note{{color:#536179;margin-bottom:14px}}
-.toolbar{{display:flex;gap:18px;align-items:center;margin:12px 0;flex-wrap:wrap}}.metric{{background:#fff;border:1px solid #dce2ed;border-radius:8px;padding:7px 10px}}
-.card{{background:#fff;border:1px solid #dce2ed;border-radius:12px;padding:14px;box-shadow:0 2px 8px #14213d0d}}#chart{{position:relative;height:736px;margin-left:58px;border-left:1px solid #aab4c5;border-bottom:1px solid #aab4c5;overflow:hidden}}
+*{{box-sizing:border-box}}body{{font-family:"IBM Plex Sans","Noto Sans SC",system-ui,-apple-system,sans-serif;margin:0;background:#f3f6fa;color:#172033}}main{{padding:24px;max-width:1540px;margin:auto}}.eyebrow{{color:#42617f;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}}h1{{margin:5px 0 7px;font-size:28px;letter-spacing:-.025em}}.note{{color:#536179;margin:0;line-height:1.55}}
+.summary{{display:grid;grid-template-columns:minmax(330px,1.7fr) repeat(2,minmax(220px,1fr));gap:10px;margin:16px 0 12px}}.scope-panel,.metric{{min-height:88px;background:#fff;border:1px solid #d7e0ea;border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;justify-content:center;gap:4px}}.scope-panel{{border-top:3px solid #42617f}}.scope-kicker,.metric-label{{color:#6b788b;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}}.scope-panel strong,.metric strong{{font-size:18px;font-variant-numeric:tabular-nums}}.scope-panel span:not(.scope-kicker),.scope-panel small{{color:#667286;font-size:12px}}.scope-panel code{{color:#33465c;font-size:11px;white-space:normal;line-height:1.4}}.metric strong{{font-size:20px}}.metric small{{color:#667286;font-size:12px}}.selector-panel select{{width:max-content;margin-top:3px;padding:5px 28px 5px 8px;border:1px solid #b8c5d4;border-radius:5px;background:#fff;color:#172033}}
+.card{{background:#fff;border:1px solid #d7e0ea;border-radius:10px;padding:14px}}#chart{{position:relative;height:736px;margin-left:58px;border-left:1px solid #aab4c5;border-bottom:1px solid #aab4c5;overflow:visible}}
 .row{{position:absolute;left:0;right:0;height:42px;border-top:1px solid #eef1f6}}.label{{position:absolute;right:calc(100% + 8px);width:46px;text-align:right;font-size:12px;color:#5c677d}}
 .node{{position:absolute;height:24px;top:8px;border-radius:4px;min-width:2px;opacity:.92}}.compute.forward{{background:#2f80ed}}.compute.backward{{background:#9b51e0}}.pp_message{{height:5px;top:35px;border-radius:0}}.pp_message.forward{{background:#f2994a}}.pp_message.backward{{background:#eb5757}}
 .software_tail{{height:8px;top:29px;background:#7f8c8d}}.optimizer_collective.dp_rs{{background:#d63031}}.optimizer_collective.edp_rs{{background:#e17055}}.optimizer_collective.dp_ag0{{background:#00a86b}}.optimizer_collective.edp_ag0{{background:#00b894}}.optimizer_collective.dp_ag1{{background:#0984a3}}.optimizer_collective.edp_ag1{{background:#00cec9}}
-.axis{{display:flex;justify-content:space-between;margin-left:58px;color:#69758a;font-size:12px}}.legend span{{display:inline-flex;align-items:center;margin-right:10px;font-size:12px}}.sw{{width:12px;height:8px;margin-right:4px;border-radius:2px}}#tip{{position:fixed;display:none;background:#101726;color:white;padding:8px 10px;border-radius:7px;font-size:12px;pointer-events:none;z-index:5;white-space:pre}}
-</style></head><body><main><h1>{page_title}</h1><div class="note">iteration {int(metrics['iteration'])}；选择 PP lane 后，每行对应一个 stage。RS/AG 已接在该 rank 的 B3 之后。</div>
-<div class="toolbar"><label>PP lane <select id="lane"></select></label><span class="metric" id="step"></span><span class="metric" id="mfu"></span></div>
-<div class="card"><div class="legend"><span><i class="sw" style="background:#2f80ed"></i>FWD</span><span><i class="sw" style="background:#9b51e0"></i>BWD</span><span><i class="sw" style="background:#f2994a"></i>PP msg</span><span><i class="sw" style="background:#7f8c8d"></i>tail lag</span><span><i class="sw" style="background:#d63031"></i>DP-RS</span><span><i class="sw" style="background:#e17055"></i>EDP-RS</span><span><i class="sw" style="background:#00a86b"></i>AG0</span><span><i class="sw" style="background:#0984a3"></i>AG1</span></div><div id="chart"></div><div class="axis"><span>ProfilerStep 0</span><span id="axisEnd"></span></div></div><div id="tip"></div>
-</main><script>const DATA={payload};const sel=document.querySelector('#lane'),chart=document.querySelector('#chart'),tip=document.querySelector('#tip');for(let i=0;i<16;i++){{const o=document.createElement('option');o.value=i;o.textContent=i;sel.appendChild(o)}}
-document.querySelector('#step').textContent='ProfilerStep: DAG '+DATA.predictedProfilerMs.toFixed(1)+' ms / Trace '+DATA.observedProfilerMs.toFixed(1)+' ms';document.querySelector('#mfu').textContent='MFU: DAG '+DATA.predictedMfu.toFixed(4)+'% / Trace '+DATA.actualMfu.toFixed(4)+'%';
-function render(){{const lane=+sel.value,end=DATA.predictedProfilerMs*1e6,events=DATA.events.filter(e=>e.pp_lane===lane);chart.innerHTML='';for(let s=15;s>=0;s--){{const row=document.createElement('div');row.className='row';row.style.top=((15-s)*45)+'px';const lab=document.createElement('span');lab.className='label';lab.textContent='PP'+s;row.appendChild(lab);chart.appendChild(row);events.filter(e=>e.pp_stage===s).forEach(e=>{{const start=e.predicted_start_ns-DATA.stepStart,finish=e.predicted_end_ns-DATA.stepStart;if(finish<0||start>end)return;const el=document.createElement('div');el.className='node '+e.kind+' '+e.category;el.style.left=(100*Math.max(0,start)/end)+'%';el.style.width=Math.max(.12,100*Math.max(0,finish-start)/end)+'%';el.onmousemove=x=>{{tip.style.display='block';tip.style.left=(x.clientX+12)+'px';tip.style.top=(x.clientY+12)+'px';const split=e.kind==='pp_message'?'\\nnetwork '+(e.network_service_ns/1e6).toFixed(3)+' ms + software '+(e.software_completion_ns/1e6).toFixed(3)+' ms':'';tip.textContent=e.node_id+'\\n'+e.category+'  PP'+e.pp_stage+' rank '+e.rank+'\\n'+(start/1e6).toFixed(3)+' → '+(finish/1e6).toFixed(3)+' ms'+split+'\\ndep: '+e.dependency;}};el.onmouseleave=()=>tip.style.display='none';row.appendChild(el)}})}}document.querySelector('#axisEnd').textContent=DATA.predictedProfilerMs.toFixed(1)+' ms';}}sel.onchange=render;render();</script></body></html>"""
+.axis{{display:flex;justify-content:space-between;margin-left:58px;color:#69758a;font-size:12px}}.legend{{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-bottom:6px}}.legend span{{display:inline-flex;align-items:center;gap:4px;font-size:12px}}.sw{{width:12px;height:8px;border-radius:2px}}#tip{{position:fixed;display:none;background:#101726;color:white;padding:8px 10px;border-radius:7px;font-size:12px;pointer-events:none;z-index:5;white-space:pre}}
+@media(max-width:900px){{main{{padding:14px}}.summary{{grid-template-columns:1fr}}.scope-panel,.metric{{min-height:auto}}}}
+</style></head><body><main data-screen-label="MFU DAG result"><header><div class="eyebrow">Trace-driven MFU · iteration {int(metrics['iteration'])}</div><h1>{page_title}</h1><p class="note">{view_note}</p></header>
+<section class="summary" aria-label="回放摘要">{scope}<div class="metric"><span class="metric-label">ProfilerStep</span><strong id="step"></strong><small id="stepTrace"></small></div><div class="metric"><span class="metric-label">Fixed-FLOP MFU</span><strong id="mfu"></strong><small id="mfuTrace"></small></div></section>
+<section class="card" aria-label="关键流水线时间线"><div class="legend"><span><i class="sw" style="background:#2f80ed"></i>FWD</span><span><i class="sw" style="background:#9b51e0"></i>BWD</span><span><i class="sw" style="background:#f2994a"></i>PP FWD msg</span><span><i class="sw" style="background:#eb5757"></i>PP BWD msg</span><span><i class="sw" style="background:#7f8c8d"></i>tail lag</span><span><i class="sw" style="background:#d63031"></i>DP-RS</span><span><i class="sw" style="background:#e17055"></i>EDP-RS</span><span><i class="sw" style="background:#00a86b"></i>AG0</span><span><i class="sw" style="background:#0984a3"></i>AG1</span></div><div id="chart" role="img" aria-label="PP15 到 PP0 的预测时间线"></div><div class="axis"><span>ProfilerStep 0</span><span id="axisEnd"></span></div></section><div id="tip"></div>
+</main><script>const DATA={payload};const chart=document.querySelector('#chart'),tip=document.querySelector('#tip');{selection_script}
+document.querySelector('#step').textContent=DATA.predictedProfilerMs.toFixed(1)+' ms';document.querySelector('#stepTrace').textContent='Trace '+DATA.observedProfilerMs.toFixed(1)+' ms';document.querySelector('#mfu').textContent=DATA.predictedMfu.toFixed(4)+'%';document.querySelector('#mfuTrace').textContent='Trace '+DATA.actualMfu.toFixed(4)+'%';
+function render(){{const end=DATA.predictedProfilerMs*1e6,events=selectedEvents();chart.innerHTML='';for(let s=15;s>=0;s--){{const row=document.createElement('div');row.className='row';row.style.top=((15-s)*45)+'px';const lab=document.createElement('span');lab.className='label';lab.textContent='PP'+s;row.appendChild(lab);chart.appendChild(row);events.filter(e=>e.pp_stage===s).forEach(e=>{{const start=e.predicted_start_ns-DATA.stepStart,finish=e.predicted_end_ns-DATA.stepStart;if(finish<0||start>end)return;const el=document.createElement('div');el.className='node '+e.kind+' '+e.category;el.style.left=(100*Math.max(0,start)/end)+'%';el.style.width=Math.max(.12,100*Math.max(0,finish-start)/end)+'%';el.onmousemove=x=>{{tip.style.display='block';tip.style.left=(x.clientX+12)+'px';tip.style.top=(x.clientY+12)+'px';const split=e.kind==='pp_message'?'\\nnetwork '+(e.network_service_ns/1e6).toFixed(3)+' ms + software '+(e.software_completion_ns/1e6).toFixed(3)+' ms':'';tip.textContent=e.node_id+'\\n'+e.category+'  PP'+e.pp_stage+' rank '+e.rank+'\\n'+(start/1e6).toFixed(3)+' → '+(finish/1e6).toFixed(3)+' ms'+split+'\\ndep: '+e.dependency;}};el.onmouseleave=()=>tip.style.display='none';row.appendChild(el)}})}}document.querySelector('#axisEnd').textContent=DATA.predictedProfilerMs.toFixed(1)+' ms';}}{selection_listener}render();</script></body></html>"""
 
 
 def main() -> None:
