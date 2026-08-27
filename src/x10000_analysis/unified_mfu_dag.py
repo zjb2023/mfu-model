@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 
 from .mfu_timeline import TimelineResult, build_optimizer_timeline_model
+from .oisa_fct import CollectiveFctProvider
 from .pp_dag import PipelineDagResult, build_pipeline_dag
 
 
@@ -40,6 +41,7 @@ def build_unified_mfu_dag(
     peak_tflops_per_gpu: float,
     optimizer_service_scales: Mapping[str, float] | None = None,
     pp_software_completion_ns: Mapping[str, int | float] | None = None,
+    optimizer_fct_provider: CollectiveFctProvider | None = None,
 ) -> UnifiedDagResult:
     """Build one iteration from PP compute through optimizer RS/AG completion."""
     if model_flops_per_iteration <= 0 or world_size <= 0 or peak_tflops_per_gpu <= 0:
@@ -137,6 +139,7 @@ def build_unified_mfu_dag(
         selected_clocks,
         service_scales=optimizer_service_scales,
         front_anchors=front_anchors[["iteration", "rank", "predicted_start_ns"]],
+        fct_provider=optimizer_fct_provider,
     )
     optimizer_calls_predicted = optimizer.calls.merge(
         topology, on=["rank", "pp_stage"], validate="many_to_one"
@@ -218,7 +221,7 @@ def build_unified_mfu_dag(
     opt_timeline["duration_ns"] = (
         opt_timeline["predicted_end_ns"] - opt_timeline["predicted_start_ns"]
     )
-    opt_timeline["network_service_ns"] = 0
+    opt_timeline["network_service_ns"] = opt_timeline["predicted_service_ns"]
     opt_timeline["software_completion_ns"] = 0
     opt_timeline["kind"] = "optimizer_collective"
     combined_rows.append(
@@ -394,6 +397,9 @@ def build_unified_mfu_dag(
                 "first_ag0_offset_ms": float(metrics["first_ag0_offset_ms"]),
                 "last_ag_offset_ms": float(metrics["last_ag_offset_ms"]),
                 "all_dp_service_exposed_ms": float(metrics["all_dp_service_exposed_ms"]),
+                "service_marginals_available": bool(
+                    metrics["service_marginals_available"]
+                ),
                 "model_flops_per_iteration": float(model_flops_per_iteration),
                 "world_size": world_size,
                 "peak_tflops_per_gpu": peak_tflops_per_gpu,

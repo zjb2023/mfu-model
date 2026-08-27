@@ -29,6 +29,47 @@ This is an in-sample replay result for one fully materialized iteration.  The
 next validation step is to hold out additional captured iterations before
 treating the software-completion parameter as a general predictor.
 
+## V3：OISA FCT 接入边界（当前使用 Mock）
+
+`v2` 仍是当前 Trace-reference 校准模型。`v3` 在其上增加 OISA Provider
+接口和 slack 审计；真实 OISA 的错峰 Rank 仿真仍在开发，因此仓库中的 v3
+结果明确使用 `Mock OISA = Trace 网络尾部 × 1.2`，只验证接入逻辑，不代表
+网络性能预测。
+
+每个 optimizer collective group 的调用方式为：
+
+```text
+MFU DAG 计算 rank arrivals
+  → rank_release_offset[r] = arrival[r] - min(arrival)
+  → OISA(op, payload, group_ranks, rank_release_offsets)
+  → collective_elapsed = arrival_span + tail_after_last_release
+  → group_end = min(arrival) + collective_elapsed
+```
+
+因此模型不会错误使用 `max(arrival) + collective_elapsed`。OISA 只替换
+网络 FCT；Trace 中各 Rank 相对 group end 的 completion skew 独立保留，
+不会再随网络 service 一起缩放。
+
+当前 Mock 场景覆盖 DAG 已经显式建模的 432 个 DP/EDP RS、AG group。
+六类网络尾部统一增加 20% 后，400 组完全被 downstream slack 隐藏，完整
+ProfilerStep 增加 45.480 ms。这个结果说明多个 FCT 增量不能直接求和，
+必须放回 max-plus DAG 重新传播。
+
+真实 OISA 结果可以直接由 `RecordedOisaFctProvider` 读取。请求 ID 包含
+Rank release offsets 的签名；如果上游时间变化导致 offsets 不同，旧结果会
+被拒绝，并提示重新运行 OISA，而不会静默复用不匹配的 FCT：
+
+```python
+records = pd.read_csv("oisa_results.csv").to_dict(orient="records")
+provider = RecordedOisaFctProvider(records)
+result = build_unified_mfu_dag(optimizer_fct_provider=provider, ...)
+```
+
+有限的结果表只覆盖这一组 arrival signatures，因此模型会关闭额外的
+`no_all_dp/no_rs/no_ag` 边际查询，并在结果中设置
+`service_marginals_available=false`。如果 OISA 以在线 Provider 形式响应新
+offsets，则可以继续计算这些动态反事实。
+
 ## V1 到 V2：PP backward completion 校准
 
 V1 已经把实测 FWD/BWD compute、PP16 的 1F1B 依赖以及 DP/Expert-DP
@@ -129,11 +170,14 @@ PP0 或某个代表 rank 人工附加一个总等待时间。
 
 - `src/x10000_analysis/pp_dag.py`: non-interleaved 1F1B schedule and PP DAG.
 - `src/x10000_analysis/mfu_timeline.py`: DP/Expert-DP RS/AG max-plus model.
+- `src/x10000_analysis/oisa_fct.py`: OISA request/result contract and mock provider.
 - `src/x10000_analysis/unified_mfu_dag.py`: dynamic PP-frontier to RS/AG join.
 - `case_256gpu_pp16_cp2_a2a/data/`: frozen, compact model inputs; no raw traces.
 - `case_256gpu_pp16_cp2_a2a/results/pp_dag_minimal/`: preserved PP-only v0.
 - `case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v1/`: preserved merged v1.
 - `case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v2/`: calibrated current model.
+- `case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v3_oisa_mock/`: OISA
+  interface exercise, request/response examples, and per-group slack audit.
 
 ## Rebuild
 
@@ -144,6 +188,7 @@ python3 -m venv .venv
 .venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_pp_dag.py
 .venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_pp_optimizer_dag_v1.py
 .venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_pp_optimizer_dag_v2.py
+.venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_pp_optimizer_dag_v3.py
 .venv/bin/pytest -q
 ```
 
@@ -156,6 +201,10 @@ python3 -m http.server 8013 --bind 127.0.0.1
 Then open:
 
 `http://127.0.0.1:8013/case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v2/pp_optimizer_dag_v2.html`
+
+View the Mock-OISA integration exercise:
+
+`http://127.0.0.1:8013/case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v3_oisa_mock/pp_optimizer_dag_v3_oisa_mock.html`
 
 ## Data boundary
 

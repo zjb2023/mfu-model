@@ -10,12 +10,23 @@ lanes.  Each rank contributes four FWD and four BWD compute annotations.
 - `results/pp_optimizer_dag_v2`: backward network service and cluster software
   completion separated; current replay error is -0.1010% for ProfilerStep and
   +0.0954% relative for MFU.
+- `results/pp_optimizer_dag_v3_oisa_mock`: preserves the v2 compute/software
+  calibration and exercises the staggered-rank OISA FCT contract.  Its ×1.2
+  network-tail scenario is a deterministic interface test, not a network
+  prediction.
 
 The authoritative v2 explanation and validation are:
 
 - `results/pp_optimizer_dag_v2/PP_OPTIMIZER_DAG_V2.md`
 - `results/pp_optimizer_dag_v2/validation.json`
 - `results/pp_optimizer_dag_v2/pp_software_completion_calibration.csv`
+
+The v3 OISA boundary and slack outputs are:
+
+- `results/pp_optimizer_dag_v3_oisa_mock/oisa_mock_requests.csv`
+- `results/pp_optimizer_dag_v3_oisa_mock/oisa_mock_responses.csv`
+- `results/pp_optimizer_dag_v3_oisa_mock/collective_slack_audit.csv`
+- `results/pp_optimizer_dag_v3_oisa_mock/PP_OPTIMIZER_DAG_V3_OISA_MOCK.md`
 
 Normal rebuilds use only the checked-in CSV/JSON files.  Refreshing trace facts
 is optional and requires paths to the original authorized capture:

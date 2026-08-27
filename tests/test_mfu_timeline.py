@@ -4,8 +4,13 @@ import pandas as pd
 import pytest
 
 from x10000_analysis.mfu_timeline import (
+    build_collective_slack_audit,
     build_optimizer_timeline_model,
     validate_iteration_clocks,
+)
+from x10000_analysis.oisa_fct import (
+    RecordedOisaFctProvider,
+    ScaledMockOisaFctProvider,
 )
 
 
@@ -109,6 +114,74 @@ def test_dense_rs_service_change_propagates_through_dependency_graph() -> None:
     # separately added to the collective service.
     assert calls.loc[calls["kind"].eq("edp_rs"), "predicted_start_ns"].max() < 180
     assert result.iterations.iloc[0]["predicted_profiler_step_ms"] < 299 / 1e6
+
+
+def test_oisa_elapsed_starts_at_first_release_and_completion_is_not_scaled() -> None:
+    result = build_optimizer_timeline_model(
+        _full_calls(),
+        _clocks(),
+        fct_provider=ScaledMockOisaFctProvider(default_scale=2.0),
+    )
+    dense_rs = result.calls[result.calls["kind"].eq("dp_rs")].sort_values("rank")
+    # Starts are 100 and 110: OISA elapsed is 10 arrival span + 100 tail.
+    # group_end must be first_release 100 + elapsed 110 = 210, not
+    # last_release 110 + elapsed 110 = 220.
+    assert dense_rs["oisa_collective_elapsed_ns"].eq(110).all()
+    assert dense_rs["predicted_group_end_ns"].eq(210).all()
+    # The measured rank completion skew is 10 ns and remains 10 ns.  It is a
+    # separate Trace property, not another network-service multiplier.
+    assert dense_rs["predicted_completion_advance_ns"].tolist() == [10, 0]
+    assert dense_rs["predicted_end_ns"].tolist() == [200, 210]
+
+
+def test_collective_slack_audit_separates_hidden_and_exposed_tail() -> None:
+    audit = build_collective_slack_audit(
+        _full_calls(),
+        _clocks(),
+        reference_provider=ScaledMockOisaFctProvider(default_scale=1.0),
+        candidate_provider=ScaledMockOisaFctProvider(default_scale=2.0),
+    )
+    final = audit[
+        audit["kind"].eq("edp_ag1") & audit["group_key"].eq("expert1")
+    ].iloc[0]
+    earlier = audit[
+        audit["kind"].eq("edp_ag1") & audit["group_key"].eq("expert0")
+    ].iloc[0]
+    assert final["group_finish_shift_ns"] == 5
+    assert final["iteration_drag_ns"] == 5
+    assert final["exposure_ratio"] == 1
+    assert earlier["group_finish_shift_ns"] == 5
+    assert earlier["iteration_drag_ns"] == 0
+    assert bool(earlier["fully_hidden"])
+
+
+def test_finite_recorded_oisa_table_replays_baseline_without_extra_queries() -> None:
+    online = build_optimizer_timeline_model(
+        _full_calls(),
+        _clocks(),
+        fct_provider=ScaledMockOisaFctProvider(default_scale=1.1),
+    )
+    records = []
+    for group in online.groups.itertuples(index=False):
+        records.append(
+            {
+                "request_id": group.fct_request_id,
+                "first_release_ns": 0,
+                "last_release_ns": group.predicted_arrival_skew_ns,
+                "last_flow_end_ns": group.oisa_collective_elapsed_ns,
+                "collective_elapsed_ns": group.oisa_collective_elapsed_ns,
+                "arrival_span_ns": group.predicted_arrival_skew_ns,
+                "tail_after_last_release_ns": group.oisa_tail_after_last_release_ns,
+            }
+        )
+    recorded = build_optimizer_timeline_model(
+        _full_calls(),
+        _clocks(),
+        fct_provider=RecordedOisaFctProvider(records),
+    )
+    assert recorded.calls["predicted_end_ns"].equals(online.calls["predicted_end_ns"])
+    assert not bool(recorded.iterations.iloc[0]["service_marginals_available"])
+    assert recorded.iterations.iloc[0]["all_dp_service_exposed_ms"] == 0
 
 
 def test_pp_frontier_replaces_measured_dense_rs_arrivals() -> None:
