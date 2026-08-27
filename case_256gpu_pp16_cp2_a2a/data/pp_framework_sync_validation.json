@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "runtime_raw_trace_dependency": false,
+  "cell_count": 5120,
+  "rank_count": 256,
+  "iteration_count": 20,
+  "kernel_count": 72977,
+  "operation_count": 76800,
+  "payload_bytes_per_operation": 83886080,
+  "service_reference_fct_ns": 4712346,
+  "service_reference_bandwidth_GBps": 17.801341412536345,
+  "service_definition": "median of per-cell minimum PP kernel duration",
+  "wait_definition": "trace PP kernel sum minus calls*service reference",
+  "duration_conservation_error_ns_max": 0,
+  "one_time_extraction_inputs": {
+    "trace_manifest": {
+      "path": "source-case/results/readiness/profiler_trace_manifest.csv",
+      "sha256": "b4ada367fc696df5ad357aa78a65814ecffa5353ca1a584a72c82cbc7abb9757"
+    },
+    "rank_topology": {
+      "path": "source-case/results/topology/rank_topology.csv",
+      "sha256": "777a0c941c17f94bb84d58e50153395a6b38acdc81d743b72a096624bb061807"
+    }
+  },
+  "output": "data/pp_framework_sync_cells.csv"
+}

@@ -1,0 +1,170 @@
+{
+  "counts": {
+    "collective_groups": 8640,
+    "iterations": 20,
+    "pp_stage_iterations": 320,
+    "rank_collective_calls": 30717
+  },
+  "formula": {
+    "group_completion": "max(rank_arrival) + scaled_group_service",
+    "mfu": "model_flops / (world_size * peak_flops_per_gpu * training_log_step)",
+    "rank_completion": "group_completion - scaled_completion_advance",
+    "training_clock": "predicted_profiler_step + measured_outer_residual"
+  },
+  "inputs": {
+    "iteration_clocks": {
+      "path": "case_256gpu_pp16_cp2_a2a/data/iteration_clocks.csv",
+      "sha256": "b3a67befd64ab881bdedeb2045962267687af67bb95a052ddeb3cad7b650f950"
+    },
+    "optimizer_timeline_calls": {
+      "path": "case_256gpu_pp16_cp2_a2a/data/optimizer_timeline_calls.csv",
+      "sha256": "46db5bd3fc961ffc9063ca52cdc016b1459a5eb55e0cc80cc97006ee62af916c"
+    }
+  },
+  "model_flops_per_iteration": 1.293891072e+17,
+  "parallel": {
+    "context_parallel_size": 2,
+    "data_parallel_size": 8,
+    "dense_communicator_size": 16,
+    "expert_communicator_size": 2,
+    "expert_parallel_size": 8,
+    "pipeline_parallel_size": 16,
+    "tensor_parallel_size": 1,
+    "world_size": 256
+  },
+  "peak_tflops_per_gpu": 500.0,
+  "quantiles": {
+    "actual_mfu_pct": {
+      "p10": 4.018000000000001,
+      "p50": 4.37,
+      "p90": 4.52
+    },
+    "ag_service_marginal_ms": {
+      "p10": 127.8273108,
+      "p50": 139.19368450000002,
+      "p90": 145.0338858
+    },
+    "all_dp_service_exposed_ms": {
+      "p10": 207.5653279,
+      "p50": 218.90506449999998,
+      "p90": 225.2068525
+    },
+    "all_group_fct_union_ms": {
+      "p10": 4337.2508415,
+      "p50": 6440.746557500001,
+      "p90": 9602.8438081
+    },
+    "counterfactual_no_dp_mfu_pct": {
+      "p10": 4.048420045672674,
+      "p50": 4.406094078029993,
+      "p90": 4.570085984105909
+    },
+    "dense_dp_service_marginal_ms": {
+      "p10": 38.375041499999995,
+      "p50": 38.896649499999995,
+      "p90": 43.802799300000004
+    },
+    "dp_envelope_ms": {
+      "p10": 11676.748268,
+      "p50": 12032.375063,
+      "p90": 13259.2422979
+    },
+    "dp_envelope_pct_of_profiler": {
+      "p10": 55.01869732383627,
+      "p50": 55.641092673234795,
+      "p90": 56.11400219953535
+    },
+    "expert_dp_service_marginal_ms": {
+      "p10": 168.9599143,
+      "p50": 179.2489065,
+      "p90": 182.72560629999998
+    },
+    "first_ag0_offset_ms": {
+      "p10": 20958.0086439,
+      "p50": 21556.4777505,
+      "p90": 23562.306174100002
+    },
+    "first_rs_offset_ms": {
+      "p10": 9381.141356099999,
+      "p50": 9706.682459,
+      "p90": 10604.2174133
+    },
+    "gradient_rs_done_offset_ms": {
+      "p10": 20924.2559086,
+      "p50": 21522.578813,
+      "p90": 23529.4086921
+    },
+    "group_fct_union_pct_of_dp_envelope": {
+      "p10": 37.01829509473885,
+      "p50": 51.440597370125175,
+      "p90": 77.85314857475576
+    },
+    "last_ag_offset_ms": {
+      "p10": 21207.6257024,
+      "p50": 21817.609192000004,
+      "p90": 23805.5142392
+    },
+    "outer_residual_ms": {
+      "p10": 1115.9025913,
+      "p50": 1327.5768739999999,
+      "p90": 1458.6866625999999
+    },
+    "predicted_mfu_pct": {
+      "p10": 4.01459126438045,
+      "p50": 4.365092992726989,
+      "p90": 4.525358725072185
+    },
+    "profiler_step_ms": {
+      "p10": 21223.3775079,
+      "p50": 21821.3578495,
+      "p90": 23809.4493605
+    },
+    "rs_envelope_ms": {
+      "p10": 11399.736638499999,
+      "p50": 11758.3237925,
+      "p90": 12980.3855833
+    },
+    "rs_group_fct_union_ms": {
+      "p10": 4118.039043,
+      "p50": 6216.234119000001,
+      "p90": 9358.458144200002
+    },
+    "rs_service_marginal_ms": {
+      "p10": 79.294893,
+      "p50": 79.7936455,
+      "p90": 80.1894369
+    },
+    "rs_uncovered_inside_envelope_ms": {
+      "p10": 2604.7458073000003,
+      "p50": 6087.4917495,
+      "p90": 7339.052007600001
+    },
+    "rs_union_pct_of_rs_envelope": {
+      "p10": 35.96738206487011,
+      "p50": 50.847772809035824,
+      "p90": 77.60664102548458
+    },
+    "training_log_ms": {
+      "p10": 22337.510000000002,
+      "p50": 23158.65,
+      "p90": 25179.489999999998
+    }
+  },
+  "schema": "mfu-timeline-max-plus-v1",
+  "service_scales": {
+    "dp_ag0": 1.0,
+    "dp_ag1": 1.0,
+    "dp_rs": 1.0,
+    "edp_ag0": 1.0,
+    "edp_ag1": 1.0,
+    "edp_rs": 1.0
+  },
+  "status": "PASS",
+  "validation": {
+    "all_rs_finish_before_ag0": true,
+    "clamped_negative_dependency_lags": 1,
+    "clock_conservation_max_abs_ns": 0.0,
+    "fallback_dependencies": 2,
+    "max_abs_profiler_replay_error_ms": 0.000191
+  }
+}

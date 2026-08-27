@@ -1,0 +1,41 @@
+{
+  "counts": {
+    "combined_timeline_nodes": 5761,
+    "dependency_edges": 9616,
+    "front_anchor_ranks": 256,
+    "optimizer_groups": 432,
+    "optimizer_rank_calls": 1536
+  },
+  "iteration": 55,
+  "metrics": {
+    "actual_mfu_pct_fixed_flops": 4.406486458210731,
+    "all_dp_service_exposed_ms": 224.652265,
+    "observed_profiler_step_ms": 21638.095425,
+    "observed_training_log_ms": 22940.1,
+    "predicted_mfu_pct": 4.751922175668258,
+    "predicted_profiler_step_ms": 19970.490273,
+    "predicted_training_log_ms": 21272.494848,
+    "profiler_replay_error_ms": -1667.605152,
+    "profiler_replay_error_pct": -7.706801912303704
+  },
+  "optimizer_service_scales": {
+    "dp_ag0": 1.0,
+    "dp_ag1": 1.0,
+    "dp_rs": 1.0,
+    "edp_ag0": 1.0,
+    "edp_ag1": 1.0,
+    "edp_rs": 1.0
+  },
+  "pp_service_final_step_marginal_ms": 164.93210999999792,
+  "pp_service_ns": 4712346,
+  "schema": "pp-optimizer-dag-v1",
+  "status": "PASS",
+  "v0_preserved_at": "case_256gpu_pp16_cp2_a2a/results/pp_dag_minimal",
+  "validation": {
+    "all_dense_rs_use_pp_frontier": true,
+    "all_dependency_edge_nodes_exist": true,
+    "all_rs_finish_before_ag0": true,
+    "pp_fct_changes_final_step": true,
+    "unknown_dependency_nodes": []
+  }
+}
