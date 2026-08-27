@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from dataclasses import replace
+
 import pandas as pd
 import pytest
 
@@ -11,6 +13,7 @@ from x10000_analysis.mfu_timeline import (
 from x10000_analysis.oisa_fct import (
     RecordedOisaFctProvider,
     ScaledMockOisaFctProvider,
+    TraceReferenceFctProvider,
 )
 
 
@@ -182,6 +185,32 @@ def test_finite_recorded_oisa_table_replays_baseline_without_extra_queries() -> 
     assert recorded.calls["predicted_end_ns"].equals(online.calls["predicted_end_ns"])
     assert not bool(recorded.iterations.iloc[0]["service_marginals_available"])
     assert recorded.iterations.iloc[0]["all_dp_service_exposed_ms"] == 0
+
+
+def test_oisa_rank_done_offsets_replace_trace_completion_skew() -> None:
+    class RankDoneProvider:
+        supports_dynamic_arrivals = False
+
+        def __call__(self, request):
+            result = TraceReferenceFctProvider()(request)
+            if request.kind != "dp_rs":
+                return result
+            return replace(
+                result,
+                source="oisa_rank_done_test",
+                rank_network_done_offsets_ns={
+                    rank: result.last_flow_end_ns for rank in request.ranks
+                },
+            )
+
+    result = build_optimizer_timeline_model(
+        _full_calls(), _clocks(), fct_provider=RankDoneProvider()
+    )
+    dense = result.calls[result.calls["kind"].eq("dp_rs")].sort_values("rank")
+    assert dense["predicted_group_end_ns"].tolist() == [160, 160]
+    assert dense["predicted_end_ns"].tolist() == [160, 160]
+    assert dense["predicted_completion_advance_ns"].tolist() == [0, 0]
+    assert set(dense["completion_model"]) == {"oisa_rank_network_done"}
 
 
 def test_pp_frontier_replaces_measured_dense_rs_arrivals() -> None:

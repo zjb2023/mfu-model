@@ -11,6 +11,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from hashlib import sha1
+import json
 from typing import Iterable, Mapping, Protocol
 
 import numpy as np
@@ -113,6 +114,7 @@ class CollectiveFctResult:
     arrival_span_ns: int
     tail_after_last_release_ns: int
     source: str
+    rank_network_done_offsets_ns: Mapping[int, int] | None = None
     simulator_commit: str = ""
     topology_hash: str = ""
 
@@ -125,6 +127,20 @@ class CollectiveFctResult:
             "collective_elapsed_ns": self.collective_elapsed_ns,
             "arrival_span_ns": self.arrival_span_ns,
             "tail_after_last_release_ns": self.tail_after_last_release_ns,
+            "rank_network_done_offsets_ns": (
+                json.dumps(
+                    {
+                        str(rank): int(offset)
+                        for rank, offset in sorted(
+                            self.rank_network_done_offsets_ns.items()
+                        )
+                    },
+                    sort_keys=True,
+                    separators=(",", ":"),
+                )
+                if self.rank_network_done_offsets_ns is not None
+                else ""
+            ),
             "source": self.source,
             "simulator_commit": self.simulator_commit,
             "topology_hash": self.topology_hash,
@@ -211,6 +227,20 @@ def validate_fct_result(
         raise ValueError(
             "OISA result must conserve elapsed = arrival_span + tail_after_last_release"
         )
+    if result.rank_network_done_offsets_ns is not None:
+        done = {
+            int(rank): int(offset)
+            for rank, offset in result.rank_network_done_offsets_ns.items()
+        }
+        if set(done) != set(request.ranks):
+            raise ValueError("OISA rank done offsets do not cover the request ranks")
+        releases = dict(request.rank_release_offsets_ns)
+        if any(done[rank] < releases[rank] for rank in request.ranks):
+            raise ValueError("OISA rank completed before its release offset")
+        if any(offset > result.last_flow_end_ns for offset in done.values()):
+            raise ValueError("OISA rank completion falls after last_flow_end_ns")
+        if max(done.values()) != result.last_flow_end_ns:
+            raise ValueError("OISA rank completions do not conserve last_flow_end_ns")
     return result
 
 
@@ -326,6 +356,22 @@ class RecordedOisaFctProvider:
             request_id = str(record["request_id"])
             if request_id in self.results:
                 raise ValueError(f"duplicate recorded OISA request id: {request_id}")
+            raw_rank_done = record.get("rank_network_done_offsets_ns")
+            if raw_rank_done is None or (
+                isinstance(raw_rank_done, float) and np.isnan(raw_rank_done)
+            ) or raw_rank_done == "":
+                rank_done = None
+            else:
+                if isinstance(raw_rank_done, str):
+                    raw_rank_done = json.loads(raw_rank_done)
+                if not isinstance(raw_rank_done, Mapping):
+                    raise ValueError(
+                        "recorded OISA rank_network_done_offsets_ns must be a mapping"
+                    )
+                rank_done = {
+                    int(rank): int(offset)
+                    for rank, offset in raw_rank_done.items()
+                }
             self.results[request_id] = CollectiveFctResult(
                 request_id=request_id,
                 first_release_ns=int(record["first_release_ns"]),
@@ -335,6 +381,7 @@ class RecordedOisaFctProvider:
                 arrival_span_ns=int(record["arrival_span_ns"]),
                 tail_after_last_release_ns=int(record["tail_after_last_release_ns"]),
                 source=str(record.get("source", "oisa_recorded")),
+                rank_network_done_offsets_ns=rank_done,
                 simulator_commit=str(record.get("simulator_commit", "")),
                 topology_hash=str(record.get("topology_hash", "")),
             )

@@ -14,6 +14,10 @@ lanes.  Each rank contributes four FWD and four BWD compute annotations.
   calibration and exercises the staggered-rank OISA FCT contract.  Its ×1.2
   network-tail scenario is a deterministic interface test, not a network
   prediction.
+- `results/oisa_real_validation_faa3c78`: uses the real OISA/ns-3 binary for
+  the release-offset smoke and one critical EDP-AG0 group, then replays that
+  result through the complete MFU DAG.  It is an interface validation on the
+  fixed 8-GPU topology, not a 256-GPU calibration.
 
 The authoritative v2 explanation and validation are:
 
@@ -27,6 +31,13 @@ The v3 OISA boundary and slack outputs are:
 - `results/pp_optimizer_dag_v3_oisa_mock/oisa_mock_responses.csv`
 - `results/pp_optimizer_dag_v3_oisa_mock/collective_slack_audit.csv`
 - `results/pp_optimizer_dag_v3_oisa_mock/PP_OPTIMIZER_DAG_V3_OISA_MOCK.md`
+
+The real-OISA validation report and machine-readable checks are:
+
+- `results/oisa_real_validation_faa3c78/MFU_OISA_REAL_VALIDATION.md`
+- `results/oisa_real_validation_faa3c78/validation.json`
+- `results/oisa_real_validation_faa3c78/interface_a2a_comparison.json`
+- `results/oisa_real_validation_faa3c78/iteration_comparison.csv`
 
 Normal rebuilds use only the checked-in CSV/JSON files.  Refreshing trace facts
 is optional and requires paths to the original authorized capture:

@@ -37,6 +37,7 @@ def test_recorded_oisa_result_can_replace_mock_provider() -> None:
                 "collective_elapsed_ns": 40,
                 "arrival_span_ns": 10,
                 "tail_after_last_release_ns": 30,
+                "rank_network_done_offsets_ns": {"6": 40, "7": 35},
                 "source": "oisa_ns3",
                 "simulator_commit": "abc123",
                 "topology_hash": "topo456",
@@ -47,6 +48,7 @@ def test_recorded_oisa_result_can_replace_mock_provider() -> None:
     assert request.op == "reduce_scatter"
     assert result.collective_elapsed_ns == 40
     assert result.tail_after_last_release_ns == 30
+    assert result.rank_network_done_offsets_ns == {6: 40, 7: 35}
 
 
 def test_recorded_oisa_result_must_match_release_signature() -> None:

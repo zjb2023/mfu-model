@@ -1,0 +1,45 @@
+{
+  "checks": {
+    "all_interface_flow_fcts_changed": true,
+    "collective_elapsed_identity": true,
+    "critical_group_tail_delta_reaches_step": true,
+    "dp16_exceeds_current_topology": true,
+    "interface_competition_changed": true,
+    "interface_start_times_differ": true,
+    "oisa_commit_matches": true,
+    "provider_used_oisa_rank_done": true,
+    "rank_done_effect_is_separately_conserved": true,
+    "staggered_dependency_gate_valid": true,
+    "sync_dependency_gate_valid": true
+  },
+  "limitations": {
+    "current_oisa_topology_ranks": 8,
+    "measured_dp_group_size": 16,
+    "n_channels": 1,
+    "performance_calibration_valid": false
+  },
+  "metrics": {
+    "baseline_mfu_pct": 4.410689399661704,
+    "baseline_profiler_step_ms": 21616.235827,
+    "hybrid_mfu_pct": 4.3942881983629025,
+    "hybrid_profiler_step_ms": 21701.775659,
+    "oisa_tail_after_last_release_ns": 152088036,
+    "profiler_step_delta_ns": 85539832,
+    "rank_done_profiler_step_delta_ns": 66037,
+    "tail_delta_ns": 85473795,
+    "tail_only_profiler_step_delta_ns": 85473795,
+    "trace_reference_tail_ns": 66614241
+  },
+  "oisa_commit": "faa3c789549d542484ca9aab132b7d4727afd14a",
+  "rank_remapping_is_validation_only": true,
+  "schema": "mfu-real-oisa-single-group-validation-v1",
+  "status": "PASS",
+  "target_group_id": "iter55:pp14:edp_ag0:round0:expert_dp_param_allgather:pg=1279",
+  "target_original_ranks": [
+    230,
+    238
+  ],
+  "target_payload_bytes": 1887436800,
+  "topology_gpu_count": 8,
+  "topology_hash": "042913fea6744a475de66b225949a2c997ba6b637a21534bd61c0885318ec426"
+}

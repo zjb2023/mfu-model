@@ -315,6 +315,16 @@ def _simulate_iteration(
             group["predicted_group_end_ns"] = (
                 group["predicted_group_first_start_ns"] + predicted_elapsed
             )
+            if response.rank_network_done_offsets_ns is not None and scale == 1.0:
+                rank_done = {
+                    int(rank): int(offset)
+                    for rank, offset in response.rank_network_done_offsets_ns.items()
+                }
+                group["provider_rank_done_offset_ns"] = (
+                    group["rank"].map(rank_done).astype("int64")
+                )
+            else:
+                group["provider_rank_done_offset_ns"] = -1
             group_results.append(group)
         selected = pd.concat(group_results).sort_index()
 
@@ -333,6 +343,22 @@ def _simulate_iteration(
             selected["predicted_group_end_ns"]
             - selected["predicted_completion_advance_ns"]
         )
+        provider_done = selected["provider_rank_done_offset_ns"].ge(0)
+        if provider_done.any():
+            selected.loc[provider_done, "predicted_end_ns"] = (
+                selected.loc[provider_done, "predicted_group_first_start_ns"]
+                + selected.loc[provider_done, "provider_rank_done_offset_ns"]
+            )
+            if (
+                selected.loc[provider_done, "predicted_end_ns"]
+                < selected.loc[provider_done, "predicted_start_ns"]
+            ).any():
+                raise ValueError("OISA rank completion falls before MFU rank release")
+            selected.loc[provider_done, "predicted_completion_advance_ns"] = (
+                selected.loc[provider_done, "predicted_group_end_ns"]
+                - selected.loc[provider_done, "predicted_end_ns"]
+            )
+            selected.loc[provider_done, "completion_model"] = "oisa_rank_network_done"
         simulated_kind = selected
         for row in simulated_kind.itertuples(index=False):
             simulated_end[(kind, int(row.pp_stage), int(row.rank))] = int(
@@ -581,6 +607,7 @@ def build_optimizer_timeline_model(
             "predicted_collective_elapsed_ns",
             "first",
         ),
+        "completion_model": ("completion_model", lambda values: ",".join(sorted(set(values)))),
         "dependency_lag_ns_min": ("dependency_lag_ns", "min"),
         "dependency_lag_ns_max": ("dependency_lag_ns", "max"),
     }
@@ -800,6 +827,11 @@ def build_collective_slack_audit(
             target = reference_calls[reference_calls["fct_group_id"].eq(group_id)]
             request = make_collective_request(target)
             response = validate_fct_result(request, candidate_provider(request))
+            if response.rank_network_done_offsets_ns is not None:
+                raise ValueError(
+                    "analytical slack audit does not approximate changed per-rank "
+                    "completion; run the candidate provider through the full DAG"
+                )
             simulated_tail = int(response.tail_after_last_release_ns)
             group_shift = simulated_tail - int(baseline.reference_tail_ns)
             if group_shift < 0:

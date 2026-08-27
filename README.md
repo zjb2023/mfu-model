@@ -70,6 +70,26 @@ result = build_unified_mfu_dag(optimizer_fct_provider=provider, ...)
 `service_marginals_available=false`。如果 OISA 以在线 Provider 形式响应新
 offsets，则可以继续计算这些动态反事实。
 
+## 真实 OISA 单组联调
+
+已使用 `/tmp/oisa-rank-release-fct` 的本地提交
+`faa3c789549d542484ca9aab132b7d4727afd14a` 做过一次真实 ns-3 联调：
+
+- 4-Rank AllToAll 从同步启动变为 `[0,20,50,30] ms` 错峰后，12 条 flow
+  的实际 start time 和 FCT 全部变化，证明 release offset 真正进入了网络
+  仿真，而不是只在最终 elapsed 上加常数；
+- 从 iteration 55 选择零 downstream slack 的 EDP-AG0 group，保留实测
+  1,887,436,800-byte payload 和 87.570 μs arrival span；
+- OISA 返回 `collective_elapsed=152.175606 ms`，满足
+  `87.570 μs + 152.088036 ms tail`；
+- 只替换 group FCT 时 Step 增加 `85.473795 ms`；继续替换 OISA 逐 Rank
+  network-done 后再增加 `66.037 μs`，验证 service 与 Rank completion
+  必须分开传播。
+
+该结果只验证接口和 DAG 传播。当前 smoke 入口固定 8-GPU 拓扑、
+`n_channels=1`，而实测 DP communicator 是 16 Rank，因此不能把
+`152.088036 ms` 当成目标 256-GPU 集群的校准 FCT。
+
 ## V1 到 V2：PP backward completion 校准
 
 V1 已经把实测 FWD/BWD compute、PP16 的 1F1B 依赖以及 DP/Expert-DP
@@ -178,6 +198,8 @@ PP0 或某个代表 rank 人工附加一个总等待时间。
 - `case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v2/`: calibrated current model.
 - `case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v3_oisa_mock/`: OISA
   interface exercise, request/response examples, and per-group slack audit.
+- `case_256gpu_pp16_cp2_a2a/results/oisa_real_validation_faa3c78/`: real OISA
+  smoke evidence and one-group MFU replay, with topology limitations recorded.
 
 ## Rebuild
 
@@ -189,6 +211,7 @@ python3 -m venv .venv
 .venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_pp_optimizer_dag_v1.py
 .venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_pp_optimizer_dag_v2.py
 .venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_pp_optimizer_dag_v3.py
+.venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/validate_real_oisa_fct.py
 .venv/bin/pytest -q
 ```
 
@@ -205,6 +228,10 @@ Then open:
 View the Mock-OISA integration exercise:
 
 `http://127.0.0.1:8013/case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v3_oisa_mock/pp_optimizer_dag_v3_oisa_mock.html`
+
+View the real-OISA single-group validation:
+
+`http://127.0.0.1:8013/case_256gpu_pp16_cp2_a2a/results/oisa_real_validation_faa3c78/pp_optimizer_dag_oisa_real_single_group.html`
 
 ## Data boundary
 
