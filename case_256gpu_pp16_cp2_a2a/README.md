@@ -18,6 +18,18 @@ lanes.  Each rank contributes four FWD and four BWD compute annotations.
   the release-offset smoke and one critical EDP-AG0 group, then replays that
   result through the complete MFU DAG.  It is an interface validation on the
   fixed 8-GPU topology, not a 256-GPU calibration.
+- `results/oisa_topology_preflight_s5000_256_1spine`: reruns the same measured
+  EDP-AG0 request with global ranks 230/238 on the 32-host S5000 topology.  It
+  validates the corrected `gpus_per_server=8` header, 400-Gbps cross-host path,
+  and natural runner exit.
+- `results/oisa_s5000_256gpu_nine_class`: nine representative real-OISA
+  requests/results for four EP A2A classes, CP A2A, DP RS/AG and Expert-DP
+  RS/AG.  All preserve measured Rank release offsets and use one corrected
+  topology hash.
+- `results/pp_optimizer_dag_v4_oisa_s5000`: current model.  It separates raw
+  OISA network tails from the signed Trace-minus-baseline-OISA residual, so a
+  new topology changes only the network delta.  Same-hardware replay remains
+  -0.1010% for ProfilerStep and +0.0954% relative for MFU.
 
 The authoritative v2 explanation and validation are:
 
@@ -38,6 +50,33 @@ The real-OISA validation report and machine-readable checks are:
 - `results/oisa_real_validation_faa3c78/validation.json`
 - `results/oisa_real_validation_faa3c78/interface_a2a_comparison.json`
 - `results/oisa_real_validation_faa3c78/iteration_comparison.csv`
+
+The 256-GPU S5000 topology preflight evidence is:
+
+- `results/oisa_topology_preflight_s5000_256_1spine/TOPOLOGY_PREFLIGHT.md`
+- `results/oisa_topology_preflight_s5000_256_1spine/preflight_summary.json`
+
+The current nine-class OISA/MFU outputs are:
+
+- `results/oisa_s5000_256gpu_nine_class/oisa_results.csv`
+- `results/oisa_s5000_256gpu_nine_class/OISA_NINE_CLASS_SUMMARY.md`
+- `results/oisa_s5000_256gpu_nine_class/backfill/validation.json`
+- `results/pp_optimizer_dag_v4_oisa_s5000/validation.json`
+- `results/pp_optimizer_dag_v4_oisa_s5000/collective_slack_audit.csv`
+- `results/pp_optimizer_dag_v4_oisa_s5000/PP_OPTIMIZER_DAG_V4_OISA_S5000.md`
+- `results/pp_optimizer_dag_v4_oisa_s5000/pp_optimizer_dag_v4_oisa_s5000.html`
+
+The final replay is calibrated, not a blind replacement by absolute ns-3 FCT.
+For each class/request it keeps:
+
+```text
+target_tail = Trace_tail + (target_OISA_network - baseline_OISA_network)
+```
+
+Positive residuals can contain software/synchronization overhead; negative
+residuals expose OISA algorithm, payload, or overlap bias and are retained as
+calibration facts.  A raw network-only diagnostic is also emitted, but is not
+the production MFU result.
 
 Normal rebuilds use only the checked-in CSV/JSON files.  Refreshing trace facts
 is optional and requires paths to the original authorized capture:

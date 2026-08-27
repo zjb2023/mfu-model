@@ -1,0 +1,39 @@
+{
+  "collective_classes": 9,
+  "failures": [],
+  "identity": {
+    "all_optimizer_elapsed_conserved": true,
+    "pipeline_adjustment_conservation_error_ns_max": 0
+  },
+  "iteration": 55,
+  "metrics": {
+    "actual_mfu_pct_fixed_flops": 4.406486458210731,
+    "mfu_relative_error_pct": 0.09538078672957084,
+    "network_only_profiler_replay_error_pct": -24.216157573396966,
+    "observed_profiler_step_ms": 21638.095425,
+    "predicted_mfu_pct": 4.410689399661704,
+    "predicted_profiler_step_ms": 21616.235827,
+    "profiler_replay_error_ms": -21.859598,
+    "profiler_replay_error_pct": -0.1010236694618884
+  },
+  "model_boundary": {
+    "optimizer_four_classes": "dynamic DAG arrivals plus representative OISA network tail scaled by bytes and per-request signed Trace calibration residual",
+    "pipeline_five_classes": "preserve trace arrival/completion skew and signed baseline calibration residual; replace network service and embed the net delta in FWD/BWD nodes",
+    "pp": "unchanged v2 network service plus trace software completion"
+  },
+  "oisa_simulator_commits": [
+    "faa3c789549d542484ca9aab132b7d4727afd14a"
+  ],
+  "optimizer_dynamic_groups": 432,
+  "optimizer_positive_downstream_slack_groups": 426,
+  "optimizer_slack_groups": 432,
+  "optimizer_zero_downstream_slack_groups": 6,
+  "pipeline_calibrated_adjustment_ns_total": 0,
+  "pipeline_event_alignment_fraction": 1.0,
+  "pipeline_network_only_adjustment_ns_total": -320113992495,
+  "schema": "pp-optimizer-dag-v4-oisa-s5000",
+  "status": "PASS",
+  "topology_hashes": [
+    "e9503e0eaf5bc80efd66ae95b5f09e68643725069d654082f374ec03f8b46a88"
+  ]
+}

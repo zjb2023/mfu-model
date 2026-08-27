@@ -104,7 +104,13 @@ class CollectiveFctRequest:
 
 @dataclass(frozen=True)
 class CollectiveFctResult:
-    """Network completion returned by OISA or a compatible provider."""
+    """Collective completion returned by OISA or a compatible provider.
+
+    ``tail_after_last_release_ns`` is the duration consumed by the MFU DAG.
+    A raw OISA result contains only network time.  A calibrated provider may
+    add a signed Trace-derived calibration residual while retaining its
+    positive software-like and negative simulator-bias components for audit.
+    """
 
     request_id: str
     first_release_ns: int
@@ -117,6 +123,10 @@ class CollectiveFctResult:
     rank_network_done_offsets_ns: Mapping[int, int] | None = None
     simulator_commit: str = ""
     topology_hash: str = ""
+    network_tail_after_last_release_ns: int | None = None
+    trace_calibration_residual_ns: int = 0
+    software_residual_ns: int = 0
+    simulator_bias_correction_ns: int = 0
 
     def as_dict(self) -> dict[str, object]:
         return {
@@ -127,6 +137,14 @@ class CollectiveFctResult:
             "collective_elapsed_ns": self.collective_elapsed_ns,
             "arrival_span_ns": self.arrival_span_ns,
             "tail_after_last_release_ns": self.tail_after_last_release_ns,
+            "network_tail_after_last_release_ns": (
+                self.network_tail_after_last_release_ns
+                if self.network_tail_after_last_release_ns is not None
+                else self.tail_after_last_release_ns
+            ),
+            "trace_calibration_residual_ns": self.trace_calibration_residual_ns,
+            "software_residual_ns": self.software_residual_ns,
+            "simulator_bias_correction_ns": self.simulator_bias_correction_ns,
             "rank_network_done_offsets_ns": (
                 json.dumps(
                     {
@@ -227,6 +245,29 @@ def validate_fct_result(
         raise ValueError(
             "OISA result must conserve elapsed = arrival_span + tail_after_last_release"
         )
+    if result.network_tail_after_last_release_ns is not None:
+        if result.network_tail_after_last_release_ns < 0:
+            raise ValueError("OISA network tail must be non-negative")
+        if result.software_residual_ns < 0:
+            raise ValueError("Trace software residual must be non-negative")
+        if result.simulator_bias_correction_ns > 0:
+            raise ValueError("simulator bias correction must be non-positive")
+        if (
+            result.tail_after_last_release_ns
+            != result.network_tail_after_last_release_ns
+            + result.trace_calibration_residual_ns
+        ):
+            raise ValueError(
+                "collective tail must equal network tail plus Trace calibration residual"
+            )
+        if result.software_residual_ns != max(
+            result.trace_calibration_residual_ns, 0
+        ):
+            raise ValueError("software residual is not the positive calibration component")
+        if result.simulator_bias_correction_ns != min(
+            result.trace_calibration_residual_ns, 0
+        ):
+            raise ValueError("simulator bias is not the negative calibration component")
     if result.rank_network_done_offsets_ns is not None:
         done = {
             int(rank): int(offset)
@@ -396,6 +437,114 @@ class RecordedOisaFctProvider:
                 "recorded OISA results do not cover request "
                 f"{request.request_id}; rerun OISA for these rank release offsets"
             ) from exc
+
+
+class RepresentativeOisaFctProvider:
+    """Reuse one measured OISA point per kind with byte-proportional scaling.
+
+    This provider is intentionally explicit about being a single-point model,
+    not an exact replay.  It preserves the request's dynamic rank-arrival span
+    and scales only the network tail after the last release.
+    """
+
+    required_fields = {
+        "kind",
+        "reference_payload_bytes",
+        "tail_after_last_release_ns",
+    }
+
+    def __init__(
+        self,
+        records: Iterable[Mapping[str, object]],
+        *,
+        preserve_trace_calibration_residual: bool = False,
+    ) -> None:
+        self.supports_dynamic_arrivals = True
+        self.preserve_trace_calibration_residual = bool(
+            preserve_trace_calibration_residual
+        )
+        self.records: dict[str, dict[str, object]] = {}
+        for raw in records:
+            missing = sorted(self.required_fields - set(raw))
+            if missing:
+                raise ValueError(
+                    f"representative OISA calibration missing fields: {missing}"
+                )
+            kind = str(raw["kind"])
+            if kind in self.records:
+                raise ValueError(f"duplicate representative OISA kind: {kind}")
+            payload = int(raw["reference_payload_bytes"])
+            tail = int(raw["tail_after_last_release_ns"])
+            if payload <= 0 or tail < 0:
+                raise ValueError("representative OISA payload/tail is invalid")
+            self.records[kind] = dict(raw)
+        if not self.records:
+            raise ValueError("representative OISA provider requires calibration rows")
+
+    def __call__(self, request: CollectiveFctRequest) -> CollectiveFctResult:
+        try:
+            record = self.records[request.kind]
+        except KeyError as exc:
+            raise ValueError(
+                f"representative OISA calibration does not cover kind {request.kind}"
+            ) from exc
+        if request.payload_bytes is None or request.payload_bytes <= 0:
+            raise ValueError("representative OISA scaling requires request payload_bytes")
+        reference_payload = int(record["reference_payload_bytes"])
+        reference_tail = int(record["tail_after_last_release_ns"])
+        network_tail = int(
+            round(reference_tail * request.payload_bytes / reference_payload)
+        )
+        baseline_reference_tail = int(
+            record.get("baseline_tail_after_last_release_ns", reference_tail)
+        )
+        baseline_network_tail = int(
+            round(
+                baseline_reference_tail
+                * request.payload_bytes
+                / reference_payload
+            )
+        )
+        calibration_residual = 0
+        if self.preserve_trace_calibration_residual:
+            calibration_residual = (
+                request.reference_tail_after_last_release_ns
+                - baseline_network_tail
+            )
+        software_residual = max(calibration_residual, 0)
+        simulator_bias = min(calibration_residual, 0)
+        tail = network_tail + calibration_residual
+        if tail < 0:
+            raise ValueError(
+                "target OISA network delta exceeds the calibrated Trace tail"
+            )
+        span = request.arrival_span_ns
+        elapsed = span + tail
+        representative_id = str(record.get("request_id", request.kind))
+        source_suffix = (
+            "+trace_calibration_residual"
+            if self.preserve_trace_calibration_residual
+            else ""
+        )
+        return CollectiveFctResult(
+            request_id=request.request_id,
+            first_release_ns=0,
+            last_release_ns=span,
+            last_flow_end_ns=elapsed,
+            collective_elapsed_ns=elapsed,
+            arrival_span_ns=span,
+            tail_after_last_release_ns=tail,
+            source=(
+                f"oisa_representative_linear{source_suffix}:"
+                f"{representative_id}"
+            ),
+            simulator_commit=str(record.get("simulator_commit", "")),
+            topology_hash=str(record.get("topology_hash", "")),
+            network_tail_after_last_release_ns=network_tail,
+            trace_calibration_residual_ns=calibration_residual,
+            software_residual_ns=software_residual,
+            simulator_bias_correction_ns=simulator_bias,
+        )
 
 
 class SelectiveFctProvider:

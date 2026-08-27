@@ -1,0 +1,33 @@
+{
+  "inputs": {
+    "events": {
+      "path": "/home/zjb/Desktop/fabric-data-analysis/case_256gpu_pp16_cp2_a2a/results/collective_bw_no_pp/collective_events_no_pp_pre_mtlink.parquet",
+      "sha256": "aa7bfd6571d50418f30f1d146e3a2f68de35355da6303d0231ddfd0a458bb28d"
+    },
+    "rank_topology": {
+      "path": "/home/zjb/Desktop/fabric-data-analysis/case_256gpu_pp16_cp2_a2a/results/topology/rank_topology.csv",
+      "sha256": "777a0c941c17f94bb84d58e50153395a6b38acdc81d743b72a096624bb061807"
+    }
+  },
+  "iteration": 55,
+  "payload_semantics": {
+    "all_gather": "median per-rank shard bytes",
+    "all_to_all": "median per-rank expected network TX bytes",
+    "reduce_scatter": "median per-rank input tensor bytes"
+  },
+  "request_count": 9,
+  "requests": [
+    "requests/iter55_ep_fwd_dispatch_g18_slot6.json",
+    "requests/iter55_ep_fwd_combine_g17_slot25.json",
+    "requests/iter55_ep_bwd_combine_backward_dispatch_g17_slot10.json",
+    "requests/iter55_ep_bwd_dispatch_backward_combine_g17_slot9.json",
+    "requests/iter55_cp_all_to_all_g78_slot167.json",
+    "requests/iter55_dp_grad_reduce_scatter_g13_slot0.json",
+    "requests/iter55_dp_param_allgather_g12_slot1.json",
+    "requests/iter55_expert_dp_grad_reduce_scatter_g28_slot0.json",
+    "requests/iter55_expert_dp_param_allgather_g43_slot1.json"
+  ],
+  "schema": "mfu-oisa-nine-class-input-v1",
+  "selection": "fully aligned real call nearest behavior medians in payload, rank-release span and observed service",
+  "topology_id": "s5000_256gpu_32host_1spine"
+}

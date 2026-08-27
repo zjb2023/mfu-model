@@ -29,10 +29,62 @@ This is an in-sample replay result for one fully materialized iteration.  The
 next validation step is to hold out additional captured iterations before
 treating the software-completion parameter as a general predictor.
 
-## V3：OISA FCT 接入边界（当前使用 Mock）
+## V4：真实 OISA 九类集合通信回填（当前版本）
 
-`v2` 仍是当前 Trace-reference 校准模型。`v3` 在其上增加 OISA Provider
-接口和 slack 审计；真实 OISA 的错峰 Rank 仿真仍在开发，因此仓库中的 v3
+v4 已在目标 256-GPU S5000 拓扑上完成 PP 之外九类代表请求：四类 EP
+AllToAll、CP AllToAll、DP RS/AG、Expert-DP RS/AG。每条请求保留实测 Rank
+release offsets，9/9 均由 runner 自然退出并生成标准结果。
+
+```text
+topology = 32 host × 8 GPU
+in-host  = 448 Gbps fullmesh
+scale-out = 每 GPU 400 Gbps NIC，32 leaf → 1 spine
+```
+
+- topology：`/tmp/oisa-rank-release-fct/topologies/s5000_256gpu_32host_1spine`；
+- topology SHA256：`e9503e0eaf5bc80efd66ae95b5f09e68643725069d654082f374ec03f8b46a88`；
+- Release simulator：`/tmp/oisa-rank-release-fct/bin/OISA_simulator_release`；
+- 仿真运行时记录的 base commit：`faa3c789549d542484ca9aab132b7d4727afd14a`
+  （结果中同时标记 `simulator_worktree_dirty=true`）；对应的完整源码快照随后已
+  提交并推送为 `2bd0e53`，分支 `feat/rank-release-fct`。
+
+绝对 OISA tail 不能直接覆盖整个 Trace collective tail。以 DP-RS 代表点为例，
+OISA 为 `380.119 ms`，Trace 在最晚 Rank 到达后的尾部只有 `15.881 ms`，其中
+包含算法、payload 语义和通信已发生重叠等系统性偏差。v4 因此使用基线差分
+校准：
+
+```text
+signed_residual = Trace_tail - baseline_OISA_network_tail
+target_tail = target_OISA_network_tail + signed_residual
+            = Trace_tail + (target_OISA - baseline_OISA)
+```
+
+正残差可包含软件/同步开销；负残差记录 simulator/算法/重叠相对 Trace 的
+系统偏差，不能解释为负软件开销。这样新 topology 只通过 OISA 网络 delta
+改变 DAG，实测同步与软件栈行为不会被误删。
+
+在 baseline 与 target 为同一硬件时，九类合并模型保持 v2 的回放结果：
+ProfilerStep 误差 `-0.1010%`，MFU 相对误差 `+0.0954%`。作为诊断，如果
+只保留绝对 OISA 网络值并删除校准残差，Step 会变成 `-24.2162%`；该场景
+只用于证明“纯网络 FCT ≠ 端到端 collective 时间”，不是最终 MFU 预测。
+
+optimizer 的 432 个 group 已完成 downstream slack 审计：6 个 slack 为 0，
+426 个有正 slack。单组网络变慢的暴露量为
+`max(0, network_delta - downstream_slack)`；多组同时变化仍需完整重放
+max-plus DAG。
+
+主要产物：
+
+- `case_256gpu_pp16_cp2_a2a/results/oisa_s5000_256gpu_nine_class/oisa_results.csv`
+- `case_256gpu_pp16_cp2_a2a/results/oisa_s5000_256gpu_nine_class/backfill/`
+- `case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v4_oisa_s5000/validation.json`
+- `case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v4_oisa_s5000/collective_slack_audit.csv`
+- `case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v4_oisa_s5000/PP_OPTIMIZER_DAG_V4_OISA_S5000.md`
+
+## V3：OISA FCT 接入边界（历史 Mock）
+
+`v2` 是 Trace-reference 校准基线。`v3` 在其上增加 OISA Provider
+接口和 slack 审计；当时真实 OISA 的错峰 Rank 仿真仍在开发，因此 v3
 结果明确使用 `Mock OISA = Trace 网络尾部 × 1.2`，只验证接入逻辑，不代表
 网络性能预测。
 
@@ -200,6 +252,12 @@ PP0 或某个代表 rank 人工附加一个总等待时间。
   interface exercise, request/response examples, and per-group slack audit.
 - `case_256gpu_pp16_cp2_a2a/results/oisa_real_validation_faa3c78/`: real OISA
   smoke evidence and one-group MFU replay, with topology limitations recorded.
+- `case_256gpu_pp16_cp2_a2a/results/oisa_topology_preflight_s5000_256_1spine/`:
+  corrected global-rank OISA preflight on the 32-host S5000 topology.
+- `case_256gpu_pp16_cp2_a2a/results/oisa_s5000_256gpu_nine_class/`: compact
+  requests, nine real OISA results, and Trace/OISA baseline calibration tables.
+- `case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v4_oisa_s5000/`: current
+  nine-class calibrated replay, network-only diagnostic, slack audit, and HTML.
 
 ## Rebuild
 
@@ -212,18 +270,27 @@ python3 -m venv .venv
 .venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_pp_optimizer_dag_v2.py
 .venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_pp_optimizer_dag_v3.py
 .venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/validate_real_oisa_fct.py
+.venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_oisa_nine_class_requests.py
+.venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/run_oisa_nine_class.py \
+  --simulator /tmp/oisa-rank-release-fct/bin/OISA_simulator_release
+/home/zjb/Desktop/fabric-data-analysis/.venv/bin/python \
+  case_256gpu_pp16_cp2_a2a/scripts/build_oisa_nine_class_backfill.py
+.venv/bin/python case_256gpu_pp16_cp2_a2a/scripts/build_pp_optimizer_dag_v4.py
 .venv/bin/pytest -q
 ```
 
 View the current self-contained dashboard:
 
 ```bash
-python3 -m http.server 8013 --bind 127.0.0.1
+python3 -m http.server 8013 --bind 0.0.0.0
 ```
 
 Then open:
 
-`http://127.0.0.1:8013/case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v2/pp_optimizer_dag_v2.html`
+`http://127.0.0.1:8013/case_256gpu_pp16_cp2_a2a/results/pp_optimizer_dag_v4_oisa_s5000/pp_optimizer_dag_v4_oisa_s5000.html`
+
+局域网访问时把 `127.0.0.1` 换成本机局域网 IP；8013 当前监听
+`0.0.0.0`。
 
 View the Mock-OISA integration exercise:
 

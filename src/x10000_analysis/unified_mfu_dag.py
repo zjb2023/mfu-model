@@ -42,6 +42,8 @@ def build_unified_mfu_dag(
     optimizer_service_scales: Mapping[str, float] | None = None,
     pp_software_completion_ns: Mapping[str, int | float] | None = None,
     optimizer_fct_provider: CollectiveFctProvider | None = None,
+    optimizer_calculate_service_marginals: bool | None = None,
+    pipeline_compute_duration_adjustments: pd.DataFrame | None = None,
 ) -> UnifiedDagResult:
     """Build one iteration from PP compute through optimizer RS/AG completion."""
     if model_flops_per_iteration <= 0 or world_size <= 0 or peak_tflops_per_gpu <= 0:
@@ -50,6 +52,7 @@ def build_unified_mfu_dag(
         trace_events,
         pp_service_ns,
         pp_software_completion_ns=pp_software_completion_ns,
+        compute_duration_adjustments=pipeline_compute_duration_adjustments,
     )
     iteration = int(trace_events["iteration"].iloc[0])
     selected_calls = optimizer_calls[optimizer_calls["iteration"].eq(iteration)].copy()
@@ -140,6 +143,7 @@ def build_unified_mfu_dag(
         service_scales=optimizer_service_scales,
         front_anchors=front_anchors[["iteration", "rank", "predicted_start_ns"]],
         fct_provider=optimizer_fct_provider,
+        calculate_service_marginals=optimizer_calculate_service_marginals,
     )
     optimizer_calls_predicted = optimizer.calls.merge(
         topology, on=["rank", "pp_stage"], validate="many_to_one"

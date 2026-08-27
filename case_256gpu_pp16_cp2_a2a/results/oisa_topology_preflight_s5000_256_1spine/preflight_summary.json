@@ -1,0 +1,65 @@
+{
+  "schema": "mfu-oisa-topology-preflight-v2",
+  "status": "PASS",
+  "oisa": {
+    "root": "/tmp/oisa-rank-release-fct",
+    "simulator_commit": "faa3c789549d542484ca9aab132b7d4727afd14a",
+    "source_snapshot_commit": "2bd0e53d0e572b434490877d6aa3911973d1d63b",
+    "source_snapshot_branch": "feat/rank-release-fct",
+    "debug_binary": "/tmp/oisa-rank-release-fct/bin/OISA_simulator",
+    "debug_binary_sha256": "c79494ea98413870157d60a75e2e7e08b24753b85bb5b5b284b5c0c594faf3aa",
+    "release_binary": "/tmp/oisa-rank-release-fct/bin/OISA_simulator_release",
+    "release_binary_sha256": "6f3689a7848d97a329894de1026ed52dfde14d45b1bc3d66b566846cc334e9f9",
+    "topology_file": "/tmp/oisa-rank-release-fct/topologies/s5000_256gpu_32host_1spine",
+    "topology_hash": "e9503e0eaf5bc80efd66ae95b5f09e68643725069d654082f374ec03f8b46a88"
+  },
+  "topology": {
+    "header": "289 8 0 33 1184 S5000",
+    "header_field_2_runtime_semantics": "gpus_per_server",
+    "gpu_count": 256,
+    "host_count": 32,
+    "gpus_per_host": 8,
+    "leaf_count": 32,
+    "spine_count": 1,
+    "total_nodes": 289,
+    "total_links": 1184,
+    "intra_host_fullmesh_links": 896,
+    "intra_host_link_bandwidth_gbps": 448,
+    "gpu_nic_links": 256,
+    "gpu_nic_bandwidth_gbps": 400,
+    "leaf_spine_links": 32,
+    "leaf_spine_link_bandwidth_gbps": 3200
+  },
+  "request": {
+    "iteration": 55,
+    "kind": "expert_dp_param_allgather",
+    "op": "all_gather",
+    "group_ranks": [230, 238],
+    "payload_bytes": 1887436800,
+    "rank_release_offsets_ns": {
+      "230": 87570,
+      "238": 0
+    }
+  },
+  "result": {
+    "collective_elapsed_ns": 75676410,
+    "arrival_span_ns": 87570,
+    "tail_after_last_release_ns": 75588840,
+    "per_direction_flow_fct_ns": 37794420,
+    "effective_single_flow_rate_gbps": 399.516500,
+    "ideal_400g_single_flow_ns": 37748736,
+    "slower_than_400g_ideal_pct": 0.121020,
+    "runner_lifecycle": "exited_normally",
+    "elapsed_identity_valid": true
+  },
+  "checks": {
+    "topology_shape_matches_case": true,
+    "legacy_header_uses_gpus_per_server": true,
+    "target_ranks_use_global_ids": true,
+    "target_ranks_map_to_distinct_hosts": true,
+    "collective_elapsed_conserves_arrival_span_plus_tail": true,
+    "release_and_debug_fct_match": true,
+    "runner_exits_normally": true,
+    "nic_rate_matches_topology": true
+  }
+}

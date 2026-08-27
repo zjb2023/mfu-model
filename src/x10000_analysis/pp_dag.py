@@ -224,6 +224,7 @@ def build_pipeline_dag(
     events: pd.DataFrame,
     pp_service_ns: int | float,
     pp_software_completion_ns: Mapping[str, int | float] | None = None,
+    compute_duration_adjustments: pd.DataFrame | None = None,
 ) -> PipelineDagResult:
     """Build and replay the minimal PP DAG for one captured iteration.
 
@@ -234,6 +235,23 @@ def build_pipeline_dag(
     distinction needed for network counterfactuals.
     """
     facts = validate_trace_events(events)
+    adjustment_lookup: dict[tuple[int, str, int], int] = {}
+    if compute_duration_adjustments is not None:
+        required = {"rank", "phase", "microbatch", "adjustment_ns"}
+        missing = sorted(required - set(compute_duration_adjustments.columns))
+        if missing:
+            raise ValueError(f"compute duration adjustments missing columns: {missing}")
+        adjustments = compute_duration_adjustments[list(required)].copy()
+        for column in ("rank", "microbatch", "adjustment_ns"):
+            adjustments[column] = pd.to_numeric(adjustments[column], errors="raise")
+        if adjustments.duplicated(["rank", "phase", "microbatch"]).any():
+            raise ValueError("duplicate compute duration adjustment")
+        if not set(adjustments["phase"]).issubset({"forward", "backward"}):
+            raise ValueError("compute duration adjustment has invalid phase")
+        adjustment_lookup = {
+            (int(row.rank), str(row.phase), int(row.microbatch)): int(row.adjustment_ns)
+            for row in adjustments.itertuples(index=False)
+        }
     if not np.isfinite(pp_service_ns) or pp_service_ns < 0:
         raise ValueError("pp_service_ns must be finite and non-negative")
     pp_service = int(round(pp_service_ns))
@@ -276,6 +294,14 @@ def build_pipeline_dag(
         lane = int(row.pp_lane)
         phase = str(row.phase)
         microbatch = int(row.microbatch)
+        trace_duration = int(row.duration_ns)
+        embedded_adjustment = adjustment_lookup.get((rank, phase, microbatch), 0)
+        adjusted_duration = trace_duration + embedded_adjustment
+        if adjusted_duration <= 0:
+            raise ValueError(
+                f"collective backfill makes compute node non-positive: "
+                f"rank={rank} phase={phase} microbatch={microbatch}"
+            )
         sequence, region = schedule_lookup[(stage, phase, microbatch)]
         node = {
             "iteration": iteration,
@@ -292,7 +318,9 @@ def build_pipeline_dag(
             "dst_stage": stage,
             "sequence": sequence,
             "region": region,
-            "duration_ns": int(row.duration_ns),
+            "duration_ns": adjusted_duration,
+            "trace_duration_ns": trace_duration,
+            "embedded_collective_adjustment_ns": embedded_adjustment,
             "network_service_ns": 0,
             "software_completion_ns": 0,
         }
@@ -345,6 +373,8 @@ def build_pipeline_dag(
                         "sequence": -1,
                         "region": "p2p",
                         "duration_ns": pp_service + software_completion["forward"],
+                        "trace_duration_ns": 0,
+                        "embedded_collective_adjustment_ns": 0,
                         "network_service_ns": pp_service,
                         "software_completion_ns": software_completion["forward"],
                     }
@@ -400,6 +430,8 @@ def build_pipeline_dag(
                         "sequence": -1,
                         "region": "p2p",
                         "duration_ns": pp_service + software_completion["backward"],
+                        "trace_duration_ns": 0,
+                        "embedded_collective_adjustment_ns": 0,
                         "network_service_ns": pp_service,
                         "software_completion_ns": software_completion["backward"],
                     }

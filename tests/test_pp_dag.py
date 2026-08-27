@@ -85,6 +85,30 @@ def test_software_completion_is_separate_from_network_service() -> None:
     assert set(backward["software_completion_ns"]) == {7}
 
 
+def test_embedded_collective_adjustment_changes_only_target_compute_node() -> None:
+    adjustments = pd.DataFrame(
+        [
+            {
+                "rank": 0,
+                "phase": "forward",
+                "microbatch": 1,
+                "adjustment_ns": 7,
+            }
+        ]
+    )
+    result = build_pipeline_dag(
+        _events(pp_size=2, microbatches=2),
+        pp_service_ns=3,
+        compute_duration_adjustments=adjustments,
+    )
+    target = result.nodes[result.nodes["node_id"].eq("rank0:F1")].iloc[0]
+    untouched = result.nodes[result.nodes["node_id"].eq("rank0:F0")].iloc[0]
+    assert target["trace_duration_ns"] == 10
+    assert target["embedded_collective_adjustment_ns"] == 7
+    assert target["duration_ns"] == 17
+    assert untouched["duration_ns"] == 10
+
+
 def test_optimizer_frontier_is_every_ranks_last_backward() -> None:
     result = build_pipeline_dag(_events(pp_size=4, microbatches=2), pp_service_ns=2)
     assert len(result.optimizer_frontier) == 4

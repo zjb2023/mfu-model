@@ -1,0 +1,10 @@
+behavior,op,request_id,sync_group,slot_index,pp_stage,group_size,group_ranks,payload_source,payload_bytes,arrival_span_ns,observed_service_ns,selection_score,candidate_count
+cp_all_to_all,all_to_all,iter55_cp_all_to_all_g78_slot167,78,167,9,2,156;157,expected_tx_bytes,134217728,122478,7492593,0.00843597030796681,24960
+dp_grad_reduce_scatter,reduce_scatter,iter55_dp_grad_reduce_scatter_g13_slot0,13,0,13,16,208;209;210;211;212;213;214;215;216;217;218;219;220;221;222;223,logical_input_bytes,3155886080,164684542,15880801,0.0010989069574852551,16
+dp_param_allgather,all_gather,iter55_dp_param_allgather_g12_slot1,12,1,12,16,192;193;194;195;196;197;198;199;200;201;202;203;204;205;206;207,logical_input_bytes,98621440,4051416,7407673,0.34750759236360407,32
+ep_bwd_combine_backward_dispatch,all_to_all,iter55_ep_bwd_combine_backward_dispatch_g17_slot10,17,10,8,8,136;137;138;139;140;141;142;143,expected_tx_bytes,83886080,221854,997787,0.022108658008683377,472
+ep_bwd_dispatch_backward_combine,all_to_all,iter55_ep_bwd_dispatch_backward_combine_g17_slot9,17,9,8,8,136;137;138;139;140;141;142;143,expected_tx_bytes,83041280,5876282,1047228,0.03337211857445831,472
+ep_fwd_combine,all_to_all,iter55_ep_fwd_combine_g17_slot25,17,25,8,8,136;137;138;139;140;141;142;143,expected_tx_bytes,83041280,3730015,1005467,0.037090884904489085,944
+ep_fwd_dispatch,all_to_all,iter55_ep_fwd_dispatch_g18_slot6,18,6,9,8,144;145;146;147;148;149;150;151,expected_tx_bytes,82821120,1264344,1702000,0.07555211562431385,944
+expert_dp_grad_reduce_scatter,reduce_scatter,iter55_expert_dp_grad_reduce_scatter_g28_slot0,28,0,3,2,52;60,logical_input_bytes,7549747200,164158,208459147,0.003716663546461276,128
+expert_dp_param_allgather,all_gather,iter55_expert_dp_param_allgather_g43_slot1,43,1,5,2,83;91,logical_input_bytes,1887436800,44246,53614960,0.013615619188333851,256
