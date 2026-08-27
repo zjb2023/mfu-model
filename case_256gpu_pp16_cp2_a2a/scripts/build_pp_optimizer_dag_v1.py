@@ -180,6 +180,20 @@ def _html(
             timeline["pp_lane"].eq(critical_lane) & timeline["rank"].ge(0)
         ]["rank"].unique()
     )
+    critical_group_events = timeline[
+        timeline["category"].eq(critical_event["category"])
+        & timeline["group_key"].eq(critical_event["group_key"])
+    ]
+    critical_group_ranks = sorted(
+        int(rank) for rank in critical_group_events["rank"].unique()
+    )
+    critical_group_lanes = sorted(
+        int(lane) for lane in critical_group_events["pp_lane"].unique()
+    )
+    critical_group_spread_us = (
+        int(critical_group_events["predicted_end_ns"].max())
+        - int(critical_group_events["predicted_end_ns"].min())
+    ) / 1e3
     if focus_critical_lane:
         timeline = timeline[timeline["pp_lane"].eq(critical_lane)].copy()
     columns = [
@@ -214,6 +228,10 @@ def _html(
             "criticalCategory": str(critical_event["category"]),
             "criticalRank": int(critical_event["rank"]),
             "criticalStage": int(critical_event["pp_stage"]),
+            "criticalGroup": str(critical_event["group_key"]),
+            "criticalGroupRanks": critical_group_ranks,
+            "criticalGroupLanes": critical_group_lanes,
+            "criticalGroupSpreadUs": critical_group_spread_us,
             "criticalEndMs": (
                 int(critical_event["predicted_end_ns"])
                 - int(metrics["step_start_ns"])
@@ -226,15 +244,15 @@ def _html(
 
     if focus_critical_lane:
         scope = f"""<div class="scope-panel">
-<span class="scope-kicker">展示范围</span>
-<strong>尾部关键流水线 · lane {critical_lane}</strong>
-<span>自动选择包含全局最晚完成节点的 lane；完整展示 PP15→PP0。</span>
-<code>ranks {', '.join(str(rank) for rank in critical_ranks)}</code>
-<small>该选择只控制结果展示，不改变 DAG、ProfilerStep 或 MFU。</small>
+<span class="scope-kicker">关键通信尾部</span>
+<strong>{str(critical_event['category']).replace('_', ' ').upper()} · {str(critical_event['group_key']).rsplit(':', 1)[-1]}</strong>
+<span>PP{int(critical_event['pp_stage'])} · ranks {', '.join(str(rank) for rank in critical_group_ranks)} · lanes {', '.join(str(lane) for lane in critical_group_lanes)}</span>
+<code>时间线展示 lane {critical_lane}：ranks {', '.join(str(rank) for rank in critical_ranks)}</code>
+<small>lane {critical_lane} 只是最晚 rank 所在的流水线视图，不表示 PP{critical_lane} 或该 lane 的 PP 计算最慢。</small>
 </div>"""
         selection_script = """function selectedEvents(){return DATA.events;}"""
         selection_listener = ""
-        view_note = "每行对应关键流水线中的一个 PP stage；RS/AG 接在各 rank 的 B3 之后。"
+        view_note = "最终通信尾部由最晚 EDP-AG1 group 决定；下方展示其最晚 rank 所在 lane 的完整 PP15→PP0 时间线。"
     else:
         scope = """<label class="scope-panel selector-panel"><span class="scope-kicker">展示范围</span><strong>Pipeline replica</strong><select id="lane" aria-label="Pipeline replica"></select><small>仅切换结果视图，不改变模型。</small></label>"""
         selection_script = """const sel=document.querySelector('#lane');for(let i=0;i<16;i++){const o=document.createElement('option');o.value=i;o.textContent='lane '+i;sel.appendChild(o)}function selectedEvents(){return DATA.events.filter(e=>e.pp_lane===+sel.value);}"""
