@@ -1,5 +1,7 @@
 # Trace-driven MFU model
 
+中文入门说明：[三阶段 MFU 模型与基于计算图的 MFU 模型说明](docs/MFU_THREE_STAGE_AND_DAG_MODEL_GUIDE.md)。该文档面向首次接触本工程的读者，解释三阶段视角、计算图建模、OISA 网络仿真边界和当前精度口径。
+
 This repository contains the standalone 256-GPU MFU replay developed for a
 PP16 / CP2 / EP8 / DP8 training capture.  It builds a max-plus dependency graph
 from per-microbatch FWD/BWD trace annotations, pipeline P2P messages, and
