@@ -1,0 +1,7 @@
+world_size,tensor_parallel_size,pipeline_parallel_size,context_parallel_size,data_parallel_size,expert_parallel_size,dense_communicator_size,expert_communicator_size,pipeline_lanes,microbatches_at_fixed_global_batch,captured_microbatches,preserves_captured_microbatch_count,trace_identifiability
+224,1,7,4,8,8,32,4,32,3,4,False,low_new_communicators
+224,1,14,2,8,8,16,2,16,3,4,False,medium_same_topology_new_microbatch
+224,1,14,4,4,8,16,2,16,6,4,False,medium_same_communicators
+224,1,28,1,8,8,8,1,8,3,4,False,low_new_communicators
+224,1,28,2,4,8,8,1,8,6,4,False,low_new_communicators
+224,1,28,4,2,8,8,1,8,12,4,False,low_new_communicators

@@ -1,0 +1,72 @@
+{
+  "calibration_reused": {
+    "model_flops_per_iteration": 1.293891072e+17,
+    "outer_residual_source": "iteration 55 measured outer residual",
+    "peak_tflops_per_gpu": 500.0,
+    "post_ag_source": "iteration 55 measured post-AG residual",
+    "pp_backward_software_completion_ns": 93463844,
+    "pp_network_service_ns": 4712346,
+    "source_model_flops_per_iteration": 1.293891072e+17,
+    "target_model_flops_per_iteration": 8.436548311982576e+16,
+    "target_to_source_model_flops_ratio": 0.6520292545911142
+  },
+  "distributions": {
+    "predicted_mfu_pct": {
+      "max": 3.260727374237346,
+      "min": 3.0857426208309375,
+      "p10": 3.1953759176407663,
+      "p50": 3.250527101777644,
+      "p90": 3.254750697126587
+    },
+    "predicted_profiler_step_ms": {
+      "max": 23109.080039,
+      "min": 21799.075512,
+      "p10": 21841.495872400003,
+      "p50": 21871.567543,
+      "p90": 22271.536119
+    },
+    "predicted_training_log_ms": {
+      "max": 24411.084614,
+      "min": 23101.080087,
+      "p10": 23143.5004474,
+      "p50": 23173.572118,
+      "p90": 23573.540694
+    }
+  },
+  "evidence_level": "STRUCTURAL_EXTRAPOLATION_WITH_FABRIC_VALIDATION",
+  "representative_scenario": "omit_01_07",
+  "representative_target_prediction": {
+    "all_dp_service_exposed_ms": 259.389076,
+    "mfu_pct": 3.2505348465742805,
+    "profiler_step_ms": 21871.512329,
+    "training_log_ms": 23173.516904
+  },
+  "scenario_count": 120,
+  "schema": "pp14-224gpu-extrapolation-summary-v1",
+  "source_prediction": {
+    "mfu_pct": 4.410689399661704,
+    "profiler_step_ms": 21616.235827,
+    "training_log_ms": 22918.240402
+  },
+  "source_strategy": {
+    "context_parallel_size": 2,
+    "data_parallel_size": 8,
+    "expert_parallel_size": 8,
+    "pipeline_parallel_size": 16,
+    "world_size": 256
+  },
+  "target_strategy": {
+    "context_parallel_size": 2,
+    "data_parallel_size": 8,
+    "expert_parallel_size": 8,
+    "pipeline_parallel_size": 14,
+    "world_size": 224
+  },
+  "target_workload": {
+    "global_batch_size": 48,
+    "mfu_numerator_workload_match": true,
+    "num_layers": 52,
+    "num_micro_batches": 3,
+    "timing_model_workload_match": false
+  }
+}

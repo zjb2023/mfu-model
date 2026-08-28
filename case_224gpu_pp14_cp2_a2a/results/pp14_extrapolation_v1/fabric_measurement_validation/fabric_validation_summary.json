@@ -1,0 +1,99 @@
+{
+  "all_profiled_iterations": {
+    "actual_mfu_pct": {
+      "max": 3.3423255083453576,
+      "min": 2.935977682445643,
+      "p50": 3.2098418770623915,
+      "p90": 3.3117735041992997
+    },
+    "actual_training_log_ms": {
+      "max": 25656.3,
+      "min": 22537.1,
+      "p50": 23469.1,
+      "p90": 25445.57
+    },
+    "config_matched_mfu_absolute_relative_error_pct": {
+      "max": 10.713881308069572,
+      "min": 0.2579802463633684,
+      "p50": 2.5715427937359943,
+      "p90": 9.804524299925397
+    },
+    "iteration_count": 20,
+    "profiler_step_absolute_error_pct": {
+      "max": 8.723821572239594,
+      "min": 1.0393042775634587,
+      "p50": 2.913699017497856,
+      "p90": 8.202216845927316
+    },
+    "scenario_p10_p90_profiler_step_coverage_count": 1,
+    "scenario_p10_p90_training_log_coverage_count": 2,
+    "training_log_absolute_error_pct": {
+      "max": 9.677089432225221,
+      "min": 0.25731642082699924,
+      "p50": 2.639746789744786,
+      "p90": 8.929021663326392
+    },
+    "training_log_signed_error_pct": {
+      "max": 2.8238633364541204,
+      "min": -9.677089432225221,
+      "p50": -1.2518853491072504,
+      "p90": 1.883956349200728
+    }
+  },
+  "checks": {
+    "all_iteration_training_log_absolute_error_p90_within_5pct": false,
+    "fabric_event_windows_are_20_by_224": true,
+    "iteration55_config_matched_mfu_error_within_3pct": true,
+    "iteration55_training_log_error_within_3pct": true,
+    "main_prediction_uses_target_config_flops": true,
+    "scaled_target_flops_match_log_inference_within_1pct": true,
+    "target_layer_map_matches_run_contract": true
+  },
+  "inputs": {
+    "fabric_event_windows": "../fabric-data-analysis/case_224gpu_pp14_cp2_a2a/results/readiness/event_windows.csv",
+    "fabric_rank_profiler_steps": "../fabric-data-analysis/case_224gpu_pp14_cp2_a2a/results/derived/profiler_step_by_iteration_rank.csv",
+    "fabric_training_log": "../fabric-data-analysis/fabric-data-analysis-raw/0731_224gpu_pp14_cp2_a2a/extracted/framework/2026-07-30-09:38/worker35003/2026-07-30_0938/tp1_pp14_dp_mbs2_numbs_gbs48_gpus0_mtp1_forcelbfalse_pertensorfalse_NO_LOSS_REDUCE.RANK27.10.124.35.3.log",
+    "prediction_summary": "case_224gpu_pp14_cp2_a2a/results/pp14_extrapolation_v1/summary.json",
+    "source_layer_map": "../fabric-data-analysis/case_256gpu_pp16_cp2_a2a/results/topology/layer_stage_map.csv",
+    "target_layer_map": "../fabric-data-analysis/case_224gpu_pp14_cp2_a2a/results/topology/layer_stage_map.csv"
+  },
+  "interpretation": "The main MFU numerator is target-configuration matched. The corrected MFU passes the aligned iteration-55 point gate, while one fixed prediction fails the 20-iteration temporal P90 gate.",
+  "model_work": {
+    "source_analytical_flops_per_iteration": 1.2991228098379776e+17,
+    "source_calibrated_flops_per_iteration": 1.293891072e+17,
+    "target_analytical_flops_per_iteration": 8.470660773209702e+16,
+    "target_calibrated_flops_per_iteration": 8.436548311982576e+16,
+    "target_log_inferred_flops_median": 8.430678368e+16,
+    "target_log_vs_scaled_flops_pct": -0.06957755429716217,
+    "target_to_source_analytical_ratio": 0.6520292545911142
+  },
+  "point_validation": {
+    "actual_mfu_pct": 3.1817358778661577,
+    "actual_outer_residual_ms": 1573.388837999999,
+    "actual_profiler_step_ms": 22101.211162,
+    "actual_training_log_ms": 23674.6,
+    "config_matched_mfu_error_percentage_points": 0.06879896870812319,
+    "config_matched_mfu_relative_error_pct": 2.1623092346138884,
+    "iteration": 55,
+    "legacy_source_flops_mfu_pct": 4.985259209899535,
+    "legacy_source_flops_mfu_relative_error_pct": 56.68362809683991,
+    "outer_residual_error_pct": -17.248391271477935,
+    "predicted_mfu_pct_config_matched": 3.250534846574281,
+    "predicted_mfu_pct_current": 3.2505348465742805,
+    "predicted_outer_residual_ms": 1302.004574999999,
+    "predicted_profiler_step_ms": 21871.512329,
+    "predicted_training_log_ms": 23173.516904,
+    "profiler_step_error_pct": -1.0393042775634587,
+    "training_log_error_pct": -2.1165430292380805
+  },
+  "schema": "pp14-224gpu-fabric-measurement-validation-v1",
+  "status": "PASS_POINT_FAIL_TEMPORAL_GENERALIZATION",
+  "workload": {
+    "source_global_batch_size": 64,
+    "source_num_layers": 60,
+    "source_num_micro_batches": 4,
+    "target_global_batch_size": 48,
+    "target_num_layers": 52,
+    "target_num_micro_batches": 3
+  }
+}

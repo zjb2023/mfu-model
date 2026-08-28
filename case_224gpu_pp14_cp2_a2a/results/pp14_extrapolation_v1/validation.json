@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "compute_routes_conserve_exactly": true,
+    "dense_groups_are_16_rank": true,
+    "expert_groups_are_2_rank": true,
+    "payload_rounding_error_at_most_one_byte_per_group": true,
+    "representative_metrics_are_finite": true,
+    "scenario_count_is_120": true,
+    "target_lane_count_is_16": true,
+    "target_pp_size_is_14": true,
+    "target_world_size_is_224": true
+  },
+  "group_sizes": {
+    "dp_ag0": [
+      16
+    ],
+    "dp_ag1": [
+      16
+    ],
+    "dp_rs": [
+      16
+    ],
+    "edp_ag0": [
+      2
+    ],
+    "edp_ag1": [
+      2
+    ],
+    "edp_rs": [
+      2
+    ]
+  },
+  "max_payload_conservation_rounding_error_bytes": 40,
+  "predictive_validation": "AVAILABLE_SEPARATE_FABRIC_VALIDATION",
+  "predictive_validation_path": "fabric_measurement_validation/fabric_validation_summary.json",
+  "representative_scenario": "omit_01_07",
+  "schema": "pp14-224gpu-extrapolation-v1",
+  "status": "PASS_STRUCTURAL"
+}

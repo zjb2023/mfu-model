@@ -1,5 +1,21 @@
 # Trace-driven MFU model
 
+## 224-GPU parallel-strategy extrapolation
+
+The independent 224-GPU research line is under
+`case_224gpu_pp14_cp2_a2a/`. Its v1 model extrapolates the captured
+`PP16/CP2/DP8/EP8` strategy to `PP14/CP2/DP8/EP8` and enumerates all 120
+work-conserving stage-template mappings. Fabric measurements are now attached:
+aligned iteration 55 has training-step error `-2.117%` and target-config MFU
+relative error `+2.162%`, but the 20-iteration absolute-error P90 is `8.929%`.
+The model therefore remains a structural/point-validated baseline rather than
+a completed target calibration. See
+`case_224gpu_pp14_cp2_a2a/results/pp14_extrapolation_v1/PP14_EXTRAPOLATION_V1.md`
+and `case_224gpu_pp14_cp2_a2a/results/pp14_extrapolation_v1/fabric_measurement_validation/FABRIC_MEASUREMENT_VALIDATION.md`.
+
+The calibration inventory, validation gates, and other legal 224-GPU strategy
+directions are recorded in `MFU_CALIBRATION_AND_224GPU_PLAN.md`.
+
 This repository contains the standalone 256-GPU MFU replay developed for a
 PP16 / CP2 / EP8 / DP8 training capture.  It builds a max-plus dependency graph
 from per-microbatch FWD/BWD trace annotations, pipeline P2P messages, and
