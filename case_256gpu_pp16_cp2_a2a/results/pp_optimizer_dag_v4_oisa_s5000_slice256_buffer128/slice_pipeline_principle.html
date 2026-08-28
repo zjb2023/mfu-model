@@ -91,6 +91,37 @@
     }
     .stat strong { display: block; color: var(--cyan); font-size: 24px; line-height: 1.25; }
     .stat span { display: block; margin-top: 5px; color: var(--muted); font-size: 12px; }
+    .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .concept-card { padding: 19px; border: 1px solid var(--line); border-radius: 12px; background: rgba(5, 15, 27, .56); }
+    .chunk-row { display: grid; grid-template-columns: repeat(16, 1fr); gap: 3px; margin: 15px 0 9px; }
+    .chunk {
+      display: grid;
+      place-items: center;
+      min-width: 0;
+      height: 28px;
+      border: 1px solid rgba(76, 141, 255, .5);
+      border-radius: 4px;
+      background: rgba(76, 141, 255, .18);
+      color: #a9c8ff;
+      font: 700 9px/1 ui-monospace, monospace;
+    }
+    .equation-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 14px 0; }
+    .eq-box { padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: rgba(8, 22, 36, .86); color: #cfe2f3; }
+    .eq-arrow { color: var(--cyan); font-weight: 800; }
+    .term-map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: 14px; }
+    .term-map > div { padding: 12px; border: 1px solid var(--line); border-radius: 9px; background: rgba(8, 22, 36, .7); }
+    .term-map strong { display: block; color: var(--cyan); }
+    .dependency-demo { margin-top: 17px; padding: 17px; border: 1px solid var(--line); border-radius: 12px; background: #081624; }
+    .dep-title { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 8px; }
+    .dep-title strong:first-child { color: var(--red); }
+    .dep-title strong:last-child { color: var(--green); }
+    .dep-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .dep-panel { min-width: 0; padding: 14px; border-radius: 9px; background: rgba(5, 15, 27, .72); }
+    .rank-flow { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 8px 0; color: #cde0f1; font: 700 11px/1.3 ui-monospace, monospace; }
+    .rank-node { display: grid; place-items: center; min-width: 37px; height: 30px; border: 1px solid var(--line); border-radius: 7px; }
+    .data-arrow { flex: 1; max-width: 115px; height: 8px; border-radius: 99px; background: linear-gradient(90deg, var(--blue), var(--cyan)); }
+    .wait-line { margin: 10px auto; padding: 6px; border: 1px dashed rgba(255,111,121,.55); border-radius: 7px; color: var(--red); text-align: center; font-size: 11px; }
+    .go-line { margin: 10px auto; padding: 6px; border: 1px dashed rgba(107,224,161,.55); border-radius: 7px; color: var(--green); text-align: center; font-size: 11px; }
     .model-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
     .model {
       min-height: 236px;
@@ -211,7 +242,8 @@
     footer { padding: 10px 0 34px; color: var(--muted); font-size: 12px; text-align: center; }
     @media (max-width: 950px) {
       .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .model-grid, .two-col, .boundary { grid-template-columns: 1fr; }
+      .model-grid, .two-col, .boundary, .concept-grid { grid-template-columns: 1fr; }
+      .term-map { grid-template-columns: 1fr; }
       .flow { grid-template-columns: 1fr; gap: 9px; }
       .flow-box:not(:last-child)::after { content: "↓"; right: auto; left: calc(50% - 6px); top: auto; bottom: -22px; }
     }
@@ -230,6 +262,7 @@
     <p class="lead">这张图解释 16-rank Ring ReduceScatter 中 256 KiB slice 如何逐跳前进、为什么不能“每个 slice 新建一个 QP”，以及 OISA 如何把 ns-3 网络竞争与 Ring 因果延迟组合成最终 FCT。</p>
     <div class="top-links">
       <a class="button" href="pp_optimizer_dag_v4_oisa_s5000.html">← 返回 MFU DAG v4</a>
+      <a class="button" href="#rs-basics">16-Rank RS 入门</a>
       <a class="button" href="#code">查看代码改动</a>
       <a class="button" href="#result">查看 256 KiB 结果</a>
     </div>
@@ -243,6 +276,64 @@
   </header>
 
   <main class="wrap">
+    <section id="rs-basics">
+      <h2>先把 16-Rank RS 说简单</h2>
+      <div class="concept-grid">
+        <article class="concept-card">
+          <h3>每个 channel 内：16 份 chunk，走 15 步</h3>
+          <p class="muted">每个 Rank 一开始都有完整 tensor 的本地贡献。tensor 在一个 Ring channel 内逻辑切成 C0～C15；相同 chunk 沿 Ring 逐 Rank 归约，最后每个 Rank 留下一份归约完成的 chunk。</p>
+          <div class="chunk-row" aria-label="16 logical chunks">
+            <span class="chunk">C0</span><span class="chunk">C1</span><span class="chunk">C2</span><span class="chunk">C3</span>
+            <span class="chunk">C4</span><span class="chunk">C5</span><span class="chunk">C6</span><span class="chunk">C7</span>
+            <span class="chunk">C8</span><span class="chunk">C9</span><span class="chunk">C10</span><span class="chunk">C11</span>
+            <span class="chunk">C12</span><span class="chunk">C13</span><span class="chunk">C14</span><span class="chunk">C15</span>
+          </div>
+          <div class="equation-row">
+            <span class="eq-box">RS = 16 − 1 = <strong>15 steps</strong></span>
+            <span class="eq-arrow">＋</span>
+            <span class="eq-box">AG = <strong>15 steps</strong></span>
+            <span class="eq-arrow">＝</span>
+            <span class="eq-box">AR = <strong>30 steps</strong></span>
+          </div>
+          <p class="muted">本例有 7 个 channel，相当于 tensor 先分成 7 份，每份内部各跑一个 16-Rank Ring；7 个 Ring 没有算法 barrier，但会竞争共享 NIC 和交换机链路。</p>
+        </article>
+
+        <article class="concept-card">
+          <h3>28.18 MB 是一个 step-edge flow</h3>
+          <div class="equation-row">
+            <span class="eq-box">3,155,886,080 B</span>
+            <span class="eq-arrow">÷ 7 channels</span>
+            <span class="eq-arrow">÷ 16 chunks</span>
+            <span class="eq-box"><strong>28.18 MB</strong><br><small>26.87 MiB</small></span>
+          </div>
+          <p>它表示：<strong>某一个 channel、某一个 Ring step、某一条 Rank→下游 Rank 边</strong>上的数据量。一个 step 同时有 <code>16 × 7 = 112</code> 条这种 flow。</p>
+          <div class="term-map">
+            <div><strong>OisaFlow</strong><span class="muted">仿真调度的数据结构</span></div>
+            <div><strong>Persistent QP</strong><span class="muted">固定 Rank 对之间的长连接</span></div>
+            <div><strong>256 KiB slice</strong><span class="muted">QP 内可逐跳推进的调度单元</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="dependency-demo">
+        <h3>关键：这不是“同一步所有 Rank 都完成”的全局 barrier</h3>
+        <div class="dep-title"><strong>错误理解：全局等待</strong><strong>正确语义：局部 slice 依赖</strong></div>
+        <div class="dep-grid">
+          <div class="dep-panel">
+            <div class="rank-flow"><span class="rank-node">R0</span><span class="data-arrow"></span><span class="rank-node">R1</span></div>
+            <div class="wait-line">等待同一步 R0～R15 全部发送完成</div>
+            <div class="rank-flow"><span class="rank-node">R1</span><span class="data-arrow"></span><span class="rank-node">R2</span></div>
+          </div>
+          <div class="dep-panel">
+            <div class="rank-flow"><span class="rank-node">R0</span><span class="data-arrow"></span><span>S0</span><span class="rank-node">R1</span></div>
+            <div class="go-line">R1 收到并归约 S0，立即允许 S0 进入下一跳</div>
+            <div class="rank-flow"><span class="rank-node">R1</span><span class="data-arrow"></span><span>S0</span><span class="rank-node">R2</span></div>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:14px"><strong>使用 slice 不改变 hop：</strong>RS 仍是 15 个逻辑 Ring step，Rank 顺序和物理路由也不变。它只把“完整 28.18 MB 到达后才能前进”细化成“这个 256 KiB slice 到达并归约后即可前进”。其他 Rank、其他 slice 和其他 channel 不必一起到齐。</div>
+      </div>
+    </section>
+
     <section>
       <h2>先分清三种模型</h2>
       <div class="model-grid">
