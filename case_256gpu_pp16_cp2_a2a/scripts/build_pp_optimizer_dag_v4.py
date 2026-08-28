@@ -14,8 +14,8 @@ import pandas as pd
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CASE_ROOT = Path(__file__).resolve().parents[1]
 SRC_ROOT = REPO_ROOT / "src"
-OISA_SOURCE_SNAPSHOT_COMMIT = "2bd0e53d0e572b434490877d6aa3911973d1d63b"
-OISA_SOURCE_SNAPSHOT_BRANCH = "feat/rank-release-fct"
+OISA_SOURCE_SNAPSHOT_COMMIT = "4e29411cff7bb38a561289796723aee49fd6f21a"
+OISA_SOURCE_SNAPSHOT_BRANCH = "feat/mfu-multiring-fct"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
