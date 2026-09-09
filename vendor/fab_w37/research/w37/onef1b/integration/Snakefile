@@ -1,0 +1,101 @@
+"""Documentation-only pipeline, isolated from all historical model targets."""
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(workflow.basedir).resolve().parents[3]
+CODE = ROOT / "research/w37/onef1b/integration"
+OUT = ROOT / "results/w37/A/integration-20260907"
+SPEC = ROOT / "docs/w37/1f1b/integration/inputs.json"
+DATA = json.loads(SPEC.read_text(encoding="utf-8"))["inputs"]
+FROZEN = [str(Path(r["path"]) if Path(r["path"]).is_absolute() else ROOT / r["path"]) for r in DATA.values()]
+AUDIT_FILES = ["audit.json", "input_verification.json", "audit_checks.json",
+    "graph_inventory.csv", "graph_node_types.csv", "graph_edge_types.csv",
+    "compute_binding_summary.csv", "compute_node_updates.csv", "compute_physical_parameters.csv",
+    "gradient_parameters.csv", "gradient_node_updates.csv", "pp_direction_metrics.csv",
+    "v685_phase_summary.csv", "version_iteration_results.csv", "online_iteration_results.csv",
+    "online_metrics.csv", "outer_source_clocks.csv"]
+
+rule all:
+    input:
+        str(OUT / "validation.json")
+
+rule audit:
+    input:
+        [str(SPEC), str(CODE / "common.py"), str(CODE / "audit.py")] + FROZEN
+    output:
+        [str(OUT / name) for name in AUDIT_FILES]
+    params:
+        python=sys.executable, script=str(CODE / "audit.py")
+    shell:
+        "{params.python:q} -B {params.script:q}"
+
+rule render:
+    input:
+        [str(ROOT / "docs/w37/1f1b/binding/delivery_inputs.json")] + [str(ROOT / "docs/w37/1f1b/binding" / name) for name in json.loads((ROOT / "docs/w37/1f1b/binding/delivery_inputs.json").read_text())["files"]] + [str(OUT / r["output"]) for r in json.loads((ROOT / "docs/w37/1f1b/integration/context_inputs.json").read_text())["inputs"]] + [str(OUT / name) for name in AUDIT_FILES] + [str(OUT / name) for name in ("v685_calibration_map.svg", "v685_calibration_map.json", "model_cost_inventory.json", "model_cost_inventory.csv", "parameter_review.json", "three_case_parameters.csv", "context_audit.json", "scaleout_summary.csv", "scaleout_target_points.csv", "full_iter_payload.json", "full_iter_validation.json", "full_iter_ledger.csv", "full_iter_events.csv")] + [str(CODE / name) for name in ("render.py", "binding_sections.py", "organization.py", "parameter_sections.py", "context_sections.py", "terminology.py", "style.css", "report.js", "full_iter.js")]
+    output:
+        [str(OUT / name) for name in ("integrated_report.html", "render_manifest.json", "terminology_review.json", "organization_map.json")]
+    params:
+        python=sys.executable, script=str(CODE / "render.py")
+    shell:
+        "{params.python:q} -B {params.script:q}"
+
+rule context:
+    input:
+        str(ROOT / "docs/w37/1f1b/integration/context_inputs.json"), str(CODE / "context.py")
+    output:
+        [str(OUT / name) for name in ("context_audit.json", "scaleout_summary.csv", "scaleout_target_points.csv")] + [str(OUT / r["output"]) for r in json.loads((ROOT / "docs/w37/1f1b/integration/context_inputs.json").read_text())["inputs"]]
+    params:
+        python=sys.executable, script=str(CODE / "context.py")
+    shell:
+        "{params.python:q} -B {params.script:q}"
+
+rule full_iteration:
+    input:
+        [str(OUT / "audit.json"), str(CODE / "full_iter.py")]
+    output:
+        [str(OUT / name) for name in ("full_iter_payload.json", "full_iter_validation.json", "full_iter_ledger.csv", "full_iter_events.csv")]
+    params:
+        python=sys.executable, script=str(CODE / "full_iter.py")
+    shell:
+        "{params.python:q} -B {params.script:q}"
+
+rule parameter_review:
+    input:
+        [str(ROOT / "docs/w37/1f1b/integration/parameter_inputs.json"), str(CODE / "parameter_review.py")] + [str(ROOT / r["path"]) for r in json.loads((ROOT / "docs/w37/1f1b/integration/parameter_inputs.json").read_text())["inputs"].values()]
+    output:
+        [str(OUT / name) for name in ("parameter_review.json", "three_case_parameters.csv")]
+    params:
+        python=sys.executable, script=str(CODE / "parameter_review.py")
+    shell:
+        "{params.python:q} -B {params.script:q}"
+
+rule validate:
+    input:
+        [str(OUT / name) for name in ("integrated_report.html", "render_manifest.json", "terminology_review.json", "organization_map.json")] + [str(CODE / "validate.py"), str(ROOT / "docs/w37/1f1b/integration/reorganization_input.json")]
+    output:
+        str(OUT / "validation.json")
+    params:
+        python=sys.executable, script=str(CODE / "validate.py")
+    shell:
+        "{params.python:q} -B {params.script:q}"
+
+rule cost_inventory:
+    input:
+        [str(SPEC), str(CODE / "common.py"), str(CODE / "cost_inventory.py")] + FROZEN
+    output:
+        [str(OUT / name) for name in ("model_cost_inventory.json", "model_cost_inventory.csv")]
+    params:
+        python=sys.executable, script=str(CODE / "cost_inventory.py")
+    shell:
+        "{params.python:q} -B {params.script:q}"
+
+rule calibration_diagram:
+    input:
+        [str(OUT / name) for name in ("audit.json", "model_cost_inventory.json")] + [str(CODE / "calibration_diagram.py"), str(CODE / "common.py")]
+    output:
+        [str(OUT / name) for name in ("v685_calibration_map.svg", "v685_calibration_map.json")]
+    params:
+        python=sys.executable, script=str(CODE / "calibration_diagram.py")
+    shell:
+        "{params.python:q} -B {params.script:q}"

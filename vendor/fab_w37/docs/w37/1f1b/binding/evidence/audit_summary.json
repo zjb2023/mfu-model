@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "target_nodes": 327746,
+  "physical_keys": 58,
+  "direct_keys": 3,
+  "direct_nodes": 144,
+  "reason_counts": {
+    "internal_nodes_use_fine_schema": 55,
+    "direct_boundary_key_retained": 3
+  },
+  "fine_nodes": 80064,
+  "fine_positive": 71488,
+  "eligible_fine_nodes": 70192,
+  "fine_unobserved_nodes": 8576,
+  "old_fine_cost_matches_all9_source_median_nodes": 8631,
+  "fine_fit_parameters": 6765,
+  "holdout_rows": 13241,
+  "holdout_without_fit": 125,
+  "source_full_graph_new_compute_key_column_present": false,
+  "source_full_graph_validation": "not established; source schema differs; local cost validation does not validate full iteration",
+  "source_split": {
+    "fit": [
+      85,
+      90
+    ],
+    "incremental_development": [
+      95,
+      100
+    ],
+    "historical_inheritance": [
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100
+    ]
+  },
+  "target_observation_read": false
+}

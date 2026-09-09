@@ -1,0 +1,149 @@
+{
+  "version": "v6.10",
+  "status": "FROZEN_DEVELOPMENT_RELEASE",
+  "parent": "v6.8.5",
+  "method": "fine_both",
+  "research_commit": "f80c1e3",
+  "inputs": {
+    "v685_nodes": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/predictions/dag_v685_nodes.csv.gz",
+      "sha256": "839fe339972ccf9fb23740856dd82e4d274a0ad94b4fb5530581ba0c6990fb58",
+      "role": "source_derived_or_target_prediction",
+      "size_bytes": 10855036
+    },
+    "v685_edges": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/predictions/dag_v685_edges.csv.gz",
+      "sha256": "4e72fcc9e41357035e1c4e469929458960d369e59abaddd3ab9f9326046f3867",
+      "role": "source_derived_or_target_prediction",
+      "size_bytes": 2461236
+    },
+    "v685_contract": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/prediction_contract.json",
+      "sha256": "6733d136fb39a49bc963fd381c8ab972fc22185ff4f974296ee9f494b4073349",
+      "role": "source_derived_or_target_prediction",
+      "size_bytes": 904
+    },
+    "version_iterations": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/post685-delivery-round2-final/version_iteration_results.csv",
+      "sha256": "94adca82838594c7076eacf24de5c71d64ad1c5a113eadc2415d031e1d074fec",
+      "role": "evaluator",
+      "size_bytes": 14905
+    },
+    "v685_phase_rows": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/post685-candidate-readiness-r1/evaluator_only/phase_results.csv",
+      "sha256": "b327a9b604addf07e553b21be51fcd6a216fc9b4ba734dc4af43e9b538545d36",
+      "role": "evaluator",
+      "size_bytes": 51845
+    },
+    "updates": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/model/node_updates.csv.gz",
+      "sha256": "133dc04120b87f03578ba0ea405d4dc0ea811f5d36ad51d935a8bcef69bd8a6c",
+      "size_bytes": 3951732,
+      "role": "sealed_source_derived_prediction"
+    },
+    "expected_timings": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/model/fine_both_timings.csv.gz",
+      "sha256": "70c7c5648b05087dc5c287c2e1f14039b42b0c32df139651ab217229edd6ef01",
+      "size_bytes": 3249551,
+      "role": "sealed_source_derived_prediction"
+    },
+    "sealed_predictions": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/model/predictions.csv",
+      "sha256": "2cceb5e6fb2ee53f24a29333e955c6dd47db4ea015fa8fb9da280ddd5e3c430e",
+      "size_bytes": 953,
+      "role": "sealed_source_derived_prediction"
+    },
+    "fine_parameters": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/audit/fine_parameters.csv",
+      "sha256": "e6730babafbc3edb4d35e6b1afbaa9cc29135b7b7e7fe84c9682ca6ef109ebd6",
+      "size_bytes": 723973,
+      "role": "sealed_source_derived_prediction"
+    },
+    "shape_factors": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/model/inherited_runtime_shape_factors.csv",
+      "sha256": "85eb5f22090d59bd40e32aa3617c41bf048bc11c9d22cb6e97d64baeda26481d",
+      "size_bytes": 71048,
+      "role": "sealed_source_derived_prediction"
+    },
+    "parent_seal": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/model/prediction_seal.json",
+      "sha256": "764cb7a865cc80686164e9428b7f7eafc89175be8ce02269df533a9483f2f74a",
+      "size_bytes": 2075,
+      "role": "sealed_source_derived_prediction"
+    },
+    "historical_view": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/integration-20260907/full_iter_payload.json",
+      "sha256": "08050022c3fbb6928da09bd308ae18b4ab778cc7e965232880b6364beded6515",
+      "size_bytes": 781859,
+      "role": "evaluator"
+    },
+    "static_parameters": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/integration-20260907/three_case_parameters.csv",
+      "sha256": "b84bbd8e6381499a139fd89bbd1cf2773d543adb3522984aa65d77d0292535f8",
+      "size_bytes": 1615,
+      "role": "static_configuration"
+    },
+    "expected_evaluation": {
+      "path": "/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/evaluate/iteration_results.csv",
+      "sha256": "e60edae73f44495649291a417de3da38fbd6bbb34014070bf1d4e95bba595818",
+      "size_bytes": 4609,
+      "role": "evaluator"
+    }
+  },
+  "code_inputs": {
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v60_operator_ir.py": "ed4e6b689700729fece78874f15ce763818e2028b990bee6f485caa025af965c",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v61_kernel_calibration.py": "79f0189b50e371e498697e891ec8fd2f4543016af80d3f0f3390ab7238cdf808",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v62_cost_bound_prediction.py": "67cde3324b22f6e28926c2e8ec1999cc2185751655199f385d13c43002f266f3",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v62_trace_timeline_comparison.py": "10ce52dc2626f6b4a8c76d2022178023722a145b6fec153cc071f2103563fe37",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v631_ag_round_barrier.py": "b2c370991873996229e68a3f5d0b9f1022423762a1d7bb423e3d6dc66f80f226",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v63_ordered_optimizer_tail.py": "1d76fd04dd6a1b3bf65f13e3c695468e4e90e6a45c8b31e6c319031f4d0e1c5b",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v64a_phase_handoff.py": "02ec9f6bfe08d58a6a7b9a297f6fd0c25222967de2d0f0e98c2de49d0ad1c887",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v65_global_layer_transfer.py": "07811e6eda5ba129490b4ad482a3d277dd7c7e3e4a2b515b9d1d71485f4591ef",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v66_optimizer_stream.py": "dca2df711db3aa777b793fc5a7cfdc728ecbae3c951d99b58a6f083d346c73bc",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v67_microbatch_runtime_shape.py": "037b8b87d8e669005082c47619aa8ca84be993685e669d385eab71ec4d11bf33",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v681_causal_backward_trigger.py": "f19106778d080ba3f305af449c7af031fec441bfb6f0ee8d04801e3dc3fff12f",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v682_stage_aware_pp_gradient.py": "3b8615a7b9645de6cbf6489865a669240086e83a5801a7fe412068d350f96295",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v683_causal_program_order.py": "1280f07fe0b61f5e7463b5af7e2a0b1773419c02b21d9282c68bbef6c0669709",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v684_blocking_pp_program_order.py": "a80a6950807c397b4a3136d8b453d6faa72f5b374ad51f132c508b8ffcc89cd1",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v685_source_steady_calibration.py": "7db5effad5f140384f6f9faeb7529fa82c9d1ede26ba1ec0a105c8e73ac999c7",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v68_profiler_entry_visualization.py": "837de2142b230b2d98938b88cc9637236766d0bd8feec7053179869d1731ed9e",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v68_source256_profiler_entry.py": "91d26568709196f6f0b2c01449256bad4e9263d315c6f1d9b60d8aac9eba890b",
+    "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v68_target_assisted_profiler_entry.py": "9942461d8b7957f089c93be29882a6769884f0f3969b15888b86f2ff12dbde90",
+    "case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v62_cost_bound_prediction.py": "5cdaca6bc8c07349a034ad6bc41d034a8cfe6f1a22a433a65314a4d5a467831d",
+    "case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v63_ordered_optimizer_tail.py": "facc1da65115a9fba1d90d3d9a309f33f2d21040c506bbf93b6fb29f5549dfe2",
+    "case_224gpu_pp14_cp2_a2a/scripts/finalize_dag_v60_operator_ir.py": "e9873f15639fe2d73249c12a96a6cb5f9e27e2354ca2d4a751900a4d28103b4c",
+    "case_224gpu_pp14_cp2_a2a/scripts/finalize_dag_v61_kernel_calibration.py": "b945bd997642b6797acc176f5c4f9e3cd48b4a19b86c08b90b1de633b5634f59",
+    "case_224gpu_pp14_cp2_a2a/scripts/finalize_dag_v62_cost_bound_prediction.py": "4cfd60b83383c8cd79e35a0641ff3822cb885b42d641e17fa8fa1f94a7985d44",
+    "case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v62_cost_bound_prediction.py": "128920d0dbc2fe071c4e4018c3478ae2dbf273bff91b8d320a859958edae50c7",
+    "case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v631_ag_round_barrier.py": "959519f73c76116594da391624d194a19028828367840a1566ceb39a1cecb956",
+    "case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v63_ordered_optimizer_tail.py": "91f8fbff033c4375bce555dba3041a6faafda0006c275b1fa4a62c9f69f32446",
+    "case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v64a_phase_handoff.py": "5ee511fa94b84523b3edb98a6b4bb5ebd256868fa1d387e0c15a7439fef19fe9",
+    "case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v65_global_layer_transfer.py": "c1962643310ad1c07c9d7d710507aba52ab648d5a84a644f46afae3ce1ad4c84"
+  },
+  "source_fit": [
+    85,
+    90
+  ],
+  "inherited_source": [
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    100
+  ],
+  "target_evaluation": [
+    85,
+    90,
+    95,
+    100
+  ],
+  "topology_sha256": "f1d560daaa344a5980697b67e71b97140c9bfd38fe12a2c676daf05c53bd8d04",
+  "source_full_iteration_validated": false,
+  "wall_floor_independently_validated": false,
+  "selection": "User authorized freezing existing fine_both after seeing development scores; no fresh blind or preselection claim",
+  "input_bytes": 22171341
+}

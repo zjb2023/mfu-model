@@ -1,0 +1,25 @@
+{
+  "status": "SEALED_BEFORE_TARGET_EVALUATOR",
+  "topology": "f1d560daaa344a5980697b67e71b97140c9bfd38fe12a2c676daf05c53bd8d04",
+  "fit_iterations": [
+    85,
+    90
+  ],
+  "inherited_source_iterations": "historical60–100; includes incremental validation",
+  "source_full_iteration_validated": false,
+  "rule": "Retain source global-layer and microbatch resolution; source85/90 medians. For exposed nodes preserve the inherited full node duration as a conservative wall floor: max(old_duration,new_compute); for overlap nodes replace standalone compute duration. These are source-only candidate sensitivity runs, not an independently source-validated full-iteration upgrade. Do not fit residual or target values. Preserve inherited v67 per-rank/phase/MB scaling: new node compute = new fine source median × inherited effective group factor; require old cost reconstruction error below 1ns.",
+  "files": {
+    "frozen_v685_critical.csv": "fa02b46c91be6552d32186ef98718e461a1e058d5c40dcdbdb1fcabf9b8d5592",
+    "fine_overlap_only_timings.csv.gz": "c01882ec14e287c25439c5747e608472aaf63c40194a3d11ea56147a3d26a432",
+    "fine_both_critical.csv": "1b139591c1f7576f18370a3a63666fa7f9e033689793412d64a35e857a461c9f",
+    "fine_both_timings.csv.gz": "70c7c5648b05087dc5c287c2e1f14039b42b0c32df139651ab217229edd6ef01",
+    "node_updates.csv.gz": "133dc04120b87f03578ba0ea405d4dc0ea811f5d36ad51d935a8bcef69bd8a6c",
+    "fine_overlap_only_critical.csv": "0ec3be2a8cb7cbfe9e6f83a3b3a82bcdfa4a8a7276765f0a5157c467089acf4e",
+    "frozen_v685_timings.csv.gz": "20b19abfd3c01925359a8dcc08a5467b61c993fdf95f07a20462a01c85f1247a",
+    "predictions.csv": "2cceb5e6fb2ee53f24a29333e955c6dd47db4ea015fa8fb9da280ddd5e3c430e",
+    "fine_exposed_only_critical.csv": "a3549bf495eaf74e80e60a53a8057c51806ead400434817310e197f39c8b91a9",
+    "inherited_runtime_shape_factors.csv": "85eb5f22090d59bd40e32aa3617c41bf048bc11c9d22cb6e97d64baeda26481d",
+    "fine_exposed_only_timings.csv.gz": "8c401d23f9d24c9d04e97fa111e5ca0f38788d7f0dbbb5871b2134bf66cf1497"
+  },
+  "target_observation_read": false
+}

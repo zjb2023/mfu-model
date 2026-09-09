@@ -1,0 +1,87 @@
+[protocol]
+id = "dag-v6.0-code-native-operator-ir-256-to-224-2026w36-v1"
+status = "structure_only_costs_unassigned"
+claim = "code-native operator dependency IR; no timing prediction or accuracy claim"
+
+[source]
+case_id = "256gpu_pp16_cp2_a2a"
+world_size = 256
+pp = 16
+pp_lanes = 16
+microbatches = 4
+layers = 60
+first_dense_layers = 1
+layer_stage_map = "case_256gpu_pp16_cp2_a2a/results/topology/layer_stage_map.csv"
+training_script = "case_256gpu_pp16_cp2_a2a/kimi_236_32_new_data.sh"
+
+[target]
+case_id = "224gpu_pp14_cp2_a2a"
+world_size = 224
+pp = 14
+pp_lanes = 16
+microbatches = 3
+layers = 52
+first_dense_layers = 1
+layer_stage_map = "case_224gpu_pp14_cp2_a2a/results/topology/layer_stage_map.csv"
+run_contract = "case_224gpu_pp14_cp2_a2a/config/run_contract.toml"
+
+[architecture]
+dtype = "bf16"
+micro_batch_size = 2
+sequence_length = 8192
+context_parallel_size = 2
+local_sequence_length = 4096
+hidden_size = 5120
+num_attention_heads = 128
+q_lora_rank = 1536
+kv_lora_rank = 512
+qk_head_dim = 128
+qk_pos_emb_head_dim = 64
+v_head_dim = 128
+dense_ffn_hidden_size = 12288
+moe_ffn_hidden_size = 1536
+shared_expert_intermediate_size = 3072
+num_experts = 160
+moe_router_topk = 6
+expert_parallel_size = 8
+data_parallel_size = 8
+
+[semantics]
+schedule = "conventional_non_interleaved_1f1b"
+full_recompute = true
+recompute_method = "block"
+recompute_num_layers = 4
+cp_forward_calls_per_layer = 4
+cp_backward_calls_per_layer_including_recompute = 9
+ep_forward_calls_per_moe_layer = 2
+ep_backward_calls_per_moe_layer_including_recompute = 4
+mtp_enabled = false
+mtp_reason = "launch defines MTP=1 but --use-multi-token-prediction and --mtp-num-layers are commented"
+combined_ep_overlap_enabled = false
+combined_ep_overlap_reason = "--overlap-moe-expert-parallel-comm is commented in the captured launch"
+shared_expert_overlap_enabled = false
+pp_cost_policy = "captured_trace_end_to_end_no_oisa"
+cp_service_policy = "source_trace_cp2_group_tail_until_backend_replacement"
+ep_service_policy = "shared_oisa_fct_lookup_future_cost_binding"
+dp_edp_service_policy = "shared_oisa_fct_lookup_future_cost_binding"
+
+[code_sources]
+fine_grained_callables = "0722/236B/Megatron-LM/megatron/core/models/gpt/fine_grained_callables.py"
+model_chunk_schedule_plan = "0722/236B/Megatron-LM/megatron/core/models/common/model_chunk_schedule_plan.py"
+pipeline_schedules = "0722/236B/Megatron-LM/megatron/core/pipeline_parallel/schedules.py"
+multi_latent_attention = "0722/236B/Megatron-LM/megatron/core/transformer/multi_latent_attention.py"
+transformer_engine_wrapper = "0722/236B/Megatron-LM/megatron/core/extensions/transformer_engine.py"
+moe_layer = "0722/236B/Megatron-LM/megatron/core/transformer/moe/moe_layer.py"
+charon_reference = "/home/zjb/Desktop/p/MLSys-2026-charon-a-unified-and-fine-grained-simulator-for-large-scale-llm-training-and-inference-Paper-Conference.pdf"
+
+[semantic_evidence]
+trace_html = "case_256gpu_pp16_cp2_a2a/HWN_ANA_20260730_Kimi236B_256卡集合通信_Profile时间线.html"
+cp_rank_events = "case_256gpu_pp16_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v53_cp_group_source60_100/source_cp_rank_events.csv"
+cp_slot_parameters = "case_256gpu_pp16_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v53_cp_group_source60_100/source_cp_slot_parameters.csv"
+deepep_group_operations = "case_256gpu_pp16_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v53_deepep_token_source60_100/source_deepep_group_operations.csv"
+pp_trace_events = "case_256gpu_pp16_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v53_ep_group_source60_100/source_pp_trace_events_60_100.csv"
+pp_api_events = "case_256gpu_pp16_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v53_ep_group_source60_100/source_pp_api_events_60_100.csv"
+raw_trace_example = "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33087/profiler/iteration_60/rank0.1785477876632.pt.trace.json"
+
+[outputs]
+output_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v60_operator_ir_256_to_224"

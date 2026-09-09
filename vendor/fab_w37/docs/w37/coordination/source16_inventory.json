@@ -1,0 +1,279 @@
+{
+  "status": "DERIVED_INPUTS_AVAILABLE_MODEL_COMPARABILITY_PARTIAL",
+  "attempts": [
+    {
+      "path": "/home/zjb/Desktop/fabric-data-analysis/case_16gpu_pp2/config/run_contract_wo_mccllog_v7.toml",
+      "sha256": "a6f512afb710b63987bde99dbe6ec498e0ae0f6f6573fa4c2c7226d550e5c91e",
+      "content": {
+        "identity": {
+          "run_id": "2026-07-29_1116_ep8_pp2_ace_wo_mccllog",
+          "attempt_id": "wo_mccllog_1116",
+          "timezone": "Asia/Hong_Kong",
+          "training_log": "training_logs/hostB_worker34002.log",
+          "training_log_role": "canonical_structured_iteration_wall",
+          "excluded_attempt": "w_mccllog_1129"
+        },
+        "topology": {
+          "world_size": 16,
+          "hosts": [
+            "worker33073",
+            "worker34002"
+          ],
+          "host_labels": [
+            "A",
+            "B"
+          ],
+          "ranks_host_a": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "ranks_host_b": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "gpus_per_host": 8,
+          "nic_devices": [
+            "mlx5_0",
+            "mlx5_1",
+            "mlx5_2",
+            "mlx5_3",
+            "mlx5_6",
+            "mlx5_7",
+            "mlx5_8",
+            "mlx5_9"
+          ],
+          "mtlinks_per_gpu": 14,
+          "tp": 1,
+          "pp": 2,
+          "dp": 8,
+          "ep": 8,
+          "cp": 1
+        },
+        "iterations": {
+          "training": "1..100",
+          "profiled": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            45,
+            50,
+            55,
+            60,
+            65,
+            70,
+            75,
+            80,
+            85,
+            90,
+            95,
+            100
+          ],
+          "excluded": [],
+          "first_last_edge_count": 8
+        },
+        "collectors": {
+          "nic_host_a": "run_20260729_105854_pid1388750",
+          "nic_host_b": "run_20260729_105854_pid1173886",
+          "mtlink_host_a": "run_20260729_105854_pid1388749",
+          "mtlink_host_b": "run_20260729_105854_pid1173887",
+          "nic_nominal_period_us": 1000,
+          "mtlink_nominal_period_us": 5000
+        },
+        "time_contract": {
+          "profiler": "epoch_ns_int64",
+          "deepep": "epoch_ns_int64_operation_end",
+          "nic": "timestamp_ns_epoch_int64",
+          "mtlink": "host_realtime_ns_epoch_int64",
+          "same_host_sync": "shared_system_realtime_clock_no_offset_transform",
+          "cross_host_sync": "shared_epoch_domain_but_arrival_spread_claims_require_sensitivity",
+          "forbidden_columns": [
+            "timestamp_sec"
+          ]
+        },
+        "units": {
+          "byte_system": "decimal",
+          "mtlink_primary": "GBps",
+          "mtlink_comparison": "Gbps",
+          "nic_primary": "Gbps",
+          "mtlink_gbps_formula": "sum(tx_delta_bytes)*8/window_ns",
+          "mtlink_GBps_formula": "sum(tx_delta_bytes)/window_ns",
+          "nic_gbps_formula": "sum(xmit_bytes)*8/window_ns",
+          "nominal_mtlink_reference_GBps": 0.0,
+          "nominal_mtlink_reference_status": "missing_not_imputed"
+        },
+        "mapping": {
+          "rank_to_gpu": "rank%8",
+          "rank_to_nic": "unknown",
+          "nic_claim_scope": "host_and_bond_observation_only"
+        },
+        "claims": {
+          "maximum_capability": "L6",
+          "calibration_capability": "blocked",
+          "event_hardware_precision": "approximate_locator_only",
+          "event_no_sample": "NA",
+          "forbid_mtlink_nic_time_addition": true,
+          "forbid_run1555_transfer_weights": true
+        }
+      }
+    },
+    {
+      "path": "/home/zjb/Desktop/fabric-data-analysis/case_16gpu_pp2/config/run_contract_w_mccllog_v7.toml",
+      "sha256": "41084a2452ef8ea4f44db2301b776299665a812a2b4a371218265e01762099f6",
+      "content": {
+        "identity": {
+          "run_id": "2026-07-29_1129_ep8_pp2_ace_w_mccllog",
+          "attempt_id": "w_mccllog_1129",
+          "timezone": "Asia/Hong_Kong",
+          "training_log": "training_logs/hostB_worker34002.log",
+          "training_log_role": "canonical_structured_iteration_wall",
+          "excluded_attempt": "wo_mccllog_1116"
+        },
+        "topology": {
+          "world_size": 16,
+          "hosts": [
+            "worker33073",
+            "worker34002"
+          ],
+          "host_labels": [
+            "A",
+            "B"
+          ],
+          "ranks_host_a": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "ranks_host_b": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "gpus_per_host": 8,
+          "nic_devices": [
+            "mlx5_0",
+            "mlx5_1",
+            "mlx5_2",
+            "mlx5_3",
+            "mlx5_6",
+            "mlx5_7",
+            "mlx5_8",
+            "mlx5_9"
+          ],
+          "mtlinks_per_gpu": 14,
+          "tp": 1,
+          "pp": 2,
+          "dp": 8,
+          "ep": 8,
+          "cp": 1
+        },
+        "iterations": {
+          "training": "1..100",
+          "profiled": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            45,
+            50,
+            55,
+            60,
+            65,
+            70,
+            75,
+            80,
+            85,
+            90,
+            95,
+            100
+          ],
+          "excluded": [],
+          "first_last_edge_count": 8
+        },
+        "collectors": {
+          "nic_host_a": "run_20260729_112904_pid142307",
+          "nic_host_b": "run_20260729_112904_pid4189442",
+          "mtlink_host_a": "run_20260729_112904_pid142306",
+          "mtlink_host_b": "run_20260729_112904_pid4189441",
+          "nic_nominal_period_us": 1000,
+          "mtlink_nominal_period_us": 5000
+        },
+        "time_contract": {
+          "profiler": "epoch_ns_int64",
+          "deepep": "epoch_ns_int64_operation_end",
+          "nic": "timestamp_ns_epoch_int64",
+          "mtlink": "host_realtime_ns_epoch_int64",
+          "same_host_sync": "shared_system_realtime_clock_no_offset_transform",
+          "cross_host_sync": "shared_epoch_domain_but_arrival_spread_claims_require_sensitivity",
+          "forbidden_columns": [
+            "timestamp_sec"
+          ]
+        },
+        "units": {
+          "byte_system": "decimal",
+          "mtlink_primary": "GBps",
+          "mtlink_comparison": "Gbps",
+          "nic_primary": "Gbps",
+          "mtlink_gbps_formula": "sum(tx_delta_bytes)*8/window_ns",
+          "mtlink_GBps_formula": "sum(tx_delta_bytes)/window_ns",
+          "nic_gbps_formula": "sum(xmit_bytes)*8/window_ns",
+          "nominal_mtlink_reference_GBps": 0.0,
+          "nominal_mtlink_reference_status": "missing_not_imputed"
+        },
+        "mapping": {
+          "rank_to_gpu": "rank%8",
+          "rank_to_nic": "unknown",
+          "nic_claim_scope": "host_and_bond_observation_only"
+        },
+        "claims": {
+          "maximum_capability": "L6",
+          "calibration_capability": "blocked",
+          "event_hardware_precision": "approximate_locator_only",
+          "event_no_sample": "NA",
+          "forbid_mtlink_nic_time_addition": true,
+          "forbid_run1555_transfer_weights": true
+        }
+      }
+    }
+  ],
+  "unresolved": [
+    "num_layers",
+    "microbatches",
+    "global_batch",
+    "sequence_length",
+    "per_iteration_FLOPs",
+    "CP1_to_CP2_transfer",
+    "which_logging_attempt_to_calibrate"
+  ],
+  "note": "Do not combine attempts. No capacity calibration claim is inherited from the L6 spatial-analysis admission."
+}

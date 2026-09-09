@@ -1,0 +1,77 @@
+{
+  "three_stage": {
+    "target": "224gpu_pp14_cp2_a2a",
+    "window": [
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100
+    ],
+    "mape_pct": 16.823672076618063
+  },
+  "v682": {
+    "window": [
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100
+    ],
+    "mape_pct": 10.464726565389224,
+    "ledger": {
+      "boundary_rule": "profiler_start_to_first_f; first_f_to_last_b; last_b_to_profiler_end",
+      "component_internal_causal_attribution_complete": false,
+      "components": [
+        {
+          "actual_mean_ms": 1578.8645686666669,
+          "component": "entry",
+          "error_share_pct": 13.323337629699438,
+          "label": "训练迭代准备阶段",
+          "meaning": "采样开始到第一次前向计算；包含训练轮次入口与运行时准备",
+          "predicted_ms": 1252.168507,
+          "underprediction_ms": 326.69606166666676
+        },
+        {
+          "actual_mean_ms": 20963.57103211111,
+          "component": "forward_backward_envelope",
+          "error_share_pct": 75.83964395553691,
+          "label": "前向与反向流水线执行阶段",
+          "meaning": "第一次前向到最后一次反向；包含计算、流水线传播、同步与运行时空档",
+          "predicted_ms": 19103.938432000003,
+          "underprediction_ms": 1859.6326001111083
+        },
+        {
+          "actual_mean_ms": 756.509705888888,
+          "component": "post_forward_backward_tail",
+          "error_share_pct": 10.837018414763554,
+          "label": "参数更新与通信收尾阶段",
+          "meaning": "最后一次反向到采样结束；包含优化器、数据并行与专家并行到齐和完成",
+          "predicted_ms": 490.779651249999,
+          "underprediction_ms": 265.730054638889
+        }
+      ],
+      "reconstructed_underprediction_ms": 2452.0587164166636,
+      "reconstruction_error_ms": -2.7284841053187847e-12
+    },
+    "denominator_ms": 2452.0587164166664
+  },
+  "v685": {
+    "window": [
+      85,
+      90,
+      95,
+      100
+    ],
+    "mape_pct": 10.369528494438608
+  },
+  "conclusion": "16.823672% is nine target224 points; 10.369528% is four target224 points. Historical 10.3 is approximate with ambiguous exact version. 75.839644% is a signed mean error contribution, not phase MAPE."
+}

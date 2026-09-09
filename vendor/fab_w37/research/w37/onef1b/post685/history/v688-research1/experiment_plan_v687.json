@@ -1,0 +1,40 @@
+{
+  "version": "v6.8.7-research.1",
+  "status": "PREREGISTERED_SOURCE_MECHANISM_BEFORE_NEW_PREDICTIONS",
+  "parent": "v686-research1",
+  "source_fit": [
+    85,
+    90
+  ],
+  "source_incremental_validation": [
+    95,
+    100
+  ],
+  "same_window_sensitivity": [
+    85,
+    90,
+    95,
+    100
+  ],
+  "target": "224 existing development evaluation, never blind",
+  "evidence": "Source B completion remaining time varies with sender head start; receiver-first median 98.333 ms, sender earlier >100 ms median 5.206 ms. No target parameter used.",
+  "equation": "completion=max(sender_API_entry+latent_sender_ready_delay,receiver_API_entry)+post_ready_completion",
+  "estimator": "direction x lane; single-message endpoints only; nonnegative two-parameter soft-L1 least squares; f_scale=1 ms; no target tuning",
+  "cost_ownership": "reallocate existing postpublication wall into pre-join sender readiness plus post-join completion, not an extra fitted residual",
+  "topology_status": "independent research graph; code supports API-before-send and wait completion, latent-ready causal boundary is empirically tested, CPU/GPU physical source unresolved; formal lock unchanged",
+  "variants": [
+    "v686_split_full_control",
+    "v687_split_full",
+    "v687_split_zero_ready_ablation",
+    "v687_split_ordinal",
+    "v687_full4_same_window"
+  ],
+  "acceptance": [
+    "observed source reassembly",
+    "PP local error with observed entries separated from free-running source error",
+    "all source fits before target evaluator",
+    "fixed entry/tail/outer for 1F1B-only integration",
+    "all dual-clock time and MFU plus lane0 components"
+  ],
+  "next": "If PP mechanism helps local source error but target still fails, quantify unexplained internal runtime/communication before choosing further source-supported costs."
+}

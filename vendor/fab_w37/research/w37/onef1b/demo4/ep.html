@@ -1,0 +1,11 @@
+<section id="ep-detail"><h2>⑤ EP2 × TP1：token 去不同专家，慢的一侧让汇总等待</h2>
+<p><b>独立的两卡教学任务：PP1、EP2、TP1，一个微批/数据副本、一层 Attention + MoE。</b>GPU0、GPU1各持有一组不同专家，每个专家完整放在一张卡上，不做TP切分；两卡的Attention等共享参数各有一份。共享层按DP2运行，EP组使用这两张卡；DP与EP在这里重用同一组GPU，不再相乘成4卡。</p>
+<div class="grid"><div class="card"><b>与TP2的区别</b><p>TP2把同一层的矩阵切开，两卡协作处理同一批张量。这里EP2把不同专家放到不同卡上，token根据路由选择专家。分发（dispatch）将token送到专家所在卡；汇总（combine）将专家输出送回token原来的卡。</p></div><div class="card"><b>固定工作量，只改变负载分布</b><p>两卡各产生4个token，合计8个，top-k=1，每个token只选一个专家。默认GPU0专家处理4个、GPU1处理4个；可以改成6+2。总专家计算量不变，但专家支路结束不齐，较快的一侧需要等待。</p></div></div>
+<div class="controls"><label>分给GPU0专家的token：<input id="ep-tokens" type="range" min="2" max="6" step="1" value="4"><output id="ep-token-value">4 / 4</output></label><button id="ep-balanced">均衡：4 + 4</button><button id="ep-skew">不均衡：6 + 2</button><label>箭头：<select id="ep-edges"><option value="all">全部依赖</option><option value="local">选中节点前后依赖</option><option value="none">隐藏</option></select></label></div>
+<p id="ep-summary" class="note"></p><p>例如6+2时，快的一侧前向等4 ms、反向等8 ms；这12 ms是两条支路的等待合计，不是整轮增加量。相对4+4基准，最慢前向仅增加2 ms、最慢反向增加4 ms，因此整轮增加6 ms。</p>
+<p><b>先看路由：</b><span id="ep-routing"></span> 两卡合起来恰好分发8个token；本例固定通信节点为1 ms，不根据token数重估网络时间。</p>
+<p>蓝：前向计算；橙：反向计算；紫：EP分发/汇总；青：共享参数梯度同步；绿：更新。箭头表示“前驱完成后才能开始”；深蓝突出选中节点的前后依赖。红框表示相对4+4基准结束更晚。通信只计一次。</p>
+<div class="scroll"><svg id="ep-chart" viewBox="0 0 1400 400" style="width:100%;min-width:1200px" role="img" aria-label="两卡EP2专家分发计算汇总及完整训练迭代依赖图"></svg></div>
+<div id="ep-inspect" class="card" aria-live="polite"></div>
+<details><summary>展开完整迭代的依赖、假设与成本</summary><p>前向：各卡Attention → EP分发 → 两卡专家并行计算 → EP汇总回原卡 → 损失。反向：损失梯度 → 按前向路由将梯度送到专家 → 专家反向 → 输入梯度送回原卡 → Attention反向 → 共享参数梯度同步 → 本卡更新。</p><p>Attention前向2 ms、反向3 ms；专家每token前向1 ms、反向2 ms；损失及其初始梯度合并为每卡1 ms；四次EP交换分别1 ms；共享参数梯度同步1 ms；更新每卡并行1 ms。共享参数同步使用全局完成点作简化，专家参数不跨这两张卡做同参数all-reduce。路由、打包和解包归入对应计算/交换节点，不另加耗时。</p><p>分发和汇总都按完整批次到齐后才开始下一步，不模拟分块流水、通信计算重叠、专家容量丢弃、重计算或网络争用。本例不是DeepEP实现的复刻，也没有读取DeepEP日志或MTLINK数据。耗时为教学假设，实际EP通信可以用DeepEP等实现，接口名称本身不代表实测成本。两卡没有PP通信；全部采用同一层完整迭代，不能与上方PP2 × TP2图直接比较绝对耗时。</p><p>MFU仅给固定有效FLOPs与硬件峰值下的相对变化，不给绝对MFU或预测误差。改变路由仅用于说明专家负载不均；并非真实模型token分布的预测方法。</p></details>
+<button id="ep-export">下载EP2节点、依赖及参数 JSON</button></section>

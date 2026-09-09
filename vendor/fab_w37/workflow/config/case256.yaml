@@ -1,0 +1,23 @@
+case_root: case_256gpu_pp16_cp2_a2a
+analysis_python: ./.venv/bin/python
+
+raw:
+  framework_root: /home/zjb/gbs64/framework_256_gbs_64
+  mtlink_root: /home/zjb/gbs64/mtlink_256_gbs64/machines
+  nic_root: /home/zjb/gbs64/rdma_256_gbs64/machines
+
+workers:
+  inventory_hardware: 4
+  trace_metadata: 8
+  rank_gpu_mapping: 8
+  dp_active: 4
+  cp_active: 4
+  ep_active_time: 8
+
+contract:
+  world_size: 256
+  expected_deepep_events: 453120
+  mtlink_long_gap_ms: 10.0
+  nic_long_gap_ms: 10.0
+  mtlink_min_rate_GBps: 0.05
+  nic_min_rate_Gbps: 1.0

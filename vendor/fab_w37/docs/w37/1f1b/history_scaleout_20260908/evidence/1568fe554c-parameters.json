@@ -1,0 +1,193 @@
+{
+  "schema": "source16-analytical-costs-v4",
+  "fit_attempt": "wo_mccllog_1116",
+  "fit_iterations": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60
+  ],
+  "layer_compute_ms": {
+    "dense:B": 244.863919,
+    "dense:F": 108.777401,
+    "dense:R": 109.9177305,
+    "moe:B": 259.152557,
+    "moe:F": 121.565568,
+    "moe:R": 122.6027085
+  },
+  "layer_ep_ms": {
+    "B": 14.307723,
+    "F": 21.6233025,
+    "R": 28.876485000000002
+  },
+  "boundary_ms": {
+    "0:boundary_F": 1.047725,
+    "0:boundary_B": 7.8538375,
+    "1:boundary_F": 148.64815099999998,
+    "1:boundary_B": 262.193427
+  },
+  "optimizer_alpha_ms": 3.819286420683902,
+  "optimizer_ms_per_owned_parameter": 1.0223840678726053e-07,
+  "optimizer_fit_points": [
+    {
+      "owned_parameters": 620846080.0,
+      "median_gpu_ms": 67.2936005
+    },
+    {
+      "owned_parameters": 1075113600.0,
+      "median_gpu_ms": 113.737188
+    }
+  ],
+  "intra_alpha_ms": 0.008833642857142858,
+  "intra_ms_per_byte": 4.7350020254899524e-09,
+  "inter_alpha_ms": 0.03825,
+  "inter_ms_per_byte": 2.8671406209468842e-08,
+  "small_collectives": [
+    {
+      "description": "DATA_PARALLEL_GROUP",
+      "collective": "allreduce",
+      "input_bytes": 8,
+      "occurrence": 0,
+      "source_group_size": 8,
+      "source_hosts": 1,
+      "position": "after_optimizer",
+      "source_ms": 0.1693935
+    },
+    {
+      "description": "DATA_PARALLEL_GROUP_WITH_CP",
+      "collective": "allreduce",
+      "input_bytes": 16,
+      "occurrence": 0,
+      "source_group_size": 8,
+      "source_hosts": 1,
+      "position": "entry",
+      "source_ms": 0.135501
+    },
+    {
+      "description": "DATA_PARALLEL_GROUP_WITH_CP",
+      "collective": "allreduce",
+      "input_bytes": 16,
+      "occurrence": 1,
+      "source_group_size": 8,
+      "source_hosts": 1,
+      "position": "entry",
+      "source_ms": 0.111313
+    },
+    {
+      "description": "MODEL_PARALLEL_GROUP",
+      "collective": "allreduce",
+      "input_bytes": 4,
+      "occurrence": 0,
+      "source_group_size": 2,
+      "source_hosts": 2,
+      "position": "after_optimizer",
+      "source_ms": 0.11086099999999999
+    },
+    {
+      "description": "MODEL_PARALLEL_GROUP",
+      "collective": "allreduce",
+      "input_bytes": 4,
+      "occurrence": 1,
+      "source_group_size": 2,
+      "source_hosts": 2,
+      "position": "after_optimizer",
+      "source_ms": 0.10168050000000001
+    },
+    {
+      "description": "PIPELINE_MODEL_PARALLEL_GROUP",
+      "collective": "allreduce",
+      "input_bytes": 16,
+      "occurrence": 0,
+      "source_group_size": 2,
+      "source_hosts": 2,
+      "position": "entry",
+      "source_ms": 0.104021
+    },
+    {
+      "description": "PIPELINE_MODEL_PARALLEL_GROUP",
+      "collective": "allreduce",
+      "input_bytes": 16,
+      "occurrence": 1,
+      "source_group_size": 2,
+      "source_hosts": 2,
+      "position": "entry",
+      "source_ms": 0.0749405
+    },
+    {
+      "description": "default_pg",
+      "collective": "_allgather_base",
+      "input_bytes": 96,
+      "occurrence": 0,
+      "source_group_size": 16,
+      "source_hosts": 2,
+      "position": "entry",
+      "source_ms": 0.2123495
+    },
+    {
+      "description": "default_pg",
+      "collective": "allreduce",
+      "input_bytes": 4,
+      "occurrence": 0,
+      "source_group_size": 16,
+      "source_hosts": 2,
+      "position": "before_optimizer",
+      "source_ms": 0.38568899999999995
+    },
+    {
+      "description": "default_pg",
+      "collective": "allreduce",
+      "input_bytes": 4,
+      "occurrence": 1,
+      "source_group_size": 16,
+      "source_hosts": 2,
+      "position": "before_optimizer",
+      "source_ms": 0.398115
+    },
+    {
+      "description": "default_pg",
+      "collective": "barrier",
+      "input_bytes": 0,
+      "occurrence": 0,
+      "source_group_size": 16,
+      "source_hosts": 2,
+      "position": "entry",
+      "source_ms": 0.3831115
+    },
+    {
+      "description": "default_pg",
+      "collective": "barrier",
+      "input_bytes": 0,
+      "occurrence": 1,
+      "source_group_size": 16,
+      "source_hosts": 2,
+      "position": "entry",
+      "source_ms": 0.3629635
+    }
+  ],
+  "source_median_profiler_ms": 3923.3362045000003,
+  "source_median_training_ms": 4249.35,
+  "outer_ms": 328.5579050000001,
+  "source_profiler_unattributed_residual_ms": {
+    "M2_source_only_linear": 1162.6857209320897,
+    "B1_compute_bubble": 1416.3343250000003,
+    "M2_no_shape_speedup_sensitivity": 1162.6857209320897
+  },
+  "provenance": {
+    "layer_compute": "source GPU ledger, median across iteration/layer of max rank service",
+    "EP": "source DeepEP last-arrival tails unioned with source GPU routing intervals; max rank then median",
+    "intra_network": "source eight-rank MCCL tiny allreduce startup and RS/AG ring-normalized bytes",
+    "inter_network": "source PP-pair tiny allreduce startup and 335544320-byte P2P min endpoint lifetime",
+    "optimizer": "positive line through two source stage memory ownership / median GPU work points",
+    "small_collectives": "source observed call templates and tails, static hierarchical latency ratio",
+    "unattributed_and_outer": "source-only calibration clock differences; constant transfer assumption",
+    "target_dynamic_parameters": false
+  }
+}

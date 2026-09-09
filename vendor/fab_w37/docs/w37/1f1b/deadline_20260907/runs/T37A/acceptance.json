@@ -1,0 +1,92 @@
+{
+  "status": "PASS_SEALED_ONLINE_REMAINING_TIME_PARETO_AUDIT",
+  "run_id": "t37a-remaining-time-r2",
+  "repeat_run_id": "t37a-remaining-time-r3",
+  "failed_run_ids_retained": [
+    "t37a-remaining-time-r1"
+  ],
+  "prediction_scope": "read-only audit of already exposed online development nowcasts; no new prediction, fit or blind claim",
+  "tests_passed": 73,
+  "pipeline_stages_passed": 3,
+  "stage_artifacts_verified": 214,
+  "formal_code_manifest_files_verified": 60,
+  "code_snapshot_files": 64,
+  "frozen_input_files": 34,
+  "frozen_input_bytes": 30323159,
+  "raw_input_files": 0,
+  "prior_runs_exactly_verified": {
+    "t35_diagnose_manifest_sha256": "eb2563009c6a063fc994709435bd3a40afdc8f05cea58f7f82c49d3bf46bacad",
+    "t36_diagnose_manifest_sha256": "368f8687e41d0909ddc1c5a0bc6b27edbd65e07b16ea8f33be99f2cab3a487bf"
+  },
+  "target_development_iterations": [
+    85,
+    90,
+    95,
+    100
+  ],
+  "remaining_time_metrics": {
+    "formal_v685_cold_start": {
+      "mean_cutoff_fraction_pct": 0.0,
+      "mean_actual_remaining_ms": 21561.77079825,
+      "remaining_MAPE_pct": 11.34078611646797,
+      "remaining_MAE_ms": 2445.9978842499986,
+      "total_onef1b_MAPE_pct": 11.340786116467989,
+      "eligible": true,
+      "eligible_pareto_frontier": true
+    },
+    "t36_early_raw_unshrunk": {
+      "mean_cutoff_fraction_pct": 42.80163776575485,
+      "mean_actual_remaining_ms": 12333.26379025,
+      "remaining_MAPE_pct": 3.010076094656299,
+      "remaining_MAE_ms": 371.9550032499992,
+      "total_onef1b_MAPE_pct": 1.7250712147412766,
+      "eligible": false,
+      "eligible_pareto_frontier": false
+    },
+    "t36_early_source_reliability": {
+      "mean_cutoff_fraction_pct": 42.80163776575485,
+      "mean_actual_remaining_ms": 12333.26379025,
+      "remaining_MAPE_pct": 12.263148762215362,
+      "remaining_MAE_ms": 1513.2301182500005,
+      "total_onef1b_MAPE_pct": 7.01687327967776,
+      "eligible": true,
+      "eligible_pareto_frontier": false
+    },
+    "t35_midrun_winsor20": {
+      "mean_cutoff_fraction_pct": 57.8448074861315,
+      "mean_actual_remaining_ms": 9089.677358249999,
+      "remaining_MAPE_pct": 4.201267307331723,
+      "remaining_MAE_ms": 382.58529,
+      "total_onef1b_MAPE_pct": 1.7741658788416828,
+      "eligible": true,
+      "eligible_pareto_frontier": true
+    }
+  },
+  "interval_coverage": {
+    "t36_source_fit": [
+      2,
+      2
+    ],
+    "t36_source_development_confirmation": [
+      0,
+      2
+    ],
+    "t36_target_development": [
+      0,
+      4
+    ]
+  },
+  "selection_control": "T36 raw would be Pareto-efficient at 3.010076% remaining-time MAPE and 42.801638% cutoff, but remains ineligible because its sealed source95/100 gate failed.",
+  "new_predictions": 0,
+  "source_parameter_updates": 0,
+  "target_parameter_updates": 0,
+  "formal_topology_replaced": false,
+  "added_edges_or_waits": 0,
+  "scientific_outputs_byte_exact_across_r2_r3": true,
+  "byte_exact_scientific_output_files": 7,
+  "peak_RSS_bytes": 194064384,
+  "repeat_peak_RSS_bytes": 195031040,
+  "diagnose_manifest_sha256": "3b7e0b20930dbfc0ae7c3f50a35720944f3814ac978d815f54ec87f538c221aa",
+  "decision": "T35 is the eligible online accuracy point; formal v685 is the earliest eligible point. T36 source-reliability is dominated on mean cutoff and remaining-time MAPE. The T36 raw point would be Pareto-efficient but remains ineligible because its preregistered source gate failed.",
+  "unique_next": "Preregister a causal target-domain lag-one innovation update on the T35 online nowcast. Iteration 85 is explicit initialization; each later prediction may use only the immediately preceding completed target iteration, and all scores remain development-only."
+}

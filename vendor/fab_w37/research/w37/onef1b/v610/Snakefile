@@ -1,0 +1,26 @@
+from pathlib import Path
+ROOT=Path(workflow.basedir).resolve().parents[3]
+CODE=ROOT/'research/w37/onef1b/v610'
+OUT=Path(config.get('run_root',ROOT/'results/w37/A/v610-release')).resolve()
+PYTHON='/home/zjb/Desktop/fabric-data-analysis/.venv/bin/python'
+assert OUT.is_relative_to(ROOT/'results/w37/A')
+rule all:
+    input:str(OUT/'render/complete.json')
+rule model:
+    input:[str(ROOT/'docs/w37/1f1b/v610/config.json')]+[str(CODE/name) for name in ['common.py','worker.py','run.py']]
+    output:str(OUT/'model/complete.json')
+    threads:1
+    resources:mem_mb=4096
+    shell:'{PYTHON} -B {CODE}/run.py model --run-root {OUT}'
+rule evaluate:
+    input:str(OUT/'model/complete.json')
+    output:str(OUT/'evaluate/complete.json')
+    threads:1
+    resources:mem_mb=4096
+    shell:'{PYTHON} -B {CODE}/run.py evaluate --run-root {OUT}'
+rule render:
+    input:[str(OUT/'evaluate/complete.json')]+[str(CODE/name) for name in ['render.py','views.py','ui.js']]+[str(ROOT/'research/w37/onef1b/integration'/name) for name in ['style.css','full_iter.js','organization.py']]
+    output:str(OUT/'render/complete.json')
+    threads:1
+    resources:mem_mb=4096
+    shell:'{PYTHON} -B {CODE}/run.py render --run-root {OUT}'

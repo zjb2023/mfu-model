@@ -1,0 +1,62 @@
+{
+  "status": "PASS_ALLRANK_SOURCE_PHASE_REPLAY_NO_NEW_TARGET_CANDIDATE",
+  "run_id": "t33a-source-phase-replay-r1",
+  "repeat_run_id": "t33a-source-phase-replay-r2",
+  "scope": "source85/90-fit all-256-rank phase-level free-running 1F1B replay and post-seal source95/100 causal accounting; no target timing or target candidate",
+  "tests_passed": 64,
+  "source_fit_iterations": [85, 90],
+  "source_incremental_validation": [95, 100],
+  "validation_status": "historically exposed development confirmation, not blind",
+  "pipeline_stages_passed": 3,
+  "stage_artifacts_verified": 214,
+  "formal_code_manifest_files_verified": 60,
+  "frozen_input_files": 15,
+  "frozen_input_bytes": 30248941,
+  "raw_input_files": 0,
+  "v6813_global_prediction_seal_sha256": "5b888e61b3e427e38c317be80504b2768d728a3d088526f1540d77dfa8d854d2",
+  "prediction_seal_sha256": "97dbeda3aa7ec0c2e0f3aff0f2e24a7ce481fa82e23b2c37684733cce85b4a2d",
+  "source_coverage": {
+    "ranks": 256,
+    "PP_stages": 16,
+    "PP_lanes": 16,
+    "microbatches": 4,
+    "phase_rows_per_iteration": 2048,
+    "candidate_nodes": 19714,
+    "candidate_edges": 26752,
+    "candidate_topology_sha256": "df77e194ba467c4e17dc42fc9b7fd61230399bee4f84eee037d25bcaf013addb"
+  },
+  "source_incremental_global_1F1B": {
+    "median_85_90_MAPE_pct": 0.33281103280155144,
+    "median_85_90_MAE_ms": 74.05722950000018,
+    "recent_90_all_MAPE_pct": 0.41229467651567997,
+    "recent_90_phase_only_MAPE_pct": 0.4263121464069584,
+    "recent_90_runtime_only_MAPE_pct": 0.3328411039588612,
+    "max_85_90_phase_only_MAPE_pct": 2.688237985235708
+  },
+  "median_85_90_source_incremental_phase_duration": {
+    "all_MAE_ms": 15.82702841894531,
+    "warmup_MAE_ms": 15.85437667824074,
+    "steady_MAE_ms": 16.6929876234375,
+    "cooldown_MAE_ms": 15.478954528356482
+  },
+  "mean_shapley_correction_to_actual_ms": {
+    "phase_wall": 21.204958749999307,
+    "local_runtime": 0.08771924999897843,
+    "PP_readiness_completion": 13.427048499999422
+  },
+  "validation_oracle_full_reconstruction_max_error_ns": 0,
+  "best_method": "median_85_90",
+  "eligible_method_improves_prior_median": false,
+  "validation_truth_mutation_parameters_predictions_exact": true,
+  "scientific_outputs_byte_exact_across_r1_r2": true,
+  "byte_exact_scientific_output_files": 19,
+  "target_timing_parsed": false,
+  "target_candidate_registered": false,
+  "target_parameter_updates": 0,
+  "formal_topology_replaced": false,
+  "Step_or_MFU_prediction_changed": false,
+  "peak_RSS_bytes": 476971008,
+  "diagnose_manifest_sha256": "7cbedc565ea85c3fb601c5bcc5bc0db22cb880e99db4bf186e07b13f3df9d39a",
+  "decision": "The source85/90 median phase graph reproduces the prior 0.332811% source95/100 global result. All registered recency and conservative phase variants regress; post-seal substitutions show phase-wall sign changes dominate the two validation iterations while local runtime contributes less than one millisecond. No T33B target transfer is registered.",
+  "unique_next": "Audit the source PP16/MB4 to target PP14/MB3 schedule-contraction decomposition using the source-validated median graph as a fixed control, then compare with target only after sealing and without fitting target timing."
+}

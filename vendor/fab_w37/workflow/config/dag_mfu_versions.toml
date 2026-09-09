@@ -1,0 +1,209 @@
+[meta]
+schema = "dag-mfu-version-graph-v2"
+owner = "fabric-data-analysis"
+purpose = "Reproducible DAG MFU model lineage and 256-to-224 autoresearch"
+source_case = "256gpu_pp16_cp2_a2a"
+target_case = "224gpu_pp14_cp2_a2a"
+stable_iterations = [60, 65, 70, 75, 80, 85, 90, 95, 100]
+migration_target = "/home/zjb/Desktop/mfu-model"
+
+[[version]]
+id = "v6.0"
+slug = "operator_ir"
+track = "predictive_mainline"
+parents = []
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v60_operator_ir_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v60_operator_ir.py"
+finalizer = "case_224gpu_pp14_cp2_a2a/scripts/finalize_dag_v60_operator_ir.py"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v60_operator_ir_256_to_224"
+anchor = "graph_contract.json"
+claim = "Operator structure only; costs are not assigned."
+
+[[version]]
+id = "v6.1"
+slug = "kernel_calibration"
+track = "predictive_mainline"
+parents = ["v6.0"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v61_kernel_calibration_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v61_kernel_calibration.py"
+finalizer = "case_224gpu_pp14_cp2_a2a/scripts/finalize_dag_v61_kernel_calibration.py"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v61_kernel_calibration_256_source"
+anchor = "calibration/compute_parameters.csv"
+claim = "Source-256 kernel-to-operator calibration only."
+
+[[version]]
+id = "v6.2"
+slug = "cost_bound"
+track = "predictive_mainline"
+parents = ["v6.0", "v6.1", "v5.4"]
+external_parents = ["v5.4"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v62_cost_bound_prediction_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v62_cost_bound_prediction.py"
+finalizer = "case_224gpu_pp14_cp2_a2a/scripts/finalize_dag_v62_cost_bound_prediction.py"
+sealer = "case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v62_cost_bound_prediction.py"
+evaluator = "case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v62_cost_bound_prediction.py"
+evaluation_config = "case_224gpu_pp14_cp2_a2a/config/dag_v62_evaluation_2026w36.toml"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v62_cost_bound_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "First source-only v6 cost-bound prediction."
+
+[[version]]
+id = "v6.3"
+slug = "ordered_optimizer_tail"
+track = "predictive_mainline"
+parents = ["v6.2"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v63_ordered_optimizer_tail_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v63_ordered_optimizer_tail.py"
+sealer = "case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v63_ordered_optimizer_tail.py"
+evaluator = "case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v63_ordered_optimizer_tail.py"
+evaluation_config = "case_224gpu_pp14_cp2_a2a/config/dag_v63_evaluation_2026w36.toml"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v63_ordered_optimizer_tail_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "DP and Expert-DP optimizer-tail program order."
+
+[[version]]
+id = "v6.3.1"
+slug = "ag_round_barrier"
+track = "predictive_mainline"
+parents = ["v6.3"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v631_ag_round_barrier_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v631_ag_round_barrier.py"
+sealer = "case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v631_ag_round_barrier.py"
+evaluator = "case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v63_ordered_optimizer_tail.py"
+evaluation_config = "case_224gpu_pp14_cp2_a2a/config/dag_v631_evaluation_2026w36.toml"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v631_ag_round_barrier_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Explicit barrier between AG rounds."
+
+[[version]]
+id = "v6.4a"
+slug = "phase_handoff"
+track = "predictive_mainline"
+parents = ["v6.3.1"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v64a_phase_handoff_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v64a_phase_handoff.py"
+sealer = "case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v64a_phase_handoff.py"
+evaluator = "case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v63_ordered_optimizer_tail.py"
+evaluation_config = "case_224gpu_pp14_cp2_a2a/config/dag_v64a_evaluation_2026w36.toml"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v64a_phase_handoff_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Source-derived F/B phase handoff floor."
+
+[[version]]
+id = "v6.5"
+slug = "global_layer_transfer"
+track = "predictive_mainline"
+parents = ["v6.4a", "v6.1"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v65_global_layer_transfer_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v65_global_layer_transfer.py"
+sealer = "case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v65_global_layer_transfer.py"
+evaluator = "case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v63_ordered_optimizer_tail.py"
+evaluation_config = "case_224gpu_pp14_cp2_a2a/config/dag_v65_evaluation_2026w36.toml"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v65_global_layer_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Global layer identity transfer from source-256."
+
+[[version]]
+id = "v6.6"
+slug = "optimizer_stream"
+track = "predictive_mainline"
+parents = ["v6.5"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v66_optimizer_stream_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v66_optimizer_stream.py"
+evaluator = "case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v63_ordered_optimizer_tail.py"
+evaluation_config = "case_224gpu_pp14_cp2_a2a/config/dag_v66_evaluation_2026w36.toml"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v66_optimizer_stream_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Source-only optimizer placement and control-tail stream."
+
+[[version]]
+id = "v6.7"
+slug = "microbatch_runtime_shape"
+track = "predictive_mainline"
+parents = ["v6.6"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v67_microbatch_runtime_shape_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v67_microbatch_runtime_shape.py"
+evaluator = "case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v63_ordered_optimizer_tail.py"
+evaluation_config = "case_224gpu_pp14_cp2_a2a/config/dag_v67_evaluation_2026w36.toml"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v67_microbatch_runtime_shape_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Source-only rank/stage/microbatch runtime-shape transfer."
+
+[[version]]
+id = "v6.8"
+slug = "source256_profiler_entry"
+track = "predictive_mainline"
+parents = ["v6.7"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v68_source256_profiler_entry_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v68_source256_profiler_entry.py"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v68_target_assisted_profiler_entry_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Explicit ENTRY frozen to 1252.168507 ms from source256 Trace iteration 85; target224 is post-seal development evaluation, not an independent blind result."
+
+[[version]]
+id = "v6.8.1"
+slug = "causal_backward_trigger"
+track = "predictive_mainline"
+parents = ["v6.8"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v681_causal_backward_trigger_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v681_causal_backward_trigger.py"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v681_causal_backward_trigger_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Non-terminal backward starts retain program order, activation and downstream PP-gradient prerequisites; the complete observed F-to-B gap is diagnostic only."
+
+[[version]]
+id = "v6.8.2"
+slug = "stage_aware_pp_gradient"
+track = "predictive_mainline"
+parents = ["v6.8.1"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v682_stage_aware_pp_gradient_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v682_stage_aware_pp_gradient.py"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v682_stage_aware_pp_gradient_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Source256 receiver-stage, lane and microbatch PP-gradient wall replaces the uniform PP-gradient wall without changing the causal trigger rule."
+
+[[version]]
+id = "v6.8.3"
+slug = "causal_program_order"
+track = "predictive_mainline_partial"
+parents = ["v6.8.2"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v683_causal_program_order_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v683_causal_program_order.py"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v683_causal_program_order_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Frozen v6.8.2 edge set with observed B-to-B wall gaps removed from local cost; F-to-F and B-to-F cost ownership remain PARTIAL."
+
+[[version]]
+id = "v6.8.4"
+slug = "blocking_pp_program_order"
+track = "predictive_mainline"
+parents = ["v6.8.3"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v684_blocking_pp_program_order_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v684_blocking_pp_program_order.py"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v684_blocking_pp_program_order_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Code-derived blocking PP-send dependencies replace displaced F-to-F/B-to-F observed wall costs; future parameter searches must preserve the new topology lock."
+
+[[version]]
+id = "v6.8.5"
+slug = "source_steady_calibration"
+track = "predictive_mainline_development"
+parents = ["v6.8.4"]
+config = "case_224gpu_pp14_cp2_a2a/config/dag_v685_source_steady_calibration_2026w36.toml"
+builder = "case_224gpu_pp14_cp2_a2a/scripts/build_dag_v685_source_steady_calibration.py"
+run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v685_source_steady_calibration_256_to_224"
+anchor = "predictions/prediction_seal.json"
+claim = "Freeze the v6.8.4 dependency topology, select iterations 85-100 by source256 Profiler stability, refit available source costs, seal the prediction, then evaluate target224 as a previously observed development set."
+
+[[candidate]]
+id = "v6.9"
+slug = "runtime_readiness_rank_release"
+track = "predictive_candidate"
+parents = ["v6.7"]
+status = "DESIGN_ONLY_BLOCKED_NOT_RELEASED"
+report = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/autoresearch_224_vs_256_parameters/v69_candidate_design/V69_CANDIDATE_DESIGN.md"
+design = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/autoresearch_224_vs_256_parameters/v69_candidate_design/v69_candidate_design.json"
+runtime_contract = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/autoresearch_224_vs_256_parameters/v69_candidate_design/v69_runtime_readiness_contract.json"
+graph = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/autoresearch_224_vs_256_parameters/v69_candidate_design/v69_candidate_graph.mmd"
+manifest = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/autoresearch_224_vs_256_parameters/v69_candidate_design/manifest.json"
+claim = "Candidate graph contract only; blocked on predictive runtime readiness and joint EDP service, with no released accuracy claim."

@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "metrics": [
+    {
+      "variant": "frozen_v685",
+      "iterations": 4,
+      "onef1b_MAPE_pct": 11.34078611646797,
+      "profiler_MAPE_pct": 10.369528494438608,
+      "training_MAPE_pct": 10.718040852472164,
+      "mfu_relative_MAPE_pct": 12.006688638718735,
+      "mfu_MAE_percentage_points": 0.3547523093302921
+    },
+    {
+      "variant": "fine_both",
+      "iterations": 4,
+      "onef1b_MAPE_pct": 10.561625784327674,
+      "profiler_MAPE_pct": 9.649264825329237,
+      "training_MAPE_pct": 10.043845141783978,
+      "mfu_relative_MAPE_pct": 11.16723046970701,
+      "mfu_MAE_percentage_points": 0.32994584178114084
+    },
+    {
+      "variant": "fine_exposed_only",
+      "iterations": 4,
+      "onef1b_MAPE_pct": 10.622456583344947,
+      "profiler_MAPE_pct": 9.700304248423839,
+      "training_MAPE_pct": 10.09162009087855,
+      "mfu_relative_MAPE_pct": 11.226301813023913,
+      "mfu_MAE_percentage_points": 0.3316914336583402
+    },
+    {
+      "variant": "fine_overlap_only",
+      "iterations": 4,
+      "onef1b_MAPE_pct": 11.278662466534307,
+      "profiler_MAPE_pct": 10.318489071343977,
+      "training_MAPE_pct": 10.670265903377562,
+      "mfu_relative_MAPE_pct": 11.946785697082513,
+      "mfu_MAE_percentage_points": 0.3529821432485837
+    }
+  ],
+  "checks": [
+    {
+      "variant": "frozen_v685",
+      "iteration": 85,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": true
+    },
+    {
+      "variant": "frozen_v685",
+      "iteration": 90,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": true
+    },
+    {
+      "variant": "frozen_v685",
+      "iteration": 95,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": true
+    },
+    {
+      "variant": "frozen_v685",
+      "iteration": 100,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": true
+    },
+    {
+      "variant": "fine_both",
+      "iteration": 85,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_both",
+      "iteration": 90,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_both",
+      "iteration": 95,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_both",
+      "iteration": 100,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_exposed_only",
+      "iteration": 85,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_exposed_only",
+      "iteration": 90,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_exposed_only",
+      "iteration": 95,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_exposed_only",
+      "iteration": 100,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_overlap_only",
+      "iteration": 85,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_overlap_only",
+      "iteration": 90,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_overlap_only",
+      "iteration": 95,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    },
+    {
+      "variant": "fine_overlap_only",
+      "iteration": 100,
+      "phase_time_conservation": true,
+      "baseline_reproduction_verified": false
+    }
+  ],
+  "decision": "CANDIDATE_SENSITIVITY_ONLY; source full-iteration binding remains unvalidated; no formal promotion",
+  "target_split": "development, already exposed",
+  "source_fit": [
+    85,
+    90
+  ],
+  "inherited_source_data": "60–100 includes source incremental evaluation; not independent blind test",
+  "topology_sha256": "f1d560daaa344a5980697b67e71b97140c9bfd38fe12a2c676daf05c53bd8d04"
+}

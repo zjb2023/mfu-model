@@ -1,0 +1,32 @@
+from pathlib import Path
+ROOT=Path(workflow.basedir).resolve().parents[3]
+CODE=ROOT/'research/w37/onef1b/binding'
+OUT=Path(config.get('run_root',ROOT/'results/w37/A/binding-20260908')).resolve()
+assert OUT.is_relative_to(ROOT/'results/w37/A')
+PYTHON='/home/zjb/Desktop/fabric-data-analysis/.venv/bin/python'
+rule all:
+    input:str(OUT/'evaluate/complete.json')
+rule audit:
+    input:[str(ROOT/'docs/w37/1f1b/binding/inputs.json')]+[str(p) for p in CODE.glob('*.py')]
+    output:str(OUT/'audit/complete.json')
+    threads:1
+    resources:mem_mb=4096
+    shell:'{PYTHON} -B {CODE}/run.py audit --run-root {OUT}'
+rule model:
+    input:str(OUT/'audit/complete.json')
+    output:str(OUT/'model/complete.json')
+    threads:1
+    resources:mem_mb=4096
+    shell:'{PYTHON} -B {CODE}/run.py model --run-root {OUT}'
+rule review:
+    input:str(OUT/'model/complete.json')
+    output:str(OUT/'review/complete.json')
+    threads:1
+    resources:mem_mb=4096
+    shell:'{PYTHON} -B {CODE}/run.py review --run-root {OUT}'
+rule evaluate:
+    input:str(OUT/'review/complete.json')
+    output:str(OUT/'evaluate/complete.json')
+    threads:1
+    resources:mem_mb=4096
+    shell:'{PYTHON} -B {CODE}/run.py evaluate --run-root {OUT}'

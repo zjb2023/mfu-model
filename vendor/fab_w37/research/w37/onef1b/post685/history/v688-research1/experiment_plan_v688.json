@@ -1,0 +1,26 @@
+{
+  "version": "v6.8.8-research.1",
+  "status": "PREREGISTERED_SOURCE_SCENARIOS",
+  "hypothesis": "max-plus nonlinear critical-path selection loses source cost covariance when one median per node is replayed. Equal-weight full source-iteration scenarios may preserve variation without target fitting.",
+  "fit": [
+    85,
+    90
+  ],
+  "incremental_validation": [
+    95,
+    100
+  ],
+  "same_window_sensitivity": [
+    85,
+    90,
+    95,
+    100
+  ],
+  "members": "independent per-iteration F/B phase and local runtime costs plus per-iteration latent PP readiness fits",
+  "point_estimate": "arithmetic mean of scenario envelope predictions; not replay of mean costs",
+  "uncertainty": "min/max of two or four exposed source scenarios, not confidence or prediction intervals; no target-dependent quantile choice",
+  "target_exposure": "All target metrics and lane0 profiles already seen in earlier diagnostics; target rank-event table pinned and schema inspected after v687 seal. None enters source fitting. New target results are development evaluation only.",
+  "posthoc_diagnostic": "after prediction seal, lane0 four disjoint GPU components are substituted in all 16 subsets; exact Shapley effects sum to target-assisted component counterfactual difference. Do not call this a prediction or full-rank attribution.",
+  "formal_topology_unchanged": true,
+  "model_selection": "source mechanism and incremental validation; no search for desired target error"
+}

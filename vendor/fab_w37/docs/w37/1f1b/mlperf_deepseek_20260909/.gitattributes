@@ -1,0 +1,5 @@
+# Preserve source-document bytes for the pinned SHA256 manifest.
+DEEPSEEK_V3_TRAINING_RECIPES_MFU.md -text
+recipes.csv -text whitespace=cr-at-eol
+deepseek_v3_mfu.json -text
+deepseek_v3_mfu.py -text

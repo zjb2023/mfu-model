@@ -1,0 +1,12 @@
+<section id="tp-detail"><h2>④ 再展开一层：一个 PP 阶段由两张 GPU 协作</h2>
+<p><b>这是另一组教学配置：4 卡，PP2 × TP2，两个微批，每个 PP 阶段两层。</b>GPU0、1共同负责PP0的层0、1；GPU2、3共同负责PP1的层2、3。与上方PP4例子分开，所有时间仍是假设。</p>
+<div class="grid"><div class="card"><b>F0 不再只是一个方块</b><p>F0 = 本阶段对微批0的前向。这里展开为：第一层Attention → TP同步 → MLP → TP同步 → 第二层同样的步骤。每个模块内两张GPU各执行一部分计算。反向按层逆序，先MLP反向，再Attention反向。</p></div><div class="card"><b>看见“变慢”是否传到整轮</b><p>默认PP0 / MB1 / 层0的Attention前向，GPU0用2 ms，GPU1用4 ms。GPU0增加到4 ms以内，TP同步仍然等GPU1；超过4 ms后才延迟同步。点击节点可查看前驱与等待原因。</p></div></div>
+<div class="controls"><label>GPU0 / PP0 / MB1 / 层0 / Attention前向：<input id="tp-cost" type="range" min="2" max="24" value="2" step="1"><output id="tp-cost-value">2</output> ms</label><button id="tp-hidden">增加1 ms：被等待吸收</button><button id="tp-local">增加4 ms：局部推迟，整轮不变</button><button id="tp-exposed">增加22 ms：整轮也变慢</button><button id="tp-reset">恢复基准</button></div>
+<div class="controls"><label>依赖箭头：<select id="tp-edge-mode"><option value="all">全部主要依赖</option><option value="local">只看选中节点的前后依赖</option><option value="none">隐藏箭头</option></select></label><span>灰色箭头：任务依赖；深蓝箭头：选中节点的前驱与后继；虚线：经过未展开的零耗时完成点。</span></div>
+<p id="tp-summary" class="note"></p><div class="legend"><span>蓝：前向模块</span><span>橙：反向模块</span><span>紫：TP组内通信</span><span>青：PP传输</span><span>绿：参数更新</span><span>红框：结束时间晚于基准</span></div>
+<p>横轴为时间，GPU行展示计算，独立通信行展示共同参与的通信任务。<b>通信只画一次，不再重复加到两张GPU上。</b>箭头从前置任务指向后续任务，不代表数据流量或额外耗时。为便于阅读，仅隐藏可由其他路径推出的重复依赖，底层图不变。计算行留白表示本示例中的空闲或等待；悬停或点击节点看完整名称。A = Attention，M = MLP；F/B = 前向/反向，m = 微批编号，L = 全局层编号。</p>
+<div class="scroll"><svg id="tp-chart" viewBox="0 0 1420 600" style="min-width:1400px;width:100%" role="img" aria-label="PP2 TP2按GPU和层展开的计算图"></svg></div>
+<div id="tp-inspect" class="card" aria-live="polite"></div>
+<details><summary>该细化图的依赖、成本与适用边界</summary><p>PP0本地顺序为F0、F1、B0、B1；PP1为F0、B0、F1、B1。每个模块两张卡的计算都结束后，TP通信才开始；TP通信完成后才能进入下一模块。前向激活和反向梯度分别沿两条TP lane传输，每条消息1 ms。组内通信1 ms；普通前向模块2 ms、反向模块3 ms；全部反向结束后四卡并行更新1 ms。本例没有DP、CP、EP或MoE，MLP不是专家计算。</p><p>图使用显式前驱与GPU资源顺序计算最长路径；没有额外插入等待成本。为了突出同步传播，模块与TP通信串行，同一PP阶段不重叠F/B计算。未展开真正kernel、通信算法和争用、重计算、内存限制与框架开销。它不是训练框架的完整实现，也不是当前224卡模型精度验证。</p></details>
+<button id="tp-export">下载细化图节点与依赖 JSON</button>
+</section>

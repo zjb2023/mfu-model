@@ -1,0 +1,15 @@
+field,declared_value,observed_values_json,status,missing_is_not_default
+num_layers,60,"[""60""]",EXACT_LITERAL_MATCH,True
+hidden_size,5120,"[""5120""]",EXACT_LITERAL_MATCH,True
+num_attention_heads,128,"[""128""]",EXACT_LITERAL_MATCH,True
+num_experts,160,[],NOT_OBSERVED,True
+moe_router_topk,6,"[""6""]",EXACT_LITERAL_MATCH,True
+micro_batch_size,2,[],NOT_OBSERVED,True
+global_batch_size,64,[],NOT_OBSERVED,True
+seq_length,8192,[],NOT_OBSERVED,True
+world_size,256,[],NOT_OBSERVED,True
+tensor_model_parallel_size,1,"[""1""]",EXACT_LITERAL_MATCH,True
+pipeline_model_parallel_size,16,"[""16""]",EXACT_LITERAL_MATCH,True
+context_parallel_size,2,"[""2""]",EXACT_LITERAL_MATCH,True
+expert_model_parallel_size,8,"[""8""]",EXACT_LITERAL_MATCH,True
+data_parallel_size,8,[],NOT_OBSERVED,True

@@ -1,0 +1,101 @@
+{
+  "status": "PASS_ONLINE_PREFIX_NOWCAST_IMPROVES_DEVELOPMENT_COLD_START_STILL_BLOCKED",
+  "run_id": "t35a-online-prefix-r2",
+  "repeat_run_id": "t35a-online-prefix-r3",
+  "failed_run_ids_retained": [
+    "t35a-online-prefix-r1"
+  ],
+  "prediction_scope": "same-iteration online nowcast after explicit F/B microbatch0 prefix; not a cold-start or blind prediction",
+  "tests_passed": 69,
+  "pipeline_stages_passed": 3,
+  "stage_artifacts_verified": 237,
+  "formal_code_manifest_files_verified": 60,
+  "code_snapshot_files": 62,
+  "frozen_input_files": 19,
+  "frozen_input_bytes": 30431207,
+  "raw_input_files": 0,
+  "source_fit_iterations": [
+    85,
+    90
+  ],
+  "source_development_confirmation": [
+    95,
+    100
+  ],
+  "target_development_iterations": [
+    85,
+    90,
+    95,
+    100
+  ],
+  "cold_start_capability": {
+    "status": "BLOCKED",
+    "missing": [
+      "dynamic_router_token_matrix",
+      "independent_runtime_readiness_profile"
+    ],
+    "static_stage_rows": 14,
+    "static_profiles": 3,
+    "iteration_varying_static_fields": 0
+  },
+  "primary_candidate": "online_midrun_last_half_winsor20",
+  "source_development": {
+    "control_onef1b_MAPE_pct": 0.33281103280155144,
+    "primary_onef1b_MAPE_pct": 0.3169238438674073,
+    "control_phase_MAE_ms": 15.82702841894531,
+    "primary_phase_MAE_ms": 14.373228513916017
+  },
+  "target_development": {
+    "formal_v685_cold_start_onef1b_MAPE_pct": 11.340786116467987,
+    "phase_transfer_cold_start_onef1b_MAPE_pct": 15.340746119628438,
+    "primary_online_onef1b_MAPE_pct": 1.774165878841683,
+    "primary_online_onef1b_bias_ms": -382.58529,
+    "primary_profiler_MAPE_pct": 1.722853037720881,
+    "primary_training_MAPE_pct": 2.625240516576878,
+    "primary_MFU_relative_MAPE_pct": 2.6968328626445994,
+    "primary_phase_MAE_ms": 55.846983,
+    "primary_phase_bias_ms": -4.611534,
+    "control_phase_MAE_ms": 99.427459,
+    "control_phase_bias_ms": -96.427948,
+    "online_improvement_vs_formal_pp": 9.566620237626303,
+    "per_iteration_onef1b_APE_pct": {
+      "85": 1.3527071926788254,
+      "90": 1.9480595056260375,
+      "95": 2.2558265653607514,
+      "100": 1.5400702517011173
+    }
+  },
+  "primary_prefix": {
+    "mean_available_fraction_pct": 57.8448074861315,
+    "mean_remaining_fraction_pct": 42.1551925138685,
+    "forward_samples_per_iteration": 224,
+    "backward_samples_per_iteration": 112,
+    "forward_factor_range": [
+      1.1328100042569271,
+      1.1675461901871138
+    ],
+    "backward_factor_range": [
+      1.1726361214817065,
+      1.211546144804694
+    ],
+    "all_target_factors_within_source85_90_range": false
+  },
+  "target_directional_shapley_mean_ms": {
+    "forward_phase_factor": 780.0328353750001,
+    "backward_phase_factor": 2145.8093218750005
+  },
+  "source_nonprefix_mutation_predictions_exact": true,
+  "target_nonprefix_mutation_predictions_exact": true,
+  "target_parameter_updates": 0,
+  "formal_topology_replaced": false,
+  "added_edges_or_waits": 0,
+  "source_prediction_seal_sha256": "1e4ae30759eaf786e7b9d61f1d60a71fa3f75058d3d0d27fe0f2dca1c9268485",
+  "target_prediction_seal_sha256": "ac2c03151d2554d1e1aca81b7239284a4c5f9ffba0be1568e578f7b4ff4e4915",
+  "scientific_outputs_byte_exact_across_r2_r3": true,
+  "byte_exact_scientific_output_files": 36,
+  "peak_RSS_bytes": 1216204800,
+  "repeat_peak_RSS_bytes": 1218904064,
+  "diagnose_manifest_sha256": "eb2563009c6a063fc994709435bd3a40afdc8f05cea58f7f82c49d3bf46bacad",
+  "decision": "The explicit online prefix reduces known target development 1F1B error, with most predicted correction attributed to backward phase scaling. It is available only after 57.8% of 1F1B on average and all target factors are outside the source85/90 fit range, so it is not promoted as a cold-start v685 replacement.",
+  "unique_next": "Find an earlier prefix with source-side support and quantify uncertainty/domain coverage; keep target prefix results separate from cold-start prediction."
+}

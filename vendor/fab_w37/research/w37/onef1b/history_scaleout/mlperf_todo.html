@@ -1,0 +1,21 @@
+<div class="subsection" id="mlperf-deepseek-todo"><h3>新增研究 TODO：接入 MLPerf DeepSeek-V3 训练配方与 MFU 对照</h3>
+<p><b>为什么要做：</b>现有三组S5000案例用于建立基础计算与通信成本；公开的大规模DeepSeek-V3配方可补充模型参数、并行策略与训练效率的对照，检查计算图是否能从较小配置预测更大规模，而不只还原已有trace。</p>
+<p class="note"><b>已接入指定来源：</b><code>~/SimAI/docs/mlperf_training_recipes/DEEPSEEK_V3_TRAINING_RECIPES_MFU.md</code>（2026-09-09），只读保存文档、配方表和MFU结果。以下是该文档对MLPerf Training v6.0 NVIDIA提交的整理；本次核验了batch/并行度关系和MFU算术，未重新审计上游日志及硬件规格。MFU是推算值，不是MLPerf官方直接报告的指标。</p>
+<h4>已整理的公开配方：先作为对照数据，尚未运行DAG预测</h4>
+<p>共同配置：DeepSeek-V3 671B，序列长度4096，MBS=1，CP=1，EP=32，专家TP（ETP）=1，VPP=4，MXFP8计算路径。PP采用交错调度和自定义层划分，并开启MoE通信重叠。VPP是每个物理PP阶段的虚拟分块数，不增加GPU数。</p>
+<div class="scroll"><table id="mlperf-recipe-table"><thead><tr><th>配方</th><th>GPU</th><th>卡数</th><th>TP</th><th>PP</th><th>EP</th><th>DP（batch口径）</th><th>GBS</th><th>每副本微批数GA</th><th>样本Step数</th><th>平均Step秒</th><th>模型TFLOP/s/卡</th><th>估算MFU</th></tr></thead><tbody>__RECIPE_ROWS__</tbody></table></div>
+<p><b>口径：</b>每个提交只取一个result_0运行；R12/R11各50步，R13为45步，按同时含train_step_time与reduced_train_loss的记录取全部训练步均值，没有另取最快区间。Step是一次参数更新，不是一个微批；不以达到质量目标的总用时代替训练Step。</p>
+<p><code>每轮FLOPs = 1068 TFLOP/序列 × GBS</code>；<code>MFU = 每轮FLOPs ÷（卡数 × 平均Step秒 × 5000 TFLOP/s/卡）× 100%</code>。沿用原文的GB200/GB300非稀疏FP8标称峰值5000 TFLOP/s/卡；该分子及混合精度适用性未独立逐算子复核。1068已对应一条4096-token序列，不能再乘一次4096。R10没有匹配的日志与该规模系统文件，保留空值。</p>
+<p><b>并行度不能全部相乘：</b><code>DP = 卡数 / (TP × PP × CP)</code>；<code>GBS = MBS × DP × GA</code>。EP不额外乘入卡数；batch口径DP不等于专家参数的数据并行组大小。R10/R13开启SP，R12/R11关闭；SP不等于CP。已匹配系统文件声明NeMo 26.04；R10运行版本未确认。</p>
+<p><a href="/docs/w37/1f1b/mlperf_deepseek_20260909/DEEPSEEK_V3_TRAINING_RECIPES_MFU.md">阅读完整配方与原始链接</a> · <a href="/docs/w37/1f1b/mlperf_deepseek_20260909/deepseek_v3_mfu.json">未舍入时间及MFU结果</a> · <a href="/docs/w37/1f1b/mlperf_deepseek_20260909/recipes.csv">原始配方表CSV</a> · <a href="/docs/w37/1f1b/mlperf_deepseek_20260909/source_manifest.json">只读副本与SHA</a></p>
+<h4>接下来如何用这些配方验证外推模型</h4>
+<p><b>优先R12（256 GB300）→ R11（512 GB300）：</b>硬件型号、TP1/PP4/EP32、GBS相同，DP64→128，GA240→120，适合先做相对可比的规模对照；仍需核对层划分、拓扑、重计算和运行时配置，不能预先视为严格单变量实验。<b>R13（8192 GB200）后置：</b>同时改变硬件、TP、GBS、GA和规模，应作为联合变化的压力验证，不能仅凭MFU较低就归因于网络。<b>R10：</b>先补对应日志和系统证据，不能拿GB300耗时填入。</p>
+<div class="scroll"><table><thead><tr><th>步骤</th><th>主要工作</th><th>完成后能回答什么</th></tr></thead><tbody>
+<tr><td>1 · 固定公开案例</td><td>已保存指定文档及SHA；下一步复核固定commit中的配置、系统JSON及计时回调</td><td>每条结果来自哪个硬件、哪份训练配方，哪些是官方值、观测值或推算值？</td></tr>
+<tr><td>2 · 训练参数与并行策略表</td><td>整理层/专家/top-k、GBS/MBS/序列长度/微批数，以及GPU数、PP/TP/CP/EP/DP、层分配和组成员</td><td>模型如何拆到卡上？DP与EP是否重用同一组卡？不同配方具体改了什么？</td></tr>
+<tr><td>3 · MFU与算力账本</td><td>明确有效FLOPs、实际精度、单卡dense峰值、集群峰值、实测训练时间，重算有效算力与MFU</td><td>稳态每步MFU是多少？达到质量目标的总用时包含哪些额外开销？峰值分母是否一致？</td></tr>
+<tr><td>4 · 映射到DAG模块</td><td>检查Attention、EP分发/专家计算/汇总、TP/CP、PP、参数同步和更新的结构与成本来源</td><td>现有“基础积木”覆盖哪些模块，还缺哪些输入与成本模型？</td></tr>
+<tr><td>5 · 跨规模对照</td><td>用可比的小规模配方确定规则，封存后评价大规模公开案例；同口径比较三阶段与DAG的Step误差和MFU误差</td><td>规模、并行策略和运行时实现变化后，误差来自哪里？哪些结论可迁移？</td></tr>
+</tbody></table></div>
+<p><b>边界：</b>该公开案例是后续开发评估，不是盲测；公开平台的成本和MFU不能直接作为S5000的参数。稳态step与MLPerf达到质量目标的总用时分开，FP8/BF16、dense/sparse峰值分开；不能用目标MFU反推各模块成本后再称为外推预测。当前224卡结论和5000→100000卡未验证边界保持不变。</p>
+<p><b>下一步：</b>以R12→R11为首个对照，核验交错PP/VPP层放置、EP组映射与通信重叠，列出DAG结构和硬件成本的缺项，再封存预测规则。<a href="/docs/w37/1f1b/MLPERF_DEEPSEEK_V3_TODO.md">查看任务清单与验收要求</a></p></div>

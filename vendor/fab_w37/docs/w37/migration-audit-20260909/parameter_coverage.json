@@ -1,0 +1,62 @@
+[
+  {
+    "category": "完整有效成本图",
+    "evidence": "nodes.csv.gz / edges.csv.gz",
+    "preserve": "全部节点五类成本、总时长、节点标识、依赖语义；零成本节点同样保留",
+    "rebuild_status": "冻结可用；从静态配置重建全图待另验"
+  },
+  {
+    "category": "细粒度计算参数",
+    "evidence": "fine_parameters.csv / node_parameter_bindings.csv.gz",
+    "preserve": "6765条源参数、4387绑定键、70192节点、224rank；不能只存参数均值",
+    "rebuild_status": "binding可生成；本轮未重跑"
+  },
+  {
+    "category": "形状缩放与时长下限",
+    "evidence": "shape_factors.csv / node_parameter_bindings.csv.gz / binding/worker.py",
+    "preserve": "保留继承倍率、旧节点时长、max规则、重叠更新规则和残差归属",
+    "rebuild_status": "继承原模型，独立物理归属待验证"
+  },
+  {
+    "category": "原聚合计算键",
+    "evidence": "v685 calibration/source256_steady_compute_parameters.csv / target_compute_node_updates.csv",
+    "preserve": "保留全部58键、原3键144节点绑定及最终图内有效成本",
+    "rebuild_status": "v685 guarded reproduce入口保留，本轮未重跑"
+  },
+  {
+    "category": "PP前后向成本",
+    "evidence": "v685 calibration/source256_steady_pp_gradient_parameters.csv / samples / target_pp_gradient_updates.csv / nodes.csv.gz",
+    "preserve": "前后向各624目标消息；后向960源记录与样本保留；前向服务值继承",
+    "rebuild_status": "v685重校准和旧成本来源保留，禁止换成v687代理值"
+  },
+  {
+    "category": "CP/EP/DP/EDP与优化器",
+    "evidence": "nodes.csv.gz / v685 provenance / Task A external_inputs",
+    "preserve": "节点内网络、同步、框架项、RS/AG和优化器成本全部保留",
+    "rebuild_status": "冻结可用；完整从原始数据再生链待核验"
+  },
+  {
+    "category": "入口与图外补充",
+    "evidence": "nodes.csv.gz / prediction_contract.json / predictions.csv",
+    "preserve": "入口1265.388210ms在图中；补差604.439668ms与outer1372.453390ms在图外",
+    "rebuild_status": "冻结及来源保留；未定位为具体物理事件"
+  },
+  {
+    "category": "静态配置与MFU常量",
+    "evidence": "integration/parameter_inputs.json / three_case_parameters.csv / binding/worker.py",
+    "preserve": "FLOPs=8.436548311982576e16；224卡；单卡500e12 FLOP/s；精度和配置来源保留",
+    "rebuild_status": "计算公式一致；常量物理依据不因此成为独立验证"
+  },
+  {
+    "category": "源观测输入",
+    "evidence": "operator_cost_group_observations.csv.gz / v61 config与builder",
+    "preserve": "source256 lane0全16PP、60–100，binding选85/90；继承窗口保留",
+    "rebuild_status": "上游脚本已定位；W37 Snakefile未直接串联raw→此表"
+  },
+  {
+    "category": "评价与报告",
+    "evidence": "evaluate/*.csv / seals / 历史报告及图册",
+    "preserve": "目标四轮只在评估侧；历史报告不替代v610当前版",
+    "rebuild_status": "静态清单与23浏览器检查通过"
+  }
+]

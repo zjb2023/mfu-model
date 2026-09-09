@@ -1,0 +1,2564 @@
+{
+  "status": "PASS",
+  "provider_commit": "b8330a0ffc1c4d73c0a2403291b89edd55999a58",
+  "files": [
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/config/dag_v60_operator_ir_2026w36.toml",
+      "sha256": "93a749f3bad3896f3c88e81820e0f9b3e48b4e83bdeebcf843cefc4b5ff9dec1",
+      "provider_git_blob": "500acbdb3a116b2db349ea409e5804f0038e1c76",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/config/dag_v61_kernel_calibration_2026w36.toml",
+      "sha256": "e9250624d61d1843b393311a61acad5144d5ecabb80721ef000d943e832e2667",
+      "provider_git_blob": "386a0ad28555e926ba2f7d9dddc40df74b05cf47",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/config/dag_v685_source_steady_calibration_2026w36.toml",
+      "sha256": "c4e8a7599327b1ea4984f5ed46cb1b3b9747581c22833ff071fef398ba0893f9",
+      "provider_git_blob": "0df63436848d32abb146f8a926b5752a0dfef5f3",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/config/run_contract.toml",
+      "sha256": "a27c234558cf6e4b6d5fdafd391d760c0843b241d74df768d74b9140bae10807",
+      "provider_git_blob": "97ff66ade4e231191c50b9406006958e029190f6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v60_operator_ir.py",
+      "sha256": "ed4e6b689700729fece78874f15ce763818e2028b990bee6f485caa025af965c",
+      "provider_git_blob": "a33f49b5b19e5879281986a7f46f1a590e735da3",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v61_kernel_calibration.py",
+      "sha256": "79f0189b50e371e498697e891ec8fd2f4543016af80d3f0f3390ab7238cdf808",
+      "provider_git_blob": "80eb2afac41182c3cf23be86333f32efdea52906",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v62_cost_bound_prediction.py",
+      "sha256": "67cde3324b22f6e28926c2e8ec1999cc2185751655199f385d13c43002f266f3",
+      "provider_git_blob": "306d64dded2f1043f1848caa35fbd71312ad1dc0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v62_trace_timeline_comparison.py",
+      "sha256": "10ce52dc2626f6b4a8c76d2022178023722a145b6fec153cc071f2103563fe37",
+      "provider_git_blob": "8f39fc9c8ca7de8fa93c8a8001e986b5b045b164",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v631_ag_round_barrier.py",
+      "sha256": "b2c370991873996229e68a3f5d0b9f1022423762a1d7bb423e3d6dc66f80f226",
+      "provider_git_blob": "fea40e0ccd12bbbc744759ac8980032cbfcd2689",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v63_ordered_optimizer_tail.py",
+      "sha256": "1d76fd04dd6a1b3bf65f13e3c695468e4e90e6a45c8b31e6c319031f4d0e1c5b",
+      "provider_git_blob": "a01ff4650f17f063fdee3cd005c8abb518457852",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v64a_phase_handoff.py",
+      "sha256": "02ec9f6bfe08d58a6a7b9a297f6fd0c25222967de2d0f0e98c2de49d0ad1c887",
+      "provider_git_blob": "d27a70db61c091745604271e62bca0808f1444f5",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v65_global_layer_transfer.py",
+      "sha256": "07811e6eda5ba129490b4ad482a3d277dd7c7e3e4a2b515b9d1d71485f4591ef",
+      "provider_git_blob": "7fdc38030f946505043105018df3c3039e49f422",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v66_optimizer_stream.py",
+      "sha256": "dca2df711db3aa777b793fc5a7cfdc728ecbae3c951d99b58a6f083d346c73bc",
+      "provider_git_blob": "6b7e3632b737e888a434edba608c287f014e8fb1",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v67_microbatch_runtime_shape.py",
+      "sha256": "037b8b87d8e669005082c47619aa8ca84be993685e669d385eab71ec4d11bf33",
+      "provider_git_blob": "0f918dc9a48f723ebe2570d1bdbbf0ac0bf2874b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v681_causal_backward_trigger.py",
+      "sha256": "f19106778d080ba3f305af449c7af031fec441bfb6f0ee8d04801e3dc3fff12f",
+      "provider_git_blob": "946a217021dbe101efb0ba69880775317a064724",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v682_stage_aware_pp_gradient.py",
+      "sha256": "3b8615a7b9645de6cbf6489865a669240086e83a5801a7fe412068d350f96295",
+      "provider_git_blob": "4d9127af2ce37e42b609d216a7c4d99597f611dc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v683_causal_program_order.py",
+      "sha256": "1280f07fe0b61f5e7463b5af7e2a0b1773419c02b21d9282c68bbef6c0669709",
+      "provider_git_blob": "f1481e6924a08db64d5c8e9e68049db0519008d1",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v684_blocking_pp_program_order.py",
+      "sha256": "a80a6950807c397b4a3136d8b453d6faa72f5b374ad51f132c508b8ffcc89cd1",
+      "provider_git_blob": "0bf813cd3af8aaa7772d4d7df4a87c1ec5aaf5b4",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v685_source_steady_calibration.py",
+      "sha256": "7db5effad5f140384f6f9faeb7529fa82c9d1ede26ba1ec0a105c8e73ac999c7",
+      "provider_git_blob": "ec1ecbc11e213fa66776fb021ff599b74a351dba",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v68_profiler_entry_visualization.py",
+      "sha256": "837de2142b230b2d98938b88cc9637236766d0bd8feec7053179869d1731ed9e",
+      "provider_git_blob": "ae28b6a0c14d7ed6b4a8b0271a79a8279a82d8fd",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v68_source256_profiler_entry.py",
+      "sha256": "91d26568709196f6f0b2c01449256bad4e9263d315c6f1d9b60d8aac9eba890b",
+      "provider_git_blob": "98bd3e950c53d22eaf293ff654e178bfa9c52299",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/build_dag_v68_target_assisted_profiler_entry.py",
+      "sha256": "9942461d8b7957f089c93be29882a6769884f0f3969b15888b86f2ff12dbde90",
+      "provider_git_blob": "8dc2e4c5e256a8aa7232cd0793d4f7016f38bdbe",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v62_cost_bound_prediction.py",
+      "sha256": "5cdaca6bc8c07349a034ad6bc41d034a8cfe6f1a22a433a65314a4d5a467831d",
+      "provider_git_blob": "f257dc5aa11355f0d7d82bcb9eacd0a9c9c98f5c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/evaluate_dag_v63_ordered_optimizer_tail.py",
+      "sha256": "facc1da65115a9fba1d90d3d9a309f33f2d21040c506bbf93b6fb29f5549dfe2",
+      "provider_git_blob": "a1785e92f6738640226e920bede0a3cffc136413",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/finalize_dag_v60_operator_ir.py",
+      "sha256": "e9873f15639fe2d73249c12a96a6cb5f9e27e2354ca2d4a751900a4d28103b4c",
+      "provider_git_blob": "e2ba9df4bd01b2cb8334180194712ec5bf032746",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/finalize_dag_v61_kernel_calibration.py",
+      "sha256": "b945bd997642b6797acc176f5c4f9e3cd48b4a19b86c08b90b1de633b5634f59",
+      "provider_git_blob": "52efd065289cd5f17ce975abbfb40a99945c8b8a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/finalize_dag_v62_cost_bound_prediction.py",
+      "sha256": "4cfd60b83383c8cd79e35a0641ff3822cb885b42d641e17fa8fa1f94a7985d44",
+      "provider_git_blob": "91e51884cf6dea7325db52eceec00ab2a6df6cb4",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v62_cost_bound_prediction.py",
+      "sha256": "128920d0dbc2fe071c4e4018c3478ae2dbf273bff91b8d320a859958edae50c7",
+      "provider_git_blob": "101cd7885d5472b82caf64f72be66e60a6104f63",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v631_ag_round_barrier.py",
+      "sha256": "959519f73c76116594da391624d194a19028828367840a1566ceb39a1cecb956",
+      "provider_git_blob": "adb5857787f06fd8f464eee9d3b0cfbf055c6833",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v63_ordered_optimizer_tail.py",
+      "sha256": "91f8fbff033c4375bce555dba3041a6faafda0006c275b1fa4a62c9f69f32446",
+      "provider_git_blob": "d055ae1337bcf243206c5e0524a8d3da073ae847",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v64a_phase_handoff.py",
+      "sha256": "5ee511fa94b84523b3edb98a6b4bb5ebd256868fa1d387e0c15a7439fef19fe9",
+      "provider_git_blob": "4f719f3245574cb697a7c21a317cd05466e06f37",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_224gpu_pp14_cp2_a2a/scripts/seal_dag_v65_global_layer_transfer.py",
+      "sha256": "c1962643310ad1c07c9d7d710507aba52ab648d5a84a644f46afae3ce1ad4c84",
+      "provider_git_blob": "ea2eff13b230796f76b5affbdbd7110279c49793",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/kimi_236_32_new_data.sh",
+      "sha256": "e2e3cc84b51631c2a1d03fa4302fcf52d9f8389abc3a40d7ee7e182dfffa4e3f",
+      "provider_git_blob": "309780fd211571c9b5b69b227148a0823755c6ab",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/results/topology/layer_stage_map.csv",
+      "sha256": "b592fa9e804cd09f631303c8f86f578057253f62eaf1acc5d80308a67d6962ee",
+      "provider_git_blob": "71d69e7d62c1f12f2d7f5ec1c5b2a959f86db140",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/DAG_4GPU_DEMO.html",
+      "sha256": "d6ef4723b1d9d6d91662e46d3f7cc9501a4a5afd39c3a183cd7b7fc583e1b0e5",
+      "provider_git_blob": "4a502a32efbc41eca4849fbdbee6a782d57cb3da",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/HANDOFF.md",
+      "sha256": "fddce0a378da42e4efc9d3a89366cc7904fbc8d793a13e8693a74e08f23f7531",
+      "provider_git_blob": "2d585df7b9f18ea8951f1d6caa56812921af5fba",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/MLPERF_DEEPSEEK_V3_TODO.md",
+      "sha256": "2909a9534695baa547bf22fd6e893251ed5d185beaff858362d81266e52627e8",
+      "provider_git_blob": "acbbc4a173e760399f4d253c103d98513ef756cc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/PARAMETER_ITER_ATLAS.html",
+      "sha256": "e16f2531c9876edd35a5534c51ad2e262a43d2a5da8d005ed86c4e1fca6dfb78",
+      "provider_git_blob": "e563c747c6f5c21f207df549b930fe84284e3e4d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/REPORT.md",
+      "sha256": "d7acc218c29b4c99ee1906cc3d7f667414e1ca2fd54a3440188ef15e00e83178",
+      "provider_git_blob": "2e96331d9e2432f9f2333a31709939b711bdc009",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/ROUTE.md",
+      "sha256": "61e76bfbcb93e543c146b1e9f526cd360d8e7985f7795269649300e77810d610",
+      "provider_git_blob": "2388cf5a3678cef24ec927bf12c56e31aefc7e5a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/WEB_INDEX.md",
+      "sha256": "952f5f14640b9c712f9be7b01742a2ff6c298904d5918bb04f67b2b49976f910",
+      "provider_git_blob": "e762d1a7a85bc05285f4034c3173164c92a7b7cc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/artifacts/evaluator_only/historical_metric_audit.json",
+      "sha256": "017fc73875e1d5c6262bc9cc0539d50e57a0241e3464bd9a94bd89034be12383",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/HANDOFF.md",
+      "sha256": "b434f880eb667099ab3867f79f41472726c909f27dbf43ccfdc93a76a7bf72f0",
+      "provider_git_blob": "c6452ab4814945bb0f8bb5b4ff43fb2a073314ef",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/REPORT.md",
+      "sha256": "aa06cb7c4295e623c4a38753611572366d5843f1f589cd1cb8fb950be722b69f",
+      "provider_git_blob": "9f0d298f489123056361e2c2925b371c281fc398",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/ROUTE.md",
+      "sha256": "b301785505c1ab571b6b21da3e822b7dbcc2bd618fcf4e3f90c7aa840d9ff255",
+      "provider_git_blob": "86a94f0ff6ea4ef7da18d8d1d9110cd0a1e643f1",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/coverage_and_reproduction.json",
+      "sha256": "61356c7bd1f01b635e647f3aeb4f394a51321069eb4519d398da499883d57021",
+      "provider_git_blob": "8475f194ed8fea50be4cffa71261f530e826032e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/delivery_inputs.json",
+      "sha256": "8bab38dd3ad54a9370a075a7aa18df10424e0ee5c43b4d450c3a8fe0aa26879c",
+      "provider_git_blob": "366ac8d6c05820d792f69a935bbaa1b0f7fb62a8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/audit_all_58_key_audit.csv",
+      "sha256": "60f7d2bce72c27feca5048c7778cd253743bec9683f235064f8933c9b43c9fb2",
+      "provider_git_blob": "0881af171596d25c3f4749bb920361e6e9049dfc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/audit_node_key_schemas.csv",
+      "sha256": "2da9a298b31b7f6a9864380239a6872468719f258565d18e68f2babe001ff8d2",
+      "provider_git_blob": "e20f8861d377f0aedf9ea5ee59236861602b9a07",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/audit_summary.json",
+      "sha256": "b5f2a94ae4285b43d9e2f20c0de547c160df5435ac637f5de4c938918045fb73",
+      "provider_git_blob": "af2c5a65e6fb02eb64a0bdcef9dfcbd5a08a464a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/evaluate_iteration_results.csv",
+      "sha256": "e60edae73f44495649291a417de3da38fbd6bbb34014070bf1d4e95bba595818",
+      "provider_git_blob": "43f86e51ec4eb168fe2399b7204146267d33e01c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/evaluate_metrics.csv",
+      "sha256": "08cfd5f5a4b033cf8c52f85f4f20dedda4c0bcd9fc03533f6fd435ca10b6969c",
+      "provider_git_blob": "d82c9e87ad11f807015411b9b90464081477b42d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/evaluate_phase_iteration_results.csv",
+      "sha256": "edbd907c5c7c848c4b922818e503d74009c77fcd1d60b21a38daf9cae0e847fe",
+      "provider_git_blob": "441e963578705823ccdd8ce5c89e07afd590e869",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/evaluate_phase_metrics.csv",
+      "sha256": "53c9b44f5151c89d477c4938d59165714254d67df2d4aebf4c65e751fd498140",
+      "provider_git_blob": "8473b5c6c41f56ad667731f3b2099cee3235c105",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/evaluate_phase_regression.csv",
+      "sha256": "4c9290c6756d42e8caa8e9ecc3a8fe62be533dec1a50887de96acc353415d2a9",
+      "provider_git_blob": "66a6e179e75e641e2c647a51b2c78b25a948e198",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/evaluate_summary.json",
+      "sha256": "204fa616e2e17fc23128753ec26affa54452b11831a723786262423594449cff",
+      "provider_git_blob": "cb70a3b97dc8d1bd62e05d88fba12f1d9d08a1ab",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/model_prediction_seal.json",
+      "sha256": "764cb7a865cc80686164e9428b7f7eafc89175be8ce02269df533a9483f2f74a",
+      "provider_git_blob": "ff9925072144113b1fd013a2e0535502f1004d3a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/model_predictions.csv",
+      "sha256": "526009f6870377657676eaab3eb14d8cbf91e4bdd7419505a4e4564a8f0cb7e5",
+      "provider_git_blob": "2954abcfcaebaca4fbce4ffffdf3e40f6b184dde",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/model_runtime_shape_check.json",
+      "sha256": "644af32bf1b269b8cb541b6244a21c5a7d2362ce4a46ecfee7be016e76a76d2e",
+      "provider_git_blob": "2da791903e6b25a6a8d6ad6d694322a03bc1069f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/review_review.json",
+      "sha256": "a374e7b55ab8718cbb0d23f90df9b9254f45630536e162154ce39389fc5e5971",
+      "provider_git_blob": "72ed1283ef8a5c05e8eb4107433828290979fa68",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/review_source_method_comparison.csv",
+      "sha256": "bb3e3d059b05ef2ef9a4e3d1e42aa0a4756fee883f970b4f4834c542798009ef",
+      "provider_git_blob": "7c6155ad8221070a084db9f4a86803bfb0f4d322",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/review_tail_propagation.csv",
+      "sha256": "dc073c19df82656084ecc9cd320768884eaae35bfa76fde52ad1f49d7e2a7f18",
+      "provider_git_blob": "1493f7a15a560ed23ee06d3a68cddcc61588aac4",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/evidence/review_update_effect_summary.csv",
+      "sha256": "7a08bacbb593a1a0b324b5563ab110a1c9e5eea1317d28293a8778320a0c2d1a",
+      "provider_git_blob": "08856bad83d5e06dcd4dbe4285b36db7a0046024",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/inputs.json",
+      "sha256": "40aec3bdeb4f42d50f54d767a714201a9d81d82414f20afdd7217b1ad376056e",
+      "provider_git_blob": "e3b853f383aa5f2e6f779b133e1268739b0fe493",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/research_acceptance.json",
+      "sha256": "24f81958d5399dcbcc242d3c036d328e98da096ca1a36d3472e7120d7619b702",
+      "provider_git_blob": "ef9dd0e7542d667020ead2b616ba85774d8e10c3",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/binding/web_acceptance.json",
+      "sha256": "4b528567051fbbc37f5a3d82c6dc9a8409abd13b5807b6efc5e36f945e81b7f1",
+      "provider_git_blob": "19d13ef93f9a888e8d17c6e259345285873c4a7e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T24/diagnose/source_deployment_declared_comparison.csv",
+      "sha256": "3e41518b555c63f4e4553c42d7f7e2961e0a107d433743281ff0e89a205a21d0",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T24/diagnose/source_startup_static_observations.csv",
+      "sha256": "1e8fcd5639576faeab01222b6340ecea9638cae2f2b00f7aacc0b1e1aacbcf93",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T25/diagnose/evaluator_only/target_declared_static_comparison.csv",
+      "sha256": "eb14afa173e3671d4c0c880c444b64701019ae59a4be9dc09ef6fc7f51e27e79",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T25/diagnose/evaluator_only/target_startup_static_observations.csv",
+      "sha256": "03f33b159077c8bc20253917fac2c12626e00c040017ff34fe3d97e4d28c2202",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T33A/acceptance.json",
+      "sha256": "0a7abf86e5cce86b1e30c3f6a8aaae3d82276de5e836d1da0d7f2bffc82d45a8",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T33A/diagnose/source_phase_cost_bindings.csv.gz",
+      "sha256": "1753568c376d6d212f7268b24dc0e20213a5dd57402c7a81c434c7acba8a230f",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T33A/diagnose/source_phase_edges.csv.gz",
+      "sha256": "c2fdada5fd9521d77b3d75e4e4dfe5c4c739fff0697ec99f2f52cf653e2c2395",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T33A/diagnose/source_phase_global_iteration_results.csv",
+      "sha256": "e7f4df0cb61ae5303aa412eaa5521a21b56d282753e6c7d4e94e2c8ce2a7959e",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T33A/diagnose/source_phase_median_85_90_nodes.csv.gz",
+      "sha256": "6dca458220f746c21742e19c6513e9563f9e1e06f74765d7c499d104a2939c51",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T33A/diagnose/source_phase_prediction_seal.json",
+      "sha256": "97dbeda3aa7ec0c2e0f3aff0f2e24a7ce481fa82e23b2c37684733cce85b4a2d",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T34A/acceptance.json",
+      "sha256": "38b7cd34b605b00be81d9cad3aa3b4a9407505283f8c31aaaa3f807cbafca4ae",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T34A/diagnose/schedule_contraction_prediction_seal.json",
+      "sha256": "a9ff617e17a9464a2bc9e52f23eb4949948131a365da1f2cd8e74093773c4d1b",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T34A/diagnose/schedule_scenario_summary.csv",
+      "sha256": "42ff38a1cad77221e5eb8491f20ae0637c3ecbd53fcc7055dc1cc4197a739a82",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T34A/diagnose/target_PP14_MB3_edges.csv.gz",
+      "sha256": "f86977103c23ff16cc0bde952cf26e7aae7621fbe1c6523d8e1215ad1bd02b05",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T34A/diagnose/target_PP14_MB3_nodes.csv.gz",
+      "sha256": "765af613b06e219b4ec844ec85fd36248d4c4902247192c2aea6c842ea3727cb",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T35A/acceptance.json",
+      "sha256": "031d61a9c4e30190a616c29e6f5ce708d1139b583cc38559905162571934fe44",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T35A/diagnose/target_online_factors.csv",
+      "sha256": "e857725afb3e6b4a88476e148863e2bc461021c15b936b642ea3367e188e10c6",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T35A/diagnose/target_online_phase_results.csv.gz",
+      "sha256": "f319b09132bc7f84b6ca52193ef510c813e5a75bd57a54ba4a76129c4acfc9f1",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T35A/diagnose/target_step_metrics.csv",
+      "sha256": "c1b446103948facdbd4b45dfcbf4ea7ab351bc425733b7500d7ca9039b657b55",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T36A/acceptance.json",
+      "sha256": "6933c9cb184934dd2eb5568414889cd3707743be75e122afe2c2479801611f36",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T37A/acceptance.json",
+      "sha256": "acd5640f044f6b375fb902d4a36e0f9de612757ef4184d663ebeb706ce5d7f95",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T38A/acceptance.json",
+      "sha256": "444e853a54330a1eff1a087299a211fa5c944ae35c6472facd2274b37a3cffb5",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T38A/diagnose/causal_prediction_ledger.csv",
+      "sha256": "16e01fc2337465b47b3a00d1c753518af776bb8ef25a070d2874c00523b2b8e9",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T38A/diagnose/prediction_decomposition.csv",
+      "sha256": "bb55d12be1b6488f18948eb02a98344261e92d4a342ce46973bc5e2913f798e8",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T38A/diagnose/target_iteration_results.csv",
+      "sha256": "4be70e97754f88f14d2504a714d64c0df73943b009f3692bf0a39a91c8f2f528",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T38A/diagnose/target_metrics.csv",
+      "sha256": "6596802bac32bd2370ccd10b90b4ed8ba917a74e729d5662066ed9a66e54777c",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T38A/diagnose/target_phase_ledger.csv",
+      "sha256": "052326b195e39a19a047d7f89fe775aff4f7a69c2d11f98f709bbc22b756bba3",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T39A/acceptance.json",
+      "sha256": "54f9ee60ff1ac4edd5ddd624db44909916bb6814edb995d8046c18fcf74ce736",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T39A/diagnose/state_robustness_metrics.csv",
+      "sha256": "acb7e87be0cf853bb9eb95a485b37559eab6d5046ef62e02b91cf4dc8534ed22",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T40A/acceptance.json",
+      "sha256": "288cd540480cd7492283af951219b4cc64264557fbe01cd1942eb8dbef1e9b57",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T40A/diagnose/domain_state_metrics.csv",
+      "sha256": "daeb222414f0843588e59391e8c185b3522ccb27814c85a8bc3bf8d1a7fe5182",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T41A/acceptance.json",
+      "sha256": "a916278543587ec80af94e559ff01d2ae2777cfb5ee265200f90c4b86ab4b4ea",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T41A/diagnose/stop_resume_contract.json",
+      "sha256": "64f0c88f215e3a1019de9c17e3845c6381541384683623db50f25c44ab260a8c",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T42A/acceptance.json",
+      "sha256": "7f8218e99f948e0fd10dbe34f33413d10166586b7714894b7daf97cc385eae8a",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/deadline_20260907/runs/T42A/diagnose/final_integrity_contract.json",
+      "sha256": "d306c41015c3a8461cb8e113ccb365d008e00a94088e4b07edb4c59722f59a38",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/.gitattributes",
+      "sha256": "6fe5a92505e589188cd6ec8f03c16da0d144d3e1783c2d08112290c22d001bbc",
+      "provider_git_blob": "ec96de9915e8f0214f3c3b9615c459c428f5e6c0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/README.md",
+      "sha256": "11310c641c6a73ca14eb8aadee28b0bfca5719c6b3edcdb98f7731fcec2a07e6",
+      "provider_git_blob": "2cf3bc8f4efc6782e3fbbd9769efd5a887f81fc8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/all_method_points.csv",
+      "sha256": "6c9c71b34e81c582671d90ae2eddceb3f0b502583559d96e2a4ec9a54645a494",
+      "provider_git_blob": "e58918d1f1818aea435e6c83ac18e4da16eeaf34",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/1568fe554c-parameters.json",
+      "sha256": "e8e5eca141788f2718987a2f9a6565064f73c64744a80274e82c4b443869a907",
+      "provider_git_blob": "165019a9771b8dfcf29c39a932adceadfd2eacae",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/2715f42fb8-summary.json",
+      "sha256": "bdcb3a494c402b96736a2c7be7dd0b15d4e78c461129bcb19ed3ccb187a351cc",
+      "provider_git_blob": "03b86351db921d10668de0f8084f80fb15d9d15a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/48b0308625-point_results.csv",
+      "sha256": "462362000d72acfd324e95d616e9baeccc4a8e4bc57a48d99cda4aeb9cddbd42",
+      "provider_git_blob": "62f94580d2c3fbc2a4369ef7d100357900344fb3",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/59d2fd3558-INPUT_CONTRACT.md",
+      "sha256": "ec663b3988a940fd494ae11abfc90c7048a8f5c9cf665ffc297129a3a7847075",
+      "provider_git_blob": "b3d35801508e4140781d73977e74281cd195c221",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/5e5bb3fd92-phase_predictions.csv",
+      "sha256": "56c8f823dae500d2be927b73f38c36c99f6640bb2471ac8ba2ce70171a20d290",
+      "provider_git_blob": "41da26b7d0d0cbf01d9a1cd589720dcc330cdd9f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/7b98ff5b12-structure_v4.py",
+      "sha256": "21c90d46a7a9e40fd4351a73070c4aab79f80a769607418cb5d3e2787d887d20",
+      "provider_git_blob": "cca2c55745607ff510c86bbef306262ec19114da",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/7d76cdac76-FINAL_REPORT.md",
+      "sha256": "fac97429162c8a7c121ade6f84509c3ebef4f23801948c919aa0aca0d4c45b4b",
+      "provider_git_blob": "7eb53b8326ff56dc056cf98018d2dbf24c98f201",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/c0bd5431a1-THREE_STAGE_V1.md",
+      "sha256": "574316d7ce3ccba57296dfca8b04f8b699cb0ed6955ec0b7c0474d72d9a3be17",
+      "provider_git_blob": "6b4f9a5ecfc43006288f7551001061fc2a062270",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/d76e131fce-point_results.csv",
+      "sha256": "c65af3c9efd43bc73519dc955f7a1c7045dc1e48ba356852bbe1a37510984630",
+      "provider_git_blob": "7f744fc713f911f6c9aed023aaadc3e0b491a753",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/d917cd1ddd-HANDOFF.md",
+      "sha256": "0218608fa8dc61e570491cea5980965e017172b774184f20f16c084f0bad7792",
+      "provider_git_blob": "e23ba7bf07c3dd4c1dfc33f2da52fbdf4cd4ba55",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/evidence/f18b87bc5d-METHOD_ALIGNMENT_V6.md",
+      "sha256": "957db910130641da96957fa703922cbd09a17b93159f96e1260982c256e133e6",
+      "provider_git_blob": "32b71b0069a8434ba62d1b4ffa1d4ecce26add9c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/integration_manifest.json",
+      "sha256": "f05ffc8c63113124cba2b4ea6b03acc7a552b4b9ec9d59d60749d1cf8a03f4d5",
+      "provider_git_blob": "e99d7aa3e827c9c9e8932b46196f999c317dbf94",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/methods.html",
+      "sha256": "1ef843bf5169cdade74711a5475faefa487ce6fa842f8af3e38076a81b6849d2",
+      "provider_git_blob": "4e375f35ae078318544a7eec8b1f32f4058151fc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/source8038.original.html",
+      "sha256": "07fbdc86c493209d552f83c62bee6cb2a7f722756c465909c9f278df298df642",
+      "provider_git_blob": "ecfb326a28570348614925573f5021750e470670",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/history_scaleout_20260908/source_manifest.json",
+      "sha256": "d6dd85d4889a6c76efbba82dc2df5b7168929c2e4850a1335c9c75a1c063c5de",
+      "provider_git_blob": "cd7ba8f03125010da1b4536bdebac6acf920dafd",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/integration/HANDOFF.md",
+      "sha256": "90e061a669c8955e6479a0c18ce39389352a13bf6e58399d9c75a02412fdd43d",
+      "provider_git_blob": "4f06fdf6c0f8ca25b9abd0db047b5ac94dbc64a6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/integration/REPORT.md",
+      "sha256": "72a1bbfe1a4ed719e171aae5a712ef9e6eb3512be4c3576cc294b8dea840a037",
+      "provider_git_blob": "98ba41e69e7b1fdeda9b6d6a91975d1adf0a607a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/integration/inputs.json",
+      "sha256": "f0acab63c68470e33acc00bc69dd58f6c35ad80127f525f82c2fcf205add484c",
+      "provider_git_blob": "53cb2be395da458456a06eeed76c8583a2ded765",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/integration/parameter_inputs.json",
+      "sha256": "ab4612179cab41e252c4f9537501f2399ca71a6028a93662a9e7ad09f05ebf6f",
+      "provider_git_blob": "2fa265347953df37eb9b50f51b872acd98119099",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/mlperf_deepseek_20260909/.gitattributes",
+      "sha256": "cd45d151580c7a235c2c3f90ce25932890098a93b115309a4d407f65c31df039",
+      "provider_git_blob": "4f58ec8f2a79ca9372895a688f1741b03d1d13ab",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/mlperf_deepseek_20260909/DEEPSEEK_V3_TRAINING_RECIPES_MFU.md",
+      "sha256": "37a793925651529d6e067f9560e764cc4713d8a9772f322c34c2aa1848bc5e2e",
+      "provider_git_blob": "97cd2b29eebe45269f6955d1445be83ee975e526",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/mlperf_deepseek_20260909/deepseek_v3_mfu.json",
+      "sha256": "3320c175cee6401b75618db26ef274c244be213ff12c39d5dac3e281e6835db4",
+      "provider_git_blob": "477858e4a76f12d6049d004fc2d66a8f4febaa66",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/mlperf_deepseek_20260909/deepseek_v3_mfu.py",
+      "sha256": "137d64c2811d8b4fd3dce0642cce72f07a9bef30487363108d1fb8b84de41cc2",
+      "provider_git_blob": "24402a31f638616e4364fd2cc86fabcefa38af8e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/mlperf_deepseek_20260909/recipes.csv",
+      "sha256": "58bc432429c77c3aa460ad0d8a6cdd86b6a0699b6ef79d9158907a7e11f98dbb",
+      "provider_git_blob": "ad41cc593cbc7fdd9127b7b2b393c376e1734e87",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/mlperf_deepseek_20260909/source_manifest.json",
+      "sha256": "5e407bad971b0586604fbabcd3ae576b864057dbc311a29bbedfa8f83c5bf94c",
+      "provider_git_blob": "bb0332ac213b4887e01c558a45f4b8ecbe9b3ff2",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/post685/delivery/version_iteration_results.csv",
+      "sha256": "94adca82838594c7076eacf24de5c71d64ad1c5a113eadc2415d031e1d074fec",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/post685/delivery/version_phase_metrics.csv",
+      "sha256": "32c61798f003ba653ae56c2e10a2ab664a4bd2dae2f9012339a68171f6b426cc",
+      "provider_git_blob": null,
+      "identity": "prior_audit_sha_only_evidence"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/HANDOFF.md",
+      "sha256": "95e2d136627e59a4b273e0baccb792e317db6637ea4de8d3adcb99283e92824e",
+      "provider_git_blob": "57dccc637963b2fb5b795de476bb08a0eca90513",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/REPORT.md",
+      "sha256": "e13e0110a9f84f4ca53b10ff37c07fe8e354963c9870697c4c1eba27223033f1",
+      "provider_git_blob": "62da8a8f96851788671fa4e2870f0aacb990d83d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/ROUTE.md",
+      "sha256": "ae738cec7d245ff773b6761dcc231b37b2b849820c0f14566fee55b386a9b4f2",
+      "provider_git_blob": "e5747fcbe6d142280051252d7494e73e5500a0ab",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/acceptance.json",
+      "sha256": "1c3fe47309344d4d0de7228cb706fbee79e840d33a720518ff6228adee1ada09",
+      "provider_git_blob": "886d472abaf4e1911421c763375a2630aa1b51d0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/config.json",
+      "sha256": "3cb75e3da0497af2d4fdc0109b9691712e2191079fb570ca33dd247f81418b8a",
+      "provider_git_blob": "e2a37386a7a217873b4e86614eef5df0eafee344",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/evaluate_iteration_results.csv",
+      "sha256": "42e7e7a518c4e32a5e27e12331b474662cc237685886e4dfa1a4ee41e1d38054",
+      "provider_git_blob": "c658887b3ddc1654d0d14ebeeca912cca2951fc4",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/evaluate_metrics.json",
+      "sha256": "9a27fa53bd41c99c7df6073a141d57ec8548dce99a9a4955cb9e24215c3171aa",
+      "provider_git_blob": "77e4bb6ba44170df57af55dd203356eb1863a3b6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/evaluate_phase_iteration_results.csv",
+      "sha256": "2195daf1920e9e8f8106179d37e1ed86d117b4f4467f5c7ceda8e326eaf6f80f",
+      "provider_git_blob": "9fa74925027857cb5b98bbd5804955aa5886ee58",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/evaluate_phase_metrics.csv",
+      "sha256": "e2d8174d557764740a1b79a28ba99fc46d1baf768e69e3d4a1f9b4f6c186b81a",
+      "provider_git_blob": "9d6da5bd453267405d192e1179cf7d5cb5390c73",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/model_coverage.csv",
+      "sha256": "ddd9bcf402980b0e0627fcd6cc949e5e71603967e3bdaef749785810e78373fa",
+      "provider_git_blob": "ff4d0dbce2016e553512e297ac338bdad09f05d3",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/model_prediction_seal.json",
+      "sha256": "de850275ee0b76d4b71582630d4fe133eaf676a70f14b5b130b38533fb829e6a",
+      "provider_git_blob": "536d238d35fb171232d6dd1542be7bdcd7a2b3e2",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/model_predictions.csv",
+      "sha256": "5c533f1bd50e1f7b6861df61d4f5df865b9a4eabf772d9bd6644d0bd9b0c70c5",
+      "provider_git_blob": "b68edc784fec30b0db25df5a1cdf1ae812f8dd6e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/model_release.json",
+      "sha256": "6b9ce6530df05ca117e7c7528ced4d4ffe454e1ac4ef6a62b72d362b23af53ba",
+      "provider_git_blob": "f413c5eda3bac1cedd3c7d3479a2cbcd47082c2a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/render_full_iter_ledger.csv",
+      "sha256": "e428ef00d7766adee79a5fd2475c095ed1b6d5d5cb19c372bbd703cf6dd0bd1d",
+      "provider_git_blob": "d5a448962adf6fe5d2fb5c44204f9e41368d8389",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/render_render_manifest.json",
+      "sha256": "b749b4349d403cece0aeb59b1df3fa532ef2d1ec4f97ad076ddef320a3893a13",
+      "provider_git_blob": "67ca47f06b0cccd6f2065b3d20bdcba3dcbb7204",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/1f1b/v610/evidence/render_view_checks.json",
+      "sha256": "54c0d23c45d92b3ab8a9aad4868bd5aabc7b992afae4f8f4111fff5e651083d3",
+      "provider_git_blob": "82bff1b0cebbaf7b4d5b0f478f79520de6ae484b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/BASELINE.md",
+      "sha256": "ca2e61411799964a090ccdb47a3645458c2cad816a169304bdebc22cad1daf21",
+      "provider_git_blob": "543685ba9c4a4b779a7a7ea8be265d00feb2aa49",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/BASELINE_HANDOFF.md",
+      "sha256": "b12a67e7c4f0d669b071cb4eb0b59073ce526640580488b055622b328e641f67",
+      "provider_git_blob": "ad25188930849f5d19db78381779c51a8d22d06b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/INTERFACES.md",
+      "sha256": "e626d13238074c2aa38166d28b0ec825fcb6c32e48f0393891bcb701c5045bdf",
+      "provider_git_blob": "f09da9be3d45d081cd4faf33b81367edf4e0af6a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/MFU_MIGRATION_AUDIT_20260909.md",
+      "sha256": "82c20095ae88a6e5492db32f4a0b2560e72bd817e882d02f70604408a642bf70",
+      "provider_git_blob": "519360a50b8cd567fd4abebf798a53ef532b5ef2",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/MFU_MODEL_INTEGRATION_PLAN.md",
+      "sha256": "1737e329c518ea7c2d0bbd6f2158dd090b9a703d4df976d4fa2f0e298c8e947b",
+      "provider_git_blob": "c4f69a8d031c9a5006872f5e01521fbed1fb150e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/MFU_TMUX_V610_HANDOFF.md",
+      "sha256": "7be5a997f6b9f1d43926a981950cca4aca50b6a44787aab29884e5456f1fca3e",
+      "provider_git_blob": "e3deec0ebdb3daf6dd43b6c6aff6ca223144d5c8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/coordination/code_manifest.json",
+      "sha256": "0a57021b5fd852659de9b191211e069618862386ec57021a2938d0c3758f4e75",
+      "provider_git_blob": "7c096c1ad4d084aae96cb097ef3abaa6aac82c8e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/coordination/external_inputs.json",
+      "sha256": "1ce432a02ae62a29ba1a7b5b3be7ea4e686ba442df61d1ea6610ad9c449abbd4",
+      "provider_git_blob": "93b67af99d202bccbc560e4b1c089fe31cf2a22a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/coordination/source16_inventory.json",
+      "sha256": "695c4ee54049f9ef110f1bf485e74e014e82cef15bca74cfe819870fee67b68d",
+      "provider_git_blob": "61ec7967eb41ba7f471fdd7ba63b7a6407710e36",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/migration-audit-20260909/external_links.json",
+      "sha256": "5594713d47b6f54999ea4585f0f3cb4d77a7f791bf0777caf0c5bd579a858d28",
+      "provider_git_blob": "7b2ff9f2855f5ec852cc09a0725c0c37d2cc443c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/migration-audit-20260909/files.json",
+      "sha256": "4c65926c8ae014030a76c57de50c2448d8164c97371b6676bc0f415329ed4164",
+      "provider_git_blob": "4b92f382e51766e2e69768362a690fec4ff04e9f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/migration-audit-20260909/inline_acceptance.json",
+      "sha256": "af613931d706260713f57fbeb68b9cf0a55715aa7ca5ccced5dc86bd2def8b01",
+      "provider_git_blob": "031c69a5ebb5cf96cfb308e5ba51d3ce5b0893d4",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/migration-audit-20260909/inline_link_audit.json",
+      "sha256": "fe6066b74b4f685163f66d35b197c98fab049d634a10f6d525389a174423e8ce",
+      "provider_git_blob": "5c351f5bbf632f9c88bccb74d972b008acf17718",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/migration-audit-20260909/parameter_coverage.json",
+      "sha256": "92f840a36589567cb24b4e9711a64e9a4178653f17fc3250828571523d20e8e9",
+      "provider_git_blob": "aa7cb9cac6d004d1eecd7b2b66bdffe377a5e2aa",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/migration-audit-20260909/report_links.json",
+      "sha256": "cbc4c3f1f5943ad150ff4f4fe76efea7fe9ba058c9b04e5715462bb03123ae1c",
+      "provider_git_blob": "2b2bf0efab4904acc070b6b6a72b4eb12eca4f42",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/docs/w37/migration-audit-20260909/summary.json",
+      "sha256": "a7954478502a9bb84000c4ed2c4e496276995d289c4fe3d46908025868958b3f",
+      "provider_git_blob": "64e6ed8212ad5f4635d2bdc8555d8e4c7bcc8723",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/maintenance/audit_cleanup.py",
+      "sha256": "3ae1b018657bdb79260c648cab83fa5ebf33e99eb8b84aed40eac7d88b8207ba",
+      "provider_git_blob": "59054f3e42913e96148454d66d2ab9a4ba4ce811",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/maintenance/audit_mfu_migration.py",
+      "sha256": "676bf832aa8898cc505b9cae4f90c4d32cc4491409ceff39c6881d1cb30c7b0c",
+      "provider_git_blob": "bed671868da818b2c129f98a4341030a328f1052",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/maintenance/check_migration_report.cjs",
+      "sha256": "c10ee29b5111d96287e23b4d8f00beac5eba8a538de2998338ae42a6ca672773",
+      "provider_git_blob": "aefa76402c8ec1e765b5fb6e7b030d5ca56d828f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/causal_lagged_update.py",
+      "sha256": "574b28d108d1abf0497fb3970c3832e4ad58c207dda99771e4d5487db58b265b",
+      "provider_git_blob": "ff498ff28a6b1005f225b8878da8447f951eda8a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/checkpoint_tail.py",
+      "sha256": "593f20445ef567be3dd5d0292b41c2be26467088dbfc029d965fe66d150798a2",
+      "provider_git_blob": "13e80a857faa79dd533e29ff0b7e298199ad086a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/counter_admission.py",
+      "sha256": "5aade33ae932e96910475ec80b1fd05385cc5b29387af2191d27d90f4f406b83",
+      "provider_git_blob": "e48d4ea8a5114005b25e92e693c7eb8b412a449f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/counter_clock.py",
+      "sha256": "8b077cbca4d03305f65d8ddd743c2abd195ef978aeecf3c9348f9806a90ee056",
+      "provider_git_blob": "42728a390dd2271b139c06cac7bb9f557591d946",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/counter_intervals.py",
+      "sha256": "7cd065b3f410978b7d1788634082bea646495f2cff531cd809c84d0b1d33559b",
+      "provider_git_blob": "91df543d4104e15be383a2bb7778d39ec2444572",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/cp_alignment.py",
+      "sha256": "df761565bc440d118c53ec86e197cc585ee48b1aae74b8c2d87c42720ad71faa",
+      "provider_git_blob": "150ee41a84a59845d63e3b130b54b45fdaeb903c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/cp_intake.py",
+      "sha256": "e81e4d99151ea0273026b75ca47a26793f317ef867b3fc9f8f033ae4cc697594",
+      "provider_git_blob": "06d5dc2c8e91f766378449394acf93a9e2959544",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/cp_readiness.py",
+      "sha256": "069ea42a791349039b0767be391ea511c1751b52245f7c3fbeca78d27f49c615",
+      "provider_git_blob": "079dd2270a3000ef77794fa2685b11aa0c75ab23",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/cp_readiness_review.py",
+      "sha256": "4575b8f8d412d7c9aa8697455861f9baf73c25cf84a7d0fe3bac779249428964",
+      "provider_git_blob": "2b61cc4bc40666b0f8bf0d69165fd2a6a029e1e0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/cpu_submission_identifiability.py",
+      "sha256": "158ea3f0808d530319d9eefdef8659591e1f77d26f30dfd655640ac01e50e043",
+      "provider_git_blob": "b39893c3c5c4fdcdfe0359840a0b46b8c8023a0a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/cross_domain_state.py",
+      "sha256": "c1f2a102a5687446177763561ff5b1f48c438f0254e42e09016c2872d19171d7",
+      "provider_git_blob": "d43c36fbd69b52eea08c08ca85fabff7440f8d64",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/deployment_intake.py",
+      "sha256": "7da0a679bd0f8c90ea76960666da68d8fd907844db54a9d2977d6001ec3ccafa",
+      "provider_git_blob": "9dc6feee77a219a7db464be02fedd3f00b40b179",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/device_gaps.py",
+      "sha256": "a106ee5107a6b9e25c5a2293fa0bd9769ee70f62db3ed1cb126340256f9fa74c",
+      "provider_git_blob": "910072235b70fdcc21f6f54cc1e6b2634bba667f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/device_queue.py",
+      "sha256": "62a726c87d364b63feac81b21df6dbb0b795cf1ce72d6aa7092fd7d30c87a91f",
+      "provider_git_blob": "c9f9972e682617f6221273208be348a264cea2b6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/device_queue_model.py",
+      "sha256": "352901cb0e7e55f11793b02cc0bd547f5a22c0461b20d7a650a09e645c470a6c",
+      "provider_git_blob": "d892542d9cc7dcccb2d656a20082d3ccd567529a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/device_queue_reload.py",
+      "sha256": "3f0d30f87bae98c1082e570facfb8f67354ef1ec6960a9ff7e3de7fa0730063e",
+      "provider_git_blob": "557aba0f1bcc1084afee94ee5f7a535d16631970",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/device_queue_transfer.py",
+      "sha256": "4d8e3468afa0c903926d54cf9f769bab51b94a5fbdbe82fcac3d5765d1ed1698",
+      "provider_git_blob": "3c1e1671ad63dc333003eed2e975518d9f93fae8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/device_release.py",
+      "sha256": "19ea202433281478530e35e8ad5b8a9e5d2b07636b65537ae0cebdbbf5675740",
+      "provider_git_blob": "995878bf8c7455314c68d5a5ecae7040a5a86d25",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/device_release_transfer.py",
+      "sha256": "af2765e54ad7bd8921ec22bbfbfb055a0e53766e320373a52d9d7622db6733e8",
+      "provider_git_blob": "0ad0bc6cf55608143153deece422ea3df4e978a6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/early_prefix.py",
+      "sha256": "a8a12035fc2344a315886d61925f315abc5b9c5f82125d07d9751400fc21b63a",
+      "provider_git_blob": "d30dc8045ebcb4c0142269bcdab64fd65951cef3",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/ep_boundary.py",
+      "sha256": "0bff37cca4dcb810eab91def7654446b5a13603526c2b67867a57d9cf48a5a28",
+      "provider_git_blob": "d275f9d3ac5b64b8d8959c4223b4af79fd968f29",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/ep_completion_audit.py",
+      "sha256": "2bd65232452791c29137665765820be7d212b44d35aca2abb13d1238156df48c",
+      "provider_git_blob": "973500087efab6e9301c41c40f5ee46f89190cc7",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/ep_costs.py",
+      "sha256": "d803c9251dfe83f61d16e81e347ee68e7a11650ce55e1c1d79e381ad71c502a4",
+      "provider_git_blob": "5436d42ca85ddf72d88fc81e0d15b8a206db5a6d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/ep_graph.py",
+      "sha256": "e16858298d1df1271528040e59d0e7957264709a8550b5b5433aec96f9f9232e",
+      "provider_git_blob": "2e5786214f58bcfeb80365c24b4fcc893b381c69",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/ep_model.py",
+      "sha256": "84b91db056ff87efa8896ca7cd38c7478b76527c560d509ce07c36fb486bff9f",
+      "provider_git_blob": "0f0e66f8036fdd7489e841de29980bceeb2a4984",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/ep_predict.py",
+      "sha256": "eda45a5dea5674386758a99c0970b8367c85fa2aeaaea6b1e453c62b57434b47",
+      "provider_git_blob": "277645369f4b407128b6e4252ae63853b889abf0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/ep_review.py",
+      "sha256": "95621582724bfeb95753db75bea9610da6572f543b23830a3fcf8acdc948f563",
+      "provider_git_blob": "3c9a0a16fc1029b5c7aed9e6f3db6a040c4a6f7a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/ep_scenario_review.py",
+      "sha256": "4496aca07d6b4c8020f5ad5c9141df4510a4baa3d67ba5d0aa23fee77eea2de3",
+      "provider_git_blob": "30e7afa1e741b4d0779c0382e5af040188bf9af9",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/ep_scenarios.py",
+      "sha256": "5d00839cd540b3fa03658ea10df332922867ee10625bdcc83fea2f3c4f1ed394",
+      "provider_git_blob": "b17884e0350d961615320fdeec65fe07eea5eebc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/evaluator_evidence.py",
+      "sha256": "bda2871dbb989f6dfb648a9de82c83b55459886d094187da82aee4e492ac69fb",
+      "provider_git_blob": "35f62f1015b23b5e53db7eeae1a98f65db694be5",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/final_integrity.py",
+      "sha256": "54f23c53836c1be7d1f59531604b9f44f663572f9c65e522969053b2f3db1296",
+      "provider_git_blob": "f83415ff0c0cdcbafaf737eecc0d2908dbf6ab4a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/fullrank_cost_split.py",
+      "sha256": "81c1ad978bce01f1a3b91deb6d4af5b91bd01565248a2e1a36227c45dcda1e37",
+      "provider_git_blob": "4216ec3bd29a418ce55a391f380bb9703ec152b4",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/graph_flow_intake.py",
+      "sha256": "44474e0b58f9871e08aaadf34b8744a04bd541b92d07bf3c6731c45944398e5b",
+      "provider_git_blob": "87c4c311a5349e088c7c2a1c691447c4931aa371",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/graph_flow_review.py",
+      "sha256": "dd75de4b6369b06a585a97ef2823b2e6d210bdea022c4ccd67e425770f9aa765",
+      "provider_git_blob": "a8d7f0adc8612a37b78d9a7c33b4b4755498aff7",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/guards.py",
+      "sha256": "c7ec80ae5ff755f574984a7f8a498cf4201a4332ac7393e66fa84ac5a6e19a24",
+      "provider_git_blob": "35ebd2da878840cb3ae6f58692e3723e3724fdcc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/intervals.py",
+      "sha256": "7e30c60436f9641116c8606c374026bdc5aa19a67b749fc99bf505f25d0c83b8",
+      "provider_git_blob": "e61035a44ed05e7adc083624d396253f50ceb784",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/models.py",
+      "sha256": "b6d73a473312023fdb70670675fc52b169be4a0c70f891507c09be0a3b86e2b4",
+      "provider_git_blob": "7518cb11c93360a37a4d6c7070587bab8cdc70fd",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/online_prefix.py",
+      "sha256": "a2beeda067dceaf864de2af385d9861d0fcfa5ee9f1793f5a82cce674a8eb3b6",
+      "provider_git_blob": "528e151e2f36d016fc9e01b710010d080141cb0b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/operational_index.py",
+      "sha256": "de0f0511c443f85f59bd07bbfd1494dda75928e34f3a4ec775c3cae93a6e862f",
+      "provider_git_blob": "2fa8b407df2f2abc48e322532e0d752bb4dd5e81",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/pending_review.py",
+      "sha256": "aaed423918b44381c1e3634a51aa288d31785f55d06d6109c5ceeff30a0a9198",
+      "provider_git_blob": "8cf38b392fa580c1ac4dcc15c5e8b3c3e624968e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/pending_work.py",
+      "sha256": "3c6a1dde19098a20e93320afb177971f1eaf9283ce710b5013eb15f66693090b",
+      "provider_git_blob": "c687104be5aef3ea60787a26008a69bda03fabee",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/pipeline.py",
+      "sha256": "a8cb636ba8ee3b5e64156b4345e51e94bf86535a99a964927c7955bdf54ffc59",
+      "provider_git_blob": "1933e30eae87cd89a97a8684bc41dd6acb4497d0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/remaining_time_audit.py",
+      "sha256": "e981424756ada6b114aaf091d1ffc4c81f5ae93263b8b693d83c1500cced0c72",
+      "provider_git_blob": "1ad7b44bf53f118381f469810a387e8b34cbaf1f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/run_stage.py",
+      "sha256": "b8e0eb17690deacadd85ae9e6dec873d401efc875e021611b64c9713e106f777",
+      "provider_git_blob": "5d77c593847acb9d812560a593853faf6ab310c8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/runtime_intake.py",
+      "sha256": "50e0137b71c0b31688c1962bd47bf285d5936480a04f2ad5e838dcb6d6de820b",
+      "provider_git_blob": "67ab7a50789962aa398f628752b822868df68569",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/runtime_pending.py",
+      "sha256": "edc58e42a892044f38a907cf2ad65c959fd0584dc6a511e854ed869dfc2e30de",
+      "provider_git_blob": "539e945d12a7541965e8659edc5fc25576f498f6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/schedule_contraction.py",
+      "sha256": "fc304f83c55f774e5c3a493a81a4c96db391112e10561f80e8e323b74d536393",
+      "provider_git_blob": "57d519a6ec700746596462b0a25ba0a3c5f21688",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/source_evidence.py",
+      "sha256": "568eb9f735c99c6aa6fe0ae6ef61fdf9b9e4c2d1859412f447cf13e405e4c595",
+      "provider_git_blob": "1eb92f2800ddde88e6e38a73d0f9d95d08dfc6ca",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/source_gap_bridge.py",
+      "sha256": "7e28737ea6748183e1d561c0528e96d8ae1c3a708db66398fcc0f13848586f3c",
+      "provider_git_blob": "6d7a2d308fbdb0e267ea524be6957c775ec63f9b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/source_model_evidence.py",
+      "sha256": "058548da931044fe5fda91163a6014dc59393ef6962f4094f36ea7ea048f19f5",
+      "provider_git_blob": "6c05cf6de2a6ce4aa2d7e73b82196d720d05b213",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/source_phase_replay.py",
+      "sha256": "1e028ad0d33130e1ddbf0d28a2ebae67824c59d73bfd0e30d4ada37dc733ebae",
+      "provider_git_blob": "84825250e089928415236a195485ea4ba9006d11",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/stage_impl.py",
+      "sha256": "5776dd053f974ef3c203b4ae81d47cd1cc00d8c6ff2c437304185d5018a46c78",
+      "provider_git_blob": "df7e24467dbaabd83da320d1bb7e29c2630142ab",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/state_robustness.py",
+      "sha256": "df2e074171598ffc602ce91dd92157ba9d673df390a9d06bf52bba593cf21817",
+      "provider_git_blob": "382133e244098178f2fba1414b41ad0a21af0ede",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/target_deployment.py",
+      "sha256": "b84c6ecc532526b5da240dd74d515a4255fc2a24943fd3989eeabdd2fafd2184",
+      "provider_git_blob": "e45b26d4dc73e8d427b393241fd03e684623b38b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/target_device_gaps.py",
+      "sha256": "db4a81c3d82c464a0f077af2c8cfbab3e97025d37b63251ea4e96aee3e0e3441",
+      "provider_git_blob": "342450326ae56da27c4088ccbd7ee0a6eeb53cad",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/target_runtime.py",
+      "sha256": "e3053c9d1edb7989403dfae589b2558af08d9403548c5e200a42c4f5d169b7ac",
+      "provider_git_blob": "70b93a776f71d05aba1f333349a68e71b9b2ae00",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/target_terminal_endpoint.py",
+      "sha256": "c8d37047604a562f5c161f237c570b7e6b4fd6a72a996ac1534579e60f57bf7c",
+      "provider_git_blob": "164e1452db5c22beb6de3cb3694a50a9e4195a78",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/terminal_decomposition.py",
+      "sha256": "fadc8473efe1eebe7bca1bf40337fce4009f8a05780b994d25a3c336ebf35022",
+      "provider_git_blob": "723584e82ee2ab628f59e963a981ad70b3accd04",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/terminal_endpoint.py",
+      "sha256": "a5ba6023c0c034a3bc7897f71a4be5da9b263fb5bb09d49d02d2ee84f30b33f2",
+      "provider_git_blob": "7d1f8819f2e3779ab9c2a44618e5153d34ce8e59",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/autoresearch/wrapper_boundary.py",
+      "sha256": "fe7013eddaef31d73685fc9c544d6fd52a8afb1d8d81792278f10b092e8bdeb2",
+      "provider_git_blob": "3d76cea8c6700ddc014c4fe84d048b914b82f024",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/binding/Snakefile",
+      "sha256": "5f15c9867bcead8a0736c1109b29ace694c5759a5d23aeea68673c3c4d24a4ef",
+      "provider_git_blob": "f3996998009be0ec7c595bd2d3040cac1057e8f5",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/binding/common.py",
+      "sha256": "7274cc6f1666c14e3d5da653980b864d1cd19228e01883de739d411a31c24794",
+      "provider_git_blob": "e8e85b6f918341833ee53687c6f55f340c44be2d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/binding/review.py",
+      "sha256": "10af5032172eb9ca1e3aa53c9a0c94083a3b85a2cdf3c5cb9f036a42660fe762",
+      "provider_git_blob": "94acb556bbce6b52857f4f6733d2e09df230bc33",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/binding/run.py",
+      "sha256": "91d5802b4320ec3d4dfbf5643fa1e0f86c02ffc19a55d24e9304511e3361fd6e",
+      "provider_git_blob": "8e240b8e67a8d6cf9dcbf092853443e3a7be9d95",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/binding/scoring.py",
+      "sha256": "13e53c7ee70f683d9a9a71c59f446c7de27e123703c655054d7e36b8466b29b5",
+      "provider_git_blob": "fbc7493fd43ab27601d3c240ea1ad6b22b28591a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/binding/worker.py",
+      "sha256": "c3a5cb5b6e4e7ce2ae7feed8995a6e5d428428b3d55272a5537c8f7f2e201bf1",
+      "provider_git_blob": "78de02c02e0277997f2acad006e3a0bcb534a16b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/binding_delivery.py",
+      "sha256": "17672437ce00c95d8721fb68b356163f26a3282802d8e4fee44b803b4a201010",
+      "provider_git_blob": "efb681a902d3e033c103aad7124c81b4a4fb4058",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/demo4/check.cjs",
+      "sha256": "caa1db0ff78f2ce822900bcc667a2a12816b809bfc14a20b9901e1be94d3fe32",
+      "provider_git_blob": "18f835f071eefda4858cd2c75823cf46da83756d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/demo4/check_detail.cjs",
+      "sha256": "fb40ab6ddd29bc03f1a1cb20ba863a034cac8401df3b129365fb43be96549133",
+      "provider_git_blob": "882547a8c374da67e97fb8a403a1701a335bf7a1",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/demo4/check_ep.cjs",
+      "sha256": "78e0c8bc515b253fec77234642054e54c8e28d7dfd4f22debcbb87b76799f59a",
+      "provider_git_blob": "051ec091134fb1561a0f34d88bd4d9b17dc1fce6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/demo4/detail.html",
+      "sha256": "05757b4cdf3ca7a83c5d0992d0b28975f6743e2547e95c378d2fd88757d1d118",
+      "provider_git_blob": "a85ed0c3432e16e459a9b6c12c8bb4ad5b31b7c8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/demo4/detail.js",
+      "sha256": "f0fae606341d5ce39c0d3d42ddd242bdda28dac2d729784a01b8baf2e3ea4b41",
+      "provider_git_blob": "7e3c6ff4e0c46ada1c9450763fb0c18fe0d0f75a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/demo4/ep.html",
+      "sha256": "f55f810eeb482349952a47d89d537cfa9dda9fe276167e1a033f0f159465bcd3",
+      "provider_git_blob": "e615d15a9d889426c52dedda4227cfb9a4095034",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/demo4/ep.js",
+      "sha256": "17626b2dc45e85e2935ba7b863513ed427b65654be5724dc16f55c42611d44c6",
+      "provider_git_blob": "cf7397ba9991cf9f0663e1885b226b04b47cf376",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/demo4/page.html",
+      "sha256": "7e8a20e3554c40afd10ffddece1baf85e63669a7032f14595d78384a18ae40fe",
+      "provider_git_blob": "8a4b53a9cc0a7140f8754d051da778b90a770583",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/demo4/render.py",
+      "sha256": "5c3f98969059fb8e27270813a91fee820d039393eadf833369f939ab0a8bf638",
+      "provider_git_blob": "b323aac15dc04db2ecfd1dd0e250e0680857214c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/evaluate.py",
+      "sha256": "3014e92d75dba4877730d756f4c2284b36b601edb7a576a257abf3136190dc1f",
+      "provider_git_blob": "b019cc4ca731c385268fcd3948adccf0342a12e6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/experiments.py",
+      "sha256": "5bac8d47edf445338c508ca1c2fe0bd1cc5668b7dbc6840dace6713e187baa03",
+      "provider_git_blob": "fabd6a9461a35bb14a670ca959dc16cdfd4c4dd6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/experiments/check.cjs",
+      "sha256": "d45709f146f3c27bc71732a2ea542c01d8f2b0181aaaea77254e2207e0e93ff1",
+      "provider_git_blob": "81d5649f85f35b9206a8a3843b95d7c21976a5d1",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/experiments/render.py",
+      "sha256": "1fdd2d6239f774c2757269dec2324afae154304f888bbdf6ad7911ef63bde49c",
+      "provider_git_blob": "58aad36edbd1dfff661f5b891d77a77788311b05",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/experiments/visuals16.py",
+      "sha256": "84cb32d6952798f10e526c5fbb3593813400686aeddd71a0f36b57c23f7811bc",
+      "provider_git_blob": "4d008f75a6f67ea62ecb58820353d24abe6b16a6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/figures.py",
+      "sha256": "a1a0b71b826324f106309c4f0c935e15c8b069d33e4013bfd05aa6c52033f2f0",
+      "provider_git_blob": "054593869a66905623cad9115d365f2426c0800d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/history_scaleout/build.py",
+      "sha256": "b9d323ad6487c7441929d13362bf6a33ff1fc761b72e8955467d41f704d1c9a8",
+      "provider_git_blob": "888cda703f513aa0a9a07a283f23e6c5f79e0bb2",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/history_scaleout/check.cjs",
+      "sha256": "c19d142be1e61a2073124a3ce14eee49e85a9db90db798148f6b9b2e8f7991b3",
+      "provider_git_blob": "d53adb3b564e9dc484009e62d9b3a3666ef27bc8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/history_scaleout/check_inline.cjs",
+      "sha256": "a093eb0c9b5fcf2fd66817378252c91e8b40cf0b6cb2dcafd57985bebc4ec813",
+      "provider_git_blob": "8972445906482d7811c5c9ac1d80cf592bb479f7",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/history_scaleout/inline_reading.py",
+      "sha256": "172b1039d8f4b260d64359753dd6a54960882a131773303da3df6ce54d2b9e39",
+      "provider_git_blob": "0b18f2c869d7d1f954018ac21a11127f6ee6be3b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/history_scaleout/mfu_results.py",
+      "sha256": "eb6cbf5b3e9c2a50aa4e52b0a474a128672c7be4a8af7ea95cb1d0f60b847d96",
+      "provider_git_blob": "fe5b8174044e841bda4336b41cb154a622c7e992",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/history_scaleout/mlperf_recipes.py",
+      "sha256": "b007b0aa74d8b8d681dc14db2aca112bedf15383896db8918a122ff7bb9abca9",
+      "provider_git_blob": "c2bc71828be6a9a84a40e323a96695368a541ef2",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/history_scaleout/mlperf_todo.html",
+      "sha256": "59f18321c48b201049148e8b33304da513ab552c63a642fff3d68ab0b3455910",
+      "provider_git_blob": "f4471ebbf8fd2db8fc95d03bfd5b6f436440264a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/history_scaleout/time_mfu_figure.py",
+      "sha256": "980923a3ac12644af89f86c0e66e8858139a31a443417202d407cdc057aa3eff",
+      "provider_git_blob": "53fe5c68dab2bdd613ceb54d4edd98d77c9d173d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/Snakefile",
+      "sha256": "ec1c38e685fbe659db7b97cb2213354dc295ef04b5a98c77b719deb009696280",
+      "provider_git_blob": "f554bd8ae9942326853403f3514219f27896da7a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/audit.py",
+      "sha256": "cc090b349ba0b150bb5c619befed9f939bb6d5552ebeed6ad879793c6eda4a7d",
+      "provider_git_blob": "3605ff2387bee72997fe9a0c37be22e82fb96471",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/binding_sections.py",
+      "sha256": "7098c3e3f01defa8914f80997f7aadc427cc9ed55a68d790d5d05faf2742b422",
+      "provider_git_blob": "2160b1762118b2c87dc789d9cc25b448263fecdd",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/browser_check.cjs",
+      "sha256": "cefcc816facd6e1904e702adda9d80bb2b68cf8db26cdf4b790217ed4b8a0400",
+      "provider_git_blob": "9a797c6788c3f3562a97b4b2dd6b296f5ff82759",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/calibration_diagram.py",
+      "sha256": "3f46b38561e1ee6ee2452e0450a2b5fd4cf9ca0869a0452ace36c9b753a13fee",
+      "provider_git_blob": "eda7b8a15a828bfe5655d4361e44b2ef9e4b78f1",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/common.py",
+      "sha256": "bb48d5dbc157a7a3068f6df8eb73f0c2b614692d5bd92bb855b53bbc9639b4b2",
+      "provider_git_blob": "f7c86c8769d06c651685a1c7b3605c1f0c08afc0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/context.py",
+      "sha256": "a3740e6a8e5919c5691d7496e42ab4111acb4eb9e1131a645206358abcbb1319",
+      "provider_git_blob": "a36515a4f683315580ec835b9d1193da02d469af",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/context_sections.py",
+      "sha256": "911cc8ea293909ca23f442a507f417374d285ec516060e7515f11ce7ce93236a",
+      "provider_git_blob": "a2e4e6d1f71c4ba2bf3d6de60b98761b9ea33cb0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/cost_inventory.py",
+      "sha256": "57abda07b9848aa7f564c26723da959106517f8cab1214c7306c4cb1e82bd90e",
+      "provider_git_blob": "b94951b2e4345cab9e151f54ca91404185922fc3",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/full_iter.js",
+      "sha256": "27bab30cd25b3c6c39442d5d00f730c1cecd8d606bbc4bc7ff9c01db7986c37b",
+      "provider_git_blob": "81a5ea6aff4f9a0f3d10c1157084bc9ca6e061c8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/full_iter.py",
+      "sha256": "e096136020b723e7521a799f7106e81f8a8b523fc3e6431ea31e2270d96800a3",
+      "provider_git_blob": "966e73aa7789b1f1814d9f42e8f258f3763c399b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/organization.py",
+      "sha256": "ca1ee7c530cb9d56bf9b51285cfcba1f4981dc0f824b7a678c81c212a72aa103",
+      "provider_git_blob": "262a986a2fc8b83f8412d6575979181f9351644d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/parameter_review.py",
+      "sha256": "397eb41c3bc81932bd7447c4276136dc68effe2eb428b137f272953d17e4b32b",
+      "provider_git_blob": "cf29a4428dea0ebcf6286e194f6f5668900e471b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/parameter_sections.py",
+      "sha256": "bed883352a05a1b2066c42a643c34fd0121697b1c2da4225f8224105a3d6a957",
+      "provider_git_blob": "dc8614e5f7e5adf2dae3d70a35ff9d7093fc1add",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/render.py",
+      "sha256": "f0536a07c32d12b2dd937444616076e2694c55dc3f17e2df39b326ebcecf3be0",
+      "provider_git_blob": "839122752ee93a3e6adef814329f014bfde3d317",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/report.js",
+      "sha256": "b2ad51c011c472744a1a611848d543e74a81d9165a715e75a3f70c591fcc2749",
+      "provider_git_blob": "2da0f91851d9d9701fa8c60014452e44615a6441",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/style.css",
+      "sha256": "8871f01a4fac3d3ef202695d53114695744c246638be61ff8525f4ad2d31421a",
+      "provider_git_blob": "f751486bdef7c7b26fe1414e64cfe928ad3f730c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/terminology.py",
+      "sha256": "25a21650cce979402f775d40c67b68ae7f0426b9de4b67d28361139454f2672a",
+      "provider_git_blob": "a4d62d50fa3186921c24de1ea5d523db02d59f4d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/integration/validate.py",
+      "sha256": "7269fd46475ac983e108adf43269b027ad18313f0e926d231b3bee2c2360d9a5",
+      "provider_git_blob": "b33560195fe690b70d074908bd0e327f9059bb43",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/lane_viewer.html",
+      "sha256": "77538aec25794b3b3795fb51602619b47a9856fcd30e2cd0037f55f9fcbf4f12",
+      "provider_git_blob": "1b02da5c7eebc5aa2112621524c207b242b16807",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/parameter_atlas/build.py",
+      "sha256": "50ec96fbd2647cc0045f844e44fb7e3385bce2208a4319176ab6d0c4f95d3da9",
+      "provider_git_blob": "8873cc4b91358d91bc1374731e67f0ef477f4ef3",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/parameter_atlas/check.cjs",
+      "sha256": "e478834333a9e5f9027bb5b1bf9471120e3c63d2b0c49efbd109a7264a8da82a",
+      "provider_git_blob": "ea9e5bfc1758cfde949c9a78f2d5901361487fca",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/parameter_atlas/page.html",
+      "sha256": "b538d2d0855877342b28f97b5147ef74fe6c19375673bd1dc6dbc687aa76746c",
+      "provider_git_blob": "83bf864f43cb24c5cbb9f0df06aa8e79cb941329",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/parameter_atlas/tail.js",
+      "sha256": "c3c278525a1961733e2ed6412419f0af40cf9a3ebe5476c25054d17ee173f7cf",
+      "provider_git_blob": "cc2e0e94d13219574d765bb93a55d5e20332dc0d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/candidate.py",
+      "sha256": "2191a1eac2d9f674b508fc9c013c214a70de3dc26cfbabe09897f747d8fcf252",
+      "provider_git_blob": "0488d88ad070cc8cc05e22a590225a3bde88e001",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/diagnostics.py",
+      "sha256": "e2154f337479b42fa6bc52ea05f509485d3b12ea29cf5ae9e6319caaaafd2131",
+      "provider_git_blob": "ad5b109bd763e5a5515491451d33ba2f13de4b5e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v686-research1/candidate.py",
+      "sha256": "64e3fd47237f5ea2009e1aaeacd13c6c372ea1c7b3520c8c516b9b07428d03c5",
+      "provider_git_blob": "b7448da4b3144dbd30db2ede522777f54b6c8a9c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v686-research1/experiment_plan.json",
+      "sha256": "24b09247e693831b6af7b74617fc9670b93f329fdd5b1516bc770a1a810208db",
+      "provider_git_blob": "005e299a81709b0e87c95725af2f5ce383337d5f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v686-research1/inputs.json",
+      "sha256": "f17b35641e4ed456badbf67d3c625c1127653188452454d25d8af3df505eefb2",
+      "provider_git_blob": "17c88e355d12534823506439f43c6b865e9a5e21",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v686-research1/manifest_snapshots.json",
+      "sha256": "79759f4ecafe8d1549344704d3582cf252aac9e28a599dbfe1569c016579fb1f",
+      "provider_git_blob": "9131050a79292b7840d0df26f5a8f0bda4384103",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v686-research1/pp_graph.py",
+      "sha256": "889c999f45f6d5140ac328dd7f2838c02a241241c57c0090ce75de76411fae67",
+      "provider_git_blob": "f5fdd87396b90140100ad514bec1438575093439",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v686-research1/pp_semantics.py",
+      "sha256": "e1e0677ab1b9cf44dc4c08e13d43008709607490ebbcc8e212bc4fa79e903c92",
+      "provider_git_blob": "97016fe5f19ad1231f7900b5c7d9f11eaa9d5d2d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v686-research1/run.py",
+      "sha256": "4edcc757bd07fcfa8da9585b5d74bbe6c714eb1a2434272e7ac8f086f4308efe",
+      "provider_git_blob": "348692b39120cd45e8676cf28e5ef6016a1734ca",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v686-research1/scoring.py",
+      "sha256": "ed4d6679a4a0f4f852b72ed66e8277de938dd2ce356666e71c09c6661e18f4e2",
+      "provider_git_blob": "0d69417867a11f2b7fd41286920e63ed6b74416b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v686-research1/snapshot.json",
+      "sha256": "172effe8dfd409961a451e67b483893cb2eba6a49aa84c16012e7954e748889c",
+      "provider_git_blob": "b2e6dd3b191303feccd85906e5e469bbb85e4d44",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v686-research1/worker.py",
+      "sha256": "20808a2a41f8a39ac47d1037117830245bef98df9a217a27b6e81a7eef5536ca",
+      "provider_git_blob": "a55c63ae313513ea49d9cd3a1935f3940369f38f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/candidate.py",
+      "sha256": "ce93824e210661c95c9e9c3d3000311d821f11468fbcfb122d6adf59f3a720e8",
+      "provider_git_blob": "99cee1b0ec2c4ad1b59e5ba9d0194c58dce150e9",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/experiment_plan.json",
+      "sha256": "24b09247e693831b6af7b74617fc9670b93f329fdd5b1516bc770a1a810208db",
+      "provider_git_blob": "005e299a81709b0e87c95725af2f5ce383337d5f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/experiment_plan_v687.json",
+      "sha256": "17594febdf5b01b2c4343cad20e9ea974675f3dc1b92cccb23489096861fa555",
+      "provider_git_blob": "2fe8cf53993ad92dc2410174d7a527eb2e36b782",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/inputs.json",
+      "sha256": "f17b35641e4ed456badbf67d3c625c1127653188452454d25d8af3df505eefb2",
+      "provider_git_blob": "17c88e355d12534823506439f43c6b865e9a5e21",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/manifest_snapshots.json",
+      "sha256": "5da4189d2b1e4921b2b55fcbfed4e569882e4a8a5fd150781621aec2645d493b",
+      "provider_git_blob": "05da505ad136890269935fe51319dc9e9516ffc2",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/pp_graph.py",
+      "sha256": "8308a4135ea7d6a91a788e05fa38bc09bc5b6ca2cd5f70afec9386651daa22c9",
+      "provider_git_blob": "9bf2600eb235e74280434541093ea16131858fa5",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/pp_semantics.py",
+      "sha256": "e1e0677ab1b9cf44dc4c08e13d43008709607490ebbcc8e212bc4fa79e903c92",
+      "provider_git_blob": "97016fe5f19ad1231f7900b5c7d9f11eaa9d5d2d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/readiness.py",
+      "sha256": "eb864714a5383b8cb4a08ebe3b51cae91b2876bf80e2b97f3d476c48602c2f87",
+      "provider_git_blob": "4375a459da5beb15683220702afcd5ec854570c7",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/run.py",
+      "sha256": "4edcc757bd07fcfa8da9585b5d74bbe6c714eb1a2434272e7ac8f086f4308efe",
+      "provider_git_blob": "348692b39120cd45e8676cf28e5ef6016a1734ca",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/scoring.py",
+      "sha256": "ed4d6679a4a0f4f852b72ed66e8277de938dd2ce356666e71c09c6661e18f4e2",
+      "provider_git_blob": "0d69417867a11f2b7fd41286920e63ed6b74416b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/snapshot.json",
+      "sha256": "cb1de2cfa563281fb7672553dd18b6af613fbafdcd5ac133667cd4109c147266",
+      "provider_git_blob": "806f4091500bb3019e47e68638e715428b3fb604",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v687-research1/worker.py",
+      "sha256": "20808a2a41f8a39ac47d1037117830245bef98df9a217a27b6e81a7eef5536ca",
+      "provider_git_blob": "a55c63ae313513ea49d9cd3a1935f3940369f38f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/candidate.py",
+      "sha256": "2191a1eac2d9f674b508fc9c013c214a70de3dc26cfbabe09897f747d8fcf252",
+      "provider_git_blob": "0488d88ad070cc8cc05e22a590225a3bde88e001",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/diagnostics.py",
+      "sha256": "e2154f337479b42fa6bc52ea05f509485d3b12ea29cf5ae9e6319caaaafd2131",
+      "provider_git_blob": "ad5b109bd763e5a5515491451d33ba2f13de4b5e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/experiment_plan.json",
+      "sha256": "24b09247e693831b6af7b74617fc9670b93f329fdd5b1516bc770a1a810208db",
+      "provider_git_blob": "005e299a81709b0e87c95725af2f5ce383337d5f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/experiment_plan_v687.json",
+      "sha256": "17594febdf5b01b2c4343cad20e9ea974675f3dc1b92cccb23489096861fa555",
+      "provider_git_blob": "2fe8cf53993ad92dc2410174d7a527eb2e36b782",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/experiment_plan_v688.json",
+      "sha256": "3f62545b7e549c88666844b8ff189484e46dfc0c2264519f83404ddc12a296e9",
+      "provider_git_blob": "f63ab104f107e3fb29e1c2e91b6f6402e9a29f77",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/inputs.json",
+      "sha256": "168f5ad69ed6587e8a8cf4b65aca902791b2217adc97a080cd98dcffbd56e100",
+      "provider_git_blob": "9622f8fa9d5307168ba44fa58ec6902d4e0f6308",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/pp_graph.py",
+      "sha256": "8308a4135ea7d6a91a788e05fa38bc09bc5b6ca2cd5f70afec9386651daa22c9",
+      "provider_git_blob": "9bf2600eb235e74280434541093ea16131858fa5",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/pp_semantics.py",
+      "sha256": "b52364248b8ee4a4b3be0b874477947545b111cdadc7b0298c6133cb6dd31cdf",
+      "provider_git_blob": "2207e0ebf26be55bb8e6bbc8be7b24d9a74bbd1c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/readiness.py",
+      "sha256": "eb864714a5383b8cb4a08ebe3b51cae91b2876bf80e2b97f3d476c48602c2f87",
+      "provider_git_blob": "4375a459da5beb15683220702afcd5ec854570c7",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/run.py",
+      "sha256": "948070879cbce14a0c0e1342e8d75d9874fc3002c7e07edae657234f5d8b5656",
+      "provider_git_blob": "be5cc1b20a0d06f83c3d058620012f360c087e5c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/scenarios.py",
+      "sha256": "53bafa8e158e807e970af21a3faaff959685258230a809f6b95ee7dfca318289",
+      "provider_git_blob": "6385e097518ac5dd8fcbdb4df0aec8b6a04f7fca",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/scoring.py",
+      "sha256": "978ec9889a0b9ce8f2c410a80faee89757d91230e3616d609c02462ef1187c2e",
+      "provider_git_blob": "eb940fc8791a49c123398f4d76563e8cd78d7ae1",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/smoke_worker.py",
+      "sha256": "f9f53ac6fa6096fecd080340a1bc4f0e0de632b51f2de4c4d523fc37929caaa4",
+      "provider_git_blob": "caf14a35b49ff3c2e215b97bd68996225148992c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/snapshot.json",
+      "sha256": "e161e4602eb28934ac1c7473cf77865d933aedac953e59d190b89b9b330ec99f",
+      "provider_git_blob": "5ac1a2bc594235a29962f954588714126d375775",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1-r2/worker.py",
+      "sha256": "18d0e55111111afd0c31b78e7760efa660d1490281513616c187bba4da5d6b44",
+      "provider_git_blob": "4c8041a61b35a866dd6266b1ecae4e10a9bfeec8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/candidate.py",
+      "sha256": "2191a1eac2d9f674b508fc9c013c214a70de3dc26cfbabe09897f747d8fcf252",
+      "provider_git_blob": "0488d88ad070cc8cc05e22a590225a3bde88e001",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/diagnostics.py",
+      "sha256": "e2154f337479b42fa6bc52ea05f509485d3b12ea29cf5ae9e6319caaaafd2131",
+      "provider_git_blob": "ad5b109bd763e5a5515491451d33ba2f13de4b5e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/experiment_plan.json",
+      "sha256": "24b09247e693831b6af7b74617fc9670b93f329fdd5b1516bc770a1a810208db",
+      "provider_git_blob": "005e299a81709b0e87c95725af2f5ce383337d5f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/experiment_plan_v687.json",
+      "sha256": "17594febdf5b01b2c4343cad20e9ea974675f3dc1b92cccb23489096861fa555",
+      "provider_git_blob": "2fe8cf53993ad92dc2410174d7a527eb2e36b782",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/experiment_plan_v688.json",
+      "sha256": "3f62545b7e549c88666844b8ff189484e46dfc0c2264519f83404ddc12a296e9",
+      "provider_git_blob": "f63ab104f107e3fb29e1c2e91b6f6402e9a29f77",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/inputs.json",
+      "sha256": "4e230e4355e28f323870b7b8a04a13d13d6edce2df70aee1ecea6408eacbadc7",
+      "provider_git_blob": "c5590f4bcb43c27af11d41a2601a5fd511c75bb0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/manifest_snapshots.json",
+      "sha256": "10332258ea2a42f7e57aae790d0d7c7bfd9cd88e2e610014ad1ebfd9ead72cd6",
+      "provider_git_blob": "16e9950a35ca0af668f354f28d94b953c2f0cf1c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/pp_graph.py",
+      "sha256": "8308a4135ea7d6a91a788e05fa38bc09bc5b6ca2cd5f70afec9386651daa22c9",
+      "provider_git_blob": "9bf2600eb235e74280434541093ea16131858fa5",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/pp_semantics.py",
+      "sha256": "e1e0677ab1b9cf44dc4c08e13d43008709607490ebbcc8e212bc4fa79e903c92",
+      "provider_git_blob": "97016fe5f19ad1231f7900b5c7d9f11eaa9d5d2d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/readiness.py",
+      "sha256": "eb864714a5383b8cb4a08ebe3b51cae91b2876bf80e2b97f3d476c48602c2f87",
+      "provider_git_blob": "4375a459da5beb15683220702afcd5ec854570c7",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/run.py",
+      "sha256": "948070879cbce14a0c0e1342e8d75d9874fc3002c7e07edae657234f5d8b5656",
+      "provider_git_blob": "be5cc1b20a0d06f83c3d058620012f360c087e5c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/scenarios.py",
+      "sha256": "92d15705bbe2bff034cf12bdeac15e1bca0ea4fc2e4e0bfec9d455ec5d1b874a",
+      "provider_git_blob": "2d8f7c33d04231093fbb68f9719ac7aca50d2faa",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/scoring.py",
+      "sha256": "ed4d6679a4a0f4f852b72ed66e8277de938dd2ce356666e71c09c6661e18f4e2",
+      "provider_git_blob": "0d69417867a11f2b7fd41286920e63ed6b74416b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/snapshot.json",
+      "sha256": "45d2f29c1d33a8922862809c5d8d1d27279df75c046f9abe5f4b570d4d43dd67",
+      "provider_git_blob": "8b728e6c5795e6fcf17f6f29e6b15cfaa27d4ec4",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/history/v688-research1/worker.py",
+      "sha256": "18d0e55111111afd0c31b78e7760efa660d1490281513616c187bba4da5d6b44",
+      "provider_git_blob": "4c8041a61b35a866dd6266b1ecae4e10a9bfeec8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/pp_graph.py",
+      "sha256": "8308a4135ea7d6a91a788e05fa38bc09bc5b6ca2cd5f70afec9386651daa22c9",
+      "provider_git_blob": "9bf2600eb235e74280434541093ea16131858fa5",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/pp_semantics.py",
+      "sha256": "b52364248b8ee4a4b3be0b874477947545b111cdadc7b0298c6133cb6dd31cdf",
+      "provider_git_blob": "2207e0ebf26be55bb8e6bbc8be7b24d9a74bbd1c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/readiness.py",
+      "sha256": "eb864714a5383b8cb4a08ebe3b51cae91b2876bf80e2b97f3d476c48602c2f87",
+      "provider_git_blob": "4375a459da5beb15683220702afcd5ec854570c7",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/run.py",
+      "sha256": "948070879cbce14a0c0e1342e8d75d9874fc3002c7e07edae657234f5d8b5656",
+      "provider_git_blob": "be5cc1b20a0d06f83c3d058620012f360c087e5c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/scenarios.py",
+      "sha256": "53bafa8e158e807e970af21a3faaff959685258230a809f6b95ee7dfca318289",
+      "provider_git_blob": "6385e097518ac5dd8fcbdb4df0aec8b6a04f7fca",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/scoring.py",
+      "sha256": "978ec9889a0b9ce8f2c410a80faee89757d91230e3616d609c02462ef1187c2e",
+      "provider_git_blob": "eb940fc8791a49c123398f4d76563e8cd78d7ae1",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685/worker.py",
+      "sha256": "b4f6daf091df2259cc7f2f353bf154db972f742a6d0b4c800eae015b2dcdab5b",
+      "provider_git_blob": "15331a3c5b16b473cd780a8cedf2614dfe5145bc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/post685_runtime_review.py",
+      "sha256": "8fe6624ff4390a920c80b1935efd94d1cec64ba595b67a95021db96841851aad",
+      "provider_git_blob": "2a22395e0e5517bd716419f3ac554f20a1c63e6b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/render_causal_contract.py",
+      "sha256": "443576fef4ee370932006bf014c847ffc2a07a2763610979d5ed49aaebb898b7",
+      "provider_git_blob": "15bf31a235e1e48c2ddc751b1e50d6b2fdb0d1c6",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/render_lane_viewer.py",
+      "sha256": "d8e4a2e804fccf7e5dbab26929a10d1be33619fa91408ad796373db9431b7194",
+      "provider_git_blob": "a484c94c2d6f83cf32e525d2ea8d8ad86c44b214",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/render_metric_notes.py",
+      "sha256": "ae30dfefcff874f85af60936400a428964bca6116e073f4ae62be222aec68c6c",
+      "provider_git_blob": "55bd0a4c97988020302910a13a8c16d81e6fa5af",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/render_post685.py",
+      "sha256": "e8e40aad6fb9ff9616c34cb7827276ddc31b0fe0c53156eeeca51834446600f3",
+      "provider_git_blob": "61a480b42a46bf965962a604736c93e49c20a2fb",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/render_pp_evidence.py",
+      "sha256": "4a655a5ff75a5f06869f6838e5bc1ef0c69e01dd383e6dacab8f657717353b3b",
+      "provider_git_blob": "fd2b85cc2945f0fabb891d09f0ddd0d968cd414c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/render_research_story.py",
+      "sha256": "ffa2aad27eaab56d8620d308a625368aac54e7c619171fc99a599147aa3afe06",
+      "provider_git_blob": "735a87d2931bf49e8cdd53cc3ab887a41b7bf636",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/render_schedule_overview.py",
+      "sha256": "c2aa1d511bb0d062421760371748748a9e4ff6eb531877df8049da6069f65e5c",
+      "provider_git_blob": "ceb7bfa8bcf4af05264e58c5a63702a98f94ffdc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/render_v685_explained.py",
+      "sha256": "06ed35ae308197ede85f63d5aa2d23864d43d6ce388c27eba87430a290710ba4",
+      "provider_git_blob": "91c8c3f41b3361dbc1ce0e6cd37b6e886da6ee9d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/research_home.html",
+      "sha256": "61c9d32412f48e10ebf6d39ca2d6aff210941b85d35558e4da8045c9637f57f7",
+      "provider_git_blob": "f67cf7c1dae791e811052d1785ba60ade65da648",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/research_process.html",
+      "sha256": "452fa08eeb7bdbbfb8d10726f3dceaa1963c5450bf6d8e40435c80cad9d2400d",
+      "provider_git_blob": "da674f064c009bf24b766dec2e8975eebe45202d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/review.py",
+      "sha256": "b817130faaa08a3ec37030a017135dcdc55c7dbdd94c74d0b8deec9533b3d830",
+      "provider_git_blob": "21db81135c120e7f5470ed0b6cb614d06922a4f0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/run.py",
+      "sha256": "2cf40dfc37adba8408cddab93d132570475b68f3b4296895c5fe9b0bbbfdc6ea",
+      "provider_git_blob": "7dc17f0086a666eea3999d5b99f580b276e99a7a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/serve_research_story.py",
+      "sha256": "f71f3ecf6e2849e35cd64532380eb90d512ece64b61e6468a914791c5269ece7",
+      "provider_git_blob": "88e123df443c0cac96e63eab54748dd657062c66",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/talk/check.cjs",
+      "sha256": "255a4e5c90feda5cd5aa21e54922fc9d2e3bc7abd3309e0b43931c274575208a",
+      "provider_git_blob": "e5c8c8659692dbfd0d432c477c1221550e21df62",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/talk/render.py",
+      "sha256": "86193d4d38bb407fc874ae66dc3d75f01d38e82c02d4c56f8868d79b7e66ea74",
+      "provider_git_blob": "8464815d2ad4e2e956dc5d687b46429087ae2189",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/v610/Snakefile",
+      "sha256": "e45f3639d13179c22cde09efd20aa2a6e41fb6089ed0a9faf40b8d20b308c873",
+      "provider_git_blob": "cedb02e0e1c5eeb844984a96cac72e005242a5a0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/v610/common.py",
+      "sha256": "07c00165db48011614484910e9dc71c9c88e42eec88bef0ca4eed5d221092f58",
+      "provider_git_blob": "2ddd8337e5b0a690a5732ac69f4dc1438082caf9",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/v610/render.py",
+      "sha256": "f97d083da7d4a2cb8546f49980173030c7110b58ec934c44572ee803edfd264f",
+      "provider_git_blob": "6783ec800c9e8dde880eed78f31dd1e51410a6ad",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/v610/run.py",
+      "sha256": "69ca282078e6308ecaff0484a9814c0e451ad6f13f95c51cb33a866fe6342b4e",
+      "provider_git_blob": "cc8910c6c6dc6577e792de8ade9e7a786e1de982",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/v610/ui.js",
+      "sha256": "fd9daecec04bc39d2ec4293d4ddb01c9d2bcd075894d1b84f0a8f71fb8f6c853",
+      "provider_git_blob": "d35984119c5bc40a2169a4cc83fd4122e64bb207",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/v610/views.py",
+      "sha256": "0f647c216e5ee12df9fc2b791bb6d68c79c421821a2dbd4ede3add7a2b32db3a",
+      "provider_git_blob": "06d1422f5595b2429cfe289baf3577ac1aee141d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/v610/worker.py",
+      "sha256": "586d7a65e631b553724fd1edc74f2610f2621c11740a69070a3e0afd3b198324",
+      "provider_git_blob": "a2e5002e071f0354ee6dc8eb5047ee95561537c8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/v610_browser.cjs",
+      "sha256": "c7dbdf4c2897ef29d1b50a61a23793cd7904d560859b97c8d0a30ed1bce71e61",
+      "provider_git_blob": "9780ab86625ad593364fdcdda915f6d70c3a0cbc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/v610_check.py",
+      "sha256": "b7c14f5ecb1aef542179150423d7c0cb04c959fd053fc36d19ba4a8e71686824",
+      "provider_git_blob": "86ff7a854a8c36004cd5af4eb04a2ef57ed84644",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/verify_post685.py",
+      "sha256": "bff88f166e848a08677ceda641c59057de8b423291799a77d346b1f8c687e1a3",
+      "provider_git_blob": "799313053bb52f515baa4c5bf5bc82442a4726a2",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/research/w37/onef1b/worker.py",
+      "sha256": "e934690c8c5482ef030e6bc71d8da533c79270cf2ec41ee55f34f200bc8db3fb",
+      "provider_git_blob": "6b9037c5a23bb57e558d6192b23401eab5f3a255",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/scripts/w37/prepare_baseline.py",
+      "sha256": "fc094d64e890830828370f7218e274767f07db19deb8b9c67383cfe2eced4cb8",
+      "provider_git_blob": "6e330b1146332496f705ca809b3fc334d96ec14c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/scripts/w37/run_baseline.py",
+      "sha256": "3ce622f47d3e8606b13bdc37a0a30d1c9b4f41efbad3417d9497b36b53ea492f",
+      "provider_git_blob": "2058ec8528fb46d73efc54cf21579a8f020c167e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/scripts/w37/seal_preparation.py",
+      "sha256": "f307fc6186b0cffb87181bc2ccd3366b6da5d54dd3e30ec097289d9fdcd5ce38",
+      "provider_git_blob": "6f74e6b4b0a5713b709c1c5a27aa76dc24b06f0a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/scripts/w37/smoke_worker.py",
+      "sha256": "f9f53ac6fa6096fecd080340a1bc4f0e0de632b51f2de4c4d523fc37929caaa4",
+      "provider_git_blob": "caf14a35b49ff3c2e215b97bd68996225148992c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/__init__.py",
+      "sha256": "b8975d245a5131173a555c13768f6784c986727c66b3ddf3f294f4501d092e61",
+      "provider_git_blob": "8df8fae8a846b33c9d6d2ae4e74e3b89bcb706ef",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/collectives.py",
+      "sha256": "b47b30343eb1dae9d6b8b68e66d0a24d4828911521c4337380b0a60f48cf2667",
+      "provider_git_blob": "c7c4476c5c8db7023cf93a44f3471a12b3a5731a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/config.py",
+      "sha256": "2b15ae0d7fc15b2c38a9d76fce31d4449f0a63f6ef9c4bce1c22ec28a596b4b5",
+      "provider_git_blob": "912802399d0d4de40dee275330e5dfd42a39c226",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/deepep.py",
+      "sha256": "30e614193f03a6be6a10178b9d65958a5fbf7bbedf72dd9957d8807e992c1061",
+      "provider_git_blob": "1a21b1206800eda4546339e477a8546a64cdb0ed",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/hardware.py",
+      "sha256": "1f2d7fdbfcdc08ad2c362f5920c6c008972c5523fd5357f1571cb748f92ff9b7",
+      "provider_git_blob": "0a37cfc0d0d4dd4eb70ee2d304e08a454df6ab4c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/headroom.py",
+      "sha256": "803b1b22309391d5c28e8aebe8974feacf36bdb45dc512210327f6d1f3ae7d3e",
+      "provider_git_blob": "ee1d81778d67168f8830a7c651fc2b9cc81942e2",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/html_payload.py",
+      "sha256": "e8ca1b263ee8c33188ba709ef6177df2c4522358c1bfd23408b5fa58215cb020",
+      "provider_git_blob": "725926625892cef92bd8bd56ab8d7012313af909",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/html_render.py",
+      "sha256": "e7179bcb307a11bb8949023d241eb5eb362e54f4dcf6ca65cdf88a75c89ef819",
+      "provider_git_blob": "07e9140352b5e84ec8bceeb1c0d9cfd97e4ee174",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/html_validation.py",
+      "sha256": "39143f8ba6ad84cf8083fec85f595d474cc185751573df16acde5ba5956f6083",
+      "provider_git_blob": "16684433ebac6842ae1dba50746c40c315b3a540",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/inference.py",
+      "sha256": "55a6147f1f6b389effd6e8c4e08a7d329133c61e8b2922bebd04869772c03e6a",
+      "provider_git_blob": "fe137203aee008532ab8f814ec4d247bdf0f9da4",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/intervals.py",
+      "sha256": "e35a9c729f48e7e69f0b6e3c1cc91b5a1e257ab1bf464ae951a0030b68856048",
+      "provider_git_blob": "55d4cd689821379dca10b347c66d425febeb3056",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/iteration_knowledge.py",
+      "sha256": "8892fb058a39efff3642e73a62c681f94b72bf152dece55bc177eff790fc5d59",
+      "provider_git_blob": "f893ac90a4c53fc4ae9019c55fe2bdb5fa30fda7",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/legacy_archive.py",
+      "sha256": "9326cd0d09424aa96e3ceade680494f224a87b8283a42dc5aaab7dff36c93129",
+      "provider_git_blob": "e34ec8df30719aa8be2df9c0c09fc729a7f3eaff",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/longitudinal_fusion.py",
+      "sha256": "f24c2cb77f651f9542579504e5e97bf95007d00ac26ec82b4cb2f4742a72d0d4",
+      "provider_git_blob": "40f0fcdcca5fd62d313b3ed3b31c725ad7562113",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/mfu_trace.py",
+      "sha256": "792fbbbab13feff2cbd76fdba4eba14647aee1b4b1683e53076f29a5c2ea6f5c",
+      "provider_git_blob": "1bf4832c35447504f34271a8b48d2f83453320d8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/phases.py",
+      "sha256": "a6e9cf02478dbd527ee71731759421f5743bf90ea3a8628e0dd119e4399a9393",
+      "provider_git_blob": "471bf8207c218ce49b536904e45026fef3b58833",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/profiler.py",
+      "sha256": "960715161f1d0ba6d4d7f6078c2ea9faa8fddba4848283186ad16a1162e8feb5",
+      "provider_git_blob": "94467e31735bb406eeaa0f6db9ca118ca47ee764",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/spatiotemporal.py",
+      "sha256": "cc4c40a439ac3f0df7558008540159a686935db70e18205a69d5516053b2fb31",
+      "provider_git_blob": "72ec9af9ca6bb8ed27ac4a7a229c8e3207f8d0fc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/stage_hardware.py",
+      "sha256": "f04f0b10d9da894e76d1cd4d3651fe7b4f6e03ec1919ef4a39568df575973213",
+      "provider_git_blob": "686d9d9308ee0d028724e7bb6318ae1b753ffe4d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/src/x10000_analysis/validation.py",
+      "sha256": "f7793755ac3be90a98b02ba35d9bfcbd31482a3eddc2d9e36851ac099184356b",
+      "provider_git_blob": "59bcf6946542d8c821bf9c8cd5d0fdc62db2df37",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/DAG_MFU_VERSION_PIPELINE.md",
+      "sha256": "82273425e3b89cfe710bd091a19a74981ebf20c5c589a62502e627d1f0ff987b",
+      "provider_git_blob": "73756eb725b4c6a78d67416594576caf605f6a56",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/Snakefile",
+      "sha256": "72382928fd47c70a771a5524968ed8cb37524fa635d82223df41b54790e78f90",
+      "provider_git_blob": "f8ea68981437bf09530a07bec1b2b813dbdea1cc",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/config/case256.yaml",
+      "sha256": "b1bbc27fa472c9f1c9c6fba7c525a3d9958124211da7a14f7d9ce2849af52f91",
+      "provider_git_blob": "7592e4be6833223b7294c54e819fd024d91de9e3",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/config/dag_mfu_versions.toml",
+      "sha256": "1a7797045e79c9ac5a87e0a9620e1d505e2f7edf6842bf1f3efabe81ee597de5",
+      "provider_git_blob": "6c60ced31633e0ddcaa7187d9c85ab9109d26326",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/config/dag_mfu_w37_versions.toml",
+      "sha256": "8a7b92914e056f322409963bbba8515cc77caad24b951e159ad5387bd791d1cf",
+      "provider_git_blob": "dba153d1045f978c56fca59cc3bed0cb74ca499c",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/requirements-snakemake.txt",
+      "sha256": "736f4b86dbd4b4bde0ffc2c225efaed1616bb4bd888631c1ca71464377de208b",
+      "provider_git_blob": "057099c5264f4984d844b3ee374e153609d0b26b",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/scripts/audit_dag_mfu_dependency_topology.py",
+      "sha256": "54884c8b9c01bd9e7cbce42f2cccc041906870653fae32a8b314eff1acc4b8a9",
+      "provider_git_blob": "242d5b9589b2075146121eed6a83f9e20add88b3",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/scripts/build_dag_mfu_schedule_factorial.py",
+      "sha256": "525d793fd583e3f957bda5d4747aa4f6c2f2c23cf00707a406295e91def79790",
+      "provider_git_blob": "8cea48bcd42aec34f2fe9d4ec1dd410a2419c2e0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/scripts/check_validation.py",
+      "sha256": "8b0319fa3852a29e5d4ffe424146bf4a172c1dbab2a2cd2f291fb4f1ed4b8174",
+      "provider_git_blob": "793ebc65485a44bdeec007cac5cc602e2ae16bdb",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/scripts/compare_delivery_trees.py",
+      "sha256": "5810431b28a9b09201a386961741b5592149b83ca6be454aa1bcbc999b30ab0b",
+      "provider_git_blob": "04509ceb7495a07e3877a87732fd556ad64e1a01",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/workflow/scripts/manage_dag_mfu_versions.py",
+      "sha256": "188d44ac91fe618c635feadc79dc5d9358fc85f20e28289af440616b49e1f6c4",
+      "provider_git_blob": "5371501044b846c78d6d97638f19126d45a149be",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_collective_bandwidth_no_pp.py",
+      "sha256": "f2027247c2a201c5092e621613cadaee937a39ad7b07f9998e5f68b52bfdcc1d",
+      "provider_git_blob": "aa6d37803bb32796ca43d8b3f2c57ff76a8c2454",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_communication_spatial_heatmap_no_pp.py",
+      "sha256": "998dd704336fcf530fe33251506ae0d43e4fba47610273e9724f6934fccd1a43",
+      "provider_git_blob": "b12bb2ee8a2f5eefd3770e00e4ee695a40a71984",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_cp_active_mtlink.py",
+      "sha256": "4ac084f42b7ec02f1ebe999968f572f7bff3bedaa25c04a7bf1b7126c51227f6",
+      "provider_git_blob": "4c3ac7b4d871420be5e9eb7ab44d317eb9f1dd70",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_dp_active_physical.py",
+      "sha256": "2fef548519dee3488fc299b1b494147c1d2eabab5955e121fbd85b7a9ce6ae20",
+      "provider_git_blob": "5e45d633d457a83f82c3c7dd3b952563ecfc1af0",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_edp_nic_spatial.py",
+      "sha256": "30dff7db95c2066b48d7c433f1cbf318164b8b17679db675aa0008afb79bfdbb",
+      "provider_git_blob": "a2c7e08bed9a91e68abfddb07da841e6d20d7669",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_edp_rank_nic_spatial.py",
+      "sha256": "5744639b2415230f7a3fc3177332707c65535fedfea9333f432fb7b02829f640",
+      "provider_git_blob": "067f27c1e1b8ce42c6397b24777b603b6acc7645",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_ep_active_time_bw.py",
+      "sha256": "e23e1f0bfb9d70ac36d21a0887db2664f26df4a5911666446ab908993efe381e",
+      "provider_git_blob": "f05b2cdee99b175527fdba42e949214c0e37bb6f",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_ep_active_time_heatmap.py",
+      "sha256": "82a20c7d0d5c3dd7cd3f9d971381bf22db1ff967d9c78dfe2a56c5f722ad3bb0",
+      "provider_git_blob": "9b9ce083d72457cb52932bcd7144f49449879708",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_ep_phase_constrained_mtlink.py",
+      "sha256": "6156c43d49a5ba745be6ed94eb279fbd68977f29a9d9c04c8454e5c0c8205136",
+      "provider_git_blob": "198d60418fece3df99f0518adf2f747e4b7117c8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_event_windows.py",
+      "sha256": "b990220c3ee0c249e0b7a44a5118643672b89ebfecbc100a10ea69091118bebc",
+      "provider_git_blob": "3cb66adadbb52ad27b503fb690f57ff552717f83",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_rank_nic_mapping.py",
+      "sha256": "fd029c03a912eb8d09103a5a6c290495960478662b25bc32f2b112e8ba6dfea7",
+      "provider_git_blob": "8cbd65f7891e1ce8a34e4326bbcb5d8f247823ce",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/build_topology.py",
+      "sha256": "711709e5d4b2a8fc21235b006cbd3ab688f563183b0aa377f63321bce2b4e88a",
+      "provider_git_blob": "858f776f647ba89b0fbc313d8a0a3d8739a45715",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/finalize_collective_bandwidth_no_pp.py",
+      "sha256": "a4caaf999d1ea495159ef17377d8dced10cc7f8e7eccf3e2a423007effaf7388",
+      "provider_git_blob": "6858693462c637b343c5428730bc52c271b4d1ef",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/inventory_framework.py",
+      "sha256": "b7bbd95ee48343a5278a1b41d8428dacebb5ac19ecceb8278d535de7a662ec80",
+      "provider_git_blob": "b6a9104bc8f00b072a681938ff9a9b65a456547e",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/inventory_hardware.py",
+      "sha256": "73d0d0caec2b3991072d2883e4b3625710dac8cd4f768ee23219aa5f19b74df7",
+      "provider_git_blob": "9144090f90c2db80a671d2a6fbbb91eb2ab60bca",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/prepare_raw_view.py",
+      "sha256": "1f449d62510c1725ec29cce0ffa23540463e6ab52e359b3e4047e6f750da53ec",
+      "provider_git_blob": "129f875999cf7e291f43ea0e32550a2667d3f2d9",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/prepare_transfer_lists.py",
+      "sha256": "1afb4a69bf7e9b4c1a01ad795ff628ad86c15a2462161b79db9cdbde32295a01",
+      "provider_git_blob": "d2b7d3c2ac308a08e7930993ac0160c68128e6ea",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/pull_selected_rsync.sh",
+      "sha256": "540c6836dc3c96313b4e127d4f44ca9e2899af84ffc6d10de1eb3696b8d15f99",
+      "provider_git_blob": "5dc0f28766dfbeb5dd2de8a23fd0104d13ab364a",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/remote_inventory.sh",
+      "sha256": "f1b50136e2e259b50c98085ed6c147f07c6d5b4dbff0585597b365cfd0858c78",
+      "provider_git_blob": "25f6afc6a23dc17e8724bc62e31b4d1cb26f3d49",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/validate_rank_gpu_mapping.py",
+      "sha256": "c7e61e10ea1423a9677fd54528fead3c8f464d360c60bbe5d262ecbfe21735c0",
+      "provider_git_blob": "0cf436116e904591610e2497a6f82316dbe2d35d",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/validate_trace_metadata.py",
+      "sha256": "54a1e7f1d221e73075bba5b28ed3faf1045f39d13a386d6c26cebf2c9cde11c4",
+      "provider_git_blob": "a91a0606aaddc4a57395c2cb78e5d5077d226a00",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/verify_remote_rsync_checksum.sh",
+      "sha256": "8762a69755826129e45c6e38a272ccc041cd6c8662f6e89d7293dc238c53db65",
+      "provider_git_blob": "aada19e053d5c4cd5e33155eb4ff086b31028bb8",
+      "identity": "provider_commit_blob"
+    },
+    {
+      "path": "vendor/fab_w37/case_256gpu_pp16_cp2_a2a/scripts/verify_transfer.py",
+      "sha256": "ff59b8d239303a1c711d9378c07a754176d9afc3a090dfc8459d0f9f5e7f2b2a",
+      "provider_git_blob": "77fee75d7c93e906f08153a39f2d2b1dad67cb2e",
+      "identity": "provider_commit_blob"
+    }
+  ],
+  "tracked_count": 388,
+  "sha_only_count": 38
+}

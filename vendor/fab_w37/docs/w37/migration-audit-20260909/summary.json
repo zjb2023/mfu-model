@@ -1,0 +1,137 @@
+{
+  "scope": "Pinned derived inputs, release parameters and direct HTML dependencies including srcdoc; no raw trace reads, simulation, or complete upstream rebuild",
+  "checks": [
+    {
+      "name": "all_pinned_inputs_and_code_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "node_count",
+      "passed": true,
+      "detail": 327746
+    },
+    {
+      "name": "node_cost_components_conserved",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "edge_count",
+      "passed": true,
+      "detail": 364784
+    },
+    {
+      "name": "binding_count",
+      "passed": true,
+      "detail": 70192
+    },
+    {
+      "name": "binding_unique_nodes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_224_ranks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_14_stages",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_3_microbatches",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bound_keys",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fine_parameters",
+      "passed": true,
+      "detail": 6765
+    },
+    {
+      "name": "profiler_ledger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "training_ledger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "phase_ledger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mfu_formula_matches_binding_worker",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_anchor_exists",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "files_records": 544,
+  "unique_files": 371,
+  "unique_bytes": 207454564,
+  "file_failures": [],
+  "static_link_issues": [],
+  "external_links_not_fetched": 15,
+  "nodes": 327746,
+  "edges": 364784,
+  "node_kinds": {
+    "phase_boundary": 2688,
+    "operator": 287616,
+    "pp_p2p": 1248,
+    "collective_boundary": 772,
+    "collective_service": 380,
+    "optimizer": 1120,
+    "iteration_boundary": 1,
+    "compute_overlap_token": 32352,
+    "collective_release_token": 448,
+    "scheduler_handoff": 320,
+    "microbatch_release_gap": 800,
+    "framework_entry": 1
+  },
+  "cost_component_sum_ns": {
+    "compute_exposed_ns_model": 394056723308,
+    "compute_overlap_ns_model": 183306141739,
+    "network_service_ns_model": 319790634703,
+    "software_sync_ns_model": 149725516234,
+    "framework_residual_ns_model": 23534862642
+  },
+  "predictions": {
+    "raw_ms": 20953.110588,
+    "entry_ms": 1265.38821,
+    "onef1b_ms": 19283.76732,
+    "tail_ms": 1008.394726124996,
+    "outer_ms": 1372.45339,
+    "profiler_ms": 21557.550256125,
+    "training_ms": 22930.003646124995,
+    "mfu_pct": 3.285055047379364
+  },
+  "mfu_constants": {
+    "effective_flops_per_iteration": 8.436548311982576e+16,
+    "gpus": 224,
+    "peak_flops_per_gpu_s": 500000000000000.0,
+    "source": "research/w37/onef1b/binding/worker.py:123",
+    "physical_basis_independently_validated": false
+  },
+  "symlink_policy": "Keep lexical path, record resolved destination and all symlink ancestors; content SHA must match after relocation; never rewrite old seals",
+  "limitations": [
+    "Static links do not cover JS-created URLs or nested dependency closure of arbitrary linked pages.",
+    "Upstream raw data and regenerated calibration equivalence not verified.",
+    "Existing raw provenance is preserved as metadata, no raw file hashes refreshed."
+  ]
+}

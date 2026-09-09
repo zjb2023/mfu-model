@@ -1,0 +1,681 @@
+configfile: "workflow/config/case256.yaml"
+
+
+CASE = config["case_root"]
+PY = config["analysis_python"]
+RAW = config["raw"]
+WORKERS = config["workers"]
+CONTRACT = config["contract"]
+
+SCRIPTS = f"{CASE}/scripts"
+READINESS = f"{CASE}/results/readiness"
+TOPOLOGY = f"{CASE}/results/topology"
+COLLECTIVE = f"{CASE}/results/collective_bw_no_pp"
+DASHBOARD = f"{CASE}/results/dashboard_reference"
+EP_ACTIVE = f"{CASE}/results/ep_active_time_bw"
+FIGURES = f"{CASE}/figures"
+LOGS = f"{CASE}/logs/snakemake"
+RAW_VIEW = f"{CASE}/.raw_view"
+STAMPS = ".snakemake-stamps"
+
+MAIN_HTML = f"{FIGURES}/communication_spatial_heatmaps_ep_phase_constrained.html"
+EP_ACTIVE_HTML = f"{FIGURES}/communication_spatial_heatmaps_ep_active_time.html"
+MAIN_STAMP = f"{STAMPS}/case256-main.pass.json"
+EP_ACTIVE_STAMP = f"{STAMPS}/case256-ep-active.pass.json"
+
+
+rule all:
+    input:
+        MAIN_HTML,
+        EP_ACTIVE_HTML,
+        MAIN_STAMP,
+        EP_ACTIVE_STAMP,
+
+
+rule case256_main:
+    input:
+        MAIN_HTML,
+        MAIN_STAMP,
+
+
+rule case256_ep_active:
+    input:
+        EP_ACTIVE_HTML,
+        EP_ACTIVE_STAMP,
+
+
+rule prepare_raw_view:
+    input:
+        code=f"{SCRIPTS}/prepare_raw_view.py",
+        mtlink_root=RAW["mtlink_root"],
+        nic_root=RAW["nic_root"],
+    output:
+        validation=f"{READINESS}/raw_view.json",
+    params:
+        python=PY,
+        raw_view=RAW_VIEW,
+    log:
+        f"{LOGS}/prepare_raw_view.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --mtlink-root {input.mtlink_root} \
+          --nic-root {input.nic_root} \
+          --output-root {params.raw_view} \
+          --validation-output {output.validation} \
+          > {log} 2>&1
+        """
+
+
+rule inventory_framework:
+    input:
+        code=f"{SCRIPTS}/inventory_framework.py",
+        raw_view=rules.prepare_raw_view.output.validation,
+        framework_root=RAW["framework_root"],
+    output:
+        files=f"{READINESS}/framework_files.csv",
+        manifest=f"{READINESS}/profiler_trace_manifest.csv",
+        rank_host_map=f"{READINESS}/rank_host_map.csv",
+        validation=f"{READINESS}/framework_readiness.json",
+    params:
+        python=PY,
+        output_dir=READINESS,
+    log:
+        f"{LOGS}/inventory_framework.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --root {input.framework_root} \
+          --output-dir {params.output_dir} \
+          > {log} 2>&1
+        """
+
+
+rule inventory_hardware:
+    input:
+        code=f"{SCRIPTS}/inventory_hardware.py",
+        raw_view=rules.prepare_raw_view.output.validation,
+        rank_host_map=rules.inventory_framework.output.rank_host_map,
+    output:
+        mtlink=f"{READINESS}/mtlink_files.csv",
+        nic=f"{READINESS}/nic_files.csv",
+        validation=f"{READINESS}/hardware_readiness.json",
+    params:
+        python=PY,
+        raw_view=RAW_VIEW,
+        output_dir=READINESS,
+    threads: WORKERS["inventory_hardware"]
+    resources:
+        io_heavy=1,
+    log:
+        f"{LOGS}/inventory_hardware.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --root {params.raw_view} \
+          --rank-host-map {input.rank_host_map} \
+          --output-dir {params.output_dir} \
+          --workers {threads} \
+          > {log} 2>&1
+        """
+
+
+rule validate_trace_metadata:
+    input:
+        code=f"{SCRIPTS}/validate_trace_metadata.py",
+        framework_root=RAW["framework_root"],
+        manifest=rules.inventory_framework.output.manifest,
+    output:
+        metadata=f"{READINESS}/trace_metadata.csv",
+        validation=f"{READINESS}/trace_metadata_readiness.json",
+    params:
+        python=PY,
+        output_dir=READINESS,
+    threads: WORKERS["trace_metadata"]
+    resources:
+        io_heavy=1,
+    log:
+        f"{LOGS}/validate_trace_metadata.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --root {input.framework_root} \
+          --manifest {input.manifest} \
+          --output-dir {params.output_dir} \
+          --workers {threads} \
+          > {log} 2>&1
+        """
+
+
+rule build_topology:
+    input:
+        code=f"{SCRIPTS}/build_topology.py",
+        rank_host_map=rules.inventory_framework.output.rank_host_map,
+    output:
+        ranks=f"{TOPOLOGY}/rank_topology.csv",
+        layers=f"{TOPOLOGY}/layer_stage_map.csv",
+        lanes=f"{TOPOLOGY}/pp_boundary_lanes.csv",
+    params:
+        python=PY,
+        output_dir=TOPOLOGY,
+    log:
+        f"{LOGS}/build_topology.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --rank-host-map {input.rank_host_map} \
+          --output-dir {params.output_dir} \
+          > {log} 2>&1
+        """
+
+
+rule validate_rank_gpu_mapping:
+    input:
+        code=f"{SCRIPTS}/validate_rank_gpu_mapping.py",
+        framework_root=RAW["framework_root"],
+        manifest=rules.inventory_framework.output.manifest,
+        topology=rules.build_topology.output.ranks,
+    output:
+        mapping=f"{READINESS}/rank_gpu_validation.csv",
+        validation=f"{READINESS}/rank_gpu_readiness.json",
+    params:
+        python=PY,
+        output_dir=READINESS,
+    threads: WORKERS["rank_gpu_mapping"]
+    resources:
+        io_heavy=1,
+    log:
+        f"{LOGS}/validate_rank_gpu_mapping.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --root {input.framework_root} \
+          --manifest {input.manifest} \
+          --rank-topology {input.topology} \
+          --output-dir {params.output_dir} \
+          --workers {threads} \
+          > {log} 2>&1
+        """
+
+
+rule build_event_windows:
+    input:
+        code=f"{SCRIPTS}/build_event_windows.py",
+        framework_root=RAW["framework_root"],
+        trace_metadata=rules.validate_trace_metadata.output.metadata,
+        topology=rules.build_topology.output.ranks,
+        mtlink=rules.inventory_hardware.output.mtlink,
+        nic=rules.inventory_hardware.output.nic,
+        rank_gpu_validation=rules.validate_rank_gpu_mapping.output.validation,
+    output:
+        windows=f"{READINESS}/event_windows.csv",
+        validation=f"{READINESS}/event_window_readiness.json",
+    params:
+        python=PY,
+        output_dir=READINESS,
+    log:
+        f"{LOGS}/build_event_windows.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --root {input.framework_root} \
+          --trace-metadata {input.trace_metadata} \
+          --rank-topology {input.topology} \
+          --mtlink-files {input.mtlink} \
+          --nic-files {input.nic} \
+          --output-dir {params.output_dir} \
+          > {log} 2>&1
+        """
+
+
+rule build_collective_bandwidth:
+    input:
+        code=f"{SCRIPTS}/build_collective_bandwidth_no_pp.py",
+        raw_view=rules.prepare_raw_view.output.validation,
+        manifest=rules.inventory_framework.output.manifest,
+        trace_metadata=rules.validate_trace_metadata.output.metadata,
+        event_windows=rules.build_event_windows.output.windows,
+        topology=rules.build_topology.output.ranks,
+        mtlink=rules.inventory_hardware.output.mtlink,
+    output:
+        events_pre_mtlink=f"{COLLECTIVE}/collective_events_no_pp_pre_mtlink.parquet",
+        events=f"{COLLECTIVE}/collective_event_bandwidth_no_pp.parquet",
+        cells=f"{COLLECTIVE}/collective_iter_rank_bandwidth_no_pp.csv",
+        summary=f"{COLLECTIVE}/collective_type_bandwidth_summary_no_pp.csv",
+        validation=f"{COLLECTIVE}/collective_bandwidth_validation_no_pp.json",
+    params:
+        python=PY,
+        framework_root=RAW["framework_root"],
+        raw_view=RAW_VIEW,
+        output_dir=COLLECTIVE,
+        long_gap_ms=CONTRACT["mtlink_long_gap_ms"],
+        world_size=CONTRACT["world_size"],
+        expected_events=CONTRACT["expected_deepep_events"],
+    resources:
+        io_heavy=1,
+    log:
+        f"{LOGS}/build_collective_bandwidth.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --framework-root {params.framework_root} \
+          --hardware-root {params.raw_view} \
+          --trace-manifest {input.manifest} \
+          --trace-metadata {input.trace_metadata} \
+          --event-windows {input.event_windows} \
+          --rank-topology {input.topology} \
+          --mtlink-manifest {input.mtlink} \
+          --output-dir {params.output_dir} \
+          --mtlink-long-gap-ms {params.long_gap_ms} \
+          --world-size {params.world_size} \
+          --expected-deepep-events {params.expected_events} \
+          > {log} 2>&1
+        """
+
+
+rule finalize_collective_views:
+    input:
+        code=f"{SCRIPTS}/finalize_collective_bandwidth_no_pp.py",
+        cells=rules.build_collective_bandwidth.output.cells,
+        summary=rules.build_collective_bandwidth.output.summary,
+    output:
+        core_cells=f"{COLLECTIVE}/collective_iter_rank_bandwidth_core_no_pp.csv",
+        core_summary=f"{COLLECTIVE}/collective_core_type_bandwidth_summary_no_pp.csv",
+        compatible_cells=f"{COLLECTIVE}/collective_iter_rank_bandwidth_case16_compatible_no_pp.csv",
+        compatible_summary=f"{COLLECTIVE}/collective_case16_compatible_type_bandwidth_summary_no_pp.csv",
+        coverage=f"{COLLECTIVE}/collective_core_coverage_no_pp.csv",
+        validation=f"{COLLECTIVE}/collective_bandwidth_views_audit_no_pp.json",
+    params:
+        python=PY,
+        output_dir=COLLECTIVE,
+    log:
+        f"{LOGS}/finalize_collective_views.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --output-dir {params.output_dir} \
+          > {log} 2>&1
+        """
+
+
+rule build_rank_nic_mapping:
+    input:
+        code=f"{SCRIPTS}/build_rank_nic_mapping.py",
+        topology=rules.build_topology.output.ranks,
+        nic=rules.inventory_hardware.output.nic,
+    output:
+        mapping=f"{DASHBOARD}/dashboard_rank_nic_mapping.csv",
+        stage=f"{DASHBOARD}/dashboard_iteration5_nic_stage_summary.csv",
+        validation=f"{DASHBOARD}/dashboard_nic_reference_validation.json",
+    params:
+        python=PY,
+        output_dir=DASHBOARD,
+    log:
+        f"{LOGS}/build_rank_nic_mapping.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --rank-topology {input.topology} \
+          --nic-manifest {input.nic} \
+          --output-dir {params.output_dir} \
+          > {log} 2>&1
+        """
+
+
+rule build_ep_phase_constrained:
+    input:
+        code=f"{SCRIPTS}/build_ep_phase_constrained_mtlink.py",
+        events=rules.build_collective_bandwidth.output.events_pre_mtlink,
+        source=rules.finalize_collective_views.output.core_cells,
+        mtlink=rules.inventory_hardware.output.mtlink,
+        raw_view=rules.prepare_raw_view.output.validation,
+    output:
+        cells=f"{COLLECTIVE}/collective_iter_rank_bandwidth_ep_phase_constrained_no_pp.csv",
+        validation=f"{COLLECTIVE}/ep_phase_constrained_mtlink_validation.json",
+    params:
+        python=PY,
+        raw_view=RAW_VIEW,
+        long_gap_ms=CONTRACT["mtlink_long_gap_ms"],
+        world_size=CONTRACT["world_size"],
+        expected_events=CONTRACT["expected_deepep_events"],
+    resources:
+        io_heavy=1,
+    log:
+        f"{LOGS}/build_ep_phase_constrained.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --event-parquet {input.events} \
+          --source-cell-csv {input.source} \
+          --mtlink-manifest {input.mtlink} \
+          --hardware-root {params.raw_view} \
+          --output-csv {output.cells} \
+          --validation-output {output.validation} \
+          --mtlink-long-gap-ms {params.long_gap_ms} \
+          --world-size {params.world_size} \
+          --expected-deepep-events {params.expected_events} \
+          > {log} 2>&1
+        """
+
+
+rule build_edp_rank_nic:
+    input:
+        code=f"{SCRIPTS}/build_edp_rank_nic_spatial.py",
+        events=rules.build_collective_bandwidth.output.events_pre_mtlink,
+        nic=rules.inventory_hardware.output.nic,
+        event_windows=rules.build_event_windows.output.windows,
+        topology=rules.build_topology.output.ranks,
+        mapping=rules.build_rank_nic_mapping.output.mapping,
+        stage=rules.build_rank_nic_mapping.output.stage,
+        raw_view=rules.prepare_raw_view.output.validation,
+    output:
+        cells=f"{COLLECTIVE}/edp_nic_iteration_rank_device.csv",
+        per_nic=f"{COLLECTIVE}/edp_nic_per_nic_summary.csv",
+        slots=f"{COLLECTIVE}/edp_nic_device_slot_summary.csv",
+        hotspots=f"{COLLECTIVE}/edp_nic_hotspot_cells.csv",
+        validation=f"{COLLECTIVE}/edp_nic_rank_device_validation.json",
+    params:
+        python=PY,
+        raw_view=RAW_VIEW,
+        nic_long_gap_ms=CONTRACT["nic_long_gap_ms"],
+    resources:
+        io_heavy=1,
+    log:
+        f"{LOGS}/build_edp_rank_nic.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --events-parquet {input.events} \
+          --hardware-root {params.raw_view} \
+          --nic-manifest {input.nic} \
+          --event-windows {input.event_windows} \
+          --rank-topology {input.topology} \
+          --dashboard-mapping {input.mapping} \
+          --dashboard-stage-summary {input.stage} \
+          --output-csv {output.cells} \
+          --per-nic-summary-output {output.per_nic} \
+          --device-slot-summary-output {output.slots} \
+          --hotspot-output {output.hotspots} \
+          --validation-output {output.validation} \
+          --nic-long-gap-ms {params.nic_long_gap_ms} \
+          > {log} 2>&1
+        """
+
+
+rule build_dp_active:
+    input:
+        code=f"{SCRIPTS}/build_dp_active_physical.py",
+        events=rules.build_collective_bandwidth.output.events_pre_mtlink,
+        source=rules.build_ep_phase_constrained.output.cells,
+        topology=rules.build_topology.output.ranks,
+        mapping=rules.build_rank_nic_mapping.output.mapping,
+        mtlink=rules.inventory_hardware.output.mtlink,
+        nic=rules.inventory_hardware.output.nic,
+        raw_view=rules.prepare_raw_view.output.validation,
+    output:
+        cells=f"{COLLECTIVE}/dp_active_physical_iteration_rank.csv",
+        validation=f"{COLLECTIVE}/dp_active_physical_validation.json",
+    params:
+        python=PY,
+        case_root=CASE,
+        raw_view=RAW_VIEW,
+        mtlink_min_rate=CONTRACT["mtlink_min_rate_GBps"],
+        nic_min_rate=CONTRACT["nic_min_rate_Gbps"],
+        long_gap_ms=CONTRACT["mtlink_long_gap_ms"],
+    threads: WORKERS["dp_active"]
+    resources:
+        io_heavy=1,
+    log:
+        f"{LOGS}/build_dp_active.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --case-root {params.case_root} \
+          --event-parquet {input.events} \
+          --source-cell-csv {input.source} \
+          --rank-topology {input.topology} \
+          --rank-nic-mapping {input.mapping} \
+          --mtlink-manifest {input.mtlink} \
+          --nic-manifest {input.nic} \
+          --hardware-root {params.raw_view} \
+          --output-csv {output.cells} \
+          --validation-output {output.validation} \
+          --mtlink-min-rate-GBps {params.mtlink_min_rate} \
+          --nic-min-rate-Gbps {params.nic_min_rate} \
+          --long-gap-ms {params.long_gap_ms} \
+          --workers {threads} \
+          > {log} 2>&1
+        """
+
+
+rule build_cp_active:
+    input:
+        code=f"{SCRIPTS}/build_cp_active_mtlink.py",
+        events=rules.build_collective_bandwidth.output.events_pre_mtlink,
+        source=rules.build_ep_phase_constrained.output.cells,
+        topology=rules.build_topology.output.ranks,
+        mtlink=rules.inventory_hardware.output.mtlink,
+        raw_view=rules.prepare_raw_view.output.validation,
+    output:
+        cells=f"{COLLECTIVE}/cp_active_mtlink_iteration_rank.csv",
+        validation=f"{COLLECTIVE}/cp_active_mtlink_validation.json",
+    params:
+        python=PY,
+        case_root=CASE,
+        raw_view=RAW_VIEW,
+        mtlink_min_rate=CONTRACT["mtlink_min_rate_GBps"],
+        long_gap_ms=CONTRACT["mtlink_long_gap_ms"],
+    threads: WORKERS["cp_active"]
+    resources:
+        io_heavy=1,
+    log:
+        f"{LOGS}/build_cp_active.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --case-root {params.case_root} \
+          --event-parquet {input.events} \
+          --source-cell-csv {input.source} \
+          --rank-topology {input.topology} \
+          --mtlink-manifest {input.mtlink} \
+          --hardware-root {params.raw_view} \
+          --output-csv {output.cells} \
+          --validation-output {output.validation} \
+          --mtlink-min-rate-GBps {params.mtlink_min_rate} \
+          --long-gap-ms {params.long_gap_ms} \
+          --workers {threads} \
+          > {log} 2>&1
+        """
+
+
+rule build_main_heatmap:
+    input:
+        code=f"{SCRIPTS}/build_communication_spatial_heatmap_no_pp.py",
+        source=rules.build_ep_phase_constrained.output.cells,
+        topology=rules.build_topology.output.ranks,
+        edp=rules.build_edp_rank_nic.output.cells,
+        dp=rules.build_dp_active.output.cells,
+        cp=rules.build_cp_active.output.cells,
+        ep_validation=rules.build_ep_phase_constrained.output.validation,
+        edp_validation=rules.build_edp_rank_nic.output.validation,
+        dp_validation=rules.build_dp_active.output.validation,
+        cp_validation=rules.build_cp_active.output.validation,
+    output:
+        cells=f"{COLLECTIVE}/communication_spatial_heatmap_data_ep_phase_constrained_no_pp.csv",
+        validation=f"{COLLECTIVE}/communication_spatial_heatmap_ep_phase_constrained_validation_no_pp.json",
+        html=MAIN_HTML,
+    params:
+        python=PY,
+    log:
+        f"{LOGS}/build_main_heatmap.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --source-csv {input.source} \
+          --rank-topology {input.topology} \
+          --edp-nic-device-source-csv {input.edp} \
+          --dp-active-source-csv {input.dp} \
+          --cp-active-source-csv {input.cp} \
+          --output-csv {output.cells} \
+          --validation-output {output.validation} \
+          --html-output {output.html} \
+          --ep-mtlink-attribution strict-serial-phase \
+          > {log} 2>&1
+        """
+
+
+rule build_ep_active_time:
+    input:
+        code=f"{SCRIPTS}/build_ep_active_time_bw.py",
+        events=rules.build_collective_bandwidth.output.events_pre_mtlink,
+        source=rules.finalize_collective_views.output.core_cells,
+        topology=rules.build_topology.output.ranks,
+        mtlink=rules.inventory_hardware.output.mtlink,
+        raw_view=rules.prepare_raw_view.output.validation,
+    output:
+        calls=f"{EP_ACTIVE}/ep_phase_call_gpu.csv",
+        phases=f"{EP_ACTIVE}/ep_phase_iter_gpu.csv",
+        compounds=f"{EP_ACTIVE}/ep_compound_burst_iter_gpu.csv",
+        validation=f"{EP_ACTIVE}/ep_active_time_bw_validation.json",
+        audit=f"{EP_ACTIVE}/ep_active_time_bw_audit.md",
+    params:
+        python=PY,
+        case_root=CASE,
+        raw_view=RAW_VIEW,
+        output_dir=EP_ACTIVE,
+        mtlink_min_rate=CONTRACT["mtlink_min_rate_GBps"],
+        long_gap_ms=CONTRACT["mtlink_long_gap_ms"],
+    threads: WORKERS["ep_active_time"]
+    resources:
+        io_heavy=1,
+    log:
+        f"{LOGS}/build_ep_active_time.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --case-root {params.case_root} \
+          --event-parquet {input.events} \
+          --source-cell-csv {input.source} \
+          --rank-topology {input.topology} \
+          --mtlink-manifest {input.mtlink} \
+          --hardware-root {params.raw_view} \
+          --output-dir {params.output_dir} \
+          --min-link-tx-rate-gbps {params.mtlink_min_rate} \
+          --mtlink-long-gap-ms {params.long_gap_ms} \
+          --workers {threads} \
+          > {log} 2>&1
+        """
+
+
+rule build_ep_active_heatmap:
+    input:
+        code=f"{SCRIPTS}/build_ep_active_time_heatmap.py",
+        phases=rules.build_ep_active_time.output.phases,
+        compounds=rules.build_ep_active_time.output.compounds,
+        source_validation=rules.build_ep_active_time.output.validation,
+    output:
+        html=EP_ACTIVE_HTML,
+        validation=f"{EP_ACTIVE}/ep_active_time_heatmap_validation.json",
+    params:
+        python=PY,
+        case_root=CASE,
+    log:
+        f"{LOGS}/build_ep_active_heatmap.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.code} \
+          --case-root {params.case_root} \
+          --phase-csv {input.phases} \
+          --compound-csv {input.compounds} \
+          --source-validation {input.source_validation} \
+          --html-output {output.html} \
+          --validation-output {output.validation} \
+          > {log} 2>&1
+        """
+
+
+rule validate_main_delivery:
+    input:
+        validations=[
+            rules.prepare_raw_view.output.validation,
+            rules.inventory_framework.output.validation,
+            rules.inventory_hardware.output.validation,
+            rules.validate_trace_metadata.output.validation,
+            rules.validate_rank_gpu_mapping.output.validation,
+            rules.build_event_windows.output.validation,
+            rules.build_collective_bandwidth.output.validation,
+            rules.finalize_collective_views.output.validation,
+            rules.build_rank_nic_mapping.output.validation,
+            rules.build_ep_phase_constrained.output.validation,
+            rules.build_edp_rank_nic.output.validation,
+            rules.build_dp_active.output.validation,
+            rules.build_cp_active.output.validation,
+            rules.build_main_heatmap.output.validation,
+        ],
+        artifacts=[
+            rules.build_main_heatmap.output.cells,
+            rules.build_main_heatmap.output.html,
+        ],
+        checker="workflow/scripts/check_validation.py",
+    output:
+        MAIN_STAMP,
+    params:
+        python=PY,
+    log:
+        f"{LOGS}/validate_main_delivery.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.checker} \
+          --output {output} \
+          {input.validations} \
+          > {log} 2>&1
+        """
+
+
+rule validate_ep_active_delivery:
+    input:
+        validations=[
+            rules.build_ep_active_time.output.validation,
+            rules.build_ep_active_heatmap.output.validation,
+        ],
+        artifacts=[
+            rules.build_ep_active_time.output.phases,
+            rules.build_ep_active_time.output.compounds,
+            rules.build_ep_active_heatmap.output.html,
+        ],
+        checker="workflow/scripts/check_validation.py",
+    output:
+        EP_ACTIVE_STAMP,
+    params:
+        python=PY,
+    log:
+        f"{LOGS}/validate_ep_active_delivery.log",
+    shell:
+        """
+        mkdir -p $(dirname {log})
+        {params.python} {input.checker} \
+          --output {output} \
+          {input.validations} \
+          > {log} 2>&1
+        """
+
+
+include: "case256_equivalence.smk"

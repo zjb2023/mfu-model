@@ -1,0 +1,89 @@
+{
+  "status": "PASS_EARLIER_ONLINE_NOWCAST_SOURCE_GATE_TARGET_UNCERTAINTY_FAILS",
+  "run_id": "t36a-early-prefix-r1",
+  "repeat_run_id": "t36a-early-prefix-r2",
+  "prediction_scope": "same-iteration online nowcast after all-stage F0 and last-four-stage B0; not cold start or blind",
+  "tests_passed": 71,
+  "pipeline_stages_passed": 3,
+  "stage_artifacts_verified": 243,
+  "formal_code_manifest_files_verified": 60,
+  "code_snapshot_files": 63,
+  "frozen_input_files": 15,
+  "frozen_input_bytes": 30248941,
+  "raw_input_files": 0,
+  "source_fit_iterations": [
+    85,
+    90
+  ],
+  "source_development_confirmation": [
+    95,
+    100
+  ],
+  "target_development_iterations": [
+    85,
+    90,
+    95,
+    100
+  ],
+  "primary_candidate": "early_source_reliability",
+  "reliability_coefficient": 0.6113448581546815,
+  "reliability_interval": [
+    0.5610936923365254,
+    0.6615960234295714
+  ],
+  "source_development": {
+    "control_onef1b_MAPE_pct": 0.33281103280155144,
+    "primary_onef1b_MAPE_pct": 0.3123667204422286,
+    "control_phase_MAE_ms": 15.82702841894531,
+    "primary_phase_MAE_ms": 14.698332508789063,
+    "raw_unshrunk_onef1b_MAPE_pct": 0.34554659370206026
+  },
+  "target_development": {
+    "formal_v685_cold_start_onef1b_MAPE_pct": 11.340786116467987,
+    "phase_transfer_cold_start_onef1b_MAPE_pct": 15.340746119628438,
+    "primary_online_onef1b_MAPE_pct": 7.01687327967776,
+    "primary_online_onef1b_bias_ms": -1513.2301182500005,
+    "raw_unshrunk_online_onef1b_MAPE_pct": 1.7250712147412766,
+    "primary_profiler_MAPE_pct": 6.459935016575627,
+    "primary_training_MAPE_pct": 7.06130249091602,
+    "primary_MFU_relative_MAPE_pct": 7.612661887520625,
+    "primary_phase_MAE_ms": 60.287044332217256,
+    "primary_phase_bias_ms": -40.09355698846726,
+    "per_iteration_primary_APE_pct": {
+      "85": 5.841425134040855,
+      "90": 6.329396178861487,
+      "95": 9.434500294590654,
+      "100": 6.462171511218045
+    }
+  },
+  "prefix": {
+    "mean_available_fraction_pct": 42.80163776575485,
+    "mean_remaining_fraction_pct": 57.19836223424515,
+    "forward_samples_per_iteration": 224,
+    "backward_samples_per_iteration": 64
+  },
+  "uncertainty": {
+    "target_interval_covered_iterations": 0,
+    "target_interval_total_iterations": 4,
+    "target_raw_factors_all_within_source_fit_range": false
+  },
+  "target_directional_shapley_mean_ms": {
+    "forward_phase_factor": 476.86577787499937,
+    "backward_phase_factor": 1318.3315511250003
+  },
+  "selection_control": "The target-best unshrunk candidate is rejected because its source95/100 MAPE 0.345547% is worse than the 0.332811% control; target results do not change candidate selection.",
+  "source_nonprefix_mutation_predictions_exact": true,
+  "target_nonprefix_mutation_predictions_exact": true,
+  "target_parameter_updates": 0,
+  "formal_topology_replaced": false,
+  "added_edges_or_waits": 0,
+  "source_prediction_seal_sha256": "ade2403e18c36c2bcc4bb1d80adad76972b010341ce258f1a395817cc5037888",
+  "target_prediction_seal_sha256": "27aeba761d7cfa6a3b7449e6b17d450942cff7b696e680c580cd63a90ee4bea1",
+  "scientific_outputs_byte_exact_across_r1_r2": true,
+  "byte_exact_scientific_output_files": 39,
+  "peak_RSS_bytes": 1097801728,
+  "repeat_peak_RSS_bytes": 1088057344,
+  "diagnose_manifest_sha256": "368f8687e41d0909ddc1c5a0bc6b27edbd65e07b16ea8f33be99f2cab3a487bf",
+  "decision": "Source-fitted shrinkage gives an earlier, conservative online target nowcast but its source-only interval covers 0/4 target iterations. The target-best raw method fails the source gate and is not selected. Formal cold-start v685 remains unchanged.",
+  "unique_next": "Compare T35 and T36 as remaining-time forecasts and quantify empirical uncertainty coverage without using target total error to change their parameters."
+}

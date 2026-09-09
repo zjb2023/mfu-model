@@ -1,0 +1,50 @@
+[protocol]
+id = "dag-v6.8.5-source-steady-calibration-256-to-224-2026w36-v1"
+status = "source256_steady_available_parameter_recalibration"
+claim = "freeze the v6.8.4 dependency topology, select a source-only steady tail window, refit available compute, PP-gradient, entry and reconciliation parameters, then evaluate target224 after sealing"
+
+[inputs]
+v684_run_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v684_blocking_pp_program_order_256_to_224"
+v61_observations = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v61_kernel_calibration_256_source/calibration/operator_cost_group_observations.csv.gz"
+source_pp_trace_events = "case_256gpu_pp16_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v53_ep_group_source60_100/source_pp_trace_events_60_100.csv"
+source_profiler_boundaries = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v68_target_assisted_profiler_entry_256_to_224/calibration/source256_profiler_entry_60_100.csv"
+source_edges = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v67_microbatch_runtime_shape_256_to_224/source_replay/dag_v67_source_edges.csv.gz"
+v54_noncompute_nodes = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v54_256_to_224_extrapolation/predictions/dag_v54_nodes.csv"
+target_ground_truth = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v67_microbatch_runtime_shape_256_to_224/evaluator_only/iteration_ground_truth.csv"
+
+[selection]
+candidate_iterations = [60, 65, 70, 75, 80, 85, 90, 95, 100]
+minimum_window_points = 4
+window_must_end_at = 100
+selected_source_calibration = [85, 90, 95, 100]
+target_evaluation = [85, 90, 95, 100]
+selection_metric = "minimum source256 profiler coefficient of variation among contiguous suffix windows with at least four points"
+
+[source]
+case_id = "256gpu_pp16_cp2_a2a"
+pp = 16
+microbatches = 4
+
+[target]
+case_id = "224gpu_pp14_cp2_a2a"
+world_size = 224
+pp = 14
+microbatches = 3
+model_flops_per_iteration = 8.436548311982576e16
+peak_tflops_per_gpu = 500.0
+
+[model]
+version = "v6.8.5"
+parent_version = "v6.8.4"
+compute_policy = "refit source256 physical slot medians on the selected steady window; preserve the sealed non-compute floor"
+pp_gradient_policy = "refit source256 receiver-stage x lane x microbatch median on the selected steady window"
+entry_policy = "source256 selected-window median profiler-entry wall"
+reconciliation_policy = "source256 selected-window median profiler minus steady source replay; scale by target/source microbatch ratio"
+dependency_policy = "exactly preserve the v6.8.4 topology fingerprint"
+forbidden = "target224 timing before prediction seal; target parameter updates; topology changes; fitting by target error"
+target_completion_node_id = "iteration:completion_join"
+source_completion_node_id = "iteration:collectives_complete"
+source_receiver_stage_for_target = [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15]
+
+[outputs]
+output_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v685_source_steady_calibration_256_to_224"

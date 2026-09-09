@@ -1,0 +1,36 @@
+[protocol]
+id = "dag-v6.1-source-kernel-to-operator-calibration-2026w36-v1"
+status = "source_only_kernel_mapping_and_compute_parameters"
+claim = "256-GPU stable trace kernel mapping and source compute calibration only; no 224-GPU timing prediction or accuracy claim"
+
+[split]
+source_iterations = [60, 65, 70, 75, 80, 85, 90, 95, 100]
+source_pp_lane = 0
+source_pp_stages = 16
+target_timing_allowed = false
+
+[inputs]
+trace_inventory = "case_256gpu_pp16_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v53_ep_group_source60_100/source_trace_inventory_60_100.csv"
+source_layer_stage_map = "case_256gpu_pp16_cp2_a2a/results/topology/layer_stage_map.csv"
+trace_semantic_segments = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v55_compute_graph_256_to_224/calibration/source_trace_segment_components.csv"
+v6_source_operator_nodes = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v60_operator_ir_256_to_224/model_inputs/source_operator_nodes.csv.gz"
+v6_operator_templates = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v60_operator_ir_256_to_224/model_inputs/operator_templates.json"
+v6_graph_contract = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v60_operator_ir_256_to_224/graph_contract.json"
+training_script = "case_256gpu_pp16_cp2_a2a/kimi_236_32_new_data.sh"
+
+[mapping]
+kernel_table_schema = "one row per raw GPU kernel; the dominant semantic window supplies the displayed binding"
+parameter_accounting = "all overlapping compute fragments are clipped to semantic windows and unioned per cost group"
+communication_policy = "retain for audit and bind to collective service candidates, but exclude from compute parameters"
+boundary_policy = "do not invent a one-to-one split where one trace window contains the previous layer tail and next layer prefix"
+confidence_levels = ["exact", "family", "fused_group", "support", "excluded"]
+
+[calibration]
+statistic = "median_active_union_ns_per_occurrence"
+dispersion = ["p10", "p90", "mad", "coefficient_of_variation"]
+parameter_views = ["all_windows", "window_split"]
+stage_id_parameter_forbidden = true
+target_trace_parameter_forbidden = true
+
+[outputs]
+output_dir = "case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v61_kernel_calibration_256_source"

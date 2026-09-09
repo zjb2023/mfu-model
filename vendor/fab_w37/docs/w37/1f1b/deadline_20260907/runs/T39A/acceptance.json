@@ -1,0 +1,71 @@
+{
+  "status": "PASS_FIXED_TARGET_STATE_ROBUSTNESS_AUDIT",
+  "run_id": "t39a-state-robustness-r2",
+  "repeat_run_id": "t39a-state-robustness-r3",
+  "failed_run_ids_retained": [
+    "t39a-state-robustness-r1"
+  ],
+  "prediction_scope": "posthoc robustness diagnostics on three exposed target transitions; T38 selection fixed, no new selected prediction",
+  "tests_passed": 79,
+  "pipeline_stages_passed": 3,
+  "stage_artifacts_verified": 220,
+  "formal_code_manifest_files_verified": 60,
+  "code_snapshot_files": 66,
+  "frozen_input_files": 29,
+  "frozen_input_bytes": 30308996,
+  "raw_input_files": 0,
+  "primary_target_metrics": {
+    "zero_update": {
+      "onef1b_MAPE_pct": 1.9146521075626353,
+      "onef1b_MAE_ms": 413.65098366666643,
+      "onef1b_worst_APE_pct": 2.2558265653607514,
+      "remaining_MAPE_pct": 4.50860581714387,
+      "profiler_MAPE_pct": 1.6761567896227072,
+      "training_MAPE_pct": 2.687194742419203,
+      "MFU_relative_MAPE_pct": 2.7623200356937687
+    },
+    "lag_one_base_residual": {
+      "onef1b_MAPE_pct": 0.53642245815771,
+      "onef1b_MAE_ms": 116.06330933333447,
+      "onef1b_worst_APE_pct": 0.6946959795542192,
+      "remaining_MAPE_pct": 1.2629807867184033,
+      "profiler_MAPE_pct": 0.6306372620260668,
+      "training_MAPE_pct": 1.1274954807355282,
+      "MFU_relative_MAPE_pct": 1.1438733333666604
+    },
+    "stale_two_step_residual": {
+      "onef1b_MAPE_pct": 1.0828588024808776,
+      "onef1b_MAE_ms": 233.52571500000218,
+      "onef1b_worst_APE_pct": 1.9480595056260375,
+      "remaining_MAPE_pct": 2.5358037459771654,
+      "profiler_MAPE_pct": 1.1247168183713483,
+      "training_MAPE_pct": 1.7631313883311759,
+      "MFU_relative_MAPE_pct": 1.8040977460338798
+    },
+    "expanding_past_mean_residual": {
+      "onef1b_MAPE_pct": 0.5021364744170415,
+      "onef1b_MAE_ms": 108.39701088889099,
+      "onef1b_worst_APE_pct": 0.6121922874779239,
+      "remaining_MAPE_pct": 1.1807178812709092,
+      "profiler_MAPE_pct": 0.5988768733130234,
+      "training_MAPE_pct": 1.326991387977739,
+      "MFU_relative_MAPE_pct": 1.346939410215931
+    }
+  },
+  "lag_one_improved_iterations_vs_zero": 3,
+  "lag_one_recompute_max_abs_difference_ms": 3.637978807091713e-12,
+  "lag_one_recompute_tolerance_ms": 1e-06,
+  "posthoc_aggregate_best_method_not_selected": "expanding_past_mean_residual",
+  "lag_one_minus_expanding_mean_MAPE_pp": 0.03428598374066849,
+  "selected_method_unchanged": "lag_one_base_residual",
+  "target_model_parameter_updates": 0,
+  "formal_topology_replaced": false,
+  "added_edges_or_waits": 0,
+  "scientific_outputs_byte_exact_across_r2_r3": true,
+  "byte_exact_scientific_output_files": 7,
+  "peak_RSS_bytes": 194973696,
+  "repeat_peak_RSS_bytes": 196739072,
+  "diagnose_manifest_sha256": "155b0518b5f5e401d8a31ee99b11b3c9dc573eee4f5afe9fe6fe295e89a14219",
+  "decision": "Lag-one improves all three transitions over zero update, but expanding-history mean is slightly better in the same exposed aggregate. Three transitions do not identify a unique state rule, so T38 remains fixed and no new method is selected.",
+  "unique_next": "Validate the fixed lag-one rule on the homologous source85/90/95/100 online sequence and quantify per-transition break-even residual noise. Do not use target robustness rankings to change the method."
+}

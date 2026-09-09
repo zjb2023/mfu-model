@@ -1,0 +1,23 @@
+{
+  "schema": "w37-post685-experiment-plan-v1",
+  "version": "v6.8.6-research.1",
+  "status": "SOURCE_API_AUDIT_PASSED_CANDIDATE_NOT_YET_SCORED",
+  "hypothesis": "PP receive publication and fused-API completion belong in explicit causal max joins; observed inter-stage B-start gaps should not be used wholesale as message service. Local prelaunch and return work must be outside message duration.",
+  "structural_authority": "pinned non-interleaved schedules.py and blocking p2p_communication.py, checked against every source PP API and F/B event sequence",
+  "source_fit_iterations": [85, 90],
+  "source_incremental_validation_iterations": [95, 100],
+  "same_window_fit_iterations": [85, 90, 95, 100],
+  "historical_source_diagnostic": [60, 65, 70, 75, 80],
+  "target_primary_development": [85, 90, 95, 100],
+  "target_retrospective_diagnostic": [60, 65, 70, 75, 80],
+  "contamination": "All these cases/iterations have historical development exposure. Only new fitting functions exclude incremental validation and target data; no independent blind claim.",
+  "source_phase_policy": "median rank-stage-phase-microbatch duration; independent phase GPU partition is lane0 only",
+  "source_pp_policy": "direction x lane median completion after both API publications, fitted only from pairs with one message at each endpoint; duration includes transport plus API completion overhead, not pure NIC service",
+  "source_runtime_policy": "nonnegative local prelaunch gaps and API post-join returns with semantic hierarchical fallback; no observed remote wait is inserted as local cost",
+  "target_static_phase_stage_map": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15],
+  "target_mb_policies": ["ordinal_v685_compatibility", "first_middle_last_training_role"],
+  "variants": ["full_causal_api", "zero_local_runtime_ablation", "sender_only_message_release_ablation", "ordinal_microbatch_transfer_ablation"],
+  "integration": "First score internal 1F1B envelope. Integrate target entry, tail-including-legacy-reconciliation, and outer frozen at baseline to isolate 1F1B effects; report a separate residual-free sensitivity, never conceal reconciliation change.",
+  "mandatory_checks": ["source observed-cost reconstruction (diagnostic only)", "acyclic static PP API graph", "message matches and API order for all source ranks", "model parameter input isolation", "source local-cost and free-running heldout errors", "all candidates sealed before target evaluator", "per-stage/MB/F/B comparison and disjoint lane0 internal attribution", "formal v684/v685 graph untouched"],
+  "decision": "Evaluate more than one justified mechanism; do not promote merely because target MAPE drops. Preserve failures, source regression and uncertain transport/runtime transfer explicitly."
+}

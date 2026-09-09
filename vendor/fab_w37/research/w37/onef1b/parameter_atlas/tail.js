@@ -1,0 +1,23 @@
+// Visualization of exact OPT/entry nodes, without changing the predictor or serializing communication.
+function tailKind(n){const c=n.timing_component;if(n.kind==='optimizer')return 'compute';if(n.kind==='collective_service'){if(c==='tail_ag0_completion')return 'ag0';if(c==='tail_ag1_completion')return 'ag1';if(c==='tail_rs_completion')return 'rs';if(c==='global_control_completion_tail')return 'control'}return 'runtime'}
+function overviewComplete(){
+ const finish=Math.max(...data.tail.map(n=>+n.predicted_end_ns),...Object.values(data.phases).map(p=>p.end)),x=t=>155+t/finish*1005;
+ let svg='<rect width="1200" height="725" fill="white"/>';
+ for(let t=0;t<=finish;t+=2000000000)svg+=`<text x="${x(t)}" y="18" font-size="12">${t/1e9}s</text><line x1="${x(t)}" x2="${x(t)}" y1="25" y2="685" stroke="#e5edf1"/>`;
+ svg+=`<text x="4" y="49" font-size="12">全局入口准备</text><g data-overview-entry="1" role="button" tabindex="0"><title>入口1265.388210 ms，图内计费一次</title><rect x="${x(+data.entry.predicted_start_ns)}" y="30" width="${x(+data.entry.predicted_end_ns)-x(+data.entry.predicted_start_ns)}" height="24" fill="#997133"/></g>`;
+ const p=phase();
+ for(let s=0;s<14;s++){const y=65+s*32;svg+=`<text x="4" y="${y+17}" font-size="12">PP${s} · rank${16*s}</text>`;
+  for(const q of Object.values(data.phases).filter(q=>q.stage===s))svg+=`<g data-phase="${s}:${q.phase}:${q.mb}" role="button" tabindex="0"><title>${q.phase} MB${q.mb}：${ms(q.start)}→${ms(q.end)} ms</title><rect x="${x(q.start)}" y="${y}" width="${Math.max(2,x(q.end)-x(q.start))}" height="24" fill="${q.phase==='FWD'?'#287eb4':'#c78336'}" stroke="${q===p?'#111':'white'}" stroke-width="${q===p?3:1}"/><text x="${x(q.start)+2}" y="${y+17}" font-size="10" fill="white">${q.phase==='FWD'?'F':'B'}${q.mb}</text></g>`;
+  for(const [oi,n] of data.tail.filter(n=>n.kind==='optimizer'&&+n.rank===s*16).entries())svg+=`<g data-overview-opt="${esc(n.node_id)}" role="button" tabindex="0"><title>${esc(name(n))} ${ms(n.duration_ns)} ms，点击查看</title><rect x="${x(+n.predicted_start_ns)}" y="${y+oi*8}" width="${Math.max(1,x(+n.predicted_end_ns)-x(+n.predicted_start_ns))}" height="7" fill="#398252"/></g>`;
+ }
+ function union(ns){const intervals=ns.map(n=>[+n.predicted_start_ns,+n.predicted_end_ns]).sort((a,b)=>a[0]-b[0]),out=[];for(const r of intervals){const last=out[out.length-1];if(last&&r[0]<=last[1])last[1]=Math.max(last[1],r[1]);else out.push(r.slice())}return out}
+ for(const [i,kind,label]of[[0,'rs','RS · 全部通信组'],[1,'ag0','AG0 · 全部通信组'],[2,'ag1','AG1 · 全部通信组'],[3,'control','全局控制同步']]){const y=520+i*31,ns=data.tail.filter(n=>tailKind(n)===kind);svg+=`<text x="4" y="${y+17}" font-size="12">${label}</text><g data-tail-summary="${kind}" role="button" tabindex="0"><title>${label}：${ns.length}节点；图上为活跃区间并集，点击查看范围</title><rect x="155" y="${y}" width="1005" height="23" fill="transparent" pointer-events="all"/>`;for(const[a,b]of union(ns))svg+=`<rect x="${x(a)}" y="${y}" width="${Math.max(1,x(b)-x(a))}" height="23" fill="${kind==='runtime'?'#7a8d98':'#8765ae'}"/>`;svg+='</g>'}
+ svg+=`<text x="155" y="711" font-size="13">原始图结束 ${ms(finish)} ms；绿色细条=代表rank的OPT计算，紫色=组级通信，点击查看成本或组范围。</text>`;
+ $('overview').setAttribute('viewBox','0 0 1200 725');$('overview').innerHTML=svg;
+ document.querySelectorAll('[data-phase]').forEach(el=>{el.onclick=()=>{const[s,d,m]=el.dataset.phase.split(':');$('stage').value=s;$('direction').value=d;$('mb').value=m;draw(true)};el.onkeydown=e=>{if(e.key==='Enter')el.onclick()}});
+ document.querySelectorAll('[data-tail-summary]').forEach(el=>{el.onclick=()=>{const ns=data.tail.filter(n=>tailKind(n)===el.dataset.tailSummary),start=Math.min(...ns.map(n=>+n.predicted_start_ns)),end=Math.max(...ns.map(n=>+n.predicted_end_ns));$('node-info').innerHTML=`<h3>${el.dataset.tailSummary.toUpperCase()} · 全部通信组</h3><p>${ns.length}个正时长节点，最早开始 ${ms(start)} ms，最晚完成 ${ms(end)} ms。总览显示活跃区间并集，不将各组时长求和计费。</p><p>节点明细保留在本图JSON证据中；AG为通信成本，不是纯OPT计算。</p>`;$('node-card').scrollIntoView({behavior:'smooth'})};el.onkeydown=e=>{if(e.key==='Enter')el.onclick()}});
+ const entryClick=()=>{nodeInfo(data.entry);$('node-card').scrollIntoView({behavior:'smooth'})};
+ document.querySelector('[data-overview-entry]').onclick=entryClick;document.querySelector('[data-overview-entry]').onkeydown=e=>{if(e.key==='Enter')entryClick()};
+ document.querySelectorAll('[data-overview-opt]').forEach(el=>{el.onclick=()=>{nodeInfo(data.tail.find(n=>n.node_id===el.dataset.overviewOpt));$('node-card').scrollIntoView({behavior:'smooth'})};el.onkeydown=e=>{if(e.key==='Enter')el.onclick()}});
+}
+const drawFBOnly=draw;draw=function(reset=false){drawFBOnly(reset);overviewComplete()};draw();

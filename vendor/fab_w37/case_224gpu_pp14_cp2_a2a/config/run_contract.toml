@@ -1,0 +1,69 @@
+[identity]
+run_id = "2026-07-30_0938_224gpu_pp14_cp2_a2a"
+attempt_id = "0730_0938"
+timezone = "Asia/Hong_Kong"
+raw_framework_root = "../../fabric-data-analysis-raw/0731_224gpu_pp14_cp2_a2a/extracted/framework"
+raw_hardware_root = "../../fabric-data-analysis-raw/0731_224gpu_pp14_cp2_a2a/extracted/hardware"
+
+[topology]
+world_size = 224
+nodes = 28
+gpus_per_node = 8
+tp = 1
+pp = 14
+cp = 2
+ep = 8
+cp_comm_type = "a2a"
+
+# Do not populate until final argv/config and layer placement are validated.
+num_layers = 52
+dp = 8
+virtual_pp = 0
+num_micro_batches = 3
+micro_batch_size = 2
+global_batch_size = 48
+sequence_length = 8192
+first_pipeline_stage_layers = 2
+middle_pipeline_stage_layers = 4
+last_pipeline_stage_layers = 2
+recompute_granularity = "full"
+recompute_method = "block"
+recompute_num_layers = 4
+
+[expected]
+rank_min = 0
+rank_max = 223
+mtlink_gpus_per_host = 8
+nic_devices = ["mlx5_0", "mlx5_1", "mlx5_2", "mlx5_3", "mlx5_6", "mlx5_7", "mlx5_8", "mlx5_9"]
+profiler_iteration_policy = "discover_then_freeze"
+
+[mapping]
+rank_to_host = "derive_from_trace_path_and_distributedInfo"
+rank_to_gpu = "derive_from_trace_local_rank_or_validated_rank_host_order"
+rank_to_pp_stage = "PG-validated: rank//16"
+rank_to_cp_group = "PG-validated CONTEXT_PARALLEL_GROUP pairs"
+rank_to_nic = "unknown_until_topology_evidence"
+layer_to_pp_stage = "contiguous: stage0=2, stages1..12=4, stage13=2"
+
+[time_contract]
+profiler = "baseTimeNanoseconds + trace_event.ts_us * 1000"
+nic = "timestamp_ns is interval end; previous timestamp/reported sample_interval defines interval"
+mtlink = "host_realtime_ns is interval end; mt_timestamp_end_ns-mt_timestamp_begin_ns defines duration"
+cross_host_sync = "unverified"
+
+[claims]
+maximum_capability = "L4 no-PP collective MTLink overlap attribution and expert-DP host-window NIC-device attribution passed"
+event_hardware_precision = "MTLink rank/GPU event allocation passed; NIC behavior/iteration/host/device counters use merged host EDP windows; NIC rank/rail attribution remains forbidden"
+event_no_sample = "NA"
+forbid_16gpu_constants = true
+forbid_256gpu_expected_grid = true
+forbid_mtlink_nic_addition = true
+forbid_unknown_rank_to_nic_attribution = true
+forbid_unvalidated_layer_stage_mapping = true
+
+[cleaning]
+mtlink_unsigned_underflow = "values > int64 max are collector reset/underflow; exclude row as NA"
+mtlink_sparse_missing_link = "zero delta only within an observed sampling cycle; missing whole coverage is NA"
+nic_long_gap_ms = 10.0
+nic_rate_denominator = "complete event/window duration, never mean active rows"
+nic_rank_attribution = "forbidden until rail mapping is known"

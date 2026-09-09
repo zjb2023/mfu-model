@@ -1,0 +1,58 @@
+{
+  "method": "Single result_0; all DeltaTimingCallback train steps; ratio of model FLOPs to mean time and dense FP8 rated peak; not an official reported MFU.",
+  "config_url": "https://github.com/mlcommons/training_results_v6.0/blob/eabf23a07b2a0c60a289ff871dc3a46fff0d0421/NVIDIA/benchmarks/deepseekv3_671b/implementations/theia_ngpu512_ngc26.04_nemo/config_common.sh",
+  "peak_source_urls": [
+    "https://www.nvidia.com/en-us/data-center/gb200-nvl72/",
+    "https://www.nvidia.com/en-us/data-center/gb300-nvl72/"
+  ],
+  "results": [
+    {
+      "recipe": "R12",
+      "gpu": "GB300",
+      "gpus": 256,
+      "gbs": 15360,
+      "seq_length": 4096,
+      "recorded_steps": 50,
+      "mean_step_seconds": 39.45795549869538,
+      "median_step_seconds": 39.21101260185242,
+      "model_tflop_per_sample": 1068,
+      "peak_dense_fp8_tflops_per_gpu": 5000,
+      "achieved_model_tflops_per_gpu": 1624.0071030066097,
+      "estimated_mfu_percent": 32.48014206013219,
+      "direct_mfu_keys": [],
+      "result_url": "https://github.com/mlcommons/training_results_v6.0/blob/eabf23a07b2a0c60a289ff871dc3a46fff0d0421/NVIDIA/results/theia_ngpu256_ngc26.04_nemo/deepseekv3_671b/result_0.txt"
+    },
+    {
+      "recipe": "R11",
+      "gpu": "GB300",
+      "gpus": 512,
+      "gbs": 15360,
+      "seq_length": 4096,
+      "recorded_steps": 50,
+      "mean_step_seconds": 20.19641335964203,
+      "median_step_seconds": 20.092837810516357,
+      "model_tflop_per_sample": 1068,
+      "peak_dense_fp8_tflops_per_gpu": 5000,
+      "achieved_model_tflops_per_gpu": 1586.420293022161,
+      "estimated_mfu_percent": 31.72840586044322,
+      "direct_mfu_keys": [],
+      "result_url": "https://github.com/mlcommons/training_results_v6.0/blob/eabf23a07b2a0c60a289ff871dc3a46fff0d0421/NVIDIA/results/theia_ngpu512_ngc26.04_nemo/deepseekv3_671b/result_0.txt"
+    },
+    {
+      "recipe": "R13",
+      "gpu": "GB200",
+      "gpus": 8192,
+      "gbs": 16384,
+      "seq_length": 4096,
+      "recorded_steps": 45,
+      "mean_step_seconds": 3.568921359380086,
+      "median_step_seconds": 3.494353771209717,
+      "model_tflop_per_sample": 1068,
+      "peak_dense_fp8_tflops_per_gpu": 5000,
+      "achieved_model_tflops_per_gpu": 598.5001587065002,
+      "estimated_mfu_percent": 11.970003174130005,
+      "direct_mfu_keys": [],
+      "result_url": "https://github.com/mlcommons/training_results_v6.0/blob/eabf23a07b2a0c60a289ff871dc3a46fff0d0421/NVIDIA/results/tyche-hsg_ngpu8192_ngc26.04_nemo/deepseekv3_671b/result_0.txt"
+    }
+  ]
+}

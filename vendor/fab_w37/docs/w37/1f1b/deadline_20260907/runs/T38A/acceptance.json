@@ -1,0 +1,115 @@
+{
+  "status": "PASS_CAUSAL_TARGET_LAGGED_ONLINE_UPDATE_DEVELOPMENT",
+  "run_id": "t38a-causal-lagged-r1",
+  "repeat_run_id": "t38a-causal-lagged-r2",
+  "prediction_scope": "target-domain causal online state after one completed target iteration; already exposed development sequence, not cold start or blind",
+  "tests_passed": 76,
+  "pipeline_stages_passed": 3,
+  "stage_artifacts_verified": 221,
+  "formal_code_manifest_files_verified": 60,
+  "code_snapshot_files": 65,
+  "frozen_input_files": 31,
+  "frozen_input_bytes": 30321201,
+  "raw_input_files": 0,
+  "initialization_iteration": 85,
+  "primary_causal_walk_forward_iterations": [
+    90,
+    95,
+    100
+  ],
+  "primary_metrics": {
+    "formal_v685": {
+      "remaining_MAPE_pct": 11.57243849094273,
+      "onef1b_MAPE_pct": 11.57243849094273,
+      "onef1b_MAE_ms": 2502.167109666665,
+      "onef1b_bias_ms": -2502.167109666665,
+      "profiler_MAPE_pct": 10.422647252769872,
+      "training_MAPE_pct": 10.864937329710566,
+      "MFU_relative_MAPE_pct": 12.190725274733067,
+      "MFU_bias_pp": 0.35961437929719214,
+      "mean_cutoff_fraction_pct": 0.0,
+      "mean_actual_remaining_ms": 21617.940023666666
+    },
+    "t35_sealed_base": {
+      "remaining_MAPE_pct": 4.50860581714387,
+      "onef1b_MAPE_pct": 1.9146521075626353,
+      "onef1b_MAE_ms": 413.65098366666643,
+      "onef1b_bias_ms": -413.65098366666643,
+      "profiler_MAPE_pct": 1.6761567896227072,
+      "training_MAPE_pct": 2.687194742419203,
+      "MFU_relative_MAPE_pct": 2.7623200356937585,
+      "MFU_bias_pp": 0.0815245920771388,
+      "mean_cutoff_fraction_pct": 57.54323760254433,
+      "mean_actual_remaining_ms": 9177.961698333333
+    },
+    "t38_lagged_update": {
+      "remaining_MAPE_pct": 1.2629807867184033,
+      "onef1b_MAPE_pct": 0.53642245815771,
+      "onef1b_MAE_ms": 116.06330933333447,
+      "onef1b_bias_ms": -15.265975999998773,
+      "profiler_MAPE_pct": 0.6306372620260668,
+      "training_MAPE_pct": 1.1274954807355282,
+      "MFU_relative_MAPE_pct": 1.1438733333666604,
+      "MFU_bias_pp": 0.03379350011390484,
+      "mean_cutoff_fraction_pct": 57.54323760254433,
+      "mean_actual_remaining_ms": 9177.961698333333
+    }
+  },
+  "initialization_inclusive_metrics": {
+    "t35_sealed_base": {
+      "remaining_MAPE_pct": 4.201267307331723,
+      "onef1b_MAPE_pct": 1.774165878841683,
+      "onef1b_MAE_ms": 382.58529,
+      "onef1b_bias_ms": -382.58529,
+      "profiler_MAPE_pct": 1.7228530377208695,
+      "training_MAPE_pct": 2.625240516576871,
+      "MFU_relative_MAPE_pct": 2.6968328626445954,
+      "MFU_bias_pp": 0.0797067973474247,
+      "mean_cutoff_fraction_pct": 57.8448074861315,
+      "mean_actual_remaining_ms": 9089.677358249999
+    },
+    "t38_lagged_update": {
+      "remaining_MAPE_pct": 1.7670485345126232,
+      "onef1b_MAPE_pct": 0.7404936417879888,
+      "onef1b_MAE_ms": 159.39453425000102,
+      "onef1b_bias_ms": -83.79653424999924,
+      "profiler_MAPE_pct": 0.9387133920233894,
+      "training_MAPE_pct": 1.4554660703141147,
+      "MFU_relative_MAPE_pct": 1.482997835899272,
+      "MFU_bias_pp": 0.04390847837499923,
+      "mean_cutoff_fraction_pct": 57.8448074861315,
+      "mean_actual_remaining_ms": 9089.677358249999
+    }
+  },
+  "per_iteration_updated_onef1b_APE_pct": {
+    "85": 1.3527071926788254,
+    "90": 0.6038390744190499,
+    "95": 0.3107323204998608,
+    "100": 0.6946959795542192
+  },
+  "mean_walk_forward_components_ms": {
+    "backward_phase_factor": 2188.5568190000004,
+    "cold_start_phase_transfer": 18253.343351,
+    "forward_phase_factor": 762.3888700000001,
+    "lagged_base_residual_state": 398.38500766666766,
+    "unexplained_actual_residual": 15.265976000001197
+  },
+  "causal_interval_coverage": [
+    1,
+    2
+  ],
+  "current_or_future_truth_mutation_invariant": true,
+  "online_state_updates": 3,
+  "target_model_parameter_updates": 0,
+  "formal_topology_replaced": false,
+  "added_edges_or_waits": 0,
+  "entry_tail_outer_updates": 0,
+  "causal_prediction_seal_sha256": "1792f468d5dd69b1ce0e0d97f88bc7c2f2268079dfa2ac32ecf98dd7f8e1c53b",
+  "scientific_outputs_byte_exact_across_r1_r2": true,
+  "byte_exact_scientific_output_files": 11,
+  "peak_RSS_bytes": 198787072,
+  "repeat_peak_RSS_bytes": 199221248,
+  "diagnose_manifest_sha256": "4bedee62f9d223c06358d34e668322fe9b882a257bdb65606d697c9bc193b6b5",
+  "decision": "The lagged base residual materially improves the three causal walk-forward development iterations while preserving T35's graph explanation. The result requires one completed target iteration and is not a cold-start or source-transfer promotion.",
+  "unique_next": "Preregister a read-only T39A robustness audit of the fixed T38 rule: compare zero update, lagged base residual, one-step-stale residual and expanding historical mean on the same exposed sequence without changing the selected T38 method."
+}
