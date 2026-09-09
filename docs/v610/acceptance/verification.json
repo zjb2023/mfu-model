@@ -1,0 +1,442 @@
+{
+  "status": "PASS",
+  "source_commit": "b8330a0ffc1c4d73c0a2403291b89edd55999a58",
+  "audit_commit": "146cc97d5e6b717bd517b8c38040ff1081430f7f",
+  "artifact_root": "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0",
+  "release": "/home/zjb/Desktop/worktrees/mfu-w37-v610/results/v610/release-final",
+  "binding": "/home/zjb/Desktop/worktrees/mfu-w37-v610/results/v610/binding-final",
+  "checks": [
+    {
+      "name": "all_frozen_artifact_hashes",
+      "status": "PASS",
+      "detail": {
+        "files": 379,
+        "bytes": 208061015
+      }
+    },
+    {
+      "name": "all_vendored_code_hashes",
+      "status": "PASS",
+      "detail": {
+        "byte_preserved_files": 426
+      }
+    },
+    {
+      "name": "release:model/coverage.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 28,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "ddd9bcf402980b0e0627fcd6cc949e5e71603967e3bdaef749785810e78373fa"
+      }
+    },
+    {
+      "name": "release:model/critical_path.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 6586,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "044de9af5809cac87d2137a7c5164cb337b73a46bc33e3151bb3102ec2ec0117"
+      }
+    },
+    {
+      "name": "release:model/edges.csv.gz",
+      "status": "PASS",
+      "detail": {
+        "rows": 364784,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "96c3f13446b6239ceba9c873ab54ba3a015e82cfdfaea1e47f672a95431eebd3"
+      }
+    },
+    {
+      "name": "release:model/fine_parameters.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 6765,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "e6730babafbc3edb4d35e6b1afbaa9cc29135b7b7e7fe84c9682ca6ef109ebd6"
+      }
+    },
+    {
+      "name": "release:model/node_parameter_bindings.csv.gz",
+      "status": "PASS",
+      "detail": {
+        "rows": 70192,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "79cc1c105fdd92d2583e902b86498be189d0bc88edb1885ba649094bde77b8e5"
+      }
+    },
+    {
+      "name": "release:model/nodes.csv.gz",
+      "status": "PASS",
+      "detail": {
+        "rows": 327746,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "6317a6f72da41c58c5229bbdeac1885cf1b09e21add1ef8d62a650109f0c2ac2"
+      }
+    },
+    {
+      "name": "release:model/predictions.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 1,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "5c533f1bd50e1f7b6861df61d4f5df865b9a4eabf772d9bd6644d0bd9b0c70c5"
+      }
+    },
+    {
+      "name": "release:model/shape_factors.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 1344,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "85eb5f22090d59bd40e32aa3617c41bf048bc11c9d22cb6e97d64baeda26481d"
+      }
+    },
+    {
+      "name": "release:evaluate/iteration_results.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 4,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "42e7e7a518c4e32a5e27e12331b474662cc237685886e4dfa1a4ee41e1d38054"
+      }
+    },
+    {
+      "name": "release:evaluate/phase_iteration_results.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 16,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "2195daf1920e9e8f8106179d37e1ed86d117b4f4467f5c7ceda8e326eaf6f80f"
+      }
+    },
+    {
+      "name": "release:evaluate/phase_metrics.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 4,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "e2d8174d557764740a1b79a28ba99fc46d1baf768e69e3d4a1f9b4f6c186b81a"
+      }
+    },
+    {
+      "name": "release:render/full_iter_events.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 1778,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "7ddde76b7eb680bac94efad25e5e51cd2512602e366594ec40684d5247bab846"
+      }
+    },
+    {
+      "name": "release:render/full_iter_ledger.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 12,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "e428ef00d7766adee79a5fd2475c095ed1b6d5d5cb19c372bbd703cf6dd0bd1d"
+      }
+    },
+    {
+      "name": "release:model:seal_and_input_boundary",
+      "status": "PASS",
+      "detail": {
+        "files": 25,
+        "reads": [
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/audit/fine_parameters.csv",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/model/fine_both_timings.csv.gz",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/model/inherited_runtime_shape_factors.csv",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/model/node_updates.csv.gz",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/model/prediction_seal.json",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/model/predictions.csv",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/predictions/dag_v685_edges.csv.gz",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/predictions/dag_v685_nodes.csv.gz"
+        ],
+        "original_providers_hidden": [
+          "/home/zjb/Desktop/worktrees/fab-w37-1f1b",
+          "/home/zjb/Desktop/fabric-data-analysis",
+          "/home/zjb/Desktop/mfu-model"
+        ]
+      }
+    },
+    {
+      "name": "release:evaluate:seal_and_input_boundary",
+      "status": "PASS",
+      "detail": {
+        "files": 19,
+        "reads": [
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/binding-20260908-r2/evaluate/iteration_results.csv",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/post685-candidate-readiness-r1/evaluator_only/phase_results.csv",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/post685-delivery-round2-final/version_iteration_results.csv"
+        ],
+        "original_providers_hidden": [
+          "/home/zjb/Desktop/worktrees/fab-w37-1f1b",
+          "/home/zjb/Desktop/fabric-data-analysis",
+          "/home/zjb/Desktop/mfu-model"
+        ]
+      }
+    },
+    {
+      "name": "release:render:seal_and_input_boundary",
+      "status": "PASS",
+      "detail": {
+        "files": 22,
+        "reads": [
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/integration-20260907/full_iter_payload.json",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/integration-20260907/three_case_parameters.csv"
+        ],
+        "original_providers_hidden": [
+          "/home/zjb/Desktop/worktrees/fab-w37-1f1b",
+          "/home/zjb/Desktop/fabric-data-analysis",
+          "/home/zjb/Desktop/mfu-model"
+        ]
+      }
+    },
+    {
+      "name": "binding:model/node_updates.csv.gz",
+      "status": "PASS",
+      "detail": {
+        "rows": 140384,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "c1b0b3f878a42ba4f05af408f4741f3fbb50786f3a2eaee8bae1196e53e41be9"
+      }
+    },
+    {
+      "name": "binding:model/fine_both_timings.csv.gz",
+      "status": "PASS",
+      "detail": {
+        "rows": 327746,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "7c4f59d345f27f0788111bbdeac5436ff3b303bbb6c3a7299c3eeb215896f92e"
+      }
+    },
+    {
+      "name": "binding:model/predictions.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 4,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "2cceb5e6fb2ee53f24a29333e955c6dd47db4ea015fa8fb9da280ddd5e3c430e"
+      }
+    },
+    {
+      "name": "binding:audit/fine_parameters.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 6765,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "e6730babafbc3edb4d35e6b1afbaa9cc29135b7b7e7fe84c9682ca6ef109ebd6"
+      }
+    },
+    {
+      "name": "binding:model/inherited_runtime_shape_factors.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 1344,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "85eb5f22090d59bd40e32aa3617c41bf048bc11c9d22cb6e97d64baeda26481d"
+      }
+    },
+    {
+      "name": "binding:evaluate/iteration_results.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 16,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "e60edae73f44495649291a417de3da38fbd6bbb34014070bf1d4e95bba595818"
+      }
+    },
+    {
+      "name": "binding:model/frozen_v685_critical.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 6586,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "fa02b46c91be6552d32186ef98718e461a1e058d5c40dcdbdb1fcabf9b8d5592"
+      }
+    },
+    {
+      "name": "binding:model/fine_overlap_only_timings.csv.gz",
+      "status": "PASS",
+      "detail": {
+        "rows": 327746,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "db7368b94a906b1d89c2f67562b9d96db96c0f340cffce5c0d2749ffc201af2f"
+      }
+    },
+    {
+      "name": "binding:model/fine_both_critical.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 6586,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "1b139591c1f7576f18370a3a63666fa7f9e033689793412d64a35e857a461c9f"
+      }
+    },
+    {
+      "name": "binding:model/fine_overlap_only_critical.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 6586,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "0ec3be2a8cb7cbfe9e6f83a3b3a82bcdfa4a8a7276765f0a5157c467089acf4e"
+      }
+    },
+    {
+      "name": "binding:model/frozen_v685_timings.csv.gz",
+      "status": "PASS",
+      "detail": {
+        "rows": 327746,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "20d4983a25c099ab445f21daaa82af0b5e33f82c8749b394a7bdf38253b07507"
+      }
+    },
+    {
+      "name": "binding:model/fine_exposed_only_critical.csv",
+      "status": "PASS",
+      "detail": {
+        "rows": 6586,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "a3549bf495eaf74e80e60a53a8057c51806ead400434817310e197f39c8b91a9"
+      }
+    },
+    {
+      "name": "binding:model/fine_exposed_only_timings.csv.gz",
+      "status": "PASS",
+      "detail": {
+        "rows": 327746,
+        "comparison": "identical_decompressed_bytes",
+        "content_sha256": "7e2bef4d056dca585316ccbf3091cb2d162a792c33a554355da1e5a999ad3e92"
+      }
+    },
+    {
+      "name": "binding:audit:seal_and_input_boundary",
+      "status": "PASS",
+      "detail": {
+        "files": 22,
+        "reads": [
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/fabric-data-analysis/case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v61_kernel_calibration_256_source/calibration/operator_cost_group_observations.csv.gz",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/calibration/source256_steady_compute_parameters.csv",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/predictions/dag_v685_nodes.csv.gz",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/source_replay/dag_v685_source_nodes.csv.gz"
+        ],
+        "original_providers_hidden": [
+          "/home/zjb/Desktop/worktrees/fab-w37-1f1b",
+          "/home/zjb/Desktop/fabric-data-analysis",
+          "/home/zjb/Desktop/mfu-model"
+        ]
+      }
+    },
+    {
+      "name": "binding:model:seal_and_input_boundary",
+      "status": "PASS",
+      "detail": {
+        "files": 27,
+        "reads": [
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/prediction_contract.json",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/predictions/dag_v685_edges.csv.gz",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/predictions/dag_v685_nodes.csv.gz"
+        ],
+        "original_providers_hidden": [
+          "/home/zjb/Desktop/worktrees/fab-w37-1f1b",
+          "/home/zjb/Desktop/fabric-data-analysis",
+          "/home/zjb/Desktop/mfu-model"
+        ]
+      }
+    },
+    {
+      "name": "binding:review:seal_and_input_boundary",
+      "status": "PASS",
+      "detail": {
+        "files": 19,
+        "reads": [
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/fabric-data-analysis/case_224gpu_pp14_cp2_a2a/results/mfu_accuracy_comparison_2026w36/dag_v61_kernel_calibration_256_source/calibration/operator_cost_group_observations.csv.gz",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/reproduce-v685-preparation/reproduced/predictions/dag_v685_nodes.csv.gz"
+        ],
+        "original_providers_hidden": [
+          "/home/zjb/Desktop/worktrees/fab-w37-1f1b",
+          "/home/zjb/Desktop/fabric-data-analysis",
+          "/home/zjb/Desktop/mfu-model"
+        ]
+      }
+    },
+    {
+      "name": "binding:evaluate:seal_and_input_boundary",
+      "status": "PASS",
+      "detail": {
+        "files": 20,
+        "reads": [
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/post685-candidate-readiness-r1/evaluator_only/phase_results.csv",
+          "/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b8330a0/files/home/zjb/Desktop/worktrees/fab-w37-1f1b/results/w37/A/post685-delivery-round2-final/version_iteration_results.csv"
+        ],
+        "original_providers_hidden": [
+          "/home/zjb/Desktop/worktrees/fab-w37-1f1b",
+          "/home/zjb/Desktop/fabric-data-analysis",
+          "/home/zjb/Desktop/mfu-model"
+        ]
+      }
+    },
+    {
+      "name": "release:model/release.json",
+      "status": "PASS",
+      "detail": "exact JSON content"
+    },
+    {
+      "name": "release:evaluate/metrics.json",
+      "status": "PASS",
+      "detail": "exact JSON content"
+    },
+    {
+      "name": "release:render/full_iter_payload.json",
+      "status": "PASS",
+      "detail": "exact JSON content"
+    },
+    {
+      "name": "release:render/view_checks.json",
+      "status": "PASS",
+      "detail": "exact JSON content"
+    },
+    {
+      "name": "complete_cost_and_parameter_coverage",
+      "status": "PASS",
+      "detail": {
+        "nodes": 327746,
+        "edges": 364784,
+        "bound_nodes": 70192,
+        "fine_parameters": 6765,
+        "bound_keys": 4387,
+        "ranks": 224,
+        "pp_stages": 14,
+        "microbatches": 3,
+        "zero_duration_nodes": 197427,
+        "component_totals_ns": {
+          "compute_exposed_ns_model": 394056723308,
+          "compute_overlap_ns_model": 183306141739,
+          "network_service_ns_model": 319790634703,
+          "software_sync_ns_model": 149725516234,
+          "framework_residual_ns_model": 23534862642
+        },
+        "prediction": {
+          "variant": "v6.10",
+          "raw_ms": 20953.110588,
+          "entry_ms": 1265.38821,
+          "onef1b_ms": 19283.76732,
+          "tail_ms": 1008.394726124996,
+          "outer_ms": 1372.45339,
+          "profiler_ms": 21557.550256125,
+          "training_ms": 22930.003646124995,
+          "mfu_pct": 3.285055047379364,
+          "updated_nodes": 70192,
+          "topology_sha256": "f1d560daaa344a5980697b67e71b97140c9bfd38fe12a2c676daf05c53bd8d04"
+        }
+      }
+    }
+  ],
+  "raw_trace_reads": 0,
+  "limitations": [
+    "already exposed target development, not blind validation",
+    "source full-compatible replay and floor physical provenance remain unvalidated",
+    "raw-to-all-historical-cost regeneration not completed; raw data not relocated"
+  ]
+}
