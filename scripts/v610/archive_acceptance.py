@@ -16,11 +16,12 @@ def main():
     run=ROOT/'results/v610'
     out=ROOT/'docs/v610/acceptance'
     assert not out.exists(), 'Acceptance archive is immutable; do not overwrite'
-    verification=json.loads((run/'verification.json').read_text())
+    verification=json.loads((run/'verification-final.json').read_text())
     assert verification['status']=='PASS'
     release_browser=json.loads((run/'webcheck-release/acceptance.json').read_text())
     history_browser=json.loads((run/'webcheck-history/inline_acceptance.json').read_text())
-    assert release_browser['status']==history_browser['status']=='PASS'
+    assert release_browser['status']=='PASS'
+    assert len(history_browser)==23 and all(c['passed'] for c in history_browser)
     suites=ET.parse(run/'tests-final.xml').getroot()
     test_counts={key:sum(int(s.attrib.get(key,0)) for s in suites.iter('testsuite'))
                  for key in ['tests','failures','errors','skipped']}
@@ -29,7 +30,7 @@ def main():
         text=(run/name).read_text()
         assert 'Nothing to be done' in text and 'missing metadata' not in text, name
     copies={
-        'verification.json':'verification.json','tests-final.xml':'tests.xml',
+        'verification-final.json':'verification.json','tests-final.xml':'tests.xml',
         'webcheck-release/acceptance.json':'browser-release.json',
         'webcheck-history/inline_acceptance.json':'browser-history.json',
         'webcheck-history/inline_link_audit.json':'browser-history-links.json',
@@ -39,11 +40,11 @@ def main():
         'release-final/evaluate/metrics.json':'metrics.json',
         'release-final/evaluate/phase_iteration_results.csv':'phase_iteration_results.csv',
         'release-final/render/view_checks.json':'view_checks.json',
-        'binding-reproduction-r1/audit/summary.json':'binding-audit.json',
-        'binding-reproduction-r1/review/review.json':'binding-review.json',
-        'binding-reproduction-r1/model/predictions.csv':'binding-predictions.csv',
-        'binding-reproduction-r1/evaluate/metrics.csv':'binding-metrics.csv',
-        'binding-reproduction-r1/evaluate/iteration_results.csv':'binding-iteration-results.csv',
+        'binding-final/audit/summary.json':'binding-audit.json',
+        'binding-final/review/review.json':'binding-review.json',
+        'binding-final/model/predictions.csv':'binding-predictions.csv',
+        'binding-final/evaluate/metrics.csv':'binding-metrics.csv',
+        'binding-final/evaluate/iteration_results.csv':'binding-iteration-results.csv',
         'profiler-input-check/derived_inputs.json':'profiler-derived-inputs.json',
         'release-final.dryrun.log':'release-dryrun.log',
         'binding-final.dryrun.log':'binding-dryrun.log',
@@ -55,7 +56,7 @@ def main():
         artifacts.append(dict(path=str(out/dst),relative_to_repo=str((out/dst).relative_to(ROOT)),
                               source_path=str(run/src),sha256=sha(out/dst),size_bytes=(out/dst).stat().st_size))
     stages=[]
-    for pipeline,folder in [('release','release-final'),('binding','binding-reproduction-r1')]:
+    for pipeline,folder in [('release','release-final'),('binding','binding-final')]:
         for stage in STAGES[pipeline]:
             directory=run/folder/stage
             completion=json.loads((directory/'complete.json').read_text())

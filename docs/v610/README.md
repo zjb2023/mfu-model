@@ -31,7 +31,7 @@ export MFU_V610_ARTIFACT_ROOT=/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b83
 ```
 
 也可使用本机已存在的 `.local/v610.json`（忽略入 Git），样例在 `configs/v610/paths.example.json`。
-每次重跑必须使用新的结果目录；非空 stage 会拒绝覆盖。已成功验证的目录是 `release-final`、`binding-reproduction-r1`。
+每次重跑必须使用新的结果目录；非空 stage 会拒绝覆盖。最终验收目录是 `release-final`、`binding-final`（早期成功运行 `binding-reproduction-r1` 也保留）。
 
 ```bash
 .venv/bin/python -m snakemake --snakefile workflow/v610/Snakefile --cores 1 --config pipeline=release run_root="$PWD/results/v610/release-next"
