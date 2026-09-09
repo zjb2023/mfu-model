@@ -1,7 +1,8 @@
 # mfu-model v6.10 冻结复现分支
 
 本地分支 `feat/w37-v610`，工作区 `/home/zjb/Desktop/worktrees/mfu-w37-v610`。
-从 mfu `e71ccb0` 独立接入 W37 `b8330a0`（审计 `146cc97`），不合并、不推送、不改 W37 源材料。
+从 mfu `e71ccb0` 独立接入 W37 `b8330a0`（审计 `146cc97`），未合并、未改 W37 源材料。
+冻结接入先完成本地提交；随后按用户单独授权，分支已推送至 `origin/feat/w37-v610`（冻结验收提交 `3b1a2b6`）。
 验收结果见 [ACCEPTANCE.md](ACCEPTANCE.md)；机器证据见 [acceptance/verification.json](acceptance/verification.json)。
 
 ## 当前版本和目录
