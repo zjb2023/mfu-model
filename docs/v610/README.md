@@ -83,14 +83,17 @@ DeepEP 等后续历史诊断脚本保留为可选代码，不会被默认 DAG �
 
 ## 页面与离线阅读
 
+当前展示采用八章完整阅读结构与独立 v610 参数图册，见 [展示修订记录](UI_READING_REVISION.md)。
+旧版本只在历史记录中介绍。此 UI 修订不改变下面的模型结果或旧验收 seal。
+
 本机独立服务目前为 `http://192.168.0.49:43311/research.html`，原 8037 服务不变。
 新服务首页指向 v6.10；历史页 `/w37-report-history.html#calibration` 保留完整旧校准史，旧图册 / 教学 DAG 能往返。历史 v685 参数图册不替代当前 v610 的 6765 参数说明。
 原始 HTML/payload/SHA 保留，服务仅在响应中重写旧链接，并提供 UTF-8 Markdown 页面；新重生成内容也有独立 SHA。
 
 ```bash
-.venv/bin/python -B scripts/v610/serve.py --run-root results/v610/release-final --host 0.0.0.0 --port 0
+.venv/bin/python -B scripts/v610/serve.py --run-root results/v610/release-final --ui-root results/v610/ui-reading-r3 --host 0.0.0.0 --port 0
 npm ci
-node scripts/v610/check_browser.cjs release
+node scripts/v610/check_reading_ui.cjs
 node scripts/v610/check_browser.cjs history
 ```
 

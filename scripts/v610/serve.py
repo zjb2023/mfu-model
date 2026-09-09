@@ -19,8 +19,14 @@ FAB = '/home/zjb/Desktop/fabric-data-analysis'
 HISTORY = '/results/w37/A/history-scaleout-20260908/integrated_report.html'
 
 
-def serve(run, host, port):
+def serve(run, host, port, ui=None):
     m, base = manifest(), artifact_root()
+    if ui:
+        from x10000_analysis.v610 import sha
+        revision=json.loads((ui/'manifest.json').read_text())
+        assert Path(revision['run_root']).resolve()==run
+        for name, expected in revision['outputs'].items():
+            assert sha(ui/name)==expected, 'UI hash mismatch: '+name
     aliases = {
         '/w37-report-history.html': OLD+HISTORY,
         '/research-history.html': OLD+'/results/w37/A/research-html-20260907/index.html',
@@ -36,7 +42,12 @@ def serve(run, host, port):
             if url in ('/','/research.html','/index.html'):
                 path = run/'render/research-index.html'
             elif url in ('/w37-report.html','/v610.html'):
+                path = ui/'index.html' if ui else run/'render/index.html'
+            elif url == '/v610-frozen.html':
                 path = run/'render/index.html'
+            elif ui and url in ('/v610-parameter-atlas.html','/v610-atlas-data.json','/v610-teaching-dag.html'):
+                path=ui/{'/v610-parameter-atlas.html':'PARAMETER_ITER_ATLAS.html',
+                         '/v610-atlas-data.json':'atlas-data.json','/v610-teaching-dag.html':'DAG_4GPU_DEMO.html'}[url]
             elif url.startswith('/results/w37/A/v610-release/'):
                 path = run/url.split('/results/w37/A/v610-release/',1)[1]
             else:
@@ -75,7 +86,7 @@ def serve(run, host, port):
     server = ThreadingHTTPServer((host,port),Handler)
     actual = server.server_port
     dump(ROOT/'results/v610/service.json',dict(host=host,port=actual,pid=__import__('os').getpid(),
-        local_url=f'http://127.0.0.1:{actual}/research.html',run_root=str(run),source_service_modified=False))
+        local_url=f'http://127.0.0.1:{actual}/research.html',run_root=str(run),ui_root=str(ui) if ui else None,source_service_modified=False))
     print(f'http://127.0.0.1:{actual}/research.html',flush=True)
     server.serve_forever()
 
@@ -83,4 +94,5 @@ def serve(run, host, port):
 if __name__ == '__main__':
     p=argparse.ArgumentParser();p.add_argument('--run-root',type=Path,required=True)
     p.add_argument('--host',default='127.0.0.1');p.add_argument('--port',type=int,default=0)
-    a=p.parse_args();serve(a.run_root.resolve(),a.host,a.port)
+    p.add_argument('--ui-root',type=Path)
+    a=p.parse_args();serve(a.run_root.resolve(),a.host,a.port,a.ui_root.resolve() if a.ui_root else None)

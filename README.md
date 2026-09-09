@@ -19,6 +19,7 @@ W37 v6.10：使用源 256 卡派生观测及封存参数，在目标 224 卡、P
 局域网页面（需要本机服务运行，非公网部署）：
 
 - [当前 v610 报告](http://192.168.0.49:43311/w37-report.html)：完整 iter、参数列表和四轮对比。
+- [独立参数图册](http://192.168.0.49:43311/v610-parameter-atlas.html)：整轮 → F/B模块 → 参数与来源。
 - [历史校准报告与图册](http://192.168.0.49:43311/w37-report-history.html#calibration)。
 
 ## 模型与冻结结果
@@ -80,15 +81,19 @@ export MFU_V610_ARTIFACT_ROOT=/home/zjb/Desktop/mfu-model-artifacts/w37-v610-b83
 两条管线单线程运行；输出仅写本工作区 `results/v610/`，不覆盖非空 stage。
 不需要原 W37 源码或旧虚拟环境，不运行原始 trace 全量重扫、旧全局 Snakemake 或 OISA 仿真。
 
-启动刚生成的报告服务：
+生成完整阅读版（八章结构及独立 v610 参数图册），再启动服务；只渲染封存数据，不重跑模型：
 
 ```bash
+.venv/bin/python -B scripts/v610/build_reading_ui.py \
+  --run-root results/v610/release-next --output results/v610/ui-next
 .venv/bin/python -B scripts/v610/serve.py \
-  --run-root results/v610/release-next --host 127.0.0.1 --port 0
+  --run-root results/v610/release-next --ui-root results/v610/ui-next \
+  --host 127.0.0.1 --port 0
 ```
 
 终端会显示实际访问地址；`--port 0` 自动选空闲端口。需要局域网访问时改为
 `--host 0.0.0.0`。本机已有的验收结果目录为 `results/v610/release-final` 和 `binding-final`。
+当前展示修订及复现方法见 [UI_READING_REVISION.md](docs/v610/UI_READING_REVISION.md)；冻结原报告仍保留。
 
 ## 工程入口与数据边界
 
