@@ -309,3 +309,9 @@ The original profiler JSON, training logs, topology dumps, and multi-gigabyte
 kernel tables are intentionally excluded.  The optional `import_pp_*` scripts
 require explicit `--source-case` and `--trace-root` paths when refreshing facts
 on an authorized capture host.
+
+## W37 v6.10 frozen release
+
+The independent `feat/w37-v610` integration preserves the original W37 algorithms,
+parameters and reports, with relocated SHA-checked artifacts and isolated execution.
+See [v6.10 reproduction and acceptance](docs/v610/README.md).

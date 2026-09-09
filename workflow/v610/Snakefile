@@ -1,0 +1,60 @@
+"""Opt-in v610 release / binding DAG. Never schedules raw or legacy workflows."""
+from pathlib import Path
+import sys
+
+ROOT = Path(workflow.basedir).resolve().parents[1]
+sys.path.insert(0, str(ROOT/'src'))
+from x10000_analysis.v610 import mapped_spec, VENDOR, SPECS
+
+PIPELINE = config.get('pipeline', 'release')
+assert PIPELINE in ('release', 'binding')
+RUN = Path(config.get('run_root', ROOT/'results/v610/snakemake-release')).resolve()
+assert RUN.is_relative_to(ROOT/'results/v610')
+PYTHON = str(ROOT/'.venv/bin/python')
+SPEC = mapped_spec(PIPELINE)
+DATA = [r['path'] for r in SPEC['inputs'].values()]
+CODE = [str(f) for f in (VENDOR/'research/w37/onef1b').rglob('*') if f.is_file()]
+CODE += [str(VENDOR/p) for p in SPEC['code_inputs']]
+CODE += [str(ROOT/'src/x10000_analysis/v610.py'), str(ROOT/'scripts/v610/worker.py'),
+         str(ROOT/'docs/v610/artifact_manifest.json'), str(VENDOR/SPECS[PIPELINE])]
+
+rule all:
+    input: str(RUN/('render' if PIPELINE == 'release' else 'evaluate')/'complete.json')
+
+if PIPELINE == 'binding':
+    rule binding_audit:
+        input: DATA + CODE
+        output: str(RUN/'audit/complete.json')
+        threads: 1
+        resources: mem_mb=4096
+        shell: "{PYTHON:q} -B -m x10000_analysis.v610 --pipeline binding --stage audit --run-root {RUN:q}"
+
+rule model:
+    input: DATA + CODE + ([str(RUN/'audit/complete.json')] if PIPELINE == 'binding' else [])
+    output: str(RUN/'model/complete.json')
+    threads: 1
+    resources: mem_mb=4096
+    shell: "{PYTHON:q} -B -m x10000_analysis.v610 --pipeline {PIPELINE} --stage model --run-root {RUN:q}"
+
+if PIPELINE == 'binding':
+    rule binding_review:
+        input: [str(RUN/'model/complete.json')] + DATA + CODE
+        output: str(RUN/'review/complete.json')
+        threads: 1
+        resources: mem_mb=4096
+        shell: "{PYTHON:q} -B -m x10000_analysis.v610 --pipeline binding --stage review --run-root {RUN:q}"
+
+rule evaluate:
+    input: [str(RUN/('review' if PIPELINE == 'binding' else 'model')/'complete.json')] + DATA + CODE
+    output: str(RUN/'evaluate/complete.json')
+    threads: 1
+    resources: mem_mb=4096
+    shell: "{PYTHON:q} -B -m x10000_analysis.v610 --pipeline {PIPELINE} --stage evaluate --run-root {RUN:q}"
+
+if PIPELINE == 'release':
+    rule render:
+        input: [str(RUN/'evaluate/complete.json')] + DATA + CODE
+        output: str(RUN/'render/complete.json')
+        threads: 1
+        resources: mem_mb=4096
+        shell: "{PYTHON:q} -B -m x10000_analysis.v610 --pipeline release --stage render --run-root {RUN:q}"
