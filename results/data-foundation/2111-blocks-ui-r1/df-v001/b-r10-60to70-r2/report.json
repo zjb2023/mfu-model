@@ -1,0 +1,172 @@
+{
+  "status": "PASS_EVALUATION_EXECUTION",
+  "accuracy_acceptance": "NO_PREDEFINED_THRESHOLD",
+  "scope": "32GPU PP1 B0 ranks8..15, four layers including recompute",
+  "source_B_ms": 868.8333587646484,
+  "target_B_ms": 893.7875671386719,
+  "measured_change_ms": 24.954208374023438,
+  "measured_change_percent": 2.872151273001844,
+  "predicted_B_ms": 868.8333587646489,
+  "error_ms": -24.954208374022983,
+  "ARE_percent": 2.7919619036445287,
+  "phase_duration_MAE_ms": 3.118901789188289,
+  "phase_end_MAE_ms": 11.232277959584957,
+  "layers": [
+    {
+      "unit": 0,
+      "phase": "recompute",
+      "source_mean_ms": 86.18269610404968,
+      "target_mean_ms": 87.34026873111725,
+      "duration_MAE_ms": 1.157572627067566,
+      "end_MAE_ms": 0.811643123626709
+    },
+    {
+      "unit": 0,
+      "phase": "backward",
+      "source_mean_ms": 129.40629684925088,
+      "target_mean_ms": 133.3174968957901,
+      "duration_MAE_ms": 3.91120004653925,
+      "end_MAE_ms": 4.751188397407475
+    },
+    {
+      "unit": 1,
+      "phase": "recompute",
+      "source_mean_ms": 85.37943387031555,
+      "target_mean_ms": 87.3919460773468,
+      "duration_MAE_ms": 2.01251220703125,
+      "end_MAE_ms": 6.762725710868779
+    },
+    {
+      "unit": 1,
+      "phase": "backward",
+      "source_mean_ms": 130.26804137229925,
+      "target_mean_ms": 133.75892281532288,
+      "duration_MAE_ms": 3.4908814430236035,
+      "end_MAE_ms": 10.285896897315844
+    },
+    {
+      "unit": 2,
+      "phase": "recompute",
+      "source_mean_ms": 87.80474770069122,
+      "target_mean_ms": 89.412522315979,
+      "duration_MAE_ms": 1.6077746152877737,
+      "end_MAE_ms": 11.913016796111918
+    },
+    {
+      "unit": 2,
+      "phase": "backward",
+      "source_mean_ms": 133.41955327987694,
+      "target_mean_ms": 134.74582707881927,
+      "duration_MAE_ms": 1.3262737989423528,
+      "end_MAE_ms": 13.237910270690563
+    },
+    {
+      "unit": 3,
+      "phase": "recompute",
+      "source_mean_ms": 84.88931262493134,
+      "target_mean_ms": 88.99464416503906,
+      "duration_MAE_ms": 4.105331540107727,
+      "end_MAE_ms": 17.357979655265453
+    },
+    {
+      "unit": 3,
+      "phase": "backward",
+      "source_mean_ms": 128.24281871318857,
+      "target_mean_ms": 135.58248674869537,
+      "duration_MAE_ms": 7.33966803550679,
+      "end_MAE_ms": 24.73786282539291
+    }
+  ],
+  "ranks": [
+    {
+      "rank": 8,
+      "B60_ms": 866.1734457015991,
+      "B70_ms": 893.0974130630493,
+      "B_change_ms": 26.923967361450195,
+      "step60_ms": 12467.67202,
+      "step70_ms": 12679.175598,
+      "step_change_ms": 211.50357799999983,
+      "step_change_percent": 1.6964159600983741
+    },
+    {
+      "rank": 9,
+      "B60_ms": 868.175952911377,
+      "B70_ms": 892.453782081604,
+      "B_change_ms": 24.27782917022705,
+      "step60_ms": 12468.319789000001,
+      "step70_ms": 12677.321349,
+      "step_change_ms": 209.0015599999988,
+      "step_change_percent": 1.676260823726916
+    },
+    {
+      "rank": 10,
+      "B60_ms": 866.9975957870483,
+      "B70_ms": 892.4609050750732,
+      "B_change_ms": 25.463309288024902,
+      "step60_ms": 12466.884426999999,
+      "step70_ms": 12678.06684,
+      "step_change_ms": 211.18241300000045,
+      "step_change_percent": 1.6939469860058676
+    },
+    {
+      "rank": 11,
+      "B60_ms": 867.5417737960815,
+      "B70_ms": 891.7502784729004,
+      "B_change_ms": 24.208504676818848,
+      "step60_ms": 12466.586941,
+      "step70_ms": 12678.616289000001,
+      "step_change_ms": 212.02934800000185,
+      "step_change_percent": 1.7007810477997154
+    },
+    {
+      "rank": 12,
+      "B60_ms": 867.9623098373413,
+      "B70_ms": 892.9864082336426,
+      "B_change_ms": 25.02409839630127,
+      "step60_ms": 12467.679715,
+      "step70_ms": 12679.464688999999,
+      "step_change_ms": 211.78497399999833,
+      "step_change_percent": 1.6986719168378794
+    },
+    {
+      "rank": 13,
+      "B60_ms": 868.0417490005493,
+      "B70_ms": 892.9548854827881,
+      "B_change_ms": 24.91313648223877,
+      "step60_ms": 12465.131813,
+      "step70_ms": 12678.397461999999,
+      "step_change_ms": 213.26564899999903,
+      "step_change_percent": 1.7108976639748086
+    },
+    {
+      "rank": 14,
+      "B60_ms": 867.6206617355347,
+      "B70_ms": 892.2496814727783,
+      "B_change_ms": 24.629019737243652,
+      "step60_ms": 12466.954194,
+      "step70_ms": 12679.703610999999,
+      "step_change_ms": 212.74941699999908,
+      "step_change_percent": 1.706506767325644
+    },
+    {
+      "rank": 15,
+      "B60_ms": 866.3675880432129,
+      "B70_ms": 891.599856376648,
+      "B_change_ms": 25.23226833343506,
+      "step60_ms": 12468.256217,
+      "step70_ms": 12679.431562999998,
+      "step_change_ms": 211.17534599999817,
+      "step_change_percent": 1.6937039336107684
+    }
+  ],
+  "seal_verified": true,
+  "target_fitted": false,
+  "blind": false,
+  "limitations": [
+    "source-conditioned prediction retains source readiness and recompute envelopes",
+    "phase comparisons use CPU ownership and device envelopes; component intervals may overlap and must not be summed",
+    "ProfilerStep figures are per-rank CPU windows for PP1 only, not global Training Step",
+    "no all-microbatch B or full-world 1F1B prediction evaluation in this run",
+    "iteration70 previously exposed; not blind validation"
+  ]
+}

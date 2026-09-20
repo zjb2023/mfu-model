@@ -1,0 +1,63 @@
+{
+  "status": "PASS_SAME_SAMPLE_ACCOUNTING",
+  "physical_prediction": "PARTIAL_NOT_VALIDATED",
+  "scope": "32GPU iter60 PP1 F0 ranks8..15 four layers",
+  "F_device_window_ms": 342.7138833999634,
+  "rank_F_end_ms": {
+    "8": 342.5832748413086,
+    "9": 342.66020488739014,
+    "10": 342.6719512939453,
+    "11": 342.42442321777344,
+    "12": 342.6457414627075,
+    "13": 342.7138833999634,
+    "14": 342.46167755126953,
+    "15": 342.2992343902588
+  },
+  "rank_F_start_ms": {
+    "8": 0.22269248962402344,
+    "9": 0.2109851837158203,
+    "10": 0.06809806823730469,
+    "11": 0.24836063385009766,
+    "12": 0.19480133056640625,
+    "13": 0.1116485595703125,
+    "14": 0.1871490478515625,
+    "15": 0.0
+  },
+  "layers": [
+    {
+      "layer": 0,
+      "tail_end_ms": 84.59507465362549,
+      "combine_ms": 0.9696331024169922
+    },
+    {
+      "layer": 1,
+      "tail_end_ms": 172.35391998291016,
+      "combine_ms": 1.0088739395141602
+    },
+    {
+      "layer": 2,
+      "tail_end_ms": 257.93602180480957,
+      "combine_ms": 1.3001317977905273
+    },
+    {
+      "layer": 3,
+      "tail_end_ms": 342.6845636367798,
+      "combine_ms": 1.0776042938232422
+    }
+  ],
+  "boundaries": 320,
+  "max_boundary_error_ms": 0.0,
+  "checks": {
+    "L0_combine_plus1": 1.0,
+    "L1_combine_plus1": 1.0,
+    "L2_combine_plus1": 1.0,
+    "L3_combine_plus1": 1.0
+  },
+  "notes": [
+    "Same-sample costs and handoffs, not independent prediction.",
+    "Layer entry starts at LayerNorm, excludes prior tail Add; interlayer handoff is charged once.",
+    "Layer4 tail Add is separate from F epilogue kernels; endpoint is last F-associated device event, not CPU forward envelope.",
+    "Other stages, microbatches, backward and iteration time excluded.",
+    "CP/EP effective costs and conservative readiness assumptions inherited, not pure service."
+  ]
+}

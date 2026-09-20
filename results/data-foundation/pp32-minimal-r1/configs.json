@@ -1,0 +1,54 @@
+{
+  "source32": {
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34095/2026-09-18_1038/tp1_pp4_dp_mbs2_numbs_gbs64_gpus0_mtp1_forcelbfalse_pertensorfalse_NO_LOSS_REDUCE.RANK0.10.124.34.95.log",
+    "read_scope": "argument prefix only, no target timing",
+    "prefix_sha256": "5ca1f8c9b3785b61d8db1f9fdfa7cb0357f7c172477baf5985626168bce863f2",
+    "config": {
+      "world_size": 32,
+      "pipeline_model_parallel_size": 4,
+      "tensor_model_parallel_size": 1,
+      "context_parallel_size": 2,
+      "expert_model_parallel_size": 8,
+      "data_parallel_size": 4,
+      "num_layers": 12,
+      "decoder_first_pipeline_num_layers": 2,
+      "decoder_last_pipeline_num_layers": 2,
+      "num_experts": 160,
+      "hidden_size": 5120,
+      "seq_length": 8192,
+      "micro_batch_size": 2,
+      "global_batch_size": 64,
+      "recompute_granularity": "full",
+      "recompute_method": "block",
+      "recompute_num_layers": 4,
+      "virtual_pipeline_model_parallel_size": "None",
+      "microbatches_derived": 8
+    }
+  },
+  "target256": {
+    "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33087/2026-07-31_1340/tp1_pp16_dp_mbs2_numbs_gbs64_gpus0_mtp1_forcelbfalse_pertensorfalse_NO_LOSS_REDUCE.RANK0.10.124.33.87.log",
+    "read_scope": "argument prefix only, no target timing",
+    "prefix_sha256": "5a792e0215db87da67770405d912fab2b05a6022bc4962d159968f154e2b8bd6",
+    "config": {
+      "world_size": 256,
+      "pipeline_model_parallel_size": 16,
+      "tensor_model_parallel_size": 1,
+      "context_parallel_size": 2,
+      "expert_model_parallel_size": 8,
+      "data_parallel_size": 8,
+      "num_layers": 60,
+      "decoder_first_pipeline_num_layers": 2,
+      "decoder_last_pipeline_num_layers": 2,
+      "num_experts": 160,
+      "hidden_size": 5120,
+      "seq_length": 8192,
+      "micro_batch_size": 2,
+      "global_batch_size": 64,
+      "recompute_granularity": "full",
+      "recompute_method": "block",
+      "recompute_num_layers": 4,
+      "virtual_pipeline_model_parallel_size": "None",
+      "microbatches_derived": 4
+    }
+  }
+}

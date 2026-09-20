@@ -1,0 +1,27 @@
+{
+  "status": "PARTIAL",
+  "trace_checks": "PASS",
+  "ranks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "scope": "32GPU iter60 PP1 B0; four checkpoint execution units per rank",
+  "cp_events": 288,
+  "recompute_events": 128,
+  "backward_events": 160,
+  "signature_checks": 64,
+  "mathematical_identity": "NOT_CONFIRMED",
+  "limitations": [
+    "Input bytes are tensor volume, not on-wire bytes.",
+    "Ordinal CP0 in backward is NOT an asserted match to forward CP0.",
+    "CPU nesting and same-stream order do not close cross-stream/rank edges.",
+    "Checkpoint execution unit is not a verified model layer index.",
+    "No target iter70 data used; no prediction parameters changed."
+  ]
+}

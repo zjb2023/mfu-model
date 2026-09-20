@@ -1,0 +1,909 @@
+{
+  "status": "DEMO_SCHEDULE_NOT_ACCURACY_RESULT",
+  "window_ms": 75.46384788513184,
+  "critical_path": [
+    "L0:r8:A0",
+    "L0:g0:CP0",
+    "L0:g0:CP1",
+    "L0:g0:CP2",
+    "L0:r8:A3",
+    "L0:g0:CP3",
+    "L0:r8:router",
+    "L0:r8:prepare",
+    "L0:notify",
+    "L0:dispatch",
+    "L0:r8:expert",
+    "L0:combine",
+    "L0:r8:unpermute",
+    "L0:combine_exit",
+    "L0:r8:tail",
+    "END"
+  ],
+  "nodes": {
+    "L0:r8:A0": {
+      "start_ms": 0,
+      "end_ms": 7,
+      "duration_ms": 7,
+      "critical_parent": null,
+      "arrival_wait_ms": {}
+    },
+    "L0:r9:A0": {
+      "start_ms": 0,
+      "end_ms": 7,
+      "duration_ms": 7,
+      "critical_parent": null,
+      "arrival_wait_ms": {}
+    },
+    "L0:r10:A0": {
+      "start_ms": 0,
+      "end_ms": 7,
+      "duration_ms": 7,
+      "critical_parent": null,
+      "arrival_wait_ms": {}
+    },
+    "L0:r11:A0": {
+      "start_ms": 0,
+      "end_ms": 7,
+      "duration_ms": 7,
+      "critical_parent": null,
+      "arrival_wait_ms": {}
+    },
+    "L0:r12:A0": {
+      "start_ms": 0,
+      "end_ms": 7,
+      "duration_ms": 7,
+      "critical_parent": null,
+      "arrival_wait_ms": {}
+    },
+    "L0:r13:A0": {
+      "start_ms": 0,
+      "end_ms": 7,
+      "duration_ms": 7,
+      "critical_parent": null,
+      "arrival_wait_ms": {}
+    },
+    "L0:r14:A0": {
+      "start_ms": 0,
+      "end_ms": 7,
+      "duration_ms": 7,
+      "critical_parent": null,
+      "arrival_wait_ms": {}
+    },
+    "L0:r15:A0": {
+      "start_ms": 0,
+      "end_ms": 7,
+      "duration_ms": 7,
+      "critical_parent": null,
+      "arrival_wait_ms": {}
+    },
+    "L0:r8:A1": {
+      "start_ms": 7,
+      "end_ms": 7.9,
+      "duration_ms": 0.9,
+      "critical_parent": "L0:r8:A0",
+      "arrival_wait_ms": {
+        "L0:r8:A0": 0
+      }
+    },
+    "L0:r9:A1": {
+      "start_ms": 7,
+      "end_ms": 7.9,
+      "duration_ms": 0.9,
+      "critical_parent": "L0:r9:A0",
+      "arrival_wait_ms": {
+        "L0:r9:A0": 0
+      }
+    },
+    "L0:g0:CP0": {
+      "start_ms": 7,
+      "end_ms": 18.277491569519043,
+      "duration_ms": 11.277491569519043,
+      "critical_parent": "L0:r8:A0",
+      "arrival_wait_ms": {
+        "L0:r8:A0": 0,
+        "L0:r9:A0": 0
+      }
+    },
+    "L0:r10:A1": {
+      "start_ms": 7,
+      "end_ms": 7.9,
+      "duration_ms": 0.9,
+      "critical_parent": "L0:r10:A0",
+      "arrival_wait_ms": {
+        "L0:r10:A0": 0
+      }
+    },
+    "L0:r11:A1": {
+      "start_ms": 7,
+      "end_ms": 7.9,
+      "duration_ms": 0.9,
+      "critical_parent": "L0:r11:A0",
+      "arrival_wait_ms": {
+        "L0:r11:A0": 0
+      }
+    },
+    "L0:g1:CP0": {
+      "start_ms": 7,
+      "end_ms": 18.277491569519043,
+      "duration_ms": 11.277491569519043,
+      "critical_parent": "L0:r10:A0",
+      "arrival_wait_ms": {
+        "L0:r10:A0": 0,
+        "L0:r11:A0": 0
+      }
+    },
+    "L0:r12:A1": {
+      "start_ms": 7,
+      "end_ms": 7.9,
+      "duration_ms": 0.9,
+      "critical_parent": "L0:r12:A0",
+      "arrival_wait_ms": {
+        "L0:r12:A0": 0
+      }
+    },
+    "L0:r13:A1": {
+      "start_ms": 7,
+      "end_ms": 7.9,
+      "duration_ms": 0.9,
+      "critical_parent": "L0:r13:A0",
+      "arrival_wait_ms": {
+        "L0:r13:A0": 0
+      }
+    },
+    "L0:g2:CP0": {
+      "start_ms": 7,
+      "end_ms": 18.277491569519043,
+      "duration_ms": 11.277491569519043,
+      "critical_parent": "L0:r12:A0",
+      "arrival_wait_ms": {
+        "L0:r12:A0": 0,
+        "L0:r13:A0": 0
+      }
+    },
+    "L0:r14:A1": {
+      "start_ms": 7,
+      "end_ms": 7.9,
+      "duration_ms": 0.9,
+      "critical_parent": "L0:r14:A0",
+      "arrival_wait_ms": {
+        "L0:r14:A0": 0
+      }
+    },
+    "L0:r15:A1": {
+      "start_ms": 7,
+      "end_ms": 7.9,
+      "duration_ms": 0.9,
+      "critical_parent": "L0:r15:A0",
+      "arrival_wait_ms": {
+        "L0:r15:A0": 0
+      }
+    },
+    "L0:g3:CP0": {
+      "start_ms": 7,
+      "end_ms": 18.277491569519043,
+      "duration_ms": 11.277491569519043,
+      "critical_parent": "L0:r14:A0",
+      "arrival_wait_ms": {
+        "L0:r14:A0": 0,
+        "L0:r15:A0": 0
+      }
+    },
+    "L0:r8:A2": {
+      "start_ms": 7.9,
+      "end_ms": 8.5,
+      "duration_ms": 0.6,
+      "critical_parent": "L0:r8:A1",
+      "arrival_wait_ms": {
+        "L0:r8:A1": 0.0
+      }
+    },
+    "L0:r9:A2": {
+      "start_ms": 7.9,
+      "end_ms": 8.5,
+      "duration_ms": 0.6,
+      "critical_parent": "L0:r9:A1",
+      "arrival_wait_ms": {
+        "L0:r9:A1": 0.0
+      }
+    },
+    "L0:g0:CP1": {
+      "start_ms": 18.277491569519043,
+      "end_ms": 29.554983139038086,
+      "duration_ms": 11.277491569519043,
+      "critical_parent": "L0:g0:CP0",
+      "arrival_wait_ms": {
+        "L0:r8:A1": 10.377491569519043,
+        "L0:r9:A1": 10.377491569519043,
+        "L0:g0:CP0": 0.0
+      }
+    },
+    "L0:r10:A2": {
+      "start_ms": 7.9,
+      "end_ms": 8.5,
+      "duration_ms": 0.6,
+      "critical_parent": "L0:r10:A1",
+      "arrival_wait_ms": {
+        "L0:r10:A1": 0.0
+      }
+    },
+    "L0:r11:A2": {
+      "start_ms": 7.9,
+      "end_ms": 8.5,
+      "duration_ms": 0.6,
+      "critical_parent": "L0:r11:A1",
+      "arrival_wait_ms": {
+        "L0:r11:A1": 0.0
+      }
+    },
+    "L0:g1:CP1": {
+      "start_ms": 18.277491569519043,
+      "end_ms": 29.554983139038086,
+      "duration_ms": 11.277491569519043,
+      "critical_parent": "L0:g1:CP0",
+      "arrival_wait_ms": {
+        "L0:r10:A1": 10.377491569519043,
+        "L0:r11:A1": 10.377491569519043,
+        "L0:g1:CP0": 0.0
+      }
+    },
+    "L0:r12:A2": {
+      "start_ms": 7.9,
+      "end_ms": 8.5,
+      "duration_ms": 0.6,
+      "critical_parent": "L0:r12:A1",
+      "arrival_wait_ms": {
+        "L0:r12:A1": 0.0
+      }
+    },
+    "L0:r13:A2": {
+      "start_ms": 7.9,
+      "end_ms": 8.5,
+      "duration_ms": 0.6,
+      "critical_parent": "L0:r13:A1",
+      "arrival_wait_ms": {
+        "L0:r13:A1": 0.0
+      }
+    },
+    "L0:g2:CP1": {
+      "start_ms": 18.277491569519043,
+      "end_ms": 29.554983139038086,
+      "duration_ms": 11.277491569519043,
+      "critical_parent": "L0:g2:CP0",
+      "arrival_wait_ms": {
+        "L0:r12:A1": 10.377491569519043,
+        "L0:r13:A1": 10.377491569519043,
+        "L0:g2:CP0": 0.0
+      }
+    },
+    "L0:r14:A2": {
+      "start_ms": 7.9,
+      "end_ms": 8.5,
+      "duration_ms": 0.6,
+      "critical_parent": "L0:r14:A1",
+      "arrival_wait_ms": {
+        "L0:r14:A1": 0.0
+      }
+    },
+    "L0:r15:A2": {
+      "start_ms": 7.9,
+      "end_ms": 8.5,
+      "duration_ms": 0.6,
+      "critical_parent": "L0:r15:A1",
+      "arrival_wait_ms": {
+        "L0:r15:A1": 0.0
+      }
+    },
+    "L0:g3:CP1": {
+      "start_ms": 18.277491569519043,
+      "end_ms": 29.554983139038086,
+      "duration_ms": 11.277491569519043,
+      "critical_parent": "L0:g3:CP0",
+      "arrival_wait_ms": {
+        "L0:r14:A1": 10.377491569519043,
+        "L0:r15:A1": 10.377491569519043,
+        "L0:g3:CP0": 0.0
+      }
+    },
+    "L0:g0:CP2": {
+      "start_ms": 29.554983139038086,
+      "end_ms": 36.62941551208496,
+      "duration_ms": 7.074432373046875,
+      "critical_parent": "L0:g0:CP1",
+      "arrival_wait_ms": {
+        "L0:r8:A2": 21.054983139038086,
+        "L0:r9:A2": 21.054983139038086,
+        "L0:g0:CP1": 0.0
+      }
+    },
+    "L0:g1:CP2": {
+      "start_ms": 29.554983139038086,
+      "end_ms": 36.62941551208496,
+      "duration_ms": 7.074432373046875,
+      "critical_parent": "L0:g1:CP1",
+      "arrival_wait_ms": {
+        "L0:r10:A2": 21.054983139038086,
+        "L0:r11:A2": 21.054983139038086,
+        "L0:g1:CP1": 0.0
+      }
+    },
+    "L0:g2:CP2": {
+      "start_ms": 29.554983139038086,
+      "end_ms": 36.62941551208496,
+      "duration_ms": 7.074432373046875,
+      "critical_parent": "L0:g2:CP1",
+      "arrival_wait_ms": {
+        "L0:r12:A2": 21.054983139038086,
+        "L0:r13:A2": 21.054983139038086,
+        "L0:g2:CP1": 0.0
+      }
+    },
+    "L0:g3:CP2": {
+      "start_ms": 29.554983139038086,
+      "end_ms": 36.62941551208496,
+      "duration_ms": 7.074432373046875,
+      "critical_parent": "L0:g3:CP1",
+      "arrival_wait_ms": {
+        "L0:r14:A2": 21.054983139038086,
+        "L0:r15:A2": 21.054983139038086,
+        "L0:g3:CP1": 0.0
+      }
+    },
+    "L0:r8:A3": {
+      "start_ms": 36.62941551208496,
+      "end_ms": 45.62941551208496,
+      "duration_ms": 9,
+      "critical_parent": "L0:g0:CP2",
+      "arrival_wait_ms": {
+        "L0:r8:A2": 28.12941551208496,
+        "L0:g0:CP2": 0.0
+      }
+    },
+    "L0:r9:A3": {
+      "start_ms": 36.62941551208496,
+      "end_ms": 45.62941551208496,
+      "duration_ms": 9,
+      "critical_parent": "L0:g0:CP2",
+      "arrival_wait_ms": {
+        "L0:r9:A2": 28.12941551208496,
+        "L0:g0:CP2": 0.0
+      }
+    },
+    "L0:r10:A3": {
+      "start_ms": 36.62941551208496,
+      "end_ms": 45.62941551208496,
+      "duration_ms": 9,
+      "critical_parent": "L0:g1:CP2",
+      "arrival_wait_ms": {
+        "L0:r10:A2": 28.12941551208496,
+        "L0:g1:CP2": 0.0
+      }
+    },
+    "L0:r11:A3": {
+      "start_ms": 36.62941551208496,
+      "end_ms": 45.62941551208496,
+      "duration_ms": 9,
+      "critical_parent": "L0:g1:CP2",
+      "arrival_wait_ms": {
+        "L0:r11:A2": 28.12941551208496,
+        "L0:g1:CP2": 0.0
+      }
+    },
+    "L0:r12:A3": {
+      "start_ms": 36.62941551208496,
+      "end_ms": 45.62941551208496,
+      "duration_ms": 9,
+      "critical_parent": "L0:g2:CP2",
+      "arrival_wait_ms": {
+        "L0:r12:A2": 28.12941551208496,
+        "L0:g2:CP2": 0.0
+      }
+    },
+    "L0:r13:A3": {
+      "start_ms": 36.62941551208496,
+      "end_ms": 45.62941551208496,
+      "duration_ms": 9,
+      "critical_parent": "L0:g2:CP2",
+      "arrival_wait_ms": {
+        "L0:r13:A2": 28.12941551208496,
+        "L0:g2:CP2": 0.0
+      }
+    },
+    "L0:r14:A3": {
+      "start_ms": 36.62941551208496,
+      "end_ms": 45.62941551208496,
+      "duration_ms": 9,
+      "critical_parent": "L0:g3:CP2",
+      "arrival_wait_ms": {
+        "L0:r14:A2": 28.12941551208496,
+        "L0:g3:CP2": 0.0
+      }
+    },
+    "L0:r15:A3": {
+      "start_ms": 36.62941551208496,
+      "end_ms": 45.62941551208496,
+      "duration_ms": 9,
+      "critical_parent": "L0:g3:CP2",
+      "arrival_wait_ms": {
+        "L0:r15:A2": 28.12941551208496,
+        "L0:g3:CP2": 0.0
+      }
+    },
+    "L0:g0:CP3": {
+      "start_ms": 45.62941551208496,
+      "end_ms": 52.703847885131836,
+      "duration_ms": 7.074432373046875,
+      "critical_parent": "L0:r8:A3",
+      "arrival_wait_ms": {
+        "L0:r8:A3": 0.0,
+        "L0:r9:A3": 0.0,
+        "L0:g0:CP2": 9.0
+      }
+    },
+    "L0:g1:CP3": {
+      "start_ms": 45.62941551208496,
+      "end_ms": 52.703847885131836,
+      "duration_ms": 7.074432373046875,
+      "critical_parent": "L0:r10:A3",
+      "arrival_wait_ms": {
+        "L0:r10:A3": 0.0,
+        "L0:r11:A3": 0.0,
+        "L0:g1:CP2": 9.0
+      }
+    },
+    "L0:g2:CP3": {
+      "start_ms": 45.62941551208496,
+      "end_ms": 52.703847885131836,
+      "duration_ms": 7.074432373046875,
+      "critical_parent": "L0:r12:A3",
+      "arrival_wait_ms": {
+        "L0:r12:A3": 0.0,
+        "L0:r13:A3": 0.0,
+        "L0:g2:CP2": 9.0
+      }
+    },
+    "L0:g3:CP3": {
+      "start_ms": 45.62941551208496,
+      "end_ms": 52.703847885131836,
+      "duration_ms": 7.074432373046875,
+      "critical_parent": "L0:r14:A3",
+      "arrival_wait_ms": {
+        "L0:r14:A3": 0.0,
+        "L0:r15:A3": 0.0,
+        "L0:g3:CP2": 9.0
+      }
+    },
+    "L0:r8:router": {
+      "start_ms": 52.703847885131836,
+      "end_ms": 57.703847885131836,
+      "duration_ms": 5,
+      "critical_parent": "L0:g0:CP3",
+      "arrival_wait_ms": {
+        "L0:g0:CP3": 0.0
+      }
+    },
+    "L0:r9:router": {
+      "start_ms": 52.703847885131836,
+      "end_ms": 57.703847885131836,
+      "duration_ms": 5,
+      "critical_parent": "L0:g0:CP3",
+      "arrival_wait_ms": {
+        "L0:g0:CP3": 0.0
+      }
+    },
+    "L0:r10:router": {
+      "start_ms": 52.703847885131836,
+      "end_ms": 57.703847885131836,
+      "duration_ms": 5,
+      "critical_parent": "L0:g1:CP3",
+      "arrival_wait_ms": {
+        "L0:g1:CP3": 0.0
+      }
+    },
+    "L0:r11:router": {
+      "start_ms": 52.703847885131836,
+      "end_ms": 57.703847885131836,
+      "duration_ms": 5,
+      "critical_parent": "L0:g1:CP3",
+      "arrival_wait_ms": {
+        "L0:g1:CP3": 0.0
+      }
+    },
+    "L0:r12:router": {
+      "start_ms": 52.703847885131836,
+      "end_ms": 57.703847885131836,
+      "duration_ms": 5,
+      "critical_parent": "L0:g2:CP3",
+      "arrival_wait_ms": {
+        "L0:g2:CP3": 0.0
+      }
+    },
+    "L0:r13:router": {
+      "start_ms": 52.703847885131836,
+      "end_ms": 57.703847885131836,
+      "duration_ms": 5,
+      "critical_parent": "L0:g2:CP3",
+      "arrival_wait_ms": {
+        "L0:g2:CP3": 0.0
+      }
+    },
+    "L0:r14:router": {
+      "start_ms": 52.703847885131836,
+      "end_ms": 57.703847885131836,
+      "duration_ms": 5,
+      "critical_parent": "L0:g3:CP3",
+      "arrival_wait_ms": {
+        "L0:g3:CP3": 0.0
+      }
+    },
+    "L0:r15:router": {
+      "start_ms": 52.703847885131836,
+      "end_ms": 57.703847885131836,
+      "duration_ms": 5,
+      "critical_parent": "L0:g3:CP3",
+      "arrival_wait_ms": {
+        "L0:g3:CP3": 0.0
+      }
+    },
+    "L0:r8:prepare": {
+      "start_ms": 57.703847885131836,
+      "end_ms": 58.703847885131836,
+      "duration_ms": 1,
+      "critical_parent": "L0:r8:router",
+      "arrival_wait_ms": {
+        "L0:r8:router": 0.0
+      }
+    },
+    "L0:r9:prepare": {
+      "start_ms": 57.703847885131836,
+      "end_ms": 58.703847885131836,
+      "duration_ms": 1,
+      "critical_parent": "L0:r9:router",
+      "arrival_wait_ms": {
+        "L0:r9:router": 0.0
+      }
+    },
+    "L0:r10:prepare": {
+      "start_ms": 57.703847885131836,
+      "end_ms": 58.703847885131836,
+      "duration_ms": 1,
+      "critical_parent": "L0:r10:router",
+      "arrival_wait_ms": {
+        "L0:r10:router": 0.0
+      }
+    },
+    "L0:r11:prepare": {
+      "start_ms": 57.703847885131836,
+      "end_ms": 58.703847885131836,
+      "duration_ms": 1,
+      "critical_parent": "L0:r11:router",
+      "arrival_wait_ms": {
+        "L0:r11:router": 0.0
+      }
+    },
+    "L0:r12:prepare": {
+      "start_ms": 57.703847885131836,
+      "end_ms": 58.703847885131836,
+      "duration_ms": 1,
+      "critical_parent": "L0:r12:router",
+      "arrival_wait_ms": {
+        "L0:r12:router": 0.0
+      }
+    },
+    "L0:r13:prepare": {
+      "start_ms": 57.703847885131836,
+      "end_ms": 58.703847885131836,
+      "duration_ms": 1,
+      "critical_parent": "L0:r13:router",
+      "arrival_wait_ms": {
+        "L0:r13:router": 0.0
+      }
+    },
+    "L0:r14:prepare": {
+      "start_ms": 57.703847885131836,
+      "end_ms": 58.703847885131836,
+      "duration_ms": 1,
+      "critical_parent": "L0:r14:router",
+      "arrival_wait_ms": {
+        "L0:r14:router": 0.0
+      }
+    },
+    "L0:r15:prepare": {
+      "start_ms": 57.703847885131836,
+      "end_ms": 58.703847885131836,
+      "duration_ms": 1,
+      "critical_parent": "L0:r15:router",
+      "arrival_wait_ms": {
+        "L0:r15:router": 0.0
+      }
+    },
+    "L0:notify": {
+      "start_ms": 58.703847885131836,
+      "end_ms": 58.76384788513184,
+      "duration_ms": 0.06,
+      "critical_parent": "L0:r8:prepare",
+      "arrival_wait_ms": {
+        "L0:r8:prepare": 0.0,
+        "L0:r9:prepare": 0.0,
+        "L0:r10:prepare": 0.0,
+        "L0:r11:prepare": 0.0,
+        "L0:r12:prepare": 0.0,
+        "L0:r13:prepare": 0.0,
+        "L0:r14:prepare": 0.0,
+        "L0:r15:prepare": 0.0
+      }
+    },
+    "L0:dispatch": {
+      "start_ms": 58.76384788513184,
+      "end_ms": 61.76384788513184,
+      "duration_ms": 3,
+      "critical_parent": "L0:notify",
+      "arrival_wait_ms": {
+        "L0:notify": 0.0
+      }
+    },
+    "L0:r8:expert": {
+      "start_ms": 61.76384788513184,
+      "end_ms": 71.76384788513184,
+      "duration_ms": 10,
+      "critical_parent": "L0:dispatch",
+      "arrival_wait_ms": {
+        "L0:dispatch": 0.0
+      }
+    },
+    "L0:r9:expert": {
+      "start_ms": 61.76384788513184,
+      "end_ms": 71.76384788513184,
+      "duration_ms": 10,
+      "critical_parent": "L0:dispatch",
+      "arrival_wait_ms": {
+        "L0:dispatch": 0.0
+      }
+    },
+    "L0:r10:expert": {
+      "start_ms": 61.76384788513184,
+      "end_ms": 71.76384788513184,
+      "duration_ms": 10,
+      "critical_parent": "L0:dispatch",
+      "arrival_wait_ms": {
+        "L0:dispatch": 0.0
+      }
+    },
+    "L0:r11:expert": {
+      "start_ms": 61.76384788513184,
+      "end_ms": 71.76384788513184,
+      "duration_ms": 10,
+      "critical_parent": "L0:dispatch",
+      "arrival_wait_ms": {
+        "L0:dispatch": 0.0
+      }
+    },
+    "L0:r12:expert": {
+      "start_ms": 61.76384788513184,
+      "end_ms": 71.76384788513184,
+      "duration_ms": 10,
+      "critical_parent": "L0:dispatch",
+      "arrival_wait_ms": {
+        "L0:dispatch": 0.0
+      }
+    },
+    "L0:r13:expert": {
+      "start_ms": 61.76384788513184,
+      "end_ms": 71.76384788513184,
+      "duration_ms": 10,
+      "critical_parent": "L0:dispatch",
+      "arrival_wait_ms": {
+        "L0:dispatch": 0.0
+      }
+    },
+    "L0:r14:expert": {
+      "start_ms": 61.76384788513184,
+      "end_ms": 71.76384788513184,
+      "duration_ms": 10,
+      "critical_parent": "L0:dispatch",
+      "arrival_wait_ms": {
+        "L0:dispatch": 0.0
+      }
+    },
+    "L0:r15:expert": {
+      "start_ms": 61.76384788513184,
+      "end_ms": 71.76384788513184,
+      "duration_ms": 10,
+      "critical_parent": "L0:dispatch",
+      "arrival_wait_ms": {
+        "L0:dispatch": 0.0
+      }
+    },
+    "L0:combine": {
+      "start_ms": 71.76384788513184,
+      "end_ms": 74.76384788513184,
+      "duration_ms": 3,
+      "critical_parent": "L0:r8:expert",
+      "arrival_wait_ms": {
+        "L0:r8:expert": 0.0,
+        "L0:r9:expert": 0.0,
+        "L0:r10:expert": 0.0,
+        "L0:r11:expert": 0.0,
+        "L0:r12:expert": 0.0,
+        "L0:r13:expert": 0.0,
+        "L0:r14:expert": 0.0,
+        "L0:r15:expert": 0.0
+      }
+    },
+    "L0:r8:unpermute": {
+      "start_ms": 74.76384788513184,
+      "end_ms": 75.06384788513184,
+      "duration_ms": 0.3,
+      "critical_parent": "L0:combine",
+      "arrival_wait_ms": {
+        "L0:combine": 0.0
+      }
+    },
+    "L0:r9:unpermute": {
+      "start_ms": 74.76384788513184,
+      "end_ms": 75.06384788513184,
+      "duration_ms": 0.3,
+      "critical_parent": "L0:combine",
+      "arrival_wait_ms": {
+        "L0:combine": 0.0
+      }
+    },
+    "L0:r10:unpermute": {
+      "start_ms": 74.76384788513184,
+      "end_ms": 75.06384788513184,
+      "duration_ms": 0.3,
+      "critical_parent": "L0:combine",
+      "arrival_wait_ms": {
+        "L0:combine": 0.0
+      }
+    },
+    "L0:r11:unpermute": {
+      "start_ms": 74.76384788513184,
+      "end_ms": 75.06384788513184,
+      "duration_ms": 0.3,
+      "critical_parent": "L0:combine",
+      "arrival_wait_ms": {
+        "L0:combine": 0.0
+      }
+    },
+    "L0:r12:unpermute": {
+      "start_ms": 74.76384788513184,
+      "end_ms": 75.06384788513184,
+      "duration_ms": 0.3,
+      "critical_parent": "L0:combine",
+      "arrival_wait_ms": {
+        "L0:combine": 0.0
+      }
+    },
+    "L0:r13:unpermute": {
+      "start_ms": 74.76384788513184,
+      "end_ms": 75.06384788513184,
+      "duration_ms": 0.3,
+      "critical_parent": "L0:combine",
+      "arrival_wait_ms": {
+        "L0:combine": 0.0
+      }
+    },
+    "L0:r14:unpermute": {
+      "start_ms": 74.76384788513184,
+      "end_ms": 75.06384788513184,
+      "duration_ms": 0.3,
+      "critical_parent": "L0:combine",
+      "arrival_wait_ms": {
+        "L0:combine": 0.0
+      }
+    },
+    "L0:r15:unpermute": {
+      "start_ms": 74.76384788513184,
+      "end_ms": 75.06384788513184,
+      "duration_ms": 0.3,
+      "critical_parent": "L0:combine",
+      "arrival_wait_ms": {
+        "L0:combine": 0.0
+      }
+    },
+    "L0:combine_exit": {
+      "start_ms": 75.06384788513184,
+      "end_ms": 75.06384788513184,
+      "duration_ms": 0,
+      "critical_parent": "L0:r8:unpermute",
+      "arrival_wait_ms": {
+        "L0:r8:unpermute": 0.0,
+        "L0:r9:unpermute": 0.0,
+        "L0:r10:unpermute": 0.0,
+        "L0:r11:unpermute": 0.0,
+        "L0:r12:unpermute": 0.0,
+        "L0:r13:unpermute": 0.0,
+        "L0:r14:unpermute": 0.0,
+        "L0:r15:unpermute": 0.0
+      }
+    },
+    "L0:r8:tail": {
+      "start_ms": 75.06384788513184,
+      "end_ms": 75.46384788513184,
+      "duration_ms": 0.4,
+      "critical_parent": "L0:combine_exit",
+      "arrival_wait_ms": {
+        "L0:combine_exit": 0.0
+      }
+    },
+    "L0:r9:tail": {
+      "start_ms": 75.06384788513184,
+      "end_ms": 75.46384788513184,
+      "duration_ms": 0.4,
+      "critical_parent": "L0:combine_exit",
+      "arrival_wait_ms": {
+        "L0:combine_exit": 0.0
+      }
+    },
+    "L0:r10:tail": {
+      "start_ms": 75.06384788513184,
+      "end_ms": 75.46384788513184,
+      "duration_ms": 0.4,
+      "critical_parent": "L0:combine_exit",
+      "arrival_wait_ms": {
+        "L0:combine_exit": 0.0
+      }
+    },
+    "L0:r11:tail": {
+      "start_ms": 75.06384788513184,
+      "end_ms": 75.46384788513184,
+      "duration_ms": 0.4,
+      "critical_parent": "L0:combine_exit",
+      "arrival_wait_ms": {
+        "L0:combine_exit": 0.0
+      }
+    },
+    "L0:r12:tail": {
+      "start_ms": 75.06384788513184,
+      "end_ms": 75.46384788513184,
+      "duration_ms": 0.4,
+      "critical_parent": "L0:combine_exit",
+      "arrival_wait_ms": {
+        "L0:combine_exit": 0.0
+      }
+    },
+    "L0:r13:tail": {
+      "start_ms": 75.06384788513184,
+      "end_ms": 75.46384788513184,
+      "duration_ms": 0.4,
+      "critical_parent": "L0:combine_exit",
+      "arrival_wait_ms": {
+        "L0:combine_exit": 0.0
+      }
+    },
+    "L0:r14:tail": {
+      "start_ms": 75.06384788513184,
+      "end_ms": 75.46384788513184,
+      "duration_ms": 0.4,
+      "critical_parent": "L0:combine_exit",
+      "arrival_wait_ms": {
+        "L0:combine_exit": 0.0
+      }
+    },
+    "L0:r15:tail": {
+      "start_ms": 75.06384788513184,
+      "end_ms": 75.46384788513184,
+      "duration_ms": 0.4,
+      "critical_parent": "L0:combine_exit",
+      "arrival_wait_ms": {
+        "L0:combine_exit": 0.0
+      }
+    },
+    "END": {
+      "start_ms": 75.46384788513184,
+      "end_ms": 75.46384788513184,
+      "duration_ms": 0,
+      "critical_parent": "L0:r8:tail",
+      "arrival_wait_ms": {
+        "L0:r8:tail": 0.0,
+        "L0:r9:tail": 0.0,
+        "L0:r10:tail": 0.0,
+        "L0:r11:tail": 0.0,
+        "L0:r12:tail": 0.0,
+        "L0:r13:tail": 0.0,
+        "L0:r14:tail": 0.0,
+        "L0:r15:tail": 0.0
+      }
+    }
+  }
+}

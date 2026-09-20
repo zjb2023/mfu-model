@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>B：iter60 → iter70</title><style>
+body{margin:0;background:#f2f5f8;color:#22354c;font:16px system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:24px}h1{font-size:30px}h2{font-size:21px}p{line-height:1.65}a{color:#225f94}section{background:white;padding:20px;margin:20px 0;border:1px solid #d5dfeb}.split{display:grid;grid-template-columns:2fr 1fr;gap:24px}.scroll{overflow:auto}svg{display:block;width:100%;min-width:850px}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}th,td{padding:9px;text-align:right;border-bottom:1px solid #dde4ee;white-space:nowrap}th:first-child,td:first-child{text-align:left}select{font:inherit;padding:8px}small{color:#52677e}#summary{font-size:20px} .source{color:#226b9e}.target{color:#a9541b}@media(max-width:760px){main{padding:12px}.split{display:block}h1{font-size:25px}}
+</style></head><body><main>
+<a href="../b-four-layers-r10/#b-dag">返回 B 依赖图</a><h1>iter60 的 B 模型，能否预测 iter70？</h1>
+<p>32卡 · PP1 · B0 · rank8–15 · 四层（含重计算）。固定 iter60 全部成本与就绪参数，iter70 只评价、不调参。</p>
+<section class="split"><div><h2>先区分两种波动</h2><p id="summary"></p><p id="step"></p></div><aside><h2>怎么看</h2><p>整轮 ProfilerStep 是所选八卡各自的 CPU 窗口，不是全32卡同步后的 Training Step。B0 是该 stage 第一个反向块，不是整轮全部 B。</p><small>评价执行与封存校验 PASS；未预设精度门槛，不宣称预测验收 PASS。iter70 已有历史曝光，不是盲测。</small></aside></section>
+<section><h2>四层时间线：偏差从哪里累积？</h2><label>选择卡 <select id="rank"></select></label><p><span class="source">上行蓝色：60 参数预测（同时复现60）</span>；<span class="target">下行橙色：70 实测</span>。R＝重计算；B＝真正反向。空白为阶段连接间隔。</p><div class="scroll"><svg id="timeline" viewBox="0 0 1100 205" role="img" aria-label="预测与实测B四层时间线"></svg></div><p>共同以各迭代所选八卡 B0 最早设备开始为0；不对每层重新对齐，保留累计偏差。悬停块可看起止时间。</p><div class="scroll"><table><thead><tr><th>执行层 / 阶段</th><th>预测时长 ms</th><th>70时长 ms</th><th>时长误差 ms</th><th>结束点误差 ms</th></tr></thead><tbody id="phases"></tbody></table></div></section>
+<section><h2>八卡均值：每一层实际慢了多少？</h2><div class="scroll"><svg id="layers" viewBox="0 0 1100 420" role="img" aria-label="逐阶段跨iter时长增量"></svg></div><p>这里是实测70减实测60，正值表示变慢；不是八卡时长求和。最后执行的是本 stage 的第1层。</p></section>
+<section><h2>该卡内部组件：两次实测的差异</h2><p>Dispatch / Combine 为可见设备包络，不能当成纯网络 service。组件包络可能跨流重叠，不可直接求和解释总误差。</p><div class="scroll"><table><thead><tr><th>层 / 组件</th><th>60 ms</th><th>70 ms</th><th>变化 ms</th></tr></thead><tbody id="components"></tbody></table></div></section>
+<section><h2>整轮 ProfilerStep · 各卡原始时长</h2><div class="scroll"><table><thead><tr><th>Rank</th><th>60 ms</th><th>70 ms</th><th>变化 ms</th><th>变化 %</th></tr></thead><tbody id="steps"></tbody></table></div><p>不据此声称新的全局 MFU 或完整1F1B预测精度。</p><a href="report.json">报告 JSON</a> · <a href="manifest.json">输入与版本清单</a></section>
+</main><script>
+const D=__PAYLOAD__,R=D.report,fmt=x=>x.toFixed(3),sign=x=>(x>=0?'+':'')+fmt(x),$=id=>document.getElementById(id);
+$('summary').textContent=`B0：${fmt(R.source_B_ms)} → ${fmt(R.target_B_ms)} ms，实测慢 ${fmt(R.measured_change_percent)}%。预测偏小 ${fmt(R.ARE_percent)}%（${fmt(-R.error_ms)} ms）。`;
+const avg=k=>R.ranks.reduce((s,r)=>s+r[k],0)/8;
+$('step').textContent=`整轮 ProfilerStep（八卡平均）：${fmt(avg('step60_ms'))} → ${fmt(avg('step70_ms'))} ms，增加 ${fmt(avg('step_change_ms'))} ms（${fmt(100*(avg('step70_ms')/avg('step60_ms')-1))}%）。`;
+function svg(tag,attrs,text){const n=document.createElementNS('http://www.w3.org/2000/svg',tag);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,v));if(text!==undefined)n.textContent=text;return n}
+function text(s,x,y,t,size=14){s.append(svg('text',{x,y,'font-size':size,fill:'#22354c'},t))}
+for(let r=8;r<16;r++)$('rank').add(new Option('rank '+r,r));
+function render(){const rank=+$('rank').value,rows=D.phases.filter(r=>r.rank===rank),s=$('timeline');s.replaceChildren();const max=Math.max(R.source_B_ms,R.target_B_ms)*1.06,scale=900/max;
+for(let t=0;t<=max;t+=100){const x=145+t*scale;s.append(svg('line',{x1:x,x2:x,y1:20,y2:145,stroke:'#dce3ec'}));text(s,x,170,t+'')}
+for(const [i,mode] of ['predicted','trace'].entries()){const y=40+i*65;text(s,8,y+23,i?'70 实测':'60→70 预测');for(const r of rows){const start=r[mode+'_start_ms'],end=r[mode+'_end_ms'],x=145+start*scale,w=(end-start)*scale;const rect=svg('rect',{x,y,width:w,height:36,fill:i?'#bd713c':'#367faf',opacity:r.phase==='recompute'?.55:1});rect.append(svg('title',{},`第${4-r.unit}层 ${r.phase}: ${fmt(start)} → ${fmt(end)} ms`));s.append(rect);text(s,x+4,y+23,`${4-r.unit}${r.phase==='recompute'?'R':'B'}`,13)}}
+text(s,990,195,'时间 ms');
+$('phases').innerHTML=rows.map(r=>`<tr><td>第${4-r.unit}层 · ${r.phase==='recompute'?'重计算':'真正反向'}</td><td>${fmt(r.predicted_duration_ms)}</td><td>${fmt(r.trace_duration_ms)}</td><td>${sign(r.duration_error_ms)}</td><td>${sign(r.end_error_ms)}</td></tr>`).join('');
+$('components').innerHTML=D.components.filter(r=>r.rank===rank).map(r=>`<tr><td>第${4-r.unit}层 · ${r.component}</td><td>${fmt(r.source_ms)}</td><td>${fmt(r.target_ms)}</td><td>${sign(r.change_ms)}</td></tr>`).join('');}
+$('rank').onchange=render;render();
+const s=$('layers'),mx=Math.max(...R.layers.map(r=>Math.abs(r.target_mean_ms-r.source_mean_ms))),scale=650/Math.max(mx,1);
+R.layers.forEach((r,i)=>{const y=22+i*48,d=r.target_mean_ms-r.source_mean_ms;text(s,10,y+21,`第${4-r.unit}层 ${r.phase==='recompute'?'重计算':'真正反向'}`);s.append(svg('rect',{x:210,y,width:Math.abs(d)*scale,height:30,fill:d>=0?'#bd713c':'#367faf'}));text(s,220+Math.abs(d)*scale,y+21,sign(d)+' ms')});
+$('steps').innerHTML=R.ranks.map(r=>`<tr><td>${r.rank}</td><td>${fmt(r.step60_ms)}</td><td>${fmt(r.step70_ms)}</td><td>${sign(r.step_change_ms)}</td><td>${sign(r.step_change_percent)}</td></tr>`).join('');
+</script></body></html>

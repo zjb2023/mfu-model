@@ -1,0 +1,1270 @@
+{
+  "version": "forward-layer-template-r1",
+  "phase": "F",
+  "layers": 1,
+  "ranks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "cp_groups": [
+    [
+      8,
+      9
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      14,
+      15
+    ]
+  ],
+  "ep_group": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "topology": "source32 PP1 EP8 local host; no scale-out or world expansion in this version",
+  "status": "EXECUTABLE_COARSE_TEMPLATE_NOT_VALIDATED_PREDICTION",
+  "nodes": {
+    "L0:r8:A0": {
+      "deps": [],
+      "parameter": "A0",
+      "kind": "local",
+      "layer": 0,
+      "rank": 8,
+      "members": [
+        8
+      ]
+    },
+    "L0:r8:A1": {
+      "deps": [
+        "L0:r8:A0"
+      ],
+      "parameter": "A1",
+      "kind": "local",
+      "layer": 0,
+      "rank": 8,
+      "members": [
+        8
+      ]
+    },
+    "L0:r8:A2": {
+      "deps": [
+        "L0:r8:A1"
+      ],
+      "parameter": "A2",
+      "kind": "local",
+      "layer": 0,
+      "rank": 8,
+      "members": [
+        8
+      ]
+    },
+    "L0:r8:A3": {
+      "deps": [
+        "L0:r8:A2",
+        "L0:g0:CP2"
+      ],
+      "parameter": "A3",
+      "kind": "local",
+      "layer": 0,
+      "rank": 8,
+      "members": [
+        8
+      ]
+    },
+    "L0:r9:A0": {
+      "deps": [],
+      "parameter": "A0",
+      "kind": "local",
+      "layer": 0,
+      "rank": 9,
+      "members": [
+        9
+      ]
+    },
+    "L0:r9:A1": {
+      "deps": [
+        "L0:r9:A0"
+      ],
+      "parameter": "A1",
+      "kind": "local",
+      "layer": 0,
+      "rank": 9,
+      "members": [
+        9
+      ]
+    },
+    "L0:r9:A2": {
+      "deps": [
+        "L0:r9:A1"
+      ],
+      "parameter": "A2",
+      "kind": "local",
+      "layer": 0,
+      "rank": 9,
+      "members": [
+        9
+      ]
+    },
+    "L0:r9:A3": {
+      "deps": [
+        "L0:r9:A2",
+        "L0:g0:CP2"
+      ],
+      "parameter": "A3",
+      "kind": "local",
+      "layer": 0,
+      "rank": 9,
+      "members": [
+        9
+      ]
+    },
+    "L0:r10:A0": {
+      "deps": [],
+      "parameter": "A0",
+      "kind": "local",
+      "layer": 0,
+      "rank": 10,
+      "members": [
+        10
+      ]
+    },
+    "L0:r10:A1": {
+      "deps": [
+        "L0:r10:A0"
+      ],
+      "parameter": "A1",
+      "kind": "local",
+      "layer": 0,
+      "rank": 10,
+      "members": [
+        10
+      ]
+    },
+    "L0:r10:A2": {
+      "deps": [
+        "L0:r10:A1"
+      ],
+      "parameter": "A2",
+      "kind": "local",
+      "layer": 0,
+      "rank": 10,
+      "members": [
+        10
+      ]
+    },
+    "L0:r10:A3": {
+      "deps": [
+        "L0:r10:A2",
+        "L0:g1:CP2"
+      ],
+      "parameter": "A3",
+      "kind": "local",
+      "layer": 0,
+      "rank": 10,
+      "members": [
+        10
+      ]
+    },
+    "L0:r11:A0": {
+      "deps": [],
+      "parameter": "A0",
+      "kind": "local",
+      "layer": 0,
+      "rank": 11,
+      "members": [
+        11
+      ]
+    },
+    "L0:r11:A1": {
+      "deps": [
+        "L0:r11:A0"
+      ],
+      "parameter": "A1",
+      "kind": "local",
+      "layer": 0,
+      "rank": 11,
+      "members": [
+        11
+      ]
+    },
+    "L0:r11:A2": {
+      "deps": [
+        "L0:r11:A1"
+      ],
+      "parameter": "A2",
+      "kind": "local",
+      "layer": 0,
+      "rank": 11,
+      "members": [
+        11
+      ]
+    },
+    "L0:r11:A3": {
+      "deps": [
+        "L0:r11:A2",
+        "L0:g1:CP2"
+      ],
+      "parameter": "A3",
+      "kind": "local",
+      "layer": 0,
+      "rank": 11,
+      "members": [
+        11
+      ]
+    },
+    "L0:r12:A0": {
+      "deps": [],
+      "parameter": "A0",
+      "kind": "local",
+      "layer": 0,
+      "rank": 12,
+      "members": [
+        12
+      ]
+    },
+    "L0:r12:A1": {
+      "deps": [
+        "L0:r12:A0"
+      ],
+      "parameter": "A1",
+      "kind": "local",
+      "layer": 0,
+      "rank": 12,
+      "members": [
+        12
+      ]
+    },
+    "L0:r12:A2": {
+      "deps": [
+        "L0:r12:A1"
+      ],
+      "parameter": "A2",
+      "kind": "local",
+      "layer": 0,
+      "rank": 12,
+      "members": [
+        12
+      ]
+    },
+    "L0:r12:A3": {
+      "deps": [
+        "L0:r12:A2",
+        "L0:g2:CP2"
+      ],
+      "parameter": "A3",
+      "kind": "local",
+      "layer": 0,
+      "rank": 12,
+      "members": [
+        12
+      ]
+    },
+    "L0:r13:A0": {
+      "deps": [],
+      "parameter": "A0",
+      "kind": "local",
+      "layer": 0,
+      "rank": 13,
+      "members": [
+        13
+      ]
+    },
+    "L0:r13:A1": {
+      "deps": [
+        "L0:r13:A0"
+      ],
+      "parameter": "A1",
+      "kind": "local",
+      "layer": 0,
+      "rank": 13,
+      "members": [
+        13
+      ]
+    },
+    "L0:r13:A2": {
+      "deps": [
+        "L0:r13:A1"
+      ],
+      "parameter": "A2",
+      "kind": "local",
+      "layer": 0,
+      "rank": 13,
+      "members": [
+        13
+      ]
+    },
+    "L0:r13:A3": {
+      "deps": [
+        "L0:r13:A2",
+        "L0:g2:CP2"
+      ],
+      "parameter": "A3",
+      "kind": "local",
+      "layer": 0,
+      "rank": 13,
+      "members": [
+        13
+      ]
+    },
+    "L0:r14:A0": {
+      "deps": [],
+      "parameter": "A0",
+      "kind": "local",
+      "layer": 0,
+      "rank": 14,
+      "members": [
+        14
+      ]
+    },
+    "L0:r14:A1": {
+      "deps": [
+        "L0:r14:A0"
+      ],
+      "parameter": "A1",
+      "kind": "local",
+      "layer": 0,
+      "rank": 14,
+      "members": [
+        14
+      ]
+    },
+    "L0:r14:A2": {
+      "deps": [
+        "L0:r14:A1"
+      ],
+      "parameter": "A2",
+      "kind": "local",
+      "layer": 0,
+      "rank": 14,
+      "members": [
+        14
+      ]
+    },
+    "L0:r14:A3": {
+      "deps": [
+        "L0:r14:A2",
+        "L0:g3:CP2"
+      ],
+      "parameter": "A3",
+      "kind": "local",
+      "layer": 0,
+      "rank": 14,
+      "members": [
+        14
+      ]
+    },
+    "L0:r15:A0": {
+      "deps": [],
+      "parameter": "A0",
+      "kind": "local",
+      "layer": 0,
+      "rank": 15,
+      "members": [
+        15
+      ]
+    },
+    "L0:r15:A1": {
+      "deps": [
+        "L0:r15:A0"
+      ],
+      "parameter": "A1",
+      "kind": "local",
+      "layer": 0,
+      "rank": 15,
+      "members": [
+        15
+      ]
+    },
+    "L0:r15:A2": {
+      "deps": [
+        "L0:r15:A1"
+      ],
+      "parameter": "A2",
+      "kind": "local",
+      "layer": 0,
+      "rank": 15,
+      "members": [
+        15
+      ]
+    },
+    "L0:r15:A3": {
+      "deps": [
+        "L0:r15:A2",
+        "L0:g3:CP2"
+      ],
+      "parameter": "A3",
+      "kind": "local",
+      "layer": 0,
+      "rank": 15,
+      "members": [
+        15
+      ]
+    },
+    "L0:g0:CP0": {
+      "deps": [
+        "L0:r8:A0",
+        "L0:r9:A0"
+      ],
+      "parameter": "CP384",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        8,
+        9
+      ]
+    },
+    "L0:g0:CP1": {
+      "deps": [
+        "L0:r8:A1",
+        "L0:r9:A1",
+        "L0:g0:CP0"
+      ],
+      "parameter": "CP384",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        8,
+        9
+      ]
+    },
+    "L0:g0:CP2": {
+      "deps": [
+        "L0:r8:A2",
+        "L0:r9:A2",
+        "L0:g0:CP1"
+      ],
+      "parameter": "CP256",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        8,
+        9
+      ]
+    },
+    "L0:g0:CP3": {
+      "deps": [
+        "L0:r8:A3",
+        "L0:r9:A3",
+        "L0:g0:CP2"
+      ],
+      "parameter": "CP256",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        8,
+        9
+      ]
+    },
+    "L0:g1:CP0": {
+      "deps": [
+        "L0:r10:A0",
+        "L0:r11:A0"
+      ],
+      "parameter": "CP384",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        10,
+        11
+      ]
+    },
+    "L0:g1:CP1": {
+      "deps": [
+        "L0:r10:A1",
+        "L0:r11:A1",
+        "L0:g1:CP0"
+      ],
+      "parameter": "CP384",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        10,
+        11
+      ]
+    },
+    "L0:g1:CP2": {
+      "deps": [
+        "L0:r10:A2",
+        "L0:r11:A2",
+        "L0:g1:CP1"
+      ],
+      "parameter": "CP256",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        10,
+        11
+      ]
+    },
+    "L0:g1:CP3": {
+      "deps": [
+        "L0:r10:A3",
+        "L0:r11:A3",
+        "L0:g1:CP2"
+      ],
+      "parameter": "CP256",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        10,
+        11
+      ]
+    },
+    "L0:g2:CP0": {
+      "deps": [
+        "L0:r12:A0",
+        "L0:r13:A0"
+      ],
+      "parameter": "CP384",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        12,
+        13
+      ]
+    },
+    "L0:g2:CP1": {
+      "deps": [
+        "L0:r12:A1",
+        "L0:r13:A1",
+        "L0:g2:CP0"
+      ],
+      "parameter": "CP384",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        12,
+        13
+      ]
+    },
+    "L0:g2:CP2": {
+      "deps": [
+        "L0:r12:A2",
+        "L0:r13:A2",
+        "L0:g2:CP1"
+      ],
+      "parameter": "CP256",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        12,
+        13
+      ]
+    },
+    "L0:g2:CP3": {
+      "deps": [
+        "L0:r12:A3",
+        "L0:r13:A3",
+        "L0:g2:CP2"
+      ],
+      "parameter": "CP256",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        12,
+        13
+      ]
+    },
+    "L0:g3:CP0": {
+      "deps": [
+        "L0:r14:A0",
+        "L0:r15:A0"
+      ],
+      "parameter": "CP384",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        14,
+        15
+      ]
+    },
+    "L0:g3:CP1": {
+      "deps": [
+        "L0:r14:A1",
+        "L0:r15:A1",
+        "L0:g3:CP0"
+      ],
+      "parameter": "CP384",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        14,
+        15
+      ]
+    },
+    "L0:g3:CP2": {
+      "deps": [
+        "L0:r14:A2",
+        "L0:r15:A2",
+        "L0:g3:CP1"
+      ],
+      "parameter": "CP256",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        14,
+        15
+      ]
+    },
+    "L0:g3:CP3": {
+      "deps": [
+        "L0:r14:A3",
+        "L0:r15:A3",
+        "L0:g3:CP2"
+      ],
+      "parameter": "CP256",
+      "kind": "CP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        14,
+        15
+      ]
+    },
+    "L0:r8:router": {
+      "deps": [
+        "L0:g0:CP3"
+      ],
+      "parameter": "router",
+      "kind": "local",
+      "layer": 0,
+      "rank": 8,
+      "members": [
+        8
+      ]
+    },
+    "L0:r8:prepare": {
+      "deps": [
+        "L0:r8:router"
+      ],
+      "parameter": "dispatch_prepare",
+      "kind": "local",
+      "layer": 0,
+      "rank": 8,
+      "members": [
+        8
+      ]
+    },
+    "L0:r9:router": {
+      "deps": [
+        "L0:g0:CP3"
+      ],
+      "parameter": "router",
+      "kind": "local",
+      "layer": 0,
+      "rank": 9,
+      "members": [
+        9
+      ]
+    },
+    "L0:r9:prepare": {
+      "deps": [
+        "L0:r9:router"
+      ],
+      "parameter": "dispatch_prepare",
+      "kind": "local",
+      "layer": 0,
+      "rank": 9,
+      "members": [
+        9
+      ]
+    },
+    "L0:r10:router": {
+      "deps": [
+        "L0:g1:CP3"
+      ],
+      "parameter": "router",
+      "kind": "local",
+      "layer": 0,
+      "rank": 10,
+      "members": [
+        10
+      ]
+    },
+    "L0:r10:prepare": {
+      "deps": [
+        "L0:r10:router"
+      ],
+      "parameter": "dispatch_prepare",
+      "kind": "local",
+      "layer": 0,
+      "rank": 10,
+      "members": [
+        10
+      ]
+    },
+    "L0:r11:router": {
+      "deps": [
+        "L0:g1:CP3"
+      ],
+      "parameter": "router",
+      "kind": "local",
+      "layer": 0,
+      "rank": 11,
+      "members": [
+        11
+      ]
+    },
+    "L0:r11:prepare": {
+      "deps": [
+        "L0:r11:router"
+      ],
+      "parameter": "dispatch_prepare",
+      "kind": "local",
+      "layer": 0,
+      "rank": 11,
+      "members": [
+        11
+      ]
+    },
+    "L0:r12:router": {
+      "deps": [
+        "L0:g2:CP3"
+      ],
+      "parameter": "router",
+      "kind": "local",
+      "layer": 0,
+      "rank": 12,
+      "members": [
+        12
+      ]
+    },
+    "L0:r12:prepare": {
+      "deps": [
+        "L0:r12:router"
+      ],
+      "parameter": "dispatch_prepare",
+      "kind": "local",
+      "layer": 0,
+      "rank": 12,
+      "members": [
+        12
+      ]
+    },
+    "L0:r13:router": {
+      "deps": [
+        "L0:g2:CP3"
+      ],
+      "parameter": "router",
+      "kind": "local",
+      "layer": 0,
+      "rank": 13,
+      "members": [
+        13
+      ]
+    },
+    "L0:r13:prepare": {
+      "deps": [
+        "L0:r13:router"
+      ],
+      "parameter": "dispatch_prepare",
+      "kind": "local",
+      "layer": 0,
+      "rank": 13,
+      "members": [
+        13
+      ]
+    },
+    "L0:r14:router": {
+      "deps": [
+        "L0:g3:CP3"
+      ],
+      "parameter": "router",
+      "kind": "local",
+      "layer": 0,
+      "rank": 14,
+      "members": [
+        14
+      ]
+    },
+    "L0:r14:prepare": {
+      "deps": [
+        "L0:r14:router"
+      ],
+      "parameter": "dispatch_prepare",
+      "kind": "local",
+      "layer": 0,
+      "rank": 14,
+      "members": [
+        14
+      ]
+    },
+    "L0:r15:router": {
+      "deps": [
+        "L0:g3:CP3"
+      ],
+      "parameter": "router",
+      "kind": "local",
+      "layer": 0,
+      "rank": 15,
+      "members": [
+        15
+      ]
+    },
+    "L0:r15:prepare": {
+      "deps": [
+        "L0:r15:router"
+      ],
+      "parameter": "dispatch_prepare",
+      "kind": "local",
+      "layer": 0,
+      "rank": 15,
+      "members": [
+        15
+      ]
+    },
+    "L0:notify": {
+      "deps": [
+        "L0:r8:prepare",
+        "L0:r9:prepare",
+        "L0:r10:prepare",
+        "L0:r11:prepare",
+        "L0:r12:prepare",
+        "L0:r13:prepare",
+        "L0:r14:prepare",
+        "L0:r15:prepare"
+      ],
+      "parameter": "notify",
+      "kind": "sync",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "L0:dispatch": {
+      "deps": [
+        "L0:notify"
+      ],
+      "parameter": "dispatch",
+      "kind": "EP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "L0:r8:expert": {
+      "deps": [
+        "L0:dispatch"
+      ],
+      "parameter": "expert",
+      "kind": "local",
+      "layer": 0,
+      "rank": 8,
+      "members": [
+        8
+      ]
+    },
+    "L0:r9:expert": {
+      "deps": [
+        "L0:dispatch"
+      ],
+      "parameter": "expert",
+      "kind": "local",
+      "layer": 0,
+      "rank": 9,
+      "members": [
+        9
+      ]
+    },
+    "L0:r10:expert": {
+      "deps": [
+        "L0:dispatch"
+      ],
+      "parameter": "expert",
+      "kind": "local",
+      "layer": 0,
+      "rank": 10,
+      "members": [
+        10
+      ]
+    },
+    "L0:r11:expert": {
+      "deps": [
+        "L0:dispatch"
+      ],
+      "parameter": "expert",
+      "kind": "local",
+      "layer": 0,
+      "rank": 11,
+      "members": [
+        11
+      ]
+    },
+    "L0:r12:expert": {
+      "deps": [
+        "L0:dispatch"
+      ],
+      "parameter": "expert",
+      "kind": "local",
+      "layer": 0,
+      "rank": 12,
+      "members": [
+        12
+      ]
+    },
+    "L0:r13:expert": {
+      "deps": [
+        "L0:dispatch"
+      ],
+      "parameter": "expert",
+      "kind": "local",
+      "layer": 0,
+      "rank": 13,
+      "members": [
+        13
+      ]
+    },
+    "L0:r14:expert": {
+      "deps": [
+        "L0:dispatch"
+      ],
+      "parameter": "expert",
+      "kind": "local",
+      "layer": 0,
+      "rank": 14,
+      "members": [
+        14
+      ]
+    },
+    "L0:r15:expert": {
+      "deps": [
+        "L0:dispatch"
+      ],
+      "parameter": "expert",
+      "kind": "local",
+      "layer": 0,
+      "rank": 15,
+      "members": [
+        15
+      ]
+    },
+    "L0:combine": {
+      "deps": [
+        "L0:r8:expert",
+        "L0:r9:expert",
+        "L0:r10:expert",
+        "L0:r11:expert",
+        "L0:r12:expert",
+        "L0:r13:expert",
+        "L0:r14:expert",
+        "L0:r15:expert"
+      ],
+      "parameter": "combine",
+      "kind": "EP",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "L0:r8:unpermute": {
+      "deps": [
+        "L0:combine"
+      ],
+      "parameter": "unpermute",
+      "kind": "local",
+      "layer": 0,
+      "rank": 8,
+      "members": [
+        8
+      ]
+    },
+    "L0:r9:unpermute": {
+      "deps": [
+        "L0:combine"
+      ],
+      "parameter": "unpermute",
+      "kind": "local",
+      "layer": 0,
+      "rank": 9,
+      "members": [
+        9
+      ]
+    },
+    "L0:r10:unpermute": {
+      "deps": [
+        "L0:combine"
+      ],
+      "parameter": "unpermute",
+      "kind": "local",
+      "layer": 0,
+      "rank": 10,
+      "members": [
+        10
+      ]
+    },
+    "L0:r11:unpermute": {
+      "deps": [
+        "L0:combine"
+      ],
+      "parameter": "unpermute",
+      "kind": "local",
+      "layer": 0,
+      "rank": 11,
+      "members": [
+        11
+      ]
+    },
+    "L0:r12:unpermute": {
+      "deps": [
+        "L0:combine"
+      ],
+      "parameter": "unpermute",
+      "kind": "local",
+      "layer": 0,
+      "rank": 12,
+      "members": [
+        12
+      ]
+    },
+    "L0:r13:unpermute": {
+      "deps": [
+        "L0:combine"
+      ],
+      "parameter": "unpermute",
+      "kind": "local",
+      "layer": 0,
+      "rank": 13,
+      "members": [
+        13
+      ]
+    },
+    "L0:r14:unpermute": {
+      "deps": [
+        "L0:combine"
+      ],
+      "parameter": "unpermute",
+      "kind": "local",
+      "layer": 0,
+      "rank": 14,
+      "members": [
+        14
+      ]
+    },
+    "L0:r15:unpermute": {
+      "deps": [
+        "L0:combine"
+      ],
+      "parameter": "unpermute",
+      "kind": "local",
+      "layer": 0,
+      "rank": 15,
+      "members": [
+        15
+      ]
+    },
+    "L0:combine_exit": {
+      "deps": [
+        "L0:r8:unpermute",
+        "L0:r9:unpermute",
+        "L0:r10:unpermute",
+        "L0:r11:unpermute",
+        "L0:r12:unpermute",
+        "L0:r13:unpermute",
+        "L0:r14:unpermute",
+        "L0:r15:unpermute"
+      ],
+      "parameter": null,
+      "kind": "boundary",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "L0:r8:tail": {
+      "deps": [
+        "L0:combine_exit"
+      ],
+      "parameter": "tail",
+      "kind": "local",
+      "layer": 0,
+      "rank": 8,
+      "members": [
+        8
+      ]
+    },
+    "L0:r9:tail": {
+      "deps": [
+        "L0:combine_exit"
+      ],
+      "parameter": "tail",
+      "kind": "local",
+      "layer": 0,
+      "rank": 9,
+      "members": [
+        9
+      ]
+    },
+    "L0:r10:tail": {
+      "deps": [
+        "L0:combine_exit"
+      ],
+      "parameter": "tail",
+      "kind": "local",
+      "layer": 0,
+      "rank": 10,
+      "members": [
+        10
+      ]
+    },
+    "L0:r11:tail": {
+      "deps": [
+        "L0:combine_exit"
+      ],
+      "parameter": "tail",
+      "kind": "local",
+      "layer": 0,
+      "rank": 11,
+      "members": [
+        11
+      ]
+    },
+    "L0:r12:tail": {
+      "deps": [
+        "L0:combine_exit"
+      ],
+      "parameter": "tail",
+      "kind": "local",
+      "layer": 0,
+      "rank": 12,
+      "members": [
+        12
+      ]
+    },
+    "L0:r13:tail": {
+      "deps": [
+        "L0:combine_exit"
+      ],
+      "parameter": "tail",
+      "kind": "local",
+      "layer": 0,
+      "rank": 13,
+      "members": [
+        13
+      ]
+    },
+    "L0:r14:tail": {
+      "deps": [
+        "L0:combine_exit"
+      ],
+      "parameter": "tail",
+      "kind": "local",
+      "layer": 0,
+      "rank": 14,
+      "members": [
+        14
+      ]
+    },
+    "L0:r15:tail": {
+      "deps": [
+        "L0:combine_exit"
+      ],
+      "parameter": "tail",
+      "kind": "local",
+      "layer": 0,
+      "rank": 15,
+      "members": [
+        15
+      ]
+    },
+    "END": {
+      "deps": [
+        "L0:r8:tail",
+        "L0:r9:tail",
+        "L0:r10:tail",
+        "L0:r11:tail",
+        "L0:r12:tail",
+        "L0:r13:tail",
+        "L0:r14:tail",
+        "L0:r15:tail"
+      ],
+      "parameter": null,
+      "kind": "boundary",
+      "layer": 0,
+      "rank": null,
+      "members": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  },
+  "assumptions": [
+    "CP stream order and C1/C2 overlap follow r9 proposal; cross-stream edges conditional",
+    "notify is a max-readiness join plus explicit post-ready overhead, not total observed kernel span",
+    "dispatch/combine effective residual is placed after readiness as a coarse approximation; actual payload may overlap earlier work",
+    "combine common exit is conservative max of local completions, not proven barrier",
+    "no frozen timestamps, source residual gaps or original M costs included; omitted system effects remain unmodeled",
+    "four layers means forward template composition only, not B, PP pipeline, full iter or MFU"
+  ]
+}

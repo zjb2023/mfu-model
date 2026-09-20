@@ -1,6 +1,20 @@
-# mfu-model · W37 v6.10
+# mfu-model · F/B 冻结分支 `16to256`
 
-基于计算图的训练迭代时间与 MFU 建模工程。本分支 `feat/w37-v610` 接入并复现
+当前冻结的是 **32卡→256卡** 的CP2/EP8细化F/B与1F1B外推；分支名称沿用用户指定的`16to256`，不代表本版以16卡为源。
+
+入口：[F/B分支交接](docs/data-foundation/FB_BRANCH_HANDOFF.md)。冻结文件及哈希见[快照清单](docs/data-foundation/FB_BRANCH_SNAPSHOT.json)。
+
+离线验证（无需原始trace）：
+
+```bash
+python -B workflow/verify_fb_snapshot.py --out /tmp/mfu-fb-freeze-check-new.json
+```
+
+当前结果：32卡iter70区间误差2.80%；256卡iter60 rank0首F→末B区间预测偏大6.16%。不含更新尾段，不是全世界MFU精度；模型仍保留stage级PP、EP8副本同成本及源就绪残余假设。两套展开图/回放可由已提交模板逐字节重建。
+
+## 继承的历史 v6.10 基线
+
+基于计算图的训练迭代时间与 MFU 建模工程。原分支 `feat/w37-v610` 接入并复现
 W37 v6.10：使用源 256 卡派生观测及封存参数，在目标 224 卡、PP14、3 microbatch
 计算图上回放、评价和展示完整迭代。
 

@@ -1,0 +1,54 @@
+{
+  "status": "PASS_EVALUATION_EXECUTION",
+  "prediction_acceptance": "NOT_PREDEFINED_NO_ACCURACY_PASS_CLAIM",
+  "scope": "32GPU PP1 F0 four layers ranks8..15 iter60->70",
+  "predicted_F_ms": 342.7138833999634,
+  "trace_F_ms": 367.0593366622925,
+  "error_ms": -24.3454532623291,
+  "absolute_relative_error_percent": 6.632566135956316,
+  "boundary_MAE_ms": 17.311544680595397,
+  "boundaries": 320,
+  "layers": [
+    {
+      "layer": 0,
+      "predicted_tail_end_ms": 84.59507465362549,
+      "trace_tail_end_ms": 105.18014430999756,
+      "error_ms": -20.58506965637207,
+      "expert_mean_predicted_ms": 9.942768335342407,
+      "expert_mean_trace_ms": 13.771743774414062
+    },
+    {
+      "layer": 1,
+      "predicted_tail_end_ms": 172.35391998291016,
+      "trace_tail_end_ms": 192.8152561187744,
+      "error_ms": -20.461336135864258,
+      "expert_mean_predicted_ms": 10.259679198265076,
+      "expert_mean_trace_ms": 11.536948919296265
+    },
+    {
+      "layer": 2,
+      "predicted_tail_end_ms": 257.93602180480957,
+      "trace_tail_end_ms": 279.98832607269287,
+      "error_ms": -22.0523042678833,
+      "expert_mean_predicted_ms": 10.296504139900208,
+      "expert_mean_trace_ms": 11.554588079452515
+    },
+    {
+      "layer": 3,
+      "predicted_tail_end_ms": 342.6845636367798,
+      "trace_tail_end_ms": 367.01465606689453,
+      "error_ms": -24.330092430114746,
+      "expert_mean_predicted_ms": 9.74901831150055,
+      "expert_mean_trace_ms": 10.987727284431458
+    }
+  ],
+  "target_costs_used": false,
+  "seal_verified": true,
+  "blind_holdout": false,
+  "limitations": [
+    "iter70 first unit ranks8/9 previously exposed; this is source-only evaluation, not blind research holdout",
+    "boundary MAE is cumulative endpoint error, not pure block duration error",
+    "effective costs and trace handoffs from iter60 frozen; no target retuning",
+    "only one stage and F0; not whole iteration MFU, B or 256GPU"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS_OBSERVED_SIGNATURE_PARTIAL_CAUSAL_EQUIVALENCE",
+  "source_iteration": 60,
+  "reference_rank": 8,
+  "pp2_ranks": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "checks": [
+    "four layer EP/checkpoint/GroupedLinear counts",
+    "CP2/EP8 group sizes",
+    "F16 and B36 CP events with matching ordered message signatures",
+    "GroupedLinear input/weight dimensions"
+  ],
+  "PP2_cost_calibrated": false,
+  "limitations": [
+    "does not prove all cross-stream event edges or all microbatches equivalent",
+    "PP1 detailed costs reused unchanged; PP2 source durations diagnostic only"
+  ]
+}

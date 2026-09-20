@@ -1,0 +1,30 @@
+{
+  "source_iteration": 60,
+  "source_world": 32,
+  "target_world": 256,
+  "pp": 16,
+  "microbatches": 4,
+  "middle_stages": 14,
+  "middle_layers": 4,
+  "first_last_layers": 2,
+  "target_EDP": 2,
+  "stage_ranks": 16,
+  "modeled_cohort": 8,
+  "cohort_policy": "two EP8 cohorts assumed equal cost; only representative cohort expanded; no replica imbalance or full-world makespan claim",
+  "PP_policy": "source32 effective rendezvous costs retained, no target timing fit",
+  "window": "rank0 first F associated GPU start to last B associated GPU end; pipeline fill/drain included, RS/OPT/AG excluded",
+  "matched_config_keys": [
+    "hidden_size",
+    "seq_length",
+    "micro_batch_size",
+    "num_experts",
+    "tensor_model_parallel_size",
+    "context_parallel_size",
+    "expert_model_parallel_size",
+    "recompute_num_layers",
+    "recompute_method",
+    "recompute_granularity",
+    "decoder_first_pipeline_num_layers",
+    "decoder_last_pipeline_num_layers"
+  ]
+}

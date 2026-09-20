@@ -1,0 +1,3194 @@
+[
+  {
+    "rank": 8,
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34031/profiler/iteration_60/rank8.1789699916514.pt.trace.json",
+    "sha256": "7fbf1dc76bb0be15c31334e91c1f194d848c9f65c33db17dad1a6630cbb15937",
+    "start_ms": 2.6599130630493164,
+    "end_ms": 868.8333587646484,
+    "phases": [
+      {
+        "unit": 0,
+        "phase": "recompute",
+        "start_ms": 2.6599130630493164,
+        "end_ms": 87.1142692565918,
+        "events": 155,
+        "duration_ms": 84.45435619354248
+      },
+      {
+        "unit": 0,
+        "phase": "backward",
+        "start_ms": 87.52250957489014,
+        "end_ms": 217.27854824066162,
+        "events": 203,
+        "duration_ms": 129.75603866577148
+      },
+      {
+        "unit": 1,
+        "phase": "recompute",
+        "start_ms": 217.28254795074463,
+        "end_ms": 302.3124647140503,
+        "events": 159,
+        "duration_ms": 85.02991676330566
+      },
+      {
+        "unit": 1,
+        "phase": "backward",
+        "start_ms": 302.68994522094727,
+        "end_ms": 433.822172164917,
+        "events": 211,
+        "duration_ms": 131.13222694396973
+      },
+      {
+        "unit": 2,
+        "phase": "recompute",
+        "start_ms": 433.82601165771484,
+        "end_ms": 520.806248664856,
+        "events": 155,
+        "duration_ms": 86.98023700714111
+      },
+      {
+        "unit": 2,
+        "phase": "backward",
+        "start_ms": 521.1942901611328,
+        "end_ms": 655.2422885894775,
+        "events": 203,
+        "duration_ms": 134.04799842834473
+      },
+      {
+        "unit": 3,
+        "phase": "recompute",
+        "start_ms": 655.270209312439,
+        "end_ms": 739.6472835540771,
+        "events": 155,
+        "duration_ms": 84.37707424163818
+      },
+      {
+        "unit": 3,
+        "phase": "backward",
+        "start_ms": 740.0160036087036,
+        "end_ms": 868.7024374008179,
+        "events": 203,
+        "duration_ms": 128.68643379211426
+      }
+    ],
+    "components": [
+      {
+        "unit": 0,
+        "component": "dispatch",
+        "start_ms": 88.1153507232666,
+        "end_ms": 88.42967224121094,
+        "events": 1,
+        "duration_ms": 0.31432151794433594
+      },
+      {
+        "unit": 0,
+        "component": "FC2",
+        "start_ms": 90.70803356170654,
+        "end_ms": 95.1673173904419,
+        "events": 36,
+        "duration_ms": 4.459283828735352
+      },
+      {
+        "unit": 0,
+        "component": "FC1",
+        "start_ms": 98.03659915924072,
+        "end_ms": 106.09992790222168,
+        "events": 36,
+        "duration_ms": 8.063328742980957
+      },
+      {
+        "unit": 0,
+        "component": "combine",
+        "start_ms": 111.63661193847656,
+        "end_ms": 115.4372148513794,
+        "events": 3,
+        "duration_ms": 3.800602912902832
+      },
+      {
+        "unit": 0,
+        "component": "attention",
+        "start_ms": 147.89544486999512,
+        "end_ms": 172.13278675079346,
+        "events": 4,
+        "duration_ms": 24.23734188079834
+      },
+      {
+        "unit": 0,
+        "component": "CP0",
+        "start_ms": 127.29242610931396,
+        "end_ms": 134.8486328125,
+        "events": 1,
+        "duration_ms": 7.556206703186035
+      },
+      {
+        "unit": 0,
+        "component": "CP1",
+        "start_ms": 134.85767269134521,
+        "end_ms": 141.8284387588501,
+        "events": 1,
+        "duration_ms": 6.970766067504883
+      },
+      {
+        "unit": 0,
+        "component": "CP2",
+        "start_ms": 174.56534957885742,
+        "end_ms": 185.30284023284912,
+        "events": 1,
+        "duration_ms": 10.7374906539917
+      },
+      {
+        "unit": 0,
+        "component": "CP3",
+        "start_ms": 186.37883949279785,
+        "end_ms": 196.7832489013672,
+        "events": 1,
+        "duration_ms": 10.404409408569336
+      },
+      {
+        "unit": 0,
+        "component": "CP4",
+        "start_ms": 197.0173692703247,
+        "end_ms": 204.7634563446045,
+        "events": 1,
+        "duration_ms": 7.746087074279785
+      },
+      {
+        "unit": 1,
+        "component": "dispatch",
+        "start_ms": 303.1899461746216,
+        "end_ms": 303.51818656921387,
+        "events": 1,
+        "duration_ms": 0.32824039459228516
+      },
+      {
+        "unit": 1,
+        "component": "FC2",
+        "start_ms": 305.87950801849365,
+        "end_ms": 311.0919141769409,
+        "events": 40,
+        "duration_ms": 5.212406158447266
+      },
+      {
+        "unit": 1,
+        "component": "FC1",
+        "start_ms": 314.4207954406738,
+        "end_ms": 323.6073246002197,
+        "events": 40,
+        "duration_ms": 9.186529159545898
+      },
+      {
+        "unit": 1,
+        "component": "combine",
+        "start_ms": 329.12172985076904,
+        "end_ms": 331.3754119873047,
+        "events": 3,
+        "duration_ms": 2.2536821365356445
+      },
+      {
+        "unit": 1,
+        "component": "attention",
+        "start_ms": 363.8571500778198,
+        "end_ms": 388.0896110534668,
+        "events": 4,
+        "duration_ms": 24.232460975646973
+      },
+      {
+        "unit": 1,
+        "component": "CP0",
+        "start_ms": 343.2284622192383,
+        "end_ms": 350.65642833709717,
+        "events": 1,
+        "duration_ms": 7.427966117858887
+      },
+      {
+        "unit": 1,
+        "component": "CP1",
+        "start_ms": 350.664098739624,
+        "end_ms": 357.64890480041504,
+        "events": 1,
+        "duration_ms": 6.984806060791016
+      },
+      {
+        "unit": 1,
+        "component": "CP2",
+        "start_ms": 390.71157455444336,
+        "end_ms": 401.2694625854492,
+        "events": 1,
+        "duration_ms": 10.55788803100586
+      },
+      {
+        "unit": 1,
+        "component": "CP3",
+        "start_ms": 402.0537443161011,
+        "end_ms": 413.1809539794922,
+        "events": 1,
+        "duration_ms": 11.127209663391113
+      },
+      {
+        "unit": 1,
+        "component": "CP4",
+        "start_ms": 413.52299404144287,
+        "end_ms": 421.0296411514282,
+        "events": 1,
+        "duration_ms": 7.506647109985352
+      },
+      {
+        "unit": 2,
+        "component": "dispatch",
+        "start_ms": 521.587329864502,
+        "end_ms": 521.9098892211914,
+        "events": 1,
+        "duration_ms": 0.3225593566894531
+      },
+      {
+        "unit": 2,
+        "component": "FC2",
+        "start_ms": 524.2889728546143,
+        "end_ms": 529.0174970626831,
+        "events": 36,
+        "duration_ms": 4.728524208068848
+      },
+      {
+        "unit": 2,
+        "component": "FC1",
+        "start_ms": 531.9652185440063,
+        "end_ms": 540.0988264083862,
+        "events": 36,
+        "duration_ms": 8.133607864379883
+      },
+      {
+        "unit": 2,
+        "component": "combine",
+        "start_ms": 545.6731109619141,
+        "end_ms": 553.4774770736694,
+        "events": 3,
+        "duration_ms": 7.804366111755371
+      },
+      {
+        "unit": 2,
+        "component": "attention",
+        "start_ms": 585.8772678375244,
+        "end_ms": 610.1268882751465,
+        "events": 4,
+        "duration_ms": 24.24962043762207
+      },
+      {
+        "unit": 2,
+        "component": "CP0",
+        "start_ms": 564.9402875900269,
+        "end_ms": 572.8118953704834,
+        "events": 1,
+        "duration_ms": 7.871607780456543
+      },
+      {
+        "unit": 2,
+        "component": "CP1",
+        "start_ms": 572.8206949234009,
+        "end_ms": 579.8131427764893,
+        "events": 1,
+        "duration_ms": 6.992447853088379
+      },
+      {
+        "unit": 2,
+        "component": "CP2",
+        "start_ms": 612.4518918991089,
+        "end_ms": 623.1909799575806,
+        "events": 1,
+        "duration_ms": 10.73908805847168
+      },
+      {
+        "unit": 2,
+        "component": "CP3",
+        "start_ms": 624.2657814025879,
+        "end_ms": 634.7697095870972,
+        "events": 1,
+        "duration_ms": 10.503928184509277
+      },
+      {
+        "unit": 2,
+        "component": "CP4",
+        "start_ms": 635.1360311508179,
+        "end_ms": 642.3007164001465,
+        "events": 1,
+        "duration_ms": 7.164685249328613
+      },
+      {
+        "unit": 3,
+        "component": "dispatch",
+        "start_ms": 740.4158039093018,
+        "end_ms": 740.7487640380859,
+        "events": 1,
+        "duration_ms": 0.3329601287841797
+      },
+      {
+        "unit": 3,
+        "component": "FC2",
+        "start_ms": 743.1771268844604,
+        "end_ms": 747.89089012146,
+        "events": 36,
+        "duration_ms": 4.713763236999512
+      },
+      {
+        "unit": 3,
+        "component": "FC1",
+        "start_ms": 751.1107740402222,
+        "end_ms": 759.5210609436035,
+        "events": 36,
+        "duration_ms": 8.410286903381348
+      },
+      {
+        "unit": 3,
+        "component": "combine",
+        "start_ms": 765.0379858016968,
+        "end_ms": 766.8049478530884,
+        "events": 3,
+        "duration_ms": 1.7669620513916016
+      },
+      {
+        "unit": 3,
+        "component": "attention",
+        "start_ms": 799.264575958252,
+        "end_ms": 823.3409175872803,
+        "events": 4,
+        "duration_ms": 24.07634162902832
+      },
+      {
+        "unit": 3,
+        "component": "CP0",
+        "start_ms": 778.2672386169434,
+        "end_ms": 786.171124458313,
+        "events": 1,
+        "duration_ms": 7.903885841369629
+      },
+      {
+        "unit": 3,
+        "component": "CP1",
+        "start_ms": 786.1807250976562,
+        "end_ms": 793.1281719207764,
+        "events": 1,
+        "duration_ms": 6.947446823120117
+      },
+      {
+        "unit": 3,
+        "component": "CP2",
+        "start_ms": 825.7197999954224,
+        "end_ms": 836.7818098068237,
+        "events": 1,
+        "duration_ms": 11.062009811401367
+      },
+      {
+        "unit": 3,
+        "component": "CP3",
+        "start_ms": 837.6957302093506,
+        "end_ms": 848.2720203399658,
+        "events": 1,
+        "duration_ms": 10.576290130615234
+      },
+      {
+        "unit": 3,
+        "component": "CP4",
+        "start_ms": 849.1293811798096,
+        "end_ms": 856.2633066177368,
+        "events": 1,
+        "duration_ms": 7.133925437927246
+      }
+    ],
+    "profiler_step_ms": 12467.67202,
+    "profiler_step_name": "ProfilerStep#59",
+    "origin_absolute_ms": 6732116929.419675,
+    "duration_ms": 866.1734457015991
+  },
+  {
+    "rank": 9,
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34031/profiler/iteration_60/rank9.1789699916482.pt.trace.json",
+    "sha256": "db2256c0aa6202e5e9bbc44b3abdd656314cfcc63d16e87a900d480cbaa7ffac",
+    "start_ms": 0.6082334518432617,
+    "end_ms": 868.7841863632202,
+    "phases": [
+      {
+        "unit": 0,
+        "phase": "recompute",
+        "start_ms": 0.6082334518432617,
+        "end_ms": 87.02489566802979,
+        "events": 151,
+        "duration_ms": 86.41666221618652
+      },
+      {
+        "unit": 0,
+        "phase": "backward",
+        "start_ms": 87.4137773513794,
+        "end_ms": 217.0858907699585,
+        "events": 195,
+        "duration_ms": 129.6721134185791
+      },
+      {
+        "unit": 1,
+        "phase": "recompute",
+        "start_ms": 217.0892095565796,
+        "end_ms": 302.3453063964844,
+        "events": 155,
+        "duration_ms": 85.25609683990479
+      },
+      {
+        "unit": 1,
+        "phase": "backward",
+        "start_ms": 302.74078941345215,
+        "end_ms": 434.09405040740967,
+        "events": 203,
+        "duration_ms": 131.35326099395752
+      },
+      {
+        "unit": 2,
+        "phase": "recompute",
+        "start_ms": 434.09709072113037,
+        "end_ms": 520.8644762039185,
+        "events": 153,
+        "duration_ms": 86.76738548278809
+      },
+      {
+        "unit": 2,
+        "phase": "backward",
+        "start_ms": 521.2775192260742,
+        "end_ms": 655.2427339553833,
+        "events": 199,
+        "duration_ms": 133.96521472930908
+      },
+      {
+        "unit": 3,
+        "phase": "recompute",
+        "start_ms": 655.2467346191406,
+        "end_ms": 739.5437107086182,
+        "events": 155,
+        "duration_ms": 84.29697608947754
+      },
+      {
+        "unit": 3,
+        "phase": "backward",
+        "start_ms": 739.9610319137573,
+        "end_ms": 868.6505460739136,
+        "events": 203,
+        "duration_ms": 128.68951416015625
+      }
+    ],
+    "components": [
+      {
+        "unit": 0,
+        "component": "dispatch",
+        "start_ms": 87.85293960571289,
+        "end_ms": 88.16146087646484,
+        "events": 1,
+        "duration_ms": 0.3085212707519531
+      },
+      {
+        "unit": 0,
+        "component": "FC2",
+        "start_ms": 90.59814929962158,
+        "end_ms": 95.06092643737793,
+        "events": 32,
+        "duration_ms": 4.462777137756348
+      },
+      {
+        "unit": 0,
+        "component": "FC1",
+        "start_ms": 97.97673892974854,
+        "end_ms": 105.75440883636475,
+        "events": 32,
+        "duration_ms": 7.777669906616211
+      },
+      {
+        "unit": 0,
+        "component": "combine",
+        "start_ms": 111.31123161315918,
+        "end_ms": 115.36212730407715,
+        "events": 3,
+        "duration_ms": 4.050895690917969
+      },
+      {
+        "unit": 0,
+        "component": "attention",
+        "start_ms": 147.82961654663086,
+        "end_ms": 172.37879276275635,
+        "events": 4,
+        "duration_ms": 24.54917621612549
+      },
+      {
+        "unit": 0,
+        "component": "CP0",
+        "start_ms": 126.80181312561035,
+        "end_ms": 134.8371639251709,
+        "events": 1,
+        "duration_ms": 8.035350799560547
+      },
+      {
+        "unit": 0,
+        "component": "CP1",
+        "start_ms": 134.8463249206543,
+        "end_ms": 141.7785120010376,
+        "events": 1,
+        "duration_ms": 6.932187080383301
+      },
+      {
+        "unit": 0,
+        "component": "CP2",
+        "start_ms": 174.73500156402588,
+        "end_ms": 185.32120418548584,
+        "events": 1,
+        "duration_ms": 10.586202621459961
+      },
+      {
+        "unit": 0,
+        "component": "CP3",
+        "start_ms": 186.22828769683838,
+        "end_ms": 196.7856101989746,
+        "events": 1,
+        "duration_ms": 10.55732250213623
+      },
+      {
+        "unit": 0,
+        "component": "CP4",
+        "start_ms": 197.64649295806885,
+        "end_ms": 204.61792087554932,
+        "events": 1,
+        "duration_ms": 6.971427917480469
+      },
+      {
+        "unit": 1,
+        "component": "dispatch",
+        "start_ms": 303.1369113922119,
+        "end_ms": 303.4617919921875,
+        "events": 1,
+        "duration_ms": 0.32488059997558594
+      },
+      {
+        "unit": 1,
+        "component": "FC2",
+        "start_ms": 305.8865613937378,
+        "end_ms": 310.38673877716064,
+        "events": 36,
+        "duration_ms": 4.500177383422852
+      },
+      {
+        "unit": 1,
+        "component": "FC1",
+        "start_ms": 313.22999000549316,
+        "end_ms": 321.35162258148193,
+        "events": 36,
+        "duration_ms": 8.12163257598877
+      },
+      {
+        "unit": 1,
+        "component": "combine",
+        "start_ms": 326.7971239089966,
+        "end_ms": 331.39770221710205,
+        "events": 3,
+        "duration_ms": 4.600578308105469
+      },
+      {
+        "unit": 1,
+        "component": "attention",
+        "start_ms": 363.7010087966919,
+        "end_ms": 387.7451467514038,
+        "events": 4,
+        "duration_ms": 24.044137954711914
+      },
+      {
+        "unit": 1,
+        "component": "CP0",
+        "start_ms": 343.21246910095215,
+        "end_ms": 350.60361766815186,
+        "events": 1,
+        "duration_ms": 7.391148567199707
+      },
+      {
+        "unit": 1,
+        "component": "CP1",
+        "start_ms": 350.61175632476807,
+        "end_ms": 357.62254524230957,
+        "events": 1,
+        "duration_ms": 7.010788917541504
+      },
+      {
+        "unit": 1,
+        "component": "CP2",
+        "start_ms": 389.9844741821289,
+        "end_ms": 401.28804111480713,
+        "events": 1,
+        "duration_ms": 11.303566932678223
+      },
+      {
+        "unit": 1,
+        "component": "CP3",
+        "start_ms": 402.6354856491089,
+        "end_ms": 413.3108882904053,
+        "events": 1,
+        "duration_ms": 10.675402641296387
+      },
+      {
+        "unit": 1,
+        "component": "CP4",
+        "start_ms": 413.31372833251953,
+        "end_ms": 420.9103584289551,
+        "events": 1,
+        "duration_ms": 7.596630096435547
+      },
+      {
+        "unit": 2,
+        "component": "dispatch",
+        "start_ms": 521.6761598587036,
+        "end_ms": 522.0010023117065,
+        "events": 1,
+        "duration_ms": 0.3248424530029297
+      },
+      {
+        "unit": 2,
+        "component": "FC2",
+        "start_ms": 524.319130897522,
+        "end_ms": 528.612548828125,
+        "events": 34,
+        "duration_ms": 4.293417930603027
+      },
+      {
+        "unit": 2,
+        "component": "FC1",
+        "start_ms": 531.2135982513428,
+        "end_ms": 538.5797080993652,
+        "events": 34,
+        "duration_ms": 7.366109848022461
+      },
+      {
+        "unit": 2,
+        "component": "combine",
+        "start_ms": 543.9886503219604,
+        "end_ms": 553.5201282501221,
+        "events": 3,
+        "duration_ms": 9.531477928161621
+      },
+      {
+        "unit": 2,
+        "component": "attention",
+        "start_ms": 585.910496711731,
+        "end_ms": 609.9224338531494,
+        "events": 4,
+        "duration_ms": 24.011937141418457
+      },
+      {
+        "unit": 2,
+        "component": "CP0",
+        "start_ms": 565.2530937194824,
+        "end_ms": 572.8182048797607,
+        "events": 1,
+        "duration_ms": 7.56511116027832
+      },
+      {
+        "unit": 2,
+        "component": "CP1",
+        "start_ms": 572.8260850906372,
+        "end_ms": 579.8428726196289,
+        "events": 1,
+        "duration_ms": 7.016787528991699
+      },
+      {
+        "unit": 2,
+        "component": "CP2",
+        "start_ms": 612.2936029434204,
+        "end_ms": 623.1540069580078,
+        "events": 1,
+        "duration_ms": 10.860404014587402
+      },
+      {
+        "unit": 2,
+        "component": "CP3",
+        "start_ms": 624.0841283798218,
+        "end_ms": 634.7469320297241,
+        "events": 1,
+        "duration_ms": 10.662803649902344
+      },
+      {
+        "unit": 2,
+        "component": "CP4",
+        "start_ms": 635.0137329101562,
+        "end_ms": 642.2394819259644,
+        "events": 1,
+        "duration_ms": 7.2257490158081055
+      },
+      {
+        "unit": 3,
+        "component": "dispatch",
+        "start_ms": 740.3606338500977,
+        "end_ms": 740.6888751983643,
+        "events": 1,
+        "duration_ms": 0.32824134826660156
+      },
+      {
+        "unit": 3,
+        "component": "FC2",
+        "start_ms": 743.0799646377563,
+        "end_ms": 747.785304069519,
+        "events": 36,
+        "duration_ms": 4.705339431762695
+      },
+      {
+        "unit": 3,
+        "component": "FC1",
+        "start_ms": 750.8318758010864,
+        "end_ms": 759.2022294998169,
+        "events": 36,
+        "duration_ms": 8.370353698730469
+      },
+      {
+        "unit": 3,
+        "component": "combine",
+        "start_ms": 764.7040109634399,
+        "end_ms": 766.7682590484619,
+        "events": 3,
+        "duration_ms": 2.0642480850219727
+      },
+      {
+        "unit": 3,
+        "component": "attention",
+        "start_ms": 799.3529891967773,
+        "end_ms": 823.7419681549072,
+        "events": 4,
+        "duration_ms": 24.388978958129883
+      },
+      {
+        "unit": 3,
+        "component": "CP0",
+        "start_ms": 778.9155874252319,
+        "end_ms": 786.1971769332886,
+        "events": 1,
+        "duration_ms": 7.281589508056641
+      },
+      {
+        "unit": 3,
+        "component": "CP1",
+        "start_ms": 786.2062969207764,
+        "end_ms": 793.1626043319702,
+        "events": 1,
+        "duration_ms": 6.956307411193848
+      },
+      {
+        "unit": 3,
+        "component": "CP2",
+        "start_ms": 826.1403360366821,
+        "end_ms": 836.772138595581,
+        "events": 1,
+        "duration_ms": 10.631802558898926
+      },
+      {
+        "unit": 3,
+        "component": "CP3",
+        "start_ms": 837.6889419555664,
+        "end_ms": 848.188024520874,
+        "events": 1,
+        "duration_ms": 10.499082565307617
+      },
+      {
+        "unit": 3,
+        "component": "CP4",
+        "start_ms": 849.0625076293945,
+        "end_ms": 856.2810964584351,
+        "events": 1,
+        "duration_ms": 7.218588829040527
+      }
+    ],
+    "profiler_step_ms": 12468.319789000001,
+    "profiler_step_name": "ProfilerStep#59",
+    "origin_absolute_ms": 6732116929.419675,
+    "duration_ms": 868.175952911377
+  },
+  {
+    "rank": 10,
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34031/profiler/iteration_60/rank10.1789699916487.pt.trace.json",
+    "sha256": "47761355df096e114c5fd4afe14531f83f311b40985981f85dfc10abcc204c92",
+    "start_ms": 0.5590572357177734,
+    "end_ms": 867.5566530227661,
+    "phases": [
+      {
+        "unit": 0,
+        "phase": "recompute",
+        "start_ms": 0.5590572357177734,
+        "end_ms": 87.00629329681396,
+        "events": 155,
+        "duration_ms": 86.44723606109619
+      },
+      {
+        "unit": 0,
+        "phase": "backward",
+        "start_ms": 87.38193321228027,
+        "end_ms": 216.36006546020508,
+        "events": 203,
+        "duration_ms": 128.9781322479248
+      },
+      {
+        "unit": 1,
+        "phase": "recompute",
+        "start_ms": 216.3630657196045,
+        "end_ms": 302.265419960022,
+        "events": 155,
+        "duration_ms": 85.90235424041748
+      },
+      {
+        "unit": 1,
+        "phase": "backward",
+        "start_ms": 302.6576204299927,
+        "end_ms": 431.99372005462646,
+        "events": 203,
+        "duration_ms": 129.3360996246338
+      },
+      {
+        "unit": 2,
+        "phase": "recompute",
+        "start_ms": 431.9977197647095,
+        "end_ms": 520.612587928772,
+        "events": 159,
+        "duration_ms": 88.6148681640625
+      },
+      {
+        "unit": 2,
+        "phase": "backward",
+        "start_ms": 521.0211086273193,
+        "end_ms": 654.365270614624,
+        "events": 211,
+        "duration_ms": 133.3441619873047
+      },
+      {
+        "unit": 3,
+        "phase": "recompute",
+        "start_ms": 654.3687105178833,
+        "end_ms": 739.3621339797974,
+        "events": 157,
+        "duration_ms": 84.99342346191406
+      },
+      {
+        "unit": 3,
+        "phase": "backward",
+        "start_ms": 739.7344951629639,
+        "end_ms": 867.4272928237915,
+        "events": 207,
+        "duration_ms": 127.69279766082764
+      }
+    ],
+    "components": [
+      {
+        "unit": 0,
+        "component": "dispatch",
+        "start_ms": 87.77889442443848,
+        "end_ms": 88.06397438049316,
+        "events": 1,
+        "duration_ms": 0.2850799560546875
+      },
+      {
+        "unit": 0,
+        "component": "FC2",
+        "start_ms": 90.77917766571045,
+        "end_ms": 95.67182445526123,
+        "events": 36,
+        "duration_ms": 4.892646789550781
+      },
+      {
+        "unit": 0,
+        "component": "FC1",
+        "start_ms": 99.0155086517334,
+        "end_ms": 107.74843978881836,
+        "events": 36,
+        "duration_ms": 8.732931137084961
+      },
+      {
+        "unit": 0,
+        "component": "combine",
+        "start_ms": 113.33156871795654,
+        "end_ms": 115.28145027160645,
+        "events": 3,
+        "duration_ms": 1.9498815536499023
+      },
+      {
+        "unit": 0,
+        "component": "attention",
+        "start_ms": 147.57813262939453,
+        "end_ms": 171.70844650268555,
+        "events": 4,
+        "duration_ms": 24.130313873291016
+      },
+      {
+        "unit": 0,
+        "component": "CP0",
+        "start_ms": 127.03986644744873,
+        "end_ms": 134.50199604034424,
+        "events": 1,
+        "duration_ms": 7.462129592895508
+      },
+      {
+        "unit": 0,
+        "component": "CP1",
+        "start_ms": 134.51303577423096,
+        "end_ms": 141.26872539520264,
+        "events": 1,
+        "duration_ms": 6.75568962097168
+      },
+      {
+        "unit": 0,
+        "component": "CP2",
+        "start_ms": 173.96928882598877,
+        "end_ms": 184.36366176605225,
+        "events": 1,
+        "duration_ms": 10.394372940063477
+      },
+      {
+        "unit": 0,
+        "component": "CP3",
+        "start_ms": 185.691743850708,
+        "end_ms": 196.33147811889648,
+        "events": 1,
+        "duration_ms": 10.639734268188477
+      },
+      {
+        "unit": 0,
+        "component": "CP4",
+        "start_ms": 196.3344783782959,
+        "end_ms": 203.80908870697021,
+        "events": 1,
+        "duration_ms": 7.474610328674316
+      },
+      {
+        "unit": 1,
+        "component": "dispatch",
+        "start_ms": 303.0679016113281,
+        "end_ms": 303.3712615966797,
+        "events": 1,
+        "duration_ms": 0.3033599853515625
+      },
+      {
+        "unit": 1,
+        "component": "FC2",
+        "start_ms": 305.63270378112793,
+        "end_ms": 309.73742961883545,
+        "events": 36,
+        "duration_ms": 4.1047258377075195
+      },
+      {
+        "unit": 1,
+        "component": "FC1",
+        "start_ms": 311.8988332748413,
+        "end_ms": 318.95812225341797,
+        "events": 36,
+        "duration_ms": 7.05928897857666
+      },
+      {
+        "unit": 1,
+        "component": "combine",
+        "start_ms": 324.34312915802,
+        "end_ms": 331.35235691070557,
+        "events": 3,
+        "duration_ms": 7.009227752685547
+      },
+      {
+        "unit": 1,
+        "component": "attention",
+        "start_ms": 363.4314365386963,
+        "end_ms": 387.5204267501831,
+        "events": 4,
+        "duration_ms": 24.088990211486816
+      },
+      {
+        "unit": 1,
+        "component": "CP0",
+        "start_ms": 343.10853099823,
+        "end_ms": 350.51794052124023,
+        "events": 1,
+        "duration_ms": 7.409409523010254
+      },
+      {
+        "unit": 1,
+        "component": "CP1",
+        "start_ms": 350.5264596939087,
+        "end_ms": 357.2513885498047,
+        "events": 1,
+        "duration_ms": 6.724928855895996
+      },
+      {
+        "unit": 1,
+        "component": "CP2",
+        "start_ms": 389.7642288208008,
+        "end_ms": 400.3767213821411,
+        "events": 1,
+        "duration_ms": 10.612492561340332
+      },
+      {
+        "unit": 1,
+        "component": "CP3",
+        "start_ms": 401.20408153533936,
+        "end_ms": 411.5467348098755,
+        "events": 1,
+        "duration_ms": 10.342653274536133
+      },
+      {
+        "unit": 1,
+        "component": "CP4",
+        "start_ms": 411.82421493530273,
+        "end_ms": 418.9185438156128,
+        "events": 1,
+        "duration_ms": 7.094328880310059
+      },
+      {
+        "unit": 2,
+        "component": "dispatch",
+        "start_ms": 521.4225091934204,
+        "end_ms": 521.6952686309814,
+        "events": 1,
+        "duration_ms": 0.27275943756103516
+      },
+      {
+        "unit": 2,
+        "component": "FC2",
+        "start_ms": 524.4217119216919,
+        "end_ms": 529.9302387237549,
+        "events": 40,
+        "duration_ms": 5.508526802062988
+      },
+      {
+        "unit": 2,
+        "component": "FC1",
+        "start_ms": 533.4954433441162,
+        "end_ms": 543.0006952285767,
+        "events": 40,
+        "duration_ms": 9.50525188446045
+      },
+      {
+        "unit": 2,
+        "component": "combine",
+        "start_ms": 548.6319026947021,
+        "end_ms": 553.2949886322021,
+        "events": 3,
+        "duration_ms": 4.6630859375
+      },
+      {
+        "unit": 2,
+        "component": "attention",
+        "start_ms": 585.2524271011353,
+        "end_ms": 609.0207767486572,
+        "events": 4,
+        "duration_ms": 23.768349647521973
+      },
+      {
+        "unit": 2,
+        "component": "CP0",
+        "start_ms": 564.9026823043823,
+        "end_ms": 572.4427709579468,
+        "events": 1,
+        "duration_ms": 7.540088653564453
+      },
+      {
+        "unit": 2,
+        "component": "CP1",
+        "start_ms": 572.4510908126831,
+        "end_ms": 579.1872186660767,
+        "events": 1,
+        "duration_ms": 6.736127853393555
+      },
+      {
+        "unit": 2,
+        "component": "CP2",
+        "start_ms": 611.2665376663208,
+        "end_ms": 622.0314302444458,
+        "events": 1,
+        "duration_ms": 10.764892578125
+      },
+      {
+        "unit": 2,
+        "component": "CP3",
+        "start_ms": 623.1915140151978,
+        "end_ms": 633.8565263748169,
+        "events": 1,
+        "duration_ms": 10.66501235961914
+      },
+      {
+        "unit": 2,
+        "component": "CP4",
+        "start_ms": 634.1268062591553,
+        "end_ms": 641.2009353637695,
+        "events": 1,
+        "duration_ms": 7.074129104614258
+      },
+      {
+        "unit": 3,
+        "component": "dispatch",
+        "start_ms": 740.1405353546143,
+        "end_ms": 740.4337759017944,
+        "events": 1,
+        "duration_ms": 0.2932405471801758
+      },
+      {
+        "unit": 3,
+        "component": "FC2",
+        "start_ms": 742.8706188201904,
+        "end_ms": 747.5407037734985,
+        "events": 38,
+        "duration_ms": 4.6700849533081055
+      },
+      {
+        "unit": 3,
+        "component": "FC1",
+        "start_ms": 750.3863887786865,
+        "end_ms": 758.4557180404663,
+        "events": 38,
+        "duration_ms": 8.069329261779785
+      },
+      {
+        "unit": 3,
+        "component": "combine",
+        "start_ms": 763.8922843933105,
+        "end_ms": 766.6000881195068,
+        "events": 3,
+        "duration_ms": 2.707803726196289
+      },
+      {
+        "unit": 3,
+        "component": "attention",
+        "start_ms": 798.7948894500732,
+        "end_ms": 822.8760375976562,
+        "events": 4,
+        "duration_ms": 24.081148147583008
+      },
+      {
+        "unit": 3,
+        "component": "CP0",
+        "start_ms": 778.46946144104,
+        "end_ms": 785.8908309936523,
+        "events": 1,
+        "duration_ms": 7.421369552612305
+      },
+      {
+        "unit": 3,
+        "component": "CP1",
+        "start_ms": 785.9001531600952,
+        "end_ms": 792.6945610046387,
+        "events": 1,
+        "duration_ms": 6.794407844543457
+      },
+      {
+        "unit": 3,
+        "component": "CP2",
+        "start_ms": 825.1927604675293,
+        "end_ms": 835.7082138061523,
+        "events": 1,
+        "duration_ms": 10.515453338623047
+      },
+      {
+        "unit": 3,
+        "component": "CP3",
+        "start_ms": 836.6360559463501,
+        "end_ms": 846.9765882492065,
+        "events": 1,
+        "duration_ms": 10.340532302856445
+      },
+      {
+        "unit": 3,
+        "component": "CP4",
+        "start_ms": 847.8343086242676,
+        "end_ms": 855.0257577896118,
+        "events": 1,
+        "duration_ms": 7.191449165344238
+      }
+    ],
+    "profiler_step_ms": 12466.884426999999,
+    "profiler_step_name": "ProfilerStep#59",
+    "origin_absolute_ms": 6732116929.419675,
+    "duration_ms": 866.9975957870483
+  },
+  {
+    "rank": 11,
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34031/profiler/iteration_60/rank11.1789699916517.pt.trace.json",
+    "sha256": "5b887c6ccbfcb96de42f88e8673779c08530e25b6b1445e27aad01a3d78bf88e",
+    "start_ms": 0.0,
+    "end_ms": 867.5417737960815,
+    "phases": [
+      {
+        "unit": 0,
+        "phase": "recompute",
+        "start_ms": 0.0,
+        "end_ms": 87.12789154052734,
+        "events": 157,
+        "duration_ms": 87.12789154052734
+      },
+      {
+        "unit": 0,
+        "phase": "backward",
+        "start_ms": 87.52789211273193,
+        "end_ms": 216.67930603027344,
+        "events": 207,
+        "duration_ms": 129.1514139175415
+      },
+      {
+        "unit": 1,
+        "phase": "recompute",
+        "start_ms": 216.6824245452881,
+        "end_ms": 302.36839389801025,
+        "events": 155,
+        "duration_ms": 85.68596935272217
+      },
+      {
+        "unit": 1,
+        "phase": "backward",
+        "start_ms": 302.7631540298462,
+        "end_ms": 431.9646472930908,
+        "events": 203,
+        "duration_ms": 129.20149326324463
+      },
+      {
+        "unit": 2,
+        "phase": "recompute",
+        "start_ms": 431.96832752227783,
+        "end_ms": 520.5035762786865,
+        "events": 153,
+        "duration_ms": 88.53524875640869
+      },
+      {
+        "unit": 2,
+        "phase": "backward",
+        "start_ms": 520.9003763198853,
+        "end_ms": 654.0198354721069,
+        "events": 199,
+        "duration_ms": 133.11945915222168
+      },
+      {
+        "unit": 3,
+        "phase": "recompute",
+        "start_ms": 654.0229158401489,
+        "end_ms": 739.5198831558228,
+        "events": 153,
+        "duration_ms": 85.49696731567383
+      },
+      {
+        "unit": 3,
+        "phase": "backward",
+        "start_ms": 739.9077644348145,
+        "end_ms": 867.4122524261475,
+        "events": 199,
+        "duration_ms": 127.50448799133301
+      }
+    ],
+    "components": [
+      {
+        "unit": 0,
+        "component": "dispatch",
+        "start_ms": 87.98249340057373,
+        "end_ms": 88.25597381591797,
+        "events": 1,
+        "duration_ms": 0.2734804153442383
+      },
+      {
+        "unit": 0,
+        "component": "FC2",
+        "start_ms": 90.72249794006348,
+        "end_ms": 95.80882835388184,
+        "events": 38,
+        "duration_ms": 5.086330413818359
+      },
+      {
+        "unit": 0,
+        "component": "FC1",
+        "start_ms": 99.10791492462158,
+        "end_ms": 108.24485206604004,
+        "events": 38,
+        "duration_ms": 9.136937141418457
+      },
+      {
+        "unit": 0,
+        "component": "combine",
+        "start_ms": 113.83246326446533,
+        "end_ms": 115.48102760314941,
+        "events": 3,
+        "duration_ms": 1.648564338684082
+      },
+      {
+        "unit": 0,
+        "component": "attention",
+        "start_ms": 147.42856884002686,
+        "end_ms": 171.63201713562012,
+        "events": 4,
+        "duration_ms": 24.20344829559326
+      },
+      {
+        "unit": 0,
+        "component": "CP0",
+        "start_ms": 126.95744895935059,
+        "end_ms": 134.44366359710693,
+        "events": 1,
+        "duration_ms": 7.486214637756348
+      },
+      {
+        "unit": 0,
+        "component": "CP1",
+        "start_ms": 134.45170402526855,
+        "end_ms": 141.2871971130371,
+        "events": 1,
+        "duration_ms": 6.835493087768555
+      },
+      {
+        "unit": 0,
+        "component": "CP2",
+        "start_ms": 173.87770080566406,
+        "end_ms": 184.33752250671387,
+        "events": 1,
+        "duration_ms": 10.459821701049805
+      },
+      {
+        "unit": 0,
+        "component": "CP3",
+        "start_ms": 185.454083442688,
+        "end_ms": 196.21222496032715,
+        "events": 1,
+        "duration_ms": 10.75814151763916
+      },
+      {
+        "unit": 0,
+        "component": "CP4",
+        "start_ms": 196.48014640808105,
+        "end_ms": 203.67948055267334,
+        "events": 1,
+        "duration_ms": 7.199334144592285
+      },
+      {
+        "unit": 1,
+        "component": "dispatch",
+        "start_ms": 303.16063499450684,
+        "end_ms": 303.45679473876953,
+        "events": 1,
+        "duration_ms": 0.2961597442626953
+      },
+      {
+        "unit": 1,
+        "component": "FC2",
+        "start_ms": 305.9042806625366,
+        "end_ms": 310.6541690826416,
+        "events": 36,
+        "duration_ms": 4.7498884201049805
+      },
+      {
+        "unit": 1,
+        "component": "FC1",
+        "start_ms": 313.64821434020996,
+        "end_ms": 321.8472709655762,
+        "events": 36,
+        "duration_ms": 8.199056625366211
+      },
+      {
+        "unit": 1,
+        "component": "combine",
+        "start_ms": 327.473801612854,
+        "end_ms": 331.46100997924805,
+        "events": 3,
+        "duration_ms": 3.987208366394043
+      },
+      {
+        "unit": 1,
+        "component": "attention",
+        "start_ms": 363.16819286346436,
+        "end_ms": 387.0817985534668,
+        "events": 4,
+        "duration_ms": 23.91360569000244
+      },
+      {
+        "unit": 1,
+        "component": "CP0",
+        "start_ms": 343.1132335662842,
+        "end_ms": 350.4164876937866,
+        "events": 1,
+        "duration_ms": 7.303254127502441
+      },
+      {
+        "unit": 1,
+        "component": "CP1",
+        "start_ms": 350.42644786834717,
+        "end_ms": 357.2729015350342,
+        "events": 1,
+        "duration_ms": 6.846453666687012
+      },
+      {
+        "unit": 1,
+        "component": "CP2",
+        "start_ms": 389.3214044570923,
+        "end_ms": 400.2531051635742,
+        "events": 1,
+        "duration_ms": 10.931700706481934
+      },
+      {
+        "unit": 1,
+        "component": "CP3",
+        "start_ms": 401.36598682403564,
+        "end_ms": 411.60916805267334,
+        "events": 1,
+        "duration_ms": 10.243181228637695
+      },
+      {
+        "unit": 1,
+        "component": "CP4",
+        "start_ms": 411.8791675567627,
+        "end_ms": 418.85490226745605,
+        "events": 1,
+        "duration_ms": 6.975734710693359
+      },
+      {
+        "unit": 2,
+        "component": "dispatch",
+        "start_ms": 521.5599784851074,
+        "end_ms": 521.8298587799072,
+        "events": 1,
+        "duration_ms": 0.2698802947998047
+      },
+      {
+        "unit": 2,
+        "component": "FC2",
+        "start_ms": 523.9661026000977,
+        "end_ms": 527.558669090271,
+        "events": 34,
+        "duration_ms": 3.59256649017334
+      },
+      {
+        "unit": 2,
+        "component": "FC1",
+        "start_ms": 529.2400331497192,
+        "end_ms": 535.1836442947388,
+        "events": 34,
+        "duration_ms": 5.943611145019531
+      },
+      {
+        "unit": 2,
+        "component": "combine",
+        "start_ms": 540.3322534561157,
+        "end_ms": 553.1918792724609,
+        "events": 3,
+        "duration_ms": 12.859625816345215
+      },
+      {
+        "unit": 2,
+        "component": "attention",
+        "start_ms": 585.0406217575073,
+        "end_ms": 609.387469291687,
+        "events": 4,
+        "duration_ms": 24.346847534179688
+      },
+      {
+        "unit": 2,
+        "component": "CP0",
+        "start_ms": 564.632022857666,
+        "end_ms": 572.4603176116943,
+        "events": 1,
+        "duration_ms": 7.82829475402832
+      },
+      {
+        "unit": 2,
+        "component": "CP1",
+        "start_ms": 572.4714775085449,
+        "end_ms": 579.1488103866577,
+        "events": 1,
+        "duration_ms": 6.677332878112793
+      },
+      {
+        "unit": 2,
+        "component": "CP2",
+        "start_ms": 611.6380338668823,
+        "end_ms": 621.9367742538452,
+        "events": 1,
+        "duration_ms": 10.29874038696289
+      },
+      {
+        "unit": 2,
+        "component": "CP3",
+        "start_ms": 623.2595357894897,
+        "end_ms": 633.9985961914062,
+        "events": 1,
+        "duration_ms": 10.739060401916504
+      },
+      {
+        "unit": 2,
+        "component": "CP4",
+        "start_ms": 634.0011167526245,
+        "end_ms": 641.1533308029175,
+        "events": 1,
+        "duration_ms": 7.152214050292969
+      },
+      {
+        "unit": 3,
+        "component": "dispatch",
+        "start_ms": 740.402045249939,
+        "end_ms": 740.6805667877197,
+        "events": 1,
+        "duration_ms": 0.2785215377807617
+      },
+      {
+        "unit": 3,
+        "component": "FC2",
+        "start_ms": 742.9905300140381,
+        "end_ms": 747.5903387069702,
+        "events": 34,
+        "duration_ms": 4.599808692932129
+      },
+      {
+        "unit": 3,
+        "component": "FC1",
+        "start_ms": 750.6445846557617,
+        "end_ms": 758.824800491333,
+        "events": 34,
+        "duration_ms": 8.180215835571289
+      },
+      {
+        "unit": 3,
+        "component": "combine",
+        "start_ms": 764.34153175354,
+        "end_ms": 766.6107759475708,
+        "events": 3,
+        "duration_ms": 2.2692441940307617
+      },
+      {
+        "unit": 3,
+        "component": "attention",
+        "start_ms": 798.7418384552002,
+        "end_ms": 822.695405960083,
+        "events": 4,
+        "duration_ms": 23.953567504882812
+      },
+      {
+        "unit": 3,
+        "component": "CP0",
+        "start_ms": 778.460958480835,
+        "end_ms": 785.8196544647217,
+        "events": 1,
+        "duration_ms": 7.358695983886719
+      },
+      {
+        "unit": 3,
+        "component": "CP1",
+        "start_ms": 785.827974319458,
+        "end_ms": 792.7205476760864,
+        "events": 1,
+        "duration_ms": 6.892573356628418
+      },
+      {
+        "unit": 3,
+        "component": "CP2",
+        "start_ms": 824.9465703964233,
+        "end_ms": 835.634111404419,
+        "events": 1,
+        "duration_ms": 10.687541007995605
+      },
+      {
+        "unit": 3,
+        "component": "CP3",
+        "start_ms": 836.5185928344727,
+        "end_ms": 846.9956121444702,
+        "events": 1,
+        "duration_ms": 10.477019309997559
+      },
+      {
+        "unit": 3,
+        "component": "CP4",
+        "start_ms": 847.2365341186523,
+        "end_ms": 854.9896287918091,
+        "events": 1,
+        "duration_ms": 7.753094673156738
+      }
+    ],
+    "profiler_step_ms": 12466.586941,
+    "profiler_step_name": "ProfilerStep#59",
+    "origin_absolute_ms": 6732116929.419675,
+    "duration_ms": 867.5417737960815
+  },
+  {
+    "rank": 12,
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34031/profiler/iteration_60/rank12.1789699916473.pt.trace.json",
+    "sha256": "dcbe1d37b5e003d750c5b34c858d2b58da386d61fb45773e36cea89f4987efd3",
+    "start_ms": 0.36384105682373047,
+    "end_ms": 868.326150894165,
+    "phases": [
+      {
+        "unit": 0,
+        "phase": "recompute",
+        "start_ms": 0.36384105682373047,
+        "end_ms": 87.05826950073242,
+        "events": 153,
+        "duration_ms": 86.69442844390869
+      },
+      {
+        "unit": 0,
+        "phase": "backward",
+        "start_ms": 87.46091079711914,
+        "end_ms": 216.96645545959473,
+        "events": 199,
+        "duration_ms": 129.5055446624756
+      },
+      {
+        "unit": 1,
+        "phase": "recompute",
+        "start_ms": 217.07789516448975,
+        "end_ms": 302.2254819869995,
+        "events": 155,
+        "duration_ms": 85.14758682250977
+      },
+      {
+        "unit": 1,
+        "phase": "backward",
+        "start_ms": 302.62292289733887,
+        "end_ms": 433.1018285751343,
+        "events": 203,
+        "duration_ms": 130.4789056777954
+      },
+      {
+        "unit": 2,
+        "phase": "recompute",
+        "start_ms": 433.15582942962646,
+        "end_ms": 520.8864183425903,
+        "events": 155,
+        "duration_ms": 87.73058891296387
+      },
+      {
+        "unit": 2,
+        "phase": "backward",
+        "start_ms": 521.290018081665,
+        "end_ms": 654.1658782958984,
+        "events": 203,
+        "duration_ms": 132.8758602142334
+      },
+      {
+        "unit": 3,
+        "phase": "recompute",
+        "start_ms": 654.1690769195557,
+        "end_ms": 739.4872188568115,
+        "events": 159,
+        "duration_ms": 85.31814193725586
+      },
+      {
+        "unit": 3,
+        "phase": "backward",
+        "start_ms": 739.8959398269653,
+        "end_ms": 868.1939496994019,
+        "events": 211,
+        "duration_ms": 128.29800987243652
+      }
+    ],
+    "components": [
+      {
+        "unit": 0,
+        "component": "dispatch",
+        "start_ms": 87.88335227966309,
+        "end_ms": 88.19443225860596,
+        "events": 1,
+        "duration_ms": 0.3110799789428711
+      },
+      {
+        "unit": 0,
+        "component": "FC2",
+        "start_ms": 90.35807609558105,
+        "end_ms": 93.95040225982666,
+        "events": 34,
+        "duration_ms": 3.5923261642456055
+      },
+      {
+        "unit": 0,
+        "component": "FC1",
+        "start_ms": 95.80568599700928,
+        "end_ms": 102.15337657928467,
+        "events": 34,
+        "duration_ms": 6.347690582275391
+      },
+      {
+        "unit": 0,
+        "component": "combine",
+        "start_ms": 107.42386627197266,
+        "end_ms": 115.38227939605713,
+        "events": 3,
+        "duration_ms": 7.958413124084473
+      },
+      {
+        "unit": 0,
+        "component": "attention",
+        "start_ms": 147.43429470062256,
+        "end_ms": 171.14825534820557,
+        "events": 4,
+        "duration_ms": 23.713960647583008
+      },
+      {
+        "unit": 0,
+        "component": "CP0",
+        "start_ms": 126.99617862701416,
+        "end_ms": 134.44991207122803,
+        "events": 1,
+        "duration_ms": 7.453733444213867
+      },
+      {
+        "unit": 0,
+        "component": "CP1",
+        "start_ms": 134.45827198028564,
+        "end_ms": 141.36388492584229,
+        "events": 1,
+        "duration_ms": 6.905612945556641
+      },
+      {
+        "unit": 0,
+        "component": "CP2",
+        "start_ms": 173.401780128479,
+        "end_ms": 184.5606393814087,
+        "events": 1,
+        "duration_ms": 11.158859252929688
+      },
+      {
+        "unit": 0,
+        "component": "CP3",
+        "start_ms": 185.83504104614258,
+        "end_ms": 196.46674060821533,
+        "events": 1,
+        "duration_ms": 10.631699562072754
+      },
+      {
+        "unit": 0,
+        "component": "CP4",
+        "start_ms": 196.46994018554688,
+        "end_ms": 203.52995204925537,
+        "events": 1,
+        "duration_ms": 7.060011863708496
+      },
+      {
+        "unit": 1,
+        "component": "dispatch",
+        "start_ms": 303.04260444641113,
+        "end_ms": 303.36668491363525,
+        "events": 1,
+        "duration_ms": 0.3240804672241211
+      },
+      {
+        "unit": 1,
+        "component": "FC2",
+        "start_ms": 305.6580877304077,
+        "end_ms": 310.06985664367676,
+        "events": 36,
+        "duration_ms": 4.411768913269043
+      },
+      {
+        "unit": 1,
+        "component": "FC1",
+        "start_ms": 312.8532609939575,
+        "end_ms": 320.565354347229,
+        "events": 36,
+        "duration_ms": 7.712093353271484
+      },
+      {
+        "unit": 1,
+        "component": "combine",
+        "start_ms": 325.9106435775757,
+        "end_ms": 331.2704133987427,
+        "events": 3,
+        "duration_ms": 5.359769821166992
+      },
+      {
+        "unit": 1,
+        "component": "attention",
+        "start_ms": 363.51558780670166,
+        "end_ms": 387.2853899002075,
+        "events": 4,
+        "duration_ms": 23.76980209350586
+      },
+      {
+        "unit": 1,
+        "component": "CP0",
+        "start_ms": 342.67419242858887,
+        "end_ms": 350.6572456359863,
+        "events": 1,
+        "duration_ms": 7.983053207397461
+      },
+      {
+        "unit": 1,
+        "component": "CP1",
+        "start_ms": 350.6671657562256,
+        "end_ms": 357.50057792663574,
+        "events": 1,
+        "duration_ms": 6.833412170410156
+      },
+      {
+        "unit": 1,
+        "component": "CP2",
+        "start_ms": 389.87075424194336,
+        "end_ms": 401.04437255859375,
+        "events": 1,
+        "duration_ms": 11.17361831665039
+      },
+      {
+        "unit": 1,
+        "component": "CP3",
+        "start_ms": 401.6278142929077,
+        "end_ms": 411.93063259124756,
+        "events": 1,
+        "duration_ms": 10.302818298339844
+      },
+      {
+        "unit": 1,
+        "component": "CP4",
+        "start_ms": 412.9577941894531,
+        "end_ms": 419.9424066543579,
+        "events": 1,
+        "duration_ms": 6.984612464904785
+      },
+      {
+        "unit": 2,
+        "component": "dispatch",
+        "start_ms": 521.6879796981812,
+        "end_ms": 522.003420829773,
+        "events": 1,
+        "duration_ms": 0.3154411315917969
+      },
+      {
+        "unit": 2,
+        "component": "FC2",
+        "start_ms": 524.2659034729004,
+        "end_ms": 528.9557123184204,
+        "events": 36,
+        "duration_ms": 4.6898088455200195
+      },
+      {
+        "unit": 2,
+        "component": "FC1",
+        "start_ms": 531.8093166351318,
+        "end_ms": 539.9563293457031,
+        "events": 36,
+        "duration_ms": 8.147012710571289
+      },
+      {
+        "unit": 2,
+        "component": "combine",
+        "start_ms": 545.3312177658081,
+        "end_ms": 553.5542726516724,
+        "events": 3,
+        "duration_ms": 8.223054885864258
+      },
+      {
+        "unit": 2,
+        "component": "attention",
+        "start_ms": 585.8477258682251,
+        "end_ms": 609.7617244720459,
+        "events": 4,
+        "duration_ms": 23.9139986038208
+      },
+      {
+        "unit": 2,
+        "component": "CP0",
+        "start_ms": 565.1404514312744,
+        "end_ms": 572.6279430389404,
+        "events": 1,
+        "duration_ms": 7.487491607666016
+      },
+      {
+        "unit": 2,
+        "component": "CP1",
+        "start_ms": 572.6389436721802,
+        "end_ms": 579.5743951797485,
+        "events": 1,
+        "duration_ms": 6.935451507568359
+      },
+      {
+        "unit": 2,
+        "component": "CP2",
+        "start_ms": 612.1535682678223,
+        "end_ms": 622.711386680603,
+        "events": 1,
+        "duration_ms": 10.557818412780762
+      },
+      {
+        "unit": 2,
+        "component": "CP3",
+        "start_ms": 623.5835866928101,
+        "end_ms": 633.8510437011719,
+        "events": 1,
+        "duration_ms": 10.267457008361816
+      },
+      {
+        "unit": 2,
+        "component": "CP4",
+        "start_ms": 634.7081251144409,
+        "end_ms": 641.548336982727,
+        "events": 1,
+        "duration_ms": 6.840211868286133
+      },
+      {
+        "unit": 3,
+        "component": "dispatch",
+        "start_ms": 740.2942190170288,
+        "end_ms": 740.6196603775024,
+        "events": 1,
+        "duration_ms": 0.3254413604736328
+      },
+      {
+        "unit": 3,
+        "component": "FC2",
+        "start_ms": 743.0050640106201,
+        "end_ms": 747.6651124954224,
+        "events": 40,
+        "duration_ms": 4.660048484802246
+      },
+      {
+        "unit": 3,
+        "component": "FC1",
+        "start_ms": 750.2484760284424,
+        "end_ms": 758.0667695999146,
+        "events": 40,
+        "duration_ms": 7.818293571472168
+      },
+      {
+        "unit": 3,
+        "component": "combine",
+        "start_ms": 763.4296579360962,
+        "end_ms": 766.8030233383179,
+        "events": 3,
+        "duration_ms": 3.3733654022216797
+      },
+      {
+        "unit": 3,
+        "component": "attention",
+        "start_ms": 799.0557956695557,
+        "end_ms": 822.7693157196045,
+        "events": 4,
+        "duration_ms": 23.713520050048828
+      },
+      {
+        "unit": 3,
+        "component": "CP0",
+        "start_ms": 778.634162902832,
+        "end_ms": 786.2185354232788,
+        "events": 1,
+        "duration_ms": 7.584372520446777
+      },
+      {
+        "unit": 3,
+        "component": "CP1",
+        "start_ms": 786.2270154953003,
+        "end_ms": 793.0620260238647,
+        "events": 1,
+        "duration_ms": 6.835010528564453
+      },
+      {
+        "unit": 3,
+        "component": "CP2",
+        "start_ms": 825.0980386734009,
+        "end_ms": 836.4249382019043,
+        "events": 1,
+        "duration_ms": 11.326899528503418
+      },
+      {
+        "unit": 3,
+        "component": "CP3",
+        "start_ms": 837.4021406173706,
+        "end_ms": 847.7780771255493,
+        "events": 1,
+        "duration_ms": 10.375936508178711
+      },
+      {
+        "unit": 3,
+        "component": "CP4",
+        "start_ms": 848.6489181518555,
+        "end_ms": 855.805290222168,
+        "events": 1,
+        "duration_ms": 7.1563720703125
+      }
+    ],
+    "profiler_step_ms": 12467.679715,
+    "profiler_step_name": "ProfilerStep#59",
+    "origin_absolute_ms": 6732116929.419675,
+    "duration_ms": 867.9623098373413
+  },
+  {
+    "rank": 13,
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34031/profiler/iteration_60/rank13.1789699916494.pt.trace.json",
+    "sha256": "fbe2b88d923ff31ac7c2e076fcc8c3aa3b2dc3ef3542694f3c44d0e47bb39ca1",
+    "start_ms": 0.2372722625732422,
+    "end_ms": 868.2790212631226,
+    "phases": [
+      {
+        "unit": 0,
+        "phase": "recompute",
+        "start_ms": 0.2372722625732422,
+        "end_ms": 87.2065839767456,
+        "events": 153,
+        "duration_ms": 86.96931171417236
+      },
+      {
+        "unit": 0,
+        "phase": "backward",
+        "start_ms": 87.58042335510254,
+        "end_ms": 216.4008493423462,
+        "events": 199,
+        "duration_ms": 128.82042598724365
+      },
+      {
+        "unit": 1,
+        "phase": "recompute",
+        "start_ms": 216.40429019927979,
+        "end_ms": 302.323561668396,
+        "events": 155,
+        "duration_ms": 85.91927146911621
+      },
+      {
+        "unit": 1,
+        "phase": "backward",
+        "start_ms": 302.70304107666016,
+        "end_ms": 432.86027240753174,
+        "events": 203,
+        "duration_ms": 130.15723133087158
+      },
+      {
+        "unit": 2,
+        "phase": "recompute",
+        "start_ms": 432.86355209350586,
+        "end_ms": 520.8272695541382,
+        "events": 155,
+        "duration_ms": 87.96371746063232
+      },
+      {
+        "unit": 2,
+        "phase": "backward",
+        "start_ms": 521.1955108642578,
+        "end_ms": 654.4279899597168,
+        "events": 203,
+        "duration_ms": 133.23247909545898
+      },
+      {
+        "unit": 3,
+        "phase": "recompute",
+        "start_ms": 654.4310302734375,
+        "end_ms": 739.6023855209351,
+        "events": 157,
+        "duration_ms": 85.17135524749756
+      },
+      {
+        "unit": 3,
+        "phase": "backward",
+        "start_ms": 739.9768257141113,
+        "end_ms": 868.1499013900757,
+        "events": 207,
+        "duration_ms": 128.17307567596436
+      }
+    ],
+    "components": [
+      {
+        "unit": 0,
+        "component": "dispatch",
+        "start_ms": 87.99242401123047,
+        "end_ms": 88.31378555297852,
+        "events": 1,
+        "duration_ms": 0.3213615417480469
+      },
+      {
+        "unit": 0,
+        "component": "FC2",
+        "start_ms": 90.60274600982666,
+        "end_ms": 95.13014888763428,
+        "events": 34,
+        "duration_ms": 4.527402877807617
+      },
+      {
+        "unit": 0,
+        "component": "FC1",
+        "start_ms": 98.18239307403564,
+        "end_ms": 106.34980010986328,
+        "events": 34,
+        "duration_ms": 8.167407035827637
+      },
+      {
+        "unit": 0,
+        "component": "combine",
+        "start_ms": 111.8492841720581,
+        "end_ms": 115.50092697143555,
+        "events": 3,
+        "duration_ms": 3.6516427993774414
+      },
+      {
+        "unit": 0,
+        "component": "attention",
+        "start_ms": 147.37007331848145,
+        "end_ms": 171.6298122406006,
+        "events": 4,
+        "duration_ms": 24.25973892211914
+      },
+      {
+        "unit": 0,
+        "component": "CP0",
+        "start_ms": 126.99109649658203,
+        "end_ms": 134.44966411590576,
+        "events": 1,
+        "duration_ms": 7.4585676193237305
+      },
+      {
+        "unit": 0,
+        "component": "CP1",
+        "start_ms": 134.45798301696777,
+        "end_ms": 141.33734893798828,
+        "events": 1,
+        "duration_ms": 6.879365921020508
+      },
+      {
+        "unit": 0,
+        "component": "CP2",
+        "start_ms": 173.91661548614502,
+        "end_ms": 184.5027837753296,
+        "events": 1,
+        "duration_ms": 10.58616828918457
+      },
+      {
+        "unit": 0,
+        "component": "CP3",
+        "start_ms": 185.63970470428467,
+        "end_ms": 196.34847354888916,
+        "events": 1,
+        "duration_ms": 10.708768844604492
+      },
+      {
+        "unit": 0,
+        "component": "CP4",
+        "start_ms": 196.62795448303223,
+        "end_ms": 203.5313606262207,
+        "events": 1,
+        "duration_ms": 6.903406143188477
+      },
+      {
+        "unit": 1,
+        "component": "dispatch",
+        "start_ms": 303.1006021499634,
+        "end_ms": 303.43868255615234,
+        "events": 1,
+        "duration_ms": 0.33808040618896484
+      },
+      {
+        "unit": 1,
+        "component": "FC2",
+        "start_ms": 305.8671236038208,
+        "end_ms": 310.36928844451904,
+        "events": 36,
+        "duration_ms": 4.502164840698242
+      },
+      {
+        "unit": 1,
+        "component": "FC1",
+        "start_ms": 313.1912097930908,
+        "end_ms": 320.92645740509033,
+        "events": 36,
+        "duration_ms": 7.735247611999512
+      },
+      {
+        "unit": 1,
+        "component": "combine",
+        "start_ms": 326.3351812362671,
+        "end_ms": 331.3745050430298,
+        "events": 3,
+        "duration_ms": 5.039323806762695
+      },
+      {
+        "unit": 1,
+        "component": "attention",
+        "start_ms": 363.82629013061523,
+        "end_ms": 388.1451120376587,
+        "events": 4,
+        "duration_ms": 24.318821907043457
+      },
+      {
+        "unit": 1,
+        "component": "CP0",
+        "start_ms": 343.3561153411865,
+        "end_ms": 350.6804008483887,
+        "events": 1,
+        "duration_ms": 7.324285507202148
+      },
+      {
+        "unit": 1,
+        "component": "CP1",
+        "start_ms": 350.6882381439209,
+        "end_ms": 357.46868419647217,
+        "events": 1,
+        "duration_ms": 6.7804460525512695
+      },
+      {
+        "unit": 1,
+        "component": "CP2",
+        "start_ms": 390.69787406921387,
+        "end_ms": 401.05588245391846,
+        "events": 1,
+        "duration_ms": 10.35800838470459
+      },
+      {
+        "unit": 1,
+        "component": "CP3",
+        "start_ms": 401.39380264282227,
+        "end_ms": 411.8946924209595,
+        "events": 1,
+        "duration_ms": 10.500889778137207
+      },
+      {
+        "unit": 1,
+        "component": "CP4",
+        "start_ms": 413.1235342025757,
+        "end_ms": 419.9169807434082,
+        "events": 1,
+        "duration_ms": 6.7934465408325195
+      },
+      {
+        "unit": 2,
+        "component": "dispatch",
+        "start_ms": 521.6088314056396,
+        "end_ms": 521.9336309432983,
+        "events": 1,
+        "duration_ms": 0.3247995376586914
+      },
+      {
+        "unit": 2,
+        "component": "FC2",
+        "start_ms": 524.1729125976562,
+        "end_ms": 528.2923173904419,
+        "events": 36,
+        "duration_ms": 4.1194047927856445
+      },
+      {
+        "unit": 2,
+        "component": "FC1",
+        "start_ms": 530.5872793197632,
+        "end_ms": 537.6403656005859,
+        "events": 36,
+        "duration_ms": 7.053086280822754
+      },
+      {
+        "unit": 2,
+        "component": "combine",
+        "start_ms": 543.0132904052734,
+        "end_ms": 553.4788188934326,
+        "events": 3,
+        "duration_ms": 10.46552848815918
+      },
+      {
+        "unit": 2,
+        "component": "attention",
+        "start_ms": 585.6540079116821,
+        "end_ms": 609.628270149231,
+        "events": 4,
+        "duration_ms": 23.974262237548828
+      },
+      {
+        "unit": 2,
+        "component": "CP0",
+        "start_ms": 565.3511505126953,
+        "end_ms": 572.6511573791504,
+        "events": 1,
+        "duration_ms": 7.300006866455078
+      },
+      {
+        "unit": 2,
+        "component": "CP1",
+        "start_ms": 572.6613969802856,
+        "end_ms": 579.542763710022,
+        "events": 1,
+        "duration_ms": 6.881366729736328
+      },
+      {
+        "unit": 2,
+        "component": "CP2",
+        "start_ms": 611.8631925582886,
+        "end_ms": 622.6638021469116,
+        "events": 1,
+        "duration_ms": 10.800609588623047
+      },
+      {
+        "unit": 2,
+        "component": "CP3",
+        "start_ms": 623.4770822525024,
+        "end_ms": 633.7551307678223,
+        "events": 1,
+        "duration_ms": 10.278048515319824
+      },
+      {
+        "unit": 2,
+        "component": "CP4",
+        "start_ms": 634.0396118164062,
+        "end_ms": 641.5222587585449,
+        "events": 1,
+        "duration_ms": 7.482646942138672
+      },
+      {
+        "unit": 3,
+        "component": "dispatch",
+        "start_ms": 740.3883476257324,
+        "end_ms": 740.734227180481,
+        "events": 1,
+        "duration_ms": 0.34587955474853516
+      },
+      {
+        "unit": 3,
+        "component": "FC2",
+        "start_ms": 743.0308694839478,
+        "end_ms": 747.6320734024048,
+        "events": 38,
+        "duration_ms": 4.601203918457031
+      },
+      {
+        "unit": 3,
+        "component": "FC1",
+        "start_ms": 750.2415943145752,
+        "end_ms": 758.0668420791626,
+        "events": 38,
+        "duration_ms": 7.825247764587402
+      },
+      {
+        "unit": 3,
+        "component": "combine",
+        "start_ms": 763.3852872848511,
+        "end_ms": 766.8430099487305,
+        "events": 3,
+        "duration_ms": 3.4577226638793945
+      },
+      {
+        "unit": 3,
+        "component": "attention",
+        "start_ms": 799.0835990905762,
+        "end_ms": 823.4903011322021,
+        "events": 4,
+        "duration_ms": 24.406702041625977
+      },
+      {
+        "unit": 3,
+        "component": "CP0",
+        "start_ms": 778.8183002471924,
+        "end_ms": 786.235987663269,
+        "events": 1,
+        "duration_ms": 7.41768741607666
+      },
+      {
+        "unit": 3,
+        "component": "CP1",
+        "start_ms": 786.2456674575806,
+        "end_ms": 793.0339136123657,
+        "events": 1,
+        "duration_ms": 6.788246154785156
+      },
+      {
+        "unit": 3,
+        "component": "CP2",
+        "start_ms": 825.933183670044,
+        "end_ms": 836.4187135696411,
+        "events": 1,
+        "duration_ms": 10.485529899597168
+      },
+      {
+        "unit": 3,
+        "component": "CP3",
+        "start_ms": 837.287353515625,
+        "end_ms": 847.7486438751221,
+        "events": 1,
+        "duration_ms": 10.46129035949707
+      },
+      {
+        "unit": 3,
+        "component": "CP4",
+        "start_ms": 848.572322845459,
+        "end_ms": 855.7330493927002,
+        "events": 1,
+        "duration_ms": 7.160726547241211
+      }
+    ],
+    "profiler_step_ms": 12465.131813,
+    "profiler_step_name": "ProfilerStep#59",
+    "origin_absolute_ms": 6732116929.419675,
+    "duration_ms": 868.0417490005493
+  },
+  {
+    "rank": 14,
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34031/profiler/iteration_60/rank14.1789699916505.pt.trace.json",
+    "sha256": "2d4d3274a738fc69552e79efd7ce34d9a757ca019eaed5c065a1bf378d80aa9b",
+    "start_ms": 0.6932821273803711,
+    "end_ms": 868.313943862915,
+    "phases": [
+      {
+        "unit": 0,
+        "phase": "recompute",
+        "start_ms": 0.6932821273803711,
+        "end_ms": 87.06944942474365,
+        "events": 151,
+        "duration_ms": 86.37616729736328
+      },
+      {
+        "unit": 0,
+        "phase": "backward",
+        "start_ms": 87.49481010437012,
+        "end_ms": 217.5524206161499,
+        "events": 195,
+        "duration_ms": 130.05761051177979
+      },
+      {
+        "unit": 1,
+        "phase": "recompute",
+        "start_ms": 217.61182117462158,
+        "end_ms": 302.3520212173462,
+        "events": 155,
+        "duration_ms": 84.74020004272461
+      },
+      {
+        "unit": 1,
+        "phase": "backward",
+        "start_ms": 302.77342414855957,
+        "end_ms": 433.1189308166504,
+        "events": 203,
+        "duration_ms": 130.34550666809082
+      },
+      {
+        "unit": 2,
+        "phase": "recompute",
+        "start_ms": 433.123010635376,
+        "end_ms": 520.9123830795288,
+        "events": 159,
+        "duration_ms": 87.78937244415283
+      },
+      {
+        "unit": 2,
+        "phase": "backward",
+        "start_ms": 521.3145036697388,
+        "end_ms": 654.7488489151001,
+        "events": 211,
+        "duration_ms": 133.43434524536133
+      },
+      {
+        "unit": 3,
+        "phase": "recompute",
+        "start_ms": 654.7520084381104,
+        "end_ms": 739.2334518432617,
+        "events": 155,
+        "duration_ms": 84.48144340515137
+      },
+      {
+        "unit": 3,
+        "phase": "backward",
+        "start_ms": 739.6284132003784,
+        "end_ms": 868.1857433319092,
+        "events": 203,
+        "duration_ms": 128.55733013153076
+      }
+    ],
+    "components": [
+      {
+        "unit": 0,
+        "component": "dispatch",
+        "start_ms": 87.90685176849365,
+        "end_ms": 88.19221305847168,
+        "events": 1,
+        "duration_ms": 0.28536128997802734
+      },
+      {
+        "unit": 0,
+        "component": "FC2",
+        "start_ms": 90.76465892791748,
+        "end_ms": 95.29031181335449,
+        "events": 32,
+        "duration_ms": 4.525652885437012
+      },
+      {
+        "unit": 0,
+        "component": "FC1",
+        "start_ms": 98.52492046356201,
+        "end_ms": 106.52554416656494,
+        "events": 32,
+        "duration_ms": 8.00062370300293
+      },
+      {
+        "unit": 0,
+        "component": "combine",
+        "start_ms": 112.01744079589844,
+        "end_ms": 115.39852809906006,
+        "events": 3,
+        "duration_ms": 3.381087303161621
+      },
+      {
+        "unit": 0,
+        "component": "attention",
+        "start_ms": 147.2481803894043,
+        "end_ms": 171.49956893920898,
+        "events": 4,
+        "duration_ms": 24.251388549804688
+      },
+      {
+        "unit": 0,
+        "component": "CP0",
+        "start_ms": 127.04168319702148,
+        "end_ms": 134.31734371185303,
+        "events": 1,
+        "duration_ms": 7.275660514831543
+      },
+      {
+        "unit": 0,
+        "component": "CP1",
+        "start_ms": 134.32734298706055,
+        "end_ms": 141.29140186309814,
+        "events": 1,
+        "duration_ms": 6.964058876037598
+      },
+      {
+        "unit": 0,
+        "component": "CP2",
+        "start_ms": 173.74245643615723,
+        "end_ms": 184.30092525482178,
+        "events": 1,
+        "duration_ms": 10.55846881866455
+      },
+      {
+        "unit": 0,
+        "component": "CP3",
+        "start_ms": 185.59557056427002,
+        "end_ms": 196.3754005432129,
+        "events": 1,
+        "duration_ms": 10.779829978942871
+      },
+      {
+        "unit": 0,
+        "component": "CP4",
+        "start_ms": 196.37792015075684,
+        "end_ms": 204.29154300689697,
+        "events": 1,
+        "duration_ms": 7.913622856140137
+      },
+      {
+        "unit": 1,
+        "component": "dispatch",
+        "start_ms": 303.17418575286865,
+        "end_ms": 303.47102642059326,
+        "events": 1,
+        "duration_ms": 0.2968406677246094
+      },
+      {
+        "unit": 1,
+        "component": "FC2",
+        "start_ms": 306.0385522842407,
+        "end_ms": 311.25336837768555,
+        "events": 36,
+        "duration_ms": 5.214816093444824
+      },
+      {
+        "unit": 1,
+        "component": "FC1",
+        "start_ms": 314.913537979126,
+        "end_ms": 324.0069637298584,
+        "events": 36,
+        "duration_ms": 9.093425750732422
+      },
+      {
+        "unit": 1,
+        "component": "combine",
+        "start_ms": 329.655460357666,
+        "end_ms": 331.4166250228882,
+        "events": 3,
+        "duration_ms": 1.761164665222168
+      },
+      {
+        "unit": 1,
+        "component": "attention",
+        "start_ms": 363.3975706100464,
+        "end_ms": 387.65135955810547,
+        "events": 4,
+        "duration_ms": 24.253788948059082
+      },
+      {
+        "unit": 1,
+        "component": "CP0",
+        "start_ms": 342.9484176635742,
+        "end_ms": 350.4092388153076,
+        "events": 1,
+        "duration_ms": 7.460821151733398
+      },
+      {
+        "unit": 1,
+        "component": "CP1",
+        "start_ms": 350.41773223876953,
+        "end_ms": 357.43947315216064,
+        "events": 1,
+        "duration_ms": 7.021740913391113
+      },
+      {
+        "unit": 1,
+        "component": "CP2",
+        "start_ms": 389.8914861679077,
+        "end_ms": 401.1245584487915,
+        "events": 1,
+        "duration_ms": 11.233072280883789
+      },
+      {
+        "unit": 1,
+        "component": "CP3",
+        "start_ms": 402.0873613357544,
+        "end_ms": 412.66675186157227,
+        "events": 1,
+        "duration_ms": 10.579390525817871
+      },
+      {
+        "unit": 1,
+        "component": "CP4",
+        "start_ms": 412.9330720901489,
+        "end_ms": 419.95677375793457,
+        "events": 1,
+        "duration_ms": 7.0237016677856445
+      },
+      {
+        "unit": 2,
+        "component": "dispatch",
+        "start_ms": 521.7448263168335,
+        "end_ms": 522.0453071594238,
+        "events": 1,
+        "duration_ms": 0.30048084259033203
+      },
+      {
+        "unit": 2,
+        "component": "FC2",
+        "start_ms": 524.6315937042236,
+        "end_ms": 530.7770118713379,
+        "events": 40,
+        "duration_ms": 6.145418167114258
+      },
+      {
+        "unit": 2,
+        "component": "FC1",
+        "start_ms": 535.2310256958008,
+        "end_ms": 546.1939363479614,
+        "events": 40,
+        "duration_ms": 10.962910652160645
+      },
+      {
+        "unit": 2,
+        "component": "combine",
+        "start_ms": 551.867112159729,
+        "end_ms": 553.5760774612427,
+        "events": 3,
+        "duration_ms": 1.7089653015136719
+      },
+      {
+        "unit": 2,
+        "component": "attention",
+        "start_ms": 585.5824499130249,
+        "end_ms": 609.4869575500488,
+        "events": 4,
+        "duration_ms": 23.904507637023926
+      },
+      {
+        "unit": 2,
+        "component": "CP0",
+        "start_ms": 565.0745096206665,
+        "end_ms": 572.5340518951416,
+        "events": 1,
+        "duration_ms": 7.459542274475098
+      },
+      {
+        "unit": 2,
+        "component": "CP1",
+        "start_ms": 572.5452919006348,
+        "end_ms": 579.4460325241089,
+        "events": 1,
+        "duration_ms": 6.900740623474121
+      },
+      {
+        "unit": 2,
+        "component": "CP2",
+        "start_ms": 611.9584856033325,
+        "end_ms": 622.9471569061279,
+        "events": 1,
+        "duration_ms": 10.98867130279541
+      },
+      {
+        "unit": 2,
+        "component": "CP3",
+        "start_ms": 623.7498788833618,
+        "end_ms": 634.5160703659058,
+        "events": 1,
+        "duration_ms": 10.766191482543945
+      },
+      {
+        "unit": 2,
+        "component": "CP4",
+        "start_ms": 635.3397932052612,
+        "end_ms": 642.0828514099121,
+        "events": 1,
+        "duration_ms": 6.743058204650879
+      },
+      {
+        "unit": 3,
+        "component": "dispatch",
+        "start_ms": 740.0484142303467,
+        "end_ms": 740.3391351699829,
+        "events": 1,
+        "duration_ms": 0.29072093963623047
+      },
+      {
+        "unit": 3,
+        "component": "FC2",
+        "start_ms": 742.9553022384644,
+        "end_ms": 747.1594352722168,
+        "events": 36,
+        "duration_ms": 4.204133033752441
+      },
+      {
+        "unit": 3,
+        "component": "FC1",
+        "start_ms": 749.3890008926392,
+        "end_ms": 756.4509811401367,
+        "events": 36,
+        "duration_ms": 7.061980247497559
+      },
+      {
+        "unit": 3,
+        "component": "combine",
+        "start_ms": 761.9266366958618,
+        "end_ms": 766.7163705825806,
+        "events": 3,
+        "duration_ms": 4.78973388671875
+      },
+      {
+        "unit": 3,
+        "component": "attention",
+        "start_ms": 799.0039443969727,
+        "end_ms": 823.263614654541,
+        "events": 4,
+        "duration_ms": 24.25967025756836
+      },
+      {
+        "unit": 3,
+        "component": "CP0",
+        "start_ms": 778.5034055709839,
+        "end_ms": 785.8179063796997,
+        "events": 1,
+        "duration_ms": 7.31450080871582
+      },
+      {
+        "unit": 3,
+        "component": "CP1",
+        "start_ms": 785.8261461257935,
+        "end_ms": 792.8297262191772,
+        "events": 1,
+        "duration_ms": 7.003580093383789
+      },
+      {
+        "unit": 3,
+        "component": "CP2",
+        "start_ms": 825.5160608291626,
+        "end_ms": 835.9778509140015,
+        "events": 1,
+        "duration_ms": 10.461790084838867
+      },
+      {
+        "unit": 3,
+        "component": "CP3",
+        "start_ms": 837.2458543777466,
+        "end_ms": 848.0070457458496,
+        "events": 1,
+        "duration_ms": 10.761191368103027
+      },
+      {
+        "unit": 3,
+        "component": "CP4",
+        "start_ms": 848.0092849731445,
+        "end_ms": 855.823787689209,
+        "events": 1,
+        "duration_ms": 7.814502716064453
+      }
+    ],
+    "profiler_step_ms": 12466.954194,
+    "profiler_step_name": "ProfilerStep#59",
+    "origin_absolute_ms": 6732116929.419675,
+    "duration_ms": 867.6206617355347
+  },
+  {
+    "rank": 15,
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34031/profiler/iteration_60/rank15.1789699916493.pt.trace.json",
+    "sha256": "81ddb054559d55ad2c584fa1e67a851a0499e20e4f87834685534200e233f722",
+    "start_ms": 2.0965003967285156,
+    "end_ms": 868.4640884399414,
+    "phases": [
+      {
+        "unit": 0,
+        "phase": "recompute",
+        "start_ms": 2.0965003967285156,
+        "end_ms": 87.0720157623291,
+        "events": 149,
+        "duration_ms": 84.97551536560059
+      },
+      {
+        "unit": 0,
+        "phase": "backward",
+        "start_ms": 87.47853565216064,
+        "end_ms": 216.78763103485107,
+        "events": 191,
+        "duration_ms": 129.30909538269043
+      },
+      {
+        "unit": 1,
+        "phase": "recompute",
+        "start_ms": 216.98647117614746,
+        "end_ms": 302.3405466079712,
+        "events": 153,
+        "duration_ms": 85.35407543182373
+      },
+      {
+        "unit": 1,
+        "phase": "backward",
+        "start_ms": 302.713547706604,
+        "end_ms": 432.8531541824341,
+        "events": 199,
+        "duration_ms": 130.13960647583008
+      },
+      {
+        "unit": 2,
+        "phase": "recompute",
+        "start_ms": 432.8562345504761,
+        "end_ms": 520.9127979278564,
+        "events": 157,
+        "duration_ms": 88.05656337738037
+      },
+      {
+        "unit": 2,
+        "phase": "backward",
+        "start_ms": 521.2922782897949,
+        "end_ms": 654.6291856765747,
+        "events": 207,
+        "duration_ms": 133.33690738677979
+      },
+      {
+        "unit": 3,
+        "phase": "recompute",
+        "start_ms": 654.632266998291,
+        "end_ms": 739.6113862991333,
+        "events": 155,
+        "duration_ms": 84.97911930084229
+      },
+      {
+        "unit": 3,
+        "phase": "backward",
+        "start_ms": 739.9915466308594,
+        "end_ms": 868.332447052002,
+        "events": 203,
+        "duration_ms": 128.34090042114258
+      }
+    ],
+    "components": [
+      {
+        "unit": 0,
+        "component": "dispatch",
+        "start_ms": 87.96873760223389,
+        "end_ms": 88.25577735900879,
+        "events": 1,
+        "duration_ms": 0.28703975677490234
+      },
+      {
+        "unit": 0,
+        "component": "FC2",
+        "start_ms": 90.36462020874023,
+        "end_ms": 93.75858497619629,
+        "events": 30,
+        "duration_ms": 3.3939647674560547
+      },
+      {
+        "unit": 0,
+        "component": "FC1",
+        "start_ms": 95.50390720367432,
+        "end_ms": 101.4272346496582,
+        "events": 30,
+        "duration_ms": 5.923327445983887
+      },
+      {
+        "unit": 0,
+        "component": "combine",
+        "start_ms": 106.74204158782959,
+        "end_ms": 115.38149452209473,
+        "events": 3,
+        "duration_ms": 8.639452934265137
+      },
+      {
+        "unit": 0,
+        "component": "attention",
+        "start_ms": 147.3530979156494,
+        "end_ms": 171.37668991088867,
+        "events": 4,
+        "duration_ms": 24.023591995239258
+      },
+      {
+        "unit": 0,
+        "component": "CP0",
+        "start_ms": 126.71282863616943,
+        "end_ms": 134.37143993377686,
+        "events": 1,
+        "duration_ms": 7.658611297607422
+      },
+      {
+        "unit": 0,
+        "component": "CP1",
+        "start_ms": 134.3810396194458,
+        "end_ms": 141.282808303833,
+        "events": 1,
+        "duration_ms": 6.901768684387207
+      },
+      {
+        "unit": 0,
+        "component": "CP2",
+        "start_ms": 173.92593383789062,
+        "end_ms": 184.30762767791748,
+        "events": 1,
+        "duration_ms": 10.381693840026855
+      },
+      {
+        "unit": 0,
+        "component": "CP3",
+        "start_ms": 184.69382762908936,
+        "end_ms": 196.23980236053467,
+        "events": 1,
+        "duration_ms": 11.545974731445312
+      },
+      {
+        "unit": 0,
+        "component": "CP4",
+        "start_ms": 197.335205078125,
+        "end_ms": 204.3926544189453,
+        "events": 1,
+        "duration_ms": 7.0574493408203125
+      },
+      {
+        "unit": 1,
+        "component": "dispatch",
+        "start_ms": 303.11434841156006,
+        "end_ms": 303.40254974365234,
+        "events": 1,
+        "duration_ms": 0.28820133209228516
+      },
+      {
+        "unit": 1,
+        "component": "FC2",
+        "start_ms": 305.9362726211548,
+        "end_ms": 310.86407947540283,
+        "events": 34,
+        "duration_ms": 4.927806854248047
+      },
+      {
+        "unit": 1,
+        "component": "FC1",
+        "start_ms": 314.1854829788208,
+        "end_ms": 322.8246955871582,
+        "events": 34,
+        "duration_ms": 8.639212608337402
+      },
+      {
+        "unit": 1,
+        "component": "combine",
+        "start_ms": 328.5188636779785,
+        "end_ms": 331.3739471435547,
+        "events": 3,
+        "duration_ms": 2.855083465576172
+      },
+      {
+        "unit": 1,
+        "component": "attention",
+        "start_ms": 363.49633598327637,
+        "end_ms": 388.13701152801514,
+        "events": 4,
+        "duration_ms": 24.64067554473877
+      },
+      {
+        "unit": 1,
+        "component": "CP0",
+        "start_ms": 342.82504177093506,
+        "end_ms": 350.5279712677002,
+        "events": 1,
+        "duration_ms": 7.702929496765137
+      },
+      {
+        "unit": 1,
+        "component": "CP1",
+        "start_ms": 350.5360383987427,
+        "end_ms": 357.42856788635254,
+        "events": 1,
+        "duration_ms": 6.892529487609863
+      },
+      {
+        "unit": 1,
+        "component": "CP2",
+        "start_ms": 390.6525344848633,
+        "end_ms": 401.23194885253906,
+        "events": 1,
+        "duration_ms": 10.579414367675781
+      },
+      {
+        "unit": 1,
+        "component": "CP3",
+        "start_ms": 402.0163507461548,
+        "end_ms": 412.59012603759766,
+        "events": 1,
+        "duration_ms": 10.573775291442871
+      },
+      {
+        "unit": 1,
+        "component": "CP4",
+        "start_ms": 413.1829652786255,
+        "end_ms": 420.0103359222412,
+        "events": 1,
+        "duration_ms": 6.827370643615723
+      },
+      {
+        "unit": 2,
+        "component": "dispatch",
+        "start_ms": 521.6830387115479,
+        "end_ms": 521.9764795303345,
+        "events": 1,
+        "duration_ms": 0.2934408187866211
+      },
+      {
+        "unit": 2,
+        "component": "FC2",
+        "start_ms": 524.4880428314209,
+        "end_ms": 529.7576503753662,
+        "events": 38,
+        "duration_ms": 5.2696075439453125
+      },
+      {
+        "unit": 2,
+        "component": "FC1",
+        "start_ms": 533.2360553741455,
+        "end_ms": 542.5832681655884,
+        "events": 38,
+        "duration_ms": 9.347212791442871
+      },
+      {
+        "unit": 2,
+        "component": "combine",
+        "start_ms": 548.2737159729004,
+        "end_ms": 553.5961236953735,
+        "events": 3,
+        "duration_ms": 5.3224077224731445
+      },
+      {
+        "unit": 2,
+        "component": "attention",
+        "start_ms": 585.7995290756226,
+        "end_ms": 610.0781240463257,
+        "events": 4,
+        "duration_ms": 24.278594970703125
+      },
+      {
+        "unit": 2,
+        "component": "CP0",
+        "start_ms": 565.0074195861816,
+        "end_ms": 572.5248308181763,
+        "events": 1,
+        "duration_ms": 7.517411231994629
+      },
+      {
+        "unit": 2,
+        "component": "CP1",
+        "start_ms": 572.5363111495972,
+        "end_ms": 579.4337606430054,
+        "events": 1,
+        "duration_ms": 6.897449493408203
+      },
+      {
+        "unit": 2,
+        "component": "CP2",
+        "start_ms": 612.3890466690063,
+        "end_ms": 622.9908218383789,
+        "events": 1,
+        "duration_ms": 10.601775169372559
+      },
+      {
+        "unit": 2,
+        "component": "CP3",
+        "start_ms": 624.0198230743408,
+        "end_ms": 634.3936386108398,
+        "events": 1,
+        "duration_ms": 10.373815536499023
+      },
+      {
+        "unit": 2,
+        "component": "CP4",
+        "start_ms": 635.1912794113159,
+        "end_ms": 642.0811290740967,
+        "events": 1,
+        "duration_ms": 6.889849662780762
+      },
+      {
+        "unit": 3,
+        "component": "dispatch",
+        "start_ms": 740.384467124939,
+        "end_ms": 740.6725473403931,
+        "events": 1,
+        "duration_ms": 0.28808021545410156
+      },
+      {
+        "unit": 3,
+        "component": "FC2",
+        "start_ms": 743.0433511734009,
+        "end_ms": 747.7885580062866,
+        "events": 36,
+        "duration_ms": 4.745206832885742
+      },
+      {
+        "unit": 3,
+        "component": "FC1",
+        "start_ms": 750.9752416610718,
+        "end_ms": 759.5118532180786,
+        "events": 36,
+        "duration_ms": 8.536611557006836
+      },
+      {
+        "unit": 3,
+        "component": "combine",
+        "start_ms": 764.9693012237549,
+        "end_ms": 766.7484645843506,
+        "events": 3,
+        "duration_ms": 1.7791633605957031
+      },
+      {
+        "unit": 3,
+        "component": "attention",
+        "start_ms": 798.8453903198242,
+        "end_ms": 822.871823310852,
+        "events": 4,
+        "duration_ms": 24.026432991027832
+      },
+      {
+        "unit": 3,
+        "component": "CP0",
+        "start_ms": 778.3719606399536,
+        "end_ms": 785.8354911804199,
+        "events": 1,
+        "duration_ms": 7.463530540466309
+      },
+      {
+        "unit": 3,
+        "component": "CP1",
+        "start_ms": 785.8451709747314,
+        "end_ms": 792.7496213912964,
+        "events": 1,
+        "duration_ms": 6.904450416564941
+      },
+      {
+        "unit": 3,
+        "component": "CP2",
+        "start_ms": 825.1074666976929,
+        "end_ms": 836.0391616821289,
+        "events": 1,
+        "duration_ms": 10.931694984436035
+      },
+      {
+        "unit": 3,
+        "component": "CP3",
+        "start_ms": 837.1324443817139,
+        "end_ms": 847.8725385665894,
+        "events": 1,
+        "duration_ms": 10.740094184875488
+      },
+      {
+        "unit": 3,
+        "component": "CP4",
+        "start_ms": 848.7024602890015,
+        "end_ms": 855.9090700149536,
+        "events": 1,
+        "duration_ms": 7.206609725952148
+      }
+    ],
+    "profiler_step_ms": 12468.256217,
+    "profiler_step_name": "ProfilerStep#59",
+    "origin_absolute_ms": 6732116929.419675,
+    "duration_ms": 866.3675880432129
+  }
+]

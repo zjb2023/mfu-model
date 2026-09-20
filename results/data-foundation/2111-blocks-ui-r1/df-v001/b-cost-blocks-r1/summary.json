@@ -1,0 +1,136 @@
+{
+  "status": "PARTIAL_STREAM_LOCAL_COST_INTERFACE",
+  "scope": "32GPU iter60 PP1 B0 ranks8..15",
+  "B_device_window_ms": 868.8333587646484,
+  "replay_ms": 868.8333587646484,
+  "ranks": [
+    {
+      "rank": 8,
+      "blocks": 177,
+      "B_start_ms": 2.6599130630493164,
+      "B_end_ms": 868.8333587646484,
+      "marker_counts": {
+        "COMM_all_to_all": 36,
+        "COMM_wait": 40,
+        "COMM_allreduce": 4,
+        "EP_dispatch_recompute": 4,
+        "EP_combine_recompute": 4,
+        "EP_dispatch_backward": 4,
+        "EP_combine_backward": 4
+      }
+    },
+    {
+      "rank": 9,
+      "blocks": 177,
+      "B_start_ms": 0.6082334518432617,
+      "B_end_ms": 868.7841863632202,
+      "marker_counts": {
+        "COMM_all_to_all": 36,
+        "COMM_wait": 40,
+        "COMM_allreduce": 4,
+        "EP_dispatch_recompute": 4,
+        "EP_combine_recompute": 4,
+        "EP_dispatch_backward": 4,
+        "EP_combine_backward": 4
+      }
+    },
+    {
+      "rank": 10,
+      "blocks": 177,
+      "B_start_ms": 0.5590572357177734,
+      "B_end_ms": 867.5566530227661,
+      "marker_counts": {
+        "COMM_all_to_all": 36,
+        "COMM_wait": 40,
+        "COMM_allreduce": 4,
+        "EP_dispatch_recompute": 4,
+        "EP_combine_recompute": 4,
+        "EP_dispatch_backward": 4,
+        "EP_combine_backward": 4
+      }
+    },
+    {
+      "rank": 11,
+      "blocks": 177,
+      "B_start_ms": 0.0,
+      "B_end_ms": 867.5417737960815,
+      "marker_counts": {
+        "COMM_all_to_all": 36,
+        "COMM_wait": 40,
+        "COMM_allreduce": 4,
+        "EP_dispatch_recompute": 4,
+        "EP_combine_recompute": 4,
+        "EP_dispatch_backward": 4,
+        "EP_combine_backward": 4
+      }
+    },
+    {
+      "rank": 12,
+      "blocks": 177,
+      "B_start_ms": 0.36384105682373047,
+      "B_end_ms": 868.326150894165,
+      "marker_counts": {
+        "COMM_all_to_all": 36,
+        "COMM_wait": 40,
+        "COMM_allreduce": 4,
+        "EP_dispatch_recompute": 4,
+        "EP_combine_recompute": 4,
+        "EP_dispatch_backward": 4,
+        "EP_combine_backward": 4
+      }
+    },
+    {
+      "rank": 13,
+      "blocks": 177,
+      "B_start_ms": 0.2372722625732422,
+      "B_end_ms": 868.2790212631226,
+      "marker_counts": {
+        "COMM_all_to_all": 36,
+        "COMM_wait": 40,
+        "COMM_allreduce": 4,
+        "EP_dispatch_recompute": 4,
+        "EP_combine_recompute": 4,
+        "EP_dispatch_backward": 4,
+        "EP_combine_backward": 4
+      }
+    },
+    {
+      "rank": 14,
+      "blocks": 177,
+      "B_start_ms": 0.6932821273803711,
+      "B_end_ms": 868.313943862915,
+      "marker_counts": {
+        "COMM_all_to_all": 36,
+        "COMM_wait": 40,
+        "COMM_allreduce": 4,
+        "EP_dispatch_recompute": 4,
+        "EP_combine_recompute": 4,
+        "EP_dispatch_backward": 4,
+        "EP_combine_backward": 4
+      }
+    },
+    {
+      "rank": 15,
+      "blocks": 177,
+      "B_start_ms": 2.0965003967285156,
+      "B_end_ms": 868.4640884399414,
+      "marker_counts": {
+        "COMM_all_to_all": 36,
+        "COMM_wait": 40,
+        "COMM_allreduce": 4,
+        "EP_dispatch_recompute": 4,
+        "EP_combine_recompute": 4,
+        "EP_dispatch_backward": 4,
+        "EP_combine_backward": 4
+      }
+    }
+  ],
+  "checks": "PASS same-stream baseline boundary replay",
+  "limitations": [
+    "Cross-stream and cross-rank CP/EP readiness edges NOT closed; stream ready costs preserve source trace only.",
+    "Do NOT insert this block graph into full 1F1B as a validated predictive B yet.",
+    "External replacements only test local stream cost sensitivity, not fully synchronized collective prediction.",
+    "No original aggregate B cost is added to this graph; pure service costs require decomposition.",
+    "Execution unit0..3 are checkpoint order, not verified model layer indices; recompute classification based on fused forward markers."
+  ]
+}

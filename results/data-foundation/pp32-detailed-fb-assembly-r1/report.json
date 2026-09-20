@@ -1,0 +1,53 @@
+{
+  "scope": "32GPU PP4 m8; PP0 first F device start -> last B device end, including pipeline fill/drain; excludes RS/OPT/AG",
+  "prediction": {
+    "window_ms": 11917.227759242056,
+    "middle_cost_ms": {
+      "F": 342.7138833999634,
+      "B": 868.8333587646489
+    }
+  },
+  "evaluation": [
+    {
+      "iteration": 60,
+      "rank": 0,
+      "predicted_ms": 11917.227759242056,
+      "trace_ms": 12064.008903503418,
+      "error_ms": -146.781144261362,
+      "ARE_percent": 1.216686305816107
+    },
+    {
+      "iteration": 70,
+      "rank": 0,
+      "predicted_ms": 11917.227759242056,
+      "trace_ms": 12260.02732372284,
+      "error_ms": -342.7995644807834,
+      "ARE_percent": 2.796075044771515
+    }
+  ],
+  "checks": {
+    "status": "PASS_ASSEMBLY_PARTIAL_FULL_WORLD_MODEL",
+    "module_instances": 32,
+    "graph_nodes": 83617,
+    "scalar_contraction": "PASS every skeleton endpoint",
+    "double_charge": "PASS zero-cost wrappers replace old scalars",
+    "cost_propagation": {
+      "node": "s1:B0/U0:moe:r8:s0:1",
+      "plus_ms": 1000,
+      "window_shift_ms": 997.8062285156411
+    },
+    "seal_verified": true
+  },
+  "target_fitted": false,
+  "blind": false,
+  "PP2_policy": "PP1 detailed source60 templates reused after source60 PP2 signature checks; no PP2 fine-grained cost calibration",
+  "limitations": [
+    "stage-group completion and PP rendezvous are simplified, not full-world rank-resolved PP overlap",
+    "same F0/B0 source template reused across all microbatches and both middle stages",
+    "first/last stage keep source60 scalar costs; CP/EP already included inside FB",
+    "source reserved readiness remains empirical",
+    "target cached GPU windows use prior runtime-only association; current detailed modules use runtime+driver",
+    "cross-host timestamp alignment conditional; per-stage timeline comparison diagnostic only",
+    "no new256 prediction"
+  ]
+}

@@ -1,0 +1,770 @@
+{
+  "scope": "32GPU iter60 PP1 F0 layer0 ranks8..15; through tail Add and next-layer entry (next LayerNorm excluded)",
+  "status": "FROZEN_CONDITIONAL_BACKBONE_NOT_INDEPENDENT_PREDICTION",
+  "accounting_checks": "PASS",
+  "independent_prediction": false,
+  "truth_window_ms": 84.86391544342041,
+  "replay_window_ms": 84.86391544342041,
+  "max_boundary_error_ms": 0.0,
+  "no_explicit_gap_window_ms": 75.23624897003174,
+  "explicit_gap_effect_ms": 8.535863876342773,
+  "notify_post_ready_ms": 0.05692005157470703,
+  "combine_unresolved_residual_ms": 0.9696331024169922,
+  "unresolved_gap_nodes": [
+    {
+      "id": "r8:A0:unresolved_gap",
+      "deps": [],
+      "cost_ms": 0.22269248962402344,
+      "kind": "unresolved_gap",
+      "rank": 8,
+      "observed_end_ms": 0.22269248962402344,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r8:A1:unresolved_gap",
+      "deps": [
+        "r8:A0"
+      ],
+      "cost_ms": 0.0040798187255859375,
+      "kind": "unresolved_gap",
+      "rank": 8,
+      "observed_end_ms": 7.439857482910156,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r8:A2:unresolved_gap",
+      "deps": [
+        "r8:A1"
+      ],
+      "cost_ms": 0.007625579833984375,
+      "kind": "unresolved_gap",
+      "rank": 8,
+      "observed_end_ms": 8.403923988342285,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r9:A0:unresolved_gap",
+      "deps": [],
+      "cost_ms": 0.2109851837158203,
+      "kind": "unresolved_gap",
+      "rank": 9,
+      "observed_end_ms": 0.2109851837158203,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r9:A1:unresolved_gap",
+      "deps": [
+        "r9:A0"
+      ],
+      "cost_ms": 0.004960060119628906,
+      "kind": "unresolved_gap",
+      "rank": 9,
+      "observed_end_ms": 7.412214279174805,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r9:A2:unresolved_gap",
+      "deps": [
+        "r9:A1"
+      ],
+      "cost_ms": 0.0070056915283203125,
+      "kind": "unresolved_gap",
+      "rank": 9,
+      "observed_end_ms": 8.305383682250977,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r10:A0:unresolved_gap",
+      "deps": [],
+      "cost_ms": 0.06809806823730469,
+      "kind": "unresolved_gap",
+      "rank": 10,
+      "observed_end_ms": 0.06809806823730469,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r10:A1:unresolved_gap",
+      "deps": [
+        "r10:A0"
+      ],
+      "cost_ms": 0.0037593841552734375,
+      "kind": "unresolved_gap",
+      "rank": 10,
+      "observed_end_ms": 7.274186134338379,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r10:A2:unresolved_gap",
+      "deps": [
+        "r10:A1"
+      ],
+      "cost_ms": 0.007439613342285156,
+      "kind": "unresolved_gap",
+      "rank": 10,
+      "observed_end_ms": 8.200867652893066,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r11:A0:unresolved_gap",
+      "deps": [],
+      "cost_ms": 0.24836063385009766,
+      "kind": "unresolved_gap",
+      "rank": 11,
+      "observed_end_ms": 0.24836063385009766,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r11:A1:unresolved_gap",
+      "deps": [
+        "r11:A0"
+      ],
+      "cost_ms": 0.006999969482421875,
+      "kind": "unresolved_gap",
+      "rank": 11,
+      "observed_end_ms": 7.469414710998535,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r11:A2:unresolved_gap",
+      "deps": [
+        "r11:A1"
+      ],
+      "cost_ms": 0.002880096435546875,
+      "kind": "unresolved_gap",
+      "rank": 11,
+      "observed_end_ms": 8.469856262207031,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r12:A0:unresolved_gap",
+      "deps": [],
+      "cost_ms": 0.19480133056640625,
+      "kind": "unresolved_gap",
+      "rank": 12,
+      "observed_end_ms": 0.19480133056640625,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r12:A1:unresolved_gap",
+      "deps": [
+        "r12:A0"
+      ],
+      "cost_ms": 0.00344085693359375,
+      "kind": "unresolved_gap",
+      "rank": 12,
+      "observed_end_ms": 7.405174255371094,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r12:A2:unresolved_gap",
+      "deps": [
+        "r12:A1"
+      ],
+      "cost_ms": 0.00724029541015625,
+      "kind": "unresolved_gap",
+      "rank": 12,
+      "observed_end_ms": 8.408095359802246,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r13:A0:unresolved_gap",
+      "deps": [],
+      "cost_ms": 0.1116485595703125,
+      "kind": "unresolved_gap",
+      "rank": 13,
+      "observed_end_ms": 0.1116485595703125,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r13:A1:unresolved_gap",
+      "deps": [
+        "r13:A0"
+      ],
+      "cost_ms": 0.0031995773315429688,
+      "kind": "unresolved_gap",
+      "rank": 13,
+      "observed_end_ms": 7.327694892883301,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r13:A2:unresolved_gap",
+      "deps": [
+        "r13:A1"
+      ],
+      "cost_ms": 0.007365226745605469,
+      "kind": "unresolved_gap",
+      "rank": 13,
+      "observed_end_ms": 8.322661399841309,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r14:A0:unresolved_gap",
+      "deps": [],
+      "cost_ms": 0.1871490478515625,
+      "kind": "unresolved_gap",
+      "rank": 14,
+      "observed_end_ms": 0.1871490478515625,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r14:A1:unresolved_gap",
+      "deps": [
+        "r14:A0"
+      ],
+      "cost_ms": 0.00395965576171875,
+      "kind": "unresolved_gap",
+      "rank": 14,
+      "observed_end_ms": 7.386970520019531,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r14:A2:unresolved_gap",
+      "deps": [
+        "r14:A1"
+      ],
+      "cost_ms": 0.010199546813964844,
+      "kind": "unresolved_gap",
+      "rank": 14,
+      "observed_end_ms": 8.300612449645996,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r15:A1:unresolved_gap",
+      "deps": [
+        "r15:A0"
+      ],
+      "cost_ms": 0.006958961486816406,
+      "kind": "unresolved_gap",
+      "rank": 15,
+      "observed_end_ms": 7.236689567565918,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r15:A2:unresolved_gap",
+      "deps": [
+        "r15:A1"
+      ],
+      "cost_ms": 0.006924629211425781,
+      "kind": "unresolved_gap",
+      "rank": 15,
+      "observed_end_ms": 8.221855163574219,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r8:router:unresolved_gap",
+      "deps": [
+        "r8:CP3"
+      ],
+      "cost_ms": 0.0034799575805664062,
+      "kind": "unresolved_gap",
+      "rank": 8,
+      "observed_end_ms": 61.01993274688721,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r9:router:unresolved_gap",
+      "deps": [
+        "r9:CP3"
+      ],
+      "cost_ms": 0.005400657653808594,
+      "kind": "unresolved_gap",
+      "rank": 9,
+      "observed_end_ms": 61.03803634643555,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r10:router:unresolved_gap",
+      "deps": [
+        "r10:CP3"
+      ],
+      "cost_ms": 0.0035190582275390625,
+      "kind": "unresolved_gap",
+      "rank": 10,
+      "observed_end_ms": 60.33253002166748,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r11:router:unresolved_gap",
+      "deps": [
+        "r11:CP3"
+      ],
+      "cost_ms": 0.0039997100830078125,
+      "kind": "unresolved_gap",
+      "rank": 11,
+      "observed_end_ms": 60.38563919067383,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r12:router:unresolved_gap",
+      "deps": [
+        "r12:CP3"
+      ],
+      "cost_ms": 0.0037593841552734375,
+      "kind": "unresolved_gap",
+      "rank": 12,
+      "observed_end_ms": 60.84709930419922,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r13:router:unresolved_gap",
+      "deps": [
+        "r13:CP3"
+      ],
+      "cost_ms": 0.002880096435546875,
+      "kind": "unresolved_gap",
+      "rank": 13,
+      "observed_end_ms": 60.799588203430176,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r14:router:unresolved_gap",
+      "deps": [
+        "r14:CP3"
+      ],
+      "cost_ms": 0.01624011993408203,
+      "kind": "unresolved_gap",
+      "rank": 14,
+      "observed_end_ms": 60.709805488586426,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r15:router:unresolved_gap",
+      "deps": [
+        "r15:CP3"
+      ],
+      "cost_ms": 0.0034809112548828125,
+      "kind": "unresolved_gap",
+      "rank": 15,
+      "observed_end_ms": 60.579368591308594,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r8:expert:unresolved_gap",
+      "deps": [
+        "r8:dispatch"
+      ],
+      "cost_ms": 0.5157203674316406,
+      "kind": "unresolved_gap",
+      "rank": 8,
+      "observed_end_ms": 71.07922172546387,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r9:expert:unresolved_gap",
+      "deps": [
+        "r9:dispatch"
+      ],
+      "cost_ms": 0.4604825973510742,
+      "kind": "unresolved_gap",
+      "rank": 9,
+      "observed_end_ms": 70.9097547531128,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r10:expert:unresolved_gap",
+      "deps": [
+        "r10:dispatch"
+      ],
+      "cost_ms": 0.45639896392822266,
+      "kind": "unresolved_gap",
+      "rank": 10,
+      "observed_end_ms": 71.41626358032227,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r11:expert:unresolved_gap",
+      "deps": [
+        "r11:dispatch"
+      ],
+      "cost_ms": 0.4548807144165039,
+      "kind": "unresolved_gap",
+      "rank": 11,
+      "observed_end_ms": 70.89618015289307,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r12:expert:unresolved_gap",
+      "deps": [
+        "r12:dispatch"
+      ],
+      "cost_ms": 0.45316123962402344,
+      "kind": "unresolved_gap",
+      "rank": 12,
+      "observed_end_ms": 70.9277172088623,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r13:expert:unresolved_gap",
+      "deps": [
+        "r13:dispatch"
+      ],
+      "cost_ms": 0.4588003158569336,
+      "kind": "unresolved_gap",
+      "rank": 13,
+      "observed_end_ms": 70.94203662872314,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r14:expert:unresolved_gap",
+      "deps": [
+        "r14:dispatch"
+      ],
+      "cost_ms": 0.44752025604248047,
+      "kind": "unresolved_gap",
+      "rank": 14,
+      "observed_end_ms": 71.08915519714355,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r15:expert:unresolved_gap",
+      "deps": [
+        "r15:dispatch"
+      ],
+      "cost_ms": 0.4447212219238281,
+      "kind": "unresolved_gap",
+      "rank": 15,
+      "observed_end_ms": 71.42846298217773,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r8:unpermute:unresolved_gap",
+      "deps": [
+        "combine_residual"
+      ],
+      "cost_ms": 0.3765220642089844,
+      "kind": "unresolved_gap",
+      "rank": 8,
+      "observed_end_ms": 83.49531269073486,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r9:unpermute:unresolved_gap",
+      "deps": [
+        "combine_residual"
+      ],
+      "cost_ms": 0.27289390563964844,
+      "kind": "unresolved_gap",
+      "rank": 9,
+      "observed_end_ms": 83.39168453216553,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r10:unpermute:unresolved_gap",
+      "deps": [
+        "combine_residual"
+      ],
+      "cost_ms": 0.12712860107421875,
+      "kind": "unresolved_gap",
+      "rank": 10,
+      "observed_end_ms": 83.2459192276001,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r11:unpermute:unresolved_gap",
+      "deps": [
+        "combine_residual"
+      ],
+      "cost_ms": 0.28597450256347656,
+      "kind": "unresolved_gap",
+      "rank": 11,
+      "observed_end_ms": 83.40476512908936,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r12:unpermute:unresolved_gap",
+      "deps": [
+        "combine_residual"
+      ],
+      "cost_ms": 0.21630573272705078,
+      "kind": "unresolved_gap",
+      "rank": 12,
+      "observed_end_ms": 83.33509635925293,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r13:unpermute:unresolved_gap",
+      "deps": [
+        "combine_residual"
+      ],
+      "cost_ms": 0.3084983825683594,
+      "kind": "unresolved_gap",
+      "rank": 13,
+      "observed_end_ms": 83.42728900909424,
+      "source": "same-sample boundary difference; not pure wait/network"
+    },
+    {
+      "id": "r15:unpermute:unresolved_gap",
+      "deps": [
+        "combine_residual"
+      ],
+      "cost_ms": 0.3823280334472656,
+      "kind": "unresolved_gap",
+      "rank": 15,
+      "observed_end_ms": 83.50111865997314,
+      "source": "same-sample boundary difference; not pure wait/network"
+    }
+  ],
+  "caveats": [
+    "All costs and residuals calibrated from the SAME layer. Exact replay is accounting identity, not predictive accuracy.",
+    "CP effective completion costs include launch/synchronization; cannot substitute pure service without decomposing them.",
+    "Dispatch has per-rank completion branches, not one common completion timestamp.",
+    "Expert envelope is not pure compute; internal idle/other activity remains included.",
+    "Ends at visible Combine kernel completion, excludes subsequent local tail. Not complete layer tail, F, B or full iter.",
+    "Same worker clock alignment inherited from cached evidence; no fresh raw trace scan."
+  ],
+  "attention_reorder_audit": "PASS: eight ranks, two driver-launched index_select kernels per rank, >99% interval coverage",
+  "historical_ablation_note": "75.236ms belongs to r1 pre-tail historical ablation only; not this extended-window ablation",
+  "attention_reorder_parameters": [
+    {
+      "rank": 8,
+      "parameter_ms": 7.515807151794434,
+      "index_select_exposed_union_ms": 7.509967803955078,
+      "coverage_fraction": 0.9992230577872183,
+      "residual_ms": 0.005839347839355469,
+      "kernels": [
+        {
+          "event": 137767,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 11.356489999999999,
+          "start_absolute_ms": 6732114668.663122,
+          "end_absolute_ms": 6732114680.019612,
+          "launch_event": 137765,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21746289
+        },
+        {
+          "event": 137773,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 3.121203,
+          "start_absolute_ms": 6732114680.021212,
+          "end_absolute_ms": 6732114683.142415,
+          "launch_event": 137771,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21746316
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "parameter_ms": 7.52899169921875,
+      "index_select_exposed_union_ms": 7.52423095703125,
+      "coverage_fraction": 0.9993676786510478,
+      "residual_ms": 0.0047607421875,
+      "kernels": [
+        {
+          "event": 123710,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 11.372126,
+          "start_absolute_ms": 6732114668.662369,
+          "end_absolute_ms": 6732114680.034495,
+          "launch_event": 123708,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21726323
+        },
+        {
+          "event": 123716,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 3.130933,
+          "start_absolute_ms": 6732114680.036055,
+          "end_absolute_ms": 6732114683.166987,
+          "launch_event": 123714,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21726350
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "parameter_ms": 7.4117279052734375,
+      "index_select_exposed_union_ms": 7.405848503112793,
+      "coverage_fraction": 0.9992067433888849,
+      "residual_ms": 0.005879402160644531,
+      "kernels": [
+        {
+          "event": 140185,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 10.966253,
+          "start_absolute_ms": 6732114668.447472,
+          "end_absolute_ms": 6732114679.413725,
+          "launch_event": 140183,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21717276
+        },
+        {
+          "event": 140191,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 3.120444,
+          "start_absolute_ms": 6732114679.415765,
+          "end_absolute_ms": 6732114682.536209,
+          "launch_event": 140189,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21717303
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "parameter_ms": 7.543614387512207,
+      "index_select_exposed_union_ms": 7.538374900817871,
+      "coverage_fraction": 0.9993054408105736,
+      "residual_ms": 0.0052394866943359375,
+      "kernels": [
+        {
+          "event": 123768,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 11.050782,
+          "start_absolute_ms": 6732114668.479038,
+          "end_absolute_ms": 6732114679.52982,
+          "launch_event": 123766,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21803483
+        },
+        {
+          "event": 123774,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 3.132926,
+          "start_absolute_ms": 6732114679.53222,
+          "end_absolute_ms": 6732114682.665146,
+          "launch_event": 123772,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21803510
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "parameter_ms": 7.538053512573242,
+      "index_select_exposed_union_ms": 7.53237247467041,
+      "coverage_fraction": 0.9992463521394009,
+      "residual_ms": 0.005681037902832031,
+      "kernels": [
+        {
+          "event": 123449,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 11.335098,
+          "start_absolute_ms": 6732114668.515669,
+          "end_absolute_ms": 6732114679.850766,
+          "launch_event": 123447,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21765638
+        },
+        {
+          "event": 123455,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 3.133245,
+          "start_absolute_ms": 6732114679.853247,
+          "end_absolute_ms": 6732114682.986492,
+          "launch_event": 123453,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21765665
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "parameter_ms": 7.4794464111328125,
+      "index_select_exposed_union_ms": 7.473326683044434,
+      "coverage_fraction": 0.9991817939788605,
+      "residual_ms": 0.006119728088378906,
+      "kernels": [
+        {
+          "event": 160838,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 11.279211,
+          "start_absolute_ms": 6732114668.514458,
+          "end_absolute_ms": 6732114679.793669,
+          "launch_event": 160836,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21834641
+        },
+        {
+          "event": 160844,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 3.139882,
+          "start_absolute_ms": 6732114679.796029,
+          "end_absolute_ms": 6732114682.935911,
+          "launch_event": 160842,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21834668
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "parameter_ms": 7.6357011795043945,
+      "index_select_exposed_union_ms": 7.6245012283325195,
+      "coverage_fraction": 0.998533212483231,
+      "residual_ms": 0.011199951171875,
+      "kernels": [
+        {
+          "event": 156601,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 11.284313000000001,
+          "start_absolute_ms": 6732114668.463254,
+          "end_absolute_ms": 6732114679.747567,
+          "launch_event": 156599,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21678373
+        },
+        {
+          "event": 156607,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 3.128409,
+          "start_absolute_ms": 6732114679.749007,
+          "end_absolute_ms": 6732114682.877416,
+          "launch_event": 156605,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21678400
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "parameter_ms": 7.5062103271484375,
+      "index_select_exposed_union_ms": 7.458409309387207,
+      "coverage_fraction": 0.9936318041091463,
+      "residual_ms": 0.04780101776123047,
+      "kernels": [
+        {
+          "event": 124750,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 11.165854999999999,
+          "start_absolute_ms": 6732114668.409264,
+          "end_absolute_ms": 6732114679.575119,
+          "launch_event": 124748,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21769223
+        },
+        {
+          "event": 124756,
+          "name": "triton_poi_fused_index_select_0",
+          "stream": 12,
+          "duration_ms": 3.136644,
+          "start_absolute_ms": 6732114679.577478,
+          "end_absolute_ms": 6732114682.714122,
+          "launch_event": 124754,
+          "launch_category": "privateuse1_driver",
+          "correlation": 21769250
+        }
+      ]
+    }
+  ],
+  "tail_accounting": "PASS",
+  "combine_plus1": "PASS",
+  "external_override": false
+}

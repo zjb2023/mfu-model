@@ -1,0 +1,623 @@
+{
+  "version": "ui-r2",
+  "status": "SEMANTIC_DIAGRAM_NOT_EXECUTABLE",
+  "nodes": [
+    {
+      "id": "CP0",
+      "kind": "cp",
+      "cost_ms": null,
+      "description": "折叠子图，不额外计费。CP384/CP256与Attention相关本地处理仍在内部；每对rank独立推进。"
+    },
+    {
+      "id": "CP1",
+      "kind": "cp",
+      "cost_ms": null,
+      "description": "折叠子图，不额外计费。CP384/CP256与Attention相关本地处理仍在内部；每对rank独立推进。"
+    },
+    {
+      "id": "CP2",
+      "kind": "cp",
+      "cost_ms": null,
+      "description": "折叠子图，不额外计费。CP384/CP256与Attention相关本地处理仍在内部；每对rank独立推进。"
+    },
+    {
+      "id": "CP3",
+      "kind": "cp",
+      "cost_ms": null,
+      "description": "折叠子图，不额外计费。CP384/CP256与Attention相关本地处理仍在内部；每对rank独立推进。"
+    },
+    {
+      "id": "P8",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "包含投影、归一化、Router等；不是纯通信准备，也不是额外新增计算成本。"
+    },
+    {
+      "id": "D8",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "Dispatch内部布局、重排等可先后推进；不要求所有CP组完成后才进入。真实payload起止未确认。"
+    },
+    {
+      "id": "F8",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "完成边界接口：不是纯传输节点，不等于notify结束。payload可能跨越准备或notify，当前不指定其起止。"
+    },
+    {
+      "id": "E8",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "专家相关计算接口；保留各rank成本，禁止将旧M包络再叠加。"
+    },
+    {
+      "id": "O8",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "本版采用Combine组内最晚完成的统一出口；这是保守近似，不是实测严格barrier。"
+    },
+    {
+      "id": "P9",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "包含投影、归一化、Router等；不是纯通信准备，也不是额外新增计算成本。"
+    },
+    {
+      "id": "D9",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "Dispatch内部布局、重排等可先后推进；不要求所有CP组完成后才进入。真实payload起止未确认。"
+    },
+    {
+      "id": "F9",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "完成边界接口：不是纯传输节点，不等于notify结束。payload可能跨越准备或notify，当前不指定其起止。"
+    },
+    {
+      "id": "E9",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "专家相关计算接口；保留各rank成本，禁止将旧M包络再叠加。"
+    },
+    {
+      "id": "O9",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "本版采用Combine组内最晚完成的统一出口；这是保守近似，不是实测严格barrier。"
+    },
+    {
+      "id": "P10",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "包含投影、归一化、Router等；不是纯通信准备，也不是额外新增计算成本。"
+    },
+    {
+      "id": "D10",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "Dispatch内部布局、重排等可先后推进；不要求所有CP组完成后才进入。真实payload起止未确认。"
+    },
+    {
+      "id": "F10",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "完成边界接口：不是纯传输节点，不等于notify结束。payload可能跨越准备或notify，当前不指定其起止。"
+    },
+    {
+      "id": "E10",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "专家相关计算接口；保留各rank成本，禁止将旧M包络再叠加。"
+    },
+    {
+      "id": "O10",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "本版采用Combine组内最晚完成的统一出口；这是保守近似，不是实测严格barrier。"
+    },
+    {
+      "id": "P11",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "包含投影、归一化、Router等；不是纯通信准备，也不是额外新增计算成本。"
+    },
+    {
+      "id": "D11",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "Dispatch内部布局、重排等可先后推进；不要求所有CP组完成后才进入。真实payload起止未确认。"
+    },
+    {
+      "id": "F11",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "完成边界接口：不是纯传输节点，不等于notify结束。payload可能跨越准备或notify，当前不指定其起止。"
+    },
+    {
+      "id": "E11",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "专家相关计算接口；保留各rank成本，禁止将旧M包络再叠加。"
+    },
+    {
+      "id": "O11",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "本版采用Combine组内最晚完成的统一出口；这是保守近似，不是实测严格barrier。"
+    },
+    {
+      "id": "P12",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "包含投影、归一化、Router等；不是纯通信准备，也不是额外新增计算成本。"
+    },
+    {
+      "id": "D12",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "Dispatch内部布局、重排等可先后推进；不要求所有CP组完成后才进入。真实payload起止未确认。"
+    },
+    {
+      "id": "F12",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "完成边界接口：不是纯传输节点，不等于notify结束。payload可能跨越准备或notify，当前不指定其起止。"
+    },
+    {
+      "id": "E12",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "专家相关计算接口；保留各rank成本，禁止将旧M包络再叠加。"
+    },
+    {
+      "id": "O12",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "本版采用Combine组内最晚完成的统一出口；这是保守近似，不是实测严格barrier。"
+    },
+    {
+      "id": "P13",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "包含投影、归一化、Router等；不是纯通信准备，也不是额外新增计算成本。"
+    },
+    {
+      "id": "D13",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "Dispatch内部布局、重排等可先后推进；不要求所有CP组完成后才进入。真实payload起止未确认。"
+    },
+    {
+      "id": "F13",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "完成边界接口：不是纯传输节点，不等于notify结束。payload可能跨越准备或notify，当前不指定其起止。"
+    },
+    {
+      "id": "E13",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "专家相关计算接口；保留各rank成本，禁止将旧M包络再叠加。"
+    },
+    {
+      "id": "O13",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "本版采用Combine组内最晚完成的统一出口；这是保守近似，不是实测严格barrier。"
+    },
+    {
+      "id": "P14",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "包含投影、归一化、Router等；不是纯通信准备，也不是额外新增计算成本。"
+    },
+    {
+      "id": "D14",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "Dispatch内部布局、重排等可先后推进；不要求所有CP组完成后才进入。真实payload起止未确认。"
+    },
+    {
+      "id": "F14",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "完成边界接口：不是纯传输节点，不等于notify结束。payload可能跨越准备或notify，当前不指定其起止。"
+    },
+    {
+      "id": "E14",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "专家相关计算接口；保留各rank成本，禁止将旧M包络再叠加。"
+    },
+    {
+      "id": "O14",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "本版采用Combine组内最晚完成的统一出口；这是保守近似，不是实测严格barrier。"
+    },
+    {
+      "id": "P15",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "包含投影、归一化、Router等；不是纯通信准备，也不是额外新增计算成本。"
+    },
+    {
+      "id": "D15",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "Dispatch内部布局、重排等可先后推进；不要求所有CP组完成后才进入。真实payload起止未确认。"
+    },
+    {
+      "id": "F15",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "完成边界接口：不是纯传输节点，不等于notify结束。payload可能跨越准备或notify，当前不指定其起止。"
+    },
+    {
+      "id": "E15",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "专家相关计算接口；保留各rank成本，禁止将旧M包络再叠加。"
+    },
+    {
+      "id": "O15",
+      "kind": "local",
+      "cost_ms": null,
+      "description": "本版采用Combine组内最晚完成的统一出口；这是保守近似，不是实测严格barrier。"
+    },
+    {
+      "id": "Notify",
+      "kind": "sync",
+      "cost_ms": null,
+      "description": "ace_notify_dispatch开始不齐、结束几乎同时，按组级同步点表达；不是Dispatch前新增barrier，也不代表全部payload尚未发送。"
+    },
+    {
+      "id": "Combine",
+      "kind": "approx",
+      "cost_ms": null,
+      "description": "实测各rank完成有差异。本版统一出口=max(各rank Combine完成)，不是严格barrier；实际传输起止仍未知，不额外叠加到达等待。"
+    }
+  ],
+  "edges": [
+    {
+      "source": "CP0",
+      "target": "P8",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "P8",
+      "target": "D8",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "D8",
+      "target": "Notify",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "Notify",
+      "target": "F8",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "F8",
+      "target": "E8",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "E8",
+      "target": "Combine",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "Combine",
+      "target": "O8",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "CP0",
+      "target": "P9",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "P9",
+      "target": "D9",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "D9",
+      "target": "Notify",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "Notify",
+      "target": "F9",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "F9",
+      "target": "E9",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "E9",
+      "target": "Combine",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "Combine",
+      "target": "O9",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "CP1",
+      "target": "P10",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "P10",
+      "target": "D10",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "D10",
+      "target": "Notify",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "Notify",
+      "target": "F10",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "F10",
+      "target": "E10",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "E10",
+      "target": "Combine",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "Combine",
+      "target": "O10",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "CP1",
+      "target": "P11",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "P11",
+      "target": "D11",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "D11",
+      "target": "Notify",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "Notify",
+      "target": "F11",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "F11",
+      "target": "E11",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "E11",
+      "target": "Combine",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "Combine",
+      "target": "O11",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "CP2",
+      "target": "P12",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "P12",
+      "target": "D12",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "D12",
+      "target": "Notify",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "Notify",
+      "target": "F12",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "F12",
+      "target": "E12",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "E12",
+      "target": "Combine",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "Combine",
+      "target": "O12",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "CP2",
+      "target": "P13",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "P13",
+      "target": "D13",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "D13",
+      "target": "Notify",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "Notify",
+      "target": "F13",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "F13",
+      "target": "E13",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "E13",
+      "target": "Combine",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "Combine",
+      "target": "O13",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "CP3",
+      "target": "P14",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "P14",
+      "target": "D14",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "D14",
+      "target": "Notify",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "Notify",
+      "target": "F14",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "F14",
+      "target": "E14",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "E14",
+      "target": "Combine",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "Combine",
+      "target": "O14",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "CP3",
+      "target": "P15",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "P15",
+      "target": "D15",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "D15",
+      "target": "Notify",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "Notify",
+      "target": "F15",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "F15",
+      "target": "E15",
+      "meaning": "semantic order only",
+      "approximation": false
+    },
+    {
+      "source": "E15",
+      "target": "Combine",
+      "meaning": "semantic order only",
+      "approximation": true
+    },
+    {
+      "source": "Combine",
+      "target": "O15",
+      "meaning": "semantic order only",
+      "approximation": true
+    }
+  ],
+  "payload_boundaries": "unknown; graph does not place all transfer after notify",
+  "combine_exit": "max per-rank completion approximation",
+  "predictions_modified": false
+}

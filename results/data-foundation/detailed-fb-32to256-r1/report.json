@@ -1,0 +1,40 @@
+{
+  "status": "PARTIAL_CONDITIONAL_256_EXTRAPOLATION",
+  "scope": "rank0 first F associated GPU start to last B associated GPU end; pipeline fill/drain included, RS/OPT/AG excluded",
+  "predicted_ms": 21653.3578404189,
+  "trace_ms": 20396.01318693161,
+  "error_ms": 1257.3446534872892,
+  "ARE_percent": 6.164658955471312,
+  "prediction": {
+    "window_ms": 21653.3578404189,
+    "middle_cost_ms": {
+      "F": 342.7138833999634,
+      "B": 868.8333587646489
+    },
+    "source32_regression_ms": 11917.22775924206
+  },
+  "checks": {
+    "status": "PASS_ASSEMBLY_AND_EVALUATOR",
+    "instances": 112,
+    "nodes": 292525,
+    "source32_regression": "PASS",
+    "contraction": "PASS all outer endpoints",
+    "double_charge": "PASS zero-cost replacements",
+    "loss_tail_ms": 0,
+    "expert_plus1000_window_shift_ms": 312.305448410043,
+    "seal_verified": true,
+    "target_cache_reproduced": true
+  },
+  "target_fitted": false,
+  "blind": false,
+  "accuracy_acceptance": "NO_PREDEFINED_THRESHOLD",
+  "limitations": [
+    "EP8 cohort symmetry excludes target EDP2 load imbalance",
+    "outer PP stage completion is a simplified collective boundary, not rank-resolved overlap",
+    "PP effective costs transferred from source32 without target topology calibration",
+    "same source F0/B0 costs and readiness reused in all middle stages/microbatches",
+    "first/last scalar role costs inherited from source32",
+    "one target iteration60 rank0 evaluated, not full256 rank makespan or MFU",
+    "existing target data previously exposed; not blind validation"
+  ]
+}
