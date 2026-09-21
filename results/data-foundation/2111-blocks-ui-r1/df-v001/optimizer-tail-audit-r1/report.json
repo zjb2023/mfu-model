@@ -1,0 +1,39 @@
+{
+  "status": "PARTIAL_RANK0_TAIL_FACTS",
+  "source_tail_ms": 296.62558364868164,
+  "target_tail_ms": 376.9974160194397,
+  "underestimate_ms": 80.37183237075806,
+  "windows": [
+    {
+      "name": "末B→最后RS完成",
+      "source32_ms": 33.24234580993652,
+      "target256_ms": 95.3598256111145,
+      "target_minus_source_ms": 62.11747980117798
+    },
+    {
+      "name": "最后RS→首个优化器关联GPU",
+      "source32_ms": 28.472837448120117,
+      "target256_ms": 26.290430545806885,
+      "target_minus_source_ms": -2.1824069023132324
+    },
+    {
+      "name": "首个优化器关联GPU→最后AG完成",
+      "source32_ms": 80.26652812957764,
+      "target256_ms": 84.68879556655884,
+      "target_minus_source_ms": 4.422267436981201
+    },
+    {
+      "name": "最后AG→ProfilerStep结束",
+      "source32_ms": 154.64387226104736,
+      "target256_ms": 170.65836429595947,
+      "target_minus_source_ms": 16.01449203491211
+    }
+  ],
+  "limits": [
+    "one iteration,rank0 only; no full-stage optimizer barrier inferred",
+    "DP/EDP group identities not yet attributed per kernel",
+    "GPU completion union includes wait inside collective kernel, not pure service",
+    "no-device-event coverage is not automatically pure CPU overhead",
+    "1F1B and frozen B analysis unchanged; no new fitted tail model"
+  ]
+}
