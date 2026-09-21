@@ -1,0 +1,726 @@
+{
+  "scope": "iter60, lane0 representative rank only; 224 PP5/6, 256 PP1/14; all B microbatches",
+  "comparisons": [
+    {
+      "world": 224,
+      "stages": [
+        5,
+        6
+      ],
+      "mb": 0,
+      "envelope_delta_ms": -112.59220117187499,
+      "coverage_gap_delta_ms": -89.6692036132813,
+      "top_kernel_deltas": [
+        {
+          "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+          "left_count": 36,
+          "right_count": 36,
+          "right_minus_left_sum_ms": -13.159042000000056
+        },
+        {
+          "name": "void deep_ep::intranode_ace::ace_notify_dispatch<8>(int*, int*, int*, int const*, int const*, void**, int**, int, int, int)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -7.380489999999998
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 32,
+          "right_count": 42,
+          "right_minus_left_sum_ms": 4.083319999999979
+        },
+        {
+          "name": "void musa::dnn::binary::kernel_binary<float, musa::dnn::binary::AddOp, float, __mt_bfloat16, float, 128>(float*, float const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "left_count": 20,
+          "right_count": 20,
+          "right_minus_left_sum_ms": -2.812342000000001
+        },
+        {
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "left_count": 88,
+          "right_count": 88,
+          "right_minus_left_sum_ms": -2.6284860000000094
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 10,
+          "right_count": 2,
+          "right_minus_left_sum_ms": -2.347944
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 8,
+          "right_count": 1,
+          "right_minus_left_sum_ms": -2.0284190000000004
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 43,
+          "right_count": 44,
+          "right_minus_left_sum_ms": 1.8956820000000043
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 9,
+          "right_count": 5,
+          "right_minus_left_sum_ms": -1.5862529999999992
+        },
+        {
+          "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+          "left_count": 76,
+          "right_count": 70,
+          "right_minus_left_sum_ms": -1.3139850000000166
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 8,
+          "right_count": 1,
+          "right_minus_left_sum_ms": -1.311732
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+          "left_count": 14,
+          "right_count": 11,
+          "right_minus_left_sum_ms": -1.2155709999999988
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 0.6768550000000033
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+          "left_count": 4,
+          "right_count": 6,
+          "right_minus_left_sum_ms": 0.4100059999999992
+        },
+        {
+          "name": "void moe_unpermute_mask<__mt_bfloat16, float, long, false, true, true, 8>(__mt_bfloat16 const*, __mt_bfloat16*, long*, float const*, float const*, float*, int, int, int, int, int, int, int, int, int, int, int, int)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.2645630000000003
+        }
+      ]
+    },
+    {
+      "world": 224,
+      "stages": [
+        5,
+        6
+      ],
+      "mb": 1,
+      "envelope_delta_ms": -92.18081494140631,
+      "coverage_gap_delta_ms": -27.769095214843787,
+      "top_kernel_deltas": [
+        {
+          "name": "void deep_ep::intranode_ace::ace_notify_dispatch<8>(int*, int*, int*, int const*, int const*, void**, int**, int, int, int)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -53.413757000000004
+        },
+        {
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "left_count": 88,
+          "right_count": 88,
+          "right_minus_left_sum_ms": 16.41364299999998
+        },
+        {
+          "name": "void musa::dnn::binary::kernel_binary<float, musa::dnn::binary::AddOp, float, __mt_bfloat16, float, 128>(float*, float const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "left_count": 20,
+          "right_count": 20,
+          "right_minus_left_sum_ms": 8.925611
+        },
+        {
+          "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+          "left_count": 36,
+          "right_count": 36,
+          "right_minus_left_sum_ms": -6.613466999999957
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 53,
+          "right_count": 42,
+          "right_minus_left_sum_ms": -1.9375619999999927
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 51,
+          "right_count": 44,
+          "right_minus_left_sum_ms": -1.8878289999999929
+        },
+        {
+          "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+          "left_count": 76,
+          "right_count": 72,
+          "right_minus_left_sum_ms": -0.8607280000000301
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+          "left_count": 8,
+          "right_count": 10,
+          "right_minus_left_sum_ms": 0.6790279999999997
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 1,
+          "right_count": 2,
+          "right_minus_left_sum_ms": 0.542323
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.4058560000000071
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+          "left_count": 4,
+          "right_count": 5,
+          "right_minus_left_sum_ms": 0.2985009999999999
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 5,
+          "right_count": 5,
+          "right_minus_left_sum_ms": 0.27863400000000027
+        },
+        {
+          "name": "void moe_unpermute_mask<__mt_bfloat16, float, long, false, true, true, 8>(__mt_bfloat16 const*, __mt_bfloat16*, long*, float const*, float const*, float*, int, int, int, int, int, int, int, int, int, int, int, int)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.2728900000000001
+        },
+        {
+          "name": "mcclKernel_AllReduce_RING_SIMPLE_Sum_int64_t(mcclWorkElem)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.25992399999999993
+        },
+        {
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "left_count": 20,
+          "right_count": 20,
+          "right_minus_left_sum_ms": -0.24181400000000064
+        }
+      ]
+    },
+    {
+      "world": 224,
+      "stages": [
+        5,
+        6
+      ],
+      "mb": 2,
+      "envelope_delta_ms": -68.72456201171872,
+      "coverage_gap_delta_ms": -32.63594921874994,
+      "top_kernel_deltas": [
+        {
+          "name": "void deep_ep::intranode_ace::ace_notify_dispatch<8>(int*, int*, int*, int const*, int const*, void**, int**, int, int, int)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -23.585821000000003
+        },
+        {
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "left_count": 88,
+          "right_count": 88,
+          "right_minus_left_sum_ms": 20.899513000000084
+        },
+        {
+          "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+          "left_count": 36,
+          "right_count": 36,
+          "right_minus_left_sum_ms": -10.069953999999939
+        },
+        {
+          "name": "void musa::dnn::binary::kernel_binary<float, musa::dnn::binary::AddOp, float, __mt_bfloat16, float, 128>(float*, float const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "left_count": 20,
+          "right_count": 20,
+          "right_minus_left_sum_ms": -1.5551829999999995
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 5,
+          "right_count": 1,
+          "right_minus_left_sum_ms": -1.022651
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 5,
+          "right_count": 1,
+          "right_minus_left_sum_ms": -1.006611
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 44,
+          "right_count": 46,
+          "right_minus_left_sum_ms": 0.8211070000000191
+        },
+        {
+          "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+          "left_count": 78,
+          "right_count": 74,
+          "right_minus_left_sum_ms": -0.7506160000000079
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 46,
+          "right_count": 46,
+          "right_minus_left_sum_ms": 0.6434710000000052
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 3,
+          "right_count": 0,
+          "right_minus_left_sum_ms": -0.636165
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 6,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.5605320000000003
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.36921500000000407
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+          "left_count": 4,
+          "right_count": 6,
+          "right_minus_left_sum_ms": 0.32634399999999975
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x384B128_squad_level_epilogue",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 0.25132699999999986
+        },
+        {
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "left_count": 20,
+          "right_count": 20,
+          "right_minus_left_sum_ms": -0.2263259999999998
+        }
+      ]
+    },
+    {
+      "world": 256,
+      "stages": [
+        1,
+        14
+      ],
+      "mb": 0,
+      "envelope_delta_ms": 2.88525390625,
+      "coverage_gap_delta_ms": -3.9094458007813273,
+      "top_kernel_deltas": [
+        {
+          "name": "void musa::dnn::binary::kernel_binary<float, musa::dnn::binary::AddOp, float, __mt_bfloat16, float, 128>(float*, float const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "left_count": 20,
+          "right_count": 20,
+          "right_minus_left_sum_ms": -4.929718
+        },
+        {
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "left_count": 88,
+          "right_count": 88,
+          "right_minus_left_sum_ms": 4.474581000000015
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 33,
+          "right_count": 43,
+          "right_minus_left_sum_ms": 3.948705000000011
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 34,
+          "right_count": 43,
+          "right_minus_left_sum_ms": 3.276647999999998
+        },
+        {
+          "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+          "left_count": 36,
+          "right_count": 36,
+          "right_minus_left_sum_ms": 2.1605489999998326
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 9,
+          "right_count": 2,
+          "right_minus_left_sum_ms": -1.5048099999999998
+        },
+        {
+          "name": "void deep_ep::intranode_ace::ace_notify_dispatch<8>(int*, int*, int*, int const*, int const*, void**, int**, int, int, int)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 1.1315139999999997
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_bwd_512_64x128x_qk_192_v_128_ws_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 1.0576550000000111
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 9,
+          "right_count": 5,
+          "right_minus_left_sum_ms": -0.9706179999999986
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 6,
+          "right_count": 1,
+          "right_minus_left_sum_ms": -0.731167
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.6993590000000012
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 6,
+          "right_count": 2,
+          "right_minus_left_sum_ms": -0.4724860000000001
+        },
+        {
+          "name": "mcclKernel_AllReduce_RING_SIMPLE_Sum_int64_t(mcclWorkElem)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.31932299999999997
+        },
+        {
+          "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+          "left_count": 72,
+          "right_count": 62,
+          "right_minus_left_sum_ms": -0.3044229999999857
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x384B128_squad_level_epilogue",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.26864699999999964
+        }
+      ]
+    },
+    {
+      "world": 256,
+      "stages": [
+        1,
+        14
+      ],
+      "mb": 1,
+      "envelope_delta_ms": -27.71004541015634,
+      "coverage_gap_delta_ms": -31.949332519531367,
+      "top_kernel_deltas": [
+        {
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "left_count": 88,
+          "right_count": 88,
+          "right_minus_left_sum_ms": 10.595442999999975
+        },
+        {
+          "name": "void musa::dnn::binary::kernel_binary<float, musa::dnn::binary::AddOp, float, __mt_bfloat16, float, 128>(float*, float const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "left_count": 20,
+          "right_count": 20,
+          "right_minus_left_sum_ms": -8.35382
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 32,
+          "right_count": 39,
+          "right_minus_left_sum_ms": 3.868617999999998
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 39,
+          "right_count": 41,
+          "right_minus_left_sum_ms": 2.9830330000000007
+        },
+        {
+          "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+          "left_count": 36,
+          "right_count": 36,
+          "right_minus_left_sum_ms": 2.6828049999999735
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 11,
+          "right_count": 5,
+          "right_minus_left_sum_ms": -1.823215
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_bwd_512_64x128x_qk_192_v_128_ws_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 1.7659490000000062
+        },
+        {
+          "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+          "left_count": 78,
+          "right_count": 62,
+          "right_minus_left_sum_ms": -1.5938390000000169
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 1.1643650000000108
+        },
+        {
+          "name": "void deep_ep::intranode_ace::ace_notify_dispatch<8>(int*, int*, int*, int const*, int const*, void**, int**, int, int, int)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -1.0524240000000002
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 11,
+          "right_count": 6,
+          "right_minus_left_sum_ms": -1.0284110000000002
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 6,
+          "right_count": 2,
+          "right_minus_left_sum_ms": -0.9523279999999998
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+          "left_count": 15,
+          "right_count": 11,
+          "right_minus_left_sum_ms": -0.7394270000000001
+        },
+        {
+          "name": "mcclKernel_AllReduce_RING_SIMPLE_Sum_int64_t(mcclWorkElem)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 0.569003
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x160B128_epilogue_persis_stage2",
+          "left_count": 3,
+          "right_count": 0,
+          "right_minus_left_sum_ms": -0.289443
+        }
+      ]
+    },
+    {
+      "world": 256,
+      "stages": [
+        1,
+        14
+      ],
+      "mb": 2,
+      "envelope_delta_ms": -7.087077636718732,
+      "coverage_gap_delta_ms": -13.073871582031188,
+      "top_kernel_deltas": [
+        {
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "left_count": 88,
+          "right_count": 88,
+          "right_minus_left_sum_ms": 28.732467999999955
+        },
+        {
+          "name": "void musa::dnn::binary::kernel_binary<float, musa::dnn::binary::AddOp, float, __mt_bfloat16, float, 128>(float*, float const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "left_count": 20,
+          "right_count": 20,
+          "right_minus_left_sum_ms": 8.44351
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 36,
+          "right_count": 44,
+          "right_minus_left_sum_ms": 3.962997999999992
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 35,
+          "right_count": 44,
+          "right_minus_left_sum_ms": 3.331327
+        },
+        {
+          "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+          "left_count": 36,
+          "right_count": 36,
+          "right_minus_left_sum_ms": 2.286788999999999
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 11,
+          "right_count": 1,
+          "right_minus_left_sum_ms": -1.7402919999999997
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 10,
+          "right_count": 1,
+          "right_minus_left_sum_ms": -1.6804919999999999
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 1.1025430000000043
+        },
+        {
+          "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+          "left_count": 78,
+          "right_count": 62,
+          "right_minus_left_sum_ms": -1.0276530000000221
+        },
+        {
+          "name": "mcclKernel_AllReduce_RING_SIMPLE_Sum_int64_t(mcclWorkElem)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.45280300000000007
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+          "left_count": 6,
+          "right_count": 9,
+          "right_minus_left_sum_ms": 0.4480179999999985
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 3,
+          "right_count": 0,
+          "right_minus_left_sum_ms": -0.388644
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+          "left_count": 4,
+          "right_count": 0,
+          "right_minus_left_sum_ms": -0.38236299999999995
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_bwd_512_64x128x_qk_192_v_128_ws_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 0.36327099999999746
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 7,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.2998929999999995
+        }
+      ]
+    },
+    {
+      "world": 256,
+      "stages": [
+        1,
+        14
+      ],
+      "mb": 3,
+      "envelope_delta_ms": -3.1757216796875127,
+      "coverage_gap_delta_ms": -9.566054687500014,
+      "top_kernel_deltas": [
+        {
+          "name": "void musa::dnn::binary::kernel_binary<float, musa::dnn::binary::AddOp, float, __mt_bfloat16, float, 128>(float*, float const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "left_count": 20,
+          "right_count": 20,
+          "right_minus_left_sum_ms": -7.419089000000001
+        },
+        {
+          "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+          "left_count": 36,
+          "right_count": 36,
+          "right_minus_left_sum_ms": 4.237092999999959
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 35,
+          "right_count": 43,
+          "right_minus_left_sum_ms": 3.0848840000000095
+        },
+        {
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "left_count": 88,
+          "right_count": 88,
+          "right_minus_left_sum_ms": -2.7261129999999696
+        },
+        {
+          "name": "void deep_ep::intranode_ace::ace_notify_dispatch<8>(int*, int*, int*, int const*, int const*, void**, int**, int, int, int)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -2.4585049999999993
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "left_count": 36,
+          "right_count": 43,
+          "right_minus_left_sum_ms": 2.1359119999999834
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 1.5196789999999964
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 7,
+          "right_count": 2,
+          "right_minus_left_sum_ms": -1.126849
+        },
+        {
+          "name": "mcclKernel_AllReduce_RING_SIMPLE_Sum_int64_t(mcclWorkElem)",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 0.921962
+        },
+        {
+          "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+          "left_count": 78,
+          "right_count": 62,
+          "right_minus_left_sum_ms": -0.8975150000000127
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+          "left_count": 7,
+          "right_count": 2,
+          "right_minus_left_sum_ms": -0.8228059999999998
+        },
+        {
+          "name": "musa_asm_bf16tce_flash_atten_bwd_512_64x128x_qk_192_v_128_ws_causal_persistence",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 0.6900540000000035
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 3,
+          "right_count": 1,
+          "right_minus_left_sum_ms": -0.506245
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+          "left_count": 6,
+          "right_count": 4,
+          "right_minus_left_sum_ms": -0.4110909999999999
+        },
+        {
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x384B128_squad_level_epilogue",
+          "left_count": 4,
+          "right_count": 4,
+          "right_minus_left_sum_ms": 0.2611669999999986
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "kernel duration sums overlap and are not additive wall-time attribution",
+    "same name does not establish same tensor shape, token work or phase identity",
+    "no-owned-device coverage is not proof of GPU idle or CPU delay",
+    "communication kernels can contain waiting; visible EP kernels may omit hidden transport",
+    "224 and 256 compared within each run only, not pooled; no source32 used"
+  ]
+}

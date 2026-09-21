@@ -1,0 +1,4962 @@
+{
+  "world": 256,
+  "stage": 1,
+  "rank": 16,
+  "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33008/profiler/iteration_60/rank16.1785477877124.pt.trace.json",
+  "sha256": "c438eb9fe77a1bb75385d7ce95f56ec27223b22bbedef73bea36ca1ca1d58c0c",
+  "blocks": [
+    {
+      "mb": 0,
+      "operators": [
+        {
+          "event": 758,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 0,
+          "FC": 1,
+          "cpu_ms": 0.609379,
+          "args": {
+            "External id": 570557,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[1123, 0, 4708, 101, 4920, 6, 0, 0, 0, 0, 1104, 3222, 1573, 0, 0, 0, 0, 0, 0, 0]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 69918,
+            "finished": true,
+            "Input Dims": [
+              [
+                16757,
+                5120
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 700
+          },
+          "devices": [
+            {
+              "event": 75295,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083715831.324,
+              "end_us": 2510083715950.4053
+            },
+            {
+              "event": 75299,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510083715954.445,
+              "end_us": 2510083716346.2876
+            },
+            {
+              "event": 75303,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 2510083716349.448,
+              "end_us": 2510083716392.328
+            },
+            {
+              "event": 75307,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083716394.568,
+              "end_us": 2510083716838.691
+            },
+            {
+              "event": 75311,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 2510083716840.691,
+              "end_us": 2510083716877.332
+            },
+            {
+              "event": 75315,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083716879.772,
+              "end_us": 2510083716993.252
+            },
+            {
+              "event": 75319,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510083716995.692,
+              "end_us": 2510083717298.375
+            },
+            {
+              "event": 75323,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510083717306.055,
+              "end_us": 2510083717451.896
+            }
+          ],
+          "start_us": 2510083715831.324,
+          "end_us": 2510083717451.896,
+          "envelope_ms": 1.62057177734375,
+          "gpu_union_ms": 1.59657177734375,
+          "internal_no_owned_ms": 0.02400000000000002,
+          "gemm_union_ms": 1.59657177734375,
+          "gemm_count": 8
+        },
+        {
+          "event": 831,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 0,
+          "FC": 2,
+          "cpu_ms": 0.522428,
+          "args": {
+            "External id": 570624,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[1123, 0, 4708, 101, 4920, 6, 0, 0, 0, 0, 1104, 3222, 1573, 0, 0, 0, 0, 0, 0, 0]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                1536,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 69924,
+            "finished": true,
+            "Input Dims": [
+              [
+                16757,
+                1536
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 767
+          },
+          "devices": [
+            {
+              "event": 75377,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510083718199.021,
+              "end_us": 2510083718260.061
+            },
+            {
+              "event": 75381,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510083718263.782,
+              "end_us": 2510083718467.3833
+            },
+            {
+              "event": 75385,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x96B128_epilogue_stage3_btmenc",
+              "start_us": 2510083718472.223,
+              "end_us": 2510083718499.4233
+            },
+            {
+              "event": 75389,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083718501.823,
+              "end_us": 2510083718743.0654
+            },
+            {
+              "event": 75393,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 2510083718745.865,
+              "end_us": 2510083718766.5854
+            },
+            {
+              "event": 75397,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510083718768.305,
+              "end_us": 2510083718826.5464
+            },
+            {
+              "event": 75401,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510083718827.866,
+              "end_us": 2510083718970.4673
+            },
+            {
+              "event": 75405,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 2510083718972.707,
+              "end_us": 2510083719062.627
+            }
+          ],
+          "start_us": 2510083718199.021,
+          "end_us": 2510083719062.627,
+          "envelope_ms": 0.86360595703125,
+          "gpu_union_ms": 0.84456591796875,
+          "internal_no_owned_ms": 0.019040039062499958,
+          "gemm_union_ms": 0.84456591796875,
+          "gemm_count": 8
+        },
+        {
+          "event": 918,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 0,
+          "FC": 2,
+          "cpu_ms": 0.840367,
+          "args": {
+            "External id": 570700,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ]
+            ],
+            "Sequence number": 69924,
+            "finished": true,
+            "Input Dims": [
+              [
+                16757,
+                5120
+              ]
+            ],
+            "Ev Idx": 843
+          },
+          "devices": [
+            {
+              "event": 75517,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 2510083725913.276,
+              "end_us": 2510083726006.797
+            },
+            {
+              "event": 75521,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083726009.597,
+              "end_us": 2510083726230.078
+            },
+            {
+              "event": 75525,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 2510083726233.758,
+              "end_us": 2510083726268.399
+            },
+            {
+              "event": 75529,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083726270.879,
+              "end_us": 2510083726492.32
+            },
+            {
+              "event": 75533,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 2510083726494.64,
+              "end_us": 2510083726517.44
+            },
+            {
+              "event": 75537,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 2510083726518.96,
+              "end_us": 2510083726615.681
+            },
+            {
+              "event": 75541,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510083726617.921,
+              "end_us": 2510083726776.2417
+            },
+            {
+              "event": 75545,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083726778.962,
+              "end_us": 2510083726892.123
+            },
+            {
+              "event": 75559,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083726897.363,
+              "end_us": 2510083727015.124
+            },
+            {
+              "event": 75563,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083727018.204,
+              "end_us": 2510083727255.606
+            },
+            {
+              "event": 75567,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083727258.006,
+              "end_us": 2510083727347.3657
+            },
+            {
+              "event": 75571,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083727348.446,
+              "end_us": 2510083727588.128
+            },
+            {
+              "event": 75575,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083727590.608,
+              "end_us": 2510083727682.4087
+            },
+            {
+              "event": 75579,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083727684.369,
+              "end_us": 2510083727811.49
+            },
+            {
+              "event": 75583,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083727813.77,
+              "end_us": 2510083727997.091
+            },
+            {
+              "event": 75587,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083727999.291,
+              "end_us": 2510083728133.372
+            }
+          ],
+          "start_us": 2510083725913.276,
+          "end_us": 2510083728133.372,
+          "envelope_ms": 2.22009619140625,
+          "gpu_union_ms": 2.18161572265625,
+          "internal_no_owned_ms": 0.038480468749999996,
+          "gemm_union_ms": 2.18161572265625,
+          "gemm_count": 16
+        },
+        {
+          "event": 1110,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 0,
+          "FC": 1,
+          "cpu_ms": 0.8211,
+          "args": {
+            "External id": 570886,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                3072,
+                1
+              ]
+            ],
+            "Sequence number": 69918,
+            "finished": true,
+            "Input Dims": [
+              [
+                16757,
+                3072
+              ]
+            ],
+            "Ev Idx": 1029
+          },
+          "devices": [
+            {
+              "event": 75647,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510083729625.023,
+              "end_us": 2510083729726.183
+            },
+            {
+              "event": 75651,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510083729729.583,
+              "end_us": 2510083730112.186
+            },
+            {
+              "event": 75655,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x96B128_epilogue_stage3_btmenc",
+              "start_us": 2510083730116.346,
+              "end_us": 2510083730155.266
+            },
+            {
+              "event": 75659,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083730157.826,
+              "end_us": 2510083730615.91
+            },
+            {
+              "event": 75663,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 2510083730619.07,
+              "end_us": 2510083730650.79
+            },
+            {
+              "event": 75667,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510083730653.55,
+              "end_us": 2510083730753.271
+            },
+            {
+              "event": 75671,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510083730755.231,
+              "end_us": 2510083731027.633
+            },
+            {
+              "event": 75675,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 2510083731035.393,
+              "end_us": 2510083731199.674
+            },
+            {
+              "event": 75689,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083731202.314,
+              "end_us": 2510083731430.996
+            },
+            {
+              "event": 75693,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083731433.396,
+              "end_us": 2510083731880.199
+            },
+            {
+              "event": 75697,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083731882.199,
+              "end_us": 2510083732047.4404
+            },
+            {
+              "event": 75701,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083732049.16,
+              "end_us": 2510083732494.803
+            },
+            {
+              "event": 75705,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083732497.123,
+              "end_us": 2510083732660.444
+            },
+            {
+              "event": 75709,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083732661.684,
+              "end_us": 2510083732902.286
+            },
+            {
+              "event": 75713,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083732904.006,
+              "end_us": 2510083733238.8877
+            },
+            {
+              "event": 75717,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083733241.328,
+              "end_us": 2510083733487.69
+            }
+          ],
+          "start_us": 2510083729625.023,
+          "end_us": 2510083733487.69,
+          "envelope_ms": 3.8626669921875,
+          "gpu_union_ms": 3.82042724609375,
+          "internal_no_owned_ms": 0.04223974609375025,
+          "gemm_union_ms": 3.82042724609375,
+          "gemm_count": 16
+        },
+        {
+          "event": 2829,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 1,
+          "FC": 1,
+          "cpu_ms": 0.549395,
+          "args": {
+            "External id": 572489,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[0, 0, 0, 0, 4920, 0, 1550, 0, 0, 0, 0, 0, 0, 0, 878, 0, 1104, 0, 0, 1299]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 69992,
+            "finished": true,
+            "Input Dims": [
+              [
+                9751,
+                5120
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 2632
+          },
+          "devices": [
+            {
+              "event": 77515,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083916871.119,
+              "end_us": 2510083917296.482
+            },
+            {
+              "event": 77519,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510083917301.002,
+              "end_us": 2510083917430.3228
+            },
+            {
+              "event": 77523,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083917436.243,
+              "end_us": 2510083917548.4844
+            },
+            {
+              "event": 77527,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083917550.764,
+              "end_us": 2510083917658.325
+            },
+            {
+              "event": 77531,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 2510083917660.605,
+              "end_us": 2510083917788.766
+            }
+          ],
+          "start_us": 2510083916871.119,
+          "end_us": 2510083917788.766,
+          "envelope_ms": 0.91764697265625,
+          "gpu_union_ms": 0.90264697265625,
+          "internal_no_owned_ms": 0.014999999999999902,
+          "gemm_union_ms": 0.90264697265625,
+          "gemm_count": 5
+        },
+        {
+          "event": 2902,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 1,
+          "FC": 2,
+          "cpu_ms": 0.599433,
+          "args": {
+            "External id": 572556,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[0, 0, 0, 0, 4920, 0, 1550, 0, 0, 0, 0, 0, 0, 0, 878, 0, 1104, 0, 0, 1299]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                1536,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 69998,
+            "finished": true,
+            "Input Dims": [
+              [
+                9751,
+                1536
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 2699
+          },
+          "devices": [
+            {
+              "event": 77579,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083918215.809,
+              "end_us": 2510083918472.0913
+            },
+            {
+              "event": 77583,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 2510083918474.011,
+              "end_us": 2510083918560.0913
+            },
+            {
+              "event": 77587,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510083918562.171,
+              "end_us": 2510083918609.052
+            },
+            {
+              "event": 77591,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510083918610.772,
+              "end_us": 2510083918666.852
+            },
+            {
+              "event": 77595,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083918669.212,
+              "end_us": 2510083918743.253
+            }
+          ],
+          "start_us": 2510083918215.809,
+          "end_us": 2510083918743.253,
+          "envelope_ms": 0.52744384765625,
+          "gpu_union_ms": 0.5193642578125,
+          "internal_no_owned_ms": 0.008079589843750012,
+          "gemm_union_ms": 0.5193642578125,
+          "gemm_count": 5
+        },
+        {
+          "event": 2989,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 1,
+          "FC": 2,
+          "cpu_ms": 0.796895,
+          "args": {
+            "External id": 572632,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ]
+            ],
+            "Sequence number": 69998,
+            "finished": true,
+            "Input Dims": [
+              [
+                9751,
+                5120
+              ]
+            ],
+            "Ev Idx": 2775
+          },
+          "devices": [
+            {
+              "event": 77709,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083927723.557,
+              "end_us": 2510083927949.158
+            },
+            {
+              "event": 77713,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083927952.198,
+              "end_us": 2510083928060.039
+            },
+            {
+              "event": 77717,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 2510083928062.719,
+              "end_us": 2510083928154.6
+            },
+            {
+              "event": 77721,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 2510083928157.92,
+              "end_us": 2510083928256.2397
+            },
+            {
+              "event": 77725,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083928259.08,
+              "end_us": 2510083928369.721
+            },
+            {
+              "event": 77739,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083928372.281,
+              "end_us": 2510083928602.483
+            },
+            {
+              "event": 77743,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083928604.363,
+              "end_us": 2510083928738.924
+            },
+            {
+              "event": 77747,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083928741.084,
+              "end_us": 2510083928855.125
+            },
+            {
+              "event": 77751,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083928856.365,
+              "end_us": 2510083928979.326
+            },
+            {
+              "event": 77755,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083928980.686,
+              "end_us": 2510083929106.767
+            }
+          ],
+          "start_us": 2510083927723.557,
+          "end_us": 2510083929106.767,
+          "envelope_ms": 1.3832099609375,
+          "gpu_union_ms": 1.3621298828125,
+          "internal_no_owned_ms": 0.021080078125000012,
+          "gemm_union_ms": 1.3621298828125,
+          "gemm_count": 10
+        },
+        {
+          "event": 3181,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 1,
+          "FC": 1,
+          "cpu_ms": 0.930359,
+          "args": {
+            "External id": 572818,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                3072,
+                1
+              ]
+            ],
+            "Sequence number": 69992,
+            "finished": true,
+            "Input Dims": [
+              [
+                9751,
+                3072
+              ]
+            ],
+            "Ev Idx": 2961
+          },
+          "devices": [
+            {
+              "event": 77815,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083930002.093,
+              "end_us": 2510083930466.0557
+            },
+            {
+              "event": 77819,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 2510083930468.456,
+              "end_us": 2510083930627.817
+            },
+            {
+              "event": 77823,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510083930635.217,
+              "end_us": 2510083930722.218
+            },
+            {
+              "event": 77827,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510083930724.498,
+              "end_us": 2510083930824.459
+            },
+            {
+              "event": 77831,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510083930827.499,
+              "end_us": 2510083930968.2603
+            },
+            {
+              "event": 77845,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083930971.38,
+              "end_us": 2510083931412.863
+            },
+            {
+              "event": 77849,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083931415.383,
+              "end_us": 2510083931655.8247
+            },
+            {
+              "event": 77853,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083931657.265,
+              "end_us": 2510083931872.626
+            },
+            {
+              "event": 77857,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083931874.386,
+              "end_us": 2510083932105.948
+            },
+            {
+              "event": 77861,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510083932107.628,
+              "end_us": 2510083932355.67
+            }
+          ],
+          "start_us": 2510083930002.093,
+          "end_us": 2510083932355.67,
+          "envelope_ms": 2.3535771484375,
+          "gpu_union_ms": 2.3279365234375,
+          "internal_no_owned_ms": 0.025640625000000306,
+          "gemm_union_ms": 2.3279365234375,
+          "gemm_count": 10
+        },
+        {
+          "event": 4900,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 2,
+          "FC": 1,
+          "cpu_ms": 0.64725,
+          "args": {
+            "External id": 574421,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[0, 0, 0, 381, 0, 0, 4920, 0, 4920, 2871, 2944, 0, 0, 0, 55, 0, 0, 0, 0, 4920]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 70066,
+            "finished": true,
+            "Input Dims": [
+              [
+                21011,
+                5120
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 4564
+          },
+          "devices": [
+            {
+              "event": 79677,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_256x128B128_epilogue_persis_stage4_btmenc",
+              "start_us": 2510084120812.486,
+              "end_us": 2510084120884.686
+            },
+            {
+              "event": 79681,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084120887.846,
+              "end_us": 2510084121326.249
+            },
+            {
+              "event": 79685,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084121328.569,
+              "end_us": 2510084121771.253
+            },
+            {
+              "event": 79689,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 2510084121773.613,
+              "end_us": 2510084122029.175
+            },
+            {
+              "event": 79693,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 2510084122035.975,
+              "end_us": 2510084122296.976
+            },
+            {
+              "event": 79697,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 2510084122304.936,
+              "end_us": 2510084122342.857
+            },
+            {
+              "event": 79701,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084122345.697,
+              "end_us": 2510084122784.34
+            }
+          ],
+          "start_us": 2510084120812.486,
+          "end_us": 2510084122784.34,
+          "envelope_ms": 1.97185400390625,
+          "gpu_union_ms": 1.9464140625,
+          "internal_no_owned_ms": 0.025439941406250055,
+          "gemm_union_ms": 1.9464140625,
+          "gemm_count": 7
+        },
+        {
+          "event": 4973,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 2,
+          "FC": 2,
+          "cpu_ms": 0.662452,
+          "args": {
+            "External id": 574488,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[0, 0, 0, 381, 0, 0, 4920, 0, 4920, 2871, 2944, 0, 0, 0, 55, 0, 0, 0, 0, 4920]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                1536,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 70072,
+            "finished": true,
+            "Input Dims": [
+              [
+                21011,
+                1536
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 4631
+          },
+          "devices": [
+            {
+              "event": 79753,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 2510084123720.467,
+              "end_us": 2510084123756.3066
+            },
+            {
+              "event": 79757,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084123759.747,
+              "end_us": 2510084124020.789
+            },
+            {
+              "event": 79761,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084124023.069,
+              "end_us": 2510084124264.071
+            },
+            {
+              "event": 79765,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510084124265.991,
+              "end_us": 2510084124392.471
+            },
+            {
+              "event": 79769,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084124394.512,
+              "end_us": 2510084124536.553
+            },
+            {
+              "event": 79773,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 2510084124538.633,
+              "end_us": 2510084124560.0327
+            },
+            {
+              "event": 79777,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084124561.553,
+              "end_us": 2510084124793.7944
+            }
+          ],
+          "start_us": 2510084123720.467,
+          "end_us": 2510084124793.7944,
+          "envelope_ms": 1.07332763671875,
+          "gpu_union_ms": 1.0600458984375,
+          "internal_no_owned_ms": 0.01328173828125001,
+          "gemm_union_ms": 1.0600458984375,
+          "gemm_count": 7
+        },
+        {
+          "event": 5060,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 2,
+          "FC": 2,
+          "cpu_ms": 0.738091,
+          "args": {
+            "External id": 574564,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ]
+            ],
+            "Sequence number": 70072,
+            "finished": true,
+            "Input Dims": [
+              [
+                21011,
+                5120
+              ]
+            ],
+            "Ev Idx": 4707
+          },
+          "devices": [
+            {
+              "event": 79889,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x96B128_epilogue_stage3_btmenc",
+              "start_us": 2510084129178.626,
+              "end_us": 2510084129239.346
+            },
+            {
+              "event": 79893,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084129241.346,
+              "end_us": 2510084129460.1084
+            },
+            {
+              "event": 79897,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084129462.508,
+              "end_us": 2510084129682.9497
+            },
+            {
+              "event": 79901,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 2510084129686.83,
+              "end_us": 2510084129818.95
+            },
+            {
+              "event": 79905,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 2510084129829.751,
+              "end_us": 2510084129967.832
+            },
+            {
+              "event": 79909,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 2510084129971.552,
+              "end_us": 2510084129994.4316
+            },
+            {
+              "event": 79913,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084129996.152,
+              "end_us": 2510084130219.833
+            },
+            {
+              "event": 79927,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084130222.913,
+              "end_us": 2510084130320.6743
+            },
+            {
+              "event": 79931,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084130322.634,
+              "end_us": 2510084130569.676
+            },
+            {
+              "event": 79935,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084130572.076,
+              "end_us": 2510084130810.8384
+            },
+            {
+              "event": 79939,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084130813.278,
+              "end_us": 2510084130971.1987
+            },
+            {
+              "event": 79943,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084130973.279,
+              "end_us": 2510084131140.0
+            },
+            {
+              "event": 79947,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084131142.44,
+              "end_us": 2510084131239.481
+            },
+            {
+              "event": 79951,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084131241.561,
+              "end_us": 2510084131487.962
+            }
+          ],
+          "start_us": 2510084129178.626,
+          "end_us": 2510084131487.962,
+          "envelope_ms": 2.3093359375,
+          "gpu_union_ms": 2.2683359375,
+          "internal_no_owned_ms": 0.04100000000000037,
+          "gemm_union_ms": 2.2683359375,
+          "gemm_count": 14
+        },
+        {
+          "event": 5252,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 2,
+          "FC": 1,
+          "cpu_ms": 0.651463,
+          "args": {
+            "External id": 574750,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                3072,
+                1
+              ]
+            ],
+            "Sequence number": 70066,
+            "finished": true,
+            "Input Dims": [
+              [
+                21011,
+                3072
+              ]
+            ],
+            "Ev Idx": 4893
+          },
+          "devices": [
+            {
+              "event": 80011,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 2510084133322.776,
+              "end_us": 2510084133374.336
+            },
+            {
+              "event": 80015,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084133375.936,
+              "end_us": 2510084133825.219
+            },
+            {
+              "event": 80019,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084133827.539,
+              "end_us": 2510084134272.703
+            },
+            {
+              "event": 80023,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510084134275.823,
+              "end_us": 2510084134501.0645
+            },
+            {
+              "event": 80027,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084134507.944,
+              "end_us": 2510084134770.146
+            },
+            {
+              "event": 80031,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 2510084134772.146,
+              "end_us": 2510084134804.826
+            },
+            {
+              "event": 80035,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084134806.706,
+              "end_us": 2510084135258.67
+            },
+            {
+              "event": 80049,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084135261.75,
+              "end_us": 2510084135447.511
+            },
+            {
+              "event": 80053,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084135450.071,
+              "end_us": 2510084135881.674
+            },
+            {
+              "event": 80057,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084135883.634,
+              "end_us": 2510084136290.4766
+            },
+            {
+              "event": 80061,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084136292.357,
+              "end_us": 2510084136555.959
+            },
+            {
+              "event": 80065,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084136557.919,
+              "end_us": 2510084136847.481
+            },
+            {
+              "event": 80069,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084136850.041,
+              "end_us": 2510084137016.642
+            },
+            {
+              "event": 80073,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084137018.202,
+              "end_us": 2510084137451.725
+            }
+          ],
+          "start_us": 2510084133322.776,
+          "end_us": 2510084137451.725,
+          "envelope_ms": 4.12894921875,
+          "gpu_union_ms": 4.09558984375,
+          "internal_no_owned_ms": 0.03335937499999986,
+          "gemm_union_ms": 4.09558984375,
+          "gemm_count": 14
+        },
+        {
+          "event": 6971,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 3,
+          "FC": 1,
+          "cpu_ms": 0.616515,
+          "args": {
+            "External id": 576353,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 807, 4716, 4123, 0]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 70140,
+            "finished": true,
+            "Input Dims": [
+              [
+                9652,
+                5120
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 6496
+          },
+          "devices": [
+            {
+              "event": 81881,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 2510084320669.762,
+              "end_us": 2510084320709.083
+            },
+            {
+              "event": 81885,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084320712.323,
+              "end_us": 2510084320827.683
+            },
+            {
+              "event": 81889,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510084320829.603,
+              "end_us": 2510084321223.566
+            },
+            {
+              "event": 81893,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 2510084321225.806,
+              "end_us": 2510084321607.249
+            }
+          ],
+          "start_us": 2510084320669.762,
+          "end_us": 2510084321607.249,
+          "envelope_ms": 0.93748681640625,
+          "gpu_union_ms": 0.93008642578125,
+          "internal_no_owned_ms": 0.007400390624999975,
+          "gemm_union_ms": 0.93008642578125,
+          "gemm_count": 4
+        },
+        {
+          "event": 7044,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 3,
+          "FC": 2,
+          "cpu_ms": 0.567622,
+          "args": {
+            "External id": 576420,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 807, 4716, 4123, 0]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                1536,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 70146,
+            "finished": true,
+            "Input Dims": [
+              [
+                9652,
+                1536
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 6563
+          },
+          "devices": [
+            {
+              "event": 81939,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 2510084322041.172,
+              "end_us": 2510084322063.572
+            },
+            {
+              "event": 81943,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510084322068.932,
+              "end_us": 2510084322118.0933
+            },
+            {
+              "event": 81947,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510084322120.413,
+              "end_us": 2510084322320.6543
+            },
+            {
+              "event": 81951,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510084322326.454,
+              "end_us": 2510084322528.2163
+            }
+          ],
+          "start_us": 2510084322041.172,
+          "end_us": 2510084322528.2163,
+          "envelope_ms": 0.48704443359375,
+          "gpu_union_ms": 0.473564453125,
+          "internal_no_owned_ms": 0.013479980468749986,
+          "gemm_union_ms": 0.473564453125,
+          "gemm_count": 4
+        },
+        {
+          "event": 7131,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 3,
+          "FC": 2,
+          "cpu_ms": 0.747071,
+          "args": {
+            "External id": 576496,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ]
+            ],
+            "Sequence number": 70146,
+            "finished": true,
+            "Input Dims": [
+              [
+                9652,
+                5120
+              ]
+            ],
+            "Ev Idx": 6639
+          },
+          "devices": [
+            {
+              "event": 82063,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 2510084333768.136,
+              "end_us": 2510084333792.137
+            },
+            {
+              "event": 82067,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 2510084333794.497,
+              "end_us": 2510084333883.057
+            },
+            {
+              "event": 82071,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084333885.897,
+              "end_us": 2510084334116.259
+            },
+            {
+              "event": 82075,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 2510084334119.979,
+              "end_us": 2510084334340.701
+            },
+            {
+              "event": 82089,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084334346.221,
+              "end_us": 2510084334430.8613
+            },
+            {
+              "event": 82093,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084334435.901,
+              "end_us": 2510084334555.542
+            },
+            {
+              "event": 82097,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084334558.222,
+              "end_us": 2510084334790.304
+            },
+            {
+              "event": 82101,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084334792.064,
+              "end_us": 2510084334988.745
+            }
+          ],
+          "start_us": 2510084333768.136,
+          "end_us": 2510084334988.745,
+          "envelope_ms": 1.22060888671875,
+          "gpu_union_ms": 1.196689453125,
+          "internal_no_owned_ms": 0.023919433593749817,
+          "gemm_union_ms": 1.196689453125,
+          "gemm_count": 8
+        },
+        {
+          "event": 7323,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 3,
+          "FC": 1,
+          "cpu_ms": 0.5957960000000001,
+          "args": {
+            "External id": 576682,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                3072,
+                1
+              ]
+            ],
+            "Sequence number": 70140,
+            "finished": true,
+            "Input Dims": [
+              [
+                9652,
+                3072
+              ]
+            ],
+            "Ev Idx": 6825
+          },
+          "devices": [
+            {
+              "event": 82159,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 2510084335859.311,
+              "end_us": 2510084335892.472
+            },
+            {
+              "event": 82163,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510084335895.432,
+              "end_us": 2510084335979.1123
+            },
+            {
+              "event": 82167,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 2510084335984.632,
+              "end_us": 2510084336365.355
+            },
+            {
+              "event": 82171,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 2510084336372.275,
+              "end_us": 2510084336739.958
+            },
+            {
+              "event": 82185,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084336749.158,
+              "end_us": 2510084336909.959
+            },
+            {
+              "event": 82189,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084336911.879,
+              "end_us": 2510084337140.441
+            },
+            {
+              "event": 82193,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084337142.841,
+              "end_us": 2510084337578.7637
+            },
+            {
+              "event": 82197,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 2510084337580.724,
+              "end_us": 2510084337996.847
+            }
+          ],
+          "start_us": 2510084335859.311,
+          "end_us": 2510084337996.847,
+          "envelope_ms": 2.1375361328125,
+          "gpu_union_ms": 2.10665625,
+          "internal_no_owned_ms": 0.030879882812500092,
+          "gemm_union_ms": 2.10665625,
+          "gemm_count": 8
+        }
+      ],
+      "components": {
+        "recompute": 8.398981445312499,
+        "backward": 19.61598046875
+      }
+    }
+  ]
+}

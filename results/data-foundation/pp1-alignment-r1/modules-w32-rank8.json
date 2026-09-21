@@ -1,0 +1,6906 @@
+[
+  {
+    "cpu_event": 155,
+    "name": "AttnFuncWithCPAndQKVOA2A",
+    "kind": "recompute_attention_CP",
+    "ordinal": 0,
+    "cpu_ms": 3.41314,
+    "gpu_union_ms": 46.5021220703125,
+    "gpu_envelope_ms": 54.6568505859375,
+    "intervals": [
+      [
+        6732116939166.594,
+        6732116939788.274
+      ],
+      [
+        6732116939885.115,
+        6732116951230.6455
+      ],
+      [
+        6732116939790.235,
+        6732116940706.437
+      ],
+      [
+        6732116951242.045,
+        6732116962193.775
+      ],
+      [
+        6732116940709.876,
+        6732116941300.116
+      ],
+      [
+        6732116962196.335,
+        6732116969075.341
+      ],
+      [
+        6732116976805.868,
+        6732116985596.836
+      ],
+      [
+        6732116986000.117,
+        6732116993396.244
+      ],
+      [
+        6732116993401.244,
+        6732116993823.444
+      ]
+    ],
+    "device_events": [
+      167637,
+      167649,
+      167659,
+      167671,
+      167687,
+      167699,
+      167725,
+      167745,
+      167757
+    ],
+    "input_dims": [
+      [],
+      [
+        2,
+        4096,
+        128,
+        192
+      ],
+      [
+        2,
+        4096,
+        128,
+        192
+      ],
+      [
+        2,
+        4096,
+        128,
+        128
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+        "count": 4,
+        "union_ms": 2.550322265625,
+        "sum_ms": 2.550322265625
+      },
+      {
+        "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+        "count": 4,
+        "union_ms": 36.5723935546875,
+        "sum_ms": 36.5723935546875
+      },
+      {
+        "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+        "count": 1,
+        "union_ms": 8.7909677734375,
+        "sum_ms": 8.7909677734375
+      }
+    ]
+  },
+  {
+    "cpu_event": 612,
+    "name": "FusedDispatch",
+    "kind": "recompute_EP_dispatch",
+    "ordinal": 0,
+    "cpu_ms": 59.666731,
+    "gpu_union_ms": 0.645560546875,
+    "gpu_envelope_ms": 3.827283203125,
+    "intervals": [
+      [
+        6732116999425.129,
+        6732116999534.169
+      ],
+      [
+        6732116999422.529,
+        6732116999430.01
+      ],
+      [
+        6732116999463.129,
+        6732116999466.009
+      ],
+      [
+        6732116999674.129,
+        6732116999677.129
+      ],
+      [
+        6732116999854.129,
+        6732116999857.049
+      ],
+      [
+        6732117000339.13,
+        6732117000344.33
+      ],
+      [
+        6732117000346.37,
+        6732117000368.73
+      ],
+      [
+        6732117000370.93,
+        6732117000392.41
+      ],
+      [
+        6732117000394.57,
+        6732117000399.57
+      ],
+      [
+        6732117000401.77,
+        6732117000405.85
+      ],
+      [
+        6732117000407.05,
+        6732117000409.89
+      ],
+      [
+        6732117000412.01,
+        6732117000466.45
+      ],
+      [
+        6732117000468.49,
+        6732117000808.41
+      ],
+      [
+        6732117000810.77,
+        6732117000868.489
+      ],
+      [
+        6732117002910.972,
+        6732117002919.531
+      ],
+      [
+        6732117002922.972,
+        6732117002926.292
+      ],
+      [
+        6732117003246.732,
+        6732117003249.8125
+      ]
+    ],
+    "device_events": [
+      168045,
+      168051,
+      168055,
+      168061,
+      168067,
+      168077,
+      168081,
+      168085,
+      168089,
+      168093,
+      168097,
+      168101,
+      168111,
+      168115,
+      168135,
+      168139,
+      168145
+    ],
+    "input_dims": [
+      [
+        8192,
+        5120
+      ],
+      [
+        8192,
+        6
+      ],
+      [
+        8192,
+        6
+      ],
+      [],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::layout::get_dispatch_layout<1024, 8, 8>(long const*, int*, int*, int*, bool*, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.1090400390625,
+        "sum_ms": 0.1090400390625
+      },
+      {
+        "name": "void musa::dnn::reduce_column::ReduceColumnShflKernel<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, musa::dnn::ReduceOp<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, (musa::dnn::ReduceMode)1>, (musa::dnn::ReduceMode)1, 64, 16, 4, true>(long*, long*, long*, int const*, long, int, musa::dnn::ReduceOp<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, (musa::dnn::ReduceMode)1>)",
+        "count": 2,
+        "union_ms": 0.0160400390625,
+        "sum_ms": 0.0160400390625
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pinned)",
+        "count": 2,
+        "union_ms": 0.0062001953125,
+        "sum_ms": 0.0062001953125
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pageable)",
+        "count": 3,
+        "union_ms": 0.009,
+        "sum_ms": 0.009
+      },
+      {
+        "name": "Memset (Device)",
+        "count": 1,
+        "union_ms": 0.0052001953125,
+        "sum_ms": 0.0052001953125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::fused_unique_routing_kernel_bitpacked<long, 512>(long const*, unsigned int*, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.0223603515625,
+        "sum_ms": 0.0223603515625
+      },
+      {
+        "name": "void deep_ep::intranode_ace::make_row_id_map_pass1_kernel<int, 256>(unsigned int const*, int*, int, int, int)",
+        "count": 1,
+        "union_ms": 0.02148046875,
+        "sum_ms": 0.02148046875
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_block_sums<1024>(int const*, int*, int*, int)",
+        "count": 1,
+        "union_ms": 0.005,
+        "sum_ms": 0.005
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_single_block<1024>(int const*, int*, int)",
+        "count": 1,
+        "union_ms": 0.004080078125,
+        "sum_ms": 0.004080078125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_add_block_prefix<1024>(int*, int const*, int)",
+        "count": 1,
+        "union_ms": 0.00283984375,
+        "sum_ms": 0.00283984375
+      },
+      {
+        "name": "void deep_ep::intranode_ace::make_row_id_map_pass2_kernel<256>(unsigned int const*, int*, int const*, int, int, int)",
+        "count": 1,
+        "union_ms": 0.0544404296875,
+        "sum_ms": 0.0544404296875
+      },
+      {
+        "name": "void deep_ep::intranode_ace::moe_permute_mask_kernel_tme<__mt_bfloat16, true>(MUtensorDescriptor_st, MUtensorDescriptor_st, MUtensorDescriptor_st, int, int, int, int, int, long*, float*, long*, float*)",
+        "count": 1,
+        "union_ms": 0.339919921875,
+        "sum_ms": 0.339919921875
+      },
+      {
+        "name": "void deep_ep::intranode_ace::ace_notify_dispatch<8>(int*, int*, int*, int const*, int const*, void**, int**, int, int, int)",
+        "count": 1,
+        "union_ms": 0.0577197265625,
+        "sum_ms": 0.0577197265625
+      }
+    ]
+  },
+  {
+    "cpu_event": 758,
+    "name": "_GroupedLinear",
+    "kind": "recompute_expert_linear_FC1",
+    "ordinal": 0,
+    "cpu_ms": 1.011801,
+    "gpu_union_ms": 3.3579619140625,
+    "gpu_envelope_ms": 3.4264833984375,
+    "intervals": [
+      [
+        6732117006660.376,
+        6732117006697.336
+      ],
+      [
+        6732117006698.976,
+        6732117007001.695
+      ],
+      [
+        6732117007009.136,
+        6732117007048.176
+      ],
+      [
+        6732117007050.456,
+        6732117007352.576
+      ],
+      [
+        6732117007355.296,
+        6732117007485.496
+      ],
+      [
+        6732117007487.976,
+        6732117007874.536
+      ],
+      [
+        6732117007882.137,
+        6732117008316.617
+      ],
+      [
+        6732117008319.497,
+        6732117008392.497
+      ],
+      [
+        6732117008394.577,
+        6732117008460.777
+      ],
+      [
+        6732117008463.097,
+        6732117008501.696
+      ],
+      [
+        6732117008504.057,
+        6732117008583.017
+      ],
+      [
+        6732117008585.697,
+        6732117008814.618
+      ],
+      [
+        6732117008816.378,
+        6732117008878.258
+      ],
+      [
+        6732117008880.098,
+        6732117009135.498
+      ],
+      [
+        6732117009142.258,
+        6732117009405.777
+      ],
+      [
+        6732117009414.658,
+        6732117009811.458
+      ],
+      [
+        6732117009822.018,
+        6732117010044.698
+      ],
+      [
+        6732117010046.939,
+        6732117010086.859
+      ]
+    ],
+    "device_events": [
+      168251,
+      168255,
+      168259,
+      168263,
+      168267,
+      168271,
+      168275,
+      168279,
+      168283,
+      168287,
+      168291,
+      168295,
+      168299,
+      168303,
+      168307,
+      168311,
+      168315,
+      168319
+    ],
+    "input_dims": [
+      [
+        32933,
+        5120
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+        "count": 4,
+        "union_ms": 0.15451953125,
+        "sum_ms": 0.15451953125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 2,
+        "union_ms": 0.60483984375,
+        "sum_ms": 0.60483984375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 4,
+        "union_ms": 1.0162822265625,
+        "sum_ms": 1.0162822265625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+        "count": 3,
+        "union_ms": 1.0387607421875,
+        "sum_ms": 1.0387607421875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_256x128B128_epilogue_persis_stage4_btmenc",
+        "count": 3,
+        "union_ms": 0.21816015625,
+        "sum_ms": 0.21816015625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_32x128B128_epilogue_stage3_btmenc",
+        "count": 1,
+        "union_ms": 0.0618798828125,
+        "sum_ms": 0.0618798828125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+        "count": 1,
+        "union_ms": 0.26351953125,
+        "sum_ms": 0.26351953125
+      }
+    ]
+  },
+  {
+    "cpu_event": 831,
+    "name": "_GroupedLinear",
+    "kind": "recompute_expert_linear_FC2",
+    "ordinal": 1,
+    "cpu_ms": 0.97053,
+    "gpu_union_ms": 1.771001953125,
+    "gpu_envelope_ms": 1.807322265625,
+    "intervals": [
+      [
+        6732117011523.38,
+        6732117011544.22
+      ],
+      [
+        6732117011545.46,
+        6732117011735.94
+      ],
+      [
+        6732117011737.9,
+        6732117011758.46
+      ],
+      [
+        6732117011760.9,
+        6732117011935.98
+      ],
+      [
+        6732117011937.98,
+        6732117012007.66
+      ],
+      [
+        6732117012009.22,
+        6732117012208.181
+      ],
+      [
+        6732117012211.101,
+        6732117012447.141
+      ],
+      [
+        6732117012449.861,
+        6732117012493.541
+      ],
+      [
+        6732117012495.581,
+        6732117012527.101
+      ],
+      [
+        6732117012528.661,
+        6732117012548.142
+      ],
+      [
+        6732117012549.741,
+        6732117012580.741
+      ],
+      [
+        6732117012582.181,
+        6732117012688.7
+      ],
+      [
+        6732117012690.901,
+        6732117012722.021
+      ],
+      [
+        6732117012724.621,
+        6732117012853.181
+      ],
+      [
+        6732117012854.901,
+        6732117013004.062
+      ],
+      [
+        6732117013007.501,
+        6732117013204.022
+      ],
+      [
+        6732117013206.102,
+        6732117013307.502
+      ],
+      [
+        6732117013310.302,
+        6732117013330.702
+      ]
+    ],
+    "device_events": [
+      168393,
+      168397,
+      168401,
+      168405,
+      168409,
+      168413,
+      168417,
+      168421,
+      168425,
+      168429,
+      168433,
+      168437,
+      168441,
+      168445,
+      168449,
+      168453,
+      168457,
+      168461
+    ],
+    "input_dims": [
+      [
+        32933,
+        1536
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+        "count": 3,
+        "union_ms": 0.0617998046875,
+        "sum_ms": 0.0617998046875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 4,
+        "union_ms": 0.6712802734375,
+        "sum_ms": 0.6712802734375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 5,
+        "union_ms": 0.7525625,
+        "sum_ms": 0.7525625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x192B128_epilogue_persis_stage2_btmenc",
+        "count": 2,
+        "union_ms": 0.0746796875,
+        "sum_ms": 0.0746796875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.03151953125,
+        "sum_ms": 0.03151953125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.01948046875,
+        "sum_ms": 0.01948046875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x96B128_epilogue_stage3_btmenc",
+        "count": 1,
+        "union_ms": 0.0311201171875,
+        "sum_ms": 0.0311201171875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+        "count": 1,
+        "union_ms": 0.1285595703125,
+        "sum_ms": 0.1285595703125
+      }
+    ]
+  },
+  {
+    "cpu_event": 867,
+    "name": "FusedCombine",
+    "kind": "recompute_EP_combine",
+    "ordinal": 0,
+    "cpu_ms": 8.413278,
+    "gpu_union_ms": 0.279720703125,
+    "gpu_envelope_ms": 0.279720703125,
+    "intervals": [
+      [
+        6732117016254.224,
+        6732117016533.944
+      ]
+    ],
+    "device_events": [
+      168479
+    ],
+    "input_dims": [
+      [
+        27266,
+        5120
+      ],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::intranode_ace::moe_unpermute_mask_kernel_tme<__mt_bfloat16, 8, false>(__mt_bfloat16 const*, __mt_bfloat16*, int const*, float const*, float*, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.279720703125,
+        "sum_ms": 0.279720703125
+      }
+    ]
+  },
+  {
+    "cpu_event": 898,
+    "name": "FusedCombineBackward",
+    "kind": "backward_EP_dispatch",
+    "ordinal": 0,
+    "cpu_ms": 2.076993,
+    "gpu_union_ms": 0.3143212890625,
+    "gpu_envelope_ms": 0.3143212890625,
+    "intervals": [
+      [
+        6732117017535.025,
+        6732117017849.347
+      ]
+    ],
+    "device_events": [
+      168531
+    ],
+    "input_dims": [
+      [
+        8192,
+        5120
+      ],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::intranode_ace::moe_permute_mask_kernel_tme<__mt_bfloat16, false>(MUtensorDescriptor_st, MUtensorDescriptor_st, MUtensorDescriptor_st, int, int, int, int, int, long*, float*, long*, float*)",
+        "count": 1,
+        "union_ms": 0.3143212890625,
+        "sum_ms": 0.3143212890625
+      }
+    ]
+  },
+  {
+    "cpu_event": 918,
+    "name": "_GroupedLinearBackward",
+    "kind": "backward_expert_linear_FC2",
+    "ordinal": 0,
+    "cpu_ms": 1.650422,
+    "gpu_union_ms": 4.3627265625,
+    "gpu_envelope_ms": 4.4592841796875,
+    "intervals": [
+      [
+        6732117020127.708,
+        6732117020151.668
+      ],
+      [
+        6732117020153.908,
+        6732117020311.108
+      ],
+      [
+        6732117020318.348,
+        6732117020340.987
+      ],
+      [
+        6732117020344.228,
+        6732117020501.268
+      ],
+      [
+        6732117020504.308,
+        6732117020593.788
+      ],
+      [
+        6732117020596.228,
+        6732117020809.027
+      ],
+      [
+        6732117020811.228,
+        6732117021031.589
+      ],
+      [
+        6732117021033.989,
+        6732117021083.39
+      ],
+      [
+        6732117021085.269,
+        6732117021134.108
+      ],
+      [
+        6732117021138.789,
+        6732117021159.789
+      ],
+      [
+        6732117021162.069,
+        6732117021216.869
+      ],
+      [
+        6732117021219.269,
+        6732117021326.669
+      ],
+      [
+        6732117021329.749,
+        6732117021367.829
+      ],
+      [
+        6732117021370.629,
+        6732117021502.589
+      ],
+      [
+        6732117021509.949,
+        6732117021646.109
+      ],
+      [
+        6732117021648.589,
+        6732117021866.949
+      ],
+      [
+        6732117021868.989,
+        6732117021979.189
+      ],
+      [
+        6732117021981.909,
+        6732117022003.869
+      ],
+      [
+        6732117022010.11,
+        6732117022092.551
+      ],
+      [
+        6732117022094.15,
+        6732117022285.95
+      ],
+      [
+        6732117022288.39,
+        6732117022376.59
+      ],
+      [
+        6732117022377.79,
+        6732117022564.71
+      ],
+      [
+        6732117022566.63,
+        6732117022685.39
+      ],
+      [
+        6732117022686.83,
+        6732117022900.87
+      ],
+      [
+        6732117022903.31,
+        6732117023141.791
+      ],
+      [
+        6732117023143.991,
+        6732117023246.831
+      ],
+      [
+        6732117023249.351,
+        6732117023352.631
+      ],
+      [
+        6732117023354.591,
+        6732117023453.711
+      ],
+      [
+        6732117023455.351,
+        6732117023555.711
+      ],
+      [
+        6732117023557.591,
+        6732117023706.351
+      ],
+      [
+        6732117023708.871,
+        6732117023814.951
+      ],
+      [
+        6732117023817.191,
+        6732117023975.552
+      ],
+      [
+        6732117023978.391,
+        6732117024138.791
+      ],
+      [
+        6732117024141.351,
+        6732117024349.231
+      ],
+      [
+        6732117024351.312,
+        6732117024488.392
+      ],
+      [
+        6732117024490.712,
+        6732117024586.992
+      ]
+    ],
+    "device_events": [
+      168573,
+      168577,
+      168581,
+      168585,
+      168589,
+      168593,
+      168597,
+      168601,
+      168605,
+      168609,
+      168613,
+      168617,
+      168621,
+      168625,
+      168629,
+      168633,
+      168637,
+      168641,
+      168655,
+      168659,
+      168663,
+      168667,
+      168671,
+      168675,
+      168679,
+      168683,
+      168687,
+      168691,
+      168695,
+      168699,
+      168703,
+      168707,
+      168711,
+      168715,
+      168719,
+      168723
+    ],
+    "input_dims": [
+      [
+        32933,
+        5120
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+        "count": 4,
+        "union_ms": 0.0895595703125,
+        "sum_ms": 0.0895595703125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 2,
+        "union_ms": 0.314240234375,
+        "sum_ms": 0.314240234375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+        "count": 1,
+        "union_ms": 0.08948046875,
+        "sum_ms": 0.08948046875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 5,
+        "union_ms": 0.8691220703125,
+        "sum_ms": 0.8691220703125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_128x128B128_epilogue_stage3_btmenc",
+        "count": 2,
+        "union_ms": 0.1042001953125,
+        "sum_ms": 0.1042001953125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.04883984375,
+        "sum_ms": 0.04883984375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+        "count": 1,
+        "union_ms": 0.038080078125,
+        "sum_ms": 0.038080078125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+        "count": 1,
+        "union_ms": 0.1319599609375,
+        "sum_ms": 0.1319599609375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+        "count": 1,
+        "union_ms": 0.13616015625,
+        "sum_ms": 0.13616015625
+      },
+      {
+        "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+        "count": 18,
+        "union_ms": 2.541083984375,
+        "sum_ms": 2.541083984375
+      }
+    ]
+  },
+  {
+    "cpu_event": 1110,
+    "name": "_GroupedLinearBackward",
+    "kind": "backward_expert_linear_FC1",
+    "ordinal": 1,
+    "cpu_ms": 1.560719,
+    "gpu_union_ms": 7.9566875,
+    "gpu_envelope_ms": 8.063328125,
+    "intervals": [
+      [
+        6732117027456.274,
+        6732117027487.435
+      ],
+      [
+        6732117027490.114,
+        6732117027830.795
+      ],
+      [
+        6732117027832.755,
+        6732117027864.475
+      ],
+      [
+        6732117027866.635,
+        6732117028198.715
+      ],
+      [
+        6732117028201.195,
+        6732117028335.795
+      ],
+      [
+        6732117028338.675,
+        6732117028707.556
+      ],
+      [
+        6732117028715.876,
+        6732117029172.236
+      ],
+      [
+        6732117029174.396,
+        6732117029248.236
+      ],
+      [
+        6732117029250.516,
+        6732117029298.115
+      ],
+      [
+        6732117029300.676,
+        6732117029331.956
+      ],
+      [
+        6732117029334.276,
+        6732117029400.196
+      ],
+      [
+        6732117029401.916,
+        6732117029589.276
+      ],
+      [
+        6732117029595.756,
+        6732117029642.916
+      ],
+      [
+        6732117029645.276,
+        6732117029885.558
+      ],
+      [
+        6732117029895.357,
+        6732117030175.197
+      ],
+      [
+        6732117030183.717,
+        6732117030551.037
+      ],
+      [
+        6732117030558.797,
+        6732117030748.557
+      ],
+      [
+        6732117030751.117,
+        6732117030781.837
+      ],
+      [
+        6732117030784.677,
+        6732117030924.078
+      ],
+      [
+        6732117030926.638,
+        6732117031282.317
+      ],
+      [
+        6732117031284.318,
+        6732117031443.998
+      ],
+      [
+        6732117031445.518,
+        6732117031828.718
+      ],
+      [
+        6732117031830.638,
+        6732117032065.119
+      ],
+      [
+        6732117032066.879,
+        6732117032477.639
+      ],
+      [
+        6732117032479.639,
+        6732117032899.719
+      ],
+      [
+        6732117032902.199,
+        6732117033093.76
+      ],
+      [
+        6732117033096.24,
+        6732117033286.44
+      ],
+      [
+        6732117033288.16,
+        6732117033451.04
+      ],
+      [
+        6732117033453.2,
+        6732117033653.28
+      ],
+      [
+        6732117033654.8,
+        6732117033926.24
+      ],
+      [
+        6732117033928.48,
+        6732117034114.36
+      ],
+      [
+        6732117034116.12,
+        6732117034420.841
+      ],
+      [
+        6732117034423.441,
+        6732117034720.201
+      ],
+      [
+        6732117034722.281,
+        6732117035089.161
+      ],
+      [
+        6732117035091.241,
+        6732117035339.362
+      ],
+      [
+        6732117035341.282,
+        6732117035519.603
+      ]
+    ],
+    "device_events": [
+      168783,
+      168787,
+      168791,
+      168795,
+      168799,
+      168803,
+      168807,
+      168811,
+      168815,
+      168819,
+      168823,
+      168827,
+      168831,
+      168835,
+      168839,
+      168843,
+      168847,
+      168851,
+      168865,
+      168869,
+      168873,
+      168877,
+      168881,
+      168885,
+      168889,
+      168893,
+      168897,
+      168901,
+      168905,
+      168909,
+      168913,
+      168917,
+      168921,
+      168925,
+      168929,
+      168933
+    ],
+    "input_dims": [
+      [
+        32933,
+        3072
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+        "count": 3,
+        "union_ms": 0.093599609375,
+        "sum_ms": 0.093599609375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 4,
+        "union_ms": 1.263720703125,
+        "sum_ms": 1.263720703125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 5,
+        "union_ms": 1.3931611328125,
+        "sum_ms": 1.3931611328125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2_btmenc",
+        "count": 2,
+        "union_ms": 0.139759765625,
+        "sum_ms": 0.139759765625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.047599609375,
+        "sum_ms": 0.047599609375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.0312802734375,
+        "sum_ms": 0.0312802734375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x96B128_epilogue_stage3_btmenc",
+        "count": 1,
+        "union_ms": 0.04716015625,
+        "sum_ms": 0.04716015625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+        "count": 1,
+        "union_ms": 0.24028125,
+        "sum_ms": 0.24028125
+      },
+      {
+        "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+        "count": 18,
+        "union_ms": 4.700125,
+        "sum_ms": 4.700125
+      }
+    ]
+  },
+  {
+    "cpu_event": 1315,
+    "name": "FusedDispatchBackward",
+    "kind": "backward_EP_combine",
+    "ordinal": 0,
+    "cpu_ms": 19.685907,
+    "gpu_union_ms": 0.2957998046875,
+    "gpu_envelope_ms": 3.8006025390625,
+    "intervals": [
+      [
+        6732117041056.287,
+        6732117041060.728
+      ],
+      [
+        6732117041063.207,
+        6732117041066.967
+      ],
+      [
+        6732117044569.29,
+        6732117044856.89
+      ]
+    ],
+    "device_events": [
+      168989,
+      168993,
+      169005
+    ],
+    "input_dims": [
+      [
+        27266,
+        5120
+      ],
+      [],
+      [
+        27266,
+        6
+      ],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<long, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long)",
+        "count": 1,
+        "union_ms": 0.0044404296875,
+        "sum_ms": 0.0044404296875
+      },
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<int, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, int, long)",
+        "count": 1,
+        "union_ms": 0.003759765625,
+        "sum_ms": 0.003759765625
+      },
+      {
+        "name": "void deep_ep::intranode_ace::moe_unpermute_mask_kernel_tme<__mt_bfloat16, 8, true>(__mt_bfloat16 const*, __mt_bfloat16*, int const*, float const*, float*, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.287599609375,
+        "sum_ms": 0.287599609375
+      }
+    ]
+  },
+  {
+    "cpu_event": 1641,
+    "name": "AttnFuncWithCPAndQKVOA2ABackward",
+    "kind": "backward_attention_CP",
+    "ordinal": 0,
+    "cpu_ms": 3.6262,
+    "gpu_union_ms": 71.0130625,
+    "gpu_envelope_ms": 78.3341513671875,
+    "intervals": [
+      [
+        6732117056268.541,
+        6732117056672.901
+      ],
+      [
+        6732117056712.101,
+        6732117064268.308
+      ],
+      [
+        6732117056678.381,
+        6732117057245.461
+      ],
+      [
+        6732117064277.348,
+        6732117071248.113
+      ],
+      [
+        6732117077315.12,
+        6732117077780.48
+      ],
+      [
+        6732117077782.92,
+        6732117078358.801
+      ],
+      [
+        6732117078360.161,
+        6732117100216.46
+      ],
+      [
+        6732117100220.1,
+        6732117101552.462
+      ],
+      [
+        6732117101554.582,
+        6732117102166.742
+      ],
+      [
+        6732117102169.582,
+        6732117102799.143
+      ],
+      [
+        6732117102801.583,
+        6732117103203.263
+      ],
+      [
+        6732117103985.024,
+        6732117114722.515
+      ],
+      [
+        6732117115798.515,
+        6732117126202.924
+      ],
+      [
+        6732117114774.794,
+        6732117115480.354
+      ],
+      [
+        6732117126437.044,
+        6732117134183.131
+      ],
+      [
+        6732117126272.364,
+        6732117127153.005
+      ],
+      [
+        6732117134186.211,
+        6732117134602.692
+      ]
+    ],
+    "device_events": [
+      169267,
+      169279,
+      169289,
+      169301,
+      169327,
+      169331,
+      169335,
+      169339,
+      169345,
+      169351,
+      169357,
+      169377,
+      169399,
+      169415,
+      169427,
+      169439,
+      169445
+    ],
+    "input_dims": [
+      [
+        8192,
+        128,
+        128
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+        "count": 5,
+        "union_ms": 2.9741220703125,
+        "sum_ms": 2.9741220703125
+      },
+      {
+        "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+        "count": 5,
+        "union_ms": 43.414958984375,
+        "sum_ms": 43.414958984375
+      },
+      {
+        "name": "void musa::dnn::preprocess_delta_kernel<__mt_bfloat16, false, 1024, 128, 64, 128>(float*, unsigned int __vector(4), unsigned int __vector(4), int*, int, int, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.4653603515625,
+        "sum_ms": 0.4653603515625
+      },
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<float, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, float, long)",
+        "count": 1,
+        "union_ms": 0.575880859375,
+        "sum_ms": 0.575880859375
+      },
+      {
+        "name": "musa_asm_bf16tce_flash_atten_bwd_512_64x128x_qk_192_v_128_ws_causal_persistence",
+        "count": 1,
+        "union_ms": 21.856298828125,
+        "sum_ms": 21.856298828125
+      },
+      {
+        "name": "void musa::dnn::unary::kernel_unary_input_last_contig<float, musa::dnn::unary::CastOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, float, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+        "count": 1,
+        "union_ms": 1.3323623046875,
+        "sum_ms": 1.3323623046875
+      },
+      {
+        "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::IdentityOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+        "count": 3,
+        "union_ms": 1.643400390625,
+        "sum_ms": 1.643400390625
+      }
+    ]
+  },
+  {
+    "cpu_event": 2226,
+    "name": "AttnFuncWithCPAndQKVOA2A",
+    "kind": "recompute_attention_CP",
+    "ordinal": 1,
+    "cpu_ms": 2.65799,
+    "gpu_union_ms": 46.5128818359375,
+    "gpu_envelope_ms": 54.946369140625,
+    "intervals": [
+      [
+        6732117153377.949,
+        6732117153996.39
+      ],
+      [
+        6732117154059.749,
+        6732117164737.999
+      ],
+      [
+        6732117153998.349,
+        6732117165023.479
+      ],
+      [
+        6732117165101.239,
+        6732117176327.41
+      ],
+      [
+        6732117165051.999,
+        6732117176713.41
+      ],
+      [
+        6732117176841.61,
+        6732117183772.776
+      ],
+      [
+        6732117191627.223,
+        6732117200337.431
+      ],
+      [
+        6732117200754.032,
+        6732117207899.998
+      ],
+      [
+        6732117207903.758,
+        6732117208324.318
+      ]
+    ],
+    "device_events": [
+      169781,
+      169797,
+      169811,
+      169827,
+      169851,
+      169867,
+      169909,
+      169941,
+      169957
+    ],
+    "input_dims": [
+      [],
+      [
+        2,
+        4096,
+        128,
+        192
+      ],
+      [
+        2,
+        4096,
+        128,
+        192
+      ],
+      [
+        2,
+        4096,
+        128,
+        128
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+        "count": 4,
+        "union_ms": 23.7255419921875,
+        "sum_ms": 23.7255419921875
+      },
+      {
+        "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+        "count": 4,
+        "union_ms": 35.981552734375,
+        "sum_ms": 35.981552734375
+      },
+      {
+        "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+        "count": 1,
+        "union_ms": 8.7102080078125,
+        "sum_ms": 8.7102080078125
+      }
+    ]
+  },
+  {
+    "cpu_event": 2683,
+    "name": "FusedDispatch",
+    "kind": "recompute_EP_dispatch",
+    "ordinal": 1,
+    "cpu_ms": 153.630498,
+    "gpu_union_ms": 0.7128818359375,
+    "gpu_envelope_ms": 4.1926435546875,
+    "intervals": [
+      [
+        6732117213952.764,
+        6732117214064.644
+      ],
+      [
+        6732117213950.444,
+        6732117213958.004
+      ],
+      [
+        6732117213992.284,
+        6732117213995.164
+      ],
+      [
+        6732117214255.004,
+        6732117214257.964
+      ],
+      [
+        6732117214409.124,
+        6732117214412.084
+      ],
+      [
+        6732117214727.244,
+        6732117214732.444
+      ],
+      [
+        6732117214745.404,
+        6732117214768.845
+      ],
+      [
+        6732117214770.884,
+        6732117214792.563
+      ],
+      [
+        6732117214794.684,
+        6732117214799.844
+      ],
+      [
+        6732117214801.564,
+        6732117214805.885
+      ],
+      [
+        6732117214808.004,
+        6732117214812.204
+      ],
+      [
+        6732117214813.324,
+        6732117214866.365
+      ],
+      [
+        6732117214867.525,
+        6732117215219.405
+      ],
+      [
+        6732117215221.965,
+        6732117215330.845
+      ],
+      [
+        6732117217858.567,
+        6732117217867.087
+      ],
+      [
+        6732117217870.287,
+        6732117217873.607
+      ],
+      [
+        6732117218139.967,
+        6732117218143.088
+      ]
+    ],
+    "device_events": [
+      170479,
+      170491,
+      170495,
+      170501,
+      170507,
+      170529,
+      170533,
+      170537,
+      170541,
+      170545,
+      170549,
+      170553,
+      170563,
+      170567,
+      170587,
+      170591,
+      170597
+    ],
+    "input_dims": [
+      [
+        8192,
+        5120
+      ],
+      [
+        8192,
+        6
+      ],
+      [
+        8192,
+        6
+      ],
+      [],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::layout::get_dispatch_layout<1024, 8, 8>(long const*, int*, int*, int*, bool*, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.1118798828125,
+        "sum_ms": 0.1118798828125
+      },
+      {
+        "name": "void musa::dnn::reduce_column::ReduceColumnShflKernel<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, musa::dnn::ReduceOp<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, (musa::dnn::ReduceMode)1>, (musa::dnn::ReduceMode)1, 64, 16, 4, true>(long*, long*, long*, int const*, long, int, musa::dnn::ReduceOp<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, (musa::dnn::ReduceMode)1>)",
+        "count": 2,
+        "union_ms": 0.0160791015625,
+        "sum_ms": 0.0160791015625
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pinned)",
+        "count": 2,
+        "union_ms": 0.0062001953125,
+        "sum_ms": 0.0062001953125
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pageable)",
+        "count": 3,
+        "union_ms": 0.009041015625,
+        "sum_ms": 0.009041015625
+      },
+      {
+        "name": "Memset (Device)",
+        "count": 1,
+        "union_ms": 0.0052001953125,
+        "sum_ms": 0.0052001953125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::fused_unique_routing_kernel_bitpacked<long, 512>(long const*, unsigned int*, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.0234404296875,
+        "sum_ms": 0.0234404296875
+      },
+      {
+        "name": "void deep_ep::intranode_ace::make_row_id_map_pass1_kernel<int, 256>(unsigned int const*, int*, int, int, int)",
+        "count": 1,
+        "union_ms": 0.0216796875,
+        "sum_ms": 0.0216796875
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_block_sums<1024>(int const*, int*, int*, int)",
+        "count": 1,
+        "union_ms": 0.00516015625,
+        "sum_ms": 0.00516015625
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_single_block<1024>(int const*, int*, int)",
+        "count": 1,
+        "union_ms": 0.0043203125,
+        "sum_ms": 0.0043203125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_add_block_prefix<1024>(int*, int const*, int)",
+        "count": 1,
+        "union_ms": 0.0042001953125,
+        "sum_ms": 0.0042001953125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::make_row_id_map_pass2_kernel<256>(unsigned int const*, int*, int const*, int, int, int)",
+        "count": 1,
+        "union_ms": 0.053041015625,
+        "sum_ms": 0.053041015625
+      },
+      {
+        "name": "void deep_ep::intranode_ace::moe_permute_mask_kernel_tme<__mt_bfloat16, true>(MUtensorDescriptor_st, MUtensorDescriptor_st, MUtensorDescriptor_st, int, int, int, int, int, long*, float*, long*, float*)",
+        "count": 1,
+        "union_ms": 0.3518798828125,
+        "sum_ms": 0.3518798828125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::ace_notify_dispatch<8>(int*, int*, int*, int const*, int const*, void**, int**, int, int, int)",
+        "count": 1,
+        "union_ms": 0.1088798828125,
+        "sum_ms": 0.1088798828125
+      }
+    ]
+  },
+  {
+    "cpu_event": 2829,
+    "name": "_GroupedLinear",
+    "kind": "recompute_expert_linear_FC1",
+    "ordinal": 2,
+    "cpu_ms": 0.984356,
+    "gpu_union_ms": 3.7858017578125,
+    "gpu_envelope_ms": 3.856283203125,
+    "intervals": [
+      [
+        6732117221567.051,
+        6732117221949.65
+      ],
+      [
+        6732117221954.811,
+        6732117222009.291
+      ],
+      [
+        6732117222010.931,
+        6732117222390.61
+      ],
+      [
+        6732117222397.371,
+        6732117222509.251
+      ],
+      [
+        6732117222511.611,
+        6732117222547.611
+      ],
+      [
+        6732117222549.572,
+        6732117222926.532
+      ],
+      [
+        6732117222934.132,
+        6732117223048.892
+      ],
+      [
+        6732117223051.212,
+        6732117223266.852
+      ],
+      [
+        6732117223268.812,
+        6732117223364.172
+      ],
+      [
+        6732117223366.292,
+        6732117223404.252
+      ],
+      [
+        6732117223406.252,
+        6732117223840.573
+      ],
+      [
+        6732117223842.973,
+        6732117223935.893
+      ],
+      [
+        6732117223937.533,
+        6732117224094.813
+      ],
+      [
+        6732117224102.413,
+        6732117224146.173
+      ],
+      [
+        6732117224149.173,
+        6732117224408.053
+      ],
+      [
+        6732117224414.493,
+        6732117224575.053
+      ],
+      [
+        6732117224577.293,
+        6732117224832.774
+      ],
+      [
+        6732117224841.214,
+        6732117224955.614
+      ],
+      [
+        6732117224957.614,
+        6732117225384.975
+      ],
+      [
+        6732117225387.814,
+        6732117225423.334
+      ]
+    ],
+    "device_events": [
+      170707,
+      170711,
+      170715,
+      170719,
+      170723,
+      170727,
+      170731,
+      170735,
+      170739,
+      170743,
+      170747,
+      170751,
+      170755,
+      170759,
+      170763,
+      170767,
+      170771,
+      170775,
+      170779,
+      170783
+    ],
+    "input_dims": [
+      [
+        38451,
+        5120
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+        "count": 5,
+        "union_ms": 1.6536005859375,
+        "sum_ms": 1.6536005859375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+        "count": 1,
+        "union_ms": 0.05448046875,
+        "sum_ms": 0.05448046875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 6,
+        "union_ms": 1.418361328125,
+        "sum_ms": 1.418361328125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+        "count": 4,
+        "union_ms": 0.1532392578125,
+        "sum_ms": 0.1532392578125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x160B128_epilogue_persis_stage2",
+        "count": 1,
+        "union_ms": 0.0953603515625,
+        "sum_ms": 0.0953603515625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4",
+        "count": 1,
+        "union_ms": 0.092919921875,
+        "sum_ms": 0.092919921875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 2,
+        "union_ms": 0.31783984375,
+        "sum_ms": 0.31783984375
+      }
+    ]
+  },
+  {
+    "cpu_event": 2902,
+    "name": "_GroupedLinear",
+    "kind": "recompute_expert_linear_FC2",
+    "ordinal": 3,
+    "cpu_ms": 0.941841,
+    "gpu_union_ms": 1.9583203125,
+    "gpu_envelope_ms": 2.00380078125,
+    "intervals": [
+      [
+        6732117227083.376,
+        6732117227282.816
+      ],
+      [
+        6732117227287.576,
+        6732117227322.216
+      ],
+      [
+        6732117227324.976,
+        6732117227523.936
+      ],
+      [
+        6732117227525.776,
+        6732117227575.536
+      ],
+      [
+        6732117227577.856,
+        6732117227596.776
+      ],
+      [
+        6732117227601.096,
+        6732117227798.536
+      ],
+      [
+        6732117227803.576,
+        6732117227852.416
+      ],
+      [
+        6732117227854.256,
+        6732117227957.696
+      ],
+      [
+        6732117227959.056,
+        6732117228002.056
+      ],
+      [
+        6732117228003.776,
+        6732117228022.576
+      ],
+      [
+        6732117228024.096,
+        6732117228254.217
+      ],
+      [
+        6732117228256.697,
+        6732117228302.657
+      ],
+      [
+        6732117228304.497,
+        6732117228391.577
+      ],
+      [
+        6732117228392.937,
+        6732117228412.977
+      ],
+      [
+        6732117228414.737,
+        6732117228538.257
+      ],
+      [
+        6732117228540.417,
+        6732117228630.137
+      ],
+      [
+        6732117228632.057,
+        6732117228773.896
+      ],
+      [
+        6732117228776.137,
+        6732117228825.177
+      ],
+      [
+        6732117228827.337,
+        6732117229064.457
+      ],
+      [
+        6732117229066.537,
+        6732117229087.177
+      ]
+    ],
+    "device_events": [
+      170861,
+      170865,
+      170869,
+      170873,
+      170877,
+      170881,
+      170885,
+      170889,
+      170893,
+      170897,
+      170901,
+      170905,
+      170909,
+      170913,
+      170917,
+      170921,
+      170925,
+      170929,
+      170933,
+      170937
+    ],
+    "input_dims": [
+      [
+        38451,
+        1536
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 4,
+        "union_ms": 0.69928125,
+        "sum_ms": 0.69928125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.0346396484375,
+        "sum_ms": 0.0346396484375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+        "count": 3,
+        "union_ms": 0.1476396484375,
+        "sum_ms": 0.1476396484375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+        "count": 3,
+        "union_ms": 0.058359375,
+        "sum_ms": 0.058359375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 5,
+        "union_ms": 0.698041015625,
+        "sum_ms": 0.698041015625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+        "count": 3,
+        "union_ms": 0.3003193359375,
+        "sum_ms": 0.3003193359375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.0200400390625,
+        "sum_ms": 0.0200400390625
+      }
+    ]
+  },
+  {
+    "cpu_event": 2938,
+    "name": "FusedCombine",
+    "kind": "recompute_EP_combine",
+    "ordinal": 1,
+    "cpu_ms": 9.052707,
+    "gpu_union_ms": 0.2920400390625,
+    "gpu_envelope_ms": 0.2920400390625,
+    "intervals": [
+      [
+        6732117231440.1,
+        6732117231732.14
+      ]
+    ],
+    "device_events": [
+      170955
+    ],
+    "input_dims": [
+      [
+        26737,
+        5120
+      ],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::intranode_ace::moe_unpermute_mask_kernel_tme<__mt_bfloat16, 8, false>(__mt_bfloat16 const*, __mt_bfloat16*, int const*, float const*, float*, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.2920400390625,
+        "sum_ms": 0.2920400390625
+      }
+    ]
+  },
+  {
+    "cpu_event": 2969,
+    "name": "FusedCombineBackward",
+    "kind": "backward_EP_dispatch",
+    "ordinal": 1,
+    "cpu_ms": 2.177142,
+    "gpu_union_ms": 0.328240234375,
+    "gpu_envelope_ms": 0.328240234375,
+    "intervals": [
+      [
+        6732117232609.621,
+        6732117232937.861
+      ]
+    ],
+    "device_events": [
+      171007
+    ],
+    "input_dims": [
+      [
+        8192,
+        5120
+      ],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::intranode_ace::moe_permute_mask_kernel_tme<__mt_bfloat16, false>(MUtensorDescriptor_st, MUtensorDescriptor_st, MUtensorDescriptor_st, int, int, int, int, int, long*, float*, long*, float*)",
+        "count": 1,
+        "union_ms": 0.328240234375,
+        "sum_ms": 0.328240234375
+      }
+    ]
+  },
+  {
+    "cpu_event": 2989,
+    "name": "_GroupedLinearBackward",
+    "kind": "backward_expert_linear_FC2",
+    "ordinal": 2,
+    "cpu_ms": 1.575163,
+    "gpu_union_ms": 5.119845703125,
+    "gpu_envelope_ms": 5.21240625,
+    "intervals": [
+      [
+        6732117235299.183,
+        6732117235520.0625
+      ],
+      [
+        6732117235522.463,
+        6732117235560.703
+      ],
+      [
+        6732117235562.223,
+        6732117235771.103
+      ],
+      [
+        6732117235773.184,
+        6732117235858.384
+      ],
+      [
+        6732117235861.904,
+        6732117235885.624
+      ],
+      [
+        6732117235887.904,
+        6732117236109.145
+      ],
+      [
+        6732117236112.944,
+        6732117236205.265
+      ],
+      [
+        6732117236207.504,
+        6732117236323.864
+      ],
+      [
+        6732117236326.224,
+        6732117236401.063
+      ],
+      [
+        6732117236402.824,
+        6732117236425.185
+      ],
+      [
+        6732117236427.304,
+        6732117236649.104
+      ],
+      [
+        6732117236651.144,
+        6732117236712.504
+      ],
+      [
+        6732117236714.624,
+        6732117236828.264
+      ],
+      [
+        6732117236830.904,
+        6732117236852.145
+      ],
+      [
+        6732117236853.824,
+        6732117236984.745
+      ],
+      [
+        6732117236989.785,
+        6732117237105.945
+      ],
+      [
+        6732117237109.185,
+        6732117237240.064
+      ],
+      [
+        6732117237242.425,
+        6732117237323.064
+      ],
+      [
+        6732117237325.465,
+        6732117237542.225
+      ],
+      [
+        6732117237544.545,
+        6732117237568.305
+      ],
+      [
+        6732117237570.345,
+        6732117237770.745
+      ],
+      [
+        6732117237772.825,
+        6732117237859.625
+      ],
+      [
+        6732117237861.385,
+        6732117238083.906
+      ],
+      [
+        6732117238087.546,
+        6732117238204.906
+      ],
+      [
+        6732117238206.746,
+        6732117238299.786
+      ],
+      [
+        6732117238301.586,
+        6732117238543.506
+      ],
+      [
+        6732117238545.666,
+        6732117238666.506
+      ],
+      [
+        6732117238668.666,
+        6732117238819.786
+      ],
+      [
+        6732117238822.746,
+        6732117238938.346
+      ],
+      [
+        6732117238941.746,
+        6732117239025.946
+      ],
+      [
+        6732117239028.306,
+        6732117239273.146
+      ],
+      [
+        6732117239275.187,
+        6732117239370.187
+      ],
+      [
+        6732117239372.027,
+        6732117239496.987
+      ],
+      [
+        6732117239498.987,
+        6732117239597.587
+      ],
+      [
+        6732117239599.227,
+        6732117239763.146
+      ],
+      [
+        6732117239764.907,
+        6732117239901.907
+      ],
+      [
+        6732117239903.867,
+        6732117240070.268
+      ],
+      [
+        6732117240072.427,
+        6732117240185.748
+      ],
+      [
+        6732117240188.148,
+        6732117240427.549
+      ],
+      [
+        6732117240430.188,
+        6732117240511.589
+      ]
+    ],
+    "device_events": [
+      171049,
+      171053,
+      171057,
+      171061,
+      171065,
+      171069,
+      171073,
+      171077,
+      171081,
+      171085,
+      171089,
+      171093,
+      171097,
+      171101,
+      171105,
+      171109,
+      171113,
+      171117,
+      171121,
+      171125,
+      171139,
+      171143,
+      171147,
+      171151,
+      171155,
+      171159,
+      171163,
+      171167,
+      171171,
+      171175,
+      171179,
+      171183,
+      171187,
+      171191,
+      171195,
+      171199,
+      171203,
+      171207,
+      171211,
+      171215
+    ],
+    "input_dims": [
+      [
+        38451,
+        5120
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 8,
+        "union_ms": 1.4357197265625,
+        "sum_ms": 1.4357197265625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.038240234375,
+        "sum_ms": 0.038240234375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+        "count": 4,
+        "union_ms": 0.333,
+        "sum_ms": 0.333
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+        "count": 4,
+        "union_ms": 0.091080078125,
+        "sum_ms": 0.091080078125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_128x128B128_epilogue_stage3",
+        "count": 1,
+        "union_ms": 0.0613603515625,
+        "sum_ms": 0.0613603515625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+        "count": 2,
+        "union_ms": 0.26180078125,
+        "sum_ms": 0.26180078125
+      },
+      {
+        "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+        "count": 20,
+        "union_ms": 2.89864453125,
+        "sum_ms": 2.89864453125
+      }
+    ]
+  },
+  {
+    "cpu_event": 3181,
+    "name": "_GroupedLinearBackward",
+    "kind": "backward_expert_linear_FC1",
+    "ordinal": 3,
+    "cpu_ms": 1.596936,
+    "gpu_union_ms": 9.072412109375,
+    "gpu_envelope_ms": 9.1865283203125,
+    "intervals": [
+      [
+        6732117243840.471,
+        6732117244209.351
+      ],
+      [
+        6732117244215.391,
+        6732117244265.11
+      ],
+      [
+        6732117244267.511,
+        6732117244633.912
+      ],
+      [
+        6732117244638.512,
+        6732117244725.472
+      ],
+      [
+        6732117244727.552,
+        6732117244757.912
+      ],
+      [
+        6732117244759.512,
+        6732117245127.512
+      ],
+      [
+        6732117245134.592,
+        6732117245221.952
+      ],
+      [
+        6732117245224.552,
+        6732117245413.032
+      ],
+      [
+        6732117245422.712,
+        6732117245497.712
+      ],
+      [
+        6732117245500.112,
+        6732117245530.473
+      ],
+      [
+        6732117245532.152,
+        6732117245984.113
+      ],
+      [
+        6732117245987.033,
+        6732117246057.953
+      ],
+      [
+        6732117246060.393,
+        6732117246219.192
+      ],
+      [
+        6732117246226.073,
+        6732117246261.193
+      ],
+      [
+        6732117246263.553,
+        6732117246502.232
+      ],
+      [
+        6732117246507.793,
+        6732117246673.273
+      ],
+      [
+        6732117246676.593,
+        6732117246948.554
+      ],
+      [
+        6732117246950.634,
+        6732117247033.313
+      ],
+      [
+        6732117247035.634,
+        6732117247504.874
+      ],
+      [
+        6732117247507.114,
+        6732117247540.274
+      ],
+      [
+        6732117247545.834,
+        6732117247953.035
+      ],
+      [
+        6732117247955.475,
+        6732117248129.795
+      ],
+      [
+        6732117248131.275,
+        6732117248537.476
+      ],
+      [
+        6732117248539.555,
+        6732117248744.715
+      ],
+      [
+        6732117248747.075,
+        6732117248925.3955
+      ],
+      [
+        6732117248926.835,
+        6732117249401.996
+      ],
+      [
+        6732117249403.916,
+        6732117249626.636
+      ],
+      [
+        6732117249628.276,
+        6732117249903.156
+      ],
+      [
+        6732117249905.116,
+        6732117250111.518
+      ],
+      [
+        6732117250114.477,
+        6732117250293.356
+      ],
+      [
+        6732117250294.597,
+        6732117250760.637
+      ],
+      [
+        6732117250762.957,
+        6732117250965.4375
+      ],
+      [
+        6732117250967.157,
+        6732117251231.158
+      ],
+      [
+        6732117251233.118,
+        6732117251389.438
+      ],
+      [
+        6732117251391.198,
+        6732117251690.318
+      ],
+      [
+        6732117251692.798,
+        6732117251934.758
+      ],
+      [
+        6732117251936.798,
+        6732117252220.558
+      ],
+      [
+        6732117252222.478,
+        6732117252443.959
+      ],
+      [
+        6732117252446.239,
+        6732117252865.72
+      ],
+      [
+        6732117252867.999,
+        6732117253026.999
+      ]
+    ],
+    "device_events": [
+      171275,
+      171279,
+      171283,
+      171287,
+      171291,
+      171295,
+      171299,
+      171303,
+      171307,
+      171311,
+      171315,
+      171319,
+      171323,
+      171327,
+      171331,
+      171335,
+      171339,
+      171343,
+      171347,
+      171351,
+      171365,
+      171369,
+      171373,
+      171377,
+      171381,
+      171385,
+      171389,
+      171393,
+      171397,
+      171401,
+      171405,
+      171409,
+      171413,
+      171417,
+      171421,
+      171425,
+      171429,
+      171433,
+      171437,
+      171441
+    ],
+    "input_dims": [
+      [
+        38451,
+        3072
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 4,
+        "union_ms": 1.29176171875,
+        "sum_ms": 1.29176171875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.0497197265625,
+        "sum_ms": 0.0497197265625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+        "count": 3,
+        "union_ms": 0.257,
+        "sum_ms": 0.257
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+        "count": 3,
+        "union_ms": 0.093880859375,
+        "sum_ms": 0.093880859375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 5,
+        "union_ms": 1.33908203125,
+        "sum_ms": 1.33908203125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+        "count": 3,
+        "union_ms": 0.5629599609375,
+        "sum_ms": 0.5629599609375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.0351201171875,
+        "sum_ms": 0.0351201171875
+      },
+      {
+        "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+        "count": 20,
+        "union_ms": 5.4428876953125,
+        "sum_ms": 5.4428876953125
+      }
+    ]
+  },
+  {
+    "cpu_event": 3386,
+    "name": "FusedDispatchBackward",
+    "kind": "backward_EP_combine",
+    "ordinal": 1,
+    "cpu_ms": 20.617391,
+    "gpu_union_ms": 0.30916015625,
+    "gpu_envelope_ms": 2.2536826171875,
+    "intervals": [
+      [
+        6732117258541.404,
+        6732117258546.204
+      ],
+      [
+        6732117258550.644,
+        6732117258555.523
+      ],
+      [
+        6732117260495.606,
+        6732117260795.087
+      ]
+    ],
+    "device_events": [
+      171497,
+      171501,
+      171513
+    ],
+    "input_dims": [
+      [
+        26737,
+        5120
+      ],
+      [],
+      [
+        26737,
+        6
+      ],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<long, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long)",
+        "count": 1,
+        "union_ms": 0.0047998046875,
+        "sum_ms": 0.0047998046875
+      },
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<int, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, int, long)",
+        "count": 1,
+        "union_ms": 0.0048798828125,
+        "sum_ms": 0.0048798828125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::moe_unpermute_mask_kernel_tme<__mt_bfloat16, 8, true>(__mt_bfloat16 const*, __mt_bfloat16*, int const*, float const*, float*, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.29948046875,
+        "sum_ms": 0.29948046875
+      }
+    ]
+  },
+  {
+    "cpu_event": 3712,
+    "name": "AttnFuncWithCPAndQKVOA2ABackward",
+    "kind": "backward_attention_CP",
+    "ordinal": 1,
+    "cpu_ms": 3.599091,
+    "gpu_union_ms": 71.0937548828125,
+    "gpu_envelope_ms": 78.6641904296875,
+    "intervals": [
+      [
+        6732117272211.686,
+        6732117272615.767
+      ],
+      [
+        6732117272648.137,
+        6732117280076.104
+      ],
+      [
+        6732117272617.847,
+        6732117273178.167
+      ],
+      [
+        6732117280083.773,
+        6732117287068.58
+      ],
+      [
+        6732117293276.825,
+        6732117293747.826
+      ],
+      [
+        6732117293749.946,
+        6732117294329.706
+      ],
+      [
+        6732117294331.626,
+        6732117316177.445
+      ],
+      [
+        6732117316185.645,
+        6732117317509.286
+      ],
+      [
+        6732117317511.247,
+        6732117318124.207
+      ],
+      [
+        6732117318126.767,
+        6732117318751.208
+      ],
+      [
+        6732117318753.528,
+        6732117319157.448
+      ],
+      [
+        6732117320131.249,
+        6732117330689.138
+      ],
+      [
+        6732117331473.419,
+        6732117342600.629
+      ],
+      [
+        6732117330758.338,
+        6732117331463.179
+      ],
+      [
+        6732117342942.669,
+        6732117350449.316
+      ],
+      [
+        6732117342876.509,
+        6732117343823.87
+      ],
+      [
+        6732117350453.556,
+        6732117350875.876
+      ]
+    ],
+    "device_events": [
+      171775,
+      171789,
+      171801,
+      171815,
+      171859,
+      171865,
+      171869,
+      171873,
+      171879,
+      171885,
+      171891,
+      171917,
+      171943,
+      171963,
+      171977,
+      171991,
+      171999
+    ],
+    "input_dims": [
+      [
+        8192,
+        128,
+        128
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+        "count": 5,
+        "union_ms": 3.038923828125,
+        "sum_ms": 3.038923828125
+      },
+      {
+        "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+        "count": 5,
+        "union_ms": 43.60451953125,
+        "sum_ms": 43.60451953125
+      },
+      {
+        "name": "void musa::dnn::preprocess_delta_kernel<__mt_bfloat16, false, 1024, 128, 64, 128>(float*, unsigned int __vector(4), unsigned int __vector(4), int*, int, int, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.4710009765625,
+        "sum_ms": 0.4710009765625
+      },
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<float, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, float, long)",
+        "count": 1,
+        "union_ms": 0.579759765625,
+        "sum_ms": 0.579759765625
+      },
+      {
+        "name": "musa_asm_bf16tce_flash_atten_bwd_512_64x128x_qk_192_v_128_ws_causal_persistence",
+        "count": 1,
+        "union_ms": 21.8458193359375,
+        "sum_ms": 21.8458193359375
+      },
+      {
+        "name": "void musa::dnn::unary::kernel_unary_input_last_contig<float, musa::dnn::unary::CastOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, float, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+        "count": 1,
+        "union_ms": 1.3236416015625,
+        "sum_ms": 1.3236416015625
+      },
+      {
+        "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::IdentityOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+        "count": 3,
+        "union_ms": 1.6413212890625,
+        "sum_ms": 1.6413212890625
+      }
+    ]
+  },
+  {
+    "cpu_event": 4297,
+    "name": "AttnFuncWithCPAndQKVOA2A",
+    "kind": "recompute_attention_CP",
+    "ordinal": 2,
+    "cpu_ms": 2.713647,
+    "gpu_union_ms": 46.482802734375,
+    "gpu_envelope_ms": 54.8458896484375,
+    "intervals": [
+      [
+        6732117369939.973,
+        6732117370561.733
+      ],
+      [
+        6732117370799.374,
+        6732117381528.823
+      ],
+      [
+        6732117370563.654,
+        6732117381873.345
+      ],
+      [
+        6732117381962.304,
+        6732117392858.112
+      ],
+      [
+        6732117381891.344,
+        6732117393234.434
+      ],
+      [
+        6732117393368.554,
+        6732117400270.4795
+      ],
+      [
+        6732117408068.767,
+        6732117416656.455
+      ],
+      [
+        6732117417064.135,
+        6732117424365.501
+      ],
+      [
+        6732117424368.581,
+        6732117424785.862
+      ]
+    ],
+    "device_events": [
+      172337,
+      172353,
+      172367,
+      172383,
+      172407,
+      172423,
+      172465,
+      172497,
+      172513
+    ],
+    "input_dims": [
+      [],
+      [
+        2,
+        4096,
+        128,
+        192
+      ],
+      [
+        2,
+        4096,
+        128,
+        192
+      ],
+      [
+        2,
+        4096,
+        128,
+        128
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+        "count": 4,
+        "union_ms": 23.691822265625,
+        "sum_ms": 23.691822265625
+      },
+      {
+        "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+        "count": 4,
+        "union_ms": 35.8285498046875,
+        "sum_ms": 35.8285498046875
+      },
+      {
+        "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+        "count": 1,
+        "union_ms": 8.5876884765625,
+        "sum_ms": 8.5876884765625
+      }
+    ]
+  },
+  {
+    "cpu_event": 4754,
+    "name": "FusedDispatch",
+    "kind": "recompute_EP_dispatch",
+    "ordinal": 2,
+    "cpu_ms": 154.40476800000002,
+    "gpu_union_ms": 0.78087890625,
+    "gpu_envelope_ms": 3.617283203125,
+    "intervals": [
+      [
+        6732117430790.227,
+        6732117430900.667
+      ],
+      [
+        6732117430752.467,
+        6732117430760.747
+      ],
+      [
+        6732117430763.507,
+        6732117430766.387
+      ],
+      [
+        6732117430979.827,
+        6732117430982.867
+      ],
+      [
+        6732117431142.507,
+        6732117431145.507
+      ],
+      [
+        6732117431458.468,
+        6732117431463.628
+      ],
+      [
+        6732117431492.068,
+        6732117431514.708
+      ],
+      [
+        6732117431516.428,
+        6732117431537.947
+      ],
+      [
+        6732117431539.828,
+        6732117431544.588
+      ],
+      [
+        6732117431546.268,
+        6732117431550.268
+      ],
+      [
+        6732117431551.588,
+        6732117431554.628
+      ],
+      [
+        6732117431555.708,
+        6732117431610.228
+      ],
+      [
+        6732117431611.388,
+        6732117431957.107
+      ],
+      [
+        6732117431958.628,
+        6732117432135.348
+      ],
+      [
+        6732117434058.59,
+        6732117434067.47
+      ],
+      [
+        6732117434070.39,
+        6732117434073.71
+      ],
+      [
+        6732117434366.79,
+        6732117434369.75
+      ]
+    ],
+    "device_events": [
+      173033,
+      173043,
+      173047,
+      173053,
+      173059,
+      173077,
+      173081,
+      173085,
+      173089,
+      173093,
+      173097,
+      173101,
+      173111,
+      173115,
+      173135,
+      173139,
+      173145
+    ],
+    "input_dims": [
+      [
+        8192,
+        5120
+      ],
+      [
+        8192,
+        6
+      ],
+      [
+        8192,
+        6
+      ],
+      [],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::layout::get_dispatch_layout<1024, 8, 8>(long const*, int*, int*, int*, bool*, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.1104404296875,
+        "sum_ms": 0.1104404296875
+      },
+      {
+        "name": "void musa::dnn::reduce_column::ReduceColumnShflKernel<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, musa::dnn::ReduceOp<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, (musa::dnn::ReduceMode)1>, (musa::dnn::ReduceMode)1, 64, 16, 4, true>(long*, long*, long*, int const*, long, int, musa::dnn::ReduceOp<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, (musa::dnn::ReduceMode)1>)",
+        "count": 2,
+        "union_ms": 0.01716015625,
+        "sum_ms": 0.01716015625
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pinned)",
+        "count": 2,
+        "union_ms": 0.0062001953125,
+        "sum_ms": 0.0062001953125
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pageable)",
+        "count": 3,
+        "union_ms": 0.009,
+        "sum_ms": 0.009
+      },
+      {
+        "name": "Memset (Device)",
+        "count": 1,
+        "union_ms": 0.00516015625,
+        "sum_ms": 0.00516015625
+      },
+      {
+        "name": "void deep_ep::intranode_ace::fused_unique_routing_kernel_bitpacked<long, 512>(long const*, unsigned int*, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.0226396484375,
+        "sum_ms": 0.0226396484375
+      },
+      {
+        "name": "void deep_ep::intranode_ace::make_row_id_map_pass1_kernel<int, 256>(unsigned int const*, int*, int, int, int)",
+        "count": 1,
+        "union_ms": 0.02151953125,
+        "sum_ms": 0.02151953125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_block_sums<1024>(int const*, int*, int*, int)",
+        "count": 1,
+        "union_ms": 0.004759765625,
+        "sum_ms": 0.004759765625
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_single_block<1024>(int const*, int*, int)",
+        "count": 1,
+        "union_ms": 0.004,
+        "sum_ms": 0.004
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_add_block_prefix<1024>(int*, int const*, int)",
+        "count": 1,
+        "union_ms": 0.0030400390625,
+        "sum_ms": 0.0030400390625
+      },
+      {
+        "name": "void deep_ep::intranode_ace::make_row_id_map_pass2_kernel<256>(unsigned int const*, int*, int const*, int, int, int)",
+        "count": 1,
+        "union_ms": 0.05451953125,
+        "sum_ms": 0.05451953125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::moe_permute_mask_kernel_tme<__mt_bfloat16, true>(MUtensorDescriptor_st, MUtensorDescriptor_st, MUtensorDescriptor_st, int, int, int, int, int, long*, float*, long*, float*)",
+        "count": 1,
+        "union_ms": 0.3457197265625,
+        "sum_ms": 0.3457197265625
+      },
+      {
+        "name": "void deep_ep::intranode_ace::ace_notify_dispatch<8>(int*, int*, int*, int const*, int const*, void**, int**, int, int, int)",
+        "count": 1,
+        "union_ms": 0.1767197265625,
+        "sum_ms": 0.1767197265625
+      }
+    ]
+  },
+  {
+    "cpu_event": 4900,
+    "name": "_GroupedLinear",
+    "kind": "recompute_expert_linear_FC1",
+    "ordinal": 4,
+    "cpu_ms": 0.814644,
+    "gpu_union_ms": 3.2191220703125,
+    "gpu_envelope_ms": 3.294802734375,
+    "intervals": [
+      [
+        6732117437994.873,
+        6732117438132.194
+      ],
+      [
+        6732117438136.834,
+        6732117438237.434
+      ],
+      [
+        6732117438239.394,
+        6732117438674.634
+      ],
+      [
+        6732117438677.074,
+        6732117438714.034
+      ],
+      [
+        6732117438715.714,
+        6732117439021.434
+      ],
+      [
+        6732117439029.634,
+        6732117439169.314
+      ],
+      [
+        6732117439171.875,
+        6732117439302.435
+      ],
+      [
+        6732117439309.555,
+        6732117439346.715
+      ],
+      [
+        6732117439348.435,
+        6732117439608.154
+      ],
+      [
+        6732117439615.795,
+        6732117439877.915
+      ],
+      [
+        6732117439886.355,
+        6732117439956.516
+      ],
+      [
+        6732117439958.955,
+        6732117440215.315
+      ],
+      [
+        6732117440222.195,
+        6732117440334.517
+      ],
+      [
+        6732117440337.036,
+        6732117440725.036
+      ],
+      [
+        6732117440733.916,
+        6732117440847.556
+      ],
+      [
+        6732117440849.876,
+        6732117440983.476
+      ],
+      [
+        6732117440985.756,
+        6732117441147.556
+      ],
+      [
+        6732117441151.516,
+        6732117441289.676
+      ]
+    ],
+    "device_events": [
+      173251,
+      173255,
+      173259,
+      173263,
+      173267,
+      173271,
+      173275,
+      173279,
+      173283,
+      173287,
+      173291,
+      173295,
+      173299,
+      173303,
+      173307,
+      173311,
+      173315,
+      173319
+    ],
+    "input_dims": [
+      [
+        33914,
+        5120
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+        "count": 7,
+        "union_ms": 1.2011611328125,
+        "sum_ms": 1.2011611328125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x160B128_epilogue_persis_stage2",
+        "count": 1,
+        "union_ms": 0.100599609375,
+        "sum_ms": 0.100599609375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 3,
+        "union_ms": 0.661201171875,
+        "sum_ms": 0.661201171875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+        "count": 2,
+        "union_ms": 0.0741201171875,
+        "sum_ms": 0.0741201171875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 2,
+        "union_ms": 0.46751953125,
+        "sum_ms": 0.46751953125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_256x128B128_epilogue_persis_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.07016015625,
+        "sum_ms": 0.07016015625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+        "count": 2,
+        "union_ms": 0.6443603515625,
+        "sum_ms": 0.6443603515625
+      }
+    ]
+  },
+  {
+    "cpu_event": 4973,
+    "name": "_GroupedLinear",
+    "kind": "recompute_expert_linear_FC2",
+    "ordinal": 5,
+    "cpu_ms": 0.9160969999999999,
+    "gpu_union_ms": 1.727240234375,
+    "gpu_envelope_ms": 1.765880859375,
+    "intervals": [
+      [
+        6732117442771.598,
+        6732117442855.638
+      ],
+      [
+        6732117442859.878,
+        6732117442902.678
+      ],
+      [
+        6732117442905.038,
+        6732117443151.678
+      ],
+      [
+        6732117443153.838,
+        6732117443175.318
+      ],
+      [
+        6732117443176.918,
+        6732117443341.798
+      ],
+      [
+        6732117443343.678,
+        6732117443419.998
+      ],
+      [
+        6732117443421.918,
+        6732117443493.038
+      ],
+      [
+        6732117443494.678,
+        6732117443513.4375
+      ],
+      [
+        6732117443514.918,
+        6732117443642.158
+      ],
+      [
+        6732117443645.398,
+        6732117443786.999
+      ],
+      [
+        6732117443788.919,
+        6732117443821.839
+      ],
+      [
+        6732117443823.439,
+        6732117443972.92
+      ],
+      [
+        6732117443975.079,
+        6732117444024.719
+      ],
+      [
+        6732117444027.039,
+        6732117444227.879
+      ],
+      [
+        6732117444230.999,
+        6732117444290.999
+      ],
+      [
+        6732117444293.039,
+        6732117444368.079
+      ],
+      [
+        6732117444369.799,
+        6732117444456.639
+      ],
+      [
+        6732117444459.879,
+        6732117444537.479
+      ]
+    ],
+    "device_events": [
+      173393,
+      173397,
+      173401,
+      173405,
+      173409,
+      173413,
+      173417,
+      173421,
+      173425,
+      173429,
+      173433,
+      173437,
+      173441,
+      173445,
+      173449,
+      173453,
+      173457,
+      173461
+    ],
+    "input_dims": [
+      [
+        33914,
+        1536
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 9,
+        "union_ms": 0.9800400390625,
+        "sum_ms": 0.9800400390625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+        "count": 2,
+        "union_ms": 0.040240234375,
+        "sum_ms": 0.040240234375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+        "count": 2,
+        "union_ms": 0.214080078125,
+        "sum_ms": 0.214080078125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.032919921875,
+        "sum_ms": 0.032919921875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 2,
+        "union_ms": 0.20948046875,
+        "sum_ms": 0.20948046875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+        "count": 2,
+        "union_ms": 0.2504794921875,
+        "sum_ms": 0.2504794921875
+      }
+    ]
+  },
+  {
+    "cpu_event": 5009,
+    "name": "FusedCombine",
+    "kind": "recompute_EP_combine",
+    "ordinal": 2,
+    "cpu_ms": 11.508985000000001,
+    "gpu_union_ms": 0.2866396484375,
+    "gpu_envelope_ms": 0.2866396484375,
+    "intervals": [
+      [
+        6732117449939.284,
+        6732117450225.924
+      ]
+    ],
+    "device_events": [
+      173479
+    ],
+    "input_dims": [
+      [
+        28145,
+        5120
+      ],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::intranode_ace::moe_unpermute_mask_kernel_tme<__mt_bfloat16, 8, false>(__mt_bfloat16 const*, __mt_bfloat16*, int const*, float const*, float*, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.2866396484375,
+        "sum_ms": 0.2866396484375
+      }
+    ]
+  },
+  {
+    "cpu_event": 5040,
+    "name": "FusedCombineBackward",
+    "kind": "backward_EP_dispatch",
+    "ordinal": 2,
+    "cpu_ms": 2.2025859999999997,
+    "gpu_union_ms": 0.3225595703125,
+    "gpu_envelope_ms": 0.3225595703125,
+    "intervals": [
+      [
+        6732117451007.005,
+        6732117451329.564
+      ]
+    ],
+    "device_events": [
+      173531
+    ],
+    "input_dims": [
+      [
+        8192,
+        5120
+      ],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::intranode_ace::moe_permute_mask_kernel_tme<__mt_bfloat16, false>(MUtensorDescriptor_st, MUtensorDescriptor_st, MUtensorDescriptor_st, int, int, int, int, int, long*, float*, long*, float*)",
+        "count": 1,
+        "union_ms": 0.3225595703125,
+        "sum_ms": 0.3225595703125
+      }
+    ]
+  },
+  {
+    "cpu_event": 5060,
+    "name": "_GroupedLinearBackward",
+    "kind": "backward_expert_linear_FC2",
+    "ordinal": 4,
+    "cpu_ms": 1.2519079999999998,
+    "gpu_union_ms": 4.641166015625,
+    "gpu_envelope_ms": 4.7285244140625,
+    "intervals": [
+      [
+        6732117453708.647,
+        6732117453823.568
+      ],
+      [
+        6732117453826.248,
+        6732117453908.008
+      ],
+      [
+        6732117453909.568,
+        6732117454130.128
+      ],
+      [
+        6732117454132.568,
+        6732117454155.208
+      ],
+      [
+        6732117454157.168,
+        6732117454313.208
+      ],
+      [
+        6732117454318.008,
+        6732117454431.168
+      ],
+      [
+        6732117454434.008,
+        6732117454542.248
+      ],
+      [
+        6732117454545.088,
+        6732117454568.168
+      ],
+      [
+        6732117454570.528,
+        6732117454704.849
+      ],
+      [
+        6732117454707.408,
+        6732117454837.448
+      ],
+      [
+        6732117454842.448,
+        6732117454897.729
+      ],
+      [
+        6732117454899.968,
+        6732117455032.688
+      ],
+      [
+        6732117455034.889,
+        6732117455129.329
+      ],
+      [
+        6732117455132.529,
+        6732117455350.529
+      ],
+      [
+        6732117455354.569,
+        6732117455447.689
+      ],
+      [
+        6732117455451.009,
+        6732117455566.249
+      ],
+      [
+        6732117455569.049,
+        6732117455675.009
+      ],
+      [
+        6732117455676.929,
+        6732117455792.249
+      ],
+      [
+        6732117455795.169,
+        6732117455923.449
+      ],
+      [
+        6732117455924.849,
+        6732117456037.969
+      ],
+      [
+        6732117456040.729,
+        6732117456284.409
+      ],
+      [
+        6732117456286.89,
+        6732117456367.25
+      ],
+      [
+        6732117456368.97,
+        6732117456563.97
+      ],
+      [
+        6732117456566.65,
+        6732117456700.29
+      ],
+      [
+        6732117456702.49,
+        6732117456833.851
+      ],
+      [
+        6732117456835.85,
+        6732117456931.7295
+      ],
+      [
+        6732117456933.05,
+        6732117457099.93
+      ],
+      [
+        6732117457102.17,
+        6732117457270.371
+      ],
+      [
+        6732117457272.451,
+        6732117457375.852
+      ],
+      [
+        6732117457378.171,
+        6732117457552.811
+      ],
+      [
+        6732117457555.251,
+        6732117457670.491
+      ],
+      [
+        6732117457671.851,
+        6732117457902.65
+      ],
+      [
+        6732117457905.211,
+        6732117458027.251
+      ],
+      [
+        6732117458029.571,
+        6732117458159.972
+      ],
+      [
+        6732117458161.971,
+        6732117458300.61
+      ],
+      [
+        6732117458302.411,
+        6732117458437.172
+      ]
+    ],
+    "device_events": [
+      173575,
+      173579,
+      173583,
+      173587,
+      173591,
+      173595,
+      173599,
+      173603,
+      173607,
+      173611,
+      173615,
+      173619,
+      173623,
+      173627,
+      173631,
+      173635,
+      173639,
+      173643,
+      173657,
+      173661,
+      173665,
+      173669,
+      173673,
+      173677,
+      173681,
+      173685,
+      173689,
+      173693,
+      173697,
+      173701,
+      173705,
+      173709,
+      173713,
+      173717,
+      173721,
+      173725
+    ],
+    "input_dims": [
+      [
+        33914,
+        5120
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 8,
+        "union_ms": 1.1114013671875,
+        "sum_ms": 1.1114013671875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+        "count": 3,
+        "union_ms": 0.2693203125,
+        "sum_ms": 0.2693203125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+        "count": 2,
+        "union_ms": 0.0457197265625,
+        "sum_ms": 0.0457197265625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 1,
+        "union_ms": 0.1560400390625,
+        "sum_ms": 0.1560400390625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+        "count": 2,
+        "union_ms": 0.2643603515625,
+        "sum_ms": 0.2643603515625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x96B128_epilogue_stage3_btmenc",
+        "count": 1,
+        "union_ms": 0.0552802734375,
+        "sum_ms": 0.0552802734375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+        "count": 1,
+        "union_ms": 0.132720703125,
+        "sum_ms": 0.132720703125
+      },
+      {
+        "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+        "count": 18,
+        "union_ms": 2.6063232421875,
+        "sum_ms": 2.6063232421875
+      }
+    ]
+  },
+  {
+    "cpu_event": 5252,
+    "name": "_GroupedLinearBackward",
+    "kind": "backward_expert_linear_FC1",
+    "ordinal": 5,
+    "cpu_ms": 1.446435,
+    "gpu_union_ms": 8.03800390625,
+    "gpu_envelope_ms": 8.133607421875,
+    "intervals": [
+      [
+        6732117461384.894,
+        6732117461520.693
+      ],
+      [
+        6732117461523.854,
+        6732117461594.653
+      ],
+      [
+        6732117461596.694,
+        6732117462053.455
+      ],
+      [
+        6732117462055.575,
+        6732117462088.295
+      ],
+      [
+        6732117462091.215,
+        6732117462423.615
+      ],
+      [
+        6732117462426.295,
+        6732117462560.975
+      ],
+      [
+        6732117462563.375,
+        6732117462703.935
+      ],
+      [
+        6732117462706.215,
+        6732117462737.895
+      ],
+      [
+        6732117462739.615,
+        6732117462973.176
+      ],
+      [
+        6732117462981.416,
+        6732117463245.776
+      ],
+      [
+        6732117463247.656,
+        6732117463298.256
+      ],
+      [
+        6732117463300.416,
+        6732117463578.736
+      ],
+      [
+        6732117463588.616,
+        6732117463675.456
+      ],
+      [
+        6732117463678.696,
+        6732117464063.337
+      ],
+      [
+        6732117464069.177,
+        6732117464171.856
+      ],
+      [
+        6732117464174.017,
+        6732117464309.696
+      ],
+      [
+        6732117464312.017,
+        6732117464474.177
+      ],
+      [
+        6732117464478.337,
+        6732117464617.577
+      ],
+      [
+        6732117464620.097,
+        6732117464861.337
+      ],
+      [
+        6732117464862.857,
+        6732117465069.497
+      ],
+      [
+        6732117465071.257,
+        6732117465579.978
+      ],
+      [
+        6732117465581.858,
+        6732117465743.139
+      ],
+      [
+        6732117465745.578,
+        6732117466109.218
+      ],
+      [
+        6732117466111.258,
+        6732117466353.379
+      ],
+      [
+        6732117466355.459,
+        6732117466619.379
+      ],
+      [
+        6732117466620.859,
+        6732117466790.539
+      ],
+      [
+        6732117466792.539,
+        6732117467102.779
+      ],
+      [
+        6732117467104.819,
+        6732117467398.58
+      ],
+      [
+        6732117467400.66,
+        6732117467571.74
+      ],
+      [
+        6732117467573.74,
+        6732117467902.0205
+      ],
+      [
+        6732117467904.74,
+        6732117468108.061
+      ],
+      [
+        6732117468110.22,
+        6732117468548.141
+      ],
+      [
+        6732117468550.221,
+        6732117468780.341
+      ],
+      [
+        6732117468782.141,
+        6732117469028.0205
+      ],
+      [
+        6732117469029.981,
+        6732117469279.661
+      ],
+      [
+        6732117469281.501,
+        6732117469518.501
+      ]
+    ],
+    "device_events": [
+      173785,
+      173789,
+      173793,
+      173797,
+      173801,
+      173805,
+      173809,
+      173813,
+      173817,
+      173821,
+      173825,
+      173829,
+      173833,
+      173837,
+      173841,
+      173845,
+      173849,
+      173853,
+      173867,
+      173871,
+      173875,
+      173879,
+      173883,
+      173887,
+      173891,
+      173895,
+      173899,
+      173903,
+      173907,
+      173911,
+      173915,
+      173919,
+      173923,
+      173927,
+      173931,
+      173935
+    ],
+    "input_dims": [
+      [
+        33914,
+        3072
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 9,
+        "union_ms": 1.8102802734375,
+        "sum_ms": 1.8102802734375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+        "count": 2,
+        "union_ms": 0.0643994140625,
+        "sum_ms": 0.0643994140625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+        "count": 2,
+        "union_ms": 0.395720703125,
+        "sum_ms": 0.395720703125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.050599609375,
+        "sum_ms": 0.050599609375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 2,
+        "union_ms": 0.381,
+        "sum_ms": 0.381
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+        "count": 2,
+        "union_ms": 0.47148046875,
+        "sum_ms": 0.47148046875
+      },
+      {
+        "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+        "count": 18,
+        "union_ms": 4.8645234375,
+        "sum_ms": 4.8645234375
+      }
+    ]
+  },
+  {
+    "cpu_event": 5457,
+    "name": "FusedDispatchBackward",
+    "kind": "backward_EP_combine",
+    "ordinal": 2,
+    "cpu_ms": 24.878927,
+    "gpu_union_ms": 0.303599609375,
+    "gpu_envelope_ms": 7.8043662109375,
+    "intervals": [
+      [
+        6732117475092.786,
+        6732117475097.066
+      ],
+      [
+        6732117475098.186,
+        6732117475100.985
+      ],
+      [
+        6732117482600.633,
+        6732117482897.152
+      ]
+    ],
+    "device_events": [
+      173991,
+      173995,
+      174007
+    ],
+    "input_dims": [
+      [
+        28145,
+        5120
+      ],
+      [],
+      [
+        28145,
+        6
+      ],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<long, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long)",
+        "count": 1,
+        "union_ms": 0.0042802734375,
+        "sum_ms": 0.0042802734375
+      },
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<int, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, int, long)",
+        "count": 1,
+        "union_ms": 0.0027998046875,
+        "sum_ms": 0.0027998046875
+      },
+      {
+        "name": "void deep_ep::intranode_ace::moe_unpermute_mask_kernel_tme<__mt_bfloat16, 8, true>(__mt_bfloat16 const*, __mt_bfloat16*, int const*, float const*, float*, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.29651953125,
+        "sum_ms": 0.29651953125
+      }
+    ]
+  },
+  {
+    "cpu_event": 5783,
+    "name": "AttnFuncWithCPAndQKVOA2ABackward",
+    "kind": "backward_attention_CP",
+    "ordinal": 2,
+    "cpu_ms": 2.694663,
+    "gpu_union_ms": 71.201341796875,
+    "gpu_envelope_ms": 78.6527490234375,
+    "intervals": [
+      [
+        6732117493925.403,
+        6732117494333.283
+      ],
+      [
+        6732117494359.963,
+        6732117502231.57
+      ],
+      [
+        6732117494336.323,
+        6732117494882.004
+      ],
+      [
+        6732117502240.37,
+        6732117509232.817
+      ],
+      [
+        6732117515296.942,
+        6732117515794.183
+      ],
+      [
+        6732117515796.662,
+        6732117516371.863
+      ],
+      [
+        6732117516373.703,
+        6732117538202.722
+      ],
+      [
+        6732117538210.722,
+        6732117539546.563
+      ],
+      [
+        6732117539548.484,
+        6732117540158.084
+      ],
+      [
+        6732117540160.204,
+        6732117540798.005
+      ],
+      [
+        6732117540800.765,
+        6732117541208.364
+      ],
+      [
+        6732117541871.566,
+        6732117552610.655
+      ],
+      [
+        6732117553685.456,
+        6732117564189.385
+      ],
+      [
+        6732117552675.455,
+        6732117553382.816
+      ],
+      [
+        6732117564555.706,
+        6732117571720.392
+      ],
+      [
+        6732117564513.266,
+        6732117572169.512
+      ],
+      [
+        6732117572171.312,
+        6732117572578.152
+      ]
+    ],
+    "device_events": [
+      174269,
+      174283,
+      174297,
+      174311,
+      174355,
+      174361,
+      174365,
+      174369,
+      174375,
+      174381,
+      174387,
+      174413,
+      174439,
+      174459,
+      174473,
+      174487,
+      174495
+    ],
+    "input_dims": [
+      [
+        8192,
+        128,
+        128
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+        "count": 5,
+        "union_ms": 9.7240087890625,
+        "sum_ms": 9.7240087890625
+      },
+      {
+        "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+        "count": 5,
+        "union_ms": 43.2717578125,
+        "sum_ms": 43.2717578125
+      },
+      {
+        "name": "void musa::dnn::preprocess_delta_kernel<__mt_bfloat16, false, 1024, 128, 64, 128>(float*, unsigned int __vector(4), unsigned int __vector(4), int*, int, int, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.497240234375,
+        "sum_ms": 0.497240234375
+      },
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<float, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, float, long)",
+        "count": 1,
+        "union_ms": 0.575201171875,
+        "sum_ms": 0.575201171875
+      },
+      {
+        "name": "musa_asm_bf16tce_flash_atten_bwd_512_64x128x_qk_192_v_128_ws_causal_persistence",
+        "count": 1,
+        "union_ms": 21.8290185546875,
+        "sum_ms": 21.8290185546875
+      },
+      {
+        "name": "void musa::dnn::unary::kernel_unary_input_last_contig<float, musa::dnn::unary::CastOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, float, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+        "count": 1,
+        "union_ms": 1.335841796875,
+        "sum_ms": 1.335841796875
+      },
+      {
+        "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::IdentityOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+        "count": 3,
+        "union_ms": 1.655,
+        "sum_ms": 1.655
+      }
+    ]
+  },
+  {
+    "cpu_event": 6368,
+    "name": "AttnFuncWithCPAndQKVOA2A",
+    "kind": "recompute_attention_CP",
+    "ordinal": 3,
+    "cpu_ms": 2.040946,
+    "gpu_union_ms": 47.0108408203125,
+    "gpu_envelope_ms": 54.806248046875,
+    "intervals": [
+      [
+        6732117591449.01,
+        6732117592066.21
+      ],
+      [
+        6732117592101.61,
+        6732117602615.379
+      ],
+      [
+        6732117592068.17,
+        6732117602920.86
+      ],
+      [
+        6732117603155.86,
+        6732117614632.07
+      ],
+      [
+        6732117602961.98,
+        6732117603719.78
+      ],
+      [
+        6732117614638.19,
+        6732117621634.156
+      ],
+      [
+        6732117628943.203,
+        6732117637640.171
+      ],
+      [
+        6732117638074.051,
+        6732117645842.857
+      ],
+      [
+        6732117645846.138,
+        6732117646255.258
+      ]
+    ],
+    "device_events": [
+      174857,
+      174873,
+      174887,
+      174903,
+      174927,
+      174943,
+      174985,
+      175017,
+      175033
+    ],
+    "input_dims": [
+      [],
+      [
+        2,
+        4096,
+        128,
+        192
+      ],
+      [
+        2,
+        4096,
+        128,
+        192
+      ],
+      [
+        2,
+        4096,
+        128,
+        128
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+        "count": 4,
+        "union_ms": 12.636810546875,
+        "sum_ms": 12.636810546875
+      },
+      {
+        "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+        "count": 4,
+        "union_ms": 36.7547509765625,
+        "sum_ms": 36.7547509765625
+      },
+      {
+        "name": "musa_asm_bf16tce_flash_atten_512_256x64_192_128_causal_persistence",
+        "count": 1,
+        "union_ms": 8.6969677734375,
+        "sum_ms": 8.6969677734375
+      }
+    ]
+  },
+  {
+    "cpu_event": 6825,
+    "name": "FusedDispatch",
+    "kind": "recompute_EP_dispatch",
+    "ordinal": 3,
+    "cpu_ms": 158.22057199999998,
+    "gpu_union_ms": 0.7616025390625,
+    "gpu_envelope_ms": 3.8333642578125,
+    "intervals": [
+      [
+        6732117651902.543,
+        6732117652013.743
+      ],
+      [
+        6732117651900.143,
+        6732117651907.463
+      ],
+      [
+        6732117651922.503,
+        6732117651925.383
+      ],
+      [
+        6732117652221.783,
+        6732117652224.784
+      ],
+      [
+        6732117652374.944,
+        6732117652377.864
+      ],
+      [
+        6732117652638.464,
+        6732117652643.624
+      ],
+      [
+        6732117652660.464,
+        6732117652683.744
+      ],
+      [
+        6732117652685.384,
+        6732117652706.903
+      ],
+      [
+        6732117652708.864,
+        6732117652714.225
+      ],
+      [
+        6732117652715.984,
+        6732117652719.944
+      ],
+      [
+        6732117652721.184,
+        6732117652724.144
+      ],
+      [
+        6732117652725.304,
+        6732117652775.504
+      ],
+      [
+        6732117652776.664,
+        6732117653133.744
+      ],
+      [
+        6732117653135.304,
+        6732117653292.504
+      ],
+      [
+        6732117655450.786,
+        6732117655459.826
+      ],
+      [
+        6732117655462.666,
+        6732117655465.986
+      ],
+      [
+        6732117655730.507,
+        6732117655733.507
+      ]
+    ],
+    "device_events": [
+      175555,
+      175565,
+      175569,
+      175575,
+      175581,
+      175599,
+      175603,
+      175607,
+      175611,
+      175615,
+      175619,
+      175623,
+      175633,
+      175637,
+      175657,
+      175661,
+      175667
+    ],
+    "input_dims": [
+      [
+        8192,
+        5120
+      ],
+      [
+        8192,
+        6
+      ],
+      [
+        8192,
+        6
+      ],
+      [],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::layout::get_dispatch_layout<1024, 8, 8>(long const*, int*, int*, int*, bool*, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.1112001953125,
+        "sum_ms": 0.1112001953125
+      },
+      {
+        "name": "void musa::dnn::reduce_column::ReduceColumnShflKernel<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, musa::dnn::ReduceOp<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, (musa::dnn::ReduceMode)1>, (musa::dnn::ReduceMode)1, 64, 16, 4, true>(long*, long*, long*, int const*, long, int, musa::dnn::ReduceOp<int, long, long, musa::dnn::ReduceType<long, (musa::dnn::ReduceImplType)0>, (musa::dnn::ReduceMode)1>)",
+        "count": 2,
+        "union_ms": 0.0163603515625,
+        "sum_ms": 0.0163603515625
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pinned)",
+        "count": 2,
+        "union_ms": 0.0062001953125,
+        "sum_ms": 0.0062001953125
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pageable)",
+        "count": 3,
+        "union_ms": 0.0089208984375,
+        "sum_ms": 0.0089208984375
+      },
+      {
+        "name": "Memset (Device)",
+        "count": 1,
+        "union_ms": 0.00516015625,
+        "sum_ms": 0.00516015625
+      },
+      {
+        "name": "void deep_ep::intranode_ace::fused_unique_routing_kernel_bitpacked<long, 512>(long const*, unsigned int*, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.0232802734375,
+        "sum_ms": 0.0232802734375
+      },
+      {
+        "name": "void deep_ep::intranode_ace::make_row_id_map_pass1_kernel<int, 256>(unsigned int const*, int*, int, int, int)",
+        "count": 1,
+        "union_ms": 0.02151953125,
+        "sum_ms": 0.02151953125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_block_sums<1024>(int const*, int*, int*, int)",
+        "count": 1,
+        "union_ms": 0.0053603515625,
+        "sum_ms": 0.0053603515625
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_single_block<1024>(int const*, int*, int)",
+        "count": 1,
+        "union_ms": 0.0039599609375,
+        "sum_ms": 0.0039599609375
+      },
+      {
+        "name": "void deep_ep::intranode_ace::workspace_scan_add_block_prefix<1024>(int*, int const*, int)",
+        "count": 1,
+        "union_ms": 0.0029599609375,
+        "sum_ms": 0.0029599609375
+      },
+      {
+        "name": "void deep_ep::intranode_ace::make_row_id_map_pass2_kernel<256>(unsigned int const*, int*, int const*, int, int, int)",
+        "count": 1,
+        "union_ms": 0.0502001953125,
+        "sum_ms": 0.0502001953125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::moe_permute_mask_kernel_tme<__mt_bfloat16, true>(MUtensorDescriptor_st, MUtensorDescriptor_st, MUtensorDescriptor_st, int, int, int, int, int, long*, float*, long*, float*)",
+        "count": 1,
+        "union_ms": 0.357080078125,
+        "sum_ms": 0.357080078125
+      },
+      {
+        "name": "void deep_ep::intranode_ace::ace_notify_dispatch<8>(int*, int*, int*, int const*, int const*, void**, int**, int, int, int)",
+        "count": 1,
+        "union_ms": 0.1572001953125,
+        "sum_ms": 0.1572001953125
+      }
+    ]
+  },
+  {
+    "cpu_event": 6971,
+    "name": "_GroupedLinear",
+    "kind": "recompute_expert_linear_FC1",
+    "ordinal": 6,
+    "cpu_ms": 0.639204,
+    "gpu_union_ms": 3.5371220703125,
+    "gpu_envelope_ms": 3.5952431640625,
+    "intervals": [
+      [
+        6732117659229.11,
+        6732117659481.67
+      ],
+      [
+        6732117659486.03,
+        6732117659868.95
+      ],
+      [
+        6732117659874.83,
+        6732117660101.11
+      ],
+      [
+        6732117660103.23,
+        6732117660525.432
+      ],
+      [
+        6732117660527.671,
+        6732117660778.871
+      ],
+      [
+        6732117660785.911,
+        6732117661040.751
+      ],
+      [
+        6732117661049.791,
+        6732117661093.791
+      ],
+      [
+        6732117661096.111,
+        6732117661310.752
+      ],
+      [
+        6732117661313.112,
+        6732117661384.473
+      ],
+      [
+        6732117661386.392,
+        6732117661422.231
+      ],
+      [
+        6732117661424.392,
+        6732117661458.111
+      ],
+      [
+        6732117661461.192,
+        6732117661680.712
+      ],
+      [
+        6732117661683.192,
+        6732117661750.712
+      ],
+      [
+        6732117661752.792,
+        6732117662185.192
+      ],
+      [
+        6732117662187.432,
+        6732117662319.632
+      ],
+      [
+        6732117662323.512,
+        6732117662435.353
+      ],
+      [
+        6732117662437.873,
+        6732117662568.913
+      ],
+      [
+        6732117662571.313,
+        6732117662824.354
+      ]
+    ],
+    "device_events": [
+      175773,
+      175777,
+      175781,
+      175785,
+      175789,
+      175793,
+      175797,
+      175801,
+      175805,
+      175809,
+      175813,
+      175817,
+      175821,
+      175825,
+      175829,
+      175833,
+      175837,
+      175841
+    ],
+    "input_dims": [
+      [
+        37258,
+        5120
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        3072,
+        5120
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+        "count": 5,
+        "union_ms": 1.2755595703125,
+        "sum_ms": 1.2755595703125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 6,
+        "union_ms": 1.6268828125,
+        "sum_ms": 1.6268828125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+        "count": 2,
+        "union_ms": 0.382240234375,
+        "sum_ms": 0.382240234375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.044,
+        "sum_ms": 0.044
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_256x128B128_epilogue_persis_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.0713603515625,
+        "sum_ms": 0.0713603515625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+        "count": 2,
+        "union_ms": 0.0695595703125,
+        "sum_ms": 0.0695595703125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_32x128B128_epilogue_stage3_btmenc",
+        "count": 1,
+        "union_ms": 0.06751953125,
+        "sum_ms": 0.06751953125
+      }
+    ]
+  },
+  {
+    "cpu_event": 7044,
+    "name": "_GroupedLinear",
+    "kind": "recompute_expert_linear_FC2",
+    "ordinal": 7,
+    "cpu_ms": 0.918889,
+    "gpu_union_ms": 1.8966025390625,
+    "gpu_envelope_ms": 1.934162109375,
+    "intervals": [
+      [
+        6732117664428.394,
+        6732117664553.754
+      ],
+      [
+        6732117664555.874,
+        6732117664749.515
+      ],
+      [
+        6732117664754.915,
+        6732117664883.475
+      ],
+      [
+        6732117664886.195,
+        6732117665128.115
+      ],
+      [
+        6732117665130.155,
+        6732117665277.476
+      ],
+      [
+        6732117665279.555,
+        6732117665406.314
+      ],
+      [
+        6732117665408.355,
+        6732117665434.796
+      ],
+      [
+        6732117665436.355,
+        6732117665559.476
+      ],
+      [
+        6732117665562.075,
+        6732117665595.875
+      ],
+      [
+        6732117665598.315,
+        6732117665616.796
+      ],
+      [
+        6732117665618.395,
+        6732117665633.114
+      ],
+      [
+        6732117665634.595,
+        6732117665759.676
+      ],
+      [
+        6732117665761.276,
+        6732117665789.717
+      ],
+      [
+        6732117665791.716,
+        6732117666023.956
+      ],
+      [
+        6732117666026.276,
+        6732117666099.236
+      ],
+      [
+        6732117666101.116,
+        6732117666146.956
+      ],
+      [
+        6732117666148.436,
+        6732117666233.3955
+      ],
+      [
+        6732117666235.596,
+        6732117666362.556
+      ]
+    ],
+    "device_events": [
+      175915,
+      175919,
+      175923,
+      175927,
+      175931,
+      175935,
+      175939,
+      175943,
+      175947,
+      175951,
+      175955,
+      175959,
+      175963,
+      175967,
+      175971,
+      175975,
+      175979,
+      175983
+    ],
+    "input_dims": [
+      [
+        37258,
+        1536
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        5120,
+        1536
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+        "count": 7,
+        "union_ms": 0.84080078125,
+        "sum_ms": 0.84080078125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 2,
+        "union_ms": 0.3409609375,
+        "sum_ms": 0.3409609375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 3,
+        "union_ms": 0.5471201171875,
+        "sum_ms": 0.5471201171875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x96B128_epilogue_stage3_btmenc",
+        "count": 2,
+        "union_ms": 0.054880859375,
+        "sum_ms": 0.054880859375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.0337998046875,
+        "sum_ms": 0.0337998046875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+        "count": 2,
+        "union_ms": 0.0332001953125,
+        "sum_ms": 0.0332001953125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+        "count": 1,
+        "union_ms": 0.04583984375,
+        "sum_ms": 0.04583984375
+      }
+    ]
+  },
+  {
+    "cpu_event": 7080,
+    "name": "FusedCombine",
+    "kind": "recompute_EP_combine",
+    "ordinal": 3,
+    "cpu_ms": 9.674462,
+    "gpu_union_ms": 0.275240234375,
+    "gpu_envelope_ms": 0.275240234375,
+    "intervals": [
+      [
+        6732117668791.718,
+        6732117669066.958
+      ]
+    ],
+    "device_events": [
+      176001
+    ],
+    "input_dims": [
+      [
+        32437,
+        5120
+      ],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::intranode_ace::moe_unpermute_mask_kernel_tme<__mt_bfloat16, 8, false>(__mt_bfloat16 const*, __mt_bfloat16*, int const*, float const*, float*, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.275240234375,
+        "sum_ms": 0.275240234375
+      }
+    ]
+  },
+  {
+    "cpu_event": 7111,
+    "name": "FusedCombineBackward",
+    "kind": "backward_EP_dispatch",
+    "ordinal": 3,
+    "cpu_ms": 2.17538,
+    "gpu_union_ms": 0.3329599609375,
+    "gpu_envelope_ms": 0.3329599609375,
+    "intervals": [
+      [
+        6732117669835.479,
+        6732117670168.438
+      ]
+    ],
+    "device_events": [
+      176053
+    ],
+    "input_dims": [
+      [
+        8192,
+        5120
+      ],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void deep_ep::intranode_ace::moe_permute_mask_kernel_tme<__mt_bfloat16, false>(MUtensorDescriptor_st, MUtensorDescriptor_st, MUtensorDescriptor_st, int, int, int, int, int, long*, float*, long*, float*)",
+        "count": 1,
+        "union_ms": 0.3329599609375,
+        "sum_ms": 0.3329599609375
+      }
+    ]
+  },
+  {
+    "cpu_event": 7131,
+    "name": "_GroupedLinearBackward",
+    "kind": "backward_expert_linear_FC2",
+    "ordinal": 6,
+    "cpu_ms": 1.330344,
+    "gpu_union_ms": 4.62428515625,
+    "gpu_envelope_ms": 4.713763671875,
+    "intervals": [
+      [
+        6732117672596.802,
+        6732117672729.802
+      ],
+      [
+        6732117672734.362,
+        6732117672946.162
+      ],
+      [
+        6732117672948.682,
+        6732117673064.361
+      ],
+      [
+        6732117673066.802,
+        6732117673281.521
+      ],
+      [
+        6732117673284.682,
+        6732117673415.122
+      ],
+      [
+        6732117673418.642,
+        6732117673551.161
+      ],
+      [
+        6732117673555.282,
+        6732117673590.202
+      ],
+      [
+        6732117673592.522,
+        6732117673707.203
+      ],
+      [
+        6732117673709.163,
+        6732117673762.283
+      ],
+      [
+        6732117673764.643,
+        6732117673787.643
+      ],
+      [
+        6732117673789.643,
+        6732117673810.162
+      ],
+      [
+        6732117673812.723,
+        6732117673921.163
+      ],
+      [
+        6732117673924.563,
+        6732117673963.844
+      ],
+      [
+        6732117673966.563,
+        6732117674181.804
+      ],
+      [
+        6732117674185.243,
+        6732117674294.043
+      ],
+      [
+        6732117674296.643,
+        6732117674379.963
+      ],
+      [
+        6732117674382.283,
+        6732117674490.724
+      ],
+      [
+        6732117674492.803,
+        6732117674621.283
+      ],
+      [
+        6732117674628.483,
+        6732117674786.845
+      ],
+      [
+        6732117674788.804,
+        6732117674991.724
+      ],
+      [
+        6732117674993.964,
+        6732117675145.563
+      ],
+      [
+        6732117675147.804,
+        6732117675377.443
+      ],
+      [
+        6732117675379.964,
+        6732117675552.044
+      ],
+      [
+        6732117675554.564,
+        6732117675712.484
+      ],
+      [
+        6732117675714.924,
+        6732117675808.204
+      ],
+      [
+        6732117675809.484,
+        6732117675958.766
+      ],
+      [
+        6732117675960.685,
+        6732117676064.925
+      ],
+      [
+        6732117676066.365,
+        6732117676152.565
+      ],
+      [
+        6732117676154.645,
+        6732117676258.005
+      ],
+      [
+        6732117676259.765,
+        6732117676416.845
+      ],
+      [
+        6732117676418.885,
+        6732117676520.805
+      ],
+      [
+        6732117676522.645,
+        6732117676764.6045
+      ],
+      [
+        6732117676766.845,
+        6732117676886.925
+      ],
+      [
+        6732117676888.845,
+        6732117677010.125
+      ],
+      [
+        6732117677011.885,
+        6732117677151.966
+      ],
+      [
+        6732117677153.966,
+        6732117677310.565
+      ]
+    ],
+    "device_events": [
+      176097,
+      176101,
+      176105,
+      176109,
+      176113,
+      176117,
+      176121,
+      176125,
+      176129,
+      176133,
+      176137,
+      176141,
+      176145,
+      176149,
+      176153,
+      176157,
+      176161,
+      176165,
+      176179,
+      176183,
+      176187,
+      176191,
+      176195,
+      176199,
+      176203,
+      176207,
+      176211,
+      176215,
+      176219,
+      176223,
+      176227,
+      176231,
+      176235,
+      176239,
+      176243,
+      176247
+    ],
+    "input_dims": [
+      [
+        37258,
+        5120
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+        "count": 3,
+        "union_ms": 0.394,
+        "sum_ms": 0.394
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 8,
+        "union_ms": 1.19780078125,
+        "sum_ms": 1.19780078125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+        "count": 1,
+        "union_ms": 0.1304404296875,
+        "sum_ms": 0.1304404296875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.034919921875,
+        "sum_ms": 0.034919921875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x96B128_epilogue_stage3_btmenc",
+        "count": 1,
+        "union_ms": 0.0531201171875,
+        "sum_ms": 0.0531201171875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+        "count": 2,
+        "union_ms": 0.04351953125,
+        "sum_ms": 0.04351953125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+        "count": 1,
+        "union_ms": 0.0392802734375,
+        "sum_ms": 0.0392802734375
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+        "count": 1,
+        "union_ms": 0.0833203125,
+        "sum_ms": 0.0833203125
+      },
+      {
+        "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+        "count": 18,
+        "union_ms": 2.6478837890625,
+        "sum_ms": 2.6478837890625
+      }
+    ]
+  },
+  {
+    "cpu_event": 7323,
+    "name": "_GroupedLinearBackward",
+    "kind": "backward_expert_linear_FC1",
+    "ordinal": 7,
+    "cpu_ms": 1.4298279999999999,
+    "gpu_union_ms": 8.3013251953125,
+    "gpu_envelope_ms": 8.4102861328125,
+    "intervals": [
+      [
+        6732117680530.449,
+        6732117680763.649
+      ],
+      [
+        6732117680769.289,
+        6732117681129.089
+      ],
+      [
+        6732117681135.049,
+        6732117681370.969
+      ],
+      [
+        6732117681373.409,
+        6732117681823.891
+      ],
+      [
+        6732117681827.45,
+        6732117682100.53
+      ],
+      [
+        6732117682107.45,
+        6732117682341.37
+      ],
+      [
+        6732117682346.45,
+        6732117682388.09
+      ],
+      [
+        6732117682390.61,
+        6732117682618.33
+      ],
+      [
+        6732117682625.29,
+        6732117682674.011
+      ],
+      [
+        6732117682676.491,
+        6732117682707.571
+      ],
+      [
+        6732117682710.211,
+        6732117682738.931
+      ],
+      [
+        6732117682740.491,
+        6732117682967.651
+      ],
+      [
+        6732117682976.251,
+        6732117683022.011
+      ],
+      [
+        6732117683024.331,
+        6732117683458.131
+      ],
+      [
+        6732117683460.531,
+        6732117683600.651
+      ],
+      [
+        6732117683602.691,
+        6732117683682.531
+      ],
+      [
+        6732117683684.251,
+        6732117683837.292
+      ],
+      [
+        6732117683844.412,
+        6732117684076.292
+      ],
+      [
+        6732117684081.652,
+        6732117684360.372
+      ],
+      [
+        6732117684362.812,
+        6732117684720.651
+      ],
+      [
+        6732117684722.972,
+        6732117684978.133
+      ],
+      [
+        6732117684980.053,
+        6732117685448.053
+      ],
+      [
+        6732117685449.973,
+        6732117685744.492
+      ],
+      [
+        6732117685746.533,
+        6732117686012.894
+      ],
+      [
+        6732117686014.893,
+        6732117686182.214
+      ],
+      [
+        6732117686183.694,
+        6732117686476.694
+      ],
+      [
+        6732117686478.614,
+        6732117686662.654
+      ],
+      [
+        6732117686664.614,
+        6732117686841.214
+      ],
+      [
+        6732117686843.734,
+        6732117687025.814
+      ],
+      [
+        6732117687027.974,
+        6732117687305.375
+      ],
+      [
+        6732117687307.375,
+        6732117687481.815
+      ],
+      [
+        6732117687483.415,
+        6732117687918.935
+      ],
+      [
+        6732117687920.975,
+        6732117688164.095
+      ],
+      [
+        6732117688166.015,
+        6732117688376.136
+      ],
+      [
+        6732117688377.776,
+        6732117688634.416
+      ],
+      [
+        6732117688636.176,
+        6732117688940.735
+      ]
+    ],
+    "device_events": [
+      176307,
+      176311,
+      176315,
+      176319,
+      176323,
+      176327,
+      176331,
+      176335,
+      176339,
+      176343,
+      176347,
+      176351,
+      176355,
+      176359,
+      176363,
+      176367,
+      176371,
+      176375,
+      176389,
+      176393,
+      176397,
+      176401,
+      176405,
+      176409,
+      176413,
+      176417,
+      176421,
+      176425,
+      176429,
+      176433,
+      176437,
+      176441,
+      176445,
+      176449,
+      176453,
+      176457
+    ],
+    "input_dims": [
+      [
+        37258,
+        3072
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+        "count": 7,
+        "union_ms": 1.5428408203125,
+        "sum_ms": 1.5428408203125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+        "count": 2,
+        "union_ms": 0.6328798828125,
+        "sum_ms": 0.6328798828125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+        "count": 3,
+        "union_ms": 1.0244013671875,
+        "sum_ms": 1.0244013671875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x96B128_epilogue_stage3_btmenc",
+        "count": 2,
+        "union_ms": 0.0873994140625,
+        "sum_ms": 0.0873994140625
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+        "count": 1,
+        "union_ms": 0.048720703125,
+        "sum_ms": 0.048720703125
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+        "count": 2,
+        "union_ms": 0.0597998046875,
+        "sum_ms": 0.0597998046875
+      },
+      {
+        "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+        "count": 1,
+        "union_ms": 0.07983984375,
+        "sum_ms": 0.07983984375
+      },
+      {
+        "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+        "count": 18,
+        "union_ms": 4.825443359375,
+        "sum_ms": 4.825443359375
+      }
+    ]
+  },
+  {
+    "cpu_event": 7528,
+    "name": "FusedDispatchBackward",
+    "kind": "backward_EP_combine",
+    "ordinal": 3,
+    "cpu_ms": 19.319468,
+    "gpu_union_ms": 0.2945205078125,
+    "gpu_envelope_ms": 1.7669619140625,
+    "intervals": [
+      [
+        6732117694457.661,
+        6732117694462.621
+      ],
+      [
+        6732117694465.221,
+        6732117694469.141
+      ],
+      [
+        6732117695938.982,
+        6732117696224.623
+      ]
+    ],
+    "device_events": [
+      176513,
+      176517,
+      176529
+    ],
+    "input_dims": [
+      [
+        32437,
+        5120
+      ],
+      [],
+      [
+        32437,
+        6
+      ],
+      [],
+      [],
+      []
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<long, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long)",
+        "count": 1,
+        "union_ms": 0.0049599609375,
+        "sum_ms": 0.0049599609375
+      },
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<int, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, int, long)",
+        "count": 1,
+        "union_ms": 0.003919921875,
+        "sum_ms": 0.003919921875
+      },
+      {
+        "name": "void deep_ep::intranode_ace::moe_unpermute_mask_kernel_tme<__mt_bfloat16, 8, true>(__mt_bfloat16 const*, __mt_bfloat16*, int const*, float const*, float*, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.285640625,
+        "sum_ms": 0.285640625
+      }
+    ]
+  },
+  {
+    "cpu_event": 7854,
+    "name": "AttnFuncWithCPAndQKVOA2ABackward",
+    "kind": "backward_attention_CP",
+    "ordinal": 3,
+    "cpu_ms": 2.627011,
+    "gpu_union_ms": 71.592263671875,
+    "gpu_envelope_ms": 78.89491015625,
+    "intervals": [
+      [
+        6732117707247.072,
+        6732117707650.434
+      ],
+      [
+        6732117707686.913,
+        6732117715590.8
+      ],
+      [
+        6732117707652.673,
+        6732117708221.793
+      ],
+      [
+        6732117715600.4,
+        6732117722547.847
+      ],
+      [
+        6732117728684.251,
+        6732117729145.172
+      ],
+      [
+        6732117729147.612,
+        6732117729726.013
+      ],
+      [
+        6732117729727.932,
+        6732117751430.712
+      ],
+      [
+        6732117751438.592,
+        6732117752760.593
+      ],
+      [
+        6732117752763.193,
+        6732117753378.713
+      ],
+      [
+        6732117753381.513,
+        6732117754004.794
+      ],
+      [
+        6732117754006.434,
+        6732117754409.193
+      ],
+      [
+        6732117755139.475,
+        6732117766201.484
+      ],
+      [
+        6732117767115.405,
+        6732117777691.695
+      ],
+      [
+        6732117766252.685,
+        6732117766957.444
+      ],
+      [
+        6732117778549.056,
+        6732117785682.981
+      ],
+      [
+        6732117777766.295,
+        6732117778475.615
+      ],
+      [
+        6732117785730.622,
+        6732117786141.982
+      ]
+    ],
+    "device_events": [
+      176791,
+      176805,
+      176817,
+      176831,
+      176877,
+      176883,
+      176887,
+      176891,
+      176897,
+      176903,
+      176909,
+      176935,
+      176961,
+      176981,
+      176995,
+      177009,
+      177017
+    ],
+    "input_dims": [
+      [
+        8192,
+        128,
+        128
+      ]
+    ],
+    "kernels": [
+      {
+        "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+        "count": 5,
+        "union_ms": 2.797921875,
+        "sum_ms": 2.797921875
+      },
+      {
+        "name": "mcclKernel_SendRecv_RING_SIMPLE_Sum_int8_t(mcclWorkElem)",
+        "count": 5,
+        "union_ms": 43.62355859375,
+        "sum_ms": 43.62355859375
+      },
+      {
+        "name": "void musa::dnn::preprocess_delta_kernel<__mt_bfloat16, false, 1024, 128, 64, 128>(float*, unsigned int __vector(4), unsigned int __vector(4), int*, int, int, int, int, int, int, int, int, int, int)",
+        "count": 1,
+        "union_ms": 0.4609208984375,
+        "sum_ms": 0.4609208984375
+      },
+      {
+        "name": "void musa::dnn::(anonymous namespace)::KernelFill<float, false, false, false, (musa::dnn::(anonymous namespace)::BroadcastMode)0, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, 128>(void*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, float, long)",
+        "count": 1,
+        "union_ms": 0.578400390625,
+        "sum_ms": 0.578400390625
+      },
+      {
+        "name": "musa_asm_bf16tce_flash_atten_bwd_512_64x128x_qk_192_v_128_ws_causal_persistence",
+        "count": 1,
+        "union_ms": 21.7027802734375,
+        "sum_ms": 21.7027802734375
+      },
+      {
+        "name": "void musa::dnn::unary::kernel_unary_input_last_contig<float, musa::dnn::unary::CastOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, float, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+        "count": 1,
+        "union_ms": 1.3220009765625,
+        "sum_ms": 1.3220009765625
+      },
+      {
+        "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::IdentityOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+        "count": 3,
+        "union_ms": 1.641560546875,
+        "sum_ms": 1.641560546875
+      }
+    ]
+  }
+]

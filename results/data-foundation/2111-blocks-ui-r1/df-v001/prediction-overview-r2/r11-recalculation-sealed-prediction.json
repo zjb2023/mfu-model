@@ -1,0 +1,36 @@
+{
+  "one_f_one_b_ms": 21653.357840418812,
+  "profiler_step_ms": 22057.160632915395,
+  "training_step_ms": 24512.648936915393,
+  "mfu_profiler_percent": 4.582876358489806,
+  "mfu_training_percent": 4.1237991153117814,
+  "costs": {
+    "entry_ms": 107.17720890045166,
+    "post_last_b_ms": 296.62558359613104,
+    "training_minus_rank0_profiler_ms": 2455.4883039999986,
+    "source_iteration": 60,
+    "source_rank": 0,
+    "source_profiler_label": "ProfilerStep#59",
+    "source_training_ms": 14923.3,
+    "source_profiler_ms": 12467.811696,
+    "source_log": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker33017/2026-09-18_1038/tp1_pp4_dp_mbs2_numbs_gbs64_gpus0_mtp1_forcelbfalse_pertensorfalse_NO_LOSS_REDUCE.RANK3.10.124.33.17.log",
+    "source_log_line": 3399,
+    "policy": "copy source32 scalar envelopes with coefficient1; no target timing used to fit; tail includes update and post-update sync; log residual is timing convention/outer overhead, not proven pure overhead"
+  },
+  "physics": {
+    "model_flops_per_iteration": 1.293891072e+17,
+    "world_size": 256,
+    "peak_flops_per_gpu_s": 500000000000000.0,
+    "source": "/home/zjb/Desktop/mfu-model/case_256gpu_pp16_cp2_a2a/results/mfu_timeline/mfu_timeline_summary.json",
+    "basis": "legacy256 effective FLOPs inferred from training logs, not independently architectural; 500TFLOP/s convention, not new hardware validation"
+  },
+  "target_timing_fit": false,
+  "blind": false,
+  "scope": "rank0 profiler proxy and source-log training clock; not full-world optimizer DAG",
+  "source_training_record": " [2026-09-18 10:51:57] iteration       60/ 1107651 | consumed samples:         3840 | elapsed time per iteration (ms): 14923.3 | throughput per GPU (TFLOP/s/GPU): 57.6 | learning rate: 3.480000E-05 | global batch size:    64 | lm loss: 7.438447E+00 | z_loss: 2.556773E+01 | load_balancing_loss: 1.116110E+00 | loss scale: 1.0 | grad norm: 1.149 | number of skipped iterations:   0 | number of nan iterations:   0 |",
+  "B_model": "b-recompute-r11",
+  "middle_cost_ms": {
+    "F": 342.7138833999634,
+    "B": 868.8333587646479
+  }
+}

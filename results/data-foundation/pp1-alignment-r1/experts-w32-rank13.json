@@ -1,0 +1,6690 @@
+{
+  "world": 32,
+  "stage": 1,
+  "rank": 13,
+  "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34031/profiler/iteration_60/rank13.1789699916494.pt.trace.json",
+  "sha256": "fbe2b88d923ff31ac7c2e076fcc8c3aa3b2dc3ef3542694f3c44d0e47bb39ca1",
+  "blocks": [
+    {
+      "mb": 0,
+      "operators": [
+        {
+          "event": 758,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 0,
+          "FC": 1,
+          "cpu_ms": 0.688225,
+          "args": {
+            "External id": 1108157,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[2186, 42, 4920, 4345, 0, 19, 3789, 1286, 1182, 2730, 4854, 3175, 2864, 32, 97, 0, 0, 211, 7, 3729]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 139774,
+            "finished": true,
+            "Input Dims": [
+              [
+                35468,
+                5120
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 700
+          },
+          "devices": [
+            {
+              "event": 108884,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117006646.45,
+              "end_us": 6732117006870.491
+            },
+            {
+              "event": 108888,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117006874.171,
+              "end_us": 6732117006912.851
+            },
+            {
+              "event": 108892,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117006915.211,
+              "end_us": 6732117007342.571
+            },
+            {
+              "event": 108896,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117007344.891,
+              "end_us": 6732117007725.53
+            },
+            {
+              "event": 108900,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117007732.451,
+              "end_us": 6732117007770.971
+            },
+            {
+              "event": 108904,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117007773.571,
+              "end_us": 6732117008078.252
+            },
+            {
+              "event": 108908,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117008087.612,
+              "end_us": 6732117008224.452
+            },
+            {
+              "event": 108912,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117008226.732,
+              "end_us": 6732117008359.973
+            },
+            {
+              "event": 108916,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117008362.372,
+              "end_us": 6732117008621.732
+            },
+            {
+              "event": 108920,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117008628.972,
+              "end_us": 6732117009058.691
+            },
+            {
+              "event": 108924,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 6732117009061.372,
+              "end_us": 6732117009320.333
+            },
+            {
+              "event": 108928,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117009328.733,
+              "end_us": 6732117009598.134
+            },
+            {
+              "event": 108932,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117009602.253,
+              "end_us": 6732117009643.8125
+            },
+            {
+              "event": 108936,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117009646.693,
+              "end_us": 6732117009689.854
+            },
+            {
+              "event": 108940,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117009692.453,
+              "end_us": 6732117009747.373
+            },
+            {
+              "event": 108944,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117009749.453,
+              "end_us": 6732117009786.973
+            },
+            {
+              "event": 108948,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117009788.773,
+              "end_us": 6732117010097.573
+            }
+          ],
+          "start_us": 6732117006646.45,
+          "end_us": 6732117010097.573,
+          "envelope_ms": 3.451123046875,
+          "gpu_union_ms": 3.3874013671875,
+          "internal_no_owned_ms": 0.06372167968749975,
+          "gemm_union_ms": 3.3874013671875,
+          "gemm_count": 17
+        },
+        {
+          "event": 831,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 0,
+          "FC": 2,
+          "cpu_ms": 0.677083,
+          "args": {
+            "External id": 1108224,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[2186, 42, 4920, 4345, 0, 19, 3789, 1286, 1182, 2730, 4854, 3175, 2864, 32, 97, 0, 0, 211, 7, 3729]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                1536,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 139780,
+            "finished": true,
+            "Input Dims": [
+              [
+                35468,
+                1536
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 767
+          },
+          "devices": [
+            {
+              "event": 109020,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117011641.575,
+              "end_us": 6732117011747.976
+            },
+            {
+              "event": 109024,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117011753.935,
+              "end_us": 6732117011774.095
+            },
+            {
+              "event": 109028,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117011775.815,
+              "end_us": 6732117012043.256
+            },
+            {
+              "event": 109032,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117012045.535,
+              "end_us": 6732117012250.215
+            },
+            {
+              "event": 109036,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117012252.775,
+              "end_us": 6732117012276.056
+            },
+            {
+              "event": 109040,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117012278.895,
+              "end_us": 6732117012450.534
+            },
+            {
+              "event": 109044,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117012452.375,
+              "end_us": 6732117012530.775
+            },
+            {
+              "event": 109048,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117012532.695,
+              "end_us": 6732117012602.815
+            },
+            {
+              "event": 109052,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117012604.375,
+              "end_us": 6732117012733.695
+            },
+            {
+              "event": 109056,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117012737.575,
+              "end_us": 6732117012979.296
+            },
+            {
+              "event": 109060,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117012984.696,
+              "end_us": 6732117013138.416
+            },
+            {
+              "event": 109064,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 6732117013140.216,
+              "end_us": 6732117013267.136
+            },
+            {
+              "event": 109068,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117013269.336,
+              "end_us": 6732117013290.136
+            },
+            {
+              "event": 109072,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x96B128_epilogue_stage3_btmenc",
+              "start_us": 6732117013292.336,
+              "end_us": 6732117013319.696
+            },
+            {
+              "event": 109076,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117013321.776,
+              "end_us": 6732117013353.576
+            },
+            {
+              "event": 109080,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117013355.096,
+              "end_us": 6732117013372.536
+            },
+            {
+              "event": 109084,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117013374.136,
+              "end_us": 6732117013553.735
+            }
+          ],
+          "start_us": 6732117011641.575,
+          "end_us": 6732117013553.735,
+          "envelope_ms": 1.91216015625,
+          "gpu_union_ms": 1.8708017578125,
+          "internal_no_owned_ms": 0.04135839843749989,
+          "gemm_union_ms": 1.8708017578125,
+          "gemm_count": 17
+        },
+        {
+          "event": 918,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 0,
+          "FC": 2,
+          "cpu_ms": 1.097747,
+          "args": {
+            "External id": 1108300,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ]
+            ],
+            "Sequence number": 139780,
+            "finished": true,
+            "Input Dims": [
+              [
+                35468,
+                5120
+              ]
+            ],
+            "Ev Idx": 843
+          },
+          "devices": [
+            {
+              "event": 109196,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117020022.421,
+              "end_us": 6732117020139.422
+            },
+            {
+              "event": 109200,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 6732117020141.502,
+              "end_us": 6732117020163.582
+            },
+            {
+              "event": 109204,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117020165.102,
+              "end_us": 6732117020380.941
+            },
+            {
+              "event": 109208,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117020383.462,
+              "end_us": 6732117020601.622
+            },
+            {
+              "event": 109212,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 6732117020605.302,
+              "end_us": 6732117020628.981
+            },
+            {
+              "event": 109216,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117020631.502,
+              "end_us": 6732117020789.742
+            },
+            {
+              "event": 109220,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117020792.822,
+              "end_us": 6732117020905.342
+            },
+            {
+              "event": 109224,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 6732117020907.662,
+              "end_us": 6732117021007.982
+            },
+            {
+              "event": 109228,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117021010.342,
+              "end_us": 6732117021141.502
+            },
+            {
+              "event": 109232,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117021146.142,
+              "end_us": 6732117021365.543
+            },
+            {
+              "event": 109236,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 6732117021367.863,
+              "end_us": 6732117021497.983
+            },
+            {
+              "event": 109240,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117021508.343,
+              "end_us": 6732117021647.143
+            },
+            {
+              "event": 109244,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 6732117021650.663,
+              "end_us": 6732117021673.503
+            },
+            {
+              "event": 109248,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117021676.183,
+              "end_us": 6732117021712.503
+            },
+            {
+              "event": 109252,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117021714.583,
+              "end_us": 6732117021752.943
+            },
+            {
+              "event": 109256,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 6732117021754.823,
+              "end_us": 6732117021775.583
+            },
+            {
+              "event": 109260,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117021777.743,
+              "end_us": 6732117021936.343
+            },
+            {
+              "event": 109274,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117021941.383,
+              "end_us": 6732117022083.703
+            },
+            {
+              "event": 109278,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117022087.023,
+              "end_us": 6732117022183.144
+            },
+            {
+              "event": 109282,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117022184.983,
+              "end_us": 6732117022428.863
+            },
+            {
+              "event": 109286,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117022431.303,
+              "end_us": 6732117022643.344
+            },
+            {
+              "event": 109290,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117022646.984,
+              "end_us": 6732117022739.265
+            },
+            {
+              "event": 109294,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117022741.704,
+              "end_us": 6732117022939.624
+            },
+            {
+              "event": 109298,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117022942.224,
+              "end_us": 6732117023069.104
+            },
+            {
+              "event": 109302,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117023071.304,
+              "end_us": 6732117023193.544
+            },
+            {
+              "event": 109306,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117023196.544,
+              "end_us": 6732117023360.864
+            },
+            {
+              "event": 109310,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117023363.424,
+              "end_us": 6732117023600.384
+            },
+            {
+              "event": 109314,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117023602.944,
+              "end_us": 6732117023772.466
+            },
+            {
+              "event": 109318,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117023774.625,
+              "end_us": 6732117023929.585
+            },
+            {
+              "event": 109322,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117023931.705,
+              "end_us": 6732117024028.985
+            },
+            {
+              "event": 109326,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117024030.985,
+              "end_us": 6732117024130.625
+            },
+            {
+              "event": 109330,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117024132.305,
+              "end_us": 6732117024239.024
+            },
+            {
+              "event": 109334,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117024240.705,
+              "end_us": 6732117024346.465
+            },
+            {
+              "event": 109338,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117024349.265,
+              "end_us": 6732117024549.824
+            }
+          ],
+          "start_us": 6732117020022.421,
+          "end_us": 6732117024549.824,
+          "envelope_ms": 4.5274033203125,
+          "gpu_union_ms": 4.4336044921875,
+          "internal_no_owned_ms": 0.09379882812499929,
+          "gemm_union_ms": 4.4336044921875,
+          "gemm_count": 34
+        },
+        {
+          "event": 1110,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 0,
+          "FC": 1,
+          "cpu_ms": 1.085318,
+          "args": {
+            "External id": 1108486,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                3072,
+                1
+              ]
+            ],
+            "Sequence number": 139774,
+            "finished": true,
+            "Input Dims": [
+              [
+                35468,
+                3072
+              ]
+            ],
+            "Ev Idx": 1029
+          },
+          "devices": [
+            {
+              "event": 109398,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117027602.068,
+              "end_us": 6732117027794.988
+            },
+            {
+              "event": 109402,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117027799.748,
+              "end_us": 6732117027831.229
+            },
+            {
+              "event": 109406,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117027833.548,
+              "end_us": 6732117028294.508
+            },
+            {
+              "event": 109410,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117028296.588,
+              "end_us": 6732117028663.749
+            },
+            {
+              "event": 109414,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117028672.549,
+              "end_us": 6732117028704.429
+            },
+            {
+              "event": 109418,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117028706.109,
+              "end_us": 6732117029042.949
+            },
+            {
+              "event": 109422,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117029045.229,
+              "end_us": 6732117029177.068
+            },
+            {
+              "event": 109426,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117029179.269,
+              "end_us": 6732117029316.429
+            },
+            {
+              "event": 109430,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117029318.669,
+              "end_us": 6732117029552.869
+            },
+            {
+              "event": 109434,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117029560.429,
+              "end_us": 6732117030020.87
+            },
+            {
+              "event": 109438,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117030022.99,
+              "end_us": 6732117030299.95
+            },
+            {
+              "event": 109442,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 6732117030307.55,
+              "end_us": 6732117030544.03
+            },
+            {
+              "event": 109446,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117030551.75,
+              "end_us": 6732117030583.19
+            },
+            {
+              "event": 109450,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x96B128_epilogue_stage3_btmenc",
+              "start_us": 6732117030585.07,
+              "end_us": 6732117030625.15
+            },
+            {
+              "event": 109454,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117030627.47,
+              "end_us": 6732117030675.43
+            },
+            {
+              "event": 109458,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117030678.11,
+              "end_us": 6732117030706.79
+            },
+            {
+              "event": 109462,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117030708.27,
+              "end_us": 6732117031043.91
+            },
+            {
+              "event": 109476,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117031046.791,
+              "end_us": 6732117031328.071
+            },
+            {
+              "event": 109480,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117031330.351,
+              "end_us": 6732117031496.631
+            },
+            {
+              "event": 109484,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117031498.551,
+              "end_us": 6732117031960.031
+            },
+            {
+              "event": 109488,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117031962.031,
+              "end_us": 6732117032347.672
+            },
+            {
+              "event": 109492,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117032350.952,
+              "end_us": 6732117032520.072
+            },
+            {
+              "event": 109496,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117032521.592,
+              "end_us": 6732117032896.111
+            },
+            {
+              "event": 109500,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117032898.192,
+              "end_us": 6732117033133.393
+            },
+            {
+              "event": 109504,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117033135.752,
+              "end_us": 6732117033378.192
+            },
+            {
+              "event": 109508,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117033379.912,
+              "end_us": 6732117033657.153
+            },
+            {
+              "event": 109512,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117033659.273,
+              "end_us": 6732117034076.953
+            },
+            {
+              "event": 109516,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117034079.073,
+              "end_us": 6732117034400.753
+            },
+            {
+              "event": 109520,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117034402.753,
+              "end_us": 6732117034670.354
+            },
+            {
+              "event": 109524,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117034672.914,
+              "end_us": 6732117034844.434
+            },
+            {
+              "event": 109528,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117034846.234,
+              "end_us": 6732117035034.074
+            },
+            {
+              "event": 109532,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117035037.074,
+              "end_us": 6732117035232.314
+            },
+            {
+              "event": 109536,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117035234.034,
+              "end_us": 6732117035410.634
+            },
+            {
+              "event": 109540,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117035412.234,
+              "end_us": 6732117035769.475
+            }
+          ],
+          "start_us": 6732117027602.068,
+          "end_us": 6732117035769.475,
+          "envelope_ms": 8.16740625,
+          "gpu_union_ms": 8.0707265625,
+          "internal_no_owned_ms": 0.0966796875,
+          "gemm_union_ms": 8.0707265625,
+          "gemm_count": 34
+        },
+        {
+          "event": 2829,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 1,
+          "FC": 1,
+          "cpu_ms": 0.683098,
+          "args": {
+            "External id": 1110089,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[201, 252, 2465, 230, 0, 1280, 1268, 615, 1602, 4920, 734, 50, 2537, 4131, 3898, 1353, 234, 3940, 2987, 0]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 139848,
+            "finished": true,
+            "Input Dims": [
+              [
+                32697,
+                5120
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 2632
+          },
+          "devices": [
+            {
+              "event": 111378,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117221696.348,
+              "end_us": 6732117221748.428
+            },
+            {
+              "event": 111382,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117221751.428,
+              "end_us": 6732117221803.468
+            },
+            {
+              "event": 111386,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117221805.228,
+              "end_us": 6732117222034.668
+            },
+            {
+              "event": 111390,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117222037.228,
+              "end_us": 6732117222089.947
+            },
+            {
+              "event": 111394,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117222092.028,
+              "end_us": 6732117222210.748
+            },
+            {
+              "event": 111398,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117222212.788,
+              "end_us": 6732117222346.229
+            },
+            {
+              "event": 111402,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4",
+              "start_us": 6732117222348.388,
+              "end_us": 6732117222440.947
+            },
+            {
+              "event": 111406,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117222442.948,
+              "end_us": 6732117222599.2295
+            },
+            {
+              "event": 111410,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117222605.629,
+              "end_us": 6732117223040.909
+            },
+            {
+              "event": 111414,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x160B128_epilogue_persis_stage2",
+              "start_us": 6732117223043.309,
+              "end_us": 6732117223155.908
+            },
+            {
+              "event": 111418,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117223157.829,
+              "end_us": 6732117223197.429
+            },
+            {
+              "event": 111422,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117223200.469,
+              "end_us": 6732117223421.389
+            },
+            {
+              "event": 111426,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117223423.509,
+              "end_us": 6732117223803.109
+            },
+            {
+              "event": 111430,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117223810.87,
+              "end_us": 6732117224203.351
+            },
+            {
+              "event": 111434,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117224211.31,
+              "end_us": 6732117224349.909
+            },
+            {
+              "event": 111438,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117224352.51,
+              "end_us": 6732117224405.069
+            },
+            {
+              "event": 111442,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117224406.79,
+              "end_us": 6732117224786.99
+            },
+            {
+              "event": 111446,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117224795.35,
+              "end_us": 6732117225059.23
+            }
+          ],
+          "start_us": 6732117221696.348,
+          "end_us": 6732117225059.23,
+          "envelope_ms": 3.3628828125,
+          "gpu_union_ms": 3.303001953125,
+          "internal_no_owned_ms": 0.059880859375000206,
+          "gemm_union_ms": 3.303001953125,
+          "gemm_count": 18
+        },
+        {
+          "event": 2902,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 1,
+          "FC": 2,
+          "cpu_ms": 0.681945,
+          "args": {
+            "External id": 1110156,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[201, 252, 2465, 230, 0, 1280, 1268, 615, 1602, 4920, 734, 50, 2537, 4131, 3898, 1353, 234, 3940, 2987, 0]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                1536,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 139854,
+            "finished": true,
+            "Input Dims": [
+              [
+                32697,
+                1536
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 2699
+          },
+          "devices": [
+            {
+              "event": 111520,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117226484.952,
+              "end_us": 6732117226518.152
+            },
+            {
+              "event": 111524,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117226521.152,
+              "end_us": 6732117226545.112
+            },
+            {
+              "event": 111528,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117226547.912,
+              "end_us": 6732117226674.832
+            },
+            {
+              "event": 111532,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117226681.152,
+              "end_us": 6732117226710.3125
+            },
+            {
+              "event": 111536,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117226712.032,
+              "end_us": 6732117226796.393
+            },
+            {
+              "event": 111540,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117226798.952,
+              "end_us": 6732117226873.592
+            },
+            {
+              "event": 111544,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117226875.992,
+              "end_us": 6732117226915.072
+            },
+            {
+              "event": 111548,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117226916.712,
+              "end_us": 6732117227003.552
+            },
+            {
+              "event": 111552,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117227007.632,
+              "end_us": 6732117227242.632
+            },
+            {
+              "event": 111556,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117227247.392,
+              "end_us": 6732117227291.552
+            },
+            {
+              "event": 111560,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117227293.432,
+              "end_us": 6732117227313.991
+            },
+            {
+              "event": 111564,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117227315.472,
+              "end_us": 6732117227442.272
+            },
+            {
+              "event": 111568,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117227443.833,
+              "end_us": 6732117227639.113
+            },
+            {
+              "event": 111572,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117227642.593,
+              "end_us": 6732117227839.873
+            },
+            {
+              "event": 111576,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117227841.673,
+              "end_us": 6732117227923.593
+            },
+            {
+              "event": 111580,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117227925.473,
+              "end_us": 6732117227957.513
+            },
+            {
+              "event": 111584,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117227960.193,
+              "end_us": 6732117228155.193
+            },
+            {
+              "event": 111588,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117228158.553,
+              "end_us": 6732117228299.353
+            }
+          ],
+          "start_us": 6732117226484.952,
+          "end_us": 6732117228299.353,
+          "envelope_ms": 1.814400390625,
+          "gpu_union_ms": 1.7670009765625,
+          "internal_no_owned_ms": 0.04739941406249981,
+          "gemm_union_ms": 1.7670009765625,
+          "gemm_count": 18
+        },
+        {
+          "event": 2989,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 1,
+          "FC": 2,
+          "cpu_ms": 1.092878,
+          "args": {
+            "External id": 1110232,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ]
+            ],
+            "Sequence number": 139854,
+            "finished": true,
+            "Input Dims": [
+              [
+                32697,
+                5120
+              ]
+            ],
+            "Ev Idx": 2775
+          },
+          "devices": [
+            {
+              "event": 111702,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117235286.799,
+              "end_us": 6732117235325.318
+            },
+            {
+              "event": 111706,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117235327.079,
+              "end_us": 6732117235366.599
+            },
+            {
+              "event": 111710,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117235368.319,
+              "end_us": 6732117235478.919
+            },
+            {
+              "event": 111714,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117235481.719,
+              "end_us": 6732117235520.839
+            },
+            {
+              "event": 111718,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 6732117235523.839,
+              "end_us": 6732117235626.879
+            },
+            {
+              "event": 111722,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 6732117235629.239,
+              "end_us": 6732117235719.319
+            },
+            {
+              "event": 111726,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_128x128B128_epilogue_stage3",
+              "start_us": 6732117235721.599,
+              "end_us": 6732117235788.398
+            },
+            {
+              "event": 111730,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117235790.639,
+              "end_us": 6732117235893.68
+            },
+            {
+              "event": 111734,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117235895.32,
+              "end_us": 6732117236106.96
+            },
+            {
+              "event": 111738,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 6732117236109.76,
+              "end_us": 6732117236181.56
+            },
+            {
+              "event": 111742,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 6732117236183.24,
+              "end_us": 6732117236204.88
+            },
+            {
+              "event": 111746,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117236207.0,
+              "end_us": 6732117236322.76
+            },
+            {
+              "event": 111750,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117236325.16,
+              "end_us": 6732117236531.28
+            },
+            {
+              "event": 111754,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117236533.68,
+              "end_us": 6732117236742.239
+            },
+            {
+              "event": 111758,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117236744.72,
+              "end_us": 6732117236849.88
+            },
+            {
+              "event": 111762,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117236852.32,
+              "end_us": 6732117236892.801
+            },
+            {
+              "event": 111766,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117236895.0,
+              "end_us": 6732117237103.601
+            },
+            {
+              "event": 111770,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117237106.041,
+              "end_us": 6732117237231.641
+            },
+            {
+              "event": 111784,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117237234.241,
+              "end_us": 6732117237329.801
+            },
+            {
+              "event": 111788,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117237331.481,
+              "end_us": 6732117237426.722
+            },
+            {
+              "event": 111792,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117237428.481,
+              "end_us": 6732117237580.441
+            },
+            {
+              "event": 111796,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117237582.601,
+              "end_us": 6732117237686.041
+            },
+            {
+              "event": 111800,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117237687.961,
+              "end_us": 6732117237815.5205
+            },
+            {
+              "event": 111804,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117237818.281,
+              "end_us": 6732117237936.201
+            },
+            {
+              "event": 111808,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117237938.241,
+              "end_us": 6732117238054.241
+            },
+            {
+              "event": 111812,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117238055.801,
+              "end_us": 6732117238183.561
+            },
+            {
+              "event": 111816,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117238186.801,
+              "end_us": 6732117238417.361
+            },
+            {
+              "event": 111820,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117238419.842,
+              "end_us": 6732117238535.361
+            },
+            {
+              "event": 111824,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117238537.122,
+              "end_us": 6732117238633.402
+            },
+            {
+              "event": 111828,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117238635.522,
+              "end_us": 6732117238792.843
+            },
+            {
+              "event": 111832,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117238795.282,
+              "end_us": 6732117238996.842
+            },
+            {
+              "event": 111836,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117238999.162,
+              "end_us": 6732117239191.242
+            },
+            {
+              "event": 111840,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117239193.442,
+              "end_us": 6732117239316.883
+            },
+            {
+              "event": 111844,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117239321.122,
+              "end_us": 6732117239425.722
+            },
+            {
+              "event": 111848,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117239429.482,
+              "end_us": 6732117239629.764
+            },
+            {
+              "event": 111852,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117239632.163,
+              "end_us": 6732117239788.963
+            }
+          ],
+          "start_us": 6732117235286.799,
+          "end_us": 6732117239788.963,
+          "envelope_ms": 4.5021640625,
+          "gpu_union_ms": 4.4199599609375,
+          "internal_no_owned_ms": 0.08220410156250058,
+          "gemm_union_ms": 4.4199599609375,
+          "gemm_count": 36
+        },
+        {
+          "event": 3181,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 1,
+          "FC": 1,
+          "cpu_ms": 1.066705,
+          "args": {
+            "External id": 1110418,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                3072,
+                1
+              ]
+            ],
+            "Sequence number": 139848,
+            "finished": true,
+            "Input Dims": [
+              [
+                32697,
+                3072
+              ]
+            ],
+            "Ev Idx": 2961
+          },
+          "devices": [
+            {
+              "event": 111912,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117242610.885,
+              "end_us": 6732117242657.885
+            },
+            {
+              "event": 111916,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117242659.965,
+              "end_us": 6732117242699.564
+            },
+            {
+              "event": 111920,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117242700.885,
+              "end_us": 6732117242923.285
+            },
+            {
+              "event": 111924,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117242929.725,
+              "end_us": 6732117242975.765
+            },
+            {
+              "event": 111928,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117242978.205,
+              "end_us": 6732117243106.445
+            },
+            {
+              "event": 111932,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117243108.485,
+              "end_us": 6732117243235.606
+            },
+            {
+              "event": 111936,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117243238.246,
+              "end_us": 6732117243307.086
+            },
+            {
+              "event": 111940,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117243309.166,
+              "end_us": 6732117243460.886
+            },
+            {
+              "event": 111944,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117243464.206,
+              "end_us": 6732117243900.566
+            },
+            {
+              "event": 111948,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117243902.806,
+              "end_us": 6732117243972.206
+            },
+            {
+              "event": 111952,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117243974.486,
+              "end_us": 6732117244008.927
+            },
+            {
+              "event": 111956,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117244011.086,
+              "end_us": 6732117244233.486
+            },
+            {
+              "event": 111960,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117244241.166,
+              "end_us": 6732117244589.407
+            },
+            {
+              "event": 111964,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117244598.367,
+              "end_us": 6732117244946.287
+            },
+            {
+              "event": 111968,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117244954.047,
+              "end_us": 6732117245085.087
+            },
+            {
+              "event": 111972,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117245087.447,
+              "end_us": 6732117245133.527
+            },
+            {
+              "event": 111976,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117245135.847,
+              "end_us": 6732117245483.247
+            },
+            {
+              "event": 111980,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117245490.967,
+              "end_us": 6732117245742.848
+            },
+            {
+              "event": 111994,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117245748.568,
+              "end_us": 6732117245899.488
+            },
+            {
+              "event": 111998,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117245901.408,
+              "end_us": 6732117246079.528
+            },
+            {
+              "event": 112002,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117246081.928,
+              "end_us": 6732117246354.888
+            },
+            {
+              "event": 112006,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117246357.048,
+              "end_us": 6732117246536.567
+            },
+            {
+              "event": 112010,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117246538.288,
+              "end_us": 6732117246777.569
+            },
+            {
+              "event": 112014,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117246779.089,
+              "end_us": 6732117247016.369
+            },
+            {
+              "event": 112018,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117247018.209,
+              "end_us": 6732117247225.489
+            },
+            {
+              "event": 112022,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117247227.249,
+              "end_us": 6732117247472.089
+            },
+            {
+              "event": 112026,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117247473.929,
+              "end_us": 6732117247901.289
+            },
+            {
+              "event": 112030,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117247903.209,
+              "end_us": 6732117248108.45
+            },
+            {
+              "event": 112034,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117248110.21,
+              "end_us": 6732117248287.21
+            },
+            {
+              "event": 112038,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117248289.49,
+              "end_us": 6732117248580.09
+            },
+            {
+              "event": 112042,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117248582.09,
+              "end_us": 6732117248938.25
+            },
+            {
+              "event": 112046,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117248940.37,
+              "end_us": 6732117249278.931
+            },
+            {
+              "event": 112050,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117249281.091,
+              "end_us": 6732117249502.131
+            },
+            {
+              "event": 112054,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117249504.291,
+              "end_us": 6732117249688.891
+            },
+            {
+              "event": 112058,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117249690.451,
+              "end_us": 6732117250054.852
+            },
+            {
+              "event": 112062,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117250056.691,
+              "end_us": 6732117250346.132
+            }
+          ],
+          "start_us": 6732117242610.885,
+          "end_us": 6732117250346.132,
+          "envelope_ms": 7.7352470703125,
+          "gpu_union_ms": 7.630728515625,
+          "internal_no_owned_ms": 0.10451855468750004,
+          "gemm_union_ms": 7.630728515625,
+          "gemm_count": 36
+        },
+        {
+          "event": 4900,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 2,
+          "FC": 1,
+          "cpu_ms": 0.7257319999999999,
+          "args": {
+            "External id": 1112021,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[20, 3763, 1294, 6, 1511, 3959, 124, 2689, 1685, 0, 1, 1358, 2547, 228, 186, 0, 2982, 480, 2642, 667]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 139922,
+            "finished": true,
+            "Input Dims": [
+              [
+                26142,
+                5120
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 4564
+          },
+          "devices": [
+            {
+              "event": 113834,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117438286.215,
+              "end_us": 6732117438322.895
+            },
+            {
+              "event": 113838,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117438326.495,
+              "end_us": 6732117438631.815
+            },
+            {
+              "event": 113842,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117438637.255,
+              "end_us": 6732117438774.695
+            },
+            {
+              "event": 113846,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117438777.055,
+              "end_us": 6732117438813.614
+            },
+            {
+              "event": 113850,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117438815.375,
+              "end_us": 6732117438946.295
+            },
+            {
+              "event": 113854,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117438953.255,
+              "end_us": 6732117439336.8955
+            },
+            {
+              "event": 113858,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117439344.496,
+              "end_us": 6732117439391.096
+            },
+            {
+              "event": 113862,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117439394.096,
+              "end_us": 6732117439651.376
+            },
+            {
+              "event": 113866,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117439658.776,
+              "end_us": 6732117439818.576
+            },
+            {
+              "event": 113870,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117439821.136,
+              "end_us": 6732117439854.936
+            },
+            {
+              "event": 113874,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117439856.536,
+              "end_us": 6732117439989.816
+            },
+            {
+              "event": 113878,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117439996.776,
+              "end_us": 6732117440216.097
+            },
+            {
+              "event": 113882,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117440218.496,
+              "end_us": 6732117440272.776
+            },
+            {
+              "event": 113886,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117440275.056,
+              "end_us": 6732117440321.8955
+            },
+            {
+              "event": 113890,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117440323.696,
+              "end_us": 6732117440580.777
+            },
+            {
+              "event": 113894,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_256x128B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117440586.017,
+              "end_us": 6732117440661.337
+            },
+            {
+              "event": 113898,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117440663.657,
+              "end_us": 6732117440922.138
+            },
+            {
+              "event": 113902,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x160B128_epilogue_persis_stage2",
+              "start_us": 6732117440932.497,
+              "end_us": 6732117441022.897
+            }
+          ],
+          "start_us": 6732117438286.215,
+          "end_us": 6732117441022.897,
+          "envelope_ms": 2.7366826171875,
+          "gpu_union_ms": 2.66304296875,
+          "internal_no_owned_ms": 0.0736396484374997,
+          "gemm_union_ms": 2.66304296875,
+          "gemm_count": 18
+        },
+        {
+          "event": 4973,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 2,
+          "FC": 2,
+          "cpu_ms": 0.662391,
+          "args": {
+            "External id": 1112088,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[20, 3763, 1294, 6, 1511, 3959, 124, 2689, 1685, 0, 1, 1358, 2547, 228, 186, 0, 2982, 480, 2642, 667]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                1536,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 139928,
+            "finished": true,
+            "Input Dims": [
+              [
+                26142,
+                1536
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 4631
+          },
+          "devices": [
+            {
+              "event": 113976,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117442163.858,
+              "end_us": 6732117442184.458
+            },
+            {
+              "event": 113980,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117442186.898,
+              "end_us": 6732117442380.099
+            },
+            {
+              "event": 113984,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117442382.058,
+              "end_us": 6732117442458.098
+            },
+            {
+              "event": 113988,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117442460.418,
+              "end_us": 6732117442479.858
+            },
+            {
+              "event": 113992,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117442481.338,
+              "end_us": 6732117442554.018
+            },
+            {
+              "event": 113996,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117442556.378,
+              "end_us": 6732117442752.179
+            },
+            {
+              "event": 114000,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x96B128_epilogue_stage3_btmenc",
+              "start_us": 6732117442754.299,
+              "end_us": 6732117442782.419
+            },
+            {
+              "event": 114004,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117442784.939,
+              "end_us": 6732117442913.779
+            },
+            {
+              "event": 114008,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117442916.179,
+              "end_us": 6732117443003.139
+            },
+            {
+              "event": 114012,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117443008.059,
+              "end_us": 6732117443029.938
+            },
+            {
+              "event": 114016,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117443032.939,
+              "end_us": 6732117443106.939
+            },
+            {
+              "event": 114020,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117443109.659,
+              "end_us": 6732117443238.539
+            },
+            {
+              "event": 114024,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117443241.299,
+              "end_us": 6732117443273.979
+            },
+            {
+              "event": 114028,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117443275.859,
+              "end_us": 6732117443301.26
+            },
+            {
+              "event": 114032,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117443302.739,
+              "end_us": 6732117443439.299
+            },
+            {
+              "event": 114036,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x192B128_epilogue_persis_stage2_btmenc",
+              "start_us": 6732117443441.099,
+              "end_us": 6732117443483.099
+            },
+            {
+              "event": 114040,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117443485.179,
+              "end_us": 6732117443614.459
+            },
+            {
+              "event": 114044,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117443616.219,
+              "end_us": 6732117443658.979
+            }
+          ],
+          "start_us": 6732117442163.858,
+          "end_us": 6732117443658.979,
+          "envelope_ms": 1.4951201171875,
+          "gpu_union_ms": 1.4551201171875,
+          "internal_no_owned_ms": 0.040000000000000036,
+          "gemm_union_ms": 1.4551201171875,
+          "gemm_count": 18
+        },
+        {
+          "event": 5060,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 2,
+          "FC": 2,
+          "cpu_ms": 1.0996210000000002,
+          "args": {
+            "External id": 1112164,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ]
+            ],
+            "Sequence number": 139928,
+            "finished": true,
+            "Input Dims": [
+              [
+                26142,
+                5120
+              ]
+            ],
+            "Ev Idx": 4707
+          },
+          "devices": [
+            {
+              "event": 114158,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 6732117453592.588,
+              "end_us": 6732117453615.908
+            },
+            {
+              "event": 114162,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117453617.668,
+              "end_us": 6732117453774.748
+            },
+            {
+              "event": 114166,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117453780.788,
+              "end_us": 6732117453894.469
+            },
+            {
+              "event": 114170,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 6732117453897.149,
+              "end_us": 6732117453919.27
+            },
+            {
+              "event": 114174,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117453922.029,
+              "end_us": 6732117454030.869
+            },
+            {
+              "event": 114178,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117454033.949,
+              "end_us": 6732117454250.069
+            },
+            {
+              "event": 114182,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117454254.309,
+              "end_us": 6732117454288.789
+            },
+            {
+              "event": 114186,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117454291.349,
+              "end_us": 6732117454423.549
+            },
+            {
+              "event": 114190,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117454430.549,
+              "end_us": 6732117454540.309
+            },
+            {
+              "event": 114194,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_64x32B128_epilogue_stage5_btmenc",
+              "start_us": 6732117454542.949,
+              "end_us": 6732117454565.109
+            },
+            {
+              "event": 114198,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117454566.789,
+              "end_us": 6732117454674.429
+            },
+            {
+              "event": 114202,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117454676.749,
+              "end_us": 6732117454791.589
+            },
+            {
+              "event": 114206,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117454794.229,
+              "end_us": 6732117454834.068
+            },
+            {
+              "event": 114210,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117454836.069,
+              "end_us": 6732117454871.949
+            },
+            {
+              "event": 114214,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117454873.669,
+              "end_us": 6732117455003.99
+            },
+            {
+              "event": 114218,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117455010.07,
+              "end_us": 6732117455074.19
+            },
+            {
+              "event": 114222,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117455076.59,
+              "end_us": 6732117455208.59
+            },
+            {
+              "event": 114226,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 6732117455211.71,
+              "end_us": 6732117455295.87
+            },
+            {
+              "event": 114240,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117455299.27,
+              "end_us": 6732117455389.949
+            },
+            {
+              "event": 114244,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117455391.55,
+              "end_us": 6732117455583.43
+            },
+            {
+              "event": 114248,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117455585.59,
+              "end_us": 6732117455716.149
+            },
+            {
+              "event": 114252,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117455718.31,
+              "end_us": 6732117455813.189
+            },
+            {
+              "event": 114256,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117455814.59,
+              "end_us": 6732117455950.109
+            },
+            {
+              "event": 114260,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117455953.07,
+              "end_us": 6732117456160.352
+            },
+            {
+              "event": 114264,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117456162.831,
+              "end_us": 6732117456251.231
+            },
+            {
+              "event": 114268,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117456253.191,
+              "end_us": 6732117456407.632
+            },
+            {
+              "event": 114272,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117456409.871,
+              "end_us": 6732117456548.312
+            },
+            {
+              "event": 114276,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117456550.591,
+              "end_us": 6732117456645.791
+            },
+            {
+              "event": 114280,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117456647.391,
+              "end_us": 6732117456774.351
+            },
+            {
+              "event": 114284,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117456776.471,
+              "end_us": 6732117456936.751
+            },
+            {
+              "event": 114288,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117456938.911,
+              "end_us": 6732117457039.471
+            },
+            {
+              "event": 114292,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117457043.031,
+              "end_us": 6732117457150.631
+            },
+            {
+              "event": 114296,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117457152.391,
+              "end_us": 6732117457326.552
+            },
+            {
+              "event": 114300,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117457328.592,
+              "end_us": 6732117457435.312
+            },
+            {
+              "event": 114304,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117457437.352,
+              "end_us": 6732117457594.991
+            },
+            {
+              "event": 114308,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117457598.072,
+              "end_us": 6732117457711.992
+            }
+          ],
+          "start_us": 6732117453592.588,
+          "end_us": 6732117457711.992,
+          "envelope_ms": 4.119404296875,
+          "gpu_union_ms": 4.02368359375,
+          "internal_no_owned_ms": 0.09572070312500003,
+          "gemm_union_ms": 4.02368359375,
+          "gemm_count": 36
+        },
+        {
+          "event": 5252,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 2,
+          "FC": 1,
+          "cpu_ms": 1.076085,
+          "args": {
+            "External id": 1112350,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                3072,
+                1
+              ]
+            ],
+            "Sequence number": 139922,
+            "finished": true,
+            "Input Dims": [
+              [
+                26142,
+                3072
+              ]
+            ],
+            "Ev Idx": 4893
+          },
+          "devices": [
+            {
+              "event": 114368,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117460006.954,
+              "end_us": 6732117460039.3545
+            },
+            {
+              "event": 114372,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117460040.754,
+              "end_us": 6732117460371.114
+            },
+            {
+              "event": 114376,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117460373.314,
+              "end_us": 6732117460513.475
+            },
+            {
+              "event": 114380,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117460516.354,
+              "end_us": 6732117460547.953
+            },
+            {
+              "event": 114384,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117460550.115,
+              "end_us": 6732117460685.795
+            },
+            {
+              "event": 114388,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117460688.075,
+              "end_us": 6732117461055.715
+            },
+            {
+              "event": 114392,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x96B128_epilogue_stage3_btmenc",
+              "start_us": 6732117461063.515,
+              "end_us": 6732117461104.835
+            },
+            {
+              "event": 114396,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117461107.635,
+              "end_us": 6732117461346.075
+            },
+            {
+              "event": 114400,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117461353.435,
+              "end_us": 6732117461516.835
+            },
+            {
+              "event": 114404,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_32x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117461519.755,
+              "end_us": 6732117461549.675
+            },
+            {
+              "event": 114408,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117461551.155,
+              "end_us": 6732117461694.396
+            },
+            {
+              "event": 114412,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117461697.436,
+              "end_us": 6732117461933.155
+            },
+            {
+              "event": 114416,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117461942.076,
+              "end_us": 6732117461989.796
+            },
+            {
+              "event": 114420,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117461992.116,
+              "end_us": 6732117462036.276
+            },
+            {
+              "event": 114424,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117462038.636,
+              "end_us": 6732117462303.836
+            },
+            {
+              "event": 114428,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2_btmenc",
+              "start_us": 6732117462306.676,
+              "end_us": 6732117462378.476
+            },
+            {
+              "event": 114432,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117462380.196,
+              "end_us": 6732117462613.796
+            },
+            {
+              "event": 114436,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117462620.356,
+              "end_us": 6732117462695.437
+            },
+            {
+              "event": 114450,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117462698.236,
+              "end_us": 6732117462860.037
+            },
+            {
+              "event": 114454,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117462862.957,
+              "end_us": 6732117463222.397
+            },
+            {
+              "event": 114458,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117463225.277,
+              "end_us": 6732117463466.197
+            },
+            {
+              "event": 114462,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117463468.157,
+              "end_us": 6732117463644.638
+            },
+            {
+              "event": 114466,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117463646.277,
+              "end_us": 6732117463905.559
+            },
+            {
+              "event": 114470,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117463907.238,
+              "end_us": 6732117464276.438
+            },
+            {
+              "event": 114474,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117464278.878,
+              "end_us": 6732117464445.598
+            },
+            {
+              "event": 114478,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117464446.838,
+              "end_us": 6732117464737.518
+            },
+            {
+              "event": 114482,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117464739.678,
+              "end_us": 6732117464996.317
+            },
+            {
+              "event": 114486,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117464998.278,
+              "end_us": 6732117465164.199
+            },
+            {
+              "event": 114490,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117465165.759,
+              "end_us": 6732117465404.039
+            },
+            {
+              "event": 114494,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117465405.879,
+              "end_us": 6732117465708.519
+            },
+            {
+              "event": 114498,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117465710.559,
+              "end_us": 6732117465884.438
+            },
+            {
+              "event": 114502,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117465885.999,
+              "end_us": 6732117466073.959
+            },
+            {
+              "event": 114506,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117466076.119,
+              "end_us": 6732117466380.44
+            },
+            {
+              "event": 114510,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117466382.92,
+              "end_us": 6732117466567.4795
+            },
+            {
+              "event": 114514,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117466569.68,
+              "end_us": 6732117466855.68
+            },
+            {
+              "event": 114518,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117466857.84,
+              "end_us": 6732117467060.04
+            }
+          ],
+          "start_us": 6732117460006.954,
+          "end_us": 6732117467060.04,
+          "envelope_ms": 7.0530859375,
+          "gpu_union_ms": 6.954365234375,
+          "internal_no_owned_ms": 0.09872070312499925,
+          "gemm_union_ms": 6.954365234375,
+          "gemm_count": 36
+        },
+        {
+          "event": 6971,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 3,
+          "FC": 1,
+          "cpu_ms": 0.710094,
+          "args": {
+            "External id": 1113953,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[653, 430, 2925, 4165, 212, 1590, 2449, 440, 3082, 2172, 98, 722, 0, 1719, 772, 3890, 2122, 638, 1242, 519]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                5120,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 139996,
+            "finished": true,
+            "Input Dims": [
+              [
+                29840,
+                5120
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                3072,
+                5120
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 6496
+          },
+          "devices": [
+            {
+              "event": 116360,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x160B128_epilogue_persis_stage2",
+              "start_us": 6732117659130.132,
+              "end_us": 6732117659227.612
+            },
+            {
+              "event": 116364,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_256x128B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117659229.972,
+              "end_us": 6732117659300.651
+            },
+            {
+              "event": 116368,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117659303.252,
+              "end_us": 6732117659560.612
+            },
+            {
+              "event": 116372,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117659566.453,
+              "end_us": 6732117659950.613
+            },
+            {
+              "event": 116376,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117659957.093,
+              "end_us": 6732117660012.692
+            },
+            {
+              "event": 116380,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 6732117660014.973,
+              "end_us": 6732117660148.532
+            },
+            {
+              "event": 116384,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117660150.813,
+              "end_us": 6732117660374.653
+            },
+            {
+              "event": 116388,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_256x128B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117660377.453,
+              "end_us": 6732117660446.653
+            },
+            {
+              "event": 116392,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 6732117660448.933,
+              "end_us": 6732117660701.454
+            },
+            {
+              "event": 116396,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117660709.894,
+              "end_us": 6732117660930.174
+            },
+            {
+              "event": 116400,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117660932.534,
+              "end_us": 6732117660974.334
+            },
+            {
+              "event": 116404,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x160B128_epilogue_persis_stage2",
+              "start_us": 6732117660976.734,
+              "end_us": 6732117661070.734
+            },
+            {
+              "event": 116408,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117661073.294,
+              "end_us": 6732117661230.813
+            },
+            {
+              "event": 116412,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117661233.934,
+              "end_us": 6732117661348.493
+            },
+            {
+              "event": 116416,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117661351.254,
+              "end_us": 6732117661736.174
+            },
+            {
+              "event": 116420,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117661744.414,
+              "end_us": 6732117661956.936
+            },
+            {
+              "event": 116424,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4",
+              "start_us": 6732117661959.575,
+              "end_us": 6732117662052.455
+            },
+            {
+              "event": 116428,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117662055.255,
+              "end_us": 6732117662185.575
+            },
+            {
+              "event": 116432,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4",
+              "start_us": 6732117662188.295,
+              "end_us": 6732117662279.175
+            }
+          ],
+          "start_us": 6732117659130.132,
+          "end_us": 6732117662279.175,
+          "envelope_ms": 3.14904296875,
+          "gpu_union_ms": 3.08408203125,
+          "internal_no_owned_ms": 0.06496093749999998,
+          "gemm_union_ms": 3.08408203125,
+          "gemm_count": 19
+        },
+        {
+          "event": 7044,
+          "mb": 0,
+          "phase": "recompute",
+          "unit": 3,
+          "FC": 2,
+          "cpu_ms": 0.706616,
+          "args": {
+            "External id": 1114020,
+            "Fwd thread id": 0,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              "",
+              "[653, 430, 2925, 4165, 212, 1590, 2449, 440, 3082, 2172, 98, 722, 0, 1719, 772, 3890, 2122, 638, 1242, 519]",
+              "False",
+              "False",
+              "False",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "True",
+              "False",
+              "False",
+              "False",
+              "True",
+              "",
+              "False",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16",
+              "ScalarList",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "",
+              "",
+              "",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "Scalar",
+              "",
+              "Scalar",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16",
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                1536,
+                1
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1536,
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "Sequence number": 140002,
+            "finished": true,
+            "Input Dims": [
+              [
+                29840,
+                1536
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                5120,
+                1536
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "Ev Idx": 6563
+          },
+          "devices": [
+            {
+              "event": 116508,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117663578.456,
+              "end_us": 6732117663624.896
+            },
+            {
+              "event": 116512,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x192B128_epilogue_persis_stage2_btmenc",
+              "start_us": 6732117663626.416,
+              "end_us": 6732117663666.216
+            },
+            {
+              "event": 116516,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117663667.736,
+              "end_us": 6732117663817.097
+            },
+            {
+              "event": 116520,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117663819.456,
+              "end_us": 6732117664015.616
+            },
+            {
+              "event": 116524,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117664019.336,
+              "end_us": 6732117664052.497
+            },
+            {
+              "event": 116528,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117664055.017,
+              "end_us": 6732117664144.217
+            },
+            {
+              "event": 116532,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117664146.217,
+              "end_us": 6732117664270.657
+            },
+            {
+              "event": 116536,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x192B128_epilogue_persis_stage2_btmenc",
+              "start_us": 6732117664273.617,
+              "end_us": 6732117664316.098
+            },
+            {
+              "event": 116540,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117664318.057,
+              "end_us": 6732117664466.937
+            },
+            {
+              "event": 116544,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117664469.497,
+              "end_us": 6732117664572.497
+            },
+            {
+              "event": 116548,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x96B128_epilogue_stage3_btmenc",
+              "start_us": 6732117664577.217,
+              "end_us": 6732117664605.577
+            },
+            {
+              "event": 116552,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117664607.577,
+              "end_us": 6732117664650.657
+            },
+            {
+              "event": 116556,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117664652.177,
+              "end_us": 6732117664739.337
+            },
+            {
+              "event": 116560,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 6732117664740.897,
+              "end_us": 6732117664787.537
+            },
+            {
+              "event": 116564,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117664789.297,
+              "end_us": 6732117664983.137
+            },
+            {
+              "event": 116568,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117664985.737,
+              "end_us": 6732117665092.457
+            },
+            {
+              "event": 116572,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117665094.417,
+              "end_us": 6732117665137.337
+            },
+            {
+              "event": 116576,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117665138.817,
+              "end_us": 6732117665205.458
+            },
+            {
+              "event": 116580,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117665208.698,
+              "end_us": 6732117665247.778
+            }
+          ],
+          "start_us": 6732117663578.456,
+          "end_us": 6732117665247.778,
+          "envelope_ms": 1.669322265625,
+          "gpu_union_ms": 1.62736328125,
+          "internal_no_owned_ms": 0.0419589843749999,
+          "gemm_union_ms": 1.62736328125,
+          "gemm_count": 19
+        },
+        {
+          "event": 7131,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 3,
+          "FC": 2,
+          "cpu_ms": 1.178038,
+          "args": {
+            "External id": 1114096,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                5120,
+                1
+              ]
+            ],
+            "Sequence number": 140002,
+            "finished": true,
+            "Input Dims": [
+              [
+                29840,
+                5120
+              ]
+            ],
+            "Ev Idx": 6639
+          },
+          "devices": [
+            {
+              "event": 116692,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 6732117672450.544,
+              "end_us": 6732117672533.904
+            },
+            {
+              "event": 116696,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117672536.744,
+              "end_us": 6732117672593.904
+            },
+            {
+              "event": 116700,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117672596.224,
+              "end_us": 6732117672728.743
+            },
+            {
+              "event": 116704,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117672733.424,
+              "end_us": 6732117672948.424
+            },
+            {
+              "event": 116708,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117672950.944,
+              "end_us": 6732117672992.306
+            },
+            {
+              "event": 116712,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117672994.745,
+              "end_us": 6732117673109.305
+            },
+            {
+              "event": 116716,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117673111.985,
+              "end_us": 6732117673218.466
+            },
+            {
+              "event": 116720,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_128x128B128_epilogue_stage3_btmenc",
+              "start_us": 6732117673220.665,
+              "end_us": 6732117673279.545
+            },
+            {
+              "event": 116724,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 6732117673282.225,
+              "end_us": 6732117673413.465
+            },
+            {
+              "event": 116728,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117673416.345,
+              "end_us": 6732117673531.705
+            },
+            {
+              "event": 116732,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_64x64B128_epilogue_stage4_btmenc",
+              "start_us": 6732117673533.705,
+              "end_us": 6732117673568.065
+            },
+            {
+              "event": 116736,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 6732117673570.105,
+              "end_us": 6732117673654.426
+            },
+            {
+              "event": 116740,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117673657.905,
+              "end_us": 6732117673771.346
+            },
+            {
+              "event": 116744,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 6732117673773.865,
+              "end_us": 6732117673864.306
+            },
+            {
+              "event": 116748,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117673866.425,
+              "end_us": 6732117674081.905
+            },
+            {
+              "event": 116752,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117674084.465,
+              "end_us": 6732117674197.186
+            },
+            {
+              "event": 116756,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_128x128B128_epilogue_stage3",
+              "start_us": 6732117674201.106,
+              "end_us": 6732117674276.026
+            },
+            {
+              "event": 116760,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_256x128B128_epilogue_persis_stage4",
+              "start_us": 6732117674278.026,
+              "end_us": 6732117674370.467
+            },
+            {
+              "event": 116764,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_128_128x128B128_epilogue_stage3",
+              "start_us": 6732117674372.626,
+              "end_us": 6732117674435.826
+            },
+            {
+              "event": 116778,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117674441.226,
+              "end_us": 6732117674553.065
+            },
+            {
+              "event": 116782,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117674554.586,
+              "end_us": 6732117674645.306
+            },
+            {
+              "event": 116786,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117674646.666,
+              "end_us": 6732117674806.066
+            },
+            {
+              "event": 116790,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117674808.506,
+              "end_us": 6732117675015.746
+            },
+            {
+              "event": 116794,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117675019.266,
+              "end_us": 6732117675117.386
+            },
+            {
+              "event": 116798,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117675119.666,
+              "end_us": 6732117675261.547
+            },
+            {
+              "event": 116802,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117675263.907,
+              "end_us": 6732117675414.027
+            },
+            {
+              "event": 116806,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117675416.907,
+              "end_us": 6732117675527.947
+            },
+            {
+              "event": 116810,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117675529.787,
+              "end_us": 6732117675707.1875
+            },
+            {
+              "event": 116814,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117675709.747,
+              "end_us": 6732117675852.467
+            },
+            {
+              "event": 116818,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117675854.667,
+              "end_us": 6732117675958.387
+            },
+            {
+              "event": 116822,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117675961.027,
+              "end_us": 6732117676082.707
+            },
+            {
+              "event": 116826,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117676084.747,
+              "end_us": 6732117676220.747
+            },
+            {
+              "event": 116830,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117676223.347,
+              "end_us": 6732117676345.508
+            },
+            {
+              "event": 116834,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117676347.708,
+              "end_us": 6732117676545.348
+            },
+            {
+              "event": 116838,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117676547.988,
+              "end_us": 6732117676691.389
+            },
+            {
+              "event": 116842,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117676693.508,
+              "end_us": 6732117676803.588
+            },
+            {
+              "event": 116846,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117676805.428,
+              "end_us": 6732117676936.428
+            },
+            {
+              "event": 116850,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117676938.948,
+              "end_us": 6732117677051.748
+            }
+          ],
+          "start_us": 6732117672450.544,
+          "end_us": 6732117677051.748,
+          "envelope_ms": 4.6012041015625,
+          "gpu_union_ms": 4.50620703125,
+          "internal_no_owned_ms": 0.09499707031250004,
+          "gemm_union_ms": 4.50620703125,
+          "gemm_count": 38
+        },
+        {
+          "event": 7323,
+          "mb": 0,
+          "phase": "backward",
+          "unit": 3,
+          "FC": 1,
+          "cpu_ms": 1.0688309999999999,
+          "args": {
+            "External id": 1114282,
+            "Fwd thread id": 2,
+            "Record function id": 0,
+            "Concrete Inputs": [
+              ""
+            ],
+            "Input type": [
+              "c10::BFloat16"
+            ],
+            "Input Strides": [
+              [
+                3072,
+                1
+              ]
+            ],
+            "Sequence number": 139996,
+            "finished": true,
+            "Input Dims": [
+              [
+                29840,
+                3072
+              ]
+            ],
+            "Ev Idx": 6825
+          },
+          "devices": [
+            {
+              "event": 116910,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117679661.27,
+              "end_us": 6732117679734.99
+            },
+            {
+              "event": 116914,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2_btmenc",
+              "start_us": 6732117679737.111,
+              "end_us": 6732117679807.871
+            },
+            {
+              "event": 116918,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117679809.471,
+              "end_us": 6732117680073.751
+            },
+            {
+              "event": 116922,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117680077.711,
+              "end_us": 6732117680444.551
+            },
+            {
+              "event": 116926,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+              "start_us": 6732117680450.671,
+              "end_us": 6732117680499.2705
+            },
+            {
+              "event": 116930,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117680501.671,
+              "end_us": 6732117680661.951
+            },
+            {
+              "event": 116934,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117680665.351,
+              "end_us": 6732117680900.512
+            },
+            {
+              "event": 116938,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2_btmenc",
+              "start_us": 6732117680908.912,
+              "end_us": 6732117680982.552
+            },
+            {
+              "event": 116942,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117680985.312,
+              "end_us": 6732117681261.151
+            },
+            {
+              "event": 116946,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117681267.872,
+              "end_us": 6732117681459.112
+            },
+            {
+              "event": 116950,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_256_128x96B128_epilogue_stage3_btmenc",
+              "start_us": 6732117681464.432,
+              "end_us": 6732117681505.352
+            },
+            {
+              "event": 116954,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117681507.392,
+              "end_us": 6732117681581.672
+            },
+            {
+              "event": 116958,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_256x320B128_squad_level_epilogue",
+              "start_us": 6732117681583.712,
+              "end_us": 6732117681743.152
+            },
+            {
+              "event": 116962,
+              "name": "musa_asm_bf16bf16bf16bf16gemm_nn_tce_768_320x256B128_squad_level_epilogue",
+              "start_us": 6732117681747.672,
+              "end_us": 6732117681833.072
+            },
+            {
+              "event": 116966,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117681836.112,
+              "end_us": 6732117682203.634
+            },
+            {
+              "event": 116970,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_768_384x256B128_epilogue_persis_stage2",
+              "start_us": 6732117682212.233,
+              "end_us": 6732117682403.474
+            },
+            {
+              "event": 116974,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117682406.353,
+              "end_us": 6732117682479.072
+            },
+            {
+              "event": 116978,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117682481.513,
+              "end_us": 6732117682619.232
+            },
+            {
+              "event": 116982,
+              "name": "musa_asm_bf16bf16bf16bf16ssgemm_nn_tce_512_256x256B128_epilogue_persis_stage2",
+              "start_us": 6732117682623.273,
+              "end_us": 6732117682694.554
+            },
+            {
+              "event": 116996,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117682697.153,
+              "end_us": 6732117682899.953
+            },
+            {
+              "event": 117000,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117682902.433,
+              "end_us": 6732117683107.954
+            },
+            {
+              "event": 117004,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117683109.634,
+              "end_us": 6732117683432.233
+            },
+            {
+              "event": 117008,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117683434.434,
+              "end_us": 6732117683830.914
+            },
+            {
+              "event": 117012,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117683833.074,
+              "end_us": 6732117684005.515
+            },
+            {
+              "event": 117016,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117684007.194,
+              "end_us": 6732117684266.835
+            },
+            {
+              "event": 117020,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117684268.795,
+              "end_us": 6732117684554.995
+            },
+            {
+              "event": 117024,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117684557.435,
+              "end_us": 6732117684746.994
+            },
+            {
+              "event": 117028,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117684748.835,
+              "end_us": 6732117685053.475
+            },
+            {
+              "event": 117032,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117685055.675,
+              "end_us": 6732117685315.756
+            },
+            {
+              "event": 117036,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117685317.796,
+              "end_us": 6732117685493.796
+            },
+            {
+              "event": 117040,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117685495.556,
+              "end_us": 6732117685714.036
+            },
+            {
+              "event": 117044,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117685715.676,
+              "end_us": 6732117685988.235
+            },
+            {
+              "event": 117048,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117685990.236,
+              "end_us": 6732117686203.996
+            },
+            {
+              "event": 117052,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117686206.196,
+              "end_us": 6732117686580.197
+            },
+            {
+              "event": 117056,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117686582.397,
+              "end_us": 6732117686841.598
+            },
+            {
+              "event": 117060,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117686843.917,
+              "end_us": 6732117687048.877
+            },
+            {
+              "event": 117064,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117687050.717,
+              "end_us": 6732117687282.316
+            },
+            {
+              "event": 117068,
+              "name": "musa_asm_bf16bf16ssssgemm_tn_tce_512_256x256B128_epilogue_mldz_persis_stage2",
+              "start_us": 6732117687284.517,
+              "end_us": 6732117687486.517
+            }
+          ],
+          "start_us": 6732117679661.27,
+          "end_us": 6732117687486.517,
+          "envelope_ms": 7.8252470703125,
+          "gpu_union_ms": 7.7134072265625,
+          "internal_no_owned_ms": 0.11183984374999945,
+          "gemm_union_ms": 7.7134072265625,
+          "gemm_count": 38
+        }
+      ],
+      "components": {
+        "recompute": 19.590734374999997,
+        "backward": 48.531162109375
+      }
+    }
+  ]
+}

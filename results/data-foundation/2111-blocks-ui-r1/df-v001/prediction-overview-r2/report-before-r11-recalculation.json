@@ -1,0 +1,88 @@
+{
+  "status": "PARTIAL_SOURCE32_FULL_STEP_EXTRAPOLATION",
+  "prediction": {
+    "one_f_one_b_ms": 21653.3578404189,
+    "profiler_step_ms": 22057.160632915482,
+    "training_step_ms": 24512.64893691548,
+    "mfu_profiler_percent": 4.582876358489788,
+    "mfu_training_percent": 4.123799115311768,
+    "costs": {
+      "entry_ms": 107.17720890045166,
+      "post_last_b_ms": 296.62558359613104,
+      "training_minus_rank0_profiler_ms": 2455.4883039999986,
+      "source_iteration": 60,
+      "source_rank": 0,
+      "source_profiler_label": "ProfilerStep#59",
+      "source_training_ms": 14923.3,
+      "source_profiler_ms": 12467.811696,
+      "source_log": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker33017/2026-09-18_1038/tp1_pp4_dp_mbs2_numbs_gbs64_gpus0_mtp1_forcelbfalse_pertensorfalse_NO_LOSS_REDUCE.RANK3.10.124.33.17.log",
+      "source_log_line": 3399,
+      "policy": "copy source32 scalar envelopes with coefficient1; no target timing used to fit; tail includes update and post-update sync; log residual is timing convention/outer overhead, not proven pure overhead"
+    },
+    "physics": {
+      "model_flops_per_iteration": 1.293891072e+17,
+      "world_size": 256,
+      "peak_flops_per_gpu_s": 500000000000000.0,
+      "source": "/home/zjb/Desktop/mfu-model/case_256gpu_pp16_cp2_a2a/results/mfu_timeline/mfu_timeline_summary.json",
+      "basis": "legacy256 effective FLOPs inferred from training logs, not independently architectural; 500TFLOP/s convention, not new hardware validation"
+    },
+    "target_timing_fit": false,
+    "blind": false,
+    "scope": "rank0 profiler proxy and source-log training clock; not full-world optimizer DAG",
+    "source_training_record": " [2026-09-18 10:51:57] iteration       60/ 1107651 | consumed samples:         3840 | elapsed time per iteration (ms): 14923.3 | throughput per GPU (TFLOP/s/GPU): 57.6 | learning rate: 3.480000E-05 | global batch size:    64 | lm loss: 7.438447E+00 | z_loss: 2.556773E+01 | load_balancing_loss: 1.116110E+00 | loss scale: 1.0 | grad norm: 1.149 | number of skipped iterations:   0 | number of nan iterations:   0 |"
+  },
+  "profiler": {
+    "predicted": 22057.160632915482,
+    "observed": 21969.833587646484,
+    "error": 87.32704526899761,
+    "relative_error_percent": 0.3974861480885439
+  },
+  "training": {
+    "predicted": 24512.64893691548,
+    "observed": 23311.8,
+    "error": 1200.8489369154813,
+    "relative_error_percent": 5.151249311144923
+  },
+  "mfu_profiler": {
+    "predicted": 4.582876358489788,
+    "observed": 4.601092657198809,
+    "error": -0.01821629870902086,
+    "relative_error_percent": -0.3959124509374967
+  },
+  "mfu_training": {
+    "predicted": 4.123799115311768,
+    "observed": 4.336226288832266,
+    "error": -0.21242717352049745,
+    "relative_error_percent": -4.898895015409899
+  },
+  "components": [
+    {
+      "name": "启动",
+      "source_prediction_ms": 107.17720890045166,
+      "target_observed_ms": 1196.8229846954346
+    },
+    {
+      "name": "1F1B",
+      "source_prediction_ms": 21653.3578404189,
+      "target_observed_ms": 20396.01318693161
+    },
+    {
+      "name": "末B后全部尾段",
+      "source_prediction_ms": 296.62558359613104,
+      "target_observed_ms": 376.9974160194397
+    },
+    {
+      "name": "日志时钟外层残余",
+      "source_prediction_ms": 2455.4883039999986,
+      "target_observed_ms": 1341.966412353515
+    }
+  ],
+  "clock_note": "target historical iteration_clocks profiler is world-envelope; this report keeps rank0 profiler and derives target log residual against that same boundary",
+  "limitations": [
+    "DP4→8 / EDP1→2 update-tail cost copied without scaling; not physically validated",
+    "source training log clock copied from iter60 includes possible profiling overhead; not universal constant",
+    "startup and F/B biases may cancel; do not attribute low total error to accurate components",
+    "MFU uses legacy effective FLOPs convention, not independent physical validation",
+    "256 target previously exposed; single target iteration, no blind validation"
+  ]
+}

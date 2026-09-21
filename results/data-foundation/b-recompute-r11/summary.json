@@ -1,0 +1,15 @@
+{
+  "status": "PASS_REPLAY_PARTIAL_CONDITIONAL_RECOMPUTE_DAG",
+  "B_ms": 868.8333587646479,
+  "graph_nodes": 6687,
+  "replaced_recompute_envelopes": 32,
+  "recompute_device_events": 4958,
+  "cost_tests": 136,
+  "limits": [
+    "Same iter60 B0 calibration replay, not iter70/256 validation",
+    "CP2/EP8 and local handoffs are conditional; source residuals still empirical",
+    "Effective communication replacement only; raw bandwidth/FCT must be converted first",
+    "FC1/FC2 identity from paired forward order, not weight IDs",
+    "True backward r10 costs/dependencies unchanged except upstream recompute exit dependencies"
+  ]
+}

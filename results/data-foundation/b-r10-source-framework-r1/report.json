@@ -1,0 +1,539 @@
+{
+  "rows": [
+    {
+      "stage": 1,
+      "mb": 0,
+      "modules": [
+        {
+          "kind": "backward_EP_combine",
+          "source_B0_gpu_ms": 1.203080078125,
+          "target_gpu_ms": 0.8334482421875,
+          "source_minus_target_gpu_ms": 0.36963183593749993
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "source_B0_gpu_ms": 1.2980810546875,
+          "target_gpu_ms": 0.7390048828125,
+          "source_minus_target_gpu_ms": 0.5590761718749999
+        },
+        {
+          "kind": "backward_attention_CP",
+          "source_B0_gpu_ms": 284.9004228515625,
+          "target_gpu_ms": 282.274865234375,
+          "source_minus_target_gpu_ms": 2.6255576171874964
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "source_B0_gpu_ms": 33.3684287109375,
+          "target_gpu_ms": 12.35060986328125,
+          "source_minus_target_gpu_ms": 21.01781884765625
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "source_B0_gpu_ms": 18.7480234375,
+          "target_gpu_ms": 7.00877099609375,
+          "source_minus_target_gpu_ms": 11.739252441406249
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "source_B0_gpu_ms": 1.133640625,
+          "target_gpu_ms": 0.75200537109375,
+          "source_minus_target_gpu_ms": 0.38163525390624997
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "source_B0_gpu_ms": 2.900923828125,
+          "target_gpu_ms": 4.5520283203125,
+          "source_minus_target_gpu_ms": -1.6511044921875002
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "source_B0_gpu_ms": 186.5086474609375,
+          "target_gpu_ms": 186.70229833984374,
+          "source_minus_target_gpu_ms": -0.1936508789062259
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "source_B0_gpu_ms": 13.9000078125,
+          "target_gpu_ms": 5.37571923828125,
+          "source_minus_target_gpu_ms": 8.524288574218751
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "source_B0_gpu_ms": 7.3531650390625,
+          "target_gpu_ms": 2.89754052734375,
+          "source_minus_target_gpu_ms": 4.455624511718749
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "mb": 1,
+      "modules": [
+        {
+          "kind": "backward_EP_combine",
+          "source_B0_gpu_ms": 1.203080078125,
+          "target_gpu_ms": 0.910568359375,
+          "source_minus_target_gpu_ms": 0.2925117187499999
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "source_B0_gpu_ms": 1.2980810546875,
+          "target_gpu_ms": 0.78732470703125,
+          "source_minus_target_gpu_ms": 0.5107563476562499
+        },
+        {
+          "kind": "backward_attention_CP",
+          "source_B0_gpu_ms": 284.9004228515625,
+          "target_gpu_ms": 279.9429306640625,
+          "source_minus_target_gpu_ms": 4.957492187500009
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "source_B0_gpu_ms": 33.3684287109375,
+          "target_gpu_ms": 14.10234130859375,
+          "source_minus_target_gpu_ms": 19.26608740234375
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "source_B0_gpu_ms": 18.7480234375,
+          "target_gpu_ms": 7.94253271484375,
+          "source_minus_target_gpu_ms": 10.805490722656248
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "source_B0_gpu_ms": 1.133640625,
+          "target_gpu_ms": 0.80040478515625,
+          "source_minus_target_gpu_ms": 0.33323583984374994
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "source_B0_gpu_ms": 2.900923828125,
+          "target_gpu_ms": 7.42633349609375,
+          "source_minus_target_gpu_ms": -4.52540966796875
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "source_B0_gpu_ms": 186.5086474609375,
+          "target_gpu_ms": 186.16305029296876,
+          "source_minus_target_gpu_ms": 0.34559716796874795
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "source_B0_gpu_ms": 13.9000078125,
+          "target_gpu_ms": 6.0837626953125,
+          "source_minus_target_gpu_ms": 7.8162451171875
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "source_B0_gpu_ms": 7.3531650390625,
+          "target_gpu_ms": 3.27170556640625,
+          "source_minus_target_gpu_ms": 4.081459472656249
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "mb": 2,
+      "modules": [
+        {
+          "kind": "backward_EP_combine",
+          "source_B0_gpu_ms": 1.203080078125,
+          "target_gpu_ms": 0.908447265625,
+          "source_minus_target_gpu_ms": 0.29463281249999995
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "source_B0_gpu_ms": 1.2980810546875,
+          "target_gpu_ms": 0.8344453125,
+          "source_minus_target_gpu_ms": 0.4636357421874999
+        },
+        {
+          "kind": "backward_attention_CP",
+          "source_B0_gpu_ms": 284.9004228515625,
+          "target_gpu_ms": 281.2037348632812,
+          "source_minus_target_gpu_ms": 3.696687988281269
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "source_B0_gpu_ms": 33.3684287109375,
+          "target_gpu_ms": 13.2980498046875,
+          "source_minus_target_gpu_ms": 20.07037890625
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "source_B0_gpu_ms": 18.7480234375,
+          "target_gpu_ms": 7.3055703125,
+          "source_minus_target_gpu_ms": 11.442453124999998
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "source_B0_gpu_ms": 1.133640625,
+          "target_gpu_ms": 0.82408740234375,
+          "source_minus_target_gpu_ms": 0.30955322265624996
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "source_B0_gpu_ms": 2.900923828125,
+          "target_gpu_ms": 7.0932080078125,
+          "source_minus_target_gpu_ms": -4.1922841796874994
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "source_B0_gpu_ms": 186.5086474609375,
+          "target_gpu_ms": 185.5194365234375,
+          "source_minus_target_gpu_ms": 0.9892109375000189
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "source_B0_gpu_ms": 13.9000078125,
+          "target_gpu_ms": 5.60519970703125,
+          "source_minus_target_gpu_ms": 8.29480810546875
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "source_B0_gpu_ms": 7.3531650390625,
+          "target_gpu_ms": 3.0872607421875,
+          "source_minus_target_gpu_ms": 4.265904296875
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "mb": 3,
+      "modules": [
+        {
+          "kind": "backward_EP_combine",
+          "source_B0_gpu_ms": 1.203080078125,
+          "target_gpu_ms": 0.79640576171875,
+          "source_minus_target_gpu_ms": 0.40667431640624996
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "source_B0_gpu_ms": 1.2980810546875,
+          "target_gpu_ms": 0.72536474609375,
+          "source_minus_target_gpu_ms": 0.5727163085937499
+        },
+        {
+          "kind": "backward_attention_CP",
+          "source_B0_gpu_ms": 284.9004228515625,
+          "target_gpu_ms": 281.74592041015626,
+          "source_minus_target_gpu_ms": 3.154502441406237
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "source_B0_gpu_ms": 33.3684287109375,
+          "target_gpu_ms": 12.797244140625,
+          "source_minus_target_gpu_ms": 20.5711845703125
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "source_B0_gpu_ms": 18.7480234375,
+          "target_gpu_ms": 6.98888427734375,
+          "source_minus_target_gpu_ms": 11.759139160156248
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "source_B0_gpu_ms": 1.133640625,
+          "target_gpu_ms": 0.7183662109375,
+          "source_minus_target_gpu_ms": 0.4152744140625
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "source_B0_gpu_ms": 2.900923828125,
+          "target_gpu_ms": 6.70040234375,
+          "source_minus_target_gpu_ms": -3.7994785156250006
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "source_B0_gpu_ms": 186.5086474609375,
+          "target_gpu_ms": 185.1702880859375,
+          "source_minus_target_gpu_ms": 1.3383593750000102
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "source_B0_gpu_ms": 13.9000078125,
+          "target_gpu_ms": 5.493236328125,
+          "source_minus_target_gpu_ms": 8.406771484375
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "source_B0_gpu_ms": 7.3531650390625,
+          "target_gpu_ms": 2.99454150390625,
+          "source_minus_target_gpu_ms": 4.35862353515625
+        }
+      ]
+    },
+    {
+      "stage": 14,
+      "mb": 0,
+      "modules": [
+        {
+          "kind": "backward_EP_combine",
+          "source_B0_gpu_ms": 1.203080078125,
+          "target_gpu_ms": 0.72396240234375,
+          "source_minus_target_gpu_ms": 0.47911767578125
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "source_B0_gpu_ms": 1.2980810546875,
+          "target_gpu_ms": 0.58380078125,
+          "source_minus_target_gpu_ms": 0.7142802734374999
+        },
+        {
+          "kind": "backward_attention_CP",
+          "source_B0_gpu_ms": 284.9004228515625,
+          "target_gpu_ms": 284.42449853515626,
+          "source_minus_target_gpu_ms": 0.47592431640623545
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "source_B0_gpu_ms": 33.3684287109375,
+          "target_gpu_ms": 13.0510087890625,
+          "source_minus_target_gpu_ms": 20.317419921875
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "source_B0_gpu_ms": 18.7480234375,
+          "target_gpu_ms": 7.02398828125,
+          "source_minus_target_gpu_ms": 11.724035156249998
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "source_B0_gpu_ms": 1.133640625,
+          "target_gpu_ms": 0.6210830078125,
+          "source_minus_target_gpu_ms": 0.5125576171874999
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "source_B0_gpu_ms": 2.900923828125,
+          "target_gpu_ms": 5.506701171875,
+          "source_minus_target_gpu_ms": -2.6057773437500003
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "source_B0_gpu_ms": 186.5086474609375,
+          "target_gpu_ms": 186.76614404296876,
+          "source_minus_target_gpu_ms": -0.25749658203125136
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "source_B0_gpu_ms": 13.9000078125,
+          "target_gpu_ms": 6.0849033203125,
+          "source_minus_target_gpu_ms": 7.8151044921875
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "source_B0_gpu_ms": 7.3531650390625,
+          "target_gpu_ms": 3.37141357421875,
+          "source_minus_target_gpu_ms": 3.9817514648437498
+        }
+      ]
+    },
+    {
+      "stage": 14,
+      "mb": 1,
+      "modules": [
+        {
+          "kind": "backward_EP_combine",
+          "source_B0_gpu_ms": 1.203080078125,
+          "target_gpu_ms": 0.7678046875,
+          "source_minus_target_gpu_ms": 0.435275390625
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "source_B0_gpu_ms": 1.2980810546875,
+          "target_gpu_ms": 0.572001953125,
+          "source_minus_target_gpu_ms": 0.7260791015624999
+        },
+        {
+          "kind": "backward_attention_CP",
+          "source_B0_gpu_ms": 284.9004228515625,
+          "target_gpu_ms": 284.2609750976562,
+          "source_minus_target_gpu_ms": 0.6394477539062677
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "source_B0_gpu_ms": 33.3684287109375,
+          "target_gpu_ms": 13.457529296875,
+          "source_minus_target_gpu_ms": 19.9108994140625
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "source_B0_gpu_ms": 18.7480234375,
+          "target_gpu_ms": 7.1258662109375,
+          "source_minus_target_gpu_ms": 11.6221572265625
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "source_B0_gpu_ms": 1.133640625,
+          "target_gpu_ms": 0.66148193359375,
+          "source_minus_target_gpu_ms": 0.47215869140625
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "source_B0_gpu_ms": 2.900923828125,
+          "target_gpu_ms": 6.13786181640625,
+          "source_minus_target_gpu_ms": -3.2369379882812503
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "source_B0_gpu_ms": 186.5086474609375,
+          "target_gpu_ms": 186.76664404296875,
+          "source_minus_target_gpu_ms": -0.25799658203123954
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "source_B0_gpu_ms": 13.9000078125,
+          "target_gpu_ms": 6.31986376953125,
+          "source_minus_target_gpu_ms": 7.58014404296875
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "source_B0_gpu_ms": 7.3531650390625,
+          "target_gpu_ms": 3.4818134765625,
+          "source_minus_target_gpu_ms": 3.8713515624999997
+        }
+      ]
+    },
+    {
+      "stage": 14,
+      "mb": 2,
+      "modules": [
+        {
+          "kind": "backward_EP_combine",
+          "source_B0_gpu_ms": 1.203080078125,
+          "target_gpu_ms": 0.74872265625,
+          "source_minus_target_gpu_ms": 0.45435742187499994
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "source_B0_gpu_ms": 1.2980810546875,
+          "target_gpu_ms": 0.57296240234375,
+          "source_minus_target_gpu_ms": 0.72511865234375
+        },
+        {
+          "kind": "backward_attention_CP",
+          "source_B0_gpu_ms": 284.9004228515625,
+          "target_gpu_ms": 283.98751953125,
+          "source_minus_target_gpu_ms": 0.9129033203125232
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "source_B0_gpu_ms": 33.3684287109375,
+          "target_gpu_ms": 13.3453720703125,
+          "source_minus_target_gpu_ms": 20.023056640625
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "source_B0_gpu_ms": 18.7480234375,
+          "target_gpu_ms": 6.9083046875,
+          "source_minus_target_gpu_ms": 11.83971875
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "source_B0_gpu_ms": 1.133640625,
+          "target_gpu_ms": 0.6551240234375,
+          "source_minus_target_gpu_ms": 0.4785166015625
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "source_B0_gpu_ms": 2.900923828125,
+          "target_gpu_ms": 6.6926279296875,
+          "source_minus_target_gpu_ms": -3.7917041015625004
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "source_B0_gpu_ms": 186.5086474609375,
+          "target_gpu_ms": 186.209748046875,
+          "source_minus_target_gpu_ms": 0.29889941406250387
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "source_B0_gpu_ms": 13.9000078125,
+          "target_gpu_ms": 6.3125859375,
+          "source_minus_target_gpu_ms": 7.587421875
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "source_B0_gpu_ms": 7.3531650390625,
+          "target_gpu_ms": 3.535212890625,
+          "source_minus_target_gpu_ms": 3.8179521484374996
+        }
+      ]
+    },
+    {
+      "stage": 14,
+      "mb": 3,
+      "modules": [
+        {
+          "kind": "backward_EP_combine",
+          "source_B0_gpu_ms": 1.203080078125,
+          "target_gpu_ms": 0.7057236328125,
+          "source_minus_target_gpu_ms": 0.4973564453125
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "source_B0_gpu_ms": 1.2980810546875,
+          "target_gpu_ms": 0.5783623046875,
+          "source_minus_target_gpu_ms": 0.7197187499999999
+        },
+        {
+          "kind": "backward_attention_CP",
+          "source_B0_gpu_ms": 284.9004228515625,
+          "target_gpu_ms": 285.83746142578127,
+          "source_minus_target_gpu_ms": -0.937038574218775
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "source_B0_gpu_ms": 33.3684287109375,
+          "target_gpu_ms": 12.86229052734375,
+          "source_minus_target_gpu_ms": 20.506138183593748
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "source_B0_gpu_ms": 18.7480234375,
+          "target_gpu_ms": 6.74718701171875,
+          "source_minus_target_gpu_ms": 12.000836425781248
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "source_B0_gpu_ms": 1.133640625,
+          "target_gpu_ms": 0.6085625,
+          "source_minus_target_gpu_ms": 0.525078125
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "source_B0_gpu_ms": 2.900923828125,
+          "target_gpu_ms": 4.0524130859375,
+          "source_minus_target_gpu_ms": -1.1514892578125004
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "source_B0_gpu_ms": 186.5086474609375,
+          "target_gpu_ms": 187.549568359375,
+          "source_minus_target_gpu_ms": -1.0409208984374914
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "source_B0_gpu_ms": 13.9000078125,
+          "target_gpu_ms": 5.76102001953125,
+          "source_minus_target_gpu_ms": 8.13898779296875
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "source_B0_gpu_ms": 7.3531650390625,
+          "target_gpu_ms": 3.197931640625,
+          "source_minus_target_gpu_ms": 4.1552333984375
+        }
+      ]
+    }
+  ],
+  "scope": "source32 rank8 B0 used by r10 vs target256 PP1/14 all B; module GPU unions, not DAG contributions",
+  "limitations": [
+    "CPU-marker containment is conditional association",
+    "FC1/FC2 identity inferred from paired call order",
+    "CP included inside Attention; module unions may overlap",
+    "source B1..7 extracted only as extra evidence, not calibration or pooled costs"
+  ]
+}

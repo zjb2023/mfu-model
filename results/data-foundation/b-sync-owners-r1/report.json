@@ -1,0 +1,71 @@
+{
+  "rows": [
+    {
+      "stage": 1,
+      "world": 256,
+      "mb": 1,
+      "no_recorded_device_ms": 80.72662109375,
+      "sync_overlap_union_ms": 63.49008984375,
+      "without_sync_overlap_ms": 17.23653125,
+      "groups": [
+        {
+          "kind": "recompute_EP_dispatch",
+          "overlap_ms": 8.4686171875
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "overlap_ms": 23.56001416015625
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "overlap_ms": 4.64652685546875
+        },
+        {
+          "kind": "backward_EP_combine",
+          "overlap_ms": 26.6757314453125
+        },
+        {
+          "kind": "unattributed",
+          "overlap_ms": 0.1392001953125
+        }
+      ]
+    },
+    {
+      "stage": 14,
+      "world": 256,
+      "mb": 1,
+      "no_recorded_device_ms": 48.39869189453125,
+      "sync_overlap_union_ms": 33.2138818359375,
+      "without_sync_overlap_ms": 15.184810058593747,
+      "groups": [
+        {
+          "kind": "recompute_EP_dispatch",
+          "overlap_ms": 8.4386484375
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "overlap_ms": 7.92453515625
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "overlap_ms": 4.41577490234375
+        },
+        {
+          "kind": "backward_EP_combine",
+          "overlap_ms": 12.061642578125
+        },
+        {
+          "kind": "unattributed",
+          "overlap_ms": 0.37328076171875
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Same-thread CPU containment identifies call context, not physical cause",
+    "No-recorded-device intervals can include hidden transport",
+    "Overlaps with sync API do not prove host overhead or avoidable waits",
+    "Per-kind overlap unions can overlap each other; do not add blindly",
+    "Two rank traces B1 only, no independent prediction or full EP-group readiness verification"
+  ]
+}

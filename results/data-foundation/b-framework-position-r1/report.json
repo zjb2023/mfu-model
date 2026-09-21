@@ -1,0 +1,433 @@
+{
+  "status": "PARTIAL_FRAMEWORK_MARKER_ATTRIBUTION",
+  "comparisons": [
+    {
+      "world": 224,
+      "stages": [
+        5,
+        6
+      ],
+      "mb": 0,
+      "deltas": [
+        {
+          "kind": "backward_EP_combine",
+          "cpu_ms": -9.258248000000002,
+          "gpu_union_ms": -0.013601562499999997
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "cpu_ms": -15.936173,
+          "gpu_union_ms": -0.014839843749999915
+        },
+        {
+          "kind": "backward_attention_CP",
+          "cpu_ms": -26.620755000000006,
+          "gpu_union_ms": -7.9202319335937545
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "cpu_ms": -16.883345,
+          "gpu_union_ms": -1.615063964843749
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "cpu_ms": -3.573200999999999,
+          "gpu_union_ms": -1.1190937500000002
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "cpu_ms": -12.045003999999999,
+          "gpu_union_ms": -0.014124023437500077
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "cpu_ms": -1.091633999999999,
+          "gpu_union_ms": -7.37976953125
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "cpu_ms": -0.6679259999999996,
+          "gpu_union_ms": -2.2635415039062536
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "cpu_ms": -1.6846890000000005,
+          "gpu_union_ms": -0.6889707031250003
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "cpu_ms": -2.4344700000000006,
+          "gpu_union_ms": -0.3235659179687502
+        }
+      ]
+    },
+    {
+      "world": 224,
+      "stages": [
+        5,
+        6
+      ],
+      "mb": 1,
+      "deltas": [
+        {
+          "kind": "backward_EP_combine",
+          "cpu_ms": 25.014022999999995,
+          "gpu_union_ms": -0.0080805664062501
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "cpu_ms": 10.904959,
+          "gpu_union_ms": -0.016721191406250058
+        },
+        {
+          "kind": "backward_attention_CP",
+          "cpu_ms": -7.2626349999999995,
+          "gpu_union_ms": -0.40922021484374227
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "cpu_ms": -14.679844,
+          "gpu_union_ms": -1.7362529296875007
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "cpu_ms": -4.378761000000002,
+          "gpu_union_ms": -0.7709482421875009
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "cpu_ms": -11.898758999999998,
+          "gpu_union_ms": -0.008440429687500028
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "cpu_ms": 44.20394700000003,
+          "gpu_union_ms": -53.44312060546875
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "cpu_ms": -14.50807,
+          "gpu_union_ms": -5.190780273437497
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "cpu_ms": -4.432746,
+          "gpu_union_ms": -0.6833847656250001
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "cpu_ms": -7.120291000000001,
+          "gpu_union_ms": -0.34513134765624986
+        }
+      ]
+    },
+    {
+      "world": 224,
+      "stages": [
+        5,
+        6
+      ],
+      "mb": 2,
+      "deltas": [
+        {
+          "kind": "backward_EP_combine",
+          "cpu_ms": 11.503095999999992,
+          "gpu_union_ms": -0.004923339843750041
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "cpu_ms": -20.468972,
+          "gpu_union_ms": -0.023482910156250036
+        },
+        {
+          "kind": "backward_attention_CP",
+          "cpu_ms": -8.562292999999997,
+          "gpu_union_ms": 0.2902060546874736
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "cpu_ms": -10.597648999999999,
+          "gpu_union_ms": -0.9420532226562504
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "cpu_ms": -9.152406999999998,
+          "gpu_union_ms": -0.6776679687499989
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "cpu_ms": 13.923260999999993,
+          "gpu_union_ms": -0.017121582031250027
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "cpu_ms": 7.522817999999916,
+          "gpu_union_ms": -23.62434228515625
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "cpu_ms": -3.547196999999999,
+          "gpu_union_ms": -9.093934570312484
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "cpu_ms": -2.438381,
+          "gpu_union_ms": -0.6000620117187498
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "cpu_ms": -6.032291999999999,
+          "gpu_union_ms": -0.32861181640625015
+        }
+      ]
+    },
+    {
+      "world": 256,
+      "stages": [
+        1,
+        14
+      ],
+      "mb": 0,
+      "deltas": [
+        {
+          "kind": "backward_EP_combine",
+          "cpu_ms": -8.277704,
+          "gpu_union_ms": -0.10948583984375004
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "cpu_ms": -0.29575399999999874,
+          "gpu_union_ms": -0.15520410156249997
+        },
+        {
+          "kind": "backward_attention_CP",
+          "cpu_ms": -0.35433999999999877,
+          "gpu_union_ms": 2.149633300781261
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "cpu_ms": -0.5623140000000002,
+          "gpu_union_ms": 0.7003989257812506
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "cpu_ms": -0.4778359999999999,
+          "gpu_union_ms": 0.015217285156250426
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "cpu_ms": 18.897033999999998,
+          "gpu_union_ms": -0.13092236328124995
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "cpu_ms": 4.412065999999982,
+          "gpu_union_ms": 0.9546728515625
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "cpu_ms": -1.5602049999999998,
+          "gpu_union_ms": 0.06384570312502547
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "cpu_ms": -0.7475839999999998,
+          "gpu_union_ms": 0.7091840820312498
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "cpu_ms": -0.7697590000000001,
+          "gpu_union_ms": 0.4738730468750001
+        }
+      ]
+    },
+    {
+      "world": 256,
+      "stages": [
+        1,
+        14
+      ],
+      "mb": 1,
+      "deltas": [
+        {
+          "kind": "backward_EP_combine",
+          "cpu_ms": -12.225937999999992,
+          "gpu_union_ms": -0.14276367187500005
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "cpu_ms": -0.5848409999999991,
+          "gpu_union_ms": -0.21532275390625
+        },
+        {
+          "kind": "backward_attention_CP",
+          "cpu_ms": -0.3884450000000008,
+          "gpu_union_ms": 4.318044433593741
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "cpu_ms": -0.8724849999999993,
+          "gpu_union_ms": -0.6448120117187504
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "cpu_ms": -0.6134239999999997,
+          "gpu_union_ms": -0.8166665039062506
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "cpu_ms": -13.088149000000001,
+          "gpu_union_ms": -0.13892285156250006
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "cpu_ms": 7.732601999999929,
+          "gpu_union_ms": -1.2884716796874995
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "cpu_ms": -1.0502549999999982,
+          "gpu_union_ms": 0.6035937499999875
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "cpu_ms": -0.2856320000000001,
+          "gpu_union_ms": 0.23610107421874993
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "cpu_ms": -0.47829400000000044,
+          "gpu_union_ms": 0.21010791015624974
+        }
+      ]
+    },
+    {
+      "world": 256,
+      "stages": [
+        1,
+        14
+      ],
+      "mb": 2,
+      "deltas": [
+        {
+          "kind": "backward_EP_combine",
+          "cpu_ms": -13.06033099999999,
+          "gpu_union_ms": -0.159724609375
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "cpu_ms": -1.0547680000000001,
+          "gpu_union_ms": -0.26148291015625
+        },
+        {
+          "kind": "backward_attention_CP",
+          "cpu_ms": 0.6603759999999976,
+          "gpu_union_ms": 2.783784667968746
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "cpu_ms": -0.44905899999999965,
+          "gpu_union_ms": 0.047322265625000526
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "cpu_ms": -0.39339000000000013,
+          "gpu_union_ms": -0.3972656250000002
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "cpu_ms": 4.120640999999999,
+          "gpu_union_ms": -0.16896337890625002
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "cpu_ms": 3.8050629999999046,
+          "gpu_union_ms": -0.4005800781249995
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "cpu_ms": -0.11929899999999982,
+          "gpu_union_ms": 0.690311523437515
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "cpu_ms": -0.24981799999999987,
+          "gpu_union_ms": 0.7073862304687495
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "cpu_ms": -0.4241839999999999,
+          "gpu_union_ms": 0.4479521484375
+        }
+      ]
+    },
+    {
+      "world": 256,
+      "stages": [
+        1,
+        14
+      ],
+      "mb": 3,
+      "deltas": [
+        {
+          "kind": "backward_EP_combine",
+          "cpu_ms": -11.928959000000006,
+          "gpu_union_ms": -0.09068212890625005
+        },
+        {
+          "kind": "backward_EP_dispatch",
+          "cpu_ms": 0.4580289999999998,
+          "gpu_union_ms": -0.14700244140624996
+        },
+        {
+          "kind": "backward_attention_CP",
+          "cpu_ms": 0.2750839999999979,
+          "gpu_union_ms": 4.091541015625012
+        },
+        {
+          "kind": "backward_expert_linear_FC1",
+          "cpu_ms": -0.3718480000000004,
+          "gpu_union_ms": 0.06504638671875007
+        },
+        {
+          "kind": "backward_expert_linear_FC2",
+          "cpu_ms": -0.3155210000000004,
+          "gpu_union_ms": -0.2416972656250005
+        },
+        {
+          "kind": "recompute_EP_combine",
+          "cpu_ms": -2.722439999999999,
+          "gpu_union_ms": -0.10980371093749997
+        },
+        {
+          "kind": "recompute_EP_dispatch",
+          "cpu_ms": 11.742081000000098,
+          "gpu_union_ms": -2.6479892578125
+        },
+        {
+          "kind": "recompute_attention_CP",
+          "cpu_ms": -0.1493580000000012,
+          "gpu_union_ms": 2.3792802734375016
+        },
+        {
+          "kind": "recompute_expert_linear_FC1",
+          "cpu_ms": -0.1593929999999999,
+          "gpu_union_ms": 0.26778369140625014
+        },
+        {
+          "kind": "recompute_expert_linear_FC2",
+          "cpu_ms": -0.17269299999999976,
+          "gpu_union_ms": 0.20339013671874984
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Reference236B is semantic evidence, not verified exact installed training revision",
+    "FC1/FC2 labels are inferred from paired forward/reverse order, not weight IDs",
+    "CPU duration includes dispatch/wait and is not GPU compute cost",
+    "GPU associations require same-thread runtime containment; hidden transport and unmatched work excluded",
+    "Operator unions/envelopes may overlap; never sum as B wall time",
+    "Only four representative ranks at iter60; no all-stage or cross-iteration claim"
+  ]
+}
