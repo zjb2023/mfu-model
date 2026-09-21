@@ -1,0 +1,182 @@
+[
+  {
+    "rank": 0,
+    "stage": 0,
+    "origin_ms": 6732114365.509043,
+    "local_fb_pp_complete_absolute_ms": 6732126536.695155,
+    "sync_start_absolute_ms": 6732126574.861887,
+    "sync_end_absolute_ms": 6732126575.983095,
+    "update_ag_end_absolute_ms": 6732126678.6768675,
+    "preparation_RS_ms": 38.16673183441162,
+    "update_AG_ms": 102.693772315979,
+    "sequence": [
+      {
+        "event": 83922,
+        "name": "should_run_forward_backward",
+        "start_ms": 12209.352844238281,
+        "end_ms": 12210.4740524292
+      },
+      {
+        "event": 83915,
+        "name": "Optimizer.step#FusedAdam.step",
+        "start_ms": 12232.901294708252,
+        "end_ms": 12246.992055892944
+      },
+      {
+        "event": 84181,
+        "name": "mccl:all_gather_into_tensor_coalesced",
+        "start_ms": 12246.995774269104,
+        "end_ms": 12258.015237808228
+      },
+      {
+        "event": 83920,
+        "name": "Optimizer.step#FusedAdam.step",
+        "start_ms": 12258.028594970703,
+        "end_ms": 12302.841727256775
+      },
+      {
+        "event": 84184,
+        "name": "mccl:all_gather_into_tensor_coalesced",
+        "start_ms": 12302.845485687256,
+        "end_ms": 12313.167824745178
+      }
+    ],
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34095/profiler/iteration_60/rank0.1789699915449.pt.trace.json",
+    "sha256": "dd7907a2e95538518e1aa9ba867f51cd6b613e5f059c2798e63c6b4bf7e55e36"
+  },
+  {
+    "rank": 8,
+    "stage": 1,
+    "origin_ms": 6732114365.569323,
+    "local_fb_pp_complete_absolute_ms": 6732126105.28128,
+    "sync_start_absolute_ms": 6732126145.787992,
+    "sync_end_absolute_ms": 6732126575.898752,
+    "update_ag_end_absolute_ms": 6732126823.37378,
+    "preparation_RS_ms": 40.50671195983887,
+    "update_AG_ms": 247.4750280380249,
+    "sequence": [
+      {
+        "event": 232246,
+        "name": "should_run_forward_backward",
+        "start_ms": 11780.218668937683,
+        "end_ms": 12210.329429626465
+      },
+      {
+        "event": 232229,
+        "name": "Optimizer.step#FusedAdam.step",
+        "start_ms": 12248.633821487427,
+        "end_ms": 12258.509672164917
+      },
+      {
+        "event": 232740,
+        "name": "mccl:all_gather_into_tensor_coalesced",
+        "start_ms": 12258.513471603394,
+        "end_ms": 12265.838760375977
+      },
+      {
+        "event": 232233,
+        "name": "Optimizer.step#FusedAdam.step",
+        "start_ms": 12265.860718727112,
+        "end_ms": 12439.926243782043
+      },
+      {
+        "event": 232742,
+        "name": "mccl:all_gather_into_tensor_coalesced",
+        "start_ms": 12440.766202926636,
+        "end_ms": 12457.80445766449
+      }
+    ],
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34031/profiler/iteration_60/rank8.1789699916514.pt.trace.json",
+    "sha256": "7fbf1dc76bb0be15c31334e91c1f194d848c9f65c33db17dad1a6630cbb15937"
+  },
+  {
+    "rank": 16,
+    "stage": 2,
+    "origin_ms": 6732114365.80883,
+    "local_fb_pp_complete_absolute_ms": 6732125223.201203,
+    "sync_start_absolute_ms": 6732125264.508894,
+    "sync_end_absolute_ms": 6732126575.941111,
+    "update_ag_end_absolute_ms": 6732126831.544614,
+    "preparation_RS_ms": 41.30769062042236,
+    "update_AG_ms": 255.6035032272339,
+    "sequence": [
+      {
+        "event": 228271,
+        "name": "should_run_forward_backward",
+        "start_ms": 10898.700063705444,
+        "end_ms": 12210.132280349731
+      },
+      {
+        "event": 228256,
+        "name": "Optimizer.step#FusedAdam.step",
+        "start_ms": 12248.104743003845,
+        "end_ms": 12257.897663116455
+      },
+      {
+        "event": 228764,
+        "name": "mccl:all_gather_into_tensor_coalesced",
+        "start_ms": 12257.901620864868,
+        "end_ms": 12264.988690376282
+      },
+      {
+        "event": 228261,
+        "name": "Optimizer.step#FusedAdam.step",
+        "start_ms": 12265.002967834473,
+        "end_ms": 12451.585532188416
+      },
+      {
+        "event": 228766,
+        "name": "mccl:all_gather_into_tensor_coalesced",
+        "start_ms": 12452.419172286987,
+        "end_ms": 12465.735783576965
+      }
+    ],
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34094/profiler/iteration_60/rank16.1789699916621.pt.trace.json",
+    "sha256": "3983e8bd4cec4de1159ad6599fda475eaf6c46cf57a2798825b13dd3d6478446"
+  },
+  {
+    "rank": 24,
+    "stage": 3,
+    "origin_ms": 6732114366.18014,
+    "local_fb_pp_complete_absolute_ms": 6732124346.290213,
+    "sync_start_absolute_ms": 6732124386.930287,
+    "sync_end_absolute_ms": 6732126575.998414,
+    "update_ag_end_absolute_ms": 6732126722.343327,
+    "preparation_RS_ms": 40.640074729919434,
+    "update_AG_ms": 146.3449125289917,
+    "sequence": [
+      {
+        "event": 122706,
+        "name": "should_run_forward_backward",
+        "start_ms": 10020.750147819519,
+        "end_ms": 12209.818274497986
+      },
+      {
+        "event": 122683,
+        "name": "Optimizer.step#FusedAdam.step",
+        "start_ms": 12237.513821601868,
+        "end_ms": 12250.780997276306
+      },
+      {
+        "event": 122974,
+        "name": "mccl:all_gather_into_tensor_coalesced",
+        "start_ms": 12250.78455543518,
+        "end_ms": 12259.604166984558
+      },
+      {
+        "event": 122697,
+        "name": "Optimizer.step#FusedAdam.step",
+        "start_ms": 12259.617444038391,
+        "end_ms": 12346.852577209473
+      },
+      {
+        "event": 122975,
+        "name": "mccl:all_gather_into_tensor_coalesced",
+        "start_ms": 12346.857215881348,
+        "end_ms": 12356.163187026978
+      }
+    ],
+    "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker33017/profiler/iteration_60/rank24.1789699915758.pt.trace.json",
+    "sha256": "91ec0edf35c01fa0700d11e87d7a2b251233aa4274155b3c9071f780ebe48c08"
+  }
+]

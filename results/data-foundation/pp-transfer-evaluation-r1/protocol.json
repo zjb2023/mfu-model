@@ -1,0 +1,47 @@
+{
+  "source": 32,
+  "target": 256,
+  "iteration": 60,
+  "source_ranks": [
+    0,
+    8,
+    16,
+    24
+  ],
+  "target_ranks": [
+    0,
+    16,
+    112,
+    128,
+    224,
+    240
+  ],
+  "target_links": [
+    [
+      0,
+      16
+    ],
+    [
+      112,
+      128
+    ],
+    [
+      224,
+      240
+    ]
+  ],
+  "metric": "min(endpoint CPU end) - max(endpoint call start, preceding associated GPU completion, preceding PP completion)",
+  "selection": "both ends standalone only; combined calls reported but excluded from cost comparison",
+  "cost_basis": "effective overlap proxy, NOT pure network service",
+  "target_fit": false,
+  "clock_assumption": "cross-host timestamps assumed comparable; no clock correction fitted",
+  "frozen_costs_ms": {
+    "F": 2.7618889808654785,
+    "B": 2.7253823280334473
+  },
+  "sealed_models": {
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/four-layer-f-r1/graph.json": "42bc76c101dfea2598ed18c7e348996554a665856970f946d999c06a2888659f",
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/b-four-layers-r10/graph.json": "fb9357afbf24b17d415cddfab159fc9c491e9185ff42a1a4ee136cda48ee5d3f",
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/pp32-detailed-fb-assembly-r1/parameters.json": "dfc1c2833b7f6ca3e7cfdff3392b711984078686ad8907b529c43b05b8021a19"
+  }
+}

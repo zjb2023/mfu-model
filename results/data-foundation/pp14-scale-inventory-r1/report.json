@@ -1,0 +1,178 @@
+{
+  "rows": [
+    {
+      "case": "2111",
+      "pp": 1,
+      "pairs": 0,
+      "payload_bytes": [],
+      "iterations": [],
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "case": "2112",
+      "pp": 1,
+      "pairs": 0,
+      "payload_bytes": [],
+      "iterations": [],
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "case": "2211",
+      "pp": 2,
+      "pairs": 64,
+      "payload_bytes": [
+        83886080
+      ],
+      "iterations": [
+        53,
+        58
+      ],
+      "status": "CPU_PAIRING_ONLY_COST_NOT_READY"
+    },
+    {
+      "case": "2212",
+      "pp": 2,
+      "pairs": 64,
+      "payload_bytes": [
+        83886080
+      ],
+      "iterations": [
+        53,
+        58
+      ],
+      "status": "CPU_PAIRING_ONLY_COST_NOT_READY"
+    },
+    {
+      "case": "2411",
+      "pp": 4,
+      "pairs": 192,
+      "payload_bytes": [
+        83886080
+      ],
+      "iterations": [
+        53,
+        58
+      ],
+      "status": "CPU_PAIRING_ONLY_COST_NOT_READY"
+    },
+    {
+      "case": "2412",
+      "pp": 4,
+      "pairs": 192,
+      "payload_bytes": [
+        83886080
+      ],
+      "iterations": [
+        53,
+        58
+      ],
+      "status": "CPU_PAIRING_ONLY_COST_NOT_READY"
+    },
+    {
+      "case": "4111",
+      "pp": 1,
+      "pairs": 0,
+      "payload_bytes": [],
+      "iterations": [],
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "case": "4112",
+      "pp": 1,
+      "pairs": 0,
+      "payload_bytes": [],
+      "iterations": [],
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "case": "4211",
+      "pp": 2,
+      "pairs": 128,
+      "payload_bytes": [
+        41943040
+      ],
+      "iterations": [
+        53,
+        58
+      ],
+      "status": "CPU_PAIRING_ONLY_COST_NOT_READY"
+    },
+    {
+      "case": "4212",
+      "pp": 2,
+      "pairs": 128,
+      "payload_bytes": [
+        41943040
+      ],
+      "iterations": [
+        53,
+        58
+      ],
+      "status": "CPU_PAIRING_ONLY_COST_NOT_READY"
+    },
+    {
+      "case": "4411",
+      "pp": 4,
+      "pairs": 384,
+      "payload_bytes": [
+        41943040
+      ],
+      "iterations": [
+        53,
+        58
+      ],
+      "status": "CPU_PAIRING_ONLY_COST_NOT_READY"
+    },
+    {
+      "case": "8111",
+      "pp": 1,
+      "pairs": 0,
+      "payload_bytes": [],
+      "iterations": [],
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "case": "8112",
+      "pp": 1,
+      "pairs": 0,
+      "payload_bytes": [],
+      "iterations": [],
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "case": "8211",
+      "pp": 2,
+      "pairs": 256,
+      "payload_bytes": [
+        20971520
+      ],
+      "iterations": [
+        53,
+        58
+      ],
+      "status": "CPU_PAIRING_ONLY_COST_NOT_READY"
+    }
+  ],
+  "total_pairs": 1408,
+  "comparison_candidates": [
+    [
+      "2211",
+      "2411"
+    ],
+    [
+      "2212",
+      "2412"
+    ],
+    [
+      "4211",
+      "4411"
+    ]
+  ],
+  "restrictions": [
+    "same payload alone does not control DP, layer count, topology or contention",
+    "existing CPU pair evidence is not transport completion; do not fit its envelope as network service",
+    "20MiB has no PP4 counterpart; PP1 is not a zero-cost calibration point",
+    "check GPU readiness and host clock basis before cross-case timing comparison"
+  ],
+  "next_step": "start 2211 vs 2411, iter53 calibration / iter58 evaluation; verify path and readiness before fitting"
+}

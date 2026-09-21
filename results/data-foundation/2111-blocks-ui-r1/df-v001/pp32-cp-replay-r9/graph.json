@@ -1,0 +1,622 @@
+{
+  "r8:C0": {
+    "kind": "local_processing",
+    "deps": [],
+    "duration_ms": 7.213085174560547,
+    "observed_start_ms": 0.011707305908203125,
+    "observed_end_ms": 7.22479248046875,
+    "device_events": [
+      137631,
+      137635,
+      137639,
+      137643,
+      137647,
+      137651,
+      137655,
+      137659,
+      137671,
+      137675,
+      137679,
+      137693
+    ],
+    "unresolved_source_lag_ms": 0.011707305908203125
+  },
+  "r8:C1": {
+    "kind": "local_processing",
+    "deps": [
+      "r8:C0"
+    ],
+    "duration_ms": 0.9564409255981445,
+    "observed_start_ms": 7.228872299194336,
+    "observed_end_ms": 8.18531322479248,
+    "device_events": [
+      137715
+    ],
+    "unresolved_source_lag_ms": 0.0040798187255859375
+  },
+  "r8:C2": {
+    "kind": "local_processing",
+    "deps": [
+      "r8:C1"
+    ],
+    "duration_ms": 0.6036796569824219,
+    "observed_start_ms": 8.192938804626465,
+    "observed_end_ms": 8.796618461608887,
+    "device_events": [
+      137743
+    ],
+    "unresolved_source_lag_ms": 0.007625579833984375
+  },
+  "r8:C3": {
+    "kind": "local_processing",
+    "deps": [
+      "r8:C2",
+      "CP2"
+    ],
+    "duration_ms": 8.867048263549805,
+    "observed_start_ms": 44.377891540527344,
+    "observed_end_ms": 53.24493980407715,
+    "device_events": [
+      137781
+    ],
+    "unresolved_source_lag_ms": 7.505457878112793
+  },
+  "r8:M": {
+    "kind": "EP_containing_frozen_residual",
+    "deps": [
+      "CP3"
+    ],
+    "duration_ms": 22.752180099487305,
+    "observed_start_ms": 60.80894756317139,
+    "observed_end_ms": 83.56112766265869,
+    "device_events": [
+      137813,
+      137827,
+      137831,
+      137835,
+      137839,
+      137843,
+      137847,
+      137851,
+      137855,
+      137861,
+      137865,
+      137869,
+      137873,
+      137877,
+      137883,
+      137887,
+      137891,
+      137895,
+      137899,
+      137903,
+      137907,
+      137911,
+      137915,
+      137919,
+      137923,
+      137929,
+      137933,
+      137937,
+      137941,
+      137945,
+      137949,
+      137953,
+      137967,
+      137977,
+      137981,
+      137995,
+      138001,
+      138005,
+      138011,
+      138017,
+      138027,
+      138031,
+      138035,
+      138039,
+      138043,
+      138047,
+      138051,
+      138061,
+      138065,
+      138085,
+      138089,
+      138095,
+      138115,
+      138119,
+      138123,
+      138127,
+      138131,
+      138151,
+      138201,
+      138205,
+      138209,
+      138213,
+      138217,
+      138221,
+      138225,
+      138229,
+      138233,
+      138237,
+      138241,
+      138245,
+      138249,
+      138253,
+      138257,
+      138261,
+      138265,
+      138269,
+      138273,
+      138277,
+      138281,
+      138285,
+      138289,
+      138293,
+      138343,
+      138347,
+      138351,
+      138355,
+      138359,
+      138363,
+      138367,
+      138371,
+      138375,
+      138379,
+      138383,
+      138387,
+      138391,
+      138395,
+      138399,
+      138403,
+      138407,
+      138411,
+      138417,
+      138429
+    ],
+    "warning": "EP group ranks8..15 not unfolded; duration not portable pure compute",
+    "unresolved_source_lag_ms": 0
+  },
+  "r9:C0": {
+    "kind": "local_processing",
+    "deps": [],
+    "duration_ms": 7.1962690353393555,
+    "observed_start_ms": 0.0,
+    "observed_end_ms": 7.1962690353393555,
+    "device_events": [
+      123574,
+      123578,
+      123582,
+      123586,
+      123590,
+      123594,
+      123598,
+      123602,
+      123614,
+      123618,
+      123622,
+      123636
+    ],
+    "unresolved_source_lag_ms": 0
+  },
+  "r9:C1": {
+    "kind": "local_processing",
+    "deps": [
+      "r9:C0"
+    ],
+    "duration_ms": 0.8861637115478516,
+    "observed_start_ms": 7.201229095458984,
+    "observed_end_ms": 8.087392807006836,
+    "device_events": [
+      123658
+    ],
+    "unresolved_source_lag_ms": 0.004960060119628906
+  },
+  "r9:C2": {
+    "kind": "local_processing",
+    "deps": [
+      "r9:C1"
+    ],
+    "duration_ms": 0.5780019760131836,
+    "observed_start_ms": 8.094398498535156,
+    "observed_end_ms": 8.67240047454834,
+    "device_events": [
+      123686
+    ],
+    "unresolved_source_lag_ms": 0.0070056915283203125
+  },
+  "r9:C3": {
+    "kind": "local_processing",
+    "deps": [
+      "r9:C2",
+      "CP2"
+    ],
+    "duration_ms": 8.721155166625977,
+    "observed_start_ms": 44.4014253616333,
+    "observed_end_ms": 53.12258052825928,
+    "device_events": [
+      123724
+    ],
+    "unresolved_source_lag_ms": 7.52899169921875
+  },
+  "r9:M": {
+    "kind": "EP_containing_frozen_residual",
+    "deps": [
+      "CP3"
+    ],
+    "duration_ms": 22.634089469909668,
+    "observed_start_ms": 60.82705116271973,
+    "observed_end_ms": 83.4611406326294,
+    "device_events": [
+      123756,
+      123770,
+      123774,
+      123778,
+      123782,
+      123786,
+      123790,
+      123794,
+      123798,
+      123804,
+      123808,
+      123812,
+      123816,
+      123820,
+      123826,
+      123830,
+      123834,
+      123838,
+      123842,
+      123846,
+      123850,
+      123854,
+      123858,
+      123862,
+      123866,
+      123872,
+      123876,
+      123880,
+      123884,
+      123888,
+      123892,
+      123896,
+      123910,
+      123920,
+      123924,
+      123938,
+      123944,
+      123948,
+      123954,
+      123960,
+      123970,
+      123974,
+      123978,
+      123982,
+      123986,
+      123990,
+      123994,
+      124004,
+      124008,
+      124028,
+      124032,
+      124038,
+      124058,
+      124062,
+      124066,
+      124070,
+      124074,
+      124094,
+      124144,
+      124148,
+      124152,
+      124156,
+      124160,
+      124164,
+      124168,
+      124172,
+      124176,
+      124180,
+      124184,
+      124188,
+      124192,
+      124196,
+      124200,
+      124204,
+      124208,
+      124212,
+      124216,
+      124220,
+      124224,
+      124228,
+      124232,
+      124236,
+      124286,
+      124290,
+      124294,
+      124298,
+      124302,
+      124306,
+      124310,
+      124314,
+      124318,
+      124322,
+      124326,
+      124330,
+      124334,
+      124338,
+      124342,
+      124346,
+      124350,
+      124354,
+      124360,
+      124372
+    ],
+    "warning": "EP group ranks8..15 not unfolded; duration not portable pure compute",
+    "unresolved_source_lag_ms": 0.005400657653808594
+  },
+  "CP0": {
+    "kind": "CP",
+    "deps": [
+      "r8:C0",
+      "r9:C0"
+    ],
+    "parameter": "CP384",
+    "duration_ms": 11.615612983703613,
+    "observed_start_ms": 7.324748992919922,
+    "observed_end_ms": 18.940361976623535,
+    "endpoint_observations": [
+      {
+        "kind": "CP",
+        "ordinal": 0,
+        "id": "CP:8-9:0",
+        "cpu_event": 67002,
+        "cpu_start": 2.3528051376342773,
+        "cpu_end": 2.464890480041504,
+        "members": [
+          8,
+          9
+        ],
+        "input_nelems": 201326592,
+        "dtype": "BFloat16",
+        "service_ms": null,
+        "device_events": [
+          137705
+        ],
+        "device_active_union_ms": 11.639808654785156,
+        "device_start_ms": 7.288846015930176,
+        "device_end_ms": 18.928654670715332,
+        "cpu_duration_ms": 0.11208534240722656,
+        "aligned_start": 7.300553321838379,
+        "aligned_end": 18.940361976623535
+      },
+      {
+        "kind": "CP",
+        "ordinal": 0,
+        "id": "CP:8-9:0",
+        "cpu_event": 67002,
+        "cpu_start": 2.409640312194824,
+        "cpu_end": 2.5255775451660156,
+        "members": [
+          8,
+          9
+        ],
+        "input_nelems": 201326592,
+        "dtype": "BFloat16",
+        "service_ms": null,
+        "device_events": [
+          123648
+        ],
+        "device_active_union_ms": 11.561605453491211,
+        "device_start_ms": 7.324748992919922,
+        "device_end_ms": 18.886354446411133,
+        "cpu_duration_ms": 0.1159372329711914,
+        "aligned_start": 7.324748992919922,
+        "aligned_end": 18.886354446411133
+      }
+    ],
+    "warning": "latest-kernel-start to latest-end surrogate, not independently identified transport",
+    "unresolved_source_lag_ms": 0.09995651245117188
+  },
+  "CP1": {
+    "kind": "CP",
+    "deps": [
+      "r8:C1",
+      "r9:C1",
+      "CP0"
+    ],
+    "parameter": "CP384",
+    "duration_ms": 10.939370155334473,
+    "observed_start_ms": 18.94998836517334,
+    "observed_end_ms": 29.889358520507812,
+    "endpoint_observations": [
+      {
+        "kind": "CP",
+        "ordinal": 1,
+        "id": "CP:8-9:1",
+        "cpu_event": 67021,
+        "cpu_start": 2.6120805740356445,
+        "cpu_end": 2.688081741333008,
+        "members": [
+          8,
+          9
+        ],
+        "input_nelems": 201326592,
+        "dtype": "BFloat16",
+        "service_ms": null,
+        "device_events": [
+          137727
+        ],
+        "device_active_union_ms": 10.939370155334473,
+        "device_start_ms": 18.938281059265137,
+        "device_end_ms": 29.87765121459961,
+        "cpu_duration_ms": 0.07600116729736328,
+        "aligned_start": 18.94998836517334,
+        "aligned_end": 29.889358520507812
+      },
+      {
+        "kind": "CP",
+        "ordinal": 1,
+        "id": "CP:8-9:1",
+        "cpu_event": 67021,
+        "cpu_start": 2.658877372741699,
+        "cpu_end": 2.7399539947509766,
+        "members": [
+          8,
+          9
+        ],
+        "input_nelems": 201326592,
+        "dtype": "BFloat16",
+        "service_ms": null,
+        "device_events": [
+          123670
+        ],
+        "device_active_union_ms": 10.994163513183594,
+        "device_start_ms": 18.894681930541992,
+        "device_end_ms": 29.888845443725586,
+        "cpu_duration_ms": 0.08107662200927734,
+        "aligned_start": 18.894681930541992,
+        "aligned_end": 29.888845443725586
+      }
+    ],
+    "warning": "latest-kernel-start to latest-end surrogate, not independently identified transport",
+    "unresolved_source_lag_ms": 0.009626388549804688
+  },
+  "CP2": {
+    "kind": "CP",
+    "deps": [
+      "r8:C2",
+      "r9:C2",
+      "CP1"
+    ],
+    "parameter": "CP256",
+    "duration_ms": 6.9802751541137695,
+    "observed_start_ms": 29.89215850830078,
+    "observed_end_ms": 36.87243366241455,
+    "endpoint_observations": [
+      {
+        "kind": "CP",
+        "ordinal": 2,
+        "id": "CP:8-9:2",
+        "cpu_event": 67046,
+        "cpu_start": 3.1324548721313477,
+        "cpu_end": 3.2184619903564453,
+        "members": [
+          8,
+          9
+        ],
+        "input_nelems": 134217728,
+        "dtype": "BFloat16",
+        "service_ms": null,
+        "device_events": [
+          137755
+        ],
+        "device_active_union_ms": 6.969925880432129,
+        "device_start_ms": 29.880451202392578,
+        "device_end_ms": 36.85037708282471,
+        "cpu_duration_ms": 0.08600711822509766,
+        "aligned_start": 29.89215850830078,
+        "aligned_end": 36.86208438873291
+      },
+      {
+        "kind": "CP",
+        "ordinal": 2,
+        "id": "CP:8-9:2",
+        "cpu_event": 67046,
+        "cpu_start": 3.259654998779297,
+        "cpu_end": 3.3823814392089844,
+        "members": [
+          8,
+          9
+        ],
+        "input_nelems": 134217728,
+        "dtype": "BFloat16",
+        "service_ms": null,
+        "device_events": [
+          123698
+        ],
+        "device_active_union_ms": 6.981108665466309,
+        "device_start_ms": 29.891324996948242,
+        "device_end_ms": 36.87243366241455,
+        "cpu_duration_ms": 0.1227264404296875,
+        "aligned_start": 29.891324996948242,
+        "aligned_end": 36.87243366241455
+      }
+    ],
+    "warning": "latest-kernel-start to latest-end surrogate, not independently identified transport",
+    "unresolved_source_lag_ms": 0.00279998779296875
+  },
+  "CP3": {
+    "kind": "CP",
+    "deps": [
+      "r8:C3",
+      "r9:C3",
+      "CP2"
+    ],
+    "parameter": "CP256",
+    "duration_ms": 7.1685895919799805,
+    "observed_start_ms": 53.65306091308594,
+    "observed_end_ms": 60.82165050506592,
+    "endpoint_observations": [
+      {
+        "kind": "CP",
+        "ordinal": 3,
+        "id": "CP:8-9:3",
+        "cpu_event": 67087,
+        "cpu_start": 4.272191047668457,
+        "cpu_end": 4.372974395751953,
+        "members": [
+          8,
+          9
+        ],
+        "input_nelems": 134217728,
+        "dtype": "BFloat16",
+        "service_ms": null,
+        "device_events": [
+          137801
+        ],
+        "device_active_union_ms": 7.152406692504883,
+        "device_start_ms": 53.641353607177734,
+        "device_end_ms": 60.79376029968262,
+        "cpu_duration_ms": 0.1007833480834961,
+        "aligned_start": 53.65306091308594,
+        "aligned_end": 60.80546760559082
+      },
+      {
+        "kind": "CP",
+        "ordinal": 3,
+        "id": "CP:8-9:3",
+        "cpu_event": 67087,
+        "cpu_start": 4.576712608337402,
+        "cpu_end": 4.680426597595215,
+        "members": [
+          8,
+          9
+        ],
+        "input_nelems": 134217728,
+        "dtype": "BFloat16",
+        "service_ms": null,
+        "device_events": [
+          123744
+        ],
+        "device_active_union_ms": 7.2942304611206055,
+        "device_start_ms": 53.52742004394531,
+        "device_end_ms": 60.82165050506592,
+        "cpu_duration_ms": 0.1037139892578125,
+        "aligned_start": 53.52742004394531,
+        "aligned_end": 60.82165050506592
+      }
+    ],
+    "warning": "latest-kernel-start to latest-end surrogate, not independently identified transport",
+    "unresolved_source_lag_ms": 0.40812110900878906
+  },
+  "END": {
+    "kind": "boundary",
+    "deps": [
+      "r8:M",
+      "r9:M"
+    ],
+    "duration_ms": 0,
+    "observed_start_ms": 83.56112766265869,
+    "observed_end_ms": 83.56112766265869,
+    "unresolved_source_lag_ms": 0
+  }
+}

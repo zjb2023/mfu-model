@@ -1,0 +1,3454 @@
+[
+  {
+    "world": 256,
+    "rank": 0,
+    "stage": 0,
+    "host": "worker33087",
+    "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33087/profiler/iteration_60/rank0.1785477876632.pt.trace.json",
+    "sha256": "354db29eed39c89932d9f39ca658ae799740c4c4381dcf9f1c0310e7cdf7f010",
+    "calls": [
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 498,
+        "name": "recv_forward",
+        "start_ms": 2510067559.653894,
+        "end_ms": 2510067559.716761,
+        "ready_ms": 2510067559.653894,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 1658,
+        "name": "send_forward",
+        "start_ms": 2510067721.403476,
+        "end_ms": 2510067726.438098,
+        "ready_ms": 2510067721.403476,
+        "messages": [
+          [
+            "F:0:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 1660,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 1674,
+        "name": "recv_forward",
+        "start_ms": 2510067726.5520287,
+        "end_ms": 2510067726.580145,
+        "ready_ms": 2510067726.5520287,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 2834,
+        "name": "send_forward",
+        "start_ms": 2510067886.620125,
+        "end_ms": 2510068064.793551,
+        "ready_ms": 2510067886.620125,
+        "messages": [
+          [
+            "F:0:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 2836,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 2850,
+        "name": "recv_forward",
+        "start_ms": 2510068064.9807987,
+        "end_ms": 2510068065.019499,
+        "ready_ms": 2510068064.9807987,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 4010,
+        "name": "send_forward",
+        "start_ms": 2510068225.7387576,
+        "end_ms": 2510068403.5748,
+        "ready_ms": 2510068225.7387576,
+        "messages": [
+          [
+            "F:0:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 4012,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 4026,
+        "name": "recv_forward",
+        "start_ms": 2510068403.957563,
+        "end_ms": 2510068404.012716,
+        "ready_ms": 2510068403.957563,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 5186,
+        "name": "send_forward",
+        "start_ms": 2510068564.474086,
+        "end_ms": 2510068740.3471117,
+        "ready_ms": 2510068564.474086,
+        "messages": [
+          [
+            "F:0:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 5188,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 5202,
+        "name": "recv_backward",
+        "start_ms": 2510068740.486613,
+        "end_ms": 2510084462.2140145,
+        "ready_ms": 2510068740.486613,
+        "messages": [
+          [
+            "B:0:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 5205,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 5209,
+        "name": "send_backward",
+        "start_ms": 2510084876.914197,
+        "end_ms": 2510084876.950783,
+        "ready_ms": 2510084881.8856373,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 5210,
+        "name": "recv_backward",
+        "start_ms": 2510084877.039382,
+        "end_ms": 2510085576.427881,
+        "ready_ms": 2510084881.8856373,
+        "messages": [
+          [
+            "B:0:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 5213,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 5217,
+        "name": "send_backward",
+        "start_ms": 2510085989.887803,
+        "end_ms": 2510085989.918432,
+        "ready_ms": 2510085994.914982,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 5218,
+        "name": "recv_backward",
+        "start_ms": 2510085989.993297,
+        "end_ms": 2510086715.4215,
+        "ready_ms": 2510085994.914982,
+        "messages": [
+          [
+            "B:0:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 5221,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 5225,
+        "name": "send_backward",
+        "start_ms": 2510087128.763832,
+        "end_ms": 2510087128.793166,
+        "ready_ms": 2510087133.7970567,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 5226,
+        "name": "recv_backward",
+        "start_ms": 2510087128.863042,
+        "end_ms": 2510087541.217608,
+        "ready_ms": 2510087133.7970567,
+        "messages": [
+          [
+            "B:0:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 5229,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 0,
+        "stage": 0,
+        "host": "worker33087",
+        "event": 5233,
+        "name": "send_backward",
+        "start_ms": 2510087955.091682,
+        "end_ms": 2510087955.128293,
+        "ready_ms": 2510087960.1087737,
+        "messages": [],
+        "markers": []
+      }
+    ]
+  },
+  {
+    "world": 256,
+    "rank": 16,
+    "stage": 1,
+    "host": "worker33008",
+    "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33008/profiler/iteration_60/rank16.1785477877124.pt.trace.json",
+    "sha256": "c438eb9fe77a1bb75385d7ce95f56ec27223b22bbedef73bea36ca1ca1d58c0c",
+    "calls": [
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 33670,
+        "name": "recv_forward",
+        "start_ms": 2510067557.400545,
+        "end_ms": 2510067726.4801393,
+        "ready_ms": 2510067557.400545,
+        "messages": [
+          [
+            "F:0:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 33673,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 36482,
+        "name": "send_forward",
+        "start_ms": 2510068053.819283,
+        "end_ms": 2510068059.5730863,
+        "ready_ms": 2510068053.819283,
+        "messages": [
+          [
+            "F:1:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 36484,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 36498,
+        "name": "recv_forward",
+        "start_ms": 2510068059.695131,
+        "end_ms": 2510068064.62811,
+        "ready_ms": 2510068059.695131,
+        "messages": [
+          [
+            "F:0:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 36501,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 39310,
+        "name": "send_forward",
+        "start_ms": 2510068390.86538,
+        "end_ms": 2510068397.9058237,
+        "ready_ms": 2510068390.86538,
+        "messages": [
+          [
+            "F:1:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 39312,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 39326,
+        "name": "recv_forward",
+        "start_ms": 2510068398.093446,
+        "end_ms": 2510068403.084487,
+        "ready_ms": 2510068398.093446,
+        "messages": [
+          [
+            "F:0:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 39329,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 42138,
+        "name": "send_forward",
+        "start_ms": 2510068729.458775,
+        "end_ms": 2510068735.282362,
+        "ready_ms": 2510068729.483223,
+        "messages": [
+          [
+            "F:1:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 42140,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 42154,
+        "name": "recv_forward",
+        "start_ms": 2510068735.397172,
+        "end_ms": 2510068740.303706,
+        "ready_ms": 2510068735.397172,
+        "messages": [
+          [
+            "F:0:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 42157,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 44966,
+        "name": "send_forward",
+        "start_ms": 2510069063.5356784,
+        "end_ms": 2510069114.0564084,
+        "ready_ms": 2510069063.5356784,
+        "messages": [
+          [
+            "F:1:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44968,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 44982,
+        "name": "recv_backward",
+        "start_ms": 2510069114.174838,
+        "end_ms": 2510083637.0638437,
+        "ready_ms": 2510069114.174838,
+        "messages": [
+          [
+            "B:1:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44985,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 44989,
+        "name": "send_backward",
+        "start_ms": 2510084364.884668,
+        "end_ms": 2510084461.145776,
+        "ready_ms": 2510084456.117936,
+        "messages": [
+          [
+            "B:0:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44991,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 44994,
+        "name": "recv_backward",
+        "start_ms": 2510084461.2613187,
+        "end_ms": 2510084744.762588,
+        "ready_ms": 2510084461.2613187,
+        "messages": [
+          [
+            "B:1:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44997,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 45001,
+        "name": "send_backward",
+        "start_ms": 2510085479.262067,
+        "end_ms": 2510085576.364396,
+        "ready_ms": 2510085571.308827,
+        "messages": [
+          [
+            "B:0:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45003,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 45006,
+        "name": "recv_backward",
+        "start_ms": 2510085576.4623427,
+        "end_ms": 2510085893.23449,
+        "ready_ms": 2510085576.4623427,
+        "messages": [
+          [
+            "B:1:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45009,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 45013,
+        "name": "send_backward",
+        "start_ms": 2510086618.179123,
+        "end_ms": 2510086715.354251,
+        "ready_ms": 2510086710.341067,
+        "messages": [
+          [
+            "B:0:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45015,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 45018,
+        "name": "recv_backward",
+        "start_ms": 2510086715.473127,
+        "end_ms": 2510086720.762813,
+        "ready_ms": 2510086715.473127,
+        "messages": [
+          [
+            "B:1:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45021,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "stage": 1,
+        "host": "worker33008",
+        "event": 45025,
+        "name": "send_backward",
+        "start_ms": 2510087442.352502,
+        "end_ms": 2510087541.073316,
+        "ready_ms": 2510087536.060958,
+        "messages": [
+          [
+            "B:0:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45027,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "world": 256,
+    "rank": 112,
+    "stage": 7,
+    "host": "worker34001",
+    "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker34001/profiler/iteration_60/rank112.1785477877100.pt.trace.json",
+    "sha256": "2602db7fa8694e1f6b59297b0d6b19c8350ec7146ec40e421ea330bfc42d9d5b",
+    "calls": [
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 33598,
+        "name": "recv_forward",
+        "start_ms": 2510067573.860375,
+        "end_ms": 2510069698.755824,
+        "ready_ms": 2510067573.860375,
+        "messages": [
+          [
+            "F:6:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 33601,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 36414,
+        "name": "send_forward",
+        "start_ms": 2510070062.565023,
+        "end_ms": 2510070067.482629,
+        "ready_ms": 2510070062.565023,
+        "messages": [
+          [
+            "F:7:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 36416,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 36430,
+        "name": "recv_forward",
+        "start_ms": 2510070067.642959,
+        "end_ms": 2510070072.5989914,
+        "ready_ms": 2510070067.642959,
+        "messages": [
+          [
+            "F:6:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 36433,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 39246,
+        "name": "send_forward",
+        "start_ms": 2510070407.425793,
+        "end_ms": 2510070412.301164,
+        "ready_ms": 2510070407.425793,
+        "messages": [
+          [
+            "F:7:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 39248,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 39262,
+        "name": "recv_forward",
+        "start_ms": 2510070412.511593,
+        "end_ms": 2510070417.549553,
+        "ready_ms": 2510070412.511593,
+        "messages": [
+          [
+            "F:6:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 39265,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 42078,
+        "name": "send_forward",
+        "start_ms": 2510070770.376436,
+        "end_ms": 2510070775.319556,
+        "ready_ms": 2510070770.391377,
+        "messages": [
+          [
+            "F:7:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 42080,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 42094,
+        "name": "recv_forward",
+        "start_ms": 2510070775.437846,
+        "end_ms": 2510070799.4084654,
+        "ready_ms": 2510070775.437846,
+        "messages": [
+          [
+            "F:6:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 42097,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 44910,
+        "name": "send_forward",
+        "start_ms": 2510071116.487573,
+        "end_ms": 2510071121.456247,
+        "ready_ms": 2510071116.487573,
+        "messages": [
+          [
+            "F:7:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44912,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 44926,
+        "name": "recv_backward",
+        "start_ms": 2510071121.598376,
+        "end_ms": 2510078750.064123,
+        "ready_ms": 2510071121.598376,
+        "messages": [
+          [
+            "B:7:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44929,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 44933,
+        "name": "send_backward",
+        "start_ms": 2510079456.809211,
+        "end_ms": 2510079554.9186296,
+        "ready_ms": 2510079550.1379285,
+        "messages": [
+          [
+            "B:6:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44935,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 44938,
+        "name": "recv_backward",
+        "start_ms": 2510079554.9824047,
+        "end_ms": 2510079910.871638,
+        "ready_ms": 2510079554.9824047,
+        "messages": [
+          [
+            "B:7:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44941,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 44945,
+        "name": "send_backward",
+        "start_ms": 2510080618.656959,
+        "end_ms": 2510080717.096458,
+        "ready_ms": 2510080712.231284,
+        "messages": [
+          [
+            "B:6:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44947,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 44950,
+        "name": "recv_backward",
+        "start_ms": 2510080717.180932,
+        "end_ms": 2510081048.233812,
+        "ready_ms": 2510080717.180932,
+        "messages": [
+          [
+            "B:7:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44953,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 44957,
+        "name": "send_backward",
+        "start_ms": 2510081753.540295,
+        "end_ms": 2510081851.597087,
+        "ready_ms": 2510081846.774722,
+        "messages": [
+          [
+            "B:6:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44959,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 44962,
+        "name": "recv_backward",
+        "start_ms": 2510081851.688148,
+        "end_ms": 2510081857.198945,
+        "ready_ms": 2510081851.688148,
+        "messages": [
+          [
+            "B:7:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44965,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 112,
+        "stage": 7,
+        "host": "worker34001",
+        "event": 44969,
+        "name": "send_backward",
+        "start_ms": 2510082561.330604,
+        "end_ms": 2510082660.166137,
+        "ready_ms": 2510082655.1489115,
+        "messages": [
+          [
+            "B:6:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44971,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "world": 256,
+    "rank": 128,
+    "stage": 8,
+    "host": "worker34014",
+    "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker34014/profiler/iteration_60/rank128.1785477877124.pt.trace.json",
+    "sha256": "169859a2fbf8d9d8bcd80c4e789cd0f64564ed9bb0912ab07f6366c1f8afcbd4",
+    "calls": [
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 33670,
+        "name": "recv_forward",
+        "start_ms": 2510067559.2630305,
+        "end_ms": 2510070067.968456,
+        "ready_ms": 2510067559.2630305,
+        "messages": [
+          [
+            "F:7:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 33673,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 36482,
+        "name": "send_forward",
+        "start_ms": 2510070391.506142,
+        "end_ms": 2510070397.330389,
+        "ready_ms": 2510070391.506142,
+        "messages": [
+          [
+            "F:8:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 36484,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 36498,
+        "name": "recv_forward",
+        "start_ms": 2510070397.448774,
+        "end_ms": 2510070412.340557,
+        "ready_ms": 2510070397.448774,
+        "messages": [
+          [
+            "F:7:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 36501,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 39310,
+        "name": "send_forward",
+        "start_ms": 2510070730.4786468,
+        "end_ms": 2510070735.588421,
+        "ready_ms": 2510070730.496997,
+        "messages": [
+          [
+            "F:8:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 39312,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 39326,
+        "name": "recv_forward",
+        "start_ms": 2510070735.768157,
+        "end_ms": 2510070775.352116,
+        "ready_ms": 2510070735.768157,
+        "messages": [
+          [
+            "F:7:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 39329,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 42138,
+        "name": "send_forward",
+        "start_ms": 2510071093.354659,
+        "end_ms": 2510071098.348408,
+        "ready_ms": 2510071093.354659,
+        "messages": [
+          [
+            "F:8:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 42140,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 42154,
+        "name": "recv_forward",
+        "start_ms": 2510071098.473105,
+        "end_ms": 2510071121.487875,
+        "ready_ms": 2510071098.473105,
+        "messages": [
+          [
+            "F:7:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 42157,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 44966,
+        "name": "send_forward",
+        "start_ms": 2510071437.641073,
+        "end_ms": 2510071442.7559953,
+        "ready_ms": 2510071437.641073,
+        "messages": [
+          [
+            "F:8:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44968,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 44982,
+        "name": "recv_backward",
+        "start_ms": 2510071442.8772388,
+        "end_ms": 2510077941.138836,
+        "ready_ms": 2510071442.8772388,
+        "messages": [
+          [
+            "B:8:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44985,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 44989,
+        "name": "send_backward",
+        "start_ms": 2510078650.57422,
+        "end_ms": 2510078749.683073,
+        "ready_ms": 2510078744.352849,
+        "messages": [
+          [
+            "B:7:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44991,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 44994,
+        "name": "recv_backward",
+        "start_ms": 2510078749.7678533,
+        "end_ms": 2510079109.6494484,
+        "ready_ms": 2510078749.7678533,
+        "messages": [
+          [
+            "B:8:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44997,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 45001,
+        "name": "send_backward",
+        "start_ms": 2510079812.901518,
+        "end_ms": 2510079910.832663,
+        "ready_ms": 2510079905.499761,
+        "messages": [
+          [
+            "B:7:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45003,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 45006,
+        "name": "recv_backward",
+        "start_ms": 2510079910.9096556,
+        "end_ms": 2510080247.683808,
+        "ready_ms": 2510079910.9096556,
+        "messages": [
+          [
+            "B:8:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45009,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 45013,
+        "name": "send_backward",
+        "start_ms": 2510080949.633978,
+        "end_ms": 2510081048.203783,
+        "ready_ms": 2510081042.935554,
+        "messages": [
+          [
+            "B:7:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45015,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 45018,
+        "name": "recv_backward",
+        "start_ms": 2510081048.2818933,
+        "end_ms": 2510081056.10432,
+        "ready_ms": 2510081048.2818933,
+        "messages": [
+          [
+            "B:8:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45021,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 128,
+        "stage": 8,
+        "host": "worker34014",
+        "event": 45025,
+        "name": "send_backward",
+        "start_ms": 2510081755.3915753,
+        "end_ms": 2510081857.210109,
+        "ready_ms": 2510081848.609453,
+        "messages": [
+          [
+            "B:7:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45027,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "world": 256,
+    "rank": 224,
+    "stage": 14,
+    "host": "worker33070",
+    "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33070/profiler/iteration_60/rank224.1785477877179.pt.trace.json",
+    "sha256": "836e99812a6d0786725c63377c9321995bddae9492573022707e127a9e17ecd1",
+    "calls": [
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 33670,
+        "name": "recv_forward",
+        "start_ms": 2510067558.760522,
+        "end_ms": 2510072057.3214293,
+        "ready_ms": 2510067558.760522,
+        "messages": [
+          [
+            "F:13:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 33673,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 36482,
+        "name": "send_forward",
+        "start_ms": 2510072404.643198,
+        "end_ms": 2510072409.755051,
+        "ready_ms": 2510072404.643198,
+        "messages": [
+          [
+            "F:14:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 36484,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 36498,
+        "name": "recv_forward",
+        "start_ms": 2510072409.88678,
+        "end_ms": 2510072414.9965777,
+        "ready_ms": 2510072409.88678,
+        "messages": [
+          [
+            "F:13:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 36501,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 39319,
+        "name": "send_forward_recv_backward",
+        "start_ms": 2510072733.7563653,
+        "end_ms": 2510073090.7315874,
+        "ready_ms": 2510072733.7563653,
+        "messages": [
+          [
+            "F:14:1",
+            "send"
+          ],
+          [
+            "B:14:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 39322,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 39324,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 39332,
+        "name": "send_backward_recv_forward",
+        "start_ms": 2510073817.6462297,
+        "end_ms": 2510073916.5855927,
+        "ready_ms": 2510073911.2153177,
+        "messages": [
+          [
+            "F:13:2",
+            "recv"
+          ],
+          [
+            "B:13:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 39335,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 39337,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 42155,
+        "name": "send_forward_recv_backward",
+        "start_ms": 2510074243.584893,
+        "end_ms": 2510074249.436108,
+        "ready_ms": 2510074243.584893,
+        "messages": [
+          [
+            "F:14:2",
+            "send"
+          ],
+          [
+            "B:14:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 42158,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 42160,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 42168,
+        "name": "send_backward_recv_forward",
+        "start_ms": 2510074954.11011,
+        "end_ms": 2510075053.43113,
+        "ready_ms": 2510075047.963418,
+        "messages": [
+          [
+            "F:13:3",
+            "recv"
+          ],
+          [
+            "B:13:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 42171,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 42173,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 44991,
+        "name": "send_forward_recv_backward",
+        "start_ms": 2510075389.8096757,
+        "end_ms": 2510075395.4278407,
+        "ready_ms": 2510075389.8096757,
+        "messages": [
+          [
+            "F:14:3",
+            "send"
+          ],
+          [
+            "B:14:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 44994,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 44996,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 45004,
+        "name": "send_backward",
+        "start_ms": 2510076112.162732,
+        "end_ms": 2510076210.17744,
+        "ready_ms": 2510076205.3160954,
+        "messages": [
+          [
+            "B:13:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45006,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 45009,
+        "name": "recv_backward",
+        "start_ms": 2510076210.255411,
+        "end_ms": 2510076215.4531593,
+        "ready_ms": 2510076210.255411,
+        "messages": [
+          [
+            "B:14:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45012,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 224,
+        "stage": 14,
+        "host": "worker33070",
+        "event": 45016,
+        "name": "send_backward",
+        "start_ms": 2510076933.953249,
+        "end_ms": 2510077032.346872,
+        "ready_ms": 2510077027.449632,
+        "messages": [
+          [
+            "B:13:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 45018,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "world": 256,
+    "rank": 240,
+    "stage": 15,
+    "host": "worker34091",
+    "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker34091/profiler/iteration_60/rank240.1785477876751.pt.trace.json",
+    "sha256": "18d79d2a8220be841d9b2d33c7c4ddd95b279fb02d8dddc200fc8e878319c6f3",
+    "calls": [
+      {
+        "rank": 240,
+        "stage": 15,
+        "host": "worker34091",
+        "event": 525,
+        "name": "recv_forward",
+        "start_ms": 2510067557.730144,
+        "end_ms": 2510072410.303556,
+        "ready_ms": 2510067557.730144,
+        "messages": [
+          [
+            "F:14:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 528,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 240,
+        "stage": 15,
+        "host": "worker34091",
+        "event": 2210,
+        "name": "send_forward_recv_backward",
+        "start_ms": 2510072614.690103,
+        "end_ms": 2510072614.726814,
+        "ready_ms": 2510072614.690103,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 240,
+        "stage": 15,
+        "host": "worker34091",
+        "event": 2222,
+        "name": "send_backward_recv_forward",
+        "start_ms": 2510072989.5023932,
+        "end_ms": 2510073090.498032,
+        "ready_ms": 2510073085.034824,
+        "messages": [
+          [
+            "F:14:1",
+            "recv"
+          ],
+          [
+            "B:14:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 2225,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 2227,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 240,
+        "stage": 15,
+        "host": "worker34091",
+        "event": 3909,
+        "name": "send_forward_recv_backward",
+        "start_ms": 2510073428.038245,
+        "end_ms": 2510073428.073712,
+        "ready_ms": 2510073428.038245,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 240,
+        "stage": 15,
+        "host": "worker34091",
+        "event": 3921,
+        "name": "send_backward_recv_forward",
+        "start_ms": 2510073802.1424093,
+        "end_ms": 2510074249.4233413,
+        "ready_ms": 2510073897.856505,
+        "messages": [
+          [
+            "F:14:2",
+            "recv"
+          ],
+          [
+            "B:14:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 3924,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 3926,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 240,
+        "stage": 15,
+        "host": "worker34091",
+        "event": 5608,
+        "name": "send_forward_recv_backward",
+        "start_ms": 2510074446.158143,
+        "end_ms": 2510074446.186501,
+        "ready_ms": 2510074446.158143,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 240,
+        "stage": 15,
+        "host": "worker34091",
+        "event": 5620,
+        "name": "send_backward_recv_forward",
+        "start_ms": 2510074818.054951,
+        "end_ms": 2510075395.445679,
+        "ready_ms": 2510074914.103701,
+        "messages": [
+          [
+            "F:14:3",
+            "recv"
+          ],
+          [
+            "B:14:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 5623,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 5625,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "rank": 240,
+        "stage": 15,
+        "host": "worker34091",
+        "event": 7307,
+        "name": "send_forward_recv_backward",
+        "start_ms": 2510075588.808672,
+        "end_ms": 2510075588.840815,
+        "ready_ms": 2510075588.808672,
+        "messages": [],
+        "markers": []
+      },
+      {
+        "rank": 240,
+        "stage": 15,
+        "host": "worker34091",
+        "event": 7319,
+        "name": "send_backward",
+        "start_ms": 2510075962.849201,
+        "end_ms": 2510076215.477125,
+        "ready_ms": 2510076058.502542,
+        "messages": [
+          [
+            "B:14:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 7321,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

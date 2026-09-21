@@ -1,0 +1,14 @@
+const assert=require('assert'),fs=require('fs');
+const {chromium}=require('/home/zjb/Desktop/worktrees/mfu-w37-v610/node_modules/playwright');
+(async()=>{const browser=await chromium.launch({headless:true,executablePath:'/home/zjb/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell'});
+try{const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(String(e)));
+assert.equal((await page.goto('http://192.168.8.16:43312/df-v001/b-position-curves-r1/')).status(),200);
+assert.equal(await page.locator('#chart circle').count(),42);assert.equal(await page.locator('#smallcharts svg').count(),4);
+await page.locator('#chart circle').first().click();assert((await page.locator('#point').innerText()).includes('B0'));
+await page.selectOption('#mb','3');assert((await page.locator('#title').innerText()).includes('B3'));
+await page.selectOption('#mode','relative');assert((await page.locator('#chart').innerText()).includes('相对PP1'));
+await page.selectOption('#world','224');assert.equal(await page.locator('#chart circle').count(),36);assert.equal(await page.locator('#mb option').count(),3);assert.equal(await page.locator('#smallcharts svg').count(),3);
+await page.selectOption('#mode','absolute');await page.screenshot({path:'/tmp/mfu-b-position-224.png',fullPage:true});
+await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.deepEqual(errors,[]);
+fs.writeFileSync('results/data-foundation/b-position-curves-r1-browser.json',JSON.stringify({status:'PASS',errors,points256:42,points224:36,world_switch:true,mb_switch:true,relative_view:true,mobile_overflow:false},null,2));console.log('PASS browser');
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

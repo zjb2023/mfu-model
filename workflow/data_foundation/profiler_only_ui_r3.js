@@ -1,0 +1,25 @@
+// Presentation-only revision. All underlying prediction and evaluation values stay frozen.
+document.title='32 → 256 · ProfilerStep与MFU';
+document.querySelector('header .small').textContent='32to256 / 整轮外推 r2 · UI r3 / 统一ProfilerStep口径';
+document.querySelector('h1').textContent='整轮预测与MFU · 统一ProfilerStep口径';
+topPanel.querySelectorAll('p')[1].remove();
+mfuPanel.replaceChildren();
+add(mfuPanel,'h2','整体MFU · Profiler口径');
+add(mfuPanel,'div','预测 '+FULL.mfu_profiler.predicted.toFixed(3)+'% / 实测推导 '+FULL.mfu_profiler.observed.toFixed(3)+'%','metric');
+add(mfuPanel,'p','相差 '+FULL.mfu_profiler.error.toFixed(3)+' 个百分点；相对误差 '+FULL.mfu_profiler.relative_error_percent.toFixed(2)+'%。与整轮时长使用同一ProfilerStep窗口。');
+add(mfuPanel,'p','MFU = 100 × 每迭代FLOPs ÷ (256 × 单卡峰值 × ProfilerStep秒)。有效FLOPs '+FULL.prediction.physics.model_flops_per_iteration.toExponential(6)+'、单卡500 TFLOP/s均继承历史口径，未进行新的架构或硬件验证。','small');
+add(mfuPanel,'p','主模型不加入训练日志计时差额，也不与日志MFU混用。Training Step仅在页末附录保留。','small');
+chartPanel.querySelector('.small').textContent='统一使用ProfilerStep。上方首尾来自256实测，仅用于评价；下方首尾来自32卡，均为预测成本。窗口包含启动、1F1B和更新收尾。';
+tb.lastElementChild.remove();
+accounting.querySelectorAll('p')[0].textContent='预测顺序：源启动 → 冻结DAG的1F1B → 源末B后尾段 = ProfilerStep。MFU直接使用这一总时间；尾段含RS、更新、AG及收尾，不再另外叠加日志计时差额。';
+bodyText.children[1].textContent='源32卡启动 / 更新尾段，倍率1';
+const appendix=document.createElement('details');appendix.className='panel';appendix.id='training-reference';
+add(appendix,'summary','附录：Training Step历史对照（非当前主指标，不参与拟合）');
+add(appendix,'p','这是保留的另一计时口径，仅作参考，不与Profiler口径MFU并列评价。Training Step = ProfilerStep + 日志时钟残余，该残余的具体工作尚未定位。');
+add(appendix,'p','Training Step：预测 '+sec(FULL.training.predicted)+' / 实测 '+sec(FULL.training.observed)+'，误差 '+pct(FULL.training.relative_error_percent)+'。');
+add(appendix,'p','日志口径MFU：预测 '+FULL.mfu_training.predicted.toFixed(3)+'% / 实测推导 '+FULL.mfu_training.observed.toFixed(3)+'%。');
+const residual=FULL.components[3];
+add(appendix,'p','日志时钟残余：源32卡 '+ms(residual.source_prediction_ms)+' / 目标256卡 '+ms(residual.target_observed_ms)+'。本次只修改展示口径，历史数据未删除。');
+el('sources').after(appendix);
+const displayLink=document.createElement('a');displayLink.href='display-policy.json';displayLink.textContent='当前主指标口径';el('sources').querySelector('.flex').prepend(displayLink);
+document.querySelector('footer').textContent='统一ProfilerStep总时长与Profiler口径MFU；1F1B误差仍6.16%。Training Step仅附录参考。';

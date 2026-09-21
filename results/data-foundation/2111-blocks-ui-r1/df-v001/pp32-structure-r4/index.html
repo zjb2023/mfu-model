@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>32卡 · 最简DAG与共享参数</title><link rel="stylesheet" href="style.css"></head>
+<body><main><header><p class="eyebrow">32 GPU / PP4 / 8 MICROBATCHES · 结构审阅 r4</p><h1>图覆盖32卡，参数按角色共享。</h1><p>先确认谁等待谁，再填写耗时。F/B内部不拆kernel；等待由依赖产生，不另加一个“等待参数”。</p></header>
+<div class="notice">当前是结构审阅版，不是精度报告。已核对全部32个rank的CPU调度；GPU边界仅有前版4-rank试点。更新尾段仍待确认，因此不输出整轮时间或MFU。</div>
+<section><h2>四个流水线阶段，各有8张卡</h2><div id="stages" class="stages"></div><p class="muted">点击rank切换对应PP链。CP、EP通信暂包含在F/B大块中，不重复添加费用；这不意味着它们的内部跨rank同步已逐项验证。</p></section>
+<section class="main-section"><div class="heading"><div><h2>F/B与PP通信依赖</h2><p class="muted">四卡示例的画法，使用32卡的真实分组。横轴是逻辑布局，不是实测时间。</p></div><a href="graph.json" download>下载完整图与证据</a></div>
+<div class="controls"><label>PP链 <select id="chain"></select></label><label>微批 <select id="micro"></select></label><label><input id="allRanks" type="checkbox"> 展开全部32卡</label><label><input id="allEdges" type="checkbox"> 显示全部跨卡箭头</label><button id="reset">恢复简单视图</button></div>
+<div class="legend"><span class="f">F 前向</span><span class="b">B 反向</span><span class="pp">PP 激活 / 梯度</span><span>实线：观察顺序或按微批配对</span><span class="pending">虚线：尚待确认</span></div>
+<p id="viewNote" class="muted"></p><div class="scroll"><svg id="graph" aria-label="32卡最简F/B与PP依赖图"></svg></div>
+<div class="detail"><h3 id="selectedTitle">点击任一块，查看参数和依赖</h3><div id="inspect"></div></div></section>
+<section><h2>更新尾段：画出来，但不把假设当事实</h2><p>下面是待验证的聚合接口，不是已证实的bucket级执行顺序。同步可能在B内部或与B重叠；页面保留原始调用证据供核对。</p><div id="tail"></div><p class="muted">原先“启动约101ms、尾段约298ms”的经验包络不进入本版正式参数。入口及尾部未闭合时，最终max结果保持空值，不用零替代。</p></section>
+<section class="bottom"><div><h2>参数表：节点重复，参数不重复</h2><p id="paramNote"></p><div class="table-scroll"><table><thead><tr><th>共享参数</th><th>ms</th><th>状态</th></tr></thead><tbody id="params"></tbody></table></div></div><aside><h2>怎么得到整轮时间？</h2><p class="formula">开始 = max(前驱完成时间)<br>结束 = 开始 + 自身耗时</p><p>一条PP消息等待两端就绪；双向收发调用要等两条消息都结束，才继续本地工作。</p><p><strong>整轮 = 最终完成节点中的最大值。</strong>资源约束也必须在图里，不能只连数据流。</p><h3>这版还缺什么？</h3><ul><li>全部32卡的GPU大块边界验收。</li><li>DP同步、优化器及参数同步的真实位置与重叠。</li><li>启动边界和跨主机时钟核验。</li></ul><p id="counts"></p><p><a href="check.json">构建检查</a> · <a href="manifest.json">来源清单</a></p><p>来源：32卡目录迭代60；本轮不调参、不读取256卡时长。参数数值仅引用原4-rank r3b试点，不宣称全32卡已校准。</p></aside></section>
+</main><script src="app.js"></script></body></html>

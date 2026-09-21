@@ -1,0 +1,359 @@
+{
+  "rank": 0,
+  "stage": 0,
+  "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33087/profiler/iteration_60/rank0.1785477876632.pt.trace.json",
+  "sha256": "354db29eed39c89932d9f39ca658ae799740c4c4381dcf9f1c0310e7cdf7f010",
+  "blocks": [
+    {
+      "phase": "F",
+      "mb": 0,
+      "cpu_event": 499,
+      "device_events": 173,
+      "first_device_event": 19555,
+      "last_device_event": 20781,
+      "first_runtime_event": 19553,
+      "last_runtime_event": 20779,
+      "start_absolute_ms": 2510067564.095587,
+      "end_absolute_ms": 2510067721.349523,
+      "duration_ms": 157.25393629074097
+    },
+    {
+      "phase": "F",
+      "mb": 1,
+      "cpu_event": 1675,
+      "device_events": 173,
+      "first_device_event": 20811,
+      "last_device_event": 22003,
+      "first_runtime_event": 20809,
+      "last_runtime_event": 22001,
+      "start_absolute_ms": 2510067726.89326,
+      "end_absolute_ms": 2510067886.604844,
+      "duration_ms": 159.71158409118652
+    },
+    {
+      "phase": "F",
+      "mb": 2,
+      "cpu_event": 2851,
+      "device_events": 173,
+      "first_device_event": 22035,
+      "last_device_event": 23227,
+      "first_runtime_event": 22033,
+      "last_runtime_event": 23225,
+      "start_absolute_ms": 2510068065.688193,
+      "end_absolute_ms": 2510068225.656957,
+      "duration_ms": 159.96876430511475
+    },
+    {
+      "phase": "F",
+      "mb": 3,
+      "cpu_event": 4027,
+      "device_events": 173,
+      "first_device_event": 23257,
+      "last_device_event": 24451,
+      "first_runtime_event": 23255,
+      "last_runtime_event": 24449,
+      "start_absolute_ms": 2510068405.037024,
+      "end_absolute_ms": 2510068564.4254255,
+      "duration_ms": 159.3884015083313
+    },
+    {
+      "phase": "B",
+      "mb": 0,
+      "cpu_event": 5208,
+      "device_events": 450,
+      "first_device_event": 24749,
+      "last_device_event": 28187,
+      "first_runtime_event": 24747,
+      "last_runtime_event": 28185,
+      "start_absolute_ms": 2510084464.706207,
+      "end_absolute_ms": 2510084881.8856373,
+      "duration_ms": 417.17943048477173
+    },
+    {
+      "phase": "B",
+      "mb": 1,
+      "cpu_event": 5216,
+      "device_events": 450,
+      "first_device_event": 28237,
+      "last_device_event": 31661,
+      "first_runtime_event": 28235,
+      "last_runtime_event": 31659,
+      "start_absolute_ms": 2510085577.4647202,
+      "end_absolute_ms": 2510085994.914982,
+      "duration_ms": 417.450261592865
+    },
+    {
+      "phase": "B",
+      "mb": 2,
+      "cpu_event": 5224,
+      "device_events": 450,
+      "first_device_event": 31873,
+      "last_device_event": 35313,
+      "first_runtime_event": 31871,
+      "last_runtime_event": 35311,
+      "start_absolute_ms": 2510086716.3140917,
+      "end_absolute_ms": 2510087133.7970567,
+      "duration_ms": 417.4829649925232
+    },
+    {
+      "phase": "B",
+      "mb": 3,
+      "cpu_event": 5232,
+      "device_events": 450,
+      "first_device_event": 35363,
+      "last_device_event": 38789,
+      "first_runtime_event": 35361,
+      "last_runtime_event": 38787,
+      "start_absolute_ms": 2510087542.33071,
+      "end_absolute_ms": 2510087960.1087737,
+      "duration_ms": 417.7780637741089
+    }
+  ],
+  "call_structure_matches": true,
+  "actual_calls": [
+    [
+      "F",
+      0,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:0:0",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "F",
+      1,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:0:1",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "F",
+      2,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:0:2",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "F",
+      3,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:0:3",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:0:0",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      0,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:0:1",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      1,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:0:2",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      2,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:0:3",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      3,
+      []
+    ]
+  ],
+  "expected_calls": [
+    [
+      "F",
+      0,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:0:0",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "F",
+      1,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:0:1",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "F",
+      2,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:0:2",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "F",
+      3,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:0:3",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:0:0",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      0,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:0:1",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      1,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:0:2",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      2,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:0:3",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      3,
+      []
+    ]
+  ],
+  "ambiguous_runtime_devices": 228,
+  "local_window_ms": 20396.01318693161
+}

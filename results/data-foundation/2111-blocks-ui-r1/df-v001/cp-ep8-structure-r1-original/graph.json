@@ -1,0 +1,298 @@
+{
+  "status": "CONCEPT_ONLY_NOT_CALIBRATED",
+  "scope": "source32 PP1 F one layer",
+  "groups": [
+    {
+      "members": [
+        8,
+        9
+      ],
+      "CP_input_MiB": [
+        384,
+        384,
+        256,
+        256
+      ],
+      "kind": "collapsed_subgraph_not_extra_cost"
+    },
+    {
+      "members": [
+        10,
+        11
+      ],
+      "CP_input_MiB": [
+        384,
+        384,
+        256,
+        256
+      ],
+      "kind": "collapsed_subgraph_not_extra_cost"
+    },
+    {
+      "members": [
+        12,
+        13
+      ],
+      "CP_input_MiB": [
+        384,
+        384,
+        256,
+        256
+      ],
+      "kind": "collapsed_subgraph_not_extra_cost"
+    },
+    {
+      "members": [
+        14,
+        15
+      ],
+      "CP_input_MiB": [
+        384,
+        384,
+        256,
+        256
+      ],
+      "kind": "collapsed_subgraph_not_extra_cost"
+    }
+  ],
+  "nodes": {
+    "CPexit8": {
+      "deps": [],
+      "cost_ms": null,
+      "kind": "interface_to_existing_CP_subgraph"
+    },
+    "P8": {
+      "deps": [
+        "CPexit8"
+      ],
+      "cost_ms": null,
+      "kind": "local_preparation"
+    },
+    "E8": {
+      "deps": [
+        "Dispatch"
+      ],
+      "cost_ms": null,
+      "kind": "expert_related_compute"
+    },
+    "O8": {
+      "deps": [
+        "Combine"
+      ],
+      "cost_ms": null,
+      "kind": "continuation_interface"
+    },
+    "CPexit9": {
+      "deps": [],
+      "cost_ms": null,
+      "kind": "interface_to_existing_CP_subgraph"
+    },
+    "P9": {
+      "deps": [
+        "CPexit9"
+      ],
+      "cost_ms": null,
+      "kind": "local_preparation"
+    },
+    "E9": {
+      "deps": [
+        "Dispatch"
+      ],
+      "cost_ms": null,
+      "kind": "expert_related_compute"
+    },
+    "O9": {
+      "deps": [
+        "Combine"
+      ],
+      "cost_ms": null,
+      "kind": "continuation_interface"
+    },
+    "CPexit10": {
+      "deps": [],
+      "cost_ms": null,
+      "kind": "interface_to_existing_CP_subgraph"
+    },
+    "P10": {
+      "deps": [
+        "CPexit10"
+      ],
+      "cost_ms": null,
+      "kind": "local_preparation"
+    },
+    "E10": {
+      "deps": [
+        "Dispatch"
+      ],
+      "cost_ms": null,
+      "kind": "expert_related_compute"
+    },
+    "O10": {
+      "deps": [
+        "Combine"
+      ],
+      "cost_ms": null,
+      "kind": "continuation_interface"
+    },
+    "CPexit11": {
+      "deps": [],
+      "cost_ms": null,
+      "kind": "interface_to_existing_CP_subgraph"
+    },
+    "P11": {
+      "deps": [
+        "CPexit11"
+      ],
+      "cost_ms": null,
+      "kind": "local_preparation"
+    },
+    "E11": {
+      "deps": [
+        "Dispatch"
+      ],
+      "cost_ms": null,
+      "kind": "expert_related_compute"
+    },
+    "O11": {
+      "deps": [
+        "Combine"
+      ],
+      "cost_ms": null,
+      "kind": "continuation_interface"
+    },
+    "CPexit12": {
+      "deps": [],
+      "cost_ms": null,
+      "kind": "interface_to_existing_CP_subgraph"
+    },
+    "P12": {
+      "deps": [
+        "CPexit12"
+      ],
+      "cost_ms": null,
+      "kind": "local_preparation"
+    },
+    "E12": {
+      "deps": [
+        "Dispatch"
+      ],
+      "cost_ms": null,
+      "kind": "expert_related_compute"
+    },
+    "O12": {
+      "deps": [
+        "Combine"
+      ],
+      "cost_ms": null,
+      "kind": "continuation_interface"
+    },
+    "CPexit13": {
+      "deps": [],
+      "cost_ms": null,
+      "kind": "interface_to_existing_CP_subgraph"
+    },
+    "P13": {
+      "deps": [
+        "CPexit13"
+      ],
+      "cost_ms": null,
+      "kind": "local_preparation"
+    },
+    "E13": {
+      "deps": [
+        "Dispatch"
+      ],
+      "cost_ms": null,
+      "kind": "expert_related_compute"
+    },
+    "O13": {
+      "deps": [
+        "Combine"
+      ],
+      "cost_ms": null,
+      "kind": "continuation_interface"
+    },
+    "CPexit14": {
+      "deps": [],
+      "cost_ms": null,
+      "kind": "interface_to_existing_CP_subgraph"
+    },
+    "P14": {
+      "deps": [
+        "CPexit14"
+      ],
+      "cost_ms": null,
+      "kind": "local_preparation"
+    },
+    "E14": {
+      "deps": [
+        "Dispatch"
+      ],
+      "cost_ms": null,
+      "kind": "expert_related_compute"
+    },
+    "O14": {
+      "deps": [
+        "Combine"
+      ],
+      "cost_ms": null,
+      "kind": "continuation_interface"
+    },
+    "CPexit15": {
+      "deps": [],
+      "cost_ms": null,
+      "kind": "interface_to_existing_CP_subgraph"
+    },
+    "P15": {
+      "deps": [
+        "CPexit15"
+      ],
+      "cost_ms": null,
+      "kind": "local_preparation"
+    },
+    "E15": {
+      "deps": [
+        "Dispatch"
+      ],
+      "cost_ms": null,
+      "kind": "expert_related_compute"
+    },
+    "O15": {
+      "deps": [
+        "Combine"
+      ],
+      "cost_ms": null,
+      "kind": "continuation_interface"
+    },
+    "Dispatch": {
+      "deps": [
+        "P8",
+        "P9",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P15"
+      ],
+      "cost_ms": null,
+      "kind": "EP8_shared",
+      "readiness": "all_participants_ready_hypothesis"
+    },
+    "Combine": {
+      "deps": [
+        "E8",
+        "E9",
+        "E10",
+        "E11",
+        "E12",
+        "E13",
+        "E14",
+        "E15"
+      ],
+      "cost_ms": null,
+      "kind": "EP8_shared",
+      "readiness": "all_participants_ready_hypothesis"
+    }
+  }
+}

@@ -1,0 +1,6818 @@
+[
+  {
+    "message": "F:0:0",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 1658,
+        "name": "send_forward",
+        "start_ms": 6732114635.100049,
+        "end_ms": 6732114637.906229,
+        "ready_ms": 6732114635.100049,
+        "messages": [
+          [
+            "F:0:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 1660,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 66842,
+        "name": "recv_forward",
+        "start_ms": 6732114466.786314,
+        "end_ms": 6732114637.944993,
+        "ready_ms": 6732114466.786314,
+        "messages": [
+          [
+            "F:0:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 66845,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 2.806180000305176,
+    "ready_overlap_ms": 2.806180000305176,
+    "completion_skew_ms": 0.038763999938964844,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:0:1",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 2834,
+        "name": "send_forward",
+        "start_ms": 6732114803.821718,
+        "end_ms": 6732114986.886394,
+        "ready_ms": 6732114803.821718,
+        "messages": [
+          [
+            "F:0:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 2836,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 69670,
+        "name": "recv_forward",
+        "start_ms": 6732114984.162869,
+        "end_ms": 6732114986.8609495,
+        "ready_ms": 6732114984.162869,
+        "messages": [
+          [
+            "F:0:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 69673,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 2.698080062866211,
+    "ready_overlap_ms": 2.698080062866211,
+    "completion_skew_ms": 0.02544403076171875,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:0:2",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 4010,
+        "name": "send_forward",
+        "start_ms": 6732115150.865161,
+        "end_ms": 6732115340.550603,
+        "ready_ms": 6732115150.865161,
+        "messages": [
+          [
+            "F:0:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 4012,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 72498,
+        "name": "recv_forward",
+        "start_ms": 6732115337.922358,
+        "end_ms": 6732115340.55248,
+        "ready_ms": 6732115337.922358,
+        "messages": [
+          [
+            "F:0:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 72501,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 2.6282453536987305,
+    "ready_overlap_ms": 2.6282453536987305,
+    "completion_skew_ms": 0.0018768310546875,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:0:3",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 5195,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732115505.147789,
+        "end_ms": 6732117802.229768,
+        "ready_ms": 6732115505.147789,
+        "messages": [
+          [
+            "F:0:3",
+            "send"
+          ],
+          [
+            "B:0:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 5198,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 5200,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 75332,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732117703.855285,
+        "end_ms": 6732117801.975738,
+        "ready_ms": 6732117798.253034,
+        "messages": [
+          [
+            "F:0:3",
+            "recv"
+          ],
+          [
+            "B:0:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 75335,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 75337,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 98.12045288085938,
+    "ready_overlap_ms": 3.7227039337158203,
+    "completion_skew_ms": 0.2540302276611328,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:0:0",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 5195,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732115505.147789,
+        "end_ms": 6732117802.229768,
+        "ready_ms": 6732115505.147789,
+        "messages": [
+          [
+            "F:0:3",
+            "send"
+          ],
+          [
+            "B:0:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 5198,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 5200,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 75332,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732117703.855285,
+        "end_ms": 6732117801.975738,
+        "ready_ms": 6732117798.253034,
+        "messages": [
+          [
+            "F:0:3",
+            "recv"
+          ],
+          [
+            "B:0:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 75335,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 75337,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 98.12045288085938,
+    "ready_overlap_ms": 3.7227039337158203,
+    "completion_skew_ms": 0.2540302276611328,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:0:4",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 6375,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732118398.383129,
+        "end_ms": 6732119052.015616,
+        "ready_ms": 6732118398.383129,
+        "messages": [
+          [
+            "F:0:4",
+            "send"
+          ],
+          [
+            "B:0:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 6378,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 6380,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 78168,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732118953.939551,
+        "end_ms": 6732119052.076216,
+        "ready_ms": 6732119047.547766,
+        "messages": [
+          [
+            "F:0:4",
+            "recv"
+          ],
+          [
+            "B:0:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 78171,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 78173,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 98.07606506347656,
+    "ready_overlap_ms": 4.467850685119629,
+    "completion_skew_ms": 0.060599327087402344,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:0:1",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 6375,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732118398.383129,
+        "end_ms": 6732119052.015616,
+        "ready_ms": 6732118398.383129,
+        "messages": [
+          [
+            "F:0:4",
+            "send"
+          ],
+          [
+            "B:0:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 6378,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 6380,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 78168,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732118953.939551,
+        "end_ms": 6732119052.076216,
+        "ready_ms": 6732119047.547766,
+        "messages": [
+          [
+            "F:0:4",
+            "recv"
+          ],
+          [
+            "B:0:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 78171,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 78173,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 98.07606506347656,
+    "ready_overlap_ms": 4.467850685119629,
+    "completion_skew_ms": 0.060599327087402344,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:0:5",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 7555,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732119649.362858,
+        "end_ms": 6732120281.846286,
+        "ready_ms": 6732119649.362858,
+        "messages": [
+          [
+            "F:0:5",
+            "send"
+          ],
+          [
+            "B:0:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 7558,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 7560,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 81004,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732120184.307131,
+        "end_ms": 6732120281.882679,
+        "ready_ms": 6732120278.17446,
+        "messages": [
+          [
+            "F:0:5",
+            "recv"
+          ],
+          [
+            "B:0:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 81007,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 81009,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 97.53915500640869,
+    "ready_overlap_ms": 3.671825408935547,
+    "completion_skew_ms": 0.036393165588378906,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:0:2",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 7555,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732119649.362858,
+        "end_ms": 6732120281.846286,
+        "ready_ms": 6732119649.362858,
+        "messages": [
+          [
+            "F:0:5",
+            "send"
+          ],
+          [
+            "B:0:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 7558,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 7560,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 81004,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732120184.307131,
+        "end_ms": 6732120281.882679,
+        "ready_ms": 6732120278.17446,
+        "messages": [
+          [
+            "F:0:5",
+            "recv"
+          ],
+          [
+            "B:0:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 81007,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 81009,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 97.53915500640869,
+    "ready_overlap_ms": 3.671825408935547,
+    "completion_skew_ms": 0.036393165588378906,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:0:6",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 8735,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732120877.390116,
+        "end_ms": 6732121538.957849,
+        "ready_ms": 6732120877.390116,
+        "messages": [
+          [
+            "F:0:6",
+            "send"
+          ],
+          [
+            "B:0:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 8738,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 8740,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 83840,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732121440.776076,
+        "end_ms": 6732121538.743682,
+        "ready_ms": 6732121534.982401,
+        "messages": [
+          [
+            "F:0:6",
+            "recv"
+          ],
+          [
+            "B:0:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 83843,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 83845,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 97.96760559082031,
+    "ready_overlap_ms": 3.7612810134887695,
+    "completion_skew_ms": 0.21416664123535156,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:0:3",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 8735,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732120877.390116,
+        "end_ms": 6732121538.957849,
+        "ready_ms": 6732120877.390116,
+        "messages": [
+          [
+            "F:0:6",
+            "send"
+          ],
+          [
+            "B:0:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 8738,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 8740,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 83840,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732121440.776076,
+        "end_ms": 6732121538.743682,
+        "ready_ms": 6732121534.982401,
+        "messages": [
+          [
+            "F:0:6",
+            "recv"
+          ],
+          [
+            "B:0:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 83843,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 83845,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 97.96760559082031,
+    "ready_overlap_ms": 3.7612810134887695,
+    "completion_skew_ms": 0.21416664123535156,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:0:7",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 9915,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732122134.243597,
+        "end_ms": 6732122768.452635,
+        "ready_ms": 6732122134.243597,
+        "messages": [
+          [
+            "F:0:7",
+            "send"
+          ],
+          [
+            "B:0:4",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 9918,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 9920,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 86676,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732122670.013958,
+        "end_ms": 6732122768.426898,
+        "ready_ms": 6732122764.158526,
+        "messages": [
+          [
+            "F:0:7",
+            "recv"
+          ],
+          [
+            "B:0:4",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 86679,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 86681,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 98.41294002532959,
+    "ready_overlap_ms": 4.26837158203125,
+    "completion_skew_ms": 0.02573680877685547,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:0:4",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 9915,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732122134.243597,
+        "end_ms": 6732122768.452635,
+        "ready_ms": 6732122134.243597,
+        "messages": [
+          [
+            "F:0:7",
+            "send"
+          ],
+          [
+            "B:0:4",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 9918,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 9920,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 86676,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732122670.013958,
+        "end_ms": 6732122768.426898,
+        "ready_ms": 6732122764.158526,
+        "messages": [
+          [
+            "F:0:7",
+            "recv"
+          ],
+          [
+            "B:0:4",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 86679,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 86681,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 98.41294002532959,
+    "ready_overlap_ms": 4.26837158203125,
+    "completion_skew_ms": 0.02573680877685547,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:0:5",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 9927,
+        "name": "recv_backward",
+        "start_ms": 6732123197.879159,
+        "end_ms": 6732124001.050195,
+        "ready_ms": 6732123202.590656,
+        "messages": [
+          [
+            "B:0:5",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 9930,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 89512,
+        "name": "send_backward",
+        "start_ms": 6732123903.845815,
+        "end_ms": 6732124000.952839,
+        "ready_ms": 6732123997.971752,
+        "messages": [
+          [
+            "B:0:5",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89514,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 97.10702419281006,
+    "ready_overlap_ms": 2.9810867309570312,
+    "completion_skew_ms": 0.09735584259033203,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:0:6",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 9935,
+        "name": "recv_backward",
+        "start_ms": 6732124426.953776,
+        "end_ms": 6732125219.2544775,
+        "ready_ms": 6732124431.882127,
+        "messages": [
+          [
+            "B:0:6",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 9938,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 89524,
+        "name": "send_backward",
+        "start_ms": 6732125122.354748,
+        "end_ms": 6732125218.847797,
+        "ready_ms": 6732125216.212199,
+        "messages": [
+          [
+            "B:0:6",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89526,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 96.49304962158203,
+    "ready_overlap_ms": 2.6355981826782227,
+    "completion_skew_ms": 0.4066801071166992,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:0:7",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 0,
+        "stage": 0,
+        "host": "worker34095",
+        "event": 9943,
+        "name": "recv_backward",
+        "start_ms": 6732125644.389841,
+        "end_ms": 6732126105.372251,
+        "ready_ms": 6732125649.291585,
+        "messages": [
+          [
+            "B:0:7",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 9946,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 89536,
+        "name": "send_backward",
+        "start_ms": 6732126009.590946,
+        "end_ms": 6732126105.28128,
+        "ready_ms": 6732126102.712237,
+        "messages": [
+          [
+            "B:0:7",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89538,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 95.69033336639404,
+    "ready_overlap_ms": 2.569042205810547,
+    "completion_skew_ms": 0.09097099304199219,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:1:0",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 69654,
+        "name": "send_forward",
+        "start_ms": 6732114981.183886,
+        "end_ms": 6732114984.051308,
+        "ready_ms": 6732114981.183886,
+        "messages": [
+          [
+            "F:1:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 69656,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 66842,
+        "name": "recv_forward",
+        "start_ms": 6732114467.252615,
+        "end_ms": 6732114984.30286,
+        "ready_ms": 6732114467.252615,
+        "messages": [
+          [
+            "F:1:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 66845,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 2.867422103881836,
+    "ready_overlap_ms": 2.867422103881836,
+    "completion_skew_ms": 0.2515525817871094,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:1:1",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 72482,
+        "name": "send_forward",
+        "start_ms": 6732115331.144587,
+        "end_ms": 6732115337.73825,
+        "ready_ms": 6732115331.144587,
+        "messages": [
+          [
+            "F:1:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 72484,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 69670,
+        "name": "recv_forward",
+        "start_ms": 6732115335.020653,
+        "end_ms": 6732115337.839589,
+        "ready_ms": 6732115335.020653,
+        "messages": [
+          [
+            "F:1:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 69673,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 2.717597007751465,
+    "ready_overlap_ms": 2.717597007751465,
+    "completion_skew_ms": 0.10133934020996094,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:1:2",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 75319,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732115685.749045,
+        "end_ms": 6732116929.222832,
+        "ready_ms": 6732115685.749045,
+        "messages": [
+          [
+            "F:1:2",
+            "send"
+          ],
+          [
+            "B:1:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 75322,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 75324,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 72504,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732116832.346159,
+        "end_ms": 6732116928.578949,
+        "ready_ms": 6732116924.914724,
+        "messages": [
+          [
+            "F:1:2",
+            "recv"
+          ],
+          [
+            "B:1:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 72507,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 72509,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 96.23278999328613,
+    "ready_overlap_ms": 3.664224624633789,
+    "completion_skew_ms": 0.6438827514648438,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:1:0",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 75319,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732115685.749045,
+        "end_ms": 6732116929.222832,
+        "ready_ms": 6732115685.749045,
+        "messages": [
+          [
+            "F:1:2",
+            "send"
+          ],
+          [
+            "B:1:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 75322,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 75324,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 72504,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732116832.346159,
+        "end_ms": 6732116928.578949,
+        "ready_ms": 6732116924.914724,
+        "messages": [
+          [
+            "F:1:2",
+            "recv"
+          ],
+          [
+            "B:1:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 72507,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 72509,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 96.23278999328613,
+    "ready_overlap_ms": 3.664224624633789,
+    "completion_skew_ms": 0.6438827514648438,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:1:3",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 78155,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732118147.675497,
+        "end_ms": 6732118152.435315,
+        "ready_ms": 6732118147.675497,
+        "messages": [
+          [
+            "F:1:3",
+            "send"
+          ],
+          [
+            "B:1:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 78158,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 78160,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 75340,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732118052.50085,
+        "end_ms": 6732118152.531897,
+        "ready_ms": 6732118144.801702,
+        "messages": [
+          [
+            "F:1:3",
+            "recv"
+          ],
+          [
+            "B:1:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 75343,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 75345,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.759818077087402,
+    "ready_overlap_ms": 4.759818077087402,
+    "completion_skew_ms": 0.09658145904541016,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:1:1",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 78155,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732118147.675497,
+        "end_ms": 6732118152.435315,
+        "ready_ms": 6732118147.675497,
+        "messages": [
+          [
+            "F:1:3",
+            "send"
+          ],
+          [
+            "B:1:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 78158,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 78160,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 75340,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732118052.50085,
+        "end_ms": 6732118152.531897,
+        "ready_ms": 6732118144.801702,
+        "messages": [
+          [
+            "F:1:3",
+            "recv"
+          ],
+          [
+            "B:1:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 75343,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 75345,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.759818077087402,
+    "ready_overlap_ms": 4.759818077087402,
+    "completion_skew_ms": 0.09658145904541016,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:1:4",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 80991,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732119396.161044,
+        "end_ms": 6732119400.196108,
+        "ready_ms": 6732119396.161044,
+        "messages": [
+          [
+            "F:1:4",
+            "send"
+          ],
+          [
+            "B:1:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 80994,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 80996,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 78176,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732119274.163517,
+        "end_ms": 6732119400.136843,
+        "ready_ms": 6732119366.066004,
+        "messages": [
+          [
+            "F:1:4",
+            "recv"
+          ],
+          [
+            "B:1:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 78179,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 78181,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 3.9757986068725586,
+    "ready_overlap_ms": 3.9757986068725586,
+    "completion_skew_ms": 0.05926513671875,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:1:2",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 80991,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732119396.161044,
+        "end_ms": 6732119400.196108,
+        "ready_ms": 6732119396.161044,
+        "messages": [
+          [
+            "F:1:4",
+            "send"
+          ],
+          [
+            "B:1:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 80994,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 80996,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 78176,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732119274.163517,
+        "end_ms": 6732119400.136843,
+        "ready_ms": 6732119366.066004,
+        "messages": [
+          [
+            "F:1:4",
+            "recv"
+          ],
+          [
+            "B:1:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 78179,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 78181,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 3.9757986068725586,
+    "ready_overlap_ms": 3.9757986068725586,
+    "completion_skew_ms": 0.05926513671875,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:1:5",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 83827,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732120630.581405,
+        "end_ms": 6732120635.083854,
+        "ready_ms": 6732120630.581405,
+        "messages": [
+          [
+            "F:1:5",
+            "send"
+          ],
+          [
+            "B:1:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 83830,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 83832,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 81012,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732120517.617829,
+        "end_ms": 6732120635.052164,
+        "ready_ms": 6732120610.561685,
+        "messages": [
+          [
+            "F:1:5",
+            "recv"
+          ],
+          [
+            "B:1:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 81015,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 81017,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.470759391784668,
+    "ready_overlap_ms": 4.470759391784668,
+    "completion_skew_ms": 0.03168964385986328,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:1:3",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 83827,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732120630.581405,
+        "end_ms": 6732120635.083854,
+        "ready_ms": 6732120630.581405,
+        "messages": [
+          [
+            "F:1:5",
+            "send"
+          ],
+          [
+            "B:1:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 83830,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 83832,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 81012,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732120517.617829,
+        "end_ms": 6732120635.052164,
+        "ready_ms": 6732120610.561685,
+        "messages": [
+          [
+            "F:1:5",
+            "recv"
+          ],
+          [
+            "B:1:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 81015,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 81017,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.470759391784668,
+    "ready_overlap_ms": 4.470759391784668,
+    "completion_skew_ms": 0.03168964385986328,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:1:6",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 86663,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732121885.475529,
+        "end_ms": 6732121890.252015,
+        "ready_ms": 6732121885.475529,
+        "messages": [
+          [
+            "F:1:6",
+            "send"
+          ],
+          [
+            "B:1:4",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 86666,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 86668,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 83848,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732121751.026823,
+        "end_ms": 6732121890.381825,
+        "ready_ms": 6732121843.79315,
+        "messages": [
+          [
+            "F:1:6",
+            "recv"
+          ],
+          [
+            "B:1:4",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 83851,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 83853,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.776486396789551,
+    "ready_overlap_ms": 4.776486396789551,
+    "completion_skew_ms": 0.12981033325195312,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:1:4",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 86663,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732121885.475529,
+        "end_ms": 6732121890.252015,
+        "ready_ms": 6732121885.475529,
+        "messages": [
+          [
+            "F:1:6",
+            "send"
+          ],
+          [
+            "B:1:4",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 86666,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 86668,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 83848,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732121751.026823,
+        "end_ms": 6732121890.381825,
+        "ready_ms": 6732121843.79315,
+        "messages": [
+          [
+            "F:1:6",
+            "recv"
+          ],
+          [
+            "B:1:4",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 83851,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 83853,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.776486396789551,
+    "ready_overlap_ms": 4.776486396789551,
+    "completion_skew_ms": 0.12981033325195312,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:1:7",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 89499,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732123118.337847,
+        "end_ms": 6732123122.828564,
+        "ready_ms": 6732123118.337847,
+        "messages": [
+          [
+            "F:1:7",
+            "send"
+          ],
+          [
+            "B:1:5",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89502,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 89504,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 86684,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732123012.480816,
+        "end_ms": 6732123122.782724,
+        "ready_ms": 6732123104.829228,
+        "messages": [
+          [
+            "F:1:7",
+            "recv"
+          ],
+          [
+            "B:1:5",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 86687,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 86689,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.444877624511719,
+    "ready_overlap_ms": 4.444877624511719,
+    "completion_skew_ms": 0.04583930969238281,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:1:5",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 89499,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732123118.337847,
+        "end_ms": 6732123122.828564,
+        "ready_ms": 6732123118.337847,
+        "messages": [
+          [
+            "F:1:7",
+            "send"
+          ],
+          [
+            "B:1:5",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89502,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 89504,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 86684,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732123012.480816,
+        "end_ms": 6732123122.782724,
+        "ready_ms": 6732123104.829228,
+        "messages": [
+          [
+            "F:1:7",
+            "recv"
+          ],
+          [
+            "B:1:5",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 86687,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 86689,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.444877624511719,
+    "ready_overlap_ms": 4.444877624511719,
+    "completion_skew_ms": 0.04583930969238281,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:1:6",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 89517,
+        "name": "recv_backward",
+        "start_ms": 6732124001.056593,
+        "end_ms": 6732124343.406898,
+        "ready_ms": 6732124001.056593,
+        "messages": [
+          [
+            "B:1:6",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89520,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 89520,
+        "name": "send_backward",
+        "start_ms": 6732124247.680546,
+        "end_ms": 6732124343.38505,
+        "ready_ms": 6732124340.52729,
+        "messages": [
+          [
+            "B:1:6",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89522,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 95.70450401306152,
+    "ready_overlap_ms": 2.857759475708008,
+    "completion_skew_ms": 0.02184772491455078,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:1:7",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 8,
+        "stage": 1,
+        "host": "worker34031",
+        "event": 89529,
+        "name": "recv_backward",
+        "start_ms": 6732125218.949968,
+        "end_ms": 6732125223.126628,
+        "ready_ms": 6732125218.949968,
+        "messages": [
+          [
+            "B:1:7",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89532,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 89532,
+        "name": "send_backward",
+        "start_ms": 6732125126.566715,
+        "end_ms": 6732125223.201203,
+        "ready_ms": 6732125220.555531,
+        "messages": [
+          [
+            "B:1:7",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89534,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 4.17665958404541,
+    "ready_overlap_ms": 2.5710973739624023,
+    "completion_skew_ms": 0.07457542419433594,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:2:0",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 69654,
+        "name": "send_forward",
+        "start_ms": 6732115331.968949,
+        "end_ms": 6732115334.906265,
+        "ready_ms": 6732115331.968949,
+        "messages": [
+          [
+            "F:2:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 69656,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 525,
+        "name": "recv_forward",
+        "start_ms": 6732114467.501761,
+        "end_ms": 6732115335.081691,
+        "ready_ms": 6732114467.501761,
+        "messages": [
+          [
+            "F:2:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 528,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 2.9373159408569336,
+    "ready_overlap_ms": 2.9373159408569336,
+    "completion_skew_ms": 0.17542552947998047,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:2:1",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 72491,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732115681.658506,
+        "end_ms": 6732116042.846865,
+        "ready_ms": 6732115681.658506,
+        "messages": [
+          [
+            "F:2:1",
+            "send"
+          ],
+          [
+            "B:2:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 72494,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 72496,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 2222,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732115943.253478,
+        "end_ms": 6732116042.805215,
+        "ready_ms": 6732116039.159994,
+        "messages": [
+          [
+            "F:2:1",
+            "recv"
+          ],
+          [
+            "B:2:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 2225,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 2227,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 99.55173683166504,
+    "ready_overlap_ms": 3.6452207565307617,
+    "completion_skew_ms": 0.041649818420410156,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:2:0",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 72491,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732115681.658506,
+        "end_ms": 6732116042.846865,
+        "ready_ms": 6732115681.658506,
+        "messages": [
+          [
+            "F:2:1",
+            "send"
+          ],
+          [
+            "B:2:0",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 72494,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 72496,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 2222,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732115943.253478,
+        "end_ms": 6732116042.805215,
+        "ready_ms": 6732116039.159994,
+        "messages": [
+          [
+            "F:2:1",
+            "recv"
+          ],
+          [
+            "B:2:0",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 2225,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 2227,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 99.55173683166504,
+    "ready_overlap_ms": 3.6452207565307617,
+    "completion_skew_ms": 0.041649818420410156,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:2:2",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 75327,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732117273.343385,
+        "end_ms": 6732117278.097409,
+        "ready_ms": 6732117273.343385,
+        "messages": [
+          [
+            "F:2:2",
+            "send"
+          ],
+          [
+            "B:2:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 75330,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 75332,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 3921,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732116651.664026,
+        "end_ms": 6732117278.360909,
+        "ready_ms": 6732116747.32011,
+        "messages": [
+          [
+            "F:2:2",
+            "recv"
+          ],
+          [
+            "B:2:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 3924,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 3926,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.754024505615234,
+    "ready_overlap_ms": 4.754024505615234,
+    "completion_skew_ms": 0.2635002136230469,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:2:1",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 75327,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732117273.343385,
+        "end_ms": 6732117278.097409,
+        "ready_ms": 6732117273.343385,
+        "messages": [
+          [
+            "F:2:2",
+            "send"
+          ],
+          [
+            "B:2:1",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 75330,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 75332,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 3921,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732116651.664026,
+        "end_ms": 6732117278.360909,
+        "ready_ms": 6732116747.32011,
+        "messages": [
+          [
+            "F:2:2",
+            "recv"
+          ],
+          [
+            "B:2:1",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 3924,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 3926,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.754024505615234,
+    "ready_overlap_ms": 4.754024505615234,
+    "completion_skew_ms": 0.2635002136230469,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:2:3",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 78163,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732118499.073505,
+        "end_ms": 6732118503.046398,
+        "ready_ms": 6732118499.073505,
+        "messages": [
+          [
+            "F:2:3",
+            "send"
+          ],
+          [
+            "B:2:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 78166,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 78168,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 5620,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732117888.596371,
+        "end_ms": 6732118503.223385,
+        "ready_ms": 6732117984.387822,
+        "messages": [
+          [
+            "F:2:3",
+            "recv"
+          ],
+          [
+            "B:2:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 5623,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 5625,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 3.9728927612304688,
+    "ready_overlap_ms": 3.9728927612304688,
+    "completion_skew_ms": 0.1769866943359375,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:2:2",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 78163,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732118499.073505,
+        "end_ms": 6732118503.046398,
+        "ready_ms": 6732118499.073505,
+        "messages": [
+          [
+            "F:2:3",
+            "send"
+          ],
+          [
+            "B:2:2",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 78166,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 78168,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 5620,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732117888.596371,
+        "end_ms": 6732118503.223385,
+        "ready_ms": 6732117984.387822,
+        "messages": [
+          [
+            "F:2:3",
+            "recv"
+          ],
+          [
+            "B:2:2",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 5623,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 5625,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 3.9728927612304688,
+    "ready_overlap_ms": 3.9728927612304688,
+    "completion_skew_ms": 0.1769866943359375,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:2:4",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 80999,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732119740.2330675,
+        "end_ms": 6732119744.989168,
+        "ready_ms": 6732119740.2330675,
+        "messages": [
+          [
+            "F:2:4",
+            "send"
+          ],
+          [
+            "B:2:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 81002,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 81004,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 7319,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732119122.4958105,
+        "end_ms": 6732119744.95363,
+        "ready_ms": 6732119218.810727,
+        "messages": [
+          [
+            "F:2:4",
+            "recv"
+          ],
+          [
+            "B:2:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 7322,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 7324,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.720562934875488,
+    "ready_overlap_ms": 4.720562934875488,
+    "completion_skew_ms": 0.0355377197265625,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:2:3",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 80999,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732119740.2330675,
+        "end_ms": 6732119744.989168,
+        "ready_ms": 6732119740.2330675,
+        "messages": [
+          [
+            "F:2:4",
+            "send"
+          ],
+          [
+            "B:2:3",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 81002,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 81004,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 7319,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732119122.4958105,
+        "end_ms": 6732119744.95363,
+        "ready_ms": 6732119218.810727,
+        "messages": [
+          [
+            "F:2:4",
+            "recv"
+          ],
+          [
+            "B:2:3",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 7322,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 7324,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.720562934875488,
+    "ready_overlap_ms": 4.720562934875488,
+    "completion_skew_ms": 0.0355377197265625,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:2:5",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 83835,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732120976.745872,
+        "end_ms": 6732120981.563979,
+        "ready_ms": 6732120976.745872,
+        "messages": [
+          [
+            "F:2:5",
+            "send"
+          ],
+          [
+            "B:2:4",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 83838,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 83840,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 9018,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732120362.047369,
+        "end_ms": 6732120981.463518,
+        "ready_ms": 6732120458.492212,
+        "messages": [
+          [
+            "F:2:5",
+            "recv"
+          ],
+          [
+            "B:2:4",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 9021,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 9023,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.717646598815918,
+    "ready_overlap_ms": 4.717646598815918,
+    "completion_skew_ms": 0.10046100616455078,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:2:4",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 83835,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732120976.745872,
+        "end_ms": 6732120981.563979,
+        "ready_ms": 6732120976.745872,
+        "messages": [
+          [
+            "F:2:5",
+            "send"
+          ],
+          [
+            "B:2:4",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 83838,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 83840,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 9018,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732120362.047369,
+        "end_ms": 6732120981.463518,
+        "ready_ms": 6732120458.492212,
+        "messages": [
+          [
+            "F:2:5",
+            "recv"
+          ],
+          [
+            "B:2:4",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 9021,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 9023,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.717646598815918,
+    "ready_overlap_ms": 4.717646598815918,
+    "completion_skew_ms": 0.10046100616455078,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:2:6",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 86671,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732122234.2705145,
+        "end_ms": 6732122239.073762,
+        "ready_ms": 6732122234.2705145,
+        "messages": [
+          [
+            "F:2:6",
+            "send"
+          ],
+          [
+            "B:2:5",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 86674,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 86676,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 10717,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732121590.938987,
+        "end_ms": 6732122239.090551,
+        "ready_ms": 6732121686.667523,
+        "messages": [
+          [
+            "F:2:6",
+            "recv"
+          ],
+          [
+            "B:2:5",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 10720,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 10722,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.803247451782227,
+    "ready_overlap_ms": 4.803247451782227,
+    "completion_skew_ms": 0.01678943634033203,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:2:5",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 86671,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732122234.2705145,
+        "end_ms": 6732122239.073762,
+        "ready_ms": 6732122234.2705145,
+        "messages": [
+          [
+            "F:2:6",
+            "send"
+          ],
+          [
+            "B:2:5",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 86674,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 86676,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 10717,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732121590.938987,
+        "end_ms": 6732122239.090551,
+        "ready_ms": 6732121686.667523,
+        "messages": [
+          [
+            "F:2:6",
+            "recv"
+          ],
+          [
+            "B:2:5",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 10720,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 10722,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.803247451782227,
+    "ready_overlap_ms": 4.803247451782227,
+    "completion_skew_ms": 0.01678943634033203,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "F:2:7",
+    "phase": "F",
+    "ends": [
+      {
+        "side": "send",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 89507,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732123466.396652,
+        "end_ms": 6732123470.685616,
+        "ready_ms": 6732123466.396652,
+        "messages": [
+          [
+            "F:2:7",
+            "send"
+          ],
+          [
+            "B:2:6",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89510,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 89512,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "recv",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 12416,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732122849.187934,
+        "end_ms": 6732123470.679323,
+        "ready_ms": 6732122945.230303,
+        "messages": [
+          [
+            "F:2:7",
+            "recv"
+          ],
+          [
+            "B:2:6",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 12419,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 12421,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.282670974731445,
+    "ready_overlap_ms": 4.282670974731445,
+    "completion_skew_ms": 0.0062923431396484375,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:2:6",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 89507,
+        "name": "send_forward_recv_backward",
+        "start_ms": 6732123466.396652,
+        "end_ms": 6732123470.685616,
+        "ready_ms": 6732123466.396652,
+        "messages": [
+          [
+            "F:2:7",
+            "send"
+          ],
+          [
+            "B:2:6",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89510,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 89512,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 12416,
+        "name": "send_backward_recv_forward",
+        "start_ms": 6732122849.187934,
+        "end_ms": 6732123470.679323,
+        "ready_ms": 6732122945.230303,
+        "messages": [
+          [
+            "F:2:7",
+            "recv"
+          ],
+          [
+            "B:2:6",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 12419,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "event": 12421,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": false,
+    "raw_overlap_ms": 4.282670974731445,
+    "ready_overlap_ms": 4.282670974731445,
+    "completion_skew_ms": 0.0062923431396484375,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  },
+  {
+    "message": "B:2:7",
+    "phase": "B",
+    "ends": [
+      {
+        "side": "recv",
+        "rank": 16,
+        "stage": 2,
+        "host": "worker34094",
+        "event": 89525,
+        "name": "recv_backward",
+        "start_ms": 6732124343.475047,
+        "end_ms": 6732124346.2984085,
+        "ready_ms": 6732124343.475047,
+        "messages": [
+          [
+            "B:2:7",
+            "recv"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 89528,
+            "kind": "recv",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      {
+        "side": "send",
+        "rank": 24,
+        "stage": 3,
+        "host": "worker33017",
+        "event": 14115,
+        "name": "send_backward",
+        "start_ms": 6732124078.772701,
+        "end_ms": 6732124346.290213,
+        "ready_ms": 6732124175.305519,
+        "messages": [
+          [
+            "B:2:7",
+            "send"
+          ]
+        ],
+        "markers": [
+          {
+            "event": 14117,
+            "kind": "send",
+            "nelems": 41943040,
+            "dtype": "BFloat16",
+            "dims": [
+              [
+                [
+                  4096,
+                  2,
+                  5120
+                ]
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    ],
+    "standalone": true,
+    "raw_overlap_ms": 2.8151655197143555,
+    "ready_overlap_ms": 2.8151655197143555,
+    "completion_skew_ms": 0.008195877075195312,
+    "payload_bytes": [
+      83886080
+    ],
+    "path_class": "cross_host"
+  }
+]

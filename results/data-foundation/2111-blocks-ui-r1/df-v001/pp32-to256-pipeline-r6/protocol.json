@@ -1,0 +1,19 @@
+{
+  "version": "pp32-to256-pipeline-r6",
+  "source": "32 iteration60; 4 representative ranks",
+  "evaluation": "256 iteration60 rank0, predetermined before timing reads",
+  "window": "PP0 first F associated GPU start -> last B associated GPU end, including fill/drain; excludes all tail RS/OPT/AG",
+  "assumptions": [
+    "one representative PP chain, not full world makespan",
+    "same role FB costs; internal CP/EP communication included",
+    "PP effective overlap reused across topology, not pure transport",
+    "framework snapshot is schedule reference, exact runtime equivalence unverified"
+  ],
+  "auxiliary_RS": "deferred: r5 RS_PREP is aggregate, not an independently identified RS endpoint",
+  "no_target_fit": true,
+  "prior_target_history": "256 data may have been seen in earlier v610 work; not blind holdout",
+  "code": {
+    "path": "/home/zjb/Desktop/worktrees/mfu-w37-v610/workflow/data_foundation/pp32_to256_pipeline_r6.py",
+    "sha256": "1e6bb361da2cee30d04227836c5399d5630d63a5e3f4a400bac9ee8fb9ee15de"
+  }
+}

@@ -1,0 +1,42 @@
+// Source32 full-step assembly. Does not modify frozen r1 facts or graphs.
+document.title='32 → 256 · 整轮时间与MFU预测';
+document.querySelector('header .small').textContent='32to256 / 源32卡首尾成本整轮外推 r2 / 2026-09-21';
+document.querySelector('h1').textContent='用32卡首尾，闭合整轮时间与MFU';
+const topPanel=document.querySelector('#overall .split .panel');
+topPanel.replaceChildren();
+function add(parent,tag,text,cls){const n=document.createElement(tag);n.textContent=text;if(cls)n.className=cls;parent.append(n);return n;}
+add(topPanel,'h2','整轮预测：首尾均来自32卡');
+add(topPanel,'div',(FULL.profiler.relative_error_percent>=0?'+':'')+FULL.profiler.relative_error_percent.toFixed(2)+'% · ProfilerStep','metric');
+add(topPanel,'p','预测 '+sec(FULL.profiler.predicted)+' / 实测 '+sec(FULL.profiler.observed)+'。启动和末B后尾段按32卡iter60的rank0实测原样迁移，不用256卡首尾回填。');
+add(topPanel,'p','Training Step：预测 '+sec(FULL.training.predicted)+' / 实测 '+sec(FULL.training.observed)+'，误差 '+pct(FULL.training.relative_error_percent)+'。额外使用32卡训练日志与ProfilerStep之间的时钟残余。');
+add(topPanel,'div','低整轮误差存在分项抵消：启动低估，1F1B高估。不能据此认为1F1B已优化。','warning');
+const mfuPanel=document.createElement('div');mfuPanel.className='panel';mfuPanel.style.marginTop='20px';
+add(mfuPanel,'h2','整体MFU · Training Step口径');
+add(mfuPanel,'div','预测 '+FULL.mfu_training.predicted.toFixed(3)+'% / 实测推导 '+FULL.mfu_training.observed.toFixed(3)+'%','metric');
+add(mfuPanel,'p','相差 '+FULL.mfu_training.error.toFixed(3)+' 个百分点；相对误差 '+FULL.mfu_training.relative_error_percent.toFixed(2)+'%。MFU与时间反向变化，百分点不等于相对百分比。');
+add(mfuPanel,'p','MFU = 100 × 每迭代FLOPs ÷ (256 × 单卡峰值 × TrainingStep秒)。沿用历史256卡有效FLOPs '+FULL.prediction.physics.model_flops_per_iteration.toExponential(6)+'、单卡500 TFLOP/s。不是224卡v610常量，也不是新增架构FLOPs或硬件峰值验证。','small');
+add(mfuPanel,'p','ProfilerStep口径的派生值：预测 '+FULL.mfu_profiler.predicted.toFixed(3)+'% / 实测推导 '+FULL.mfu_profiler.observed.toFixed(3)+'%；与训练日志MFU分开展示。','small');
+document.querySelector('#overall .split').after(mfuPanel);
+const W=svg('whole-chart',185),limit=Math.max(FULL.profiler.predicted,FULL.profiler.observed),sc=960/limit;
+for(const [y,label,parts] of [[40,'目标实测',[E.startup_ms,E.one_f_one_b_ms,E.tail_ms]],[105,'源32外推',[FULL.prediction.costs.entry_ms,FULL.prediction.one_f_one_b_ms,FULL.prediction.costs.post_last_b_ms]]]){
+ txt(W,0,y+23,label);let x=150;parts.forEach((v,i)=>{const r=rect(W,x,y,v*sc,34,i===1?'#315d98':'#6a7988');r.append(s('title',{},sec(v)));x+=v*sc;});txt(W,160,y+23,'1F1B '+sec(parts[1]),{style:'fill:white'});
+}txt(W,150,172,'0');txt(W,1010,172,sec(limit));
+const chartPanel=el('whole-chart').parentElement;
+chartPanel.querySelector('h3').textContent='同一时间尺：目标实测 vs 源32卡首尾＋预测1F1B';
+chartPanel.querySelector('.small').textContent='本图为ProfilerStep。上方首尾来自256实测，仅用于评价；下方首尾来自32卡，均为预测成本。TrainingStep还要加日志时钟残余，见下表。';
+chartPanel.querySelector('.legend').lastElementChild.textContent='启动 / 更新尾段（上实测、下源外推）';
+const accounting=document.createElement('section');accounting.className='panel';accounting.id='full-costs';
+add(accounting,'h2','整轮成本账本：32卡基准 → 256卡评价');
+const table=document.createElement('table');table.innerHTML='<thead><tr><th>部分</th><th>源外推 ms</th><th>目标实测 ms</th><th>偏差 ms</th></tr></thead>';const tb=document.createElement('tbody');
+FULL.components.forEach(r=>{const tr=document.createElement('tr');[r.name,r.source_prediction_ms.toFixed(3),r.target_observed_ms.toFixed(3),(r.source_prediction_ms-r.target_observed_ms).toFixed(3)].forEach(t=>add(tr,'td',t));tb.append(tr);});table.append(tb);const scroll=document.createElement('div');scroll.className='scroll';scroll.append(table);accounting.append(scroll);
+add(accounting,'p','预测顺序：源启动 → 冻结DAG的1F1B → 源末B后尾段 = ProfilerStep；再加源日志时钟残余 = TrainingStep。尾段含RS、更新、AG及收尾，不再另外叠加任何一项。');
+add(accounting,'p','首尾系数均为1。32→256时DP/EDP变化、启动差异和profiling影响尚未独立建模；当前是简单经验外推，不是逐rank优化器DAG已闭合。','warning');
+el('overall').after(accounting);
+const nav=document.querySelector('nav');const link=document.createElement('a');link.href='#full-costs';link.textContent='整轮成本账本';nav.append(link);
+el('edges').querySelector('h2').textContent='目标首尾实测证据：只用于评价，不回填预测';
+el('edges').querySelectorAll('.two .panel')[0].querySelector('.small').textContent='此处显示目标实测。预测启动另取32卡iter60的107.177ms，见成本账本。';
+const bodyText=document.querySelector('#templates table tbody').lastElementChild;
+bodyText.children[1].textContent='源32卡启动/更新尾段/日志残余，倍率1';bodyText.children[2].textContent='接在冻结1F1B之前/之后；整轮包络外推，不改变F/B图';
+el('sources').querySelectorAll('.panel')[0].querySelectorAll('p')[1].textContent='本版新增32卡首尾成本整轮外推；原F/B图、PP成本及1F1B预测不变。结果尚未提交。';
+const rl=document.createElement('a');rl.href='report.json';rl.textContent='整轮预测与MFU报告';el('sources').querySelector('.flex').prepend(rl);
+document.querySelector('footer').textContent='整轮经验外推已接入；1F1B误差仍6.16%。MFU沿用历史有效FLOPs口径，非独立物理验证。';

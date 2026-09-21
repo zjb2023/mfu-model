@@ -1,0 +1,519 @@
+{
+  "rank": 144,
+  "stage": 9,
+  "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33019/profiler/iteration_60/rank144.1785477877099.pt.trace.json",
+  "sha256": "6e67f1d54f0ec5598cdb09513db6352adb4e6244f52a349694847fb308cc95f5",
+  "blocks": [
+    {
+      "phase": "F",
+      "mb": 0,
+      "cpu_event": 33676,
+      "device_events": 388,
+      "first_device_event": 52877,
+      "last_device_event": 55657,
+      "first_runtime_event": 52875,
+      "last_runtime_event": 55655,
+      "start_absolute_ms": 2510070399.937297,
+      "end_absolute_ms": 2510070718.312605,
+      "duration_ms": 318.3753080368042
+    },
+    {
+      "phase": "F",
+      "mb": 1,
+      "cpu_event": 36504,
+      "device_events": 388,
+      "first_device_event": 55713,
+      "last_device_event": 58477,
+      "first_runtime_event": 55711,
+      "last_runtime_event": 58475,
+      "start_absolute_ms": 2510070736.2689333,
+      "end_absolute_ms": 2510071052.9638247,
+      "duration_ms": 316.6948914527893
+    },
+    {
+      "phase": "F",
+      "mb": 2,
+      "cpu_event": 39332,
+      "device_events": 388,
+      "first_device_event": 58533,
+      "last_device_event": 61297,
+      "first_runtime_event": 58531,
+      "last_runtime_event": 61295,
+      "start_absolute_ms": 2510071098.946845,
+      "end_absolute_ms": 2510071415.6728234,
+      "duration_ms": 316.7259783744812
+    },
+    {
+      "phase": "F",
+      "mb": 3,
+      "cpu_event": 42160,
+      "device_events": 388,
+      "first_device_event": 61353,
+      "last_device_event": 64117,
+      "first_runtime_event": 61351,
+      "last_runtime_event": 64115,
+      "start_absolute_ms": 2510071443.4290743,
+      "end_absolute_ms": 2510071762.074871,
+      "duration_ms": 318.64579677581787
+    },
+    {
+      "phase": "B",
+      "mb": 0,
+      "cpu_event": 44988,
+      "device_events": 1025,
+      "first_device_event": 64527,
+      "last_device_event": 98845,
+      "first_runtime_event": 64525,
+      "last_runtime_event": 98843,
+      "start_absolute_ms": 2510077136.261291,
+      "end_absolute_ms": 2510077935.6724663,
+      "duration_ms": 799.4111752510071
+    },
+    {
+      "phase": "B",
+      "mb": 1,
+      "cpu_event": 45000,
+      "device_events": 1025,
+      "first_device_event": 98915,
+      "last_device_event": 107139,
+      "first_runtime_event": 98913,
+      "last_runtime_event": 107137,
+      "start_absolute_ms": 2510078308.120288,
+      "end_absolute_ms": 2510079103.9324465,
+      "duration_ms": 795.8121585845947
+    },
+    {
+      "phase": "B",
+      "mb": 2,
+      "cpu_event": 45012,
+      "device_events": 1025,
+      "first_device_event": 107213,
+      "last_device_event": 78849,
+      "first_runtime_event": 107211,
+      "last_runtime_event": 78847,
+      "start_absolute_ms": 2510079450.8574867,
+      "end_absolute_ms": 2510080242.013547,
+      "duration_ms": 791.156060218811
+    },
+    {
+      "phase": "B",
+      "mb": 3,
+      "cpu_event": 45024,
+      "device_events": 1025,
+      "first_device_event": 78923,
+      "last_device_event": 87141,
+      "first_runtime_event": 78921,
+      "last_runtime_event": 87139,
+      "start_absolute_ms": 2510080255.678915,
+      "end_absolute_ms": 2510081050.464728,
+      "duration_ms": 794.7858128547668
+    }
+  ],
+  "call_structure_matches": true,
+  "actual_calls": [
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:8:0",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "F",
+      0,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:9:0",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:8:1",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "F",
+      1,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:9:1",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:8:2",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "F",
+      2,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:9:2",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:8:3",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "F",
+      3,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:9:3",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:9:0",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      0,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:8:0",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:9:1",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      1,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:8:1",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:9:2",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      2,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:8:2",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:9:3",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      3,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:8:3",
+          "send"
+        ]
+      ]
+    ]
+  ],
+  "expected_calls": [
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:8:0",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "F",
+      0,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:9:0",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:8:1",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "F",
+      1,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:9:1",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:8:2",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "F",
+      2,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:9:2",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:8:3",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "F",
+      3,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "F:9:3",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:9:0",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      0,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:8:0",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:9:1",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      1,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:8:1",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:9:2",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      2,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:8:2",
+          "send"
+        ]
+      ]
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:9:3",
+          "recv"
+        ]
+      ]
+    ],
+    [
+      "B",
+      3,
+      []
+    ],
+    [
+      "PP",
+      null,
+      [
+        [
+          "B:8:3",
+          "send"
+        ]
+      ]
+    ]
+  ],
+  "ambiguous_runtime_devices": 512,
+  "local_window_ms": 10650.5274310112
+}

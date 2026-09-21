@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>从 CP2 接入 EP8 · 单层 DAG</title>
+<style>
+:root{color-scheme:light;--ink:#24344a;--muted:#56667a;--blue:#3969b0;--purple:#8058a2;--orange:#a66324;--line:#cbd5e0}
+*{box-sizing:border-box}body{margin:0;background:#f3f6fa;color:var(--ink);font:16px/1.65 "Noto Sans CJK SC","Microsoft YaHei",sans-serif}main{max-width:1450px;margin:auto;padding:30px 28px}h1{font-size:30px;line-height:1.3;margin:8px 0 14px}h2{font-size:20px;margin:0 0 12px}.eyebrow{font:13px monospace;letter-spacing:1px;color:var(--muted)}p{margin:8px 0 16px}.legend{display:flex;gap:24px;flex-wrap:wrap;margin:18px 0}.legend span{display:flex;gap:9px;align-items:center}.swatch{width:16px;height:16px;border:2px solid currentColor}.panel{background:white;border:1px solid var(--line);padding:18px;margin:18px 0}.scroll{overflow:auto}svg{display:block;width:100%;min-width:1080px;height:auto}svg text{font-family:"Noto Sans CJK SC","Microsoft YaHei",sans-serif;font-size:15px;fill:var(--ink)}.node{cursor:pointer}.node:hover rect,.node:focus rect{stroke-width:3}.node:focus{outline:none}.small{font-size:14px;color:var(--muted)}.note{background:#fff5e6;padding:12px 16px;color:#785022}.columns{display:grid;grid-template-columns:1fr 1fr;gap:28px}.detail{min-height:60px;margin:0;padding-top:14px;border-top:1px solid var(--line)}code{font-family:monospace;font-size:14px}a{color:#315d98}@media(max-width:650px){main{padding:18px 14px}h1{font-size:24px}.columns{grid-template-columns:1fr;gap:15px}.panel{padding:12px}}@media print{main{padding:0}.scroll{overflow:visible}svg{min-width:0}}
+</style></head>
+<body><main>
+<div class="eyebrow">SOURCE32 / PP1 / F 内单层 / 结构提案 r1</div>
+<h1>4 个 CP2 组，接入同一个 EP8</h1>
+<p>把原来的 M 整体块拆成：<strong>共享 Dispatch → 8 路专家计算 → 共享 Combine</strong>。横向表示依赖推进，不是耗时比例。</p>
+<p class="note">这是待验证的最简依赖图，不是新预测结果。虚线表示“等参与者全部就绪”的建模假设；未填任何未经校准的通信或计算耗时。</p>
+<div class="legend"><span style="color:var(--blue)"><i class="swatch"></i>各 rank 本地处理 / 计算</span><span style="color:var(--purple)"><i class="swatch"></i>CP2 通信与本地处理子图</span><span style="color:var(--orange)"><i class="swatch"></i>EP8 共享通信操作</span></div>
+<section class="panel"><div class="scroll"><svg id="graph" viewBox="0 0 1320 730" role="img" aria-labelledby="gt gd"><title id="gt">四个 CP2 子图接入 EP8 分发、八路专家计算与 EP8 合并</title><desc id="gd">rank8到15分为四对，完成各自CP子图与分发前本地准备后，进入共享分发，分别执行专家计算，再进入共享合并，最后各自继续后续工作。通信入口为待验证的全员就绪假设。</desc></svg></div><p id="detail" class="detail" aria-live="polite">点击任一模块，查看它的成本边界与依赖口径。</p></section>
+<section class="columns">
+<div><h2>如何接回 F 内部</h2><p>左侧每个紫色框折叠该层的 4 次 CP 及穿插的本地处理，<strong>不是一个额外计费节点</strong>。展开时沿用 CP384 / CP256 接口与各 rank 的真实前驱。</p><p>准备节点 Pᵣ 保留 CP 后、Dispatch 前的本地工作；不能把这一段从旧 M 块中漏掉。右侧输出再接本层后续工作或下一层，不直接等同整个 F 完成。</p></div>
+<div><h2>成本与等待只算一次</h2><p>Dispatch / Combine 各为一个共享通信操作，不能在 8 个 rank 上串加 8 次。专家节点 Eᵣ 独立计成本，候选输入为固定 trace 成本，或 <code>a + b × recvᵣ</code>。</p><p>只有分离掉到达等待后，通信成本才能用于这张全员就绪图。不能把旧 M 包络、通信包络和 DAG 等待叠加收费。<code>min_recv + recv差值</code> 是另一种整体包络模型，不与这套逐 rank 等待重复使用。</p></div>
+</section>
+<section class="panel"><h2>简化规则：先把依赖说清楚</h2><p><code>Dispatch 开始 = max(P₈…P₁₅ 完成)</code><br><code>Eᵣ 开始 = Dispatch 完成</code><br><code>Combine 开始 = max(E₈…E₁₅ 完成)</code></p><p class="small">上述共享开始/完成边界是粗粒度近似。真实通信可能分批推进，各 rank 返回时刻可能不同；本图不声称已证明严格全局屏障。框架融合操作中的打包、拷贝、解包等工作也必须在校准时明确归属。</p></section>
+<p class="small">证据范围：已有 source32 / iter60 / PP1 / F0 的 rank8～15 通信组记录；只画一个重复单元，不代表完整 4 层或 B。新图只新增展示，不替换 r9/r10 预测模型。</p>
+<p><a href="../pp32-cp-replay-r9/">查看原双 rank CP 参数注入示范</a> · <a href="graph.json">下载结构清单</a> · <a href="manifest.json">版本与来源</a></p>
+</main><script>
+const svg=document.getElementById('graph');const NS='http://www.w3.org/2000/svg';
+function el(tag,attrs,parent=svg){const n=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);parent.appendChild(n);return n}
+function text(x,y,s,parent=svg,attrs={}){const n=el('text',{x,y,...attrs},parent);n.textContent=s;return n}
+const defs=el('defs',{});const marker=el('marker',{id:'arrow',viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:6,markerHeight:6,orient:'auto'},defs);el('path',{d:'M0 0 L10 5 L0 10Z',fill:'#8b99aa'},marker);
+function edge(x,y,xx,yy,dashed=false){el('path',{d:`M${x} ${y} L${xx} ${yy}`,stroke:'#8b99aa','stroke-width':1.6,fill:'none','marker-end':'url(#arrow)',...(dashed?{'stroke-dasharray':'5 4'}:{})})}
+function box(id,x,y,w,h,color,lines,detail){const g=el('g',{class:'node',tabindex:0,role:'button','aria-label':id,'data-id':id});el('rect',{x,y,width:w,height:h,rx:5,fill:color==='cp'?'#f5effa':color==='ep'?'#fff3e5':'#eef4fc',stroke:color==='cp'?'#8058a2':color==='ep'?'#a66324':'#3969b0','stroke-width':1.5},g);lines.forEach((s,i)=>text(x+w/2,y+h/2+(i-(lines.length-1)/2)*23+5,s,g,{'text-anchor':'middle'}));const show=()=>document.getElementById('detail').textContent=detail;g.onclick=show;g.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}}}
+text(26,32,'参与 rank');text(119,32,'CP2 子图（折叠）');text(368,32,'本地准备');text(516,32,'共享通信');text(724,32,'各 rank 独立计算');text(966,32,'共享通信');text(1142,32,'后续工作');
+for(let i=0;i<8;i++){const y=86+i*78;el('line',{x1:20,y1:y,x2:1300,y2:y,stroke:'#e7edf4'});text(28,y+5,`rank ${8+i}`);edge(305,y,350,y);edge(465,y,510,y,true);edge(645,y,707,y);edge(900,y,954,y,true);edge(1090,y,1140,y)}
+for(let p=0;p<4;p++){const a=8+2*p,y=56+p*156;box(`CP2-${a}`,110,y,195,138,'cp',[`CP2 · ${a}, ${a+1}`,'4 CP + 本地处理','384 / 384 / 256 / 256'],`rank${a}/${a+1} 的 CP2 子图：本层4次CP以及穿插本地处理。此框仅是分组，不能在内部成本之外再收费；两条出口对应各 rank 本地就绪。384/256 表示 MiB 输入尺寸档，不是耗时。`)}
+box('Dispatch',510,56,135,606,'ep',['EP8','Dispatch','分发','共享操作'], 'Dispatch：参与者 rank8～15。虚线入口表示本提案暂取8个本地准备节点最晚完成时刻；成本尚未校准，不能直接使用含提前到达等待的实测包络。');
+box('Combine',954,56,136,606,'ep',['EP8','Combine','合并','共享操作'],'Combine：参与者 rank8～15，暂取8个专家节点最晚完成时刻。各 rank 的负载差通过就绪时刻体现，不能另加同一份 recv差值等待修正。');
+for(let i=0;i<8;i++){const r=8+i,y=56+i*78;box(`P${r}`,350,y,115,60,'local',[`P${r}`,'本地准备'],`P${r}：rank${r} 的 CP 后、Dispatch 前本地处理。边界待按trace核对，不是空节点，也没有填入任意固定成本。`);box(`E${r}`,707,y,193,60,'local',[`E${r} · 专家计算`,`固定成本 / recv${r}`],`E${r}：rank${r} 的专家相关计算；先从trace识别不含通信等待的成本，之后可测试 a+b×recv${r}。不要求完整8×8路由矩阵；当前仅占位接口。`);box(`O${r}`,1140,y,155,60,'local',[`rank ${r}`,'本层后续 / 下一层'],`rank${r} 的后续本地工作。是否可在别的 rank 完成 combine 前开始，需后续细化；当前使用共享完成的简化假设。`)}
+text(110,706,'实线：提案内的执行依赖。虚线：全员就绪近似，仍需 trace 验证。图形宽度不代表时长。');
+</script></body></html>

@@ -1,0 +1,120 @@
+{
+  "status": "PARTIAL",
+  "evidence_checks": "PASS",
+  "ranks": 8,
+  "CP_calls_per_rank": 16,
+  "EP_dispatch_per_rank": 4,
+  "EP_combine_per_rank": 4,
+  "matched_CP_collectives": 64,
+  "matched_EP_fused_operations": 8,
+  "exclusive_partition": "PASS exact F GPU-window accounting, not predictive replay",
+  "service_identified": false,
+  "GPU_cross_stream_dependencies_complete": false,
+  "per_rank": [
+    {
+      "rank": 8,
+      "window_ms": 342.36058235168457,
+      "exclusive_time_ms": {
+        "LOCAL_KERNEL": 121.6221570968628,
+        "NO_OBSERVED_DEVICE": 69.5683650970459,
+        "CP+LOCAL_KERNEL": 5.964643478393555,
+        "CP": 141.24761199951172,
+        "LOCAL_MEMORY": 0.01464080810546875,
+        "EP_DISPATCH": 2.818084716796875,
+        "EP_COMBINE": 1.1250791549682617
+      }
+    },
+    {
+      "rank": 9,
+      "window_ms": 342.4492197036743,
+      "exclusive_time_ms": {
+        "LOCAL_KERNEL": 119.60279083251953,
+        "NO_OBSERVED_DEVICE": 71.5534143447876,
+        "CP+LOCAL_KERNEL": 5.70550537109375,
+        "CP": 141.8309268951416,
+        "LOCAL_MEMORY": 0.01451873779296875,
+        "EP_DISPATCH": 2.6186580657958984,
+        "EP_COMBINE": 1.1234054565429688
+      }
+    },
+    {
+      "rank": 10,
+      "window_ms": 342.603853225708,
+      "exclusive_time_ms": {
+        "LOCAL_KERNEL": 120.38835048675537,
+        "NO_OBSERVED_DEVICE": 69.76811504364014,
+        "CP+LOCAL_KERNEL": 5.9224090576171875,
+        "CP": 139.6635274887085,
+        "LOCAL_MEMORY": 0.015039443969726562,
+        "EP_DISPATCH": 5.824292182922363,
+        "EP_COMBINE": 1.0221195220947266
+      }
+    },
+    {
+      "rank": 11,
+      "window_ms": 342.17606258392334,
+      "exclusive_time_ms": {
+        "LOCAL_KERNEL": 117.62636089324951,
+        "NO_OBSERVED_DEVICE": 72.87160110473633,
+        "CP+LOCAL_KERNEL": 6.307770729064941,
+        "CP": 139.34571075439453,
+        "LOCAL_MEMORY": 0.01432037353515625,
+        "EP_DISPATCH": 4.985095977783203,
+        "EP_COMBINE": 1.025202751159668
+      }
+    },
+    {
+      "rank": 12,
+      "window_ms": 342.4509401321411,
+      "exclusive_time_ms": {
+        "LOCAL_KERNEL": 116.22027969360352,
+        "NO_OBSERVED_DEVICE": 74.97173023223877,
+        "CP+LOCAL_KERNEL": 6.254247665405273,
+        "CP": 139.57590866088867,
+        "LOCAL_MEMORY": 0.016480445861816406,
+        "EP_DISPATCH": 4.271213531494141,
+        "EP_COMBINE": 1.1410799026489258
+      }
+    },
+    {
+      "rank": 13,
+      "window_ms": 342.60223484039307,
+      "exclusive_time_ms": {
+        "LOCAL_KERNEL": 117.76894092559814,
+        "NO_OBSERVED_DEVICE": 71.83371353149414,
+        "CP+LOCAL_KERNEL": 6.1982011795043945,
+        "CP": 141.2200927734375,
+        "LOCAL_MEMORY": 0.015039443969726562,
+        "EP_DISPATCH": 4.392886161804199,
+        "EP_COMBINE": 1.173360824584961
+      }
+    },
+    {
+      "rank": 14,
+      "window_ms": 342.27452850341797,
+      "exclusive_time_ms": {
+        "LOCAL_KERNEL": 123.79559707641602,
+        "NO_OBSERVED_DEVICE": 66.5457353591919,
+        "CP+LOCAL_KERNEL": 5.949898719787598,
+        "CP": 141.3370065689087,
+        "LOCAL_MEMORY": 0.0149993896484375,
+        "EP_DISPATCH": 3.6382503509521484,
+        "EP_COMBINE": 0.9930410385131836
+      }
+    },
+    {
+      "rank": 15,
+      "window_ms": 342.2992343902588,
+      "exclusive_time_ms": {
+        "LOCAL_KERNEL": 120.04500198364258,
+        "NO_OBSERVED_DEVICE": 69.93641376495361,
+        "CP+LOCAL_KERNEL": 5.959366798400879,
+        "CP": 141.2028350830078,
+        "LOCAL_MEMORY": 0.012841224670410156,
+        "EP_DISPATCH": 4.146971702575684,
+        "EP_COMBINE": 0.9958038330078125
+      }
+    }
+  ],
+  "next": "resolve FusedDispatch/Combine ACE transport and stream event waits before backend cost replacement"
+}

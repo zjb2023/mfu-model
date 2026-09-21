@@ -1,0 +1,24 @@
+{
+  "version": "pp32-f-split-r8",
+  "scope": "source32 iter60 PP1 F0 ranks8..15 only",
+  "target256_read": false,
+  "old_model_modified": false,
+  "framework": [
+    {
+      "path": "/home/zjb/Desktop/fabric-data-analysis/0722/236B/Megatron-LM/megatron/core/transformer/moe/fused_a2a.py",
+      "sha256": "80c96a2220e87f4a8af44cd02d6bf7f966adcb8672bc9d74b8155cbbf82bc8b5"
+    },
+    {
+      "path": "/home/zjb/Desktop/fabric-data-analysis/0722/236B/Megatron-LM/megatron/core/transformer/moe/token_dispatcher.py",
+      "sha256": "9e765623e53cb4c3d877a7398724d8e4e14be027ebf603bb0711d6a27108e0fa"
+    }
+  ],
+  "framework_exact_runtime_equivalence": false,
+  "gates": [
+    "exclusive time conservation",
+    "all CP group participants matched",
+    "EP fused semantics preserved",
+    "backend service slots remain null, no inferred pure transport"
+  ],
+  "warning": "CPU-order skeleton is not complete GPU dependency graph; no invented collective readiness or service costs"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS_CANDIDATE_REPLAY_NOT_VALIDATION",
+  "formula": "t_PP(phase,P)=t_PP_source(phase)*(1+alpha*(P/4-1))",
+  "alpha": 0.2819401430184208,
+  "multiplier_at_PP16": 1.8458204290552624,
+  "calibrated_PP": [
+    4,
+    16
+  ],
+  "scope": "same 80MiB PP payload; effective cost, not pure network service; do not extrapolate beyond PP4..16 without verification",
+  "fitted_parameter_count": 1,
+  "target_used_for_calibration": true,
+  "fit_objective": "equal-weight least squares on F/B target medians, NOT total iteration error",
+  "costs_ms": {
+    "F": 5.097951103664119,
+    "B": 5.030566378070327
+  },
+  "original_prediction_ms": 21653.357840418816,
+  "candidate_prediction_ms": 21736.96202767539,
+  "window_increase_ms": 83.60418725657291,
+  "trace_ms": 20396.01318693161,
+  "original_error_percent": 6.164658955470892,
+  "candidate_error_percent": 6.574563511279585,
+  "replay": "exact scalar contraction of unchanged F/B templates; original frozen window reproduced within 1e-6 ms",
+  "source_PP4_multiplier": 1,
+  "frozen_inputs_unchanged": true,
+  "promoted": false
+}

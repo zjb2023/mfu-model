@@ -1,0 +1,52 @@
+{
+  "status": "PARTIAL",
+  "interface_tests": "PASS",
+  "observed_ms": 83.56112766265869,
+  "conditional_replay_ms": 83.57383060455322,
+  "error_ms": 0.01270294189453125,
+  "ARE_percent": 0.015201975188527603,
+  "exact_instance_replay_ms": 83.57383060455322,
+  "largest_node_start_error_ms": 0.3381214141845703,
+  "negative_lags": [
+    {
+      "node": "r8:M",
+      "lag_ms": -0.01270294189453125,
+      "meaning": "shared latest-completion approximation is later than this local observed start"
+    }
+  ],
+  "source_lags_ms": {
+    "r8:C0": 0.011707305908203125,
+    "r8:C1": 0.0040798187255859375,
+    "r8:C2": 0.007625579833984375,
+    "r8:C3": 7.505457878112793,
+    "r9:C1": 0.004960060119628906,
+    "r9:C2": 0.0070056915283203125,
+    "r9:C3": 7.52899169921875,
+    "r9:M": 0.005400657653808594,
+    "CP0": 0.09995651245117188,
+    "CP1": 0.009626388549804688,
+    "CP2": 0.00279998779296875,
+    "CP3": 0.40812110900878906
+  },
+  "perturbation_tests": {
+    "zero_CP": {
+      "window_ms": 48.33222579956055,
+      "delta_from_baseline_ms": -35.241604804992676
+    },
+    "plus_1ms_each": {
+      "window_ms": 87.57383060455322,
+      "delta_from_baseline_ms": 4.0
+    },
+    "double_384": {
+      "window_ms": 106.12881374359131,
+      "delta_from_baseline_ms": 22.554983139038086
+    }
+  },
+  "cost_basis": "effective_cp_block_ms",
+  "predictive_accuracy_claim": false,
+  "blockers": [
+    "runtime sync records omit event/stream handles, cross-stream mapping unproven",
+    "source residual lags retained",
+    "EP other ranks folded, not explicit"
+  ]
+}
