@@ -1,0 +1,63 @@
+{
+  "status": "SENSITIVITY_ONLY_NOT_VALIDATED_PREDICTION",
+  "source_rs_union_ms": 21.755322456359863,
+  "source_tail_ms": 296.62558364868164,
+  "target_tail_ms": 376.9974160194397,
+  "observed_gap_ms": 80.37183237075806,
+  "rs_event_counts": [
+    1,
+    2
+  ],
+  "scenarios": [
+    {
+      "mixed_to_intra_effective_bandwidth_ratio": 1.0,
+      "volume_ratio": 1.0,
+      "bandwidth_sensitive_fraction": 1.0,
+      "added_ms": 0.0,
+      "candidate_tail_ms": 296.62558364868164,
+      "target_minus_candidate_ms": 80.37183237075806,
+      "fraction_of_observed_gap": 0.0
+    },
+    {
+      "mixed_to_intra_effective_bandwidth_ratio": 0.75,
+      "volume_ratio": 1.0,
+      "bandwidth_sensitive_fraction": 1.0,
+      "added_ms": 7.251774152119953,
+      "candidate_tail_ms": 303.8773578008016,
+      "target_minus_candidate_ms": 73.12005821863812,
+      "fraction_of_observed_gap": 0.09022780666076229
+    },
+    {
+      "mixed_to_intra_effective_bandwidth_ratio": 0.5,
+      "volume_ratio": 1.0,
+      "bandwidth_sensitive_fraction": 1.0,
+      "added_ms": 21.755322456359863,
+      "candidate_tail_ms": 318.3809061050415,
+      "target_minus_candidate_ms": 58.61650991439819,
+      "fraction_of_observed_gap": 0.2706834199822869
+    },
+    {
+      "mixed_to_intra_effective_bandwidth_ratio": 0.25,
+      "volume_ratio": 1.0,
+      "bandwidth_sensitive_fraction": 1.0,
+      "added_ms": 65.26596736907959,
+      "candidate_tail_ms": 361.89155101776123,
+      "target_minus_candidate_ms": 15.105865001678467,
+      "fraction_of_observed_gap": 0.8120502599468606
+    }
+  ],
+  "formula": "T_candidate = T_source + t_RS_source * f * (q / r - 1)",
+  "parameters": {
+    "r": "mixed/intra effective bandwidth ratio",
+    "q": "target/source effective transferred-byte ratio",
+    "f": "source RS duration fraction treated as bandwidth-sensitive"
+  },
+  "limits": [
+    "rank0 iter60 only; source RS includes potential waiting",
+    "q=1 and f=1 are assumptions, not measured facts",
+    "extra target RS not attributed to DP/EDP; not modeled by r",
+    "AG, optimizer and all other windows unchanged",
+    "no absolute bandwidth or independent byte baseline available here",
+    "no scenario promoted to the frozen full-step prediction"
+  ]
+}
