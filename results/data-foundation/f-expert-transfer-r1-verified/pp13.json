@@ -1,0 +1,4130 @@
+{
+  "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker34071/profiler/iteration_60/rank208.1785477877145.pt.trace.json",
+  "sha256": "497bb454e553066e0b2f2004a9f9288c0e97ec8634955492ad9e668958b0791b",
+  "blocks": [
+    {
+      "mb": 0,
+      "components": {
+        "FC1": 6.330337890625,
+        "FC2": 3.53305029296875,
+        "activation": 2.5233681640625
+      },
+      "total_ms": 12.38675634765625,
+      "operators": [
+        {
+          "event": -1,
+          "group": "FC1",
+          "unit": 0,
+          "args": {
+            "Input Dims": [
+              [
+                17779,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -2,
+          "group": "FC2",
+          "unit": 0,
+          "args": {
+            "Input Dims": [
+              [
+                17779,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -3,
+          "group": "FC1",
+          "unit": 1,
+          "args": {
+            "Input Dims": [
+              [
+                12250,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -4,
+          "group": "FC2",
+          "unit": 1,
+          "args": {
+            "Input Dims": [
+              [
+                12250,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -5,
+          "group": "FC1",
+          "unit": 2,
+          "args": {
+            "Input Dims": [
+              [
+                20517,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -6,
+          "group": "FC2",
+          "unit": 2,
+          "args": {
+            "Input Dims": [
+              [
+                20517,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -7,
+          "group": "FC1",
+          "unit": 3,
+          "args": {
+            "Input Dims": [
+              [
+                19680,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -8,
+          "group": "FC2",
+          "unit": 3,
+          "args": {
+            "Input Dims": [
+              [
+                19680,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        }
+      ],
+      "devices": [
+        {
+          "event": 53414,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071806599.407,
+          "end_us": 2510071806759.928,
+          "launch_events": [
+            53412
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 53418,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071806768.488,
+          "end_us": 2510071807208.249,
+          "launch_events": [
+            53416
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 53422,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071807210.729,
+          "end_us": 2510071807637.05,
+          "launch_events": [
+            53420
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 53426,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071807639.41,
+          "end_us": 2510071808067.5713,
+          "launch_events": [
+            53424
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 53430,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071808069.691,
+          "end_us": 2510071808187.252,
+          "launch_events": [
+            53428
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 53434,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510071808189.612,
+          "end_us": 2510071808322.292,
+          "launch_events": [
+            53432
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 53438,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510071808324.652,
+          "end_us": 2510071808404.052,
+          "launch_events": [
+            53436
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 53442,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510071808406.532,
+          "end_us": 2510071808535.413,
+          "launch_events": [
+            53440
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 53446,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510071808538.053,
+          "end_us": 2510071808653.973,
+          "launch_events": [
+            53444
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 53450,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510071808655.813,
+          "end_us": 2510071808844.054,
+          "launch_events": [
+            53448
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 53478,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "group": "FC2",
+          "start_us": 2510071808987.254,
+          "end_us": 2510071809075.5337,
+          "launch_events": [
+            53476
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 53482,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071809081.934,
+          "end_us": 2510071809342.775,
+          "launch_events": [
+            53480
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 53486,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071809344.895,
+          "end_us": 2510071809580.176,
+          "launch_events": [
+            53484
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 53490,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071809582.056,
+          "end_us": 2510071809817.377,
+          "launch_events": [
+            53488
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 53494,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071809819.417,
+          "end_us": 2510071809888.257,
+          "launch_events": [
+            53492
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54110,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510071885469.241,
+          "end_us": 2510071885507.9214,
+          "launch_events": [
+            54108
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54114,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071885509.641,
+          "end_us": 2510071885624.681,
+          "launch_events": [
+            54112
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54118,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071885629.281,
+          "end_us": 2510071885756.6406,
+          "launch_events": [
+            54116
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54122,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071885759.001,
+          "end_us": 2510071886185.443,
+          "launch_events": [
+            54120
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54126,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071886188.363,
+          "end_us": 2510071886621.124,
+          "launch_events": [
+            54124
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54130,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510071886623.244,
+          "end_us": 2510071886719.4844,
+          "launch_events": [
+            54128
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54134,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510071886721.844,
+          "end_us": 2510071886770.3643,
+          "launch_events": [
+            54132
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 54138,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510071886772.164,
+          "end_us": 2510071886859.685,
+          "launch_events": [
+            54136
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 54142,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510071886862.165,
+          "end_us": 2510071886939.925,
+          "launch_events": [
+            54140
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 54146,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510071886941.685,
+          "end_us": 2510071887069.685,
+          "launch_events": [
+            54144
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 54174,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510071887173.966,
+          "end_us": 2510071887195.646,
+          "launch_events": [
+            54172
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54178,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071887197.006,
+          "end_us": 2510071887274.526,
+          "launch_events": [
+            54176
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54182,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071887277.046,
+          "end_us": 2510071887354.486,
+          "launch_events": [
+            54180
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54186,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071887357.766,
+          "end_us": 2510071887597.847,
+          "launch_events": [
+            54184
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54190,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071887601.567,
+          "end_us": 2510071887838.648,
+          "launch_events": [
+            54188
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54806,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071964583.075,
+          "end_us": 2510071965020.876,
+          "launch_events": [
+            54804
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54810,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510071965024.796,
+          "end_us": 2510071965063.996,
+          "launch_events": [
+            54808
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54814,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071965066.356,
+          "end_us": 2510071965493.398,
+          "launch_events": [
+            54812
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54818,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071965495.798,
+          "end_us": 2510071965927.6387,
+          "launch_events": [
+            54816
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54822,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071965930.799,
+          "end_us": 2510071966360.28,
+          "launch_events": [
+            54820
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54826,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510071966363.08,
+          "end_us": 2510071966472.04,
+          "launch_events": [
+            54824
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54830,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510071966473.92,
+          "end_us": 2510071966625.801,
+          "launch_events": [
+            54828
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54834,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510071966627.601,
+          "end_us": 2510071966714.881,
+          "launch_events": [
+            54832
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 54838,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510071966716.401,
+          "end_us": 2510071966865.642,
+          "launch_events": [
+            54836
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 54842,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510071966867.642,
+          "end_us": 2510071967007.082,
+          "launch_events": [
+            54840
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 54846,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510071967009.282,
+          "end_us": 2510071967215.4834,
+          "launch_events": [
+            54844
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 54876,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071967371.443,
+          "end_us": 2510071967631.444,
+          "launch_events": [
+            54874
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54880,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510071967633.684,
+          "end_us": 2510071967655.284,
+          "launch_events": [
+            54878
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54884,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071967658.004,
+          "end_us": 2510071967890.3647,
+          "launch_events": [
+            54882
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54888,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071967892.325,
+          "end_us": 2510071968125.245,
+          "launch_events": [
+            54886
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54892,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510071968128.725,
+          "end_us": 2510071968363.886,
+          "launch_events": [
+            54890
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 54896,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "group": "FC2",
+          "start_us": 2510071968367.446,
+          "end_us": 2510071968415.926,
+          "launch_events": [
+            54894
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 55508,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072045411.874,
+          "end_us": 2510072045854.995,
+          "launch_events": [
+            55506
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 55512,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072045856.915,
+          "end_us": 2510072046284.917,
+          "launch_events": [
+            55510
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 55516,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072046288.597,
+          "end_us": 2510072046724.518,
+          "launch_events": [
+            55514
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 55520,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072046726.918,
+          "end_us": 2510072047163.279,
+          "launch_events": [
+            55518
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 55524,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510072047165.399,
+          "end_us": 2510072047312.16,
+          "launch_events": [
+            55522
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 55528,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510072047313.92,
+          "end_us": 2510072047400.56,
+          "launch_events": [
+            55526
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 55532,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072047402.6,
+          "end_us": 2510072047544.36,
+          "launch_events": [
+            55530
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 55536,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072047546.0,
+          "end_us": 2510072047678.041,
+          "launch_events": [
+            55534
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 55540,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510072047680.081,
+          "end_us": 2510072047879.041,
+          "launch_events": [
+            55538
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 55566,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072048029.922,
+          "end_us": 2510072048285.2827,
+          "launch_events": [
+            55564
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 55570,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072048287.283,
+          "end_us": 2510072048523.603,
+          "launch_events": [
+            55568
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 55574,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072048525.643,
+          "end_us": 2510072048759.8843,
+          "launch_events": [
+            55572
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 55578,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072048764.044,
+          "end_us": 2510072048998.285,
+          "launch_events": [
+            55576
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        }
+      ]
+    },
+    {
+      "mb": 1,
+      "components": {
+        "FC1": 6.38877978515625,
+        "FC2": 3.5402119140625,
+        "activation": 2.53508642578125
+      },
+      "total_ms": 12.464078125,
+      "operators": [
+        {
+          "event": -9,
+          "group": "FC1",
+          "unit": 0,
+          "args": {
+            "Input Dims": [
+              [
+                18597,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -10,
+          "group": "FC2",
+          "unit": 0,
+          "args": {
+            "Input Dims": [
+              [
+                18597,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -11,
+          "group": "FC1",
+          "unit": 1,
+          "args": {
+            "Input Dims": [
+              [
+                12073,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -12,
+          "group": "FC2",
+          "unit": 1,
+          "args": {
+            "Input Dims": [
+              [
+                12073,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -13,
+          "group": "FC1",
+          "unit": 2,
+          "args": {
+            "Input Dims": [
+              [
+                19916,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -14,
+          "group": "FC2",
+          "unit": 2,
+          "args": {
+            "Input Dims": [
+              [
+                19916,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -15,
+          "group": "FC1",
+          "unit": 3,
+          "args": {
+            "Input Dims": [
+              [
+                19680,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -16,
+          "group": "FC2",
+          "unit": 3,
+          "args": {
+            "Input Dims": [
+              [
+                19680,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        }
+      ],
+      "devices": [
+        {
+          "event": 56262,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072134477.569,
+          "end_us": 2510072134788.33,
+          "launch_events": [
+            56260
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56266,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072134795.85,
+          "end_us": 2510072135232.892,
+          "launch_events": [
+            56264
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56270,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072135235.292,
+          "end_us": 2510072135679.493,
+          "launch_events": [
+            56268
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56274,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072135682.773,
+          "end_us": 2510072136117.655,
+          "launch_events": [
+            56272
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56278,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510072136121.415,
+          "end_us": 2510072136157.215,
+          "launch_events": [
+            56276
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56282,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+          "group": "FC1",
+          "start_us": 2510072136159.415,
+          "end_us": 2510072136215.735,
+          "launch_events": [
+            56280
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56286,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510072136217.895,
+          "end_us": 2510072136354.735,
+          "launch_events": [
+            56284
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56290,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510072136357.295,
+          "end_us": 2510072136437.656,
+          "launch_events": [
+            56288
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 56294,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072136439.936,
+          "end_us": 2510072136575.776,
+          "launch_events": [
+            56292
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 56298,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072136577.336,
+          "end_us": 2510072136699.0957,
+          "launch_events": [
+            56296
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 56302,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510072136701.656,
+          "end_us": 2510072136888.217,
+          "launch_events": [
+            56300
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 56332,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072137030.737,
+          "end_us": 2510072137218.1777,
+          "launch_events": [
+            56330
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56336,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072137220.018,
+          "end_us": 2510072137459.7393,
+          "launch_events": [
+            56334
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56340,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072137461.779,
+          "end_us": 2510072137696.54,
+          "launch_events": [
+            56338
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56344,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072137698.46,
+          "end_us": 2510072137934.58,
+          "launch_events": [
+            56342
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56348,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510072137936.62,
+          "end_us": 2510072137957.22,
+          "launch_events": [
+            56346
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56352,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+          "group": "FC2",
+          "start_us": 2510072137958.74,
+          "end_us": 2510072137990.4204,
+          "launch_events": [
+            56350
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56964,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072213675.26,
+          "end_us": 2510072213832.82,
+          "launch_events": [
+            56962
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56968,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072213836.54,
+          "end_us": 2510072213965.18,
+          "launch_events": [
+            56966
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56972,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+          "group": "FC1",
+          "start_us": 2510072213967.1,
+          "end_us": 2510072214345.662,
+          "launch_events": [
+            56970
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56976,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072214352.302,
+          "end_us": 2510072214786.943,
+          "launch_events": [
+            56974
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56980,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510072214790.103,
+          "end_us": 2510072214885.423,
+          "launch_events": [
+            56978
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 56984,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510072214887.183,
+          "end_us": 2510072214935.9043,
+          "launch_events": [
+            56982
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 56988,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072214937.704,
+          "end_us": 2510072215026.304,
+          "launch_events": [
+            56986
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 56992,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072215029.064,
+          "end_us": 2510072215103.984,
+          "launch_events": [
+            56990
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 56996,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510072215105.944,
+          "end_us": 2510072215233.504,
+          "launch_events": [
+            56994
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 57022,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+          "group": "FC2",
+          "start_us": 2510072215335.825,
+          "end_us": 2510072215423.4653,
+          "launch_events": [
+            57020
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57026,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072215429.305,
+          "end_us": 2510072215510.5054,
+          "launch_events": [
+            57024
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57030,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072215512.345,
+          "end_us": 2510072215707.5464,
+          "launch_events": [
+            57028
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57034,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072215714.786,
+          "end_us": 2510072215947.667,
+          "launch_events": [
+            57032
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57650,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072292203.908,
+          "end_us": 2510072292639.5093,
+          "launch_events": [
+            57648
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57654,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510072292642.669,
+          "end_us": 2510072292689.629,
+          "launch_events": [
+            57652
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57658,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072292691.869,
+          "end_us": 2510072293118.79,
+          "launch_events": [
+            57656
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57662,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072293120.95,
+          "end_us": 2510072293552.872,
+          "launch_events": [
+            57660
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57666,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072293555.832,
+          "end_us": 2510072293984.873,
+          "launch_events": [
+            57664
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57670,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x96B128_epilogue_stage3_btmenc",
+          "group": "FC1",
+          "start_us": 2510072293987.713,
+          "end_us": 2510072294042.0327,
+          "launch_events": [
+            57668
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57674,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510072294046.073,
+          "end_us": 2510072294194.914,
+          "launch_events": [
+            57672
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57678,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510072294197.914,
+          "end_us": 2510072294290.754,
+          "launch_events": [
+            57676
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 57682,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072294293.034,
+          "end_us": 2510072294437.035,
+          "launch_events": [
+            57680
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 57686,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072294438.955,
+          "end_us": 2510072294571.475,
+          "launch_events": [
+            57684
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 57690,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510072294575.155,
+          "end_us": 2510072294780.5156,
+          "launch_events": [
+            57688
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 57720,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072294934.436,
+          "end_us": 2510072295192.477,
+          "launch_events": [
+            57718
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57724,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x96B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510072295194.837,
+          "end_us": 2510072295222.477,
+          "launch_events": [
+            57722
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57728,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072295224.557,
+          "end_us": 2510072295462.078,
+          "launch_events": [
+            57726
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57732,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072295464.038,
+          "end_us": 2510072295699.479,
+          "launch_events": [
+            57730
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57736,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072295701.359,
+          "end_us": 2510072295937.239,
+          "launch_events": [
+            57734
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 57740,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x96B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510072295939.479,
+          "end_us": 2510072295966.119,
+          "launch_events": [
+            57738
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 58352,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072371811.959,
+          "end_us": 2510072372250.32,
+          "launch_events": [
+            58350
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 58356,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072372252.56,
+          "end_us": 2510072372699.962,
+          "launch_events": [
+            58354
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 58360,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072372701.882,
+          "end_us": 2510072373129.603,
+          "launch_events": [
+            58358
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 58364,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072373131.803,
+          "end_us": 2510072373563.9253,
+          "launch_events": [
+            58362
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 58368,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510072373567.565,
+          "end_us": 2510072373719.205,
+          "launch_events": [
+            58366
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 58372,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510072373721.965,
+          "end_us": 2510072373806.3247,
+          "launch_events": [
+            58370
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 58376,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072373807.965,
+          "end_us": 2510072373950.3657,
+          "launch_events": [
+            58374
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 58380,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072373952.446,
+          "end_us": 2510072374086.2456,
+          "launch_events": [
+            58378
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 58384,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510072374088.366,
+          "end_us": 2510072374291.207,
+          "launch_events": [
+            58382
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 58410,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072374443.327,
+          "end_us": 2510072374701.928,
+          "launch_events": [
+            58408
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 58414,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072374703.808,
+          "end_us": 2510072374946.889,
+          "launch_events": [
+            58412
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 58418,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072374948.969,
+          "end_us": 2510072375181.29,
+          "launch_events": [
+            58416
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 58422,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072375183.25,
+          "end_us": 2510072375421.05,
+          "launch_events": [
+            58420
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        }
+      ]
+    },
+    {
+      "mb": 2,
+      "components": {
+        "FC1": 6.3236201171875,
+        "FC2": 3.4848916015625,
+        "activation": 2.5142080078125
+      },
+      "total_ms": 12.3227197265625,
+      "operators": [
+        {
+          "event": -17,
+          "group": "FC1",
+          "unit": 0,
+          "args": {
+            "Input Dims": [
+              [
+                18058,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -18,
+          "group": "FC2",
+          "unit": 0,
+          "args": {
+            "Input Dims": [
+              [
+                18058,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -19,
+          "group": "FC1",
+          "unit": 1,
+          "args": {
+            "Input Dims": [
+              [
+                12615,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -20,
+          "group": "FC2",
+          "unit": 1,
+          "args": {
+            "Input Dims": [
+              [
+                12615,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -21,
+          "group": "FC1",
+          "unit": 2,
+          "args": {
+            "Input Dims": [
+              [
+                19932,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -22,
+          "group": "FC2",
+          "unit": 2,
+          "args": {
+            "Input Dims": [
+              [
+                19932,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -23,
+          "group": "FC1",
+          "unit": 3,
+          "args": {
+            "Input Dims": [
+              [
+                19134,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -24,
+          "group": "FC2",
+          "unit": 3,
+          "args": {
+            "Input Dims": [
+              [
+                19134,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        }
+      ],
+      "devices": [
+        {
+          "event": 59106,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+          "group": "FC1",
+          "start_us": 2510072495253.389,
+          "end_us": 2510072495516.91,
+          "launch_events": [
+            59104
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59110,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072495524.63,
+          "end_us": 2510072495963.311,
+          "launch_events": [
+            59108
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59114,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072495967.351,
+          "end_us": 2510072496371.1123,
+          "launch_events": [
+            59112
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59118,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072496373.712,
+          "end_us": 2510072496784.794,
+          "launch_events": [
+            59116
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59122,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510072496786.994,
+          "end_us": 2510072496822.514,
+          "launch_events": [
+            59120
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59126,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_256x128B128_epilogue_persis_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510072496824.274,
+          "end_us": 2510072496892.674,
+          "launch_events": [
+            59124
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59130,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510072496896.514,
+          "end_us": 2510072497030.6353,
+          "launch_events": [
+            59128
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59134,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510072497032.675,
+          "end_us": 2510072497111.5947,
+          "launch_events": [
+            59132
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 59138,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072497113.875,
+          "end_us": 2510072497246.235,
+          "launch_events": [
+            59136
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 59142,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072497248.355,
+          "end_us": 2510072497367.476,
+          "launch_events": [
+            59140
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 59146,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510072497369.156,
+          "end_us": 2510072497553.196,
+          "launch_events": [
+            59144
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 59176,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072497698.797,
+          "end_us": 2510072497851.917,
+          "launch_events": [
+            59174
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59180,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072497854.237,
+          "end_us": 2510072498093.998,
+          "launch_events": [
+            59178
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59184,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072498096.038,
+          "end_us": 2510072498330.719,
+          "launch_events": [
+            59182
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59188,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072498332.999,
+          "end_us": 2510072498566.279,
+          "launch_events": [
+            59186
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59192,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510072498568.719,
+          "end_us": 2510072498590.039,
+          "launch_events": [
+            59190
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59196,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+          "group": "FC2",
+          "start_us": 2510072498591.599,
+          "end_us": 2510072498622.08,
+          "launch_events": [
+            59194
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59806,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510072575194.921,
+          "end_us": 2510072575231.842,
+          "launch_events": [
+            59804
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59810,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072575233.442,
+          "end_us": 2510072575395.482,
+          "launch_events": [
+            59808
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59814,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072575398.322,
+          "end_us": 2510072575517.002,
+          "launch_events": [
+            59812
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59818,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072575519.362,
+          "end_us": 2510072575962.8037,
+          "launch_events": [
+            59816
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59822,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072575966.124,
+          "end_us": 2510072576400.205,
+          "launch_events": [
+            59820
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59826,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510072576403.685,
+          "end_us": 2510072576503.166,
+          "launch_events": [
+            59824
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59830,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510072576507.086,
+          "end_us": 2510072576558.486,
+          "launch_events": [
+            59828
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 59834,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072576560.526,
+          "end_us": 2510072576650.646,
+          "launch_events": [
+            59832
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 59838,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072576652.446,
+          "end_us": 2510072576732.526,
+          "launch_events": [
+            59836
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 59842,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510072576733.966,
+          "end_us": 2510072576868.007,
+          "launch_events": [
+            59840
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 59870,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510072576976.887,
+          "end_us": 2510072576998.727,
+          "launch_events": [
+            59868
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59874,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "group": "FC2",
+          "start_us": 2510072577000.127,
+          "end_us": 2510072577085.607,
+          "launch_events": [
+            59872
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59878,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "group": "FC2",
+          "start_us": 2510072577091.527,
+          "end_us": 2510072577140.208,
+          "launch_events": [
+            59876
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59882,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072577142.488,
+          "end_us": 2510072577390.088,
+          "launch_events": [
+            59880
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 59886,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072577393.328,
+          "end_us": 2510072577625.5293,
+          "launch_events": [
+            59884
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60496,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072654235.25,
+          "end_us": 2510072654675.891,
+          "launch_events": [
+            60494
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60500,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510072654678.051,
+          "end_us": 2510072654714.571,
+          "launch_events": [
+            60498
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60504,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072654716.611,
+          "end_us": 2510072655147.372,
+          "launch_events": [
+            60502
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60508,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072655149.612,
+          "end_us": 2510072655577.774,
+          "launch_events": [
+            60506
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60512,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072655580.374,
+          "end_us": 2510072656002.855,
+          "launch_events": [
+            60510
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60516,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_128x128B128_epilogue_stage3_btmenc",
+          "group": "FC1",
+          "start_us": 2510072656006.775,
+          "end_us": 2510072656060.255,
+          "launch_events": [
+            60514
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60520,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510072656063.695,
+          "end_us": 2510072656210.5757,
+          "launch_events": [
+            60518
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60524,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510072656213.016,
+          "end_us": 2510072656300.1763,
+          "launch_events": [
+            60522
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 60528,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072656303.176,
+          "end_us": 2510072656448.776,
+          "launch_events": [
+            60526
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 60532,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072656451.376,
+          "end_us": 2510072656585.137,
+          "launch_events": [
+            60530
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 60536,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510072656586.737,
+          "end_us": 2510072656792.1367,
+          "launch_events": [
+            60534
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 60566,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072656943.378,
+          "end_us": 2510072657201.098,
+          "launch_events": [
+            60564
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60570,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510072657203.538,
+          "end_us": 2510072657224.379,
+          "launch_events": [
+            60568
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60574,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072657225.939,
+          "end_us": 2510072657461.179,
+          "launch_events": [
+            60572
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60578,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072657464.579,
+          "end_us": 2510072657703.02,
+          "launch_events": [
+            60576
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60582,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072657705.02,
+          "end_us": 2510072657941.221,
+          "launch_events": [
+            60580
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 60586,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4_btmenc",
+          "group": "FC2",
+          "start_us": 2510072657943.141,
+          "end_us": 2510072657976.3013,
+          "launch_events": [
+            60584
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 61198,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+          "group": "FC1",
+          "start_us": 2510072735737.37,
+          "end_us": 2510072736119.491,
+          "launch_events": [
+            61196
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 61202,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072736124.331,
+          "end_us": 2510072736560.5723,
+          "launch_events": [
+            61200
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 61206,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072736563.332,
+          "end_us": 2510072736996.293,
+          "launch_events": [
+            61204
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 61210,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510072736998.813,
+          "end_us": 2510072737442.935,
+          "launch_events": [
+            61208
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 61214,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510072737446.895,
+          "end_us": 2510072737588.855,
+          "launch_events": [
+            61212
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 61218,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510072737591.935,
+          "end_us": 2510072737678.455,
+          "launch_events": [
+            61216
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 61222,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072737680.615,
+          "end_us": 2510072737819.7363,
+          "launch_events": [
+            61220
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 61226,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510072737821.656,
+          "end_us": 2510072737950.4956,
+          "launch_events": [
+            61224
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 61230,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510072737952.256,
+          "end_us": 2510072738147.5366,
+          "launch_events": [
+            61228
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 61256,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072738294.657,
+          "end_us": 2510072738492.938,
+          "launch_events": [
+            61254
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 61260,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072738498.938,
+          "end_us": 2510072738746.098,
+          "launch_events": [
+            61258
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 61264,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072738748.378,
+          "end_us": 2510072738982.939,
+          "launch_events": [
+            61262
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 61268,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510072738984.939,
+          "end_us": 2510072739219.78,
+          "launch_events": [
+            61266
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        }
+      ]
+    },
+    {
+      "mb": 3,
+      "components": {
+        "FC1": 6.12129931640625,
+        "FC2": 3.368130859375,
+        "activation": 2.374966796875
+      },
+      "total_ms": 11.86439697265625,
+      "operators": [
+        {
+          "event": -25,
+          "group": "FC1",
+          "unit": 0,
+          "args": {
+            "Input Dims": [
+              [
+                17226,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -26,
+          "group": "FC2",
+          "unit": 0,
+          "args": {
+            "Input Dims": [
+              [
+                17226,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -27,
+          "group": "FC1",
+          "unit": 1,
+          "args": {
+            "Input Dims": [
+              [
+                10368,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -28,
+          "group": "FC2",
+          "unit": 1,
+          "args": {
+            "Input Dims": [
+              [
+                10368,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -29,
+          "group": "FC1",
+          "unit": 2,
+          "args": {
+            "Input Dims": [
+              [
+                19152,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -30,
+          "group": "FC2",
+          "unit": 2,
+          "args": {
+            "Input Dims": [
+              [
+                19152,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -31,
+          "group": "FC1",
+          "unit": 3,
+          "args": {
+            "Input Dims": [
+              [
+                19083,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        },
+        {
+          "event": -32,
+          "group": "FC2",
+          "unit": 3,
+          "args": {
+            "Input Dims": [
+              [
+                19083,
+                1536
+              ]
+            ],
+            "boundary_basis": "permute/silu/unpermute CPU boundaries; only GEMM GPU counted"
+          }
+        }
+      ],
+      "devices": [
+        {
+          "event": 78068,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510074786759.633,
+          "end_us": 2510074786919.593,
+          "launch_events": [
+            78066
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78072,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510074786924.113,
+          "end_us": 2510074787361.0747,
+          "launch_events": [
+            78070
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78076,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510074787363.075,
+          "end_us": 2510074787798.2363,
+          "launch_events": [
+            78074
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78080,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510074787800.316,
+          "end_us": 2510074788226.437,
+          "launch_events": [
+            78078
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78084,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510074788229.997,
+          "end_us": 2510074788266.957,
+          "launch_events": [
+            78082
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78088,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_128x256B128_epilogue_persis_stage4",
+          "group": "FC1",
+          "start_us": 2510074788269.317,
+          "end_us": 2510074788366.318,
+          "launch_events": [
+            78086
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78092,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510074788369.838,
+          "end_us": 2510074788495.1577,
+          "launch_events": [
+            78090
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78096,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510074788497.798,
+          "end_us": 2510074788573.918,
+          "launch_events": [
+            78094
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 78100,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510074788576.518,
+          "end_us": 2510074788701.839,
+          "launch_events": [
+            78098
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 78104,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510074788704.439,
+          "end_us": 2510074788820.799,
+          "launch_events": [
+            78102
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 78108,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510074788824.159,
+          "end_us": 2510074789000.7603,
+          "launch_events": [
+            78106
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 78138,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_320x256B128_squad_level_epilogue",
+          "group": "FC2",
+          "start_us": 2510074789139.4,
+          "end_us": 2510074789226.76,
+          "launch_events": [
+            78136
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78142,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510074789233.48,
+          "end_us": 2510074789487.801,
+          "launch_events": [
+            78140
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78146,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510074789490.121,
+          "end_us": 2510074789721.242,
+          "launch_events": [
+            78144
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78150,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510074789723.642,
+          "end_us": 2510074789959.3633,
+          "launch_events": [
+            78148
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78154,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510074789961.523,
+          "end_us": 2510074789982.603,
+          "launch_events": [
+            78152
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78158,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510074789984.443,
+          "end_us": 2510074790023.643,
+          "launch_events": [
+            78156
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78776,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510074866869.558,
+          "end_us": 2510074866906.478,
+          "launch_events": [
+            78774
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78780,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510074866908.118,
+          "end_us": 2510074866949.038,
+          "launch_events": [
+            78778
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78784,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_256x128B128_epilogue_persis_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510074866950.518,
+          "end_us": 2510074867025.038,
+          "launch_events": [
+            78782
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78788,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510074867027.398,
+          "end_us": 2510074867465.88,
+          "launch_events": [
+            78786
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78792,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510074867469.36,
+          "end_us": 2510074867909.121,
+          "launch_events": [
+            78790
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78796,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510074867912.841,
+          "end_us": 2510074867993.881,
+          "launch_events": [
+            78794
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78800,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510074867995.721,
+          "end_us": 2510074868032.2812,
+          "launch_events": [
+            78798
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 78804,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510074868033.881,
+          "end_us": 2510074868105.7217,
+          "launch_events": [
+            78802
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 78808,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510074868107.642,
+          "end_us": 2510074868171.8022,
+          "launch_events": [
+            78806
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 78812,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510074868173.562,
+          "end_us": 2510074868281.922,
+          "launch_events": [
+            78810
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 78840,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510074868368.482,
+          "end_us": 2510074868389.563,
+          "launch_events": [
+            78838
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78844,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510074868391.163,
+          "end_us": 2510074868414.043,
+          "launch_events": [
+            78842
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78848,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x192B128_epilogue_persis_stage2_btmenc",
+          "group": "FC2",
+          "start_us": 2510074868415.603,
+          "end_us": 2510074868460.123,
+          "launch_events": [
+            78846
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78852,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510074868463.163,
+          "end_us": 2510074868705.443,
+          "launch_events": [
+            78850
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 78856,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510074868707.923,
+          "end_us": 2510074868943.684,
+          "launch_events": [
+            78854
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79476,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510074945162.837,
+          "end_us": 2510074945603.399,
+          "launch_events": [
+            79474
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79480,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510074945605.479,
+          "end_us": 2510074945639.799,
+          "launch_events": [
+            79478
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79484,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+          "group": "FC1",
+          "start_us": 2510074945642.279,
+          "end_us": 2510074946022.1196,
+          "launch_events": [
+            79482
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79488,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510074946028.96,
+          "end_us": 2510074946455.561,
+          "launch_events": [
+            79486
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79492,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510074946459.041,
+          "end_us": 2510074946895.523,
+          "launch_events": [
+            79490
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79496,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_64x64B128_epilogue_stage4_btmenc",
+          "group": "FC1",
+          "start_us": 2510074946897.683,
+          "end_us": 2510074946939.443,
+          "launch_events": [
+            79494
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79500,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510074946942.483,
+          "end_us": 2510074947085.043,
+          "launch_events": [
+            79498
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79504,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510074947089.923,
+          "end_us": 2510074947173.8037,
+          "launch_events": [
+            79502
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 79508,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510074947176.684,
+          "end_us": 2510074947316.684,
+          "launch_events": [
+            79506
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 79512,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510074947318.284,
+          "end_us": 2510074947447.4443,
+          "launch_events": [
+            79510
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 79516,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510074947449.564,
+          "end_us": 2510074947645.205,
+          "launch_events": [
+            79514
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 79546,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510074947794.405,
+          "end_us": 2510074948053.446,
+          "launch_events": [
+            79544
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79550,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_256_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510074948057.486,
+          "end_us": 2510074948078.566,
+          "launch_events": [
+            79548
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79554,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510074948080.366,
+          "end_us": 2510074948277.4873,
+          "launch_events": [
+            79552
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79558,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510074948280.607,
+          "end_us": 2510074948517.4478,
+          "launch_events": [
+            79556
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79562,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510074948520.368,
+          "end_us": 2510074948752.728,
+          "launch_events": [
+            79560
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 79566,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_128_32x128B128_epilogue_stage3_btmenc",
+          "group": "FC2",
+          "start_us": 2510074948755.168,
+          "end_us": 2510074948778.768,
+          "launch_events": [
+            79564
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 80182,
+          "name": "musa_asm_bf16bf16bf16bf16gemm_nt_tce_768_256x320B128_squad_level_epilogue",
+          "group": "FC1",
+          "start_us": 2510075023939.998,
+          "end_us": 2510075024337.56,
+          "launch_events": [
+            80180
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 80186,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510075024343.76,
+          "end_us": 2510075024793.1606,
+          "launch_events": [
+            80184
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 80190,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510075024795.441,
+          "end_us": 2510075025245.562,
+          "launch_events": [
+            80188
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 80194,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC1",
+          "start_us": 2510075025248.682,
+          "end_us": 2510075025690.564,
+          "launch_events": [
+            80192
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 80198,
+          "name": "void musa::dnn::unary::kernel_unary_input_last_contig<__mt_bfloat16, musa::dnn::unary::SiluOp, float, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, __mt_bfloat16, double, 128>(__mt_bfloat16*, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, unsigned int __vector(4), unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, long, long)",
+          "group": "activation",
+          "start_us": 2510075025694.164,
+          "end_us": 2510075025841.604,
+          "launch_events": [
+            80196
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "aten::silu",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 80202,
+          "name": "void musa::dnn::(anonymous namespace)::CopyLastContiguousKernel<8, short, true, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, short, 128>(musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, musa::dnn::DeviceTensor<unsigned int, musa::dnn::FastDivmodU32>, long, long, long, long, long, long)",
+          "group": "activation",
+          "start_us": 2510075025844.804,
+          "end_us": 2510075025926.4053,
+          "launch_events": [
+            80200
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::contiguous",
+            "aten::clone",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 80206,
+          "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::MulOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510075025928.165,
+          "end_us": 2510075026070.645,
+          "launch_events": [
+            80204
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 80210,
+          "name": "void musa::dnn::unary::kernel_unary<__mt_bfloat16, musa::dnn::unary::CastOp, float, float, __mt_bfloat16, 128>(float*, __mt_bfloat16 const*, unsigned long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)",
+          "group": "activation",
+          "start_us": 2510075026073.685,
+          "end_us": 2510075026202.445,
+          "launch_events": [
+            80208
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul",
+            "aten::to",
+            "aten::_to_copy",
+            "aten::copy_",
+            "aten::_copy_from"
+          ]
+        },
+        {
+          "event": 80214,
+          "name": "void musa::dnn::binary::kernel_binary_mid_align_right_broadcast_one_dim<float, musa::dnn::binary::MulOp, float, float, float, 4, 128>(float*, float*, float*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float, musa::dnn::FastDivmodU32, long, long)",
+          "group": "activation",
+          "start_us": 2510075026204.565,
+          "end_us": 2510075026406.326,
+          "launch_events": [
+            80212
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC",
+            "aten::mul"
+          ]
+        },
+        {
+          "event": 80240,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_768_384x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510075026555.246,
+          "end_us": 2510075026759.607,
+          "launch_events": [
+            80238
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 80244,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510075026765.207,
+          "end_us": 2510075027036.248,
+          "launch_events": [
+            80242
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 80248,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510075027038.208,
+          "end_us": 2510075027281.569,
+          "launch_events": [
+            80246
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        },
+        {
+          "event": 80252,
+          "name": "musa_asm_bf16bf16bf16bf16ssgemm_nt_tce_512_256x256B128_epilogue_persis_stage2",
+          "group": "FC2",
+          "start_us": 2510075027283.729,
+          "end_us": 2510075027527.729,
+          "launch_events": [
+            80250
+          ],
+          "parents": [
+            "CheckpointFunction",
+            "inferred_expert_FC"
+          ]
+        }
+      ]
+    }
+  ]
+}

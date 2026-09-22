@@ -1,0 +1,5877 @@
+{
+  "status": "PARTIAL_EXCLUSIVE_TIME_ORACLE",
+  "baseline_ms": 21653.357840418812,
+  "oracle_ms": 20548.685946497917,
+  "source": {
+    "FC": 73.36962499999997,
+    "CP": 98.9154296875,
+    "attention": 213.90890332031256,
+    "EP": 6.535725585937496,
+    "other": 192.7003007812501,
+    "overlap": 220.1366123046875,
+    "other_device": 0.0,
+    "no_recorded_device": 60.606848632812486,
+    "group_offset": 2.659913452147862
+  },
+  "rows": [
+    {
+      "node": "s1:B0",
+      "stage": 1,
+      "mb": 0,
+      "components": {
+        "FC": 27.632640625000004,
+        "CP": 112.61774414062499,
+        "attention": 211.58920947265622,
+        "EP": 6.876486816406249,
+        "other": 175.02097363281237,
+        "overlap": 205.260576171875,
+        "other_device": 0.0,
+        "no_recorded_device": 77.15436230468752,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s1:B1",
+      "stage": 1,
+      "mb": 1,
+      "components": {
+        "FC": 31.400342285156256,
+        "CP": 103.30308300781249,
+        "attention": 209.8988051757813,
+        "EP": 9.924631347656252,
+        "other": 176.6880151367187,
+        "overlap": 213.44725732421873,
+        "other_device": 0.0,
+        "no_recorded_device": 80.72662109374994,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s1:B2",
+      "stage": 1,
+      "mb": 2,
+      "components": {
+        "FC": 29.29608056640624,
+        "CP": 103.07968994140624,
+        "attention": 210.69808105468758,
+        "EP": 9.66018798828125,
+        "other": 175.52271435546868,
+        "overlap": 213.3217763671875,
+        "other_device": 0.0,
+        "no_recorded_device": 74.55719775390624,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s1:B3",
+      "stage": 1,
+      "mb": 3,
+      "components": {
+        "FC": 28.273906250000007,
+        "CP": 92.62052685546874,
+        "attention": 210.83085546875003,
+        "EP": 8.940539062500003,
+        "other": 175.00726562500014,
+        "overlap": 223.64670068359376,
+        "other_device": 0.0,
+        "no_recorded_device": 75.17790429687508,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s2:B0",
+      "stage": 2,
+      "mb": 0,
+      "components": {
+        "FC": 33.001967773437514,
+        "CP": 93.37450341796874,
+        "attention": 210.49672314453133,
+        "EP": 8.96389306640625,
+        "other": 177.62803271484384,
+        "overlap": 229.31286767578123,
+        "other_device": 0.0,
+        "no_recorded_device": 68.67340625000007,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s2:B1",
+      "stage": 2,
+      "mb": 1,
+      "components": {
+        "FC": 35.854218261718756,
+        "CP": 90.35393017578126,
+        "attention": 211.23731689453138,
+        "EP": 10.397857421874997,
+        "other": 179.5625908203125,
+        "overlap": 227.5143852539062,
+        "other_device": 0.0,
+        "no_recorded_device": 55.807001464843744,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s2:B2",
+      "stage": 2,
+      "mb": 2,
+      "components": {
+        "FC": 35.669974609375004,
+        "CP": 102.17298437499997,
+        "attention": 209.97147412109368,
+        "EP": 5.07384912109375,
+        "other": 178.84771435546887,
+        "overlap": 219.23147412109378,
+        "other_device": 0.0,
+        "no_recorded_device": 54.62975634765605,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s2:B3",
+      "stage": 2,
+      "mb": 3,
+      "components": {
+        "FC": 33.45752880859374,
+        "CP": 114.49255273437502,
+        "attention": 211.00321582031253,
+        "EP": 5.032092773437503,
+        "other": 178.09337792968748,
+        "overlap": 207.96369287109374,
+        "other_device": 0.0,
+        "no_recorded_device": 58.27374609375002,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s3:B0",
+      "stage": 3,
+      "mb": 0,
+      "components": {
+        "FC": 15.01646728515625,
+        "CP": 90.269859375,
+        "attention": 215.21083984375008,
+        "EP": 28.71078369140625,
+        "other": 170.17863183593755,
+        "overlap": 226.63452294921873,
+        "other_device": 0.0,
+        "no_recorded_device": 84.50095410156244,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s3:B1",
+      "stage": 3,
+      "mb": 1,
+      "components": {
+        "FC": 15.27055029296875,
+        "CP": 97.99221923828127,
+        "attention": 213.47276562499997,
+        "EP": 4.3620639648437525,
+        "other": 170.89280224609388,
+        "overlap": 220.47556982421872,
+        "other_device": 0.0,
+        "no_recorded_device": 85.6801630859375,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s3:B2",
+      "stage": 3,
+      "mb": 2,
+      "components": {
+        "FC": 15.8665048828125,
+        "CP": 88.60110107421876,
+        "attention": 214.26154882812497,
+        "EP": 5.952737792968752,
+        "other": 170.54278417968754,
+        "overlap": 228.29007031249998,
+        "other_device": 0.0,
+        "no_recorded_device": 108.98597070312505,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s3:B3",
+      "stage": 3,
+      "mb": 3,
+      "components": {
+        "FC": 14.733956054687493,
+        "CP": 103.21644824218751,
+        "attention": 214.0067460937501,
+        "EP": 6.1433393554687505,
+        "other": 170.30743261718763,
+        "overlap": 213.7502275390625,
+        "other_device": 0.0,
+        "no_recorded_device": 81.31865332031248,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s4:B0",
+      "stage": 4,
+      "mb": 0,
+      "components": {
+        "FC": 16.24803515625,
+        "CP": 97.28466162109378,
+        "attention": 212.03687304687506,
+        "EP": 8.187975097656249,
+        "other": 172.4731147460938,
+        "overlap": 220.70904443359376,
+        "other_device": 0.0,
+        "no_recorded_device": 73.12371191406248,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s4:B1",
+      "stage": 4,
+      "mb": 1,
+      "components": {
+        "FC": 16.934431152343745,
+        "CP": 113.47912597656251,
+        "attention": 214.3892875976563,
+        "EP": 5.512541015625,
+        "other": 171.6907392578127,
+        "overlap": 204.19375585937505,
+        "other_device": 0.0,
+        "no_recorded_device": 74.22966455078127,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s4:B2",
+      "stage": 4,
+      "mb": 2,
+      "components": {
+        "FC": 16.145158203124996,
+        "CP": 105.28635986328126,
+        "attention": 212.78047216796884,
+        "EP": 4.961666015624999,
+        "other": 172.05738134765645,
+        "overlap": 212.77050683593748,
+        "other_device": 0.0,
+        "no_recorded_device": 70.80095361328125,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s4:B3",
+      "stage": 4,
+      "mb": 3,
+      "components": {
+        "FC": 15.901476562500005,
+        "CP": 106.69870507812502,
+        "attention": 213.37069873046875,
+        "EP": 4.67930810546875,
+        "other": 171.51333251953147,
+        "overlap": 211.78913964843755,
+        "other_device": 0.0,
+        "no_recorded_device": 72.9230844726562,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s5:B0",
+      "stage": 5,
+      "mb": 0,
+      "components": {
+        "FC": 17.484403320312506,
+        "CP": 101.01048730468747,
+        "attention": 211.9435751953125,
+        "EP": 9.571876464843747,
+        "other": 172.29010058593767,
+        "overlap": 216.06521289062505,
+        "other_device": 0.0,
+        "no_recorded_device": 59.48453124999991,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s5:B1",
+      "stage": 5,
+      "mb": 1,
+      "components": {
+        "FC": 17.83283691406251,
+        "CP": 105.04019238281248,
+        "attention": 211.55459619140635,
+        "EP": 7.328403320312499,
+        "other": 171.58454736328136,
+        "overlap": 212.02262109374996,
+        "other_device": 0.0,
+        "no_recorded_device": 61.694167480468735,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s5:B2",
+      "stage": 5,
+      "mb": 2,
+      "components": {
+        "FC": 17.568322753906248,
+        "CP": 88.530849609375,
+        "attention": 210.4476723632813,
+        "EP": 7.088089843749999,
+        "other": 171.66491650390617,
+        "overlap": 228.7975146484375,
+        "other_device": 0.0,
+        "no_recorded_device": 58.56107617187498,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s5:B3",
+      "stage": 5,
+      "mb": 3,
+      "components": {
+        "FC": 18.775871093749995,
+        "CP": 100.9918994140625,
+        "attention": 211.27120214843754,
+        "EP": 8.12256201171875,
+        "other": 172.24848828125016,
+        "overlap": 215.0188520507812,
+        "other_device": 0.0,
+        "no_recorded_device": 57.50694287109368,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s6:B0",
+      "stage": 6,
+      "mb": 0,
+      "components": {
+        "FC": 23.2118955078125,
+        "CP": 96.220984375,
+        "attention": 213.8683964843749,
+        "EP": 8.785083007812503,
+        "other": 176.18275488281262,
+        "overlap": 220.70327343749997,
+        "other_device": 0.0,
+        "no_recorded_device": 55.5806577148437,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s6:B1",
+      "stage": 6,
+      "mb": 1,
+      "components": {
+        "FC": 24.357787597656245,
+        "CP": 98.50688427734376,
+        "attention": 215.69161474609376,
+        "EP": 6.216537109375003,
+        "other": 176.2137270507814,
+        "overlap": 218.37770507812493,
+        "other_device": 0.0,
+        "no_recorded_device": 52.30050439453123,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s6:B2",
+      "stage": 6,
+      "mb": 2,
+      "components": {
+        "FC": 23.563062500000004,
+        "CP": 99.7918427734375,
+        "attention": 214.18939306640615,
+        "EP": 4.998004394531249,
+        "other": 175.8827578125002,
+        "overlap": 221.04674658203126,
+        "other_device": 0.0,
+        "no_recorded_device": 55.630901855468665,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s6:B3",
+      "stage": 6,
+      "mb": 3,
+      "components": {
+        "FC": 23.28661962890625,
+        "CP": 116.50159277343745,
+        "attention": 215.10700048828133,
+        "EP": 4.444363281249999,
+        "other": 176.39080615234377,
+        "overlap": 201.84829345703125,
+        "other_device": 0.0,
+        "no_recorded_device": 53.12436816406248,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s7:B0",
+      "stage": 7,
+      "mb": 0,
+      "components": {
+        "FC": 11.422427734375002,
+        "CP": 107.57349414062502,
+        "attention": 213.3208959960937,
+        "EP": 5.662793945312501,
+        "other": 169.22431640625015,
+        "overlap": 211.6947651367187,
+        "other_device": 0.0,
+        "no_recorded_device": 79.5037124023438,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s7:B1",
+      "stage": 7,
+      "mb": 1,
+      "components": {
+        "FC": 12.96219677734375,
+        "CP": 103.20402880859375,
+        "attention": 214.24986474609366,
+        "EP": 6.3888779296875,
+        "other": 170.5727563476563,
+        "overlap": 213.31038134765626,
+        "other_device": 0.0,
+        "no_recorded_device": 79.92089843749987,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s7:B2",
+      "stage": 7,
+      "mb": 2,
+      "components": {
+        "FC": 12.516875488281249,
+        "CP": 109.45830224609374,
+        "attention": 213.9119409179688,
+        "EP": 4.515187988281252,
+        "other": 170.10020263671876,
+        "overlap": 210.7490576171875,
+        "other_device": 0.0,
+        "no_recorded_device": 76.48766015625002,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s7:B3",
+      "stage": 7,
+      "mb": 3,
+      "components": {
+        "FC": 11.300026855468753,
+        "CP": 114.50549169921877,
+        "attention": 214.79122558593744,
+        "EP": 4.732347656249998,
+        "other": 169.19795605468747,
+        "overlap": 203.54251416015623,
+        "other_device": 0.0,
+        "no_recorded_device": 79.18748046874985,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s8:B0",
+      "stage": 8,
+      "mb": 0,
+      "components": {
+        "FC": 21.203336425781252,
+        "CP": 107.14662255859375,
+        "attention": 212.05198242187504,
+        "EP": 10.3705595703125,
+        "other": 173.32573779296894,
+        "overlap": 211.43341455078124,
+        "other_device": 0.0,
+        "no_recorded_device": 65.62121972656243,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s8:B1",
+      "stage": 8,
+      "mb": 1,
+      "components": {
+        "FC": 20.2502900390625,
+        "CP": 111.10565478515625,
+        "attention": 213.15743749999993,
+        "EP": 5.8879726562500005,
+        "other": 173.06373291015655,
+        "overlap": 206.09085986328128,
+        "other_device": 0.0,
+        "no_recorded_device": 65.56536230468744,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s8:B2",
+      "stage": 8,
+      "mb": 2,
+      "components": {
+        "FC": 20.772053222656254,
+        "CP": 111.65293408203127,
+        "attention": 210.01263623046873,
+        "EP": 7.015136718749999,
+        "other": 174.01215869140634,
+        "overlap": 206.80915820312492,
+        "other_device": 0.0,
+        "no_recorded_device": 64.18881103515629,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s8:B3",
+      "stage": 8,
+      "mb": 3,
+      "components": {
+        "FC": 20.15200927734375,
+        "CP": 116.953986328125,
+        "attention": 213.23207519531246,
+        "EP": 8.034027343749997,
+        "other": 173.1717031250001,
+        "overlap": 197.37437597656248,
+        "other_device": 0.0,
+        "no_recorded_device": 62.907725097656154,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s9:B0",
+      "stage": 9,
+      "mb": 0,
+      "components": {
+        "FC": 27.46429443359375,
+        "CP": 102.139265625,
+        "attention": 213.35571337890624,
+        "EP": 6.466280761718753,
+        "other": 176.5325190429689,
+        "overlap": 219.13979492187505,
+        "other_device": 0.0,
+        "no_recorded_device": 54.313307128906196,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s9:B1",
+      "stage": 9,
+      "mb": 1,
+      "components": {
+        "FC": 28.8036552734375,
+        "CP": 101.45372753906251,
+        "attention": 212.82294482421867,
+        "EP": 9.309724609374998,
+        "other": 177.6829741210938,
+        "overlap": 215.82202880859379,
+        "other_device": 0.0,
+        "no_recorded_device": 49.91710302734373,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s9:B2",
+      "stage": 9,
+      "mb": 2,
+      "components": {
+        "FC": 27.98052880859375,
+        "CP": 103.54158203125,
+        "attention": 212.54262792968754,
+        "EP": 7.091757812500001,
+        "other": 177.16607324218765,
+        "overlap": 214.49286767578124,
+        "other_device": 0.0,
+        "no_recorded_device": 48.34062255859372,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s9:B3",
+      "stage": 9,
+      "mb": 3,
+      "components": {
+        "FC": 26.9222138671875,
+        "CP": 96.0505498046875,
+        "attention": 213.7754287109375,
+        "EP": 5.214520507812498,
+        "other": 176.06395117187517,
+        "overlap": 221.07305273437498,
+        "other_device": 0.0,
+        "no_recorded_device": 55.686096191406165,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s10:B0",
+      "stage": 10,
+      "mb": 0,
+      "components": {
+        "FC": 19.719853515624997,
+        "CP": 109.60500048828125,
+        "attention": 213.09615234375002,
+        "EP": 6.071719238281251,
+        "other": 172.51159863281248,
+        "overlap": 208.6097392578125,
+        "other_device": 0.0,
+        "no_recorded_device": 70.14146972656245,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s10:B1",
+      "stage": 10,
+      "mb": 1,
+      "components": {
+        "FC": 20.81710205078124,
+        "CP": 96.55271337890623,
+        "attention": 211.89057666015626,
+        "EP": 25.550857421874998,
+        "other": 173.6530297851563,
+        "overlap": 222.25066552734378,
+        "other_device": 0.0,
+        "no_recorded_device": 98.77302832031253,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s10:B2",
+      "stage": 10,
+      "mb": 2,
+      "components": {
+        "FC": 20.713903320312497,
+        "CP": 97.23874804687499,
+        "attention": 211.36113720703125,
+        "EP": 5.888282226562501,
+        "other": 173.35343261718754,
+        "overlap": 222.89237988281252,
+        "other_device": 0.0,
+        "no_recorded_device": 105.0695668945313,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s10:B3",
+      "stage": 10,
+      "mb": 3,
+      "components": {
+        "FC": 19.281649414062496,
+        "CP": 93.63951562500002,
+        "attention": 212.6649687500001,
+        "EP": 5.53351806640625,
+        "other": 172.89954345703117,
+        "overlap": 224.75149511718743,
+        "other_device": 0.0,
+        "no_recorded_device": 65.47007275390625,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s11:B0",
+      "stage": 11,
+      "mb": 0,
+      "components": {
+        "FC": 21.680398437499992,
+        "CP": 104.78749365234373,
+        "attention": 211.33482031249997,
+        "EP": 13.09083154296875,
+        "other": 173.87694335937513,
+        "overlap": 210.03046142578125,
+        "other_device": 0.0,
+        "no_recorded_device": 67.35674560546866,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s11:B1",
+      "stage": 11,
+      "mb": 1,
+      "components": {
+        "FC": 22.2665185546875,
+        "CP": 117.29353515625,
+        "attention": 211.8098740234375,
+        "EP": 8.56260107421875,
+        "other": 173.9860244140627,
+        "overlap": 199.05188037109374,
+        "other_device": 0.0,
+        "no_recorded_device": 66.40774365234373,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s11:B2",
+      "stage": 11,
+      "mb": 2,
+      "components": {
+        "FC": 21.663431640624996,
+        "CP": 106.88492431640623,
+        "attention": 213.18560742187495,
+        "EP": 6.2741142578125,
+        "other": 174.00655761718758,
+        "overlap": 208.5301337890625,
+        "other_device": 0.0,
+        "no_recorded_device": 66.0068740234374,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s11:B3",
+      "stage": 11,
+      "mb": 3,
+      "components": {
+        "FC": 21.731712402343746,
+        "CP": 116.26032714843747,
+        "attention": 211.52250830078123,
+        "EP": 5.2700258789062495,
+        "other": 174.48224755859366,
+        "overlap": 200.95988867187504,
+        "other_device": 0.0,
+        "no_recorded_device": 67.40778320312506,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s12:B0",
+      "stage": 12,
+      "mb": 0,
+      "components": {
+        "FC": 21.879412597656252,
+        "CP": 97.09317089843749,
+        "attention": 214.31170068359378,
+        "EP": 7.1121103515625,
+        "other": 176.8481889648438,
+        "overlap": 220.8921264648437,
+        "other_device": 0.0,
+        "no_recorded_device": 61.60471191406239,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s12:B1",
+      "stage": 12,
+      "mb": 1,
+      "components": {
+        "FC": 20.692851562500014,
+        "CP": 105.52624853515623,
+        "attention": 214.69739306640625,
+        "EP": 4.8087128906249985,
+        "other": 176.16378857421867,
+        "overlap": 211.97465185546878,
+        "other_device": 0.0,
+        "no_recorded_device": 61.11595751953121,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s12:B2",
+      "stage": 12,
+      "mb": 2,
+      "components": {
+        "FC": 20.750494140624998,
+        "CP": 90.65549072265625,
+        "attention": 214.91210693359375,
+        "EP": 4.086190917968749,
+        "other": 176.2335683593749,
+        "overlap": 225.9626328125,
+        "other_device": 0.0,
+        "no_recorded_device": 58.83259716796876,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s12:B3",
+      "stage": 12,
+      "mb": 3,
+      "components": {
+        "FC": 21.458652832031245,
+        "CP": 129.06143701171874,
+        "attention": 215.0061201171875,
+        "EP": 5.347030761718752,
+        "other": 176.58793359375028,
+        "overlap": 189.79080175781252,
+        "other_device": 0.0,
+        "no_recorded_device": 54.76884716796872,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s13:B0",
+      "stage": 13,
+      "mb": 0,
+      "components": {
+        "FC": 30.928969726562517,
+        "CP": 104.53783154296876,
+        "attention": 211.95679785156258,
+        "EP": 7.3713481445312485,
+        "other": 177.75705615234403,
+        "overlap": 212.07870605468756,
+        "other_device": 0.0,
+        "no_recorded_device": 42.893395996093666,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s13:B1",
+      "stage": 13,
+      "mb": 1,
+      "components": {
+        "FC": 30.837048828125006,
+        "CP": 118.0245004882812,
+        "attention": 210.35654101562497,
+        "EP": 6.7356230468749985,
+        "other": 177.0507734375,
+        "overlap": 200.91686669921876,
+        "other_device": 0.0,
+        "no_recorded_device": 43.044650878906204,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s13:B2",
+      "stage": 13,
+      "mb": 2,
+      "components": {
+        "FC": 30.9873310546875,
+        "CP": 104.87143212890624,
+        "attention": 210.67974902343752,
+        "EP": 9.738948242187499,
+        "other": 176.97061669921845,
+        "overlap": 214.4568349609375,
+        "other_device": 0.0,
+        "no_recorded_device": 42.87031591796875,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s13:B3",
+      "stage": 13,
+      "mb": 3,
+      "components": {
+        "FC": 29.837010253906243,
+        "CP": 108.29749804687499,
+        "attention": 211.75840478515624,
+        "EP": 6.94862109375,
+        "other": 176.29124902343762,
+        "overlap": 209.76261816406253,
+        "other_device": 0.0,
+        "no_recorded_device": 46.84530566406235,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s14:B0",
+      "stage": 14,
+      "mb": 0,
+      "components": {
+        "FC": 29.531313964843743,
+        "CP": 94.6692275390625,
+        "attention": 211.04444921874995,
+        "EP": 7.435547363281251,
+        "other": 177.21025732421865,
+        "overlap": 225.3696420898438,
+        "other_device": 0.0,
+        "no_recorded_device": 73.77680957031248,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s14:B1",
+      "stage": 14,
+      "mb": 1,
+      "components": {
+        "FC": 30.385072753906243,
+        "CP": 104.32789990234374,
+        "attention": 212.48912011718747,
+        "EP": 8.139150390625002,
+        "other": 178.83352880859397,
+        "overlap": 215.10524609374994,
+        "other_device": 0.0,
+        "no_recorded_device": 48.39869189453121,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s14:B2",
+      "stage": 14,
+      "mb": 2,
+      "components": {
+        "FC": 30.101475585937486,
+        "CP": 104.9634677734375,
+        "attention": 212.47407714843763,
+        "EP": 8.669437011718749,
+        "other": 178.26416650390632,
+        "overlap": 213.72478808593746,
+        "other_device": 0.0,
+        "no_recorded_device": 60.85123828124986,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    },
+    {
+      "node": "s14:B3",
+      "stage": 14,
+      "mb": 3,
+      "components": {
+        "FC": 28.56842919921877,
+        "CP": 118.20125048828126,
+        "attention": 213.6752138671876,
+        "EP": 5.945061523437501,
+        "other": 177.62893603515613,
+        "overlap": 202.30307177734383,
+        "other_device": 0.0,
+        "no_recorded_device": 65.0000136718749,
+        "group_offset": 0.0
+      },
+      "FC_overlap_ms": 0.0
+    }
+  ],
+  "shapley_ms": {
+    "FC": 838.7198514578705,
+    "CP": -77.28758905319935,
+    "attention": 25.88401578892449,
+    "EP": -2.0151908842540998,
+    "other": 300.5031810070242,
+    "overlap": 75.27955303664552,
+    "other_device": 0.0,
+    "no_recorded_device": -101.63045611863055,
+    "group_offset": 45.2185286865156
+  },
+  "single_reduction_ms": {
+    "FC": 830.7927900390714,
+    "CP": -150.1000034179633,
+    "attention": 18.26980859375908,
+    "EP": -4.42149218749546,
+    "other": 297.65835302735286,
+    "overlap": 37.124878417977015,
+    "other_device": 0.0,
+    "no_recorded_device": -123.25596679687806,
+    "group_offset": 45.2185286865315
+  },
+  "additional_after_FC_ms": {
+    "CP": -137.85199023437963,
+    "attention": 30.885594726558338,
+    "EP": 0.28385302733659046,
+    "other": 298.2022499999912,
+    "overlap": 41.830223632812704,
+    "other_device": 0.0,
+    "no_recorded_device": -108.14517626953966,
+    "group_offset": 45.21852868650967
+  },
+  "scenarios": [
+    {
+      "replaced": [],
+      "window_ms": 21653.357840418812
+    },
+    {
+      "replaced": [
+        "FC"
+      ],
+      "window_ms": 20822.56505037974
+    },
+    {
+      "replaced": [
+        "CP"
+      ],
+      "window_ms": 21803.457843836775
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP"
+      ],
+      "window_ms": 20960.41704061412
+    },
+    {
+      "replaced": [
+        "attention"
+      ],
+      "window_ms": 21635.088031825053
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention"
+      ],
+      "window_ms": 20791.679455653182
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention"
+      ],
+      "window_ms": 21784.819866297716
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention"
+      ],
+      "window_ms": 20941.456672450055
+    },
+    {
+      "replaced": [
+        "EP"
+      ],
+      "window_ms": 21657.779332606307
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP"
+      ],
+      "window_ms": 20822.281197352404
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP"
+      ],
+      "window_ms": 21800.77206942271
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP"
+      ],
+      "window_ms": 20957.1873692274
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP"
+      ],
+      "window_ms": 21634.543000575053
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP"
+      ],
+      "window_ms": 20792.176535243023
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP"
+      ],
+      "window_ms": 21782.34402352427
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP"
+      ],
+      "window_ms": 20938.759323328963
+    },
+    {
+      "replaced": [
+        "other"
+      ],
+      "window_ms": 21355.69948739146
+    },
+    {
+      "replaced": [
+        "FC",
+        "other"
+      ],
+      "window_ms": 20524.36280037975
+    },
+    {
+      "replaced": [
+        "CP",
+        "other"
+      ],
+      "window_ms": 21501.53497469615
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other"
+      ],
+      "window_ms": 20657.950274500836
+    },
+    {
+      "replaced": [
+        "attention",
+        "other"
+      ],
+      "window_ms": 21333.216857020365
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other"
+      ],
+      "window_ms": 20494.009527918803
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other"
+      ],
+      "window_ms": 21483.106928797715
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other"
+      ],
+      "window_ms": 20639.522228602396
+    },
+    {
+      "replaced": [
+        "EP",
+        "other"
+      ],
+      "window_ms": 21357.550316004737
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other"
+      ],
+      "window_ms": 20524.1561973524
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other"
+      ],
+      "window_ms": 21499.05913192271
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other"
+      ],
+      "window_ms": 20655.4744317274
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other"
+      ],
+      "window_ms": 21332.67040194224
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other"
+      ],
+      "window_ms": 20493.80292489146
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other"
+      ],
+      "window_ms": 21480.631086024274
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other"
+      ],
+      "window_ms": 20637.04638582897
+    },
+    {
+      "replaced": [
+        "overlap"
+      ],
+      "window_ms": 21616.232962000835
+    },
+    {
+      "replaced": [
+        "FC",
+        "overlap"
+      ],
+      "window_ms": 20780.734826746928
+    },
+    {
+      "replaced": [
+        "CP",
+        "overlap"
+      ],
+      "window_ms": 21649.07279989146
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "overlap"
+      ],
+      "window_ms": 20817.736112879746
+    },
+    {
+      "replaced": [
+        "attention",
+        "overlap"
+      ],
+      "window_ms": 21585.574554774274
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "overlap"
+      ],
+      "window_ms": 20750.07641952037
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "overlap"
+      ],
+      "window_ms": 21621.148304774273
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "overlap"
+      ],
+      "window_ms": 20787.382840418806
+    },
+    {
+      "replaced": [
+        "EP",
+        "overlap"
+      ],
+      "window_ms": 21620.654454188334
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "overlap"
+      ],
+      "window_ms": 20785.15631893443
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "overlap"
+      ],
+      "window_ms": 21648.866196864117
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "overlap"
+      ],
+      "window_ms": 20817.529509852404
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "overlap"
+      ],
+      "window_ms": 21589.996046961776
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "overlap"
+      ],
+      "window_ms": 20754.49791170787
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "overlap"
+      ],
+      "window_ms": 21621.2549317274
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "overlap"
+      ],
+      "window_ms": 20787.176237391457
+    },
+    {
+      "replaced": [
+        "other",
+        "overlap"
+      ],
+      "window_ms": 21316.003945399276
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 20481.87983846568
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 21351.41444686412
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 20520.077759852396
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 21285.345538172704
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 20451.52656600474
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 21321.061174403178
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 20489.72448739146
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 21320.42543758678
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 20484.927302332864
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 21351.207843836775
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 20519.87115682505
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 21289.767030360206
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 20454.268895106303
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 21320.943841883643
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap"
+      ],
+      "window_ms": 20489.51788436412
+    },
+    {
+      "replaced": [
+        "other_device"
+      ],
+      "window_ms": 21653.357840418812
+    },
+    {
+      "replaced": [
+        "FC",
+        "other_device"
+      ],
+      "window_ms": 20822.56505037974
+    },
+    {
+      "replaced": [
+        "CP",
+        "other_device"
+      ],
+      "window_ms": 21803.457843836775
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other_device"
+      ],
+      "window_ms": 20960.41704061412
+    },
+    {
+      "replaced": [
+        "attention",
+        "other_device"
+      ],
+      "window_ms": 21635.088031825053
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other_device"
+      ],
+      "window_ms": 20791.679455653182
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other_device"
+      ],
+      "window_ms": 21784.819866297716
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other_device"
+      ],
+      "window_ms": 20941.456672450055
+    },
+    {
+      "replaced": [
+        "EP",
+        "other_device"
+      ],
+      "window_ms": 21657.779332606307
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other_device"
+      ],
+      "window_ms": 20822.281197352404
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other_device"
+      ],
+      "window_ms": 21800.77206942271
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other_device"
+      ],
+      "window_ms": 20957.1873692274
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other_device"
+      ],
+      "window_ms": 21634.543000575053
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other_device"
+      ],
+      "window_ms": 20792.176535243023
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other_device"
+      ],
+      "window_ms": 21782.34402352427
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other_device"
+      ],
+      "window_ms": 20938.759323328963
+    },
+    {
+      "replaced": [
+        "other",
+        "other_device"
+      ],
+      "window_ms": 21355.69948739146
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 20524.36280037975
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 21501.53497469615
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 20657.950274500836
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 21333.216857020365
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 20494.009527918803
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 21483.106928797715
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 20639.522228602396
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 21357.550316004737
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 20524.1561973524
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 21499.05913192271
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 20655.4744317274
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 21332.67040194224
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 20493.80292489146
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 21480.631086024274
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "other_device"
+      ],
+      "window_ms": 20637.04638582897
+    },
+    {
+      "replaced": [
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21616.232962000835
+    },
+    {
+      "replaced": [
+        "FC",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20780.734826746928
+    },
+    {
+      "replaced": [
+        "CP",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21649.07279989146
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20817.736112879746
+    },
+    {
+      "replaced": [
+        "attention",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21585.574554774274
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20750.07641952037
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21621.148304774273
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20787.382840418806
+    },
+    {
+      "replaced": [
+        "EP",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21620.654454188334
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20785.15631893443
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21648.866196864117
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20817.529509852404
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21589.996046961776
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20754.49791170787
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21621.2549317274
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20787.176237391457
+    },
+    {
+      "replaced": [
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21316.003945399276
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20481.87983846568
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21351.41444686412
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20520.077759852396
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21285.345538172704
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20451.52656600474
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21321.061174403178
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20489.72448739146
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21320.42543758678
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20484.927302332864
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21351.207843836775
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20519.87115682505
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21289.767030360206
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20454.268895106303
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 21320.943841883643
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device"
+      ],
+      "window_ms": 20489.51788436412
+    },
+    {
+      "replaced": [
+        "no_recorded_device"
+      ],
+      "window_ms": 21776.61380721569
+    },
+    {
+      "replaced": [
+        "FC",
+        "no_recorded_device"
+      ],
+      "window_ms": 20930.71022664928
+    },
+    {
+      "replaced": [
+        "CP",
+        "no_recorded_device"
+      ],
+      "window_ms": 21851.55624862193
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "no_recorded_device"
+      ],
+      "window_ms": 21007.971548426613
+    },
+    {
+      "replaced": [
+        "attention",
+        "no_recorded_device"
+      ],
+      "window_ms": 21750.295806727398
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "no_recorded_device"
+      ],
+      "window_ms": 20900.051819422708
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "no_recorded_device"
+      ],
+      "window_ms": 21833.128202723492
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "no_recorded_device"
+      ],
+      "window_ms": 20989.54350252818
+    },
+    {
+      "replaced": [
+        "EP",
+        "no_recorded_device"
+      ],
+      "window_ms": 21777.476694422716
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "no_recorded_device"
+      ],
+      "window_ms": 20935.131718836776
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "no_recorded_device"
+      ],
+      "window_ms": 21849.080405848494
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "no_recorded_device"
+      ],
+      "window_ms": 21005.49570565318
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "no_recorded_device"
+      ],
+      "window_ms": 21751.158693934427
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "no_recorded_device"
+      ],
+      "window_ms": 20904.47331161021
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "no_recorded_device"
+      ],
+      "window_ms": 21830.652359950058
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "no_recorded_device"
+      ],
+      "window_ms": 20987.067659754743
+    },
+    {
+      "replaced": [
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 21470.41517245006
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 20630.48121004771
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 21549.84331112193
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 20706.258610926612
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 21444.09717196177
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 20599.82280282115
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 21531.415265223488
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 20687.830565028176
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 21471.278059657085
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 20634.902702235217
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 21547.36746834849
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 20703.78276815318
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 21444.96005916881
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 20604.244295008644
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 21528.939422450054
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "no_recorded_device"
+      ],
+      "window_ms": 20685.35472225475
+    },
+    {
+      "replaced": [
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21729.083483485214
+    },
+    {
+      "replaced": [
+        "FC",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20893.585348231307
+    },
+    {
+      "replaced": [
+        "CP",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21767.8909839735
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20920.37040682506
+    },
+    {
+      "replaced": [
+        "attention",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21702.331598231307
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20862.926941004753
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21741.57298348521
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20889.71199959849
+    },
+    {
+      "replaced": [
+        "EP",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21733.504975672713
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20898.006840418802
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21768.753871180525
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20924.791899012554
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21703.194485438333
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20867.348433192245
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21742.435870692247
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20894.13349178599
+    },
+    {
+      "replaced": [
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21428.854466883648
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20593.356331629737
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21461.692349207868
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20620.141390223493
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21398.196059657086
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20562.69792440317
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21435.374348719582
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20589.48298299693
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21433.275959071147
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20597.77782381724
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21462.555236414897
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20624.56288241099
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21402.61755184459
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20567.119416590678
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 21436.237235926616
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device"
+      ],
+      "window_ms": 20593.90447518443
+    },
+    {
+      "replaced": [
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21776.61380721569
+    },
+    {
+      "replaced": [
+        "FC",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20930.71022664928
+    },
+    {
+      "replaced": [
+        "CP",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21851.55624862193
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21007.971548426613
+    },
+    {
+      "replaced": [
+        "attention",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21750.295806727398
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20900.051819422708
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21833.128202723492
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20989.54350252818
+    },
+    {
+      "replaced": [
+        "EP",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21777.476694422716
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20935.131718836776
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21849.080405848494
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21005.49570565318
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21751.158693934427
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20904.47331161021
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21830.652359950058
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20987.067659754743
+    },
+    {
+      "replaced": [
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21470.41517245006
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20630.48121004771
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21549.84331112193
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20706.258610926612
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21444.09717196177
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20599.82280282115
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21531.415265223488
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20687.830565028176
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21471.278059657085
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20634.902702235217
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21547.36746834849
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20703.78276815318
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21444.96005916881
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20604.244295008644
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21528.939422450054
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20685.35472225475
+    },
+    {
+      "replaced": [
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21729.083483485214
+    },
+    {
+      "replaced": [
+        "FC",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20893.585348231307
+    },
+    {
+      "replaced": [
+        "CP",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21767.8909839735
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20920.37040682506
+    },
+    {
+      "replaced": [
+        "attention",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21702.331598231307
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20862.926941004753
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21741.57298348521
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20889.71199959849
+    },
+    {
+      "replaced": [
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21733.504975672713
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20898.006840418802
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21768.753871180525
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20924.791899012554
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21703.194485438333
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20867.348433192245
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21742.435870692247
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20894.13349178599
+    },
+    {
+      "replaced": [
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21428.854466883648
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20593.356331629737
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21461.692349207868
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20620.141390223493
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21398.196059657086
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20562.69792440317
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21435.374348719582
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20589.48298299693
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21433.275959071147
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20597.77782381724
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21462.555236414897
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20624.56288241099
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21402.61755184459
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20567.119416590678
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 21436.237235926616
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device"
+      ],
+      "window_ms": 20593.90447518443
+    },
+    {
+      "replaced": [
+        "group_offset"
+      ],
+      "window_ms": 21608.13931173228
+    },
+    {
+      "replaced": [
+        "FC",
+        "group_offset"
+      ],
+      "window_ms": 20777.34652169323
+    },
+    {
+      "replaced": [
+        "CP",
+        "group_offset"
+      ],
+      "window_ms": 21758.239315150262
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "group_offset"
+      ],
+      "window_ms": 20915.198511927603
+    },
+    {
+      "replaced": [
+        "attention",
+        "group_offset"
+      ],
+      "window_ms": 21589.869503138543
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "group_offset"
+      ],
+      "window_ms": 20746.46092696667
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "group_offset"
+      ],
+      "window_ms": 21739.6013376112
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "group_offset"
+      ],
+      "window_ms": 20896.23814376354
+    },
+    {
+      "replaced": [
+        "EP",
+        "group_offset"
+      ],
+      "window_ms": 21612.56080391979
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "group_offset"
+      ],
+      "window_ms": 20777.062668665883
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "group_offset"
+      ],
+      "window_ms": 21755.553540736197
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "group_offset"
+      ],
+      "window_ms": 20911.968840540885
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "group_offset"
+      ],
+      "window_ms": 21589.32447188854
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "group_offset"
+      ],
+      "window_ms": 20746.95800655651
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "group_offset"
+      ],
+      "window_ms": 21737.125494837765
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "group_offset"
+      ],
+      "window_ms": 20893.54079464245
+    },
+    {
+      "replaced": [
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 21310.48095870495
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 20479.14427169323
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 21456.316446009634
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 20612.73174581433
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 21287.998328333855
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 20448.790999232293
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 21437.888400111195
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 20594.30369991589
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 21312.33178731823
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 20478.93766866589
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 21453.840603236196
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 20610.25590304089
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 21287.45187325573
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 20448.584396204948
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 21435.412557337757
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "group_offset"
+      ],
+      "window_ms": 20591.827857142445
+    },
+    {
+      "replaced": [
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21571.01443331433
+    },
+    {
+      "replaced": [
+        "FC",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20735.51629806042
+    },
+    {
+      "replaced": [
+        "CP",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21603.85427120495
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20772.51758419323
+    },
+    {
+      "replaced": [
+        "attention",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21540.356026087757
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20704.857890833853
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21575.929776087763
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20742.164311732296
+    },
+    {
+      "replaced": [
+        "EP",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21575.435925501824
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20739.93779024791
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21603.647668177604
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20772.310981165887
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21544.777518275263
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20709.27938302135
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21576.03640304089
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20741.95770870495
+    },
+    {
+      "replaced": [
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21270.78541671276
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20436.661309779167
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21306.195918177604
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20474.859231165883
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21240.1270094862
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20406.308037318227
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21275.84264571666
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20444.505958704947
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21275.206908900258
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20439.708773646358
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21305.98931515026
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20474.65262813854
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21244.548501673697
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20409.05036641979
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 21275.725313197137
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "group_offset"
+      ],
+      "window_ms": 20444.2993556776
+    },
+    {
+      "replaced": [
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21608.13931173228
+    },
+    {
+      "replaced": [
+        "FC",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20777.34652169323
+    },
+    {
+      "replaced": [
+        "CP",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21758.239315150262
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20915.198511927603
+    },
+    {
+      "replaced": [
+        "attention",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21589.869503138543
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20746.46092696667
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21739.6013376112
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20896.23814376354
+    },
+    {
+      "replaced": [
+        "EP",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21612.56080391979
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20777.062668665883
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21755.553540736197
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20911.968840540885
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21589.32447188854
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20746.95800655651
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21737.125494837765
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20893.54079464245
+    },
+    {
+      "replaced": [
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21310.48095870495
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20479.14427169323
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21456.316446009634
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20612.73174581433
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21287.998328333855
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20448.790999232293
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21437.888400111195
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20594.30369991589
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21312.33178731823
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20478.93766866589
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21453.840603236196
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20610.25590304089
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21287.45187325573
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20448.584396204948
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21435.412557337757
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20591.827857142445
+    },
+    {
+      "replaced": [
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21571.01443331433
+    },
+    {
+      "replaced": [
+        "FC",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20735.51629806042
+    },
+    {
+      "replaced": [
+        "CP",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21603.85427120495
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20772.51758419323
+    },
+    {
+      "replaced": [
+        "attention",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21540.356026087757
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20704.857890833853
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21575.929776087763
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20742.164311732296
+    },
+    {
+      "replaced": [
+        "EP",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21575.435925501824
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20739.93779024791
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21603.647668177604
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20772.310981165887
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21544.777518275263
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20709.27938302135
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21576.03640304089
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20741.95770870495
+    },
+    {
+      "replaced": [
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21270.78541671276
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20436.661309779167
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21306.195918177604
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20474.859231165883
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21240.1270094862
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20406.308037318227
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21275.84264571666
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20444.505958704947
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21275.206908900258
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20439.708773646358
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21305.98931515026
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20474.65262813854
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21244.548501673697
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20409.05036641979
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 21275.725313197137
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "group_offset"
+      ],
+      "window_ms": 20444.2993556776
+    },
+    {
+      "replaced": [
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21731.395278529162
+    },
+    {
+      "replaced": [
+        "FC",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20885.49169796276
+    },
+    {
+      "replaced": [
+        "CP",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21806.337719935414
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20962.753019740103
+    },
+    {
+      "replaced": [
+        "attention",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21705.077278040884
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20854.8332907362
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21787.909674036982
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20944.324973841663
+    },
+    {
+      "replaced": [
+        "EP",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21732.258165736202
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20889.91319015026
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21803.86187716198
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20960.27717696667
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21705.940165247917
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20859.254782923697
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21785.433831263545
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20941.849131068226
+    },
+    {
+      "replaced": [
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21425.196643763546
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20585.262681361197
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21504.624782435418
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20661.040082240106
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21398.87864327526
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20554.604274134632
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21486.196736536982
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20642.612036341667
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21426.05953097057
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20589.6841735487
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21502.148939661976
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20658.56423946667
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21399.741530482293
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20559.025766322135
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21483.72089376354
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20640.13619356823
+    },
+    {
+      "replaced": [
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21683.8649547987
+    },
+    {
+      "replaced": [
+        "FC",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20848.366819544786
+    },
+    {
+      "replaced": [
+        "CP",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21722.672455286982
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20875.151878138542
+    },
+    {
+      "replaced": [
+        "attention",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21657.113069544794
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20817.708412318225
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21696.354454798704
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20844.493470911984
+    },
+    {
+      "replaced": [
+        "EP",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21688.286446986196
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20852.788311732296
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21723.53534249401
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20879.57337032604
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21657.97595675182
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20822.129904505728
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21697.217342005726
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20848.914963099483
+    },
+    {
+      "replaced": [
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21383.63593819713
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20548.137802943227
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21416.473820521354
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20574.92286153698
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21352.977530970573
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20517.47939571667
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21390.155820033076
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20544.26445431041
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21388.057430384633
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20552.55929513073
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21417.33670772839
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20579.34435372448
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21357.399023158072
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20521.900887904165
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21391.018707240106
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20548.685946497917
+    },
+    {
+      "replaced": [
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21731.395278529162
+    },
+    {
+      "replaced": [
+        "FC",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20885.49169796276
+    },
+    {
+      "replaced": [
+        "CP",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21806.337719935414
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20962.753019740103
+    },
+    {
+      "replaced": [
+        "attention",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21705.077278040884
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20854.8332907362
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21787.909674036982
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20944.324973841663
+    },
+    {
+      "replaced": [
+        "EP",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21732.258165736202
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20889.91319015026
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21803.86187716198
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20960.27717696667
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21705.940165247917
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20859.254782923697
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21785.433831263545
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20941.849131068226
+    },
+    {
+      "replaced": [
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21425.196643763546
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20585.262681361197
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21504.624782435418
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20661.040082240106
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21398.87864327526
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20554.604274134632
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21486.196736536982
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20642.612036341667
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21426.05953097057
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20589.6841735487
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21502.148939661976
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20658.56423946667
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21399.741530482293
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20559.025766322135
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21483.72089376354
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20640.13619356823
+    },
+    {
+      "replaced": [
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21683.8649547987
+    },
+    {
+      "replaced": [
+        "FC",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20848.366819544786
+    },
+    {
+      "replaced": [
+        "CP",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21722.672455286982
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20875.151878138542
+    },
+    {
+      "replaced": [
+        "attention",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21657.113069544794
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20817.708412318225
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21696.354454798704
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20844.493470911984
+    },
+    {
+      "replaced": [
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21688.286446986196
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20852.788311732296
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21723.53534249401
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20879.57337032604
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21657.97595675182
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20822.129904505728
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21697.217342005726
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20848.914963099483
+    },
+    {
+      "replaced": [
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21383.63593819713
+    },
+    {
+      "replaced": [
+        "FC",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20548.137802943227
+    },
+    {
+      "replaced": [
+        "CP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21416.473820521354
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20574.92286153698
+    },
+    {
+      "replaced": [
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21352.977530970573
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20517.47939571667
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21390.155820033076
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20544.26445431041
+    },
+    {
+      "replaced": [
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21388.057430384633
+    },
+    {
+      "replaced": [
+        "FC",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20552.55929513073
+    },
+    {
+      "replaced": [
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21417.33670772839
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20579.34435372448
+    },
+    {
+      "replaced": [
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21357.399023158072
+    },
+    {
+      "replaced": [
+        "FC",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20521.900887904165
+    },
+    {
+      "replaced": [
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 21391.018707240106
+    },
+    {
+      "replaced": [
+        "FC",
+        "CP",
+        "attention",
+        "EP",
+        "other",
+        "overlap",
+        "other_device",
+        "no_recorded_device",
+        "group_offset"
+      ],
+      "window_ms": 20548.685946497917
+    }
+  ],
+  "limitations": [
+    "Exclusive timeline accounting, not causal physical attribution",
+    "FC priority retains previous FC-only diagnostic; report FC overlapping other activities",
+    "Non-FC inter-category overlap retained separately, not allocated twice",
+    "CP kernel time includes wait; EP-associated GPU time is not complete transport service",
+    "No recorded device activity is not proven idle or avoidable wait",
+    "Representative lane effective-B replacement, not complete EP8 inner-node rescheduling",
+    "Other_device includes activity not associated to this B",
+    "Only iter60; target data evaluator-only"
+  ]
+}

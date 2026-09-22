@@ -651,20 +651,4 @@ const sep=document.createElement('tr');sep.innerHTML='<td colspan="3"><strong>�
 for(const values of [["B两类子项替换（下列F诊断的共同基线）", "20.565", "+0.83%"], ["在上述基础上，仅换F的FC1＋FC2", "20.344", "-0.25%"], ["在上述基础上，仅换F的激活／门控", "20.513", "+0.57%"], ["在上述基础上，换F的FC1＋激活／门控＋FC2", "20.292", "-0.51%"]]){const tr=document.createElement('tr');tr.dataset.fExpert='r1';for(const value of values){const td=document.createElement('td');td.textContent=value;tr.append(td);}body.append(tr);}
 const note=document.createElement('p');note.id='f-expert-diagnosis-note';note.className='small';note.textContent='新增四行均已固定替换中间B的两类子项：专家计算（含重计算与真反向FC及激活／门控）＋已识别token重排／EP活动。各F条件均相对第一行共同基线，不是依次累加。F的Attention、CP、EP、token重排、等待及外层依赖保持不变；不是整块F替换。F完整专家计算额外减少272.5ms，由高估168.8ms变为低估103.7ms（−0.51%）。代表rank目标实测替换诊断，非独立预测精度。';t.after(note);
 const link=document.createElement('a');link.href='f-expert-notes.md';link.textContent='F专家子项诊断：证据与复现';note.after(link);
-})();</script><script>(()=>{
-const original=document.getElementById('diagnostic-conditions'),box=document.getElementById('b-evidence'),panel=document.getElementById('moe-attribution-r1');
-if(!original||!box||!panel)throw Error('missing diagnosis sections');
-const wrapper=original.closest('.scroll')||original;wrapper.after(box);
-const heading=document.createElement('h3');heading.textContent='F专家计算子项：固定B两类替换后进一步诊断';heading.id='f-expert-conditions';
-const wrap=document.createElement('div');wrap.style.overflowX='auto';const table=document.createElement('table');table.id='f-expert-conditions-table';table.append(original.tHead.cloneNode(true));const body=document.createElement('tbody');table.append(body);wrap.append(table);
-for(const row of [...original.querySelectorAll('tr[data-f-expert]')])body.append(row);
-for(const row of [...original.querySelectorAll('tr')])if(row.querySelector('td[colspan="3"]'))row.remove();
-const note=document.getElementById('f-expert-diagnosis-note'),link=note.nextElementSibling;
-const summary=panel.querySelector('details');summary.before(heading,wrap,note);if(link&&link.tagName==='A')note.after(link);
-panel.querySelector('h2').textContent='进一步拆解B与F：专家计算子项替换后的误差';
-const over=document.getElementById('overestimate');over.querySelector('h2').textContent='1F1B整体误差 → B/F专家计算子项诊断';
-})();</script><script>(()=>{document.querySelector('header').insertAdjacentHTML('afterend',"<section id=\"extrapolation-conclusion\" class=\"panel\" style=\"margin:22px 0;border:2px solid #2563eb;border-left:8px solid #2563eb;background:#eef5ff\">\n<div class=\"small\">核心结论 · 2026-09-22 · 成本迁移诊断<\/div>\n<h2>结构可以重复，专家成本不能仅凭结构相同就视为常数。<\/h2>\n<p style=\"font-size:18px\"><strong>当前1F1B外推偏差主要与MoE相关成本迁移有关。<\/strong>按PP规模重复源stage时，虽然保留了相同计算结构，却没有表达逐层专家路由可能带来的实际工作量与负载差异，因此固定成本模板出现系统性高估。<\/p>\n<p>相同hidden size只固定每个token的特征宽度；不同层、不同专家实际收到的token数和负载分布可以不同，进而影响FC、激活／门控、重排及通信就绪。源／目标PP1已观察到输入行数与GEMM次数不同。<\/p>\n<p><strong>原预测 +6.16% → 成本替换诊断 −0.51%。<\/strong>替换包含F/B专家计算，以及B中已识别的token重排／EP活动，不是“只换FC”。模型参数未改，正式预测仍为+6.16%。<\/p>\n<p class=\"small\">边界：尚未证明全部差异由路由随layer变化造成，也未证明“两头大、中间小”；当前使用32卡PP1模板，不是256卡两头插值。代表rank目标实测替换不等于完整EP8因果验证，−0.51%不是独立外推精度。<\/p>\n<p><a href=\"analysis-methods-and-sources.md\">分析方法、数据来源与复现文档<\/a> · <a href=\"analysis-evidence-index.json\">证据清单与SHA256<\/a> · <a href=\"#overestimate\">查看整体1F1B归因<\/a> · <a href=\"#moe-attribution-r1\">查看B/F专家子项<\/a><\/p>\n<\/section>");})();</script><script>(()=>{
-const old=document.getElementById('extrapolation-conclusion'),table=document.getElementById('diagnostic-conditions');if(!old||!table)throw Error('missing conclusion or 1F1B table');
-const p=document.createElement('p');p.id='extrapolation-conclusion';p.style.cssText='padding:14px 18px;border-left:4px solid #2563eb;background:#eef5ff;margin:18px 0';p.textContent="当前1F1B外推偏差主要与MoE相关成本迁移有关。按PP规模重复源stage时，虽然保留了相同计算结构，却没有表达逐层专家路由带来的实际工作量与负载差异，因此固定成本模板出现系统性高估。";
-old.remove();(table.closest('.scroll')||table).after(p);
 })();</script></body></html>
