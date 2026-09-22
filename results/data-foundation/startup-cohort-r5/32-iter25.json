@@ -1,0 +1,54 @@
+{
+  "case": "32",
+  "world": 32,
+  "rank": 0,
+  "iteration": 25,
+  "path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34095/profiler/iteration_25/rank0.1789699476978.pt.trace.json",
+  "resolved_path": "/home/zjb/Desktop/32/gpu32_gbs64_framework/2026-09-18-10:38/worker34095/profiler/iteration_25/rank0.1789699476978.pt.trace.json",
+  "status": "PASS",
+  "sha256": "958913dc883af2df163029e2b21349c2ec47677bcb4901e2cdb4c81650ecc449",
+  "bytes": 28162074,
+  "profiler_label": "ProfilerStep#24",
+  "profiler_ms": 11238.662343,
+  "first_F_CPU_ms": 102.7281162109375,
+  "startup_GPU_ms": 107.3232080078125,
+  "first_DataLoader_CPU_ms": 102.8301611328125,
+  "timer_AG_count": 1,
+  "timer_AGs": [
+    {
+      "event": 59389,
+      "start_ms": 80.517419921875,
+      "duration_ms": 15.436086,
+      "input_bytes": 96,
+      "output_bytes": 3072,
+      "group": "0",
+      "correlation": 3250708,
+      "position": "before_first_F"
+    }
+  ],
+  "selected_AG": {
+    "event": 59389,
+    "start_ms": 80.517419921875,
+    "duration_ms": 15.436086,
+    "input_bytes": 96,
+    "output_bytes": 3072,
+    "group": "0",
+    "correlation": 3250708,
+    "position": "before_first_F"
+  },
+  "selected_AG_ms": 15.436086,
+  "all_timer_AG_sum_ms": 15.436086,
+  "barriers": [
+    {
+      "event": 59305,
+      "start_ms": 3.31343359375,
+      "duration_ms": 1.499808
+    },
+    {
+      "event": 59335,
+      "start_ms": 5.042482421875,
+      "duration_ms": 0.778205
+    }
+  ],
+  "selection": "unique pre-F global 24-float AG"
+}

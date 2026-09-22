@@ -1,0 +1,7023 @@
+{
+  "status": "PASS_GROUP_MAPPING_PARTIAL_COST_MODEL",
+  "rows": [
+    {
+      "rank": 0,
+      "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33087/profiler/iteration_60/rank0.1785477876632.pt.trace.json",
+      "sha256": "354db29eed39c89932d9f39ca658ae799740c4c4381dcf9f1c0310e7cdf7f010",
+      "worker": "worker33087",
+      "tail_calls": [
+        {
+          "event": 38863,
+          "collective": "reduce_scatter_tensor_coalesced",
+          "duration_ms": 23.797036,
+          "start_from_step_ms": 21604.33460888672,
+          "runtime_event": 38861,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 4767580160,
+          "output_bytes": 297973760,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21969.833588,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5234,
+              "name": "finalize_model_grads",
+              "duration_ms": 42.661674,
+              "args": {
+                "External id": 207963,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5210
+              }
+            },
+            {
+              "event": 5261,
+              "name": "c10d::reduce_scatter_tensor_coalesced_",
+              "duration_ms": 0.29317200000000004,
+              "args": {
+                "External id": 207990,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "-1"
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5824,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 5237
+              }
+            },
+            {
+              "event": 5262,
+              "name": "record_param_comms",
+              "duration_ms": 0.243364,
+              "args": {
+                "External id": 207991,
+                "Record function id": 0,
+                "Collective name": "reduce_scatter_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "Float",
+                "Rank": 0,
+                "In msg nelems": 1191895040,
+                "Ev Idx": 5238,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "0",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 74493440,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5263,
+              "name": "mccl:reduce_scatter_tensor_coalesced",
+              "duration_ms": 0.193908,
+              "args": {
+                "External id": 207992,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    1191895040
+                  ]
+                ],
+                "Ev Idx": 5239
+              }
+            }
+          ]
+        },
+        {
+          "event": 38925,
+          "collective": "reduce_scatter_tensor_coalesced",
+          "duration_ms": 55.193816,
+          "start_from_step_ms": 21633.002181152344,
+          "runtime_event": 38923,
+          "stream": 36,
+          "group": {
+            "pg_name": "1043",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              0,
+              8
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 1887436800,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21969.833588,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5234,
+              "name": "finalize_model_grads",
+              "duration_ms": 42.661674,
+              "args": {
+                "External id": 207963,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5210
+              }
+            },
+            {
+              "event": 5291,
+              "name": "c10d::reduce_scatter_tensor_coalesced_",
+              "duration_ms": 0.232848,
+              "args": {
+                "External id": 208020,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "-1"
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5824,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 5267
+              }
+            },
+            {
+              "event": 5292,
+              "name": "record_param_comms",
+              "duration_ms": 0.182771,
+              "args": {
+                "External id": 208021,
+                "Record function id": 0,
+                "Collective name": "reduce_scatter_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "Float",
+                "Rank": 0,
+                "In msg nelems": 471859200,
+                "Ev Idx": 5268,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "0",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 235929600,
+                "Process Group Name": "1043",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5293,
+              "name": "mccl:reduce_scatter_tensor_coalesced",
+              "duration_ms": 0.13888999999999999,
+              "args": {
+                "External id": 208022,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    471859200
+                  ]
+                ],
+                "Ev Idx": 5269
+              }
+            }
+          ]
+        },
+        {
+          "event": 39305,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 12.943482,
+          "start_from_step_ms": 21721.665250976563,
+          "runtime_event": 39303,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 148986880,
+          "output_bytes": 2383790080,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21969.833588,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 30.74175,
+              "args": {
+                "External id": 208043,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5449,
+              "name": "step_with_ready_grads",
+              "duration_ms": 1.816482,
+              "args": {
+                "External id": 208178,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5425
+              }
+            },
+            {
+              "event": 5531,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.18121600000000002,
+              "args": {
+                "External id": 208260,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 5507
+              }
+            },
+            {
+              "event": 5532,
+              "name": "record_param_comms",
+              "duration_ms": 0.140443,
+              "args": {
+                "External id": 208261,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "BFloat16",
+                "Rank": 0,
+                "In msg nelems": 74493440,
+                "Ev Idx": 5508,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "0",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 1191895040,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5533,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.109173,
+              "args": {
+                "External id": 208262,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    74493440
+                  ]
+                ],
+                "Ev Idx": 5509
+              }
+            }
+          ]
+        },
+        {
+          "event": 39325,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 14.102806000000001,
+          "start_from_step_ms": 21734.619252929686,
+          "runtime_event": 39323,
+          "stream": 36,
+          "group": {
+            "pg_name": "1043",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              0,
+              8
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 471859200,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21969.833588,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 30.74175,
+              "args": {
+                "External id": 208043,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5449,
+              "name": "step_with_ready_grads",
+              "duration_ms": 1.816482,
+              "args": {
+                "External id": 208178,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5425
+              }
+            },
+            {
+              "event": 5535,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.119587,
+              "args": {
+                "External id": 208264,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 5511
+              }
+            },
+            {
+              "event": 5536,
+              "name": "record_param_comms",
+              "duration_ms": 0.100427,
+              "args": {
+                "External id": 208265,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "BFloat16",
+                "Rank": 0,
+                "In msg nelems": 235929600,
+                "Ev Idx": 5512,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "0",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 471859200,
+                "Process Group Name": "1043",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5537,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.079027,
+              "args": {
+                "External id": 208266,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    235929600
+                  ]
+                ],
+                "Ev Idx": 5513
+              }
+            }
+          ]
+        },
+        {
+          "event": 41193,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 12.874801999999999,
+          "start_from_step_ms": 21771.453052734374,
+          "runtime_event": 41191,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 148986880,
+          "output_bytes": 2383790080,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21969.833588,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 30.74175,
+              "args": {
+                "External id": 208043,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5539,
+              "name": "step_with_ready_grads",
+              "duration_ms": 12.023280000000002,
+              "args": {
+                "External id": 208268,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5515
+              }
+            },
+            {
+              "event": 6741,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.16281800000000002,
+              "args": {
+                "External id": 220734,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 6717
+              }
+            },
+            {
+              "event": 6742,
+              "name": "record_param_comms",
+              "duration_ms": 0.133647,
+              "args": {
+                "External id": 220735,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "BFloat16",
+                "Rank": 0,
+                "In msg nelems": 74493440,
+                "Ev Idx": 6718,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "0",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 1191895040,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 6743,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.10023399999999999,
+              "args": {
+                "External id": 220736,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    74493440
+                  ]
+                ],
+                "Ev Idx": 6719
+              }
+            }
+          ]
+        },
+        {
+          "event": 41213,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 14.829768,
+          "start_from_step_ms": 21784.345455078124,
+          "runtime_event": 41211,
+          "stream": 36,
+          "group": {
+            "pg_name": "1043",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              0,
+              8
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 471859200,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21969.833588,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 30.74175,
+              "args": {
+                "External id": 208043,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5539,
+              "name": "step_with_ready_grads",
+              "duration_ms": 12.023280000000002,
+              "args": {
+                "External id": 208268,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5515
+              }
+            },
+            {
+              "event": 6745,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.126233,
+              "args": {
+                "External id": 220738,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 6721
+              }
+            },
+            {
+              "event": 6746,
+              "name": "record_param_comms",
+              "duration_ms": 0.103116,
+              "args": {
+                "External id": 220739,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "BFloat16",
+                "Rank": 0,
+                "In msg nelems": 235929600,
+                "Ev Idx": 6722,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "0",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 471859200,
+                "Process Group Name": "1043",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 6747,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.071455,
+              "args": {
+                "External id": 220740,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    235929600
+                  ]
+                ],
+                "Ev Idx": 6723
+              }
+            }
+          ]
+        }
+      ],
+      "startup": [
+        {
+          "event": 19113,
+          "collective": "_allgather_base",
+          "duration_ms": 1068.8949650000002,
+          "start_from_step_ms": 114.53189794921875,
+          "runtime_event": 19111,
+          "stream": 3,
+          "group": {
+            "pg_name": "0",
+            "pg_desc": "default_pg",
+            "backend_config": "musa:mccl",
+            "pg_size": 256,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207,
+              208,
+              209,
+              210,
+              211,
+              212,
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, ..., 255]",
+          "input_bytes": 96,
+          "output_bytes": 24576,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21969.833588,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 104,
+              "name": "c10d::_allgather_base_",
+              "duration_ms": 0.17013499999999998,
+              "args": {
+                "External id": 202857,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "False",
+                  "-1"
+                ],
+                "Input type": [
+                  "float",
+                  "float",
+                  "",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ],
+                  [
+                    1
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5728,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    6144
+                  ],
+                  [
+                    24
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 104
+              }
+            },
+            {
+              "event": 105,
+              "name": "record_param_comms",
+              "duration_ms": 0.123586,
+              "args": {
+                "External id": 202858,
+                "Record function id": 0,
+                "Collective name": "_allgather_base",
+                "Process Group Description": "default_pg",
+                "dtype": "Float",
+                "Rank": 0,
+                "In msg nelems": 24,
+                "Ev Idx": 105,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    1
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "0",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "256"
+                ],
+                "Out msg nelems": 6144,
+                "Process Group Name": "0",
+                "Input type": [
+                  "float",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, ..., 255]",
+                "Group size": 256,
+                "Input Dims": [
+                  [
+                    24
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 106,
+              "name": "mccl:_all_gather_base",
+              "duration_ms": 0.087895,
+              "args": {
+                "External id": 202859,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    24
+                  ]
+                ],
+                "Ev Idx": 106
+              }
+            }
+          ]
+        }
+      ],
+      "profiler_label": "ProfilerStep#59"
+    },
+    {
+      "rank": 1,
+      "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33087/profiler/iteration_60/rank1.1785477876620.pt.trace.json",
+      "sha256": "182a960e0eed99a614d270fe431651fc8303e8e761f1aad93e1f5a25b822108f",
+      "worker": "worker33087",
+      "tail_calls": [
+        {
+          "event": 37705,
+          "collective": "reduce_scatter_tensor_coalesced",
+          "duration_ms": 23.909155,
+          "start_from_step_ms": 21608.43276123047,
+          "runtime_event": 37703,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 4767580160,
+          "output_bytes": 297973760,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21974.134120000002,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5234,
+              "name": "finalize_model_grads",
+              "duration_ms": 42.772319,
+              "args": {
+                "External id": 207963,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5210
+              }
+            },
+            {
+              "event": 5261,
+              "name": "c10d::reduce_scatter_tensor_coalesced_",
+              "duration_ms": 0.322293,
+              "args": {
+                "External id": 207990,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "-1"
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5824,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 5237
+              }
+            },
+            {
+              "event": 5262,
+              "name": "record_param_comms",
+              "duration_ms": 0.26984199999999997,
+              "args": {
+                "External id": 207991,
+                "Record function id": 0,
+                "Collective name": "reduce_scatter_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "Float",
+                "Rank": 1,
+                "In msg nelems": 1191895040,
+                "Ev Idx": 5238,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "1",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 74493440,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5263,
+              "name": "mccl:reduce_scatter_tensor_coalesced",
+              "duration_ms": 0.22055699999999998,
+              "args": {
+                "External id": 207992,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    1191895040
+                  ]
+                ],
+                "Ev Idx": 5239
+              }
+            }
+          ]
+        },
+        {
+          "event": 37767,
+          "collective": "reduce_scatter_tensor_coalesced",
+          "duration_ms": 54.587514999999996,
+          "start_from_step_ms": 21637.204851074217,
+          "runtime_event": 37765,
+          "stream": 36,
+          "group": {
+            "pg_name": "1045",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              1,
+              9
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 1887436800,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21974.134120000002,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5234,
+              "name": "finalize_model_grads",
+              "duration_ms": 42.772319,
+              "args": {
+                "External id": 207963,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5210
+              }
+            },
+            {
+              "event": 5291,
+              "name": "c10d::reduce_scatter_tensor_coalesced_",
+              "duration_ms": 0.206481,
+              "args": {
+                "External id": 208020,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "-1"
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5824,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 5267
+              }
+            },
+            {
+              "event": 5292,
+              "name": "record_param_comms",
+              "duration_ms": 0.155905,
+              "args": {
+                "External id": 208021,
+                "Record function id": 0,
+                "Collective name": "reduce_scatter_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "Float",
+                "Rank": 0,
+                "In msg nelems": 471859200,
+                "Ev Idx": 5268,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "0",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 235929600,
+                "Process Group Name": "1045",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5293,
+              "name": "mccl:reduce_scatter_tensor_coalesced",
+              "duration_ms": 0.11844400000000001,
+              "args": {
+                "External id": 208022,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    471859200
+                  ]
+                ],
+                "Ev Idx": 5269
+              }
+            }
+          ]
+        },
+        {
+          "event": 38147,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 13.053652,
+          "start_from_step_ms": 21725.725998046873,
+          "runtime_event": 38145,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 148986880,
+          "output_bytes": 2383790080,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21974.134120000002,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 31.291303,
+              "args": {
+                "External id": 208043,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5449,
+              "name": "step_with_ready_grads",
+              "duration_ms": 1.9108340000000001,
+              "args": {
+                "External id": 208178,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5425
+              }
+            },
+            {
+              "event": 5531,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.200488,
+              "args": {
+                "External id": 208260,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 5507
+              }
+            },
+            {
+              "event": 5532,
+              "name": "record_param_comms",
+              "duration_ms": 0.153867,
+              "args": {
+                "External id": 208261,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "BFloat16",
+                "Rank": 1,
+                "In msg nelems": 74493440,
+                "Ev Idx": 5508,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "1",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 1191895040,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5533,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.118384,
+              "args": {
+                "External id": 208262,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    74493440
+                  ]
+                ],
+                "Ev Idx": 5509
+              }
+            }
+          ]
+        },
+        {
+          "event": 38167,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 14.119606,
+          "start_from_step_ms": 21738.790130371093,
+          "runtime_event": 38165,
+          "stream": 36,
+          "group": {
+            "pg_name": "1045",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              1,
+              9
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 471859200,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21974.134120000002,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 31.291303,
+              "args": {
+                "External id": 208043,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5449,
+              "name": "step_with_ready_grads",
+              "duration_ms": 1.9108340000000001,
+              "args": {
+                "External id": 208178,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5425
+              }
+            },
+            {
+              "event": 5535,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.11644199999999999,
+              "args": {
+                "External id": 208264,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 5511
+              }
+            },
+            {
+              "event": 5536,
+              "name": "record_param_comms",
+              "duration_ms": 0.09933,
+              "args": {
+                "External id": 208265,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "BFloat16",
+                "Rank": 0,
+                "In msg nelems": 235929600,
+                "Ev Idx": 5512,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "0",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 471859200,
+                "Process Group Name": "1045",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5537,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.072257,
+              "args": {
+                "External id": 208266,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    235929600
+                  ]
+                ],
+                "Ev Idx": 5513
+              }
+            }
+          ]
+        },
+        {
+          "event": 40035,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 13.073572,
+          "start_from_step_ms": 21775.393139160155,
+          "runtime_event": 40033,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 148986880,
+          "output_bytes": 2383790080,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21974.134120000002,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 31.291303,
+              "args": {
+                "External id": 208043,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5539,
+              "name": "step_with_ready_grads",
+              "duration_ms": 12.479959999999998,
+              "args": {
+                "External id": 208268,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5515
+              }
+            },
+            {
+              "event": 6741,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.217979,
+              "args": {
+                "External id": 220734,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 6717
+              }
+            },
+            {
+              "event": 6742,
+              "name": "record_param_comms",
+              "duration_ms": 0.185938,
+              "args": {
+                "External id": 220735,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "BFloat16",
+                "Rank": 1,
+                "In msg nelems": 74493440,
+                "Ev Idx": 6718,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "1",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 1191895040,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 6743,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.14390199999999997,
+              "args": {
+                "External id": 220736,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    74493440
+                  ]
+                ],
+                "Ev Idx": 6719
+              }
+            }
+          ]
+        },
+        {
+          "event": 40055,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 13.57737,
+          "start_from_step_ms": 21788.484711425783,
+          "runtime_event": 40053,
+          "stream": 36,
+          "group": {
+            "pg_name": "1045",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              1,
+              9
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 471859200,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21974.134120000002,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 31.291303,
+              "args": {
+                "External id": 208043,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5539,
+              "name": "step_with_ready_grads",
+              "duration_ms": 12.479959999999998,
+              "args": {
+                "External id": 208268,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5515
+              }
+            },
+            {
+              "event": 6745,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.135193,
+              "args": {
+                "External id": 220738,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 6721
+              }
+            },
+            {
+              "event": 6746,
+              "name": "record_param_comms",
+              "duration_ms": 0.11579099999999999,
+              "args": {
+                "External id": 220739,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "BFloat16",
+                "Rank": 0,
+                "In msg nelems": 235929600,
+                "Ev Idx": 6722,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "0",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 471859200,
+                "Process Group Name": "1045",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 6747,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.088075,
+              "args": {
+                "External id": 220740,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    235929600
+                  ]
+                ],
+                "Ev Idx": 6723
+              }
+            }
+          ]
+        }
+      ],
+      "startup": [
+        {
+          "event": 19113,
+          "collective": "_allgather_base",
+          "duration_ms": 1077.8187209999999,
+          "start_from_step_ms": 109.78143505859374,
+          "runtime_event": 19111,
+          "stream": 3,
+          "group": {
+            "pg_name": "0",
+            "pg_desc": "default_pg",
+            "backend_config": "musa:mccl",
+            "pg_size": 256,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207,
+              208,
+              209,
+              210,
+              211,
+              212,
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, ..., 255]",
+          "input_bytes": 96,
+          "output_bytes": 24576,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21974.134120000002,
+              "args": {
+                "External id": 202753,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 104,
+              "name": "c10d::_allgather_base_",
+              "duration_ms": 0.161654,
+              "args": {
+                "External id": 202857,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "False",
+                  "-1"
+                ],
+                "Input type": [
+                  "float",
+                  "float",
+                  "",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ],
+                  [
+                    1
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5728,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    6144
+                  ],
+                  [
+                    24
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 104
+              }
+            },
+            {
+              "event": 105,
+              "name": "record_param_comms",
+              "duration_ms": 0.114665,
+              "args": {
+                "External id": 202858,
+                "Record function id": 0,
+                "Collective name": "_allgather_base",
+                "Process Group Description": "default_pg",
+                "dtype": "Float",
+                "Rank": 1,
+                "In msg nelems": 24,
+                "Ev Idx": 105,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    1
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "1",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "256"
+                ],
+                "Out msg nelems": 6144,
+                "Process Group Name": "0",
+                "Input type": [
+                  "float",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, ..., 255]",
+                "Group size": 256,
+                "Input Dims": [
+                  [
+                    24
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 106,
+              "name": "mccl:_all_gather_base",
+              "duration_ms": 0.08337699999999999,
+              "args": {
+                "External id": 202859,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    24
+                  ]
+                ],
+                "Ev Idx": 106
+              }
+            }
+          ]
+        }
+      ],
+      "profiler_label": "ProfilerStep#59"
+    },
+    {
+      "rank": 8,
+      "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33075/profiler/iteration_60/rank8.1785477876672.pt.trace.json",
+      "sha256": "fae69d866b715a63b5444c38dc44c13ffb2a0a233e01303216b511920aea13cd",
+      "worker": "worker33075",
+      "tail_calls": [
+        {
+          "event": 37519,
+          "collective": "reduce_scatter_tensor_coalesced",
+          "duration_ms": 129.93392,
+          "start_from_step_ms": 21500.87805859375,
+          "runtime_event": 37517,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 4767580160,
+          "output_bytes": 297973760,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21972.421719,
+              "args": {
+                "External id": 214017,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5234,
+              "name": "finalize_model_grads",
+              "duration_ms": 148.66146799999999,
+              "args": {
+                "External id": 219227,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5210
+              }
+            },
+            {
+              "event": 5261,
+              "name": "c10d::reduce_scatter_tensor_coalesced_",
+              "duration_ms": 0.30351799999999995,
+              "args": {
+                "External id": 219254,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "-1"
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5824,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 5237
+              }
+            },
+            {
+              "event": 5262,
+              "name": "record_param_comms",
+              "duration_ms": 0.245995,
+              "args": {
+                "External id": 219255,
+                "Record function id": 0,
+                "Collective name": "reduce_scatter_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "Float",
+                "Rank": 8,
+                "In msg nelems": 1191895040,
+                "Ev Idx": 5238,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "8",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 74493440,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5263,
+              "name": "mccl:reduce_scatter_tensor_coalesced",
+              "duration_ms": 0.191102,
+              "args": {
+                "External id": 219256,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    1191895040
+                  ]
+                ],
+                "Ev Idx": 5239
+              }
+            }
+          ]
+        },
+        {
+          "event": 37581,
+          "collective": "reduce_scatter_tensor_coalesced",
+          "duration_ms": 55.148582000000005,
+          "start_from_step_ms": 21635.647147949217,
+          "runtime_event": 37579,
+          "stream": 36,
+          "group": {
+            "pg_name": "1043",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              0,
+              8
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 1887436800,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21972.421719,
+              "args": {
+                "External id": 214017,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5234,
+              "name": "finalize_model_grads",
+              "duration_ms": 148.66146799999999,
+              "args": {
+                "External id": 219227,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5210
+              }
+            },
+            {
+              "event": 5291,
+              "name": "c10d::reduce_scatter_tensor_coalesced_",
+              "duration_ms": 0.22146100000000002,
+              "args": {
+                "External id": 219284,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "-1"
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5824,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 5267
+              }
+            },
+            {
+              "event": 5292,
+              "name": "record_param_comms",
+              "duration_ms": 0.171148,
+              "args": {
+                "External id": 219285,
+                "Record function id": 0,
+                "Collective name": "reduce_scatter_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "Float",
+                "Rank": 1,
+                "In msg nelems": 471859200,
+                "Ev Idx": 5268,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "1",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 235929600,
+                "Process Group Name": "1043",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5293,
+              "name": "mccl:reduce_scatter_tensor_coalesced",
+              "duration_ms": 0.122586,
+              "args": {
+                "External id": 219286,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    471859200
+                  ]
+                ],
+                "Ev Idx": 5269
+              }
+            }
+          ]
+        },
+        {
+          "event": 38189,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 12.801263,
+          "start_from_step_ms": 21724.403431640625,
+          "runtime_event": 38187,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 148986880,
+          "output_bytes": 2383790080,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21972.421719,
+              "args": {
+                "External id": 214017,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 45.209521,
+              "args": {
+                "External id": 219307,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5509,
+              "name": "step_with_ready_grads",
+              "duration_ms": 3.821205,
+              "args": {
+                "External id": 219502,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5485
+              }
+            },
+            {
+              "event": 5751,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.189522,
+              "args": {
+                "External id": 231008,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 5727
+              }
+            },
+            {
+              "event": 5752,
+              "name": "record_param_comms",
+              "duration_ms": 0.154338,
+              "args": {
+                "External id": 231009,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "BFloat16",
+                "Rank": 8,
+                "In msg nelems": 74493440,
+                "Ev Idx": 5728,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "8",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 1191895040,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5753,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.11990300000000001,
+              "args": {
+                "External id": 231010,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    74493440
+                  ]
+                ],
+                "Ev Idx": 5729
+              }
+            }
+          ]
+        },
+        {
+          "event": 38209,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 14.077866,
+          "start_from_step_ms": 21737.262895019532,
+          "runtime_event": 38207,
+          "stream": 36,
+          "group": {
+            "pg_name": "1043",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              0,
+              8
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 471859200,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21972.421719,
+              "args": {
+                "External id": 214017,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 45.209521,
+              "args": {
+                "External id": 219307,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5509,
+              "name": "step_with_ready_grads",
+              "duration_ms": 3.821205,
+              "args": {
+                "External id": 219502,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5485
+              }
+            },
+            {
+              "event": 5755,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.122158,
+              "args": {
+                "External id": 231012,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 5731
+              }
+            },
+            {
+              "event": 5756,
+              "name": "record_param_comms",
+              "duration_ms": 0.10254,
+              "args": {
+                "External id": 231013,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "BFloat16",
+                "Rank": 1,
+                "In msg nelems": 235929600,
+                "Ev Idx": 5732,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "1",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 471859200,
+                "Process Group Name": "1043",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5757,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.07871399999999999,
+              "args": {
+                "External id": 231014,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    235929600
+                  ]
+                ],
+                "Ev Idx": 5733
+              }
+            }
+          ]
+        },
+        {
+          "event": 41277,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 12.000862,
+          "start_from_step_ms": 21774.910125,
+          "runtime_event": 41275,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 148986880,
+          "output_bytes": 2383790080,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21972.421719,
+              "args": {
+                "External id": 214017,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 45.209521,
+              "args": {
+                "External id": 219307,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5759,
+              "name": "step_with_ready_grads",
+              "duration_ms": 24.535802,
+              "args": {
+                "External id": 231016,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5735
+              }
+            },
+            {
+              "event": 7761,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.214865,
+              "args": {
+                "External id": 233018,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 7737
+              }
+            },
+            {
+              "event": 7762,
+              "name": "record_param_comms",
+              "duration_ms": 0.17991900000000002,
+              "args": {
+                "External id": 233019,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "BFloat16",
+                "Rank": 8,
+                "In msg nelems": 74493440,
+                "Ev Idx": 7738,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "8",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 1191895040,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 7763,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.131026,
+              "args": {
+                "External id": 233020,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    74493440
+                  ]
+                ],
+                "Ev Idx": 7739
+              }
+            }
+          ]
+        },
+        {
+          "event": 41297,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 14.829827,
+          "start_from_step_ms": 21786.920187011718,
+          "runtime_event": 41295,
+          "stream": 36,
+          "group": {
+            "pg_name": "1043",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              0,
+              8
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 471859200,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21972.421719,
+              "args": {
+                "External id": 214017,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 45.209521,
+              "args": {
+                "External id": 219307,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5759,
+              "name": "step_with_ready_grads",
+              "duration_ms": 24.535802,
+              "args": {
+                "External id": 231016,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5735
+              }
+            },
+            {
+              "event": 7765,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.10466400000000001,
+              "args": {
+                "External id": 233022,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 7741
+              }
+            },
+            {
+              "event": 7766,
+              "name": "record_param_comms",
+              "duration_ms": 0.086112,
+              "args": {
+                "External id": 233023,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "BFloat16",
+                "Rank": 1,
+                "In msg nelems": 235929600,
+                "Ev Idx": 7742,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "1",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 471859200,
+                "Process Group Name": "1043",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 7767,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.064104,
+              "args": {
+                "External id": 233024,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    235929600
+                  ]
+                ],
+                "Ev Idx": 7743
+              }
+            }
+          ]
+        }
+      ],
+      "startup": [
+        {
+          "event": 41623,
+          "collective": "_allgather_base",
+          "duration_ms": 1071.333395,
+          "start_from_step_ms": 114.7634560546875,
+          "runtime_event": 41621,
+          "stream": 3,
+          "group": {
+            "pg_name": "0",
+            "pg_desc": "default_pg",
+            "backend_config": "musa:mccl",
+            "pg_size": 256,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207,
+              208,
+              209,
+              210,
+              211,
+              212,
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, ..., 255]",
+          "input_bytes": 96,
+          "output_bytes": 24576,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21972.421719,
+              "args": {
+                "External id": 214017,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 104,
+              "name": "c10d::_allgather_base_",
+              "duration_ms": 0.156198,
+              "args": {
+                "External id": 214121,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "False",
+                  "-1"
+                ],
+                "Input type": [
+                  "float",
+                  "float",
+                  "",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ],
+                  [
+                    1
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5728,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    6144
+                  ],
+                  [
+                    24
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 104
+              }
+            },
+            {
+              "event": 105,
+              "name": "record_param_comms",
+              "duration_ms": 0.114485,
+              "args": {
+                "External id": 214122,
+                "Record function id": 0,
+                "Collective name": "_allgather_base",
+                "Process Group Description": "default_pg",
+                "dtype": "Float",
+                "Rank": 8,
+                "In msg nelems": 24,
+                "Ev Idx": 105,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    1
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "8",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "256"
+                ],
+                "Out msg nelems": 6144,
+                "Process Group Name": "0",
+                "Input type": [
+                  "float",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, ..., 255]",
+                "Group size": 256,
+                "Input Dims": [
+                  [
+                    24
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 106,
+              "name": "mccl:_all_gather_base",
+              "duration_ms": 0.083761,
+              "args": {
+                "External id": 214123,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    24
+                  ]
+                ],
+                "Ev Idx": 106
+              }
+            }
+          ]
+        }
+      ],
+      "profiler_label": "ProfilerStep#59"
+    },
+    {
+      "rank": 9,
+      "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33075/profiler/iteration_60/rank9.1785477876643.pt.trace.json",
+      "sha256": "5706608ddfe2e5ee9b7c4c4de6adfee1304966209a8721f500ac455a753bdf1b",
+      "worker": "worker33075",
+      "tail_calls": [
+        {
+          "event": 36126,
+          "collective": "reduce_scatter_tensor_coalesced",
+          "duration_ms": 129.813898,
+          "start_from_step_ms": 21501.443559082032,
+          "runtime_event": 36124,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 4767580160,
+          "output_bytes": 297973760,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21973.171653999998,
+              "args": {
+                "External id": 211457,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5234,
+              "name": "finalize_model_grads",
+              "duration_ms": 148.72993,
+              "args": {
+                "External id": 216667,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5210
+              }
+            },
+            {
+              "event": 5261,
+              "name": "c10d::reduce_scatter_tensor_coalesced_",
+              "duration_ms": 0.33429899999999996,
+              "args": {
+                "External id": 216694,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "-1"
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5824,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 5237
+              }
+            },
+            {
+              "event": 5262,
+              "name": "record_param_comms",
+              "duration_ms": 0.268571,
+              "args": {
+                "External id": 216695,
+                "Record function id": 0,
+                "Collective name": "reduce_scatter_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "Float",
+                "Rank": 9,
+                "In msg nelems": 1191895040,
+                "Ev Idx": 5238,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "9",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 74493440,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5263,
+              "name": "mccl:reduce_scatter_tensor_coalesced",
+              "duration_ms": 0.210548,
+              "args": {
+                "External id": 216696,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    1191895040
+                  ]
+                ],
+                "Ev Idx": 5239
+              }
+            }
+          ]
+        },
+        {
+          "event": 36188,
+          "collective": "reduce_scatter_tensor_coalesced",
+          "duration_ms": 54.680981,
+          "start_from_step_ms": 21636.11416015625,
+          "runtime_event": 36186,
+          "stream": 36,
+          "group": {
+            "pg_name": "1045",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              1,
+              9
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 1887436800,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21973.171653999998,
+              "args": {
+                "External id": 211457,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5234,
+              "name": "finalize_model_grads",
+              "duration_ms": 148.72993,
+              "args": {
+                "External id": 216667,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5210
+              }
+            },
+            {
+              "event": 5291,
+              "name": "c10d::reduce_scatter_tensor_coalesced_",
+              "duration_ms": 0.21516300000000002,
+              "args": {
+                "External id": 216724,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "-1"
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5824,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 5267
+              }
+            },
+            {
+              "event": 5292,
+              "name": "record_param_comms",
+              "duration_ms": 0.164888,
+              "args": {
+                "External id": 216725,
+                "Record function id": 0,
+                "Collective name": "reduce_scatter_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "Float",
+                "Rank": 1,
+                "In msg nelems": 471859200,
+                "Ev Idx": 5268,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "1",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 235929600,
+                "Process Group Name": "1045",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5293,
+              "name": "mccl:reduce_scatter_tensor_coalesced",
+              "duration_ms": 0.116377,
+              "args": {
+                "External id": 216726,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    471859200
+                  ]
+                ],
+                "Ev Idx": 5269
+              }
+            }
+          ]
+        },
+        {
+          "event": 36688,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 12.617704,
+          "start_from_step_ms": 21725.06016796875,
+          "runtime_event": 36686,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 148986880,
+          "output_bytes": 2383790080,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21973.171653999998,
+              "args": {
+                "External id": 211457,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 38.349059000000004,
+              "args": {
+                "External id": 216747,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5504,
+              "name": "step_with_ready_grads",
+              "duration_ms": 2.518742,
+              "args": {
+                "External id": 216937,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5480
+              }
+            },
+            {
+              "event": 5666,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.172426,
+              "args": {
+                "External id": 228363,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 5642
+              }
+            },
+            {
+              "event": 5667,
+              "name": "record_param_comms",
+              "duration_ms": 0.14345,
+              "args": {
+                "External id": 228364,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "BFloat16",
+                "Rank": 9,
+                "In msg nelems": 74493440,
+                "Ev Idx": 5643,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "9",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 1191895040,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5668,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.106139,
+              "args": {
+                "External id": 228365,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    74493440
+                  ]
+                ],
+                "Ev Idx": 5644
+              }
+            }
+          ]
+        },
+        {
+          "event": 36708,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 14.183271000000001,
+          "start_from_step_ms": 21737.688912109374,
+          "runtime_event": 36706,
+          "stream": 36,
+          "group": {
+            "pg_name": "1045",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              1,
+              9
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 471859200,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21973.171653999998,
+              "args": {
+                "External id": 211457,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 38.349059000000004,
+              "args": {
+                "External id": 216747,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5504,
+              "name": "step_with_ready_grads",
+              "duration_ms": 2.518742,
+              "args": {
+                "External id": 216937,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5480
+              }
+            },
+            {
+              "event": 5670,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.11204800000000001,
+              "args": {
+                "External id": 228367,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 5646
+              }
+            },
+            {
+              "event": 5671,
+              "name": "record_param_comms",
+              "duration_ms": 0.100051,
+              "args": {
+                "External id": 228368,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "BFloat16",
+                "Rank": 1,
+                "In msg nelems": 235929600,
+                "Ev Idx": 5647,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "1",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 471859200,
+                "Process Group Name": "1045",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 5672,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.075913,
+              "args": {
+                "External id": 228369,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    235929600
+                  ]
+                ],
+                "Ev Idx": 5648
+              }
+            }
+          ]
+        },
+        {
+          "event": 39776,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 11.855339,
+          "start_from_step_ms": 21775.57334326172,
+          "runtime_event": 39774,
+          "stream": 33,
+          "group": {
+            "pg_name": "1",
+            "pg_desc": "DATA_PARALLEL_GROUP_WITH_CP",
+            "backend_config": "musa:mccl",
+            "pg_size": 16,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "input_bytes": 148986880,
+          "output_bytes": 2383790080,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21973.171653999998,
+              "args": {
+                "External id": 211457,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 38.349059000000004,
+              "args": {
+                "External id": 216747,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5674,
+              "name": "step_with_ready_grads",
+              "duration_ms": 18.84638,
+              "args": {
+                "External id": 228371,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5650
+              }
+            },
+            {
+              "event": 7676,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.144869,
+              "args": {
+                "External id": 230373,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      1191895040
+                    ]
+                  ],
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 7652
+              }
+            },
+            {
+              "event": 7677,
+              "name": "record_param_comms",
+              "duration_ms": 0.121256,
+              "args": {
+                "External id": 230374,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "DATA_PARALLEL_GROUP_WITH_CP",
+                "dtype": "BFloat16",
+                "Rank": 9,
+                "In msg nelems": 74493440,
+                "Ev Idx": 7653,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "9",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "16"
+                ],
+                "Out msg nelems": 1191895040,
+                "Process Group Name": "1",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+                "Group size": 16,
+                "Input Dims": [
+                  [
+                    [
+                      74493440
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 7678,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.091152,
+              "args": {
+                "External id": 230375,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    74493440
+                  ]
+                ],
+                "Ev Idx": 7654
+              }
+            }
+          ]
+        },
+        {
+          "event": 39796,
+          "collective": "allgather_into_tensor_coalesced",
+          "duration_ms": 13.589029,
+          "start_from_step_ms": 21787.433122070313,
+          "runtime_event": 39794,
+          "stream": 36,
+          "group": {
+            "pg_name": "1045",
+            "pg_desc": "EXPERT_DATA_PARALLEL_GROUP",
+            "backend_config": "musa:mccl",
+            "pg_size": 2,
+            "ranks": [
+              1,
+              9
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1]",
+          "input_bytes": 471859200,
+          "output_bytes": 943718400,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21973.171653999998,
+              "args": {
+                "External id": 211457,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 5314,
+              "name": "step",
+              "duration_ms": 38.349059000000004,
+              "args": {
+                "External id": 216747,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5290
+              }
+            },
+            {
+              "event": 5674,
+              "name": "step_with_ready_grads",
+              "duration_ms": 18.84638,
+              "args": {
+                "External id": 228371,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 5650
+              }
+            },
+            {
+              "event": 7680,
+              "name": "c10d::allgather_into_tensor_coalesced_",
+              "duration_ms": 0.105149,
+              "args": {
+                "External id": 230377,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  ""
+                ],
+                "Input type": [
+                  "TensorList",
+                  "TensorList",
+                  ""
+                ],
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  []
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    [
+                      471859200
+                    ]
+                  ],
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  []
+                ],
+                "Ev Idx": 7656
+              }
+            },
+            {
+              "event": 7681,
+              "name": "record_param_comms",
+              "duration_ms": 0.092768,
+              "args": {
+                "External id": 230378,
+                "Record function id": 0,
+                "Collective name": "allgather_into_tensor_coalesced",
+                "Process Group Description": "EXPERT_DATA_PARALLEL_GROUP",
+                "dtype": "BFloat16",
+                "Rank": 1,
+                "In msg nelems": 235929600,
+                "Ev Idx": 7657,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    [
+                      1
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "1",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "Out msg nelems": 471859200,
+                "Process Group Name": "1045",
+                "Input type": [
+                  "TensorList",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1]",
+                "Group size": 2,
+                "Input Dims": [
+                  [
+                    [
+                      235929600
+                    ]
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 7682,
+              "name": "mccl:all_gather_into_tensor_coalesced",
+              "duration_ms": 0.070764,
+              "args": {
+                "External id": 230379,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "c10::BFloat16"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    235929600
+                  ]
+                ],
+                "Ev Idx": 7658
+              }
+            }
+          ]
+        }
+      ],
+      "startup": [
+        {
+          "event": 40122,
+          "collective": "_allgather_base",
+          "duration_ms": 1069.9656710000002,
+          "start_from_step_ms": 116.6860869140625,
+          "runtime_event": 40120,
+          "stream": 3,
+          "group": {
+            "pg_name": "0",
+            "pg_desc": "default_pg",
+            "backend_config": "musa:mccl",
+            "pg_size": 256,
+            "ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207,
+              208,
+              209,
+              210,
+              211,
+              212,
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255
+            ]
+          },
+          "event_ranks_as_recorded": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, ..., 255]",
+          "input_bytes": 96,
+          "output_bytes": 24576,
+          "parents": [
+            {
+              "event": 0,
+              "name": "ProfilerStep#59",
+              "duration_ms": 21973.171653999998,
+              "args": {
+                "External id": 211457,
+                "Record function id": 0,
+                "finished": true,
+                "Ev Idx": 0
+              }
+            },
+            {
+              "event": 104,
+              "name": "c10d::_allgather_base_",
+              "duration_ms": 0.152304,
+              "args": {
+                "External id": 211561,
+                "Fwd thread id": 0,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "False",
+                  "-1"
+                ],
+                "Input type": [
+                  "float",
+                  "float",
+                  "",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ],
+                  [
+                    1
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Sequence number": 5728,
+                "finished": true,
+                "Input Dims": [
+                  [
+                    6144
+                  ],
+                  [
+                    24
+                  ],
+                  [],
+                  [],
+                  []
+                ],
+                "Ev Idx": 104
+              }
+            },
+            {
+              "event": 105,
+              "name": "record_param_comms",
+              "duration_ms": 0.10573099999999999,
+              "args": {
+                "External id": 211562,
+                "Record function id": 0,
+                "Collective name": "_allgather_base",
+                "Process Group Description": "default_pg",
+                "dtype": "Float",
+                "Rank": 9,
+                "In msg nelems": 24,
+                "Ev Idx": 105,
+                "finished": true,
+                "Input Strides": [
+                  [
+                    1
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Concrete Inputs": [
+                  "",
+                  "",
+                  "",
+                  "9",
+                  "",
+                  "[]",
+                  "[]",
+                  "0",
+                  "1",
+                  "256"
+                ],
+                "Out msg nelems": 6144,
+                "Process Group Name": "0",
+                "Input type": [
+                  "float",
+                  "",
+                  "",
+                  "Scalar",
+                  "",
+                  "ScalarList",
+                  "ScalarList",
+                  "Scalar",
+                  "Scalar",
+                  "Scalar"
+                ],
+                "Global rank stride": 1,
+                "Out split size": "[]",
+                "In split size": "[]",
+                "Process Group Ranks": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, ..., 255]",
+                "Group size": 256,
+                "Input Dims": [
+                  [
+                    24
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "Global rank start": 0
+              }
+            },
+            {
+              "event": 106,
+              "name": "mccl:_all_gather_base",
+              "duration_ms": 0.07110899999999999,
+              "args": {
+                "External id": 211563,
+                "Record function id": 0,
+                "Concrete Inputs": [
+                  ""
+                ],
+                "Input type": [
+                  "float"
+                ],
+                "Input Strides": [
+                  [
+                    1
+                  ]
+                ],
+                "finished": true,
+                "Input Dims": [
+                  [
+                    24
+                  ]
+                ],
+                "Ev Idx": 106
+              }
+            }
+          ]
+        }
+      ],
+      "profiler_label": "ProfilerStep#59"
+    }
+  ],
+  "findings": [
+    "Global pg_config resolves rank0 EDP peers to [0,8], not event-local [0,1]",
+    "rank0/1 on worker33087 and rank8/9 on worker33075: cross-worker EDP; DP16 includes both workers",
+    "Two AG calls per DP/EDP group under distinct step_with_ready_grads parents, not duplicate records of one kernel",
+    "Both AG calls expose a one-tensor input list of the same full size; not two half-size buckets",
+    "Startup small allgather timings are local to each trace; no calibrated interhost clock alignment"
+  ],
+  "limits": [
+    "Worker mapping is host-directory evidence, not NIC routing/rail assignment",
+    "Distinct calls do not prove redundant work; optimizer/model buffer ownership not established",
+    "Target 400Gbps, 60% and hierarchical algorithm remain explicit candidate assumptions",
+    "No global startup last-arrival identified from four ranks",
+    "Profiler marker is #59 while directory is iteration_60; preserve original labeling"
+  ]
+}

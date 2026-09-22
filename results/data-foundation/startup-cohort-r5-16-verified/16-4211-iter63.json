@@ -1,0 +1,46 @@
+{
+  "case": "16-4211",
+  "world": 16,
+  "rank": 0,
+  "iteration": 63,
+  "path": "/home/zjb/Desktop/trace16node/0908/4211/224d02205/profiler/iteration_63/gpu0.json",
+  "resolved_path": "/var/local/zjb-data/trace16node/0908/4211/224d02205/profiler/iteration_63/gpu0.json",
+  "sha256": "6678911236d04094027b1ac83cc7e8a8f37cd033d048e2ba3486c51daab690f1",
+  "bytes": 14932954,
+  "profiler_label": "ProfilerStep#64",
+  "profiler_ms": 3953.712947,
+  "status": "PASS",
+  "startup_GPU_ms": null,
+  "timer_AG_count": 2,
+  "timer_AGs": [
+    {
+      "cpu_event": 16185,
+      "cpu_start_ms": 3937.842611328125,
+      "external_id": 191603,
+      "gpu_event": 36099,
+      "gpu_start_ms": 3937.9079453125,
+      "duration_ms": 0.291072,
+      "method": "exact External id + AllGather kernel"
+    },
+    {
+      "cpu_event": 16670,
+      "cpu_start_ms": 3948.1669033203125,
+      "external_id": 192088,
+      "gpu_event": 37131,
+      "gpu_start_ms": 3948.2587939453124,
+      "duration_ms": 0.605696,
+      "method": "exact External id + AllGather kernel"
+    }
+  ],
+  "selected_AG": {
+    "cpu_event": 16670,
+    "cpu_start_ms": 3948.1669033203125,
+    "external_id": 192088,
+    "gpu_event": 37131,
+    "gpu_start_ms": 3948.2587939453124,
+    "duration_ms": 0.605696,
+    "method": "exact External id + AllGather kernel"
+  },
+  "selected_AG_ms": 0.605696,
+  "all_timer_AG_sum_ms": 0.896768
+}

@@ -1,0 +1,54 @@
+{
+  "case": "256",
+  "world": 256,
+  "rank": 0,
+  "iteration": 85,
+  "path": "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33087/profiler/iteration_85/rank0.1785478451458.pt.trace.json",
+  "resolved_path": "/var/local/zjb-data/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33087/profiler/iteration_85/rank0.1785478451458.pt.trace.json",
+  "status": "PASS",
+  "sha256": "589b774bb3f980de1461452bce6e16d210f7699b42d2d8130c033607b24c4530",
+  "bytes": 13926524,
+  "profiler_label": "ProfilerStep#84",
+  "profiler_ms": 23727.954633,
+  "first_F_CPU_ms": 1251.8972944335937,
+  "startup_GPU_ms": 1256.4499243164062,
+  "first_DataLoader_CPU_ms": 1252.1012841796876,
+  "timer_AG_count": 1,
+  "timer_AGs": [
+    {
+      "event": 19115,
+      "start_ms": 141.51965625,
+      "duration_ms": 1102.355353,
+      "input_bytes": 96,
+      "output_bytes": 24576,
+      "group": "0",
+      "correlation": 5625799,
+      "position": "before_first_F"
+    }
+  ],
+  "selected_AG": {
+    "event": 19115,
+    "start_ms": 141.51965625,
+    "duration_ms": 1102.355353,
+    "input_bytes": 96,
+    "output_bytes": 24576,
+    "group": "0",
+    "correlation": 5625799,
+    "position": "before_first_F"
+  },
+  "selected_AG_ms": 1102.355353,
+  "all_timer_AG_sum_ms": 1102.355353,
+  "barriers": [
+    {
+      "event": 19031,
+      "start_ms": 33.3686474609375,
+      "duration_ms": 10.065867
+    },
+    {
+      "event": 19061,
+      "start_ms": 43.7732353515625,
+      "duration_ms": 7.447259
+    }
+  ],
+  "selection": "unique pre-F global 24-float AG"
+}

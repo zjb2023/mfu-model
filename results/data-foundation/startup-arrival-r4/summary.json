@@ -1,0 +1,28 @@
+{
+  "rank0_residence_ms": 1068.8949650000002,
+  "arrival_wait_lower_ms": 1059.1615205429687,
+  "arrival_wait_upper_ms": 1068.8949650000002,
+  "after_all_kernel_starts_lower_ms": 0,
+  "after_all_kernel_starts_upper_ms": 9.73344445703151,
+  "late_ranks": [
+    83,
+    86,
+    84,
+    82,
+    81,
+    80,
+    87,
+    85,
+    61,
+    59,
+    60,
+    56
+  ],
+  "assumptions": [
+    "No calibrated cross-host timestamp subtraction.",
+    "Matching: same Profiler label, default group, first 24->6144 global AG, two preceding global barriers; no backend collective sequence ID available.",
+    "Clock-free bounds assume same barrier instance and standard barrier completion semantics; monotonic local CPU/GPU timestamps.",
+    "Kernel start is not proof of protocol/payload readiness. Remaining residence may include device/protocol readiness waits as well as transfer.",
+    "No controlled perturbation; not an independent prediction model."
+  ]
+}

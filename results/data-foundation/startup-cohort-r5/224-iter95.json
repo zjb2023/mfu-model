@@ -1,0 +1,54 @@
+{
+  "case": "224",
+  "world": 224,
+  "rank": 0,
+  "iteration": 95,
+  "path": "/home/zjb/Desktop/fabric-data-analysis/fabric-data-analysis-raw/0731_224gpu_pp14_cp2_a2a/extracted/framework/2026-07-30-09:38/worker33069/profiler/iteration_95/rank0.1785377774210.pt.trace.json",
+  "resolved_path": "/home/zjb/Desktop/fabric-data-analysis/fabric-data-analysis-raw/0731_224gpu_pp14_cp2_a2a/extracted/framework/2026-07-30-09:38/worker33069/profiler/iteration_95/rank0.1785377774210.pt.trace.json",
+  "status": "PASS",
+  "sha256": "2826dca836c6dc152d95925edf38ae8191176dde6036c85168265bc7b1b4bbf8",
+  "bytes": 10881604,
+  "profiler_label": "ProfilerStep#94",
+  "profiler_ms": 23836.468674,
+  "first_F_CPU_ms": 1604.3856274414063,
+  "startup_GPU_ms": 1609.007578125,
+  "first_DataLoader_CPU_ms": 1604.5369624023438,
+  "timer_AG_count": 1,
+  "timer_AGs": [
+    {
+      "event": 14947,
+      "start_ms": 1581.3360151367187,
+      "duration_ms": 16.247642,
+      "input_bytes": 96,
+      "output_bytes": 21504,
+      "group": "0",
+      "correlation": 4918164,
+      "position": "before_first_F"
+    }
+  ],
+  "selected_AG": {
+    "event": 14947,
+    "start_ms": 1581.3360151367187,
+    "duration_ms": 16.247642,
+    "input_bytes": 96,
+    "output_bytes": 21504,
+    "group": "0",
+    "correlation": 4918164,
+    "position": "before_first_F"
+  },
+  "selected_AG_ms": 16.247642,
+  "all_timer_AG_sum_ms": 16.247642,
+  "barriers": [
+    {
+      "event": 14827,
+      "start_ms": 309.97658740234374,
+      "duration_ms": 86.838106
+    },
+    {
+      "event": 14857,
+      "start_ms": 397.16251611328124,
+      "duration_ms": 60.297652
+    }
+  ],
+  "selection": "unique pre-F global 24-float AG"
+}

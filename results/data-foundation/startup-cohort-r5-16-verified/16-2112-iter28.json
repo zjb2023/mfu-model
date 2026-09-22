@@ -1,0 +1,46 @@
+{
+  "case": "16-2112",
+  "world": 16,
+  "rank": 0,
+  "iteration": 28,
+  "path": "/home/zjb/Desktop/trace16node/0908/2112/224d02205/profiler/iteration_28/gpu0.json",
+  "resolved_path": "/var/local/zjb-data/trace16node/0908/2112/224d02205/profiler/iteration_28/gpu0.json",
+  "sha256": "47f238dc6be39f8efcb754b252a4152c71c1b86deda84edd297d5b383cbcd372",
+  "bytes": 12214707,
+  "profiler_label": "ProfilerStep#29",
+  "profiler_ms": 2649.213371,
+  "status": "PARTIAL_LAST_CPU_AG_NO_EXACT_GPU",
+  "startup_GPU_ms": null,
+  "timer_AG_count": 2,
+  "timer_AGs": [
+    {
+      "cpu_event": 12309,
+      "cpu_start_ms": 2630.706607421875,
+      "external_id": 66217,
+      "gpu_event": 38565,
+      "gpu_start_ms": 2630.7865166015627,
+      "duration_ms": 2.340096,
+      "method": "exact External id + AllGather kernel"
+    },
+    {
+      "cpu_event": 12827,
+      "cpu_start_ms": 2642.8791845703126,
+      "external_id": 66735,
+      "gpu_event": null,
+      "gpu_start_ms": null,
+      "duration_ms": null,
+      "method": "UNMATCHED: no exact device External id; do not guess correlation +/-1"
+    }
+  ],
+  "selected_AG": {
+    "cpu_event": 12827,
+    "cpu_start_ms": 2642.8791845703126,
+    "external_id": 66735,
+    "gpu_event": null,
+    "gpu_start_ms": null,
+    "duration_ms": null,
+    "method": "UNMATCHED: no exact device External id; do not guess correlation +/-1"
+  },
+  "selected_AG_ms": null,
+  "all_timer_AG_sum_ms": null
+}

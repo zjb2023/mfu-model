@@ -1,0 +1,64 @@
+{
+  "case": "16-4111",
+  "world": 16,
+  "rank": 0,
+  "iteration": 8,
+  "path": "/var/local/zjb-data/trace16node/0908/4111/224d02205/profiler/iteration_8/gpu0.json",
+  "resolved_path": "/var/local/zjb-data/trace16node/0908/4111/224d02205/profiler/iteration_8/gpu0.json",
+  "status": "PASS",
+  "sha256": "c4369e8bb6cacebb2248f02aff8b0668c3edf77ec240f7d34a8531dfa043cf47",
+  "bytes": 23636408,
+  "profiler_label": "ProfilerStep#9",
+  "profiler_ms": 2706.2426880000003,
+  "first_F_CPU_ms": null,
+  "startup_GPU_ms": null,
+  "first_DataLoader_CPU_ms": 0.3396142578125,
+  "timer_AG_count": 2,
+  "timer_AGs": [
+    {
+      "event": 75295,
+      "start_ms": 2691.004072265625,
+      "duration_ms": 0.329728,
+      "input_bytes": 96,
+      "output_bytes": 1536,
+      "group": "0",
+      "correlation": 46197574,
+      "position": "after_first_DataLoader"
+    },
+    {
+      "event": 76373,
+      "start_ms": 2700.9837197265624,
+      "duration_ms": 0.709376,
+      "input_bytes": 96,
+      "output_bytes": 1536,
+      "group": "0",
+      "correlation": 46214375,
+      "position": "after_first_DataLoader"
+    }
+  ],
+  "selected_AG": {
+    "event": 76373,
+    "start_ms": 2700.9837197265624,
+    "duration_ms": 0.709376,
+    "input_bytes": 96,
+    "output_bytes": 1536,
+    "group": "0",
+    "correlation": 46214375,
+    "position": "after_first_DataLoader"
+  },
+  "selected_AG_ms": 0.709376,
+  "all_timer_AG_sum_ms": 1.039104,
+  "barriers": [
+    {
+      "event": 76265,
+      "start_ms": 2696.721064453125,
+      "duration_ms": 3.1808
+    },
+    {
+      "event": 76305,
+      "start_ms": 2700.1693837890625,
+      "duration_ms": 0.1472
+    }
+  ],
+  "selection": "last global 24-float AG in ProfilerStep; not a startup boundary"
+}
