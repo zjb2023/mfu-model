@@ -1,0 +1,55 @@
+<section id="iteration-study">
+<h2>④ 跨iter结果：区分层位置与训练轮次变化</h2>
+<p>256卡 · iter40、45、50、55、60、65、70、75、80 · 中间PP1～14 · 两个完整EP8副本。下列指标均为<strong>筛选后实际工作量</strong>，不以代表rank代替整组。</p>
+<div class="lead" style="padding:14px;background:#f0f8fa">__CONCLUSIONS__</div>
+<div class="legend" style="margin:18px 0;align-items:center"><span>各层已有Router权重</span><strong>＋</strong><span>当前批次／上游层输入激活</span><strong>→</strong><span>路由与容量筛选</span><strong>→</strong><span>实际专家工作量</span></div>
+<p class="muted">层号和iter是两个不同维度。不同iter同时改变训练状态和输入批次；这些曲线不能单独证明由权重更新引起，更不能将筛选后差额全部算成容量丢弃。</p>
+<label>microbatch <select id="grid-mb"><option>0</option><option>1</option><option>2</option><option>3</option></select></label>
+<label>范围 <select id="grid-group"><option value="total">整个stage（两个EP8）</option><option value="A">EP8组A</option><option value="B">EP8组B</option></select></label>
+<label>指标 <select id="grid-metric"><option value="retained">专家实际接收token条目数</option><option value="active">实际收到输入的专家数量</option></select></label>
+<p id="grid-unit" class="muted"></p>
+<h3>同一轮看不同层：逐层形状是否重复出现</h3>
+<div id="grid-iter-buttons" class="legend"></div><p class="muted">点击iter开关曲线；横轴是逻辑层号，跨PP连续连接。不同层位于不同stage、不同物理卡组。</p><div id="grid-depth"></div>
+<h3>固定一层看不同轮：是否随iter持续变化</h3>
+<label>选择中间层 <select id="grid-layer"></select></label><p id="grid-time-legend" class="muted"></p><div id="grid-time"></div>
+<h3>层号 × iter全景</h3><p class="muted">每行一个iter，每列一个逻辑层；颜色越深，当前指标越大。悬停可查看数值。不对层或microbatch取平均。</p><div id="grid-heatmap"></div>
+<details><summary>各iter首末中间层的精确值（随上述选择更新）</summary><div id="grid-table" class="scroll"></div></details>
+<p class="muted">每组使用代表rank的CPU前向checkpoint定位层/MB及日志调用，八卡发送与接收计数逐专家守恒。非代表rank的跨iter结果来自DeepEP日志，不冒充全部rank的FC trace复核。iter60与此前两组结果单独回归。</p>
+<p><a href="iteration-trends.md">方法、范围与复现</a> · <a href="iteration-trends-report.json">统计结果</a> · <a href="iteration-trends-manifest.json">证据清单</a></p>
+__HISTORICAL_EVIDENCE__
+</section>
+<script>
+const ITERDATA=__ITERATION_DATA__;
+const iterColors=['#007f73','#964000','#3c62b5','#8a5299','#bb342f','#477f22','#996700','#38556d','#973978'];
+const gridState=new Set(ITERDATA.iterations);
+const el=id=>document.getElementById(id);
+el('grid-layer').innerHTML=Array.from({length:56},(_,i)=>`<option value="${i+3}" ${i+3===27?'selected':''}>L${i+3} · PP${Math.floor(i/4)+1}</option>`).join('');
+el('grid-iter-buttons').innerHTML=ITERDATA.iterations.map((it,i)=>`<button type="button" data-grid-iter="${it}" aria-pressed="true" style="font:inherit;padding:6px 10px;border:1px solid ${iterColors[i]};border-radius:6px;background:white;color:${iterColors[i]};cursor:pointer">● iter${it}</button>`).join('');
+function gridPlot(id,series,domainRows,xkey,ykey){
+ const max=Math.max(1,...domainRows.map(r=>r[ykey]))*1.08,xmin=Math.min(...domainRows.map(r=>r[xkey])),xmax=Math.max(...domainRows.map(r=>r[xkey]));
+ const X=x=>76+(x-xmin)/(xmax-xmin||1)*956,Y=y=>232-y/max*196;
+ let s='<svg viewBox="0 0 1100 280" role="img" aria-label="'+id+'">';
+ for(let i=0;i<=4;i++){let y=max*i/4;s+=`<path d="M76 ${Y(y)}H1032" stroke="#e2e8ef"/><text x="4" y="${Y(y)+4}">${Math.round(y).toLocaleString()}</text>`;}
+ for(let x=xmin;x<=xmax;x+=xkey==='layer'?4:5)s+=`<text x="${X(x)}" y="257">${xkey==='layer'?'L':'i'}${x}</text>`;
+ for(const a of series){s+=`<path fill="none" stroke="${a.color}" stroke-width="2" d="${a.rows.map((r,i)=>(i?'L':'M')+X(r[xkey])+','+Y(r[ykey])).join(' ')}"/>`;for(const r of a.rows)s+=`<circle cx="${X(r[xkey])}" cy="${Y(r[ykey])}" r="3" fill="${a.color}"><title>${a.label} · L${r.layer} · iter${r.iteration} · ${r[ykey].toLocaleString()}</title></circle>`;}
+ if(!series.length)s+='<text x="380" y="130">请选择iter显示曲线</text>';
+ el(id).innerHTML=s+'</svg>';
+}
+function gridDraw(){
+ const mb=+el('grid-mb').value,group=el('grid-group').value,metric=el('grid-metric').value,key=metric+'_'+group;
+ const rs=ITERDATA.rows.filter(r=>r.mb===mb);
+ el('grid-unit').textContent=metric==='retained'?'单位：token→专家分配条目；同token进入多个专家会重复计数，不是去重token数。':group==='total'?'单位：实际参与的专家副本实例数，两个组上限合计320；这是160种专家的两个副本，不是320种不同专家。':'单位：实际收到至少1条输入的专家数量，单个EP8组上限160。';
+ gridPlot('grid-depth',ITERDATA.iterations.flatMap((it,i)=>gridState.has(it)?[{label:'iter'+it,color:iterColors[i],rows:rs.filter(r=>r.iteration===it)}]:[]),rs,'layer',key);
+ const layers=[...new Set([3,+el('grid-layer').value,58])];const palette=['#00877a','#6557a0','#ad4b20'];
+ el('grid-time-legend').innerHTML=layers.map((l,i)=>`<span style="color:${palette[i]}">● L${l}</span>`).join('　');
+ const selected=rs.filter(r=>layers.includes(r.layer));gridPlot('grid-time',layers.map((layer,i)=>({label:'L'+layer,color:palette[i],rows:rs.filter(r=>r.layer===layer)})),selected,'iteration',key);
+ const vals=rs.map(r=>r[key]),low=Math.min(...vals),high=Math.max(...vals);let svg='<svg viewBox="0 0 1100 365" role="img" aria-label="layer iteration heatmap">';
+ for(let j=0;j<ITERDATA.iterations.length;j++){const it=ITERDATA.iterations[j];svg+=`<text x="3" y="${46+j*30}">iter${it}</text>`;for(const r of rs.filter(r=>r.iteration===it)){let t=(r[key]-low)/(high-low||1);svg+=`<rect x="${76+(r.layer-3)*17.1}" y="${28+j*30}" width="16.4" height="27" fill="hsl(195 65% ${94-60*t}%)"><title>iter${it} L${r.layer} PP${r.stage}: ${r[key].toLocaleString()}</title></rect>`;}}
+ for(let l=3;l<=58;l+=4)svg+=`<text x="${76+(l-3)*17.1}" y="315">L${l}</text>`;
+ svg+=`<text x="76" y="343">浅色 ${low.toLocaleString()} → 深色 ${high.toLocaleString()}</text>`;el('grid-heatmap').innerHTML=svg+'</svg>';
+ el('grid-table').innerHTML='<table><tr><th>iter</th><th>L3</th><th>L58</th><th>首末变化</th></tr>'+ITERDATA.iterations.map(it=>{let a=rs.find(r=>r.iteration===it&&r.layer===3),b=rs.find(r=>r.iteration===it&&r.layer===58);return `<tr><td>${it}</td><td>${a[key].toLocaleString()}</td><td>${b[key].toLocaleString()}</td><td>${((b[key]/a[key]-1)*100).toFixed(2)}%</td></tr>`}).join('')+'</table>';
+}
+for(const id of ['grid-mb','grid-group','grid-metric','grid-layer'])el(id).addEventListener('change',gridDraw);
+document.querySelectorAll('[data-grid-iter]').forEach(b=>b.addEventListener('click',()=>{let it=+b.dataset.gridIter;if(gridState.has(it))gridState.delete(it);else gridState.add(it);b.setAttribute('aria-pressed',String(gridState.has(it)));b.style.opacity=gridState.has(it)?'1':'.4';b.style.textDecoration=gridState.has(it)?'none':'line-through';gridDraw();}));
+gridDraw();
+</script>
