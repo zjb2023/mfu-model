@@ -12,7 +12,7 @@
 <div id="grid-iter-buttons" class="legend"></div><p class="muted">点击iter开关曲线；横轴是逻辑层号，跨PP连续连接。不同层位于不同stage、不同物理卡组。</p><div id="grid-depth"></div>
 <h3>固定一层看不同轮：是否随iter持续变化</h3>
 <label>选择中间层 <select id="grid-layer"></select></label><p id="grid-time-legend" class="muted"></p><div id="grid-time"></div>
-<h3>层号 × iter全景</h3><p class="muted">每行一个iter，每列一个逻辑层；颜色越深，当前指标越大。悬停可查看数值。不对层或microbatch取平均。</p><div id="grid-heatmap"></div>
+<h3>层号 × iter全景</h3><p id="grid-heat-note" style="padding:12px;background:#f0f8fa" aria-live="polite"></p><div id="grid-heatmap"></div>
 <details><summary>各iter首末中间层的精确值（随上述选择更新）</summary><div id="grid-table" class="scroll"></div></details>
 <p class="muted">每组使用代表rank的CPU前向checkpoint定位层/MB及日志调用，八卡发送与接收计数逐专家守恒。非代表rank的跨iter结果来自DeepEP日志，不冒充全部rank的FC trace复核。iter60与此前两组结果单独回归。</p>
 <p><a href="iteration-trends.md">方法、范围与复现</a> · <a href="iteration-trends-report.json">统计结果</a> · <a href="iteration-trends-manifest.json">证据清单</a></p>
@@ -38,6 +38,7 @@ function gridPlot(id,series,domainRows,xkey,ykey){
 function gridDraw(){
  const mb=+el('grid-mb').value,group=el('grid-group').value,metric=el('grid-metric').value,key=metric+'_'+group;
  const rs=ITERDATA.rows.filter(r=>r.mb===mb);
+ el('grid-heat-note').textContent='每行一个iter，每列一个layer。每格统计当前MB'+mb+'，不是整轮所有MB的总和。范围：'+(group==='total'?'两个EP8组A+B合计（16卡）。':'单个EP8组'+group+'（8卡）。')+(metric==='retained'?'数值是该范围内所有专家筛选后实际收到的token分配条目合计；同一token进入多个专家分别计数，不是去重token数，也不是理论分配数。':group==='total'?'数值是两组实际收到至少1条输入的专家副本数，上限320；不是320种不同专家，也不是token数。':'数值是实际收到至少1条输入的专家数量，上限160；不是token数。')+'颜色越深表示数值越大，悬停可查看数值。';
  el('grid-unit').textContent=metric==='retained'?'单位：token→专家分配条目；同token进入多个专家会重复计数，不是去重token数。':group==='total'?'单位：实际参与的专家副本实例数，两个组上限合计320；这是160种专家的两个副本，不是320种不同专家。':'单位：实际收到至少1条输入的专家数量，单个EP8组上限160。';
  gridPlot('grid-depth',ITERDATA.iterations.flatMap((it,i)=>gridState.has(it)?[{label:'iter'+it,color:iterColors[i],rows:rs.filter(r=>r.iteration===it)}]:[]),rs,'layer',key);
  const layers=[...new Set([3,+el('grid-layer').value,58])];const palette=['#00877a','#6557a0','#ad4b20'];

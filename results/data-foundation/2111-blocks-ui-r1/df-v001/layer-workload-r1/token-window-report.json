@@ -1,0 +1,174 @@
+{
+  "status": "PASS_DIAGNOSTIC_ONLY",
+  "rows": [
+    {
+      "iteration": 40,
+      "source_fixed_tokens": 268536.25,
+      "target_mean_tokens": 34310.10044642857,
+      "token_gap": 234226.14955357142,
+      "truth_ms": 19671.633223056793,
+      "predicted_ms": 21653.3578404189,
+      "error_ms": 1981.724617362106,
+      "error_pct": 10.074021790114296
+    },
+    {
+      "iteration": 45,
+      "source_fixed_tokens": 268536.25,
+      "target_mean_tokens": 39812.50892857143,
+      "token_gap": 228723.74107142858,
+      "truth_ms": 20080.50852918625,
+      "predicted_ms": 21653.3578404189,
+      "error_ms": 1572.8493112326505,
+      "error_pct": 7.832716531787898
+    },
+    {
+      "iteration": 50,
+      "source_fixed_tokens": 268536.25,
+      "target_mean_tokens": 50650.89508928572,
+      "token_gap": 217885.3549107143,
+      "truth_ms": 19738.58158826828,
+      "predicted_ms": 21653.3578404189,
+      "error_ms": 1914.7762521506193,
+      "error_pct": 9.700678053222811
+    },
+    {
+      "iteration": 55,
+      "source_fixed_tokens": 268536.25,
+      "target_mean_tokens": 78205.11607142857,
+      "token_gap": 190331.13392857142,
+      "truth_ms": 19963.890820503235,
+      "predicted_ms": 21653.3578404189,
+      "error_ms": 1689.4670199156644,
+      "error_pct": 8.462614001978785
+    },
+    {
+      "iteration": 60,
+      "source_fixed_tokens": 268536.25,
+      "target_mean_tokens": 98538.296875,
+      "token_gap": 169997.953125,
+      "truth_ms": 20396.01318693161,
+      "predicted_ms": 21653.3578404189,
+      "error_ms": 1257.3446534872892,
+      "error_pct": 6.164658955471314
+    },
+    {
+      "iteration": 65,
+      "source_fixed_tokens": 268536.25,
+      "target_mean_tokens": 120615.14955357143,
+      "token_gap": 147921.10044642858,
+      "truth_ms": 20466.54404067993,
+      "predicted_ms": 21653.3578404189,
+      "error_ms": 1186.8137997389676,
+      "error_pct": 5.798799237331043
+    },
+    {
+      "iteration": 70,
+      "source_fixed_tokens": 268536.25,
+      "target_mean_tokens": 151862.37723214287,
+      "token_gap": 116673.87276785713,
+      "truth_ms": 21089.008199214935,
+      "predicted_ms": 21653.3578404189,
+      "error_ms": 564.349641203964,
+      "error_pct": 2.6760368997579054
+    },
+    {
+      "iteration": 75,
+      "source_fixed_tokens": 268536.25,
+      "target_mean_tokens": 171572.20089285713,
+      "token_gap": 96964.04910714287,
+      "truth_ms": 21165.856451511383,
+      "predicted_ms": 21653.3578404189,
+      "error_ms": 487.50138890751623,
+      "error_pct": 2.3032443313802498
+    },
+    {
+      "iteration": 80,
+      "source_fixed_tokens": 268536.25,
+      "target_mean_tokens": 185782.984375,
+      "token_gap": 82753.265625,
+      "truth_ms": 21514.19768190384,
+      "predicted_ms": 21653.3578404189,
+      "error_ms": 139.16015851506017,
+      "error_pct": 0.6468294127096819
+    }
+  ],
+  "linear_gap_to_error": {
+    "intercept": -649.6231392436807,
+    "slope": 0.011202192525726719,
+    "pearson": 0.9660832448146482,
+    "r2": 0.9333168359115993
+  },
+  "iteration_only_control": {
+    "intercept": 3965.293480277145,
+    "slope": -46.09936014811198,
+    "pearson": -0.9487878036754482,
+    "r2": 0.9001982964032809
+  },
+  "first_difference_correlation": {
+    "intercept": -1.4654281485613865,
+    "slope": 0.012086922663477554,
+    "pearson": 0.3463789077447771,
+    "r2": 0.11997834773046478
+  },
+  "leave_one_out": [
+    {
+      "iteration": 40,
+      "remaining_error_ms": 10.606974018809751
+    },
+    {
+      "iteration": 45,
+      "remaining_error_ms": -462.24829394777544
+    },
+    {
+      "iteration": 50,
+      "remaining_error_ms": 157.88058549377934
+    },
+    {
+      "iteration": 55,
+      "remaining_error_ms": 239.3681507256979
+    },
+    {
+      "iteration": 60,
+      "remaining_error_ms": 2.948321543243992
+    },
+    {
+      "iteration": 65,
+      "remaining_error_ms": 204.38319308288874
+    },
+    {
+      "iteration": 70,
+      "remaining_error_ms": -116.28508870121959
+    },
+    {
+      "iteration": 75,
+      "remaining_error_ms": 71.4230926834673
+    },
+    {
+      "iteration": 80,
+      "remaining_error_ms": -218.82524322003974
+    }
+  ],
+  "loo_mae_ms": 164.88543815743574,
+  "early40to60_fit": {
+    "intercept": 7.874894071527251,
+    "slope": 0.008045595802305622,
+    "pearson": 0.7562107815992478,
+    "r2": 0.5718547462069453
+  },
+  "later65to80_residual_ms": [
+    -11.174479156773714,
+    -382.2360738473749,
+    -300.50705163499595,
+    -534.5140620960492
+  ],
+  "later_mae_ms": 307.1079166837984,
+  "baseline_mae_ms": 1199.3318713904264,
+  "scope": "F retained assignments averaged across 56 layers x 4 MB x 2 EP8 groups; rank0 first F GPU to last B GPU; fixed source60 prediction",
+  "limitations": [
+    "target token counts are evaluator data, unavailable for source-only prediction",
+    "9 serially correlated observations; not independent causal evidence",
+    "mean F counts do not directly measure B cost, group/rank stragglers or critical-path weighting",
+    "iteration also changes input batches and training state; rank0 window is not full-world makespan",
+    "no source parameters changed; no training or full simulation"
+  ]
+}

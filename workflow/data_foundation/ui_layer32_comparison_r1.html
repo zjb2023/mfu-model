@@ -1,6 +1,7 @@
 <section id="source32-comparison">
-<h2>⑤ 32卡对照：短模型的L3–L10，能否代表256卡的L3–L58？</h2>
-<p>32卡：PP1=L3–L6、PP2=L7–L10，每stage只有一个EP8组。256卡：PP1–PP14=L3–L58，每stage有两个EP8组。下图统一按<strong>一个EP8组</strong>比较；256卡分别画A/B组，不拿两组合计与32卡单组比较。</p>
+<h2>① 32卡对照：短模型的L3–L10，能否代表256卡的L3–L58？</h2>
+<p>32卡：PP1=L3–L6、PP2=L7–L10，每stage一个EP8组。256卡：PP1–PP14=L3–L58，每stage两个EP8组。第一章统一为<strong>单组口径</strong>：32卡单组与256卡(A+B)/2对照，条目数和参与专家数量均按此处理。</p>
+<p><strong>两边单组理论值相同：</strong>每rank输入token数=2条序列×8192长度÷CP2=8192；每层、每MB的原始top6分配=8192×EP8×TOP6=<strong>393,216条</strong>，每组配置160个专家。实际参与专家的两组均值可以是小数。口径一致不代表实测计算成本相同；筛选后条目和八卡负载仍可不同，均值不是关键路径耗时。其他章节不变。</p>
 <p>同口径：前向、每个microbatch、容量筛选后实际进入专家的token条目（不去重），或至少收到一个条目的专家数（每组上限160）。32卡有8个microbatch，256卡有4个；本页交叉对照限MB0–3，原始分析另保留32卡MB4–7。相同iter编号不代表同一批输入或同一训练状态；相同逻辑层号也不保证权重相同。</p>
 __SUMMARY32__
 <label>指标 <select id="source32-metric"><option value="retained">实际进入专家的token条目数</option><option value="active">实际参与计算的专家数量</option></select></label>
@@ -9,9 +10,9 @@ __SUMMARY32__
 <h3>32卡自己的逐层曲线 · 九轮可分别开关</h3><div id="source32-toggles"></div>
 <svg id="source32-depth" viewBox="0 0 1000 330" style="width:100%;display:block" role="img" aria-label="32卡九轮逐层工作量"></svg>
 <p>PP1与PP2各四层，只有8个中间层；曲线不能直接延长成256卡56个中间层的规律。</p>
-<h3>32卡层号 × iter全景</h3><svg id="source32-heat" viewBox="0 0 1000 330" style="width:100%;display:block" role="img" aria-label="32卡逐层逐轮热力图"></svg>
-<h3>同一坐标下对照 · 实线为32卡，另两条为256卡EP8 A/B组</h3>
-<svg id="source32-compare" viewBox="0 0 1000 330" style="width:100%;display:block" role="img" aria-label="32与256卡每EP8组对照"></svg>
+<h3>32卡层号 × iter全景</h3><p id="source32-heat-note" style="padding:12px;background:#f0f8fa" aria-live="polite"></p><svg id="source32-heat" viewBox="0 0 1000 330" style="width:100%;display:block" role="img" aria-label="32卡逐层逐轮热力图"></svg>
+<h3>同一坐标下对照 · 单组理论值、32卡实测、256卡两组均值</h3>
+<svg id="source32-compare" viewBox="0 0 1000 330" style="width:100%;display:block" role="img" aria-label="单EP8组理论与实测对照"></svg>
 <p>32卡实线只覆盖L3–L10；不能将其视为256卡深层的实测值。当前冻结预测实际只复制32卡PP1（L3–L6）的四层F/B成本，并未采用PP1、PP2均值。此处分析工作量，不修改耗时模型或预测结果。</p>
 <div style="overflow:auto"><table id="source32-table"></table></div>
 <p><a href="source32-report.json">32卡派生数据</a> · <a href="source32-manifest.json">输入来源与SHA256</a> · <a href="source32-method.md">方法与边界</a></p>
@@ -25,14 +26,16 @@ function v(r){return el('source32-metric').value==='active'?r.active_experts:r.r
 function chart(id,series,xmax){let s=el(id);s.replaceChildren();let ymax=Math.max(1,...series.flatMap(a=>a.rows.map(r=>r.y)))*1.1;let x=l=>65+(l-3)/(xmax-3)*905,y=v=>270-v/ymax*220;
 for(let j=0;j<5;j++){let value=ymax*j/4;n(s,'line',{x1:65,x2:970,y1:y(value),y2:y(value),stroke:'#e2e8f0'});n(s,'text',{x:59,y:y(value)+4,'text-anchor':'end','font-size':12},Math.round(value).toLocaleString());}
 for(let l=3;l<=xmax;l+=(xmax===10?1:4))n(s,'text',{x:x(l),y:291,'text-anchor':'middle','font-size':12},'L'+l);
-series.forEach((a,i)=>{n(s,'path',{d:a.rows.map((r,j)=>(j?'L':'M')+x(r.layer)+' '+y(r.y)).join(' '),fill:'none',stroke:a.color,'stroke-width':2.5});a.rows.forEach(r=>{let c=n(s,'circle',{cx:x(r.layer),cy:y(r.y),r:3,fill:a.color});n(c,'title',{},a.name+' L'+r.layer+': '+r.y.toLocaleString());});n(s,'text',{x:65+(i%5)*180,y:18+Math.floor(i/5)*19,fill:a.color,'font-size':12},a.name);});}
+series.forEach((a,i)=>{n(s,'path',{d:a.rows.map((r,j)=>(j?'L':'M')+x(r.layer)+' '+y(r.y)).join(' '),fill:'none',stroke:a.color,'stroke-width':2.5,'stroke-dasharray':a.reference?'6 4':'none'});a.rows.forEach(r=>{let c=n(s,'circle',{cx:x(r.layer),cy:y(r.y),r:3,fill:a.color});n(c,'title',{},a.name+' L'+r.layer+': '+r.y.toLocaleString());});n(s,'text',{x:65+(i%5)*180,y:18+Math.floor(i/5)*19,fill:a.color,'font-size':12},a.name);});}
 S32.iterations.forEach((it,i)=>{let o=document.createElement('option');o.value=it;o.textContent=it;el('source32-iter').append(o);let b=document.createElement('button');b.textContent='iter'+it;b.style.color=colors[i];b.onclick=()=>{enabled.has(it)?enabled.delete(it):enabled.add(it);b.style.opacity=enabled.has(it)?'1':'.35';draw();};el('source32-toggles').append(b);});el('source32-iter').value='60';
 function draw(){let mb=+el('source32-mb').value,it=+el('source32-iter').value,metric=el('source32-metric').value,rows=S32.rows.filter(r=>r.mb===mb);
+el('source32-heat-note').textContent='每行一个iter，每列一个layer。每格统计当前MB'+mb+'，不是整轮所有MB的总和。'+(metric==='retained'?'数值是该层单个EP8组（8卡、160个专家）筛选后实际收到的token分配条目合计；同一token进入多个专家分别计数，不是去重token数，也不是理论393,216条。':'数值是该层单个EP8组中收到至少1条输入的专家数量，上限160个；不是token数。')+'颜色越深表示数值越大。';
 chart('source32-depth',S32.iterations.filter(i=>enabled.has(i)).map(i=>({name:'iter'+i,color:colors[S32.iterations.indexOf(i)],rows:rows.filter(r=>r.iteration===i).map(r=>({layer:r.layer,y:v(r)}))})),10);
 let heat=el('source32-heat');heat.replaceChildren();let max=Math.max(...rows.map(v));S32.iterations.forEach((i,j)=>{n(heat,'text',{x:55,y:45+j*28,'text-anchor':'end','font-size':12},'iter'+i);rows.filter(r=>r.iteration===i).forEach(r=>{let value=v(r),x=70+(r.layer-3)*110,c=n(heat,'rect',{x,y:26+j*28,width:108,height:26,fill:`hsl(212 75% ${95-value/max*60}%)`});n(c,'title',{},'iter'+i+' L'+r.layer+': '+value);n(heat,'text',{x:x+54,y:44+j*28,'text-anchor':'middle','font-size':12,fill:value/max>.6?'white':'#172b4d'},value.toLocaleString());});});for(let l=3;l<=10;l++)n(heat,'text',{x:124+(l-3)*110,y:304,'text-anchor':'middle','font-size':12},'L'+l+(l===3?' PP1':l===7?' PP2':''));
 let src=rows.filter(r=>r.iteration===it),target=T256.filter(r=>r.iteration===it&&r.mb===mb);
-chart('source32-compare',[{name:'32卡 单EP8组',color:'#dc2626',rows:src.map(r=>({layer:r.layer,y:v(r)}))},...['A','B'].map((g,i)=>({name:'256卡 EP8 '+g,color:['#2563eb','#059669'][i],rows:target.map(r=>({layer:r.layer,y:r[metric+'_'+g]}))}))],58);
-el('source32-table').innerHTML='<tr><th>层号</th><th>32卡 单EP8</th><th>256卡 EP8 A</th><th>256卡 EP8 B</th></tr>'+src.map(r=>{let t=target.find(t=>t.layer===r.layer);return '<tr><td>L'+r.layer+'</td><td>'+v(r).toLocaleString()+'</td><td>'+t[metric+'_A'].toLocaleString()+'</td><td>'+t[metric+'_B'].toLocaleString()+'</td></tr>';}).join('');}
+let reference=metric==='retained'?393216:160,referenceName=metric==='retained'?'原始top6理论分配':'配置专家数（上限）';
+chart('source32-compare',[{name:'32卡 单EP8组',color:'#dc2626',rows:src.map(r=>({layer:r.layer,y:v(r)}))},{name:'256卡 (A+B)/2',color:'#2563eb',rows:target.map(r=>({layer:r.layer,y:(r[metric+'_A']+r[metric+'_B'])/2}))},{name:referenceName,color:'#64748b',reference:true,rows:[{layer:3,y:reference},{layer:58,y:reference}]}],58);
+el('source32-table').innerHTML='<tr><th>层号</th><th>'+referenceName+'</th><th>32卡 单EP8</th><th>256卡 (A+B)/2</th></tr>'+src.map(r=>{let t=target.find(t=>t.layer===r.layer);return '<tr><td>L'+r.layer+'</td><td>'+reference.toLocaleString()+'</td><td>'+v(r).toLocaleString()+'</td><td>'+((t[metric+'_A']+t[metric+'_B'])/2).toLocaleString()+'</td></tr>';}).join('');}
 ['source32-mb','source32-metric','source32-iter'].forEach(id=>el(id).onchange=draw);draw();
 })();
 </script>
