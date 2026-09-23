@@ -1,0 +1,528 @@
+{
+  "status": "PASS for post-filter statistics and operator presence; causal attribution PARTIAL",
+  "stats": [
+    {
+      "group": "A",
+      "mb": 0,
+      "layer": 3,
+      "active_experts": 59,
+      "total_experts": 160,
+      "retained": 149900,
+      "sender_expert_pairs_at_cap": 183,
+      "assignments_at_cap": 112545,
+      "positive_sender_expert_pairs": 376
+    },
+    {
+      "group": "A",
+      "mb": 0,
+      "layer": 58,
+      "active_experts": 29,
+      "total_experts": 160,
+      "retained": 94043,
+      "sender_expert_pairs_at_cap": 138,
+      "assignments_at_cap": 84870,
+      "positive_sender_expert_pairs": 203
+    },
+    {
+      "group": "A",
+      "mb": 1,
+      "layer": 3,
+      "active_experts": 62,
+      "total_experts": 160,
+      "retained": 164098,
+      "sender_expert_pairs_at_cap": 208,
+      "assignments_at_cap": 127920,
+      "positive_sender_expert_pairs": 404
+    },
+    {
+      "group": "A",
+      "mb": 1,
+      "layer": 58,
+      "active_experts": 33,
+      "total_experts": 160,
+      "retained": 96614,
+      "sender_expert_pairs_at_cap": 143,
+      "assignments_at_cap": 87945,
+      "positive_sender_expert_pairs": 216
+    },
+    {
+      "group": "A",
+      "mb": 2,
+      "layer": 3,
+      "active_experts": 60,
+      "total_experts": 160,
+      "retained": 161530,
+      "sender_expert_pairs_at_cap": 202,
+      "assignments_at_cap": 124230,
+      "positive_sender_expert_pairs": 391
+    },
+    {
+      "group": "A",
+      "mb": 2,
+      "layer": 58,
+      "active_experts": 32,
+      "total_experts": 160,
+      "retained": 96494,
+      "sender_expert_pairs_at_cap": 142,
+      "assignments_at_cap": 87330,
+      "positive_sender_expert_pairs": 207
+    },
+    {
+      "group": "A",
+      "mb": 3,
+      "layer": 3,
+      "active_experts": 61,
+      "total_experts": 160,
+      "retained": 156925,
+      "sender_expert_pairs_at_cap": 196,
+      "assignments_at_cap": 120540,
+      "positive_sender_expert_pairs": 378
+    },
+    {
+      "group": "A",
+      "mb": 3,
+      "layer": 58,
+      "active_experts": 32,
+      "total_experts": 160,
+      "retained": 91215,
+      "sender_expert_pairs_at_cap": 136,
+      "assignments_at_cap": 83640,
+      "positive_sender_expert_pairs": 196
+    },
+    {
+      "group": "B",
+      "mb": 0,
+      "layer": 3,
+      "active_experts": 59,
+      "total_experts": 160,
+      "retained": 154132,
+      "sender_expert_pairs_at_cap": 198,
+      "assignments_at_cap": 121770,
+      "positive_sender_expert_pairs": 381
+    },
+    {
+      "group": "B",
+      "mb": 0,
+      "layer": 58,
+      "active_experts": 29,
+      "total_experts": 160,
+      "retained": 85861,
+      "sender_expert_pairs_at_cap": 130,
+      "assignments_at_cap": 79950,
+      "positive_sender_expert_pairs": 187
+    },
+    {
+      "group": "B",
+      "mb": 1,
+      "layer": 3,
+      "active_experts": 58,
+      "total_experts": 160,
+      "retained": 155786,
+      "sender_expert_pairs_at_cap": 197,
+      "assignments_at_cap": 121155,
+      "positive_sender_expert_pairs": 387
+    },
+    {
+      "group": "B",
+      "mb": 1,
+      "layer": 58,
+      "active_experts": 31,
+      "total_experts": 160,
+      "retained": 88882,
+      "sender_expert_pairs_at_cap": 129,
+      "assignments_at_cap": 79335,
+      "positive_sender_expert_pairs": 195
+    },
+    {
+      "group": "B",
+      "mb": 2,
+      "layer": 3,
+      "active_experts": 60,
+      "total_experts": 160,
+      "retained": 151167,
+      "sender_expert_pairs_at_cap": 191,
+      "assignments_at_cap": 117465,
+      "positive_sender_expert_pairs": 392
+    },
+    {
+      "group": "B",
+      "mb": 2,
+      "layer": 58,
+      "active_experts": 32,
+      "total_experts": 160,
+      "retained": 89639,
+      "sender_expert_pairs_at_cap": 133,
+      "assignments_at_cap": 81795,
+      "positive_sender_expert_pairs": 197
+    },
+    {
+      "group": "B",
+      "mb": 3,
+      "layer": 3,
+      "active_experts": 63,
+      "total_experts": 160,
+      "retained": 148651,
+      "sender_expert_pairs_at_cap": 187,
+      "assignments_at_cap": 115005,
+      "positive_sender_expert_pairs": 381
+    },
+    {
+      "group": "B",
+      "mb": 3,
+      "layer": 58,
+      "active_experts": 31,
+      "total_experts": 160,
+      "retained": 88763,
+      "sender_expert_pairs_at_cap": 129,
+      "assignments_at_cap": 79335,
+      "positive_sender_expert_pairs": 204
+    }
+  ],
+  "trace_sequence": [
+    {
+      "rank": 16,
+      "layer": 3,
+      "checkpoint": 33677,
+      "events": [
+        {
+          "event": 33998,
+          "name": "aten::topk",
+          "dims": [
+            [
+              8192,
+              160
+            ],
+            [],
+            [],
+            [],
+            []
+          ],
+          "concrete": [
+            "",
+            "6",
+            "1",
+            "True",
+            "True"
+          ],
+          "ts": 2510067733625.732
+        },
+        {
+          "event": 34046,
+          "name": "aten::topk",
+          "dims": [
+            [
+              8192,
+              160
+            ],
+            [],
+            [],
+            [],
+            []
+          ],
+          "concrete": [
+            "",
+            "615",
+            "0",
+            "True",
+            "False"
+          ],
+          "ts": 2510067734119.148
+        },
+        {
+          "event": 34074,
+          "name": "aten::logical_and",
+          "dims": [
+            [
+              8192,
+              160
+            ],
+            [
+              8192,
+              160
+            ]
+          ],
+          "concrete": [
+            "",
+            ""
+          ],
+          "ts": 2510067734422.436
+        },
+        {
+          "event": 34079,
+          "name": "aten::mul",
+          "dims": [
+            [
+              8192,
+              160
+            ],
+            [
+              8192,
+              160
+            ]
+          ],
+          "concrete": [
+            "",
+            ""
+          ],
+          "ts": 2510067734487.067
+        },
+        {
+          "event": 34105,
+          "name": "aten::topk",
+          "dims": [
+            [
+              8192,
+              160
+            ],
+            [],
+            [],
+            [],
+            []
+          ],
+          "concrete": [
+            "",
+            "6",
+            "-1",
+            "True",
+            "True"
+          ],
+          "ts": 2510067734665.942
+        },
+        {
+          "event": 34110,
+          "name": "aten::eq",
+          "dims": [
+            [
+              8192,
+              6
+            ],
+            []
+          ],
+          "concrete": [
+            "",
+            "0"
+          ],
+          "ts": 2510067734869.241
+        },
+        {
+          "event": 34115,
+          "name": "aten::masked_fill",
+          "dims": [
+            [
+              8192,
+              6
+            ],
+            [
+              8192,
+              6
+            ],
+            []
+          ],
+          "concrete": [
+            "",
+            "",
+            "-1"
+          ],
+          "ts": 2510067734916.764
+        },
+        {
+          "event": 34124,
+          "name": "aten::masked_fill_",
+          "dims": [
+            [
+              8192,
+              6
+            ],
+            [
+              8192,
+              6
+            ],
+            []
+          ],
+          "concrete": [
+            "",
+            "",
+            "-1"
+          ],
+          "ts": 2510067734965.755
+        }
+      ]
+    },
+    {
+      "rank": 224,
+      "layer": 58,
+      "checkpoint": 35768,
+      "events": [
+        {
+          "event": 36089,
+          "name": "aten::topk",
+          "dims": [
+            [
+              8192,
+              160
+            ],
+            [],
+            [],
+            [],
+            []
+          ],
+          "concrete": [
+            "",
+            "6",
+            "1",
+            "True",
+            "True"
+          ],
+          "ts": 2510072328681.766
+        },
+        {
+          "event": 36137,
+          "name": "aten::topk",
+          "dims": [
+            [
+              8192,
+              160
+            ],
+            [],
+            [],
+            [],
+            []
+          ],
+          "concrete": [
+            "",
+            "615",
+            "0",
+            "True",
+            "False"
+          ],
+          "ts": 2510072329162.507
+        },
+        {
+          "event": 36165,
+          "name": "aten::logical_and",
+          "dims": [
+            [
+              8192,
+              160
+            ],
+            [
+              8192,
+              160
+            ]
+          ],
+          "concrete": [
+            "",
+            ""
+          ],
+          "ts": 2510072329472.756
+        },
+        {
+          "event": 36170,
+          "name": "aten::mul",
+          "dims": [
+            [
+              8192,
+              160
+            ],
+            [
+              8192,
+              160
+            ]
+          ],
+          "concrete": [
+            "",
+            ""
+          ],
+          "ts": 2510072329532.84
+        },
+        {
+          "event": 36196,
+          "name": "aten::topk",
+          "dims": [
+            [
+              8192,
+              160
+            ],
+            [],
+            [],
+            [],
+            []
+          ],
+          "concrete": [
+            "",
+            "6",
+            "-1",
+            "True",
+            "True"
+          ],
+          "ts": 2510072329740.062
+        },
+        {
+          "event": 36201,
+          "name": "aten::eq",
+          "dims": [
+            [
+              8192,
+              6
+            ],
+            []
+          ],
+          "concrete": [
+            "",
+            "0"
+          ],
+          "ts": 2510072329966.494
+        },
+        {
+          "event": 36206,
+          "name": "aten::masked_fill",
+          "dims": [
+            [
+              8192,
+              6
+            ],
+            [
+              8192,
+              6
+            ],
+            []
+          ],
+          "concrete": [
+            "",
+            "",
+            "-1"
+          ],
+          "ts": 2510072330015.625
+        },
+        {
+          "event": 36215,
+          "name": "aten::masked_fill_",
+          "dims": [
+            [
+              8192,
+              6
+            ],
+            [
+              8192,
+              6
+            ],
+            []
+          ],
+          "concrete": [
+            "",
+            "",
+            "-1"
+          ],
+          "ts": 2510072330075.557
+        }
+      ]
+    }
+  ],
+  "searched_optional_artifacts": {
+    "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33008/2026-07-31_1340/logs/2026-07-31_1340_full_moments": [],
+    "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33008/tf_logs": [],
+    "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33008/wandb": [],
+    "/home/zjb/gbs64/framework_256_gbs_64/2026-07-31-13_40/worker33008/checkpoints": []
+  },
+  "interpretation": "Capacity sets selected probabilities to zero; downstream zero mask implements exclusion of these entries, not evidence of an independent second loss source. Preexisting zero probabilities remain unmeasured. Active-expert counts describe retained work only."
+}

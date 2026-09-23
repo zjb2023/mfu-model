@@ -602,6 +602,7 @@ put('h3','B位置证据 · iter40 / 60 / 80（不合并microbatch）');
 put('p','224卡与256卡分别按B0、B1、B2……绘制逐PP位置曲线，可切换原始GPU时长与相对PP1差值。iter100已按用户选择排除，不参与当前曲线与重复位置统计。');
 put('p','224卡三轮各B在PP5→6均变短，PP11→12均回升；256卡未见三轮所有B共用的逐stage递减规律。位置波动不等同于执行过程持续加速，也尚未证明其原因。','small');
 const link=put('a','打开完整逐B位置曲线与原始证据 →');link.href='../b-position-curves-r1/';link.target='_blank';link.rel='noopener';
+const workLink=put('p','');const workAnchor=document.createElement('a');workAnchor.href='../layer-workload-r1/';workAnchor.textContent='新增：逐层专家工作量、容量筛选与耗时曲线（224/256，iter40/60/80） →';workLink.append(workAnchor);
 const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='在原总览页展开位置曲线';details.append(summary);const frame=document.createElement('iframe');frame.title='逐B位置证据 iter40 60 80';frame.style.height='950px';details.append(frame);details.addEventListener('toggle',()=>{if(details.open&&!frame.getAttribute('src'))frame.src='../b-position-curves-r1/';});box.append(details);
 put('h3','如果消除B块时长误差，1F1B还剩多少误差？');
 const d=B_EVIDENCE;
