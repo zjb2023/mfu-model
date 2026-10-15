@@ -1,10 +1,25 @@
 {
   "status": "PASS",
-  "tested_utc": "2026-10-15T08:42:23.646Z",
+  "tested_utc": "2026-10-15T08:58:49.680Z",
   "browser": "Chromium headless",
-  "combinations": 320,
+  "combinations": 352,
+  "legacyChecks": [
+    {
+      "phase": "F",
+      "url": "cp-ep8-structure-r1/",
+      "body_text_length": 4240
+    },
+    {
+      "phase": "B",
+      "url": "b-four-layers-r10/",
+      "body_text_length": 4980
+    }
+  ],
   "page_errors": [],
   "checks": [
+    "old/new version switching",
+    "legacy F/B iframe loaded",
+    "return to new B timeline",
     "chronological menu",
     "fixed layer axis and event positions",
     "real select change updates SVG",
@@ -13,7 +28,7 @@
     "no NaN",
     "no page errors"
   ],
-  "page_sha256": "8a4c175184d9c594433627ebc2e611794fcf57a4775812ee069cd8a11df53c1e",
+  "page_sha256": "458b2ce89da03de1a66ada1f9e732c0e043e93438ae331640124657ec399ed11",
   "rows": [
     {
       "it": 155,
@@ -2254,6 +2269,262 @@
       "ph": "B",
       "key": "backward_cp",
       "events": 72
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 0,
+      "ph": "F",
+      "key": "all",
+      "events": 454
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 0,
+      "ph": "F",
+      "key": "forward_cp",
+      "events": 40
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 0,
+      "ph": "F",
+      "key": "forward_ep",
+      "events": 414
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 1,
+      "ph": "F",
+      "key": "all",
+      "events": 454
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 1,
+      "ph": "F",
+      "key": "forward_cp",
+      "events": 40
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 1,
+      "ph": "F",
+      "key": "forward_ep",
+      "events": 414
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 2,
+      "ph": "F",
+      "key": "all",
+      "events": 450
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 2,
+      "ph": "F",
+      "key": "forward_cp",
+      "events": 40
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 2,
+      "ph": "F",
+      "key": "forward_ep",
+      "events": 410
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 3,
+      "ph": "F",
+      "key": "all",
+      "events": 432
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 3,
+      "ph": "F",
+      "key": "forward_cp",
+      "events": 40
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 3,
+      "ph": "F",
+      "key": "forward_ep",
+      "events": 392
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 0,
+      "ph": "B",
+      "key": "all",
+      "events": 1096
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 0,
+      "ph": "B",
+      "key": "recompute_cp",
+      "events": 40
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 0,
+      "ph": "B",
+      "key": "recompute_ep",
+      "events": 392
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 0,
+      "ph": "B",
+      "key": "backward_ep",
+      "events": 616
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 0,
+      "ph": "B",
+      "key": "backward_cp",
+      "events": 48
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 1,
+      "ph": "B",
+      "key": "all",
+      "events": 1150
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 1,
+      "ph": "B",
+      "key": "recompute_cp",
+      "events": 40
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 1,
+      "ph": "B",
+      "key": "recompute_ep",
+      "events": 410
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 1,
+      "ph": "B",
+      "key": "backward_ep",
+      "events": 652
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 1,
+      "ph": "B",
+      "key": "backward_cp",
+      "events": 48
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 2,
+      "ph": "B",
+      "key": "all",
+      "events": 1162
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 2,
+      "ph": "B",
+      "key": "recompute_cp",
+      "events": 40
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 2,
+      "ph": "B",
+      "key": "recompute_ep",
+      "events": 414
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 2,
+      "ph": "B",
+      "key": "backward_ep",
+      "events": 660
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 2,
+      "ph": "B",
+      "key": "backward_cp",
+      "events": 48
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 3,
+      "ph": "B",
+      "key": "all",
+      "events": 1162
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 3,
+      "ph": "B",
+      "key": "recompute_cp",
+      "events": 40
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 3,
+      "ph": "B",
+      "key": "recompute_ep",
+      "events": 414
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 3,
+      "ph": "B",
+      "key": "backward_ep",
+      "events": 660
+    },
+    {
+      "version": "old",
+      "it": 60,
+      "u": 3,
+      "ph": "B",
+      "key": "backward_cp",
+      "events": 48
     }
   ]
 }

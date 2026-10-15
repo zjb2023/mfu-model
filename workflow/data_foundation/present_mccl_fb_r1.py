@@ -43,13 +43,49 @@ def main():
     template=Path(__file__).with_name('ui_mccl_fb_r1.html');inputs[str(template)]=sha(template);inputs[str(Path(__file__))]=sha(Path(__file__))
     payload=orjson.loads(orjson.dumps(payload,option=orjson.OPT_NON_STR_KEYS))
     save(OUT/'payload.json',payload)
+    legacy={'60':{ph:{str(u):[] for u in range(4)} for ph in ['F','B']}}
+    for r in range(8,16):
+        old=read(BASE/f'full155-backend-diagnosis-r1/old-r{r}.json')
+        expert={ph:read(BASE/f'{folder}/measurements/old-i60-r{r}.json') for ph,folder in [('F','stable-four-layer-f-r1'),('B','stable-b-compute-r1')]}
+        assert all(x['sha256']==old['sha256'] for x in expert.values())
+        for ph in ['F','B']:
+            for u in range(4):
+                ds=[x for x in old['phases'][ph]['devices'] if x['unit']==u]
+                cp=sorted((x for x in ds if x.get('group')=='CONTEXT_PARALLEL_GROUP' and x.get('collective')),key=lambda x:x['start_ms'])
+                assert len(cp)==(4 if ph=='F' else 9)
+                deep=[x for x in ds if 'deep_ep::' in x['name']]
+                parts=expert[ph]['layers'][u]['devices'];regions={}
+                if ph=='B':
+                    # Distinguish the backward permutation from forward/recompute's true specialization.
+                    starts=[x['start_ms'] for x in deep if 'moe_permute_mask_kernel' in x['name'] and ', false>' in x['name']]
+                    assert len(starts)==1,(r,u,starts)
+                    split=starts[0]
+                else:split=float('inf')
+                for direction in (['forward'] if ph=='F' else ['recompute','backward']):
+                    selected=deep if ph=='F' else [x for x in deep if (x['start_ms']<split)==(direction=='recompute')]
+                    events=[pack(x,'DeepEP可见活动：'+x['name'],'DeepEP') for x in selected]
+                    prefix='' if ph=='F' else direction+'_'
+                    for x in parts:
+                        if x['part'].startswith(prefix):
+                            part=x['part'][len(prefix):]
+                            if part in ['FC1','FC2','activation']:events.append(pack(x,('梯度 ' if direction=='backward' else '')+part,part))
+                    regions[direction+'_ep']=sorted(events,key=lambda x:x['s'])
+                    cs=cp if ph=='F' else (cp[:4] if direction=='recompute' else cp[4:])
+                    flashes=[x for x in ds if 'flash_atten' in x['name'] and (('_bwd_' in x['name'])==(direction=='backward'))]
+                    assert len(flashes)==1,(r,ph,u,direction)
+                    regions[direction+'_cp']=[pack(x,f'CP{j}（旧源）','CP') for j,x in enumerate(cs)]+[pack(x,'Flash '+direction,'Flash') for x in flashes]
+                    # These cached old records have no message dimensions; do not invent them.
+                    for e in regions[direction+'_cp']:
+                        if e['collective']:e.update(nr=2,nelems=None,dtype='未记录',mib=None)
+                legacy['60'][ph][str(u)].append(dict(rank=r,regions=regions,start_ms=min(x['start_ms'] for x in ds),end_ms=max(x['end_ms'] for x in ds)))
+    save(OUT/'legacy-payload.json',legacy)
     # Inline data makes the exported HTML usable offline as well.
-    text=template.read_text().replace('__PAYLOAD__',orjson.dumps(payload).decode().replace('</','<\\/'))
+    text=template.read_text().replace('__PAYLOAD__',orjson.dumps(payload).decode().replace('</','<\\/')).replace('__LEGACY_PAYLOAD__',orjson.dumps(legacy).decode().replace('</','<\\/'))
     (OUT/'index.html').write_text(text)
-    save(OUT/'manifest.json',dict(inputs=inputs,views=count,source_traces=80,scope='PP1 F0/B0 four layers EP8; conditional structure, measured selected events',
-                                 outputs={str(OUT/n):sha(OUT/n) for n in ['index.html','payload.json']}))
+    save(OUT/'manifest.json',dict(inputs=inputs,new_views=count,legacy_views=64,source_traces=88,new_source_traces=80,legacy_source_traces=8,scope='PP1 F0/B0 four layers EP8; new155-200 plus old60; conditional structure, measured selected events; old DeepEP transport visibility incomplete',
+                                 outputs={str(OUT/n):sha(OUT/n) for n in ['index.html','payload.json','legacy-payload.json']}))
     dest=SERVE/'mccl-fb-structure-r1';dest.mkdir(exist_ok=True)
-    for n in ['index.html','payload.json','manifest.json']:shutil.copyfile(OUT/n,dest/n)
+    for n in ['index.html','payload.json','legacy-payload.json','manifest.json']:shutil.copyfile(OUT/n,dest/n)
     url='http://192.168.8.16:43312/df-v001/mccl-fb-structure-r1/'
     assert urllib.request.urlopen(url,timeout=20).read()==(OUT/'index.html').read_bytes()
     save(OUT/'verification.json',dict(http='PASS',views=count,url=url,browser_visual='NOT_TESTED'))

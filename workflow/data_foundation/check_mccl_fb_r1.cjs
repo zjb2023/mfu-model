@@ -30,8 +30,40 @@ const {chromium}=require('/home/zjb/Desktop/worktrees/mfu-w37-v610/node_modules/
     rows.push({it,u,ph,key,events:count});
    }
   }
+  await page.click('#version-old');
+  if(await page.locator('#new-view').isVisible())throw Error('New view still visible in old mode');
+  const legacyChecks=[];
+  for(const ph of ['F','B']){
+   const suffix=ph==='F'?'cp-ep8-structure-r1/':'b-four-layers-r10/';
+   await page.click(ph==='F'?'#legacy-f':'#legacy-b');
+   await page.waitForFunction(s=>document.querySelector('#legacy-frame').contentDocument?.URL.endsWith(s),suffix);
+   const frame=await page.locator('#legacy-frame').contentFrame();
+   await frame.locator('body').waitFor({state:'visible'});
+   const text=await frame.locator('body').innerText();if(text.length<100)throw Error('Empty legacy page');
+   legacyChecks.push({phase:ph,url:suffix,body_text_length:text.length});
+   if(await page.locator('#iter').inputValue()!=='60')throw Error('Wrong legacy iteration');
+   for(let u=0;u<4;u++){
+    await page.selectOption('#unit',String(u));let axis=null,coords=null;
+    for(const key of ph==='F'?['all','forward_cp','forward_ep']:['all','recompute_cp','recompute_ep','backward_ep','backward_cp']){
+     await page.selectOption('#region',key);
+     const current=await page.locator('#timeline rect').evaluateAll(es=>es.map(e=>[e.getAttribute('x'),e.getAttribute('width')]));
+     const labels=await page.locator('#timeline text').allTextContents();
+     if(axis!==null&&(axis!==JSON.stringify(labels)||coords!==JSON.stringify(current)))throw Error('Old time axis moved');
+     axis=JSON.stringify(labels);coords=JSON.stringify(current);
+     const count=await page.locator('#timeline rect.selected').count();
+     const expected=await page.evaluate(({ph,u,key})=>DATA['60'][ph][u].reduce((n,r)=>n+(key==='all'?new Set(Object.values(r.regions).flat().map(e=>e.id)).size:r.regions[key].length),0),{ph,u,key});
+     if(count!==expected||!count)throw Error('Legacy events missing');
+     for(let rank=8;rank<16;rank++)if(!labels.includes('rank '+rank))throw Error('Legacy rank missing');
+     rows.push({version:'old',it:60,u,ph,key,events:count});
+    }
+   }
+  }
+  await page.click('#version-new');
+  if(!await page.locator('#new-view').isVisible()||await page.locator('#legacy-view').isVisible())throw Error('Version return failed');
+  await page.selectOption('#region','backward_ep');
+  if(!await page.locator('#timeline rect.selected').count())throw Error('Timeline broken after old view');
   if(errors.length)throw Error(errors.join('\n'));
-  fs.writeFileSync(path.join(out,'browser-verification.json'),JSON.stringify({status:'PASS',tested_utc:new Date().toISOString(),browser:'Chromium headless',combinations:rows.length,page_errors:errors,checks:['chronological menu','fixed layer axis and event positions','real select change updates SVG','selected event counts','all eight ranks','no NaN','no page errors'],page_sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(out,'index.html'))).digest('hex'),rows},null,2));
+  fs.writeFileSync(path.join(out,'browser-verification.json'),JSON.stringify({status:'PASS',tested_utc:new Date().toISOString(),browser:'Chromium headless',combinations:rows.length,legacyChecks,page_errors:errors,checks:['old/new version switching','legacy F/B iframe loaded','return to new B timeline','chronological menu','fixed layer axis and event positions','real select change updates SVG','selected event counts','all eight ranks','no NaN','no page errors'],page_sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(out,'index.html'))).digest('hex'),rows},null,2));
   console.log('PASS browser F/B interval switching',rows.length,'combinations');
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exit(1)});
