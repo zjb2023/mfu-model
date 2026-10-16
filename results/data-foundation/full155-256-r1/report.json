@@ -1,0 +1,305 @@
+{
+  "status": "PARTIAL_CONDITIONAL_ALL_SOURCE_COSTS_TARGET_EVALUATED",
+  "completed_utc": "2026-10-15T07:21:05.210942+00:00",
+  "prediction": {
+    "status": "CONDITIONAL_ALL_NEW_SOURCE_COSTS",
+    "sealed_utc": "2026-10-15T07:21:03.513377+00:00",
+    "predicted_1f1b_ms": 23958.471960181007,
+    "middle_ms": {
+      "F": 391.5014522790907,
+      "B": 952.4930500507355
+    },
+    "source32_model_ms": 13162.25999109149,
+    "source_iterations": [
+      155,
+      160,
+      165,
+      170,
+      175,
+      180,
+      185,
+      190,
+      195,
+      200
+    ],
+    "expanded_nodes": 170389,
+    "template_instances": 112,
+    "old_iter60_costs_used": false,
+    "window": "rank0 first-F GPU start to last-B GPU completion; fill/drain included; startup/RS/optimizer/AG excluded",
+    "policy": {
+      "source_world": 32,
+      "target_world": 256,
+      "PP": 16,
+      "microbatches": 4,
+      "middle_layers": 4,
+      "source_template": "PP1 F0/B0 ranks8..15; ten-iteration mean",
+      "EDP2": "two target EP8 cohorts assumed identical, not measured max of replicas",
+      "source_backend": "ordinary MCCL AlltoAll, DeepEP disabled",
+      "target_backend": "DeepEP/ACE; implementation equivalence NOT established",
+      "loss_slot": "zero extra cost: measured last-F envelope retained; no separately calibrated loss addition",
+      "conditional_dependencies": "CP structural edges; local metadata/reorder/shared-expert edges not exhaustively recovered; measured source residual gaps retained"
+    }
+  },
+  "rows": [
+    {
+      "iteration": 5,
+      "truth_ms": 21063.711515426636,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 13.742879276685427,
+      "baseline_error_percent": 2.7993467559614515,
+      "expert_only_error_percent": 3.74920769596061
+    },
+    {
+      "iteration": 10,
+      "truth_ms": 19501.673583984375,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 22.85341489797443,
+      "baseline_error_percent": 11.033331304455295,
+      "expert_only_error_percent": 12.059273859269926
+    },
+    {
+      "iteration": 15,
+      "truth_ms": 19559.437602996826,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 22.490597360070197,
+      "baseline_error_percent": 10.705421494844835,
+      "expert_only_error_percent": 11.728334179044332
+    },
+    {
+      "iteration": 20,
+      "truth_ms": 19759.333720207214,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 21.251416163286272,
+      "baseline_error_percent": 9.5854655173653,
+      "expert_only_error_percent": 10.598029863067548
+    },
+    {
+      "iteration": 25,
+      "truth_ms": 19465.550416469574,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 23.081399948033443,
+      "baseline_error_percent": 11.23938125118804,
+      "expert_only_error_percent": 12.267227697440397
+    },
+    {
+      "iteration": 30,
+      "truth_ms": 19272.236402988434,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 24.31599249408287,
+      "baseline_error_percent": 12.355190065337474,
+      "expert_only_error_percent": 13.393346530500573
+    },
+    {
+      "iteration": 35,
+      "truth_ms": 19756.322695732117,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 21.269895866585852,
+      "baseline_error_percent": 9.602167234778491,
+      "expert_only_error_percent": 10.614885903533388
+    },
+    {
+      "iteration": 40,
+      "truth_ms": 19671.633223056793,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 21.79198182741473,
+      "baseline_error_percent": 10.074021790113852,
+      "expert_only_error_percent": 11.09110037189951
+    },
+    {
+      "iteration": 45,
+      "truth_ms": 20080.50852918625,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 19.31207780598927,
+      "baseline_error_percent": 7.832716531787476,
+      "expert_only_error_percent": 8.829085562523598
+    },
+    {
+      "iteration": 50,
+      "truth_ms": 19738.58158826828,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 21.378893681098333,
+      "baseline_error_percent": 9.700678053222367,
+      "expert_only_error_percent": 10.714306957125252
+    },
+    {
+      "iteration": 55,
+      "truth_ms": 19963.890820503235,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 20.009031183316605,
+      "baseline_error_percent": 8.462614001978341,
+      "expert_only_error_percent": 9.46480325455461
+    },
+    {
+      "iteration": 60,
+      "truth_ms": 20396.01318693161,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 17.46644670504518,
+      "baseline_error_percent": 6.164658955470892,
+      "expert_only_error_percent": 7.145615215723433
+    },
+    {
+      "iteration": 65,
+      "truth_ms": 20466.54404067993,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 17.061639290739137,
+      "baseline_error_percent": 5.7987992373305985,
+      "expert_only_error_percent": 6.776374971667898
+    },
+    {
+      "iteration": 70,
+      "truth_ms": 21089.008199214935,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 13.60644243607858,
+      "baseline_error_percent": 2.6760368997575057,
+      "expert_only_error_percent": 3.6247584627117524
+    },
+    {
+      "iteration": 75,
+      "truth_ms": 21165.856451511383,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 13.193964133070612,
+      "baseline_error_percent": 2.303244331379828,
+      "expert_only_error_percent": 3.2485213092214416
+    },
+    {
+      "iteration": 80,
+      "truth_ms": 21514.19768190384,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 11.361215112070443,
+      "baseline_error_percent": 0.6468294127092822,
+      "expert_only_error_percent": 1.5768011976549534
+    },
+    {
+      "iteration": 85,
+      "truth_ms": 21750.427436351776,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 10.151729340908933,
+      "baseline_error_percent": -0.4462882222292852,
+      "expert_only_error_percent": 0.473583209192574
+    },
+    {
+      "iteration": 90,
+      "truth_ms": 22183.123421669006,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 8.003149532936371,
+      "baseline_error_percent": -2.388146931250934,
+      "expert_only_error_percent": -1.4862181793976137
+    },
+    {
+      "iteration": 95,
+      "truth_ms": 22138.423668384552,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 8.221218994899026,
+      "baseline_error_percent": -2.1910585651066627,
+      "expert_only_error_percent": -1.287308726382308
+    },
+    {
+      "iteration": 100,
+      "truth_ms": 22288.906640052795,
+      "predicted_ms": 23958.471960181007,
+      "baseline_ms": 21653.357840418812,
+      "expert_only_ms": 21853.433808617952,
+      "error_percent": 7.490566258319875,
+      "baseline_error_percent": -2.851413081393206,
+      "expert_only_error_percent": -1.9537648861263857
+    }
+  ],
+  "all20": {
+    "baseline_error_percent": {
+      "n": 20,
+      "signed_mean_percent": 5.655149801885047,
+      "signed_std_pp": 4.997615624792728,
+      "absolute_mean_percent": 6.442840481883056,
+      "absolute_std_pp": 3.930227441248383
+    },
+    "expert_only_error_percent": {
+      "n": 20,
+      "signed_mean_percent": 6.631398222459274,
+      "signed_std_pp": 5.043793348921552,
+      "absolute_mean_percent": 7.104127401649905,
+      "absolute_std_pp": 4.35277699780132
+    },
+    "error_percent": {
+      "n": 20,
+      "signed_mean_percent": 16.90269761543028,
+      "signed_std_pp": 5.529638160362252,
+      "absolute_mean_percent": 16.90269761543028,
+      "absolute_std_pp": 5.529638160362252
+    }
+  },
+  "last4": {
+    "baseline_error_percent": {
+      "n": 4,
+      "signed_mean_percent": -1.9692266999950219,
+      "signed_std_pp": 0.911358595054419,
+      "absolute_mean_percent": 1.9692266999950219,
+      "absolute_std_pp": 0.911358595054419
+    },
+    "expert_only_error_percent": {
+      "n": 4,
+      "signed_mean_percent": -1.0634271456784332,
+      "signed_std_pp": 0.9197795039326632,
+      "absolute_mean_percent": 1.3002187502747202,
+      "absolute_std_pp": 0.5350727347328027
+    },
+    "error_percent": {
+      "n": 4,
+      "signed_mean_percent": 8.466666031766051,
+      "signed_std_pp": 1.0083775230705216,
+      "absolute_mean_percent": 8.466666031766051,
+      "absolute_std_pp": 1.0083775230705216
+    }
+  },
+  "checks": {
+    "actual_fine_expansion": true,
+    "outer_contraction_all_endpoints": true,
+    "zero_wrappers_no_double_charge": true,
+    "expert_plus1000_outer_shift_ms": 199.2888356208823,
+    "seal_verified": true
+  },
+  "limits": [
+    "This is all-source COST migration, not verified equality of communication implementations or complete causal graph recovery.",
+    "Source155..200 is entirely used as requested; no source holdout accuracy claim.",
+    "Prediction is fixed for all target iterations; no target tokens or timing fitting.",
+    "Only1F1B, not full-iteration MFU accuracy. Target previously exposed; not blind validation.",
+    "Missing local cross-stream dependencies and measured residuals limit counterfactual reliability."
+  ]
+}

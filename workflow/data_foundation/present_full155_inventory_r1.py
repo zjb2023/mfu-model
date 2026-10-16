@@ -1,0 +1,66 @@
+"""Publish source device census and stream timeline, without changing prediction."""
+import hashlib
+import json
+import urllib.request
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[2];BASE=ROOT/'results/data-foundation'
+OUT=BASE/'full155-device-inventory-r1'
+WEB=Path('/home/zjb/Desktop/worktrees/mfu-w37-v610/results/data-foundation/2111-blocks-ui-r1/df-v001/full155-device-inventory-r1')
+LABELS={'CP':'CP通信','EP_payload':'EP AlltoAll','EP_metadata':'EP元数据AG',
+    'attention_region_local':'Attention前段／本地准备','post_expert_backward_local':'专家梯度之后：Attention反向／本地处理',
+    'moe_region_other_local':'MoE其他本地活动','phase_boundary_local':'F/B边界本地活动','other_communication':'其他通信',
+    'expert_FC1':'专家FC1','expert_FC2':'专家FC2','expert_activation':'专家激活／门控',
+    'expert_recompute_FC1':'重计算FC1','expert_recompute_FC2':'重计算FC2','expert_recompute_activation':'重计算激活／门控',
+    'expert_backward_FC1':'FC1梯度','expert_backward_FC2':'FC2梯度','expert_backward_activation':'激活／门控反向'}
+
+
+def main():
+    load=lambda p:json.loads(p.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+    m=load(OUT/'manifest.json')
+    for group in ['inputs','outputs']:
+        for p,h in m[group].items():assert sha(Path(p))==h,p
+    r=load(OUT/'report.json');WEB.mkdir(parents=True,exist_ok=True)
+    assets=[]
+    for it in r['source_iterations']:
+        for rank in r['ranks']:
+            x=load(OUT/f'i{it}-r{rank}.json');payload={}
+            for ph,v in x['phases'].items():
+                origin=min(d['start_ms'] for d in v['devices'])
+                payload[ph]=dict(envelope=v['device_envelope_ms'],union=v['device_union_ms'],gap=v['envelope_uncovered_ms'],
+                    overlap=v['class_overlap_ms'],classes=v['class_union_ms'],communications=v['communications'],
+                    devices=[[round(d['start_ms']-origin,6),round(d['end_ms']-origin,6),str(d['stream']),d['kind'],d['unit'],d['event'],d['name']] for d in v['devices']])
+            dest=WEB/f'i{it}-r{rank}.json';dest.write_text(json.dumps(payload,separators=(',',':')));assets.append(dest)
+    rows=''
+    for ph,v in r['phases'].items():
+        rows+=f'<tr><td>{ph}0</td><td>{v["mean_envelope_ms"]:.3f}</td><td>{v["mean_device_union_ms"]:.3f}</td><td>{v["mean_uncovered_ms"]:.3f}</td><td>{v["mean_class_overlap_ms"]:.3f}</td></tr>'
+    page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全量迁移：F/B设备活动核对</title>
+<style>body{margin:0;background:#f1f5f9;color:#172033;font:16px/1.65 system-ui}main{max-width:1200px;margin:auto;padding:24px}section{background:#fff;padding:24px;margin:18px 0;border-radius:12px}h1{font-size:28px}h2{font-size:21px}a{color:#0369a1}select,button{font:inherit;margin:5px;padding:5px}table{border-collapse:collapse;width:100%}th,td{padding:8px;text-align:left;border-bottom:1px solid #e2e8f0}.note{border-left:5px solid #eab308}.legend{display:flex;flex-wrap:wrap;gap:12px}.legend span{border-left:12px solid;padding-left:6px}canvas{width:100%;display:block}#tip{min-height:52px;padding:10px;background:#f8fafc;overflow-wrap:anywhere}.stats{font-weight:600;margin:16px 0}.small{font-size:14px;color:#475569}</style>
+<main><h1>全量迁移：先核对F/B全部设备活动</h1><p><a href="../full155-migration-r1/">迁移总进度</a> · <a href="../prediction-overview-r2/">原DAG预测总览</a></p>
+<section class="note"><b>80份trace核对通过；这不是新的256卡预测结果。</b><p>32卡iter155～200（每5轮一份），PP1完整EP8 ranks8～15，F0与B0各四层。已识别专家计算、CP、普通AlltoAll与其余本地设备活动。新依赖、就绪/衔接成本尚待组装，不能把这些分类时长直接相加，也不能直接替换原DeepEP节点。</p></section>
+<section><h2>① GPU stream时间图：计算与通信在哪里重叠？</h2><p>选择iter <select id="it"></select> rank <select id="rank"></select> 阶段 <select id="phase"><option>F</option><option>B</option></select></p><div id="stats" class="stats"></div><div class="legend"><span style="border-color:#2563eb">CP</span><span style="border-color:#ea580c">EP AlltoAll</span><span style="border-color:#a855f7">元数据／其他通信</span><span style="border-color:#16a34a">专家计算</span><span style="border-color:#64748b">Attention区间与其他本地工作</span></div><p class="small">横轴从该rank F0/B0的首个关联设备活动开始，单位ms；每行一个GPU stream。块来自实际kernel/拷贝，不是CPU包络。悬停可看类别、层执行序号和原trace事件编号。空白不自动解释为等待。</p><canvas id="timeline"></canvas><div id="tip">移动到色块查看活动。细小活动按最小像素显示，精确时长见悬停。</div><div id="parts"></div></section>
+<section><h2>② 80个rank×iter样本的平均值</h2><table><tr><th>阶段</th><th>设备包络ms</th><th>全部设备并集ms</th><th>包络内无关联活动覆盖ms</th><th>分类并集求和的重复覆盖ms</th></tr>__ROWS__</table><p>统计单位是一个rank的F0/B0，80个样本等权；不是整个EP8的max，也不是1F1B。重复覆盖说明计算与通信存在重叠，必须通过DAG依赖重新调度，不能把表内分类求和作为F/B成本。</p></section>
+<section><h2>③ 通信清单：此前需要补齐的部分</h2><table><tr><th>单rank四层</th><th>CP</th><th>EP AlltoAll</th><th>EP元数据AG</th><th>额外通信</th></tr><tr><td>F0</td><td>16次</td><td>12次</td><td>4次</td><td>0</td></tr><tr><td>B0（含重计算）</td><td>36次</td><td>24次</td><td>4次</td><td>4次TP+CP组AllReduce</td></tr></table><p>B额外AllReduce的样例是160个Long元素、CP2两卡组；功能身份仍需框架核对。它与EP元数据AG单列，不能遗漏或混作专家FC计算。以上调用数量在80份trace均一致。</p><p>新源是普通MCCL AlltoAll，不是DeepEP。通信kernel驻留时间含等待，不能当成纯传输FCT；通信组rank以distributedInfo组配置为准。</p></section>
+<section><h2>④ 哪些已经确认，哪些还没完成？</h2><p>已确认：所有先前提取的专家设备事件均能找回，分类无重复；F0/B0设备包络内未发现未关联的设备活动。每个事件保留原路径、SHA256、事件号和launch关联。</p><p>尚未确认：Attention区间内所有本地kernel的功能身份；跨stream及跨rank的完整预测依赖；新源普通AlltoAll成本如何对应目标DeepEP。图中的“Attention前段”包含本地准备，“专家梯度之后”包含Attention反向及其他处理，不能称纯Attention耗时。</p><p>唯一下一步：将这些新源事件按层、stream及集合通信次序建立细粒度成本块，核对通信完成与计算启动的依赖，再接入已提取的新首尾和PP成本。保留旧预测，不用总包络比例缩放冒充全量迁移。</p><p class="small">证据：__OUT__ / report.json、manifest.json、i155-r8.json等。复现：python3 workflow/data_foundation/full155_device_inventory_r1.py</p></section></main>
+<script>const LABELS=__LABELS__,ITS=__ITS__;let data,boxes=[];const $=id=>document.getElementById(id);ITS.forEach(x=>$('it').add(new Option(x,x)));for(let x=8;x<16;x++)$('rank').add(new Option(x,x));
+const color=k=>k==='CP'?'#2563eb':k==='EP_payload'?'#ea580c':k==='EP_metadata'||k==='other_communication'?'#a855f7':k.startsWith('expert_')?'#16a34a':'#64748b';
+let sequence=0;async function reload(){const n=++sequence;try{const response=await fetch(`i${$('it').value}-r${$('rank').value}.json`);if(!response.ok)throw Error(response.status);const result=await response.json();if(n!==sequence)return;data=result;draw()}catch(e){$('stats').textContent='读取失败：'+e}};
+function draw(){if(!data)return;const v=data[$('phase').value];$('stats').textContent=`设备包络 ${v.envelope.toFixed(3)} ms · 设备并集 ${v.union.toFixed(3)} ms · 未覆盖 ${v.gap.toFixed(3)} ms`;
+const c=$('timeline'),ctx=c.getContext('2d'),w=c.clientWidth,h=65+48*new Set(v.devices.map(d=>d[2])).size,dpr=devicePixelRatio||1;c.style.height=h+'px';c.width=w*dpr;c.height=h*dpr;ctx.scale(dpr,dpr);ctx.font='12px system-ui';const streams=[...new Set(v.devices.map(d=>d[2]))].sort((a,b)=>Number(a)-Number(b)),left=90,right=w-20;boxes=[];
+for(let i=0;i<=5;i++){const x=left+(right-left)*i/5;ctx.strokeStyle='#e2e8f0';ctx.beginPath();ctx.moveTo(x,25);ctx.lineTo(x,h-20);ctx.stroke();ctx.fillStyle='#475569';ctx.fillText((v.envelope*i/5).toFixed(1),x-12,18)}
+streams.forEach((s,i)=>{ctx.fillStyle='#334155';ctx.fillText('stream '+s,0,54+i*48)});
+v.devices.forEach(d=>{const x=left+d[0]/v.envelope*(right-left),y=35+streams.indexOf(d[2])*48,bw=Math.max(.7,(d[1]-d[0])/v.envelope*(right-left));ctx.fillStyle=color(d[3]);ctx.fillRect(x,y,bw,28);boxes.push({x,y,w:bw,h:28,d})});
+$('parts').innerHTML='<table><tr><th>分类（不是互斥时间区间）</th><th>设备并集ms</th></tr>'+Object.entries(v.classes).map(([k,x])=>`<tr><td>${LABELS[k]||k}</td><td>${x.toFixed(3)}</td></tr>`).join('')+'</table>'}
+$('timeline').addEventListener('mousemove',e=>{const rect=e.target.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top,b=boxes.findLast?boxes.findLast(b=>x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h):[...boxes].reverse().find(b=>x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h);if(!b)return;const d=b.d;$('tip').textContent=`${LABELS[d[3]]||d[3]} · ${d[4]===null?'层外边界':'执行层序号 '+d[4]} · ${d[0].toFixed(3)}—${d[1].toFixed(3)} ms，时长 ${(d[1]-d[0]).toFixed(3)} ms · event ${d[5]} · ${d[6]}`});$('it').onchange=reload;$('rank').onchange=reload;$('phase').onchange=draw;window.addEventListener('resize',draw);reload();</script></html>'''
+    page=page.replace('__ROWS__',rows).replace('__OUT__',str(OUT)).replace('__LABELS__',json.dumps(LABELS,ensure_ascii=False)).replace('__ITS__',json.dumps(r['source_iterations']))
+    (OUT/'index.html').write_text(page);(WEB/'index.html').write_text(page)
+    for name in ['','i155-r8.json','i200-r15.json']:
+        with urllib.request.urlopen('http://127.0.0.1:43312/df-v001/full155-device-inventory-r1/'+name,timeout=10) as resp:
+            expected=(WEB/(name or 'index.html')).read_bytes();assert resp.status==200 and resp.read()==expected
+    savepath=OUT/'presentation-verification.json'
+    savepath.write_text(json.dumps(dict(status='PASS_HASH_PAYLOAD_AND_HTTP',browser_rendering='NOT_TESTED',
+        payloads=len(assets),code_sha256=sha(Path(__file__)),outputs={str(p):sha(p) for p in assets+[WEB/'index.html',OUT/'index.html']}),indent=2)+'\n')
+    print('PASS http://192.168.8.16:43312/df-v001/full155-device-inventory-r1/')
+
+
+if __name__=='__main__':main()

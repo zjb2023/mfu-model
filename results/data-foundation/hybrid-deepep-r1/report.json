@@ -1,0 +1,241 @@
+{
+  "prediction": {
+    "status": "PARTIAL_HYBRID_DEEPEP",
+    "sealed_utc": "2026-10-15T07:49:46.184994+00:00",
+    "predicted_1f1b_ms": 21910.771913217668,
+    "middle_ms": {
+      "F": 341.7337098836899,
+      "B": 878.8803342485422
+    },
+    "expanded_nodes": 421997,
+    "instances": 112,
+    "contraction_max_error_ms": 3.7471181713044643e-10,
+    "checks": {
+      "F": {
+        "changed_nodes": 160,
+        "dependencies": "UNCHANGED",
+        "restore_green": "PASS",
+        "unchanged_other_costs": "PASS"
+      },
+      "B": {
+        "changed_nodes": 496,
+        "dependencies": "UNCHANGED",
+        "restore_green": "PASS",
+        "unchanged_other_costs": "PASS"
+      }
+    },
+    "limits": [
+      "PARTIAL mixed-source candidate: new experts, Flash, CP, outer head/tail and PP; old DeepEP and other unmatched local/residual costs.",
+      "Old DeepEP DAG reused instead of red graph: red auxiliary-stream fixed-gap issue is NOT repaired.",
+      "CP uses paired trace overlap proxies, not pure network service; old readiness/local-reorder retained.",
+      "Flash transfer does not mean all Attention projections/reorders migrated.",
+      "Head/tail are new whole fixed blocks and may include ordinary-AlltoAll effects; not converted to DeepEP.",
+      "Not a controlled red-vs-hybrid EP-only ablation: graph and retained residuals also differ.",
+      "Target EDP2 replicas assumed equal; rank0 1F1B including fill/drain only, not whole-step MFU.",
+      "Target data previously exposed; no target fitting or target token input in this run."
+    ]
+  },
+  "all20": {
+    "n": 20,
+    "signed_mean_percent": 6.9111731227535325,
+    "signed_std_pp": 5.05702703810525,
+    "absolute_mean_percent": 7.306429912126867,
+    "absolute_std_pp": 4.466980897202959
+  },
+  "last4": {
+    "n": 4,
+    "signed_mean_percent": -0.8038415989520681,
+    "signed_std_pp": 0.922192782041122,
+    "absolute_mean_percent": 1.1724423479146013,
+    "absolute_std_pp": 0.34925604400075716
+  },
+  "rows": [
+    {
+      "iteration": 5,
+      "truth_ms": 21063.711515426636,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 4.0214204280696775
+    },
+    {
+      "iteration": 10,
+      "truth_ms": 19501.673583984375,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 12.353290187421395
+    },
+    {
+      "iteration": 15,
+      "truth_ms": 19559.437602996826,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 12.021482201822508
+    },
+    {
+      "iteration": 20,
+      "truth_ms": 19759.333720207214,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 10.88821224174299
+    },
+    {
+      "iteration": 25,
+      "truth_ms": 19465.550416469574,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 12.561789645974875
+    },
+    {
+      "iteration": 30,
+      "truth_ms": 19272.236402988434,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 13.690863141446785
+    },
+    {
+      "iteration": 35,
+      "truth_ms": 19756.322695732117,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 10.905112508366589
+    },
+    {
+      "iteration": 40,
+      "truth_ms": 19671.633223056793,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 11.382576447879366
+    },
+    {
+      "iteration": 45,
+      "truth_ms": 20080.50852918625,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 9.114626660829828
+    },
+    {
+      "iteration": 50,
+      "truth_ms": 19738.58158826828,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 11.004794418665021
+    },
+    {
+      "iteration": 55,
+      "truth_ms": 19963.890820503235,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 9.752012321741187
+    },
+    {
+      "iteration": 60,
+      "truth_ms": 20396.01318693161,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 7.4267392965631895
+    },
+    {
+      "iteration": 65,
+      "truth_ms": 20466.54404067993,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 7.056530255753701
+    },
+    {
+      "iteration": 70,
+      "truth_ms": 21089.008199214935,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 3.896644670247329
+    },
+    {
+      "iteration": 75,
+      "truth_ms": 21165.856451511383,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 3.5194203618114983
+    },
+    {
+      "iteration": 80,
+      "truth_ms": 21514.19768190384,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 1.843314062542989
+    },
+    {
+      "iteration": 85,
+      "truth_ms": 21750.427436351776,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": 0.7372014979250663
+    },
+    {
+      "iteration": 90,
+      "truth_ms": 22183.123421669006,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": -1.2277419336958584
+    },
+    {
+      "iteration": 95,
+      "truth_ms": 22138.423668384552,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": -1.0283105905683265
+    },
+    {
+      "iteration": 100,
+      "truth_ms": 22288.906640052795,
+      "predicted_ms": 21910.771913217668,
+      "error_percent": -1.6965153694691537
+    }
+  ],
+  "sensitivity": [
+    {
+      "phase": "F",
+      "factor": 0,
+      "selected_nodes": 40,
+      "block_ms": 326.1606762409211,
+      "window_shift_ms": -249.1685382846772,
+      "scope": "explicit old-EP-labelled ports only; not all EP-associated local work"
+    },
+    {
+      "phase": "F",
+      "factor": 0.5,
+      "selected_nodes": 40,
+      "block_ms": 333.908330988884,
+      "window_shift_ms": -125.20606231727288,
+      "scope": "explicit old-EP-labelled ports only; not all EP-associated local work"
+    },
+    {
+      "phase": "F",
+      "factor": 1.5,
+      "selected_nodes": 40,
+      "block_ms": 349.55908877849583,
+      "window_shift_ms": 125.20606231651982,
+      "scope": "explicit old-EP-labelled ports only; not all EP-associated local work"
+    },
+    {
+      "phase": "F",
+      "factor": 2,
+      "selected_nodes": 40,
+      "block_ms": 357.38446767330174,
+      "window_shift_ms": 250.4121246334107,
+      "scope": "explicit old-EP-labelled ports only; not all EP-associated local work"
+    },
+    {
+      "phase": "B",
+      "factor": 0,
+      "selected_nodes": 227,
+      "block_ms": 851.4093099098201,
+      "window_shift_ms": -467.007413758638,
+      "scope": "explicit old-EP-labelled ports only; not all EP-associated local work"
+    },
+    {
+      "phase": "B",
+      "factor": 0.5,
+      "selected_nodes": 227,
+      "block_ms": 864.8737591552729,
+      "window_shift_ms": -238.11177658594534,
+      "scope": "explicit old-EP-labelled ports only; not all EP-associated local work"
+    },
+    {
+      "phase": "B",
+      "factor": 1.5,
+      "selected_nodes": 227,
+      "block_ms": 894.5040087547299,
+      "window_shift_ms": 265.60246660482153,
+      "scope": "explicit old-EP-labelled ports only; not all EP-associated local work"
+    },
+    {
+      "phase": "B",
+      "factor": 2,
+      "selected_nodes": 227,
+      "block_ms": 910.3640521316522,
+      "window_shift_ms": 535.2232040124945,
+      "scope": "explicit old-EP-labelled ports only; not all EP-associated local work"
+    }
+  ],
+  "finished_utc": "2026-10-15T07:49:46.189047+00:00"
+}

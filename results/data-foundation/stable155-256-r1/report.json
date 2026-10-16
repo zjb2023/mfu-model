@@ -1,0 +1,249 @@
+{
+  "status": "PARTIAL_SOURCE_COST_TRANSFER_TARGET_EVALUATED",
+  "completed_utc": "2026-10-15T05:47:10.855825+00:00",
+  "prediction": {
+    "source_iterations": [
+      155,
+      160,
+      165,
+      170,
+      175,
+      180,
+      185,
+      190,
+      195,
+      200
+    ],
+    "cost_aggregation": "arithmetic mean per rank/layer/compute component; no heldout source fitting",
+    "middle_ms": {
+      "F": 344.61239633560183,
+      "B": 878.8156976604458
+    },
+    "original_middle_ms": {
+      "F": 342.7138833999634,
+      "B": 868.8333587646479
+    },
+    "one_f_one_b_ms": 21853.433808617952,
+    "baseline_one_f_one_b_ms": 21653.357840418812,
+    "expanded_nodes": 421997,
+    "instances": 112,
+    "contraction_max_error_ms": 3.7471181713044643e-10,
+    "checks": {
+      "F": {
+        "changed_nodes": 32,
+        "dependencies": "PASS",
+        "non_selected_costs": "PASS",
+        "restored_replay": "PASS"
+      },
+      "B": {
+        "changed_nodes": 256,
+        "dependencies": "PASS",
+        "non_selected_costs": "PASS",
+        "restored_replay": "PASS"
+      }
+    },
+    "source_policy": "Only middle PP1 F0/B0 expert compute from new32 iter155–200; attention/communication/readiness/head/tail/PP retained old32iter60",
+    "target_policy": "PP16 MB4; middlePP1–14 repeated four-layer EP8 template; two EDP groups assumed equal, not independently modeled"
+  },
+  "rows": [
+    {
+      "iteration": 5,
+      "truth_ms": 21063.711515426636,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 3.74920769596061,
+      "baseline_error_percent": 2.7993467559614515
+    },
+    {
+      "iteration": 10,
+      "truth_ms": 19501.673583984375,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 12.059273859269926,
+      "baseline_error_percent": 11.033331304455295
+    },
+    {
+      "iteration": 15,
+      "truth_ms": 19559.437602996826,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 11.728334179044332,
+      "baseline_error_percent": 10.705421494844835
+    },
+    {
+      "iteration": 20,
+      "truth_ms": 19759.333720207214,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 10.598029863067548,
+      "baseline_error_percent": 9.5854655173653
+    },
+    {
+      "iteration": 25,
+      "truth_ms": 19465.550416469574,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 12.267227697440397,
+      "baseline_error_percent": 11.23938125118804
+    },
+    {
+      "iteration": 30,
+      "truth_ms": 19272.236402988434,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 13.393346530500573,
+      "baseline_error_percent": 12.355190065337474
+    },
+    {
+      "iteration": 35,
+      "truth_ms": 19756.322695732117,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 10.614885903533388,
+      "baseline_error_percent": 9.602167234778491
+    },
+    {
+      "iteration": 40,
+      "truth_ms": 19671.633223056793,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 11.09110037189951,
+      "baseline_error_percent": 10.074021790113852
+    },
+    {
+      "iteration": 45,
+      "truth_ms": 20080.50852918625,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 8.829085562523598,
+      "baseline_error_percent": 7.832716531787476
+    },
+    {
+      "iteration": 50,
+      "truth_ms": 19738.58158826828,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 10.714306957125252,
+      "baseline_error_percent": 9.700678053222367
+    },
+    {
+      "iteration": 55,
+      "truth_ms": 19963.890820503235,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 9.46480325455461,
+      "baseline_error_percent": 8.462614001978341
+    },
+    {
+      "iteration": 60,
+      "truth_ms": 20396.01318693161,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 7.145615215723433,
+      "baseline_error_percent": 6.164658955470892
+    },
+    {
+      "iteration": 65,
+      "truth_ms": 20466.54404067993,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 6.776374971667898,
+      "baseline_error_percent": 5.7987992373305985
+    },
+    {
+      "iteration": 70,
+      "truth_ms": 21089.008199214935,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 3.6247584627117524,
+      "baseline_error_percent": 2.6760368997575057
+    },
+    {
+      "iteration": 75,
+      "truth_ms": 21165.856451511383,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 3.2485213092214416,
+      "baseline_error_percent": 2.303244331379828
+    },
+    {
+      "iteration": 80,
+      "truth_ms": 21514.19768190384,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 1.5768011976549534,
+      "baseline_error_percent": 0.6468294127092822
+    },
+    {
+      "iteration": 85,
+      "truth_ms": 21750.427436351776,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": 0.473583209192574,
+      "baseline_error_percent": -0.4462882222292852
+    },
+    {
+      "iteration": 90,
+      "truth_ms": 22183.123421669006,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": -1.4862181793976137,
+      "baseline_error_percent": -2.388146931250934
+    },
+    {
+      "iteration": 95,
+      "truth_ms": 22138.423668384552,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": -1.287308726382308,
+      "baseline_error_percent": -2.1910585651066627
+    },
+    {
+      "iteration": 100,
+      "truth_ms": 22288.906640052795,
+      "predicted_ms": 21853.433808617952,
+      "baseline_ms": 21653.357840418812,
+      "error_percent": -1.9537648861263857,
+      "baseline_error_percent": -2.851413081393206
+    }
+  ],
+  "all20": {
+    "baseline_error_percent": {
+      "n": 20,
+      "signed_mean_percent": 5.655149801885047,
+      "signed_std_pp": 4.997615624792728,
+      "absolute_mean_percent": 6.442840481883056,
+      "absolute_std_pp": 3.930227441248383
+    },
+    "error_percent": {
+      "n": 20,
+      "signed_mean_percent": 6.631398222459274,
+      "signed_std_pp": 5.043793348921552,
+      "absolute_mean_percent": 7.104127401649905,
+      "absolute_std_pp": 4.35277699780132
+    }
+  },
+  "last4": {
+    "baseline_error_percent": {
+      "n": 4,
+      "signed_mean_percent": -1.9692266999950219,
+      "signed_std_pp": 0.911358595054419,
+      "absolute_mean_percent": 1.9692266999950219,
+      "absolute_std_pp": 0.911358595054419
+    },
+    "error_percent": {
+      "n": 4,
+      "signed_mean_percent": -1.0634271456784332,
+      "signed_std_pp": 0.9197795039326632,
+      "absolute_mean_percent": 1.3002187502747202,
+      "absolute_std_pp": 0.5350727347328027
+    }
+  },
+  "limits": [
+    "1F1B GPU rank0 window including fill/drain; excludes startup and optimizer tail. Not full-step MFU accuracy.",
+    "Same source mean predicts all target iterations; no target token inputs or target timing fitting.",
+    "Mixed new ordinaryAlltoAll compute with oldDeepEP effective communication; not complete new-source transfer.",
+    "B multi-node parts retain original allocation proportions; finer target scheduling not measured.",
+    "No source holdout study;155–200 entirely used to form costs as requested."
+  ]
+}

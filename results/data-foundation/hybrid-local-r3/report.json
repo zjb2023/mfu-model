@@ -1,0 +1,175 @@
+{
+  "prediction": {
+    "status": "PARTIAL_KERNEL_CONTEXT_MATCHING",
+    "time_utc": "2026-10-15T07:57:51.690880+00:00",
+    "baseline_ms": 21910.771913217293,
+    "predicted_ms": 22000.471031903027,
+    "middle_ms": {
+      "F": 342.206085729599,
+      "B": 883.7121639633175
+    },
+    "groups": {
+      "F_attention_local": 96,
+      "B_recompute_local_compute": 64,
+      "B_recompute_reorder": 124
+    },
+    "changed_nodes": 284,
+    "rejected_candidates": 548,
+    "limits": [
+      "Conditional kernel-level semantic matching, not verified CPU operator/tensor identity.",
+      "CP-bounded F local and B recompute local covered; true B local/gradient bridge/event-less residual still not migrated.",
+      "416 rejected source candidates outside Attention or lacking event evidence include MoE/EP items; not 416 missing non-EP operators.",
+      "All old residuals retained; no new causal edge proof. EP fixed across all comparisons.",
+      "Same-source mean predicts target20 iterations; no target fit; prior exposure, rank0 1F1B not full-step MFU."
+    ]
+  },
+  "checks": {
+    "dependencies": "UNCHANGED",
+    "nonselected": "UNCHANGED",
+    "restore": "PASS",
+    "no_duplicate_events": "PASS",
+    "expansion_error_ms": 4.3655745685100555e-10,
+    "expanded_nodes": 421997,
+    "instances": 112,
+    "full_context_pass": 42,
+    "full_context_total": 64
+  },
+  "one_factor": [
+    {
+      "group": "F_attention_local",
+      "nodes": 96,
+      "window_ms": 21918.32992675184,
+      "shift_ms": 7.558013534548081
+    },
+    {
+      "group": "B_recompute_local_compute",
+      "nodes": 64,
+      "window_ms": 21913.745392893543,
+      "shift_ms": 2.9734796762495534
+    },
+    {
+      "group": "B_recompute_reorder",
+      "nodes": 124,
+      "window_ms": 21992.6449554193,
+      "shift_ms": 81.87304220200531
+    }
+  ],
+  "combined_shift_ms": 89.69911868573399,
+  "interaction_ms": -2.7054167270689504,
+  "all20": {
+    "n": 20,
+    "signed_mean_percent": 7.3488499898539485,
+    "signed_std_pp": 5.077729680179327,
+    "absolute_mean_percent": 7.622909799704272,
+    "absolute_std_pp": 4.656198134092127
+  },
+  "last4": {
+    "n": 4,
+    "signed_mean_percent": -0.39774874102862234,
+    "signed_std_pp": 0.9259680885494784,
+    "absolute_mean_percent": 0.9725503082229942,
+    "absolute_std_pp": 0.26413417040812365
+  },
+  "rows": [
+    {
+      "iteration": 5,
+      "truth_ms": 21063.711515426636,
+      "error_percent": 4.447267119996057
+    },
+    {
+      "iteration": 10,
+      "truth_ms": 19501.673583984375,
+      "error_percent": 12.813246192217953
+    },
+    {
+      "iteration": 15,
+      "truth_ms": 19559.437602996826,
+      "error_percent": 12.480079838963242
+    },
+    {
+      "iteration": 20,
+      "truth_ms": 19759.333720207214,
+      "error_percent": 11.342170456911083
+    },
+    {
+      "iteration": 25,
+      "truth_ms": 19465.550416469574,
+      "error_percent": 13.022599213473484
+    },
+    {
+      "iteration": 30,
+      "truth_ms": 19272.236402988434,
+      "error_percent": 14.156294951277903
+    },
+    {
+      "iteration": 35,
+      "truth_ms": 19756.322695732117,
+      "error_percent": 11.359139910463734
+    },
+    {
+      "iteration": 40,
+      "truth_ms": 19671.633223056793,
+      "error_percent": 11.83855850929878
+    },
+    {
+      "iteration": 45,
+      "truth_ms": 20080.50852918625,
+      "error_percent": 9.56132410653936
+    },
+    {
+      "iteration": 50,
+      "truth_ms": 19738.58158826828,
+      "error_percent": 11.459229902208934
+    },
+    {
+      "iteration": 55,
+      "truth_ms": 19963.890820503235,
+      "error_percent": 10.201319120159646
+    },
+    {
+      "iteration": 60,
+      "truth_ms": 20396.01318693161,
+      "error_percent": 7.866526807304908
+    },
+    {
+      "iteration": 65,
+      "truth_ms": 20466.54404067993,
+      "error_percent": 7.494802191196603
+    },
+    {
+      "iteration": 70,
+      "truth_ms": 21089.008199214935,
+      "error_percent": 4.321980550616988
+    },
+    {
+      "iteration": 75,
+      "truth_ms": 21165.856451511383,
+      "error_percent": 3.943211947523384
+    },
+    {
+      "iteration": 80,
+      "truth_ms": 21514.19768190384,
+      "error_percent": 2.2602439430414067
+    },
+    {
+      "iteration": 85,
+      "truth_ms": 21750.427436351776,
+      "error_percent": 1.1496031343887436
+    },
+    {
+      "iteration": 90,
+      "truth_ms": 22183.123421669006,
+      "error_percent": -0.8233844544522473
+    },
+    {
+      "iteration": 95,
+      "truth_ms": 22138.423668384552,
+      "error_percent": -0.6231366720049314
+    },
+    {
+      "iteration": 100,
+      "truth_ms": 22288.906640052795,
+      "error_percent": -1.2940769720460543
+    }
+  ]
+}

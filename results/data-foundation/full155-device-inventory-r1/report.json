@@ -1,0 +1,157 @@
+{
+  "status": "PASS_SOURCE_DEVICE_CENSUS_NOT_PREDICTION",
+  "finished_utc": "2026-10-15T06:37:21.835144+00:00",
+  "source_iterations": [
+    155,
+    160,
+    165,
+    170,
+    175,
+    180,
+    185,
+    190,
+    195,
+    200
+  ],
+  "ranks": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "traces": 80,
+  "scope": "PP1 F0/B0, four layers, ordinary AlltoAll",
+  "phases": {
+    "F": {
+      "n": 80,
+      "classes": {
+        "CP": {
+          "mean_device_union_ms": 147.2486883699894,
+          "std_ms": 1.0241396771884153
+        },
+        "EP_metadata": {
+          "mean_device_union_ms": 2.8225529223680494,
+          "std_ms": 1.3994471579109213
+        },
+        "EP_payload": {
+          "mean_device_union_ms": 44.5677942186594,
+          "std_ms": 4.515207581513031
+        },
+        "attention_region_local": {
+          "mean_device_union_ms": 185.08816738426685,
+          "std_ms": 0.9528813054286117
+        },
+        "expert_FC1": {
+          "mean_device_union_ms": 15.367519161105156,
+          "std_ms": 1.069882348494166
+        },
+        "expert_FC2": {
+          "mean_device_union_ms": 8.180904287099839,
+          "std_ms": 0.6163802390722734
+        },
+        "expert_activation": {
+          "mean_device_union_ms": 5.663775789737701,
+          "std_ms": 0.4700192184473311
+        },
+        "moe_region_other_local": {
+          "mean_device_union_ms": 45.51732797324657,
+          "std_ms": 2.4845749090702696
+        },
+        "phase_boundary_local": {
+          "mean_device_union_ms": 0.017481032013893127,
+          "std_ms": 0.0008643095304157924
+        }
+      },
+      "mean_envelope_ms": 391.39036637842656,
+      "mean_device_union_ms": 386.27871595919135,
+      "mean_uncovered_ms": 5.11165041923523,
+      "mean_class_overlap_ms": 68.19549517929553,
+      "unassociated_devices": 0,
+      "communication_counts": {
+        "CONTEXT_PARALLEL_GROUP": 16,
+        "EXPERT_TENSOR_AND_MODEL_PARALLEL_GROUP": 4,
+        "EXPERT_MODEL_PARALLEL_GROUP": 12
+      }
+    },
+    "B": {
+      "n": 80,
+      "classes": {
+        "CP": {
+          "mean_device_union_ms": 316.72536994814874,
+          "std_ms": 1.9646862349145335
+        },
+        "EP_metadata": {
+          "mean_device_union_ms": 3.2923281133174895,
+          "std_ms": 1.4227826910955466
+        },
+        "EP_payload": {
+          "mean_device_union_ms": 89.86135592162609,
+          "std_ms": 9.750841286830909
+        },
+        "attention_region_local": {
+          "mean_device_union_ms": 216.77292984128,
+          "std_ms": 2.837093072065918
+        },
+        "expert_backward_FC1": {
+          "mean_device_union_ms": 36.685935431718825,
+          "std_ms": 1.8980063669447689
+        },
+        "expert_backward_FC2": {
+          "mean_device_union_ms": 21.187527760863304,
+          "std_ms": 0.9163974659323394
+        },
+        "expert_backward_activation": {
+          "mean_device_union_ms": 8.819206449389458,
+          "std_ms": 0.7292859790512293
+        },
+        "expert_recompute_FC1": {
+          "mean_device_union_ms": 15.376503667235374,
+          "std_ms": 1.0641415186825889
+        },
+        "expert_recompute_FC2": {
+          "mean_device_union_ms": 8.169894006848335,
+          "std_ms": 0.5993960900613899
+        },
+        "expert_recompute_activation": {
+          "mean_device_union_ms": 5.6657292425632475,
+          "std_ms": 0.46734801083085614
+        },
+        "moe_region_other_local": {
+          "mean_device_union_ms": 55.71042751073837,
+          "std_ms": 3.0712204003621557
+        },
+        "other_communication": {
+          "mean_device_union_ms": 0.5204382359981536,
+          "std_ms": 0.22462210795893411
+        },
+        "post_expert_backward_local": {
+          "mean_device_union_ms": 370.7333391845226,
+          "std_ms": 6.767247865742579
+        }
+      },
+      "mean_envelope_ms": 951.5375671029091,
+      "mean_device_union_ms": 936.9871722489595,
+      "mean_uncovered_ms": 14.550394853949546,
+      "mean_class_overlap_ms": 212.53381306529045,
+      "unassociated_devices": 0,
+      "communication_counts": {
+        "CONTEXT_PARALLEL_GROUP": 36,
+        "TENSOR_AND_CONTEXT_PARALLEL_GROUP": 4,
+        "EXPERT_TENSOR_AND_MODEL_PARALLEL_GROUP": 4,
+        "EXPERT_MODEL_PARALLEL_GROUP": 24
+      }
+    }
+  },
+  "limits": [
+    "Class union times overlap; never add them to predict wall time.",
+    "Attention region includes local preparation; post-expert backward includes attention and local gradient handling, not pure attention.",
+    "Envelope uncovered time is not proven synchronization or network service.",
+    "GPU collective residence includes waiting; not network-only FCT.",
+    "No predictive fine DAG generated; new local readiness/cross-rank dependencies still require assembly.",
+    "No target256 data read; no new256 prediction or full migration completion claim."
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "prediction": {
+    "status": "CONDITIONAL_GROUP_ENVELOPE_EXPERIMENT",
+    "time_utc": "2026-10-15T08:20:36.618315+00:00",
+    "predicted_256_ms": 24296.875447333096,
+    "middle_ms": {
+      "F": 391.25870423316957,
+      "B": 972.6276062793722
+    },
+    "baseline_256_ms": 22000.471031903027,
+    "old_span_group_projection_256_ms": 22033.926852474928,
+    "projection_shift_ms": 33.455820571900404,
+    "measured_span_shift_ms": 2262.948594858168,
+    "formula_used": false,
+    "policy": "All exterior costs from hybrid-local-r3 fixed; EP8 earliest-start/latest-end measured span. Common ready/completion contraction, not exact rank-exit preservation."
+  },
+  "checks": {
+    "expanded_nodes": 351885,
+    "instances": 112,
+    "no_expert_double_charge": "PASS",
+    "acyclic": "PASS"
+  },
+  "source32": [
+    {
+      "iteration": 155,
+      "truth_ms": 13154.92962384224,
+      "predicted_ms": 13269.078897959465,
+      "error_percent": 0.867730025026825,
+      "mean_cost_predicted_ms": 13341.529012781852,
+      "baseline_ms": 12148.869083908792,
+      "baseline_error_percent": -7.647783520711848,
+      "mean_cost_error_percent": 1.4184750072810504
+    },
+    {
+      "iteration": 160,
+      "truth_ms": 13198.861085176468,
+      "predicted_ms": 13329.621175057167,
+      "error_percent": 0.9906922198579249,
+      "mean_cost_predicted_ms": 13341.529012781852,
+      "baseline_ms": 12148.869083908792,
+      "baseline_error_percent": -7.9551712416074505,
+      "mean_cost_error_percent": 1.0809108959076275
+    },
+    {
+      "iteration": 165,
+      "truth_ms": 13190.202665805817,
+      "predicted_ms": 13281.676532036538,
+      "error_percent": 0.6934985651726011,
+      "mean_cost_predicted_ms": 13341.529012781852,
+      "baseline_ms": 12148.869083908792,
+      "baseline_error_percent": -7.894750431671305,
+      "mean_cost_error_percent": 1.1472632438645824
+    },
+    {
+      "iteration": 170,
+      "truth_ms": 13211.087819814682,
+      "predicted_ms": 13364.37125349688,
+      "error_percent": 1.1602635284302387,
+      "mean_cost_predicted_ms": 13341.529012781852,
+      "baseline_ms": 12148.869083908792,
+      "baseline_error_percent": -8.04035784481516,
+      "mean_cost_error_percent": 0.9873614856418245
+    },
+    {
+      "iteration": 175,
+      "truth_ms": 13179.763447999954,
+      "predicted_ms": 13268.546162373299,
+      "error_percent": 0.6736290429159242,
+      "mean_cost_predicted_ms": 13341.529012781852,
+      "baseline_ms": 12148.869083908792,
+      "baseline_error_percent": -7.821797167745082,
+      "mean_cost_error_percent": 1.2273783624427992
+    },
+    {
+      "iteration": 180,
+      "truth_ms": 13300.593626976013,
+      "predicted_ms": 13476.53238964724,
+      "error_percent": 1.322788798797614,
+      "mean_cost_predicted_ms": 13341.529012781852,
+      "baseline_ms": 12148.869083908792,
+      "baseline_error_percent": -8.659196539403435,
+      "mean_cost_error_percent": 0.3077711187477794
+    },
+    {
+      "iteration": 185,
+      "truth_ms": 13198.274097919464,
+      "predicted_ms": 13278.362111098046,
+      "error_percent": 0.6068067126383303,
+      "mean_cost_predicted_ms": 13341.529012781852,
+      "baseline_ms": 12148.869083908792,
+      "baseline_error_percent": -7.951077589577393,
+      "mean_cost_error_percent": 1.085406423594204
+    },
+    {
+      "iteration": 190,
+      "truth_ms": 13214.513351917267,
+      "predicted_ms": 13417.889357334847,
+      "error_percent": 1.5390351502279964,
+      "mean_cost_predicted_ms": 13341.529012781852,
+      "baseline_ms": 12148.869083908792,
+      "baseline_error_percent": -8.06419608221034,
+      "mean_cost_error_percent": 0.9611830377859176
+    },
+    {
+      "iteration": 195,
+      "truth_ms": 13143.706052064896,
+      "predicted_ms": 13371.168179280037,
+      "error_percent": 1.730578318733822,
+      "mean_cost_predicted_ms": 13341.529012781852,
+      "baseline_ms": 12148.869083908792,
+      "baseline_error_percent": -7.568922830557467,
+      "mean_cost_error_percent": 1.5050774867707783
+    },
+    {
+      "iteration": 200,
+      "truth_ms": 13257.294355630875,
+      "predicted_ms": 13358.044069535012,
+      "error_percent": 0.7599568298138015,
+      "mean_cost_predicted_ms": 13341.529012781852,
+      "baseline_ms": 12148.869083908792,
+      "baseline_error_percent": -8.360870943861121,
+      "mean_cost_error_percent": 0.6353834718560103
+    }
+  ],
+  "source32_metrics": {
+    "n": 10,
+    "signed_mean_percent": 1.0344979191615078,
+    "signed_std_pp": 0.37047865159867954,
+    "absolute_mean_percent": 1.0344979191615078,
+    "absolute_std_pp": 0.37047865159867954
+  },
+  "source32_baseline_metrics": {
+    "n": 10,
+    "signed_mean_percent": -7.99641241921606,
+    "signed_std_pp": 0.30455045823467475,
+    "absolute_mean_percent": 7.99641241921606,
+    "absolute_std_pp": 0.30455045823467475
+  },
+  "source32_mean_cost_metrics": {
+    "n": 10,
+    "signed_mean_percent": 1.0356210533892574,
+    "signed_std_pp": 0.33444831336404773,
+    "absolute_mean_percent": 1.0356210533892574,
+    "absolute_std_pp": 0.33444831336404773
+  },
+  "target256": [
+    {
+      "iteration": 5,
+      "truth_ms": 21063.711515426636,
+      "error_percent": 15.349450307171919
+    },
+    {
+      "iteration": 10,
+      "truth_ms": 19501.673583984375,
+      "error_percent": 24.588668468365448
+    },
+    {
+      "iteration": 15,
+      "truth_ms": 19559.437602996826,
+      "error_percent": 24.22072628310343
+    },
+    {
+      "iteration": 20,
+      "truth_ms": 19759.333720207214,
+      "error_percent": 22.964042165477917
+    },
+    {
+      "iteration": 25,
+      "truth_ms": 19465.550416469574,
+      "error_percent": 24.819873712771013
+    },
+    {
+      "iteration": 30,
+      "truth_ms": 19272.236402988434,
+      "error_percent": 26.071904366872122
+    },
+    {
+      "iteration": 35,
+      "truth_ms": 19756.322695732117,
+      "error_percent": 22.98278288692792
+    },
+    {
+      "iteration": 40,
+      "truth_ms": 19671.633223056793,
+      "error_percent": 23.512243095581574
+    },
+    {
+      "iteration": 45,
+      "truth_ms": 20080.50852918625,
+      "error_percent": 20.997311457618316
+    },
+    {
+      "iteration": 50,
+      "truth_ms": 19738.58158826828,
+      "error_percent": 23.093320250397632
+    },
+    {
+      "iteration": 55,
+      "truth_ms": 19963.890820503235,
+      "error_percent": 21.704109012556884
+    },
+    {
+      "iteration": 60,
+      "truth_ms": 20396.01318693161,
+      "error_percent": 19.12561158227184
+    },
+    {
+      "iteration": 65,
+      "truth_ms": 20466.54404067993,
+      "error_percent": 18.715086431006036
+    },
+    {
+      "iteration": 70,
+      "truth_ms": 21089.008199214935,
+      "error_percent": 15.211086352736004
+    },
+    {
+      "iteration": 75,
+      "truth_ms": 21165.856451511383,
+      "error_percent": 14.792781964644464
+    },
+    {
+      "iteration": 80,
+      "truth_ms": 21514.19768190384,
+      "error_percent": 12.934146123282297
+    },
+    {
+      "iteration": 85,
+      "truth_ms": 21750.427436351776,
+      "error_percent": 11.707576866859215
+    },
+    {
+      "iteration": 90,
+      "truth_ms": 22183.123421669006,
+      "error_percent": 9.528649259550726
+    },
+    {
+      "iteration": 95,
+      "truth_ms": 22138.423668384552,
+      "error_percent": 9.749798862287506
+    },
+    {
+      "iteration": 100,
+      "truth_ms": 22288.906640052795,
+      "error_percent": 9.008825958613919
+    }
+  ],
+  "all20": {
+    "n": 20,
+    "signed_mean_percent": 18.553899770404808,
+    "signed_std_pp": 5.60774200768882,
+    "absolute_mean_percent": 18.553899770404808,
+    "absolute_std_pp": 5.60774200768882
+  },
+  "last4": {
+    "n": 4,
+    "signed_mean_percent": 9.99871273682784,
+    "signed_std_pp": 1.0226204376745995,
+    "absolute_mean_percent": 9.99871273682784,
+    "absolute_std_pp": 1.0226204376745995
+  },
+  "limits": [
+    "Source32 uses each iter PP1 F0/B0 envelope, reuses for all middle stages/microbatches; other costs remain fixed hybrid means/old residuals; not independent validation.",
+    "Whole EP8 group entry/exit projection can delay rank-local consumers; old-span control quantifies projection change, not proof of exact dependency preservation.",
+    "Inter-layer gradients/residual bridges outside envelope remain old; no claim all effects are pure communication.",
+    "Formula coefficients not applied, no ns3 run; measured replacement only.",
+    "No target fitting; rank0 1F1B only, no startup/optimizer/full-MFU."
+  ]
+}
