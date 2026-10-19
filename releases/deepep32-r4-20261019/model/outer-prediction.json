@@ -1,0 +1,7307 @@
+{
+  "pp": 16,
+  "microbatches": 4,
+  "nodes": {
+    "ENTRY": {
+      "duration_ms": 0,
+      "dependencies": [],
+      "kind": "ENTRY",
+      "stage": null,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s0:F0": {
+      "duration_ms": 165.0183381050825,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "F",
+      "stage": 0,
+      "start_ms": 0,
+      "end_ms": 165.0183381050825
+    },
+    "s0:call1:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s0:F0"
+      ],
+      "kind": "ready",
+      "stage": 0,
+      "start_ms": 165.0183381050825,
+      "end_ms": 165.0183381050825
+    },
+    "s0:call1:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:0:0"
+      ],
+      "kind": "done",
+      "stage": 0,
+      "start_ms": 167.83005358874797,
+      "end_ms": 167.83005358874797
+    },
+    "s0:F1": {
+      "duration_ms": 165.0183381050825,
+      "dependencies": [
+        "s0:call1:done"
+      ],
+      "kind": "F",
+      "stage": 0,
+      "start_ms": 167.83005358874797,
+      "end_ms": 332.8483916938305
+    },
+    "s0:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s0:F1"
+      ],
+      "kind": "ready",
+      "stage": 0,
+      "start_ms": 332.8483916938305,
+      "end_ms": 332.8483916938305
+    },
+    "s0:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:0:1"
+      ],
+      "kind": "done",
+      "stage": 0,
+      "start_ms": 524.3466079920529,
+      "end_ms": 524.3466079920529
+    },
+    "s0:F2": {
+      "duration_ms": 165.0183381050825,
+      "dependencies": [
+        "s0:call3:done"
+      ],
+      "kind": "F",
+      "stage": 0,
+      "start_ms": 524.3466079920529,
+      "end_ms": 689.3649460971354
+    },
+    "s0:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s0:F2"
+      ],
+      "kind": "ready",
+      "stage": 0,
+      "start_ms": 689.3649460971354,
+      "end_ms": 689.3649460971354
+    },
+    "s0:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:0:2"
+      ],
+      "kind": "done",
+      "stage": 0,
+      "start_ms": 880.8631623953579,
+      "end_ms": 880.8631623953579
+    },
+    "s0:F3": {
+      "duration_ms": 165.0183381050825,
+      "dependencies": [
+        "s0:call5:done"
+      ],
+      "kind": "F",
+      "stage": 0,
+      "start_ms": 880.8631623953579,
+      "end_ms": 1045.8815005004403
+    },
+    "s0:call7:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s0:F3"
+      ],
+      "kind": "ready",
+      "stage": 0,
+      "start_ms": 1045.8815005004403,
+      "end_ms": 1045.8815005004403
+    },
+    "s0:call7:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:0:3"
+      ],
+      "kind": "done",
+      "stage": 0,
+      "start_ms": 1237.379716798663,
+      "end_ms": 1237.379716798663
+    },
+    "s0:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s0:call7:done"
+      ],
+      "kind": "ready",
+      "stage": 0,
+      "start_ms": 1237.379716798663,
+      "end_ms": 1237.379716798663
+    },
+    "s0:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:0:0"
+      ],
+      "kind": "done",
+      "stage": 0,
+      "start_ms": 18305.024911585402,
+      "end_ms": 18305.024911585402
+    },
+    "s0:B0": {
+      "duration_ms": 436.6365073174238,
+      "dependencies": [
+        "s0:call8:done",
+        "s0:F0"
+      ],
+      "kind": "B",
+      "stage": 0,
+      "start_ms": 18305.024911585402,
+      "end_ms": 18741.661418902826
+    },
+    "s0:call10:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s0:B0"
+      ],
+      "kind": "ready",
+      "stage": 0,
+      "start_ms": 18741.661418902826,
+      "end_ms": 18741.661418902826
+    },
+    "s0:call10:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:0:1"
+      ],
+      "kind": "done",
+      "stage": 0,
+      "start_ms": 19548.065018793463,
+      "end_ms": 19548.065018793463
+    },
+    "s0:B1": {
+      "duration_ms": 436.6365073174238,
+      "dependencies": [
+        "s0:call10:done",
+        "s0:F1"
+      ],
+      "kind": "B",
+      "stage": 0,
+      "start_ms": 19548.065018793463,
+      "end_ms": 19984.701526110886
+    },
+    "s0:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s0:B1"
+      ],
+      "kind": "ready",
+      "stage": 0,
+      "start_ms": 19984.701526110886,
+      "end_ms": 19984.701526110886
+    },
+    "s0:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:0:2"
+      ],
+      "kind": "done",
+      "stage": 0,
+      "start_ms": 20791.105126001523,
+      "end_ms": 20791.105126001523
+    },
+    "s0:B2": {
+      "duration_ms": 436.6365073174238,
+      "dependencies": [
+        "s0:call12:done",
+        "s0:F2"
+      ],
+      "kind": "B",
+      "stage": 0,
+      "start_ms": 20791.105126001523,
+      "end_ms": 21227.741633318947
+    },
+    "s0:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s0:B2"
+      ],
+      "kind": "ready",
+      "stage": 0,
+      "start_ms": 21227.741633318947,
+      "end_ms": 21227.741633318947
+    },
+    "s0:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:0:3"
+      ],
+      "kind": "done",
+      "stage": 0,
+      "start_ms": 21683.154405959103,
+      "end_ms": 21683.154405959103
+    },
+    "s0:B3": {
+      "duration_ms": 436.6365073174238,
+      "dependencies": [
+        "s0:call14:done",
+        "s0:F3"
+      ],
+      "kind": "B",
+      "stage": 0,
+      "start_ms": 21683.154405959103,
+      "end_ms": 22119.790913276527
+    },
+    "s1:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s1:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:0:0"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 167.83005358874797,
+      "end_ms": 167.83005358874797
+    },
+    "s1:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s1:call0:done"
+      ],
+      "kind": "F",
+      "stage": 1,
+      "start_ms": 167.83005358874797,
+      "end_ms": 518.723177024722
+    },
+    "s1:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:F0"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 518.723177024722,
+      "end_ms": 518.723177024722
+    },
+    "s1:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:1:0"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 521.5348925083874,
+      "end_ms": 521.5348925083874
+    },
+    "s1:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 521.5348925083874,
+      "end_ms": 521.5348925083874
+    },
+    "s1:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:0:1"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 524.3466079920529,
+      "end_ms": 524.3466079920529
+    },
+    "s1:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s1:call3:done"
+      ],
+      "kind": "F",
+      "stage": 1,
+      "start_ms": 524.3466079920529,
+      "end_ms": 875.239731428027
+    },
+    "s1:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:F1"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 875.239731428027,
+      "end_ms": 875.239731428027
+    },
+    "s1:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:1:1"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 878.0514469116924,
+      "end_ms": 878.0514469116924
+    },
+    "s1:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 878.0514469116924,
+      "end_ms": 878.0514469116924
+    },
+    "s1:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:0:2"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 880.8631623953579,
+      "end_ms": 880.8631623953579
+    },
+    "s1:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s1:call6:done"
+      ],
+      "kind": "F",
+      "stage": 1,
+      "start_ms": 880.8631623953579,
+      "end_ms": 1231.756285831332
+    },
+    "s1:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:F2"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 1231.756285831332,
+      "end_ms": 1231.756285831332
+    },
+    "s1:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:1:2"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 1234.5680013149974,
+      "end_ms": 1234.5680013149974
+    },
+    "s1:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 1234.5680013149974,
+      "end_ms": 1234.5680013149974
+    },
+    "s1:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:0:3"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 1237.379716798663,
+      "end_ms": 1237.379716798663
+    },
+    "s1:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s1:call9:done"
+      ],
+      "kind": "F",
+      "stage": 1,
+      "start_ms": 1237.379716798663,
+      "end_ms": 1588.272840234637
+    },
+    "s1:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:F3"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 1588.272840234637,
+      "end_ms": 1588.272840234637
+    },
+    "s1:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:1:3"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 1591.0845557183025,
+      "end_ms": 1591.0845557183025
+    },
+    "s1:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 1591.0845557183025,
+      "end_ms": 1591.0845557183025
+    },
+    "s1:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:1:0"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 17415.68964329698,
+      "end_ms": 17415.68964329698
+    },
+    "s1:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s1:call12:done",
+        "s1:F0"
+      ],
+      "kind": "B",
+      "stage": 1,
+      "start_ms": 17415.68964329698,
+      "end_ms": 18302.310899916243
+    },
+    "s1:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:B0"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 18302.310899916243,
+      "end_ms": 18302.310899916243
+    },
+    "s1:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:0:0"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 18305.024911585402,
+      "end_ms": 18305.024911585402
+    },
+    "s1:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 18305.024911585402,
+      "end_ms": 18305.024911585402
+    },
+    "s1:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:1:1"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 18658.72975050504,
+      "end_ms": 18658.72975050504
+    },
+    "s1:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s1:call15:done",
+        "s1:F1"
+      ],
+      "kind": "B",
+      "stage": 1,
+      "start_ms": 18658.72975050504,
+      "end_ms": 19545.351007124304
+    },
+    "s1:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:B1"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 19545.351007124304,
+      "end_ms": 19545.351007124304
+    },
+    "s1:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:0:1"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 19548.065018793463,
+      "end_ms": 19548.065018793463
+    },
+    "s1:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 19548.065018793463,
+      "end_ms": 19548.065018793463
+    },
+    "s1:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:1:2"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 19901.7698577131,
+      "end_ms": 19901.7698577131
+    },
+    "s1:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s1:call18:done",
+        "s1:F2"
+      ],
+      "kind": "B",
+      "stage": 1,
+      "start_ms": 19901.7698577131,
+      "end_ms": 20788.391114332364
+    },
+    "s1:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:B2"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 20788.391114332364,
+      "end_ms": 20788.391114332364
+    },
+    "s1:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:0:2"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 20791.105126001523,
+      "end_ms": 20791.105126001523
+    },
+    "s1:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 20791.105126001523,
+      "end_ms": 20791.105126001523
+    },
+    "s1:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:1:3"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 20793.81913767068,
+      "end_ms": 20793.81913767068
+    },
+    "s1:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s1:call21:done",
+        "s1:F3"
+      ],
+      "kind": "B",
+      "stage": 1,
+      "start_ms": 20793.81913767068,
+      "end_ms": 21680.440394289944
+    },
+    "s1:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s1:B3"
+      ],
+      "kind": "ready",
+      "stage": 1,
+      "start_ms": 21680.440394289944,
+      "end_ms": 21680.440394289944
+    },
+    "s1:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:0:3"
+      ],
+      "kind": "done",
+      "stage": 1,
+      "start_ms": 21683.154405959103,
+      "end_ms": 21683.154405959103
+    },
+    "s2:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s2:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:1:0"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 521.5348925083874,
+      "end_ms": 521.5348925083874
+    },
+    "s2:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s2:call0:done"
+      ],
+      "kind": "F",
+      "stage": 2,
+      "start_ms": 521.5348925083874,
+      "end_ms": 872.4280159443615
+    },
+    "s2:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:F0"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 872.4280159443615,
+      "end_ms": 872.4280159443615
+    },
+    "s2:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:2:0"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 875.239731428027,
+      "end_ms": 875.239731428027
+    },
+    "s2:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 875.239731428027,
+      "end_ms": 875.239731428027
+    },
+    "s2:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:1:1"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 878.0514469116924,
+      "end_ms": 878.0514469116924
+    },
+    "s2:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s2:call3:done"
+      ],
+      "kind": "F",
+      "stage": 2,
+      "start_ms": 878.0514469116924,
+      "end_ms": 1228.9445703476665
+    },
+    "s2:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:F1"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 1228.9445703476665,
+      "end_ms": 1228.9445703476665
+    },
+    "s2:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:2:1"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 1231.756285831332,
+      "end_ms": 1231.756285831332
+    },
+    "s2:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 1231.756285831332,
+      "end_ms": 1231.756285831332
+    },
+    "s2:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:1:2"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 1234.5680013149974,
+      "end_ms": 1234.5680013149974
+    },
+    "s2:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s2:call6:done"
+      ],
+      "kind": "F",
+      "stage": 2,
+      "start_ms": 1234.5680013149974,
+      "end_ms": 1585.4611247509715
+    },
+    "s2:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:F2"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 1585.4611247509715,
+      "end_ms": 1585.4611247509715
+    },
+    "s2:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:2:2"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 1588.272840234637,
+      "end_ms": 1588.272840234637
+    },
+    "s2:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 1588.272840234637,
+      "end_ms": 1588.272840234637
+    },
+    "s2:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:1:3"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 1591.0845557183025,
+      "end_ms": 1591.0845557183025
+    },
+    "s2:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s2:call9:done"
+      ],
+      "kind": "F",
+      "stage": 2,
+      "start_ms": 1591.0845557183025,
+      "end_ms": 1941.9776791542765
+    },
+    "s2:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:F3"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 1941.9776791542765,
+      "end_ms": 1941.9776791542765
+    },
+    "s2:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:2:3"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 1944.789394637942,
+      "end_ms": 1944.789394637942
+    },
+    "s2:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 1944.789394637942,
+      "end_ms": 1944.789394637942
+    },
+    "s2:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:2:0"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 16526.35437500856,
+      "end_ms": 16526.35437500856
+    },
+    "s2:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s2:call12:done",
+        "s2:F0"
+      ],
+      "kind": "B",
+      "stage": 2,
+      "start_ms": 16526.35437500856,
+      "end_ms": 17412.97563162782
+    },
+    "s2:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:B0"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 17412.97563162782,
+      "end_ms": 17412.97563162782
+    },
+    "s2:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:1:0"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 17415.68964329698,
+      "end_ms": 17415.68964329698
+    },
+    "s2:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 17415.68964329698,
+      "end_ms": 17415.68964329698
+    },
+    "s2:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:2:1"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 17769.39448221662,
+      "end_ms": 17769.39448221662
+    },
+    "s2:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s2:call15:done",
+        "s2:F1"
+      ],
+      "kind": "B",
+      "stage": 2,
+      "start_ms": 17769.39448221662,
+      "end_ms": 18656.015738835882
+    },
+    "s2:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:B1"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 18656.015738835882,
+      "end_ms": 18656.015738835882
+    },
+    "s2:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:1:1"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 18658.72975050504,
+      "end_ms": 18658.72975050504
+    },
+    "s2:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 18658.72975050504,
+      "end_ms": 18658.72975050504
+    },
+    "s2:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:2:2"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 19012.43458942468,
+      "end_ms": 19012.43458942468
+    },
+    "s2:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s2:call18:done",
+        "s2:F2"
+      ],
+      "kind": "B",
+      "stage": 2,
+      "start_ms": 19012.43458942468,
+      "end_ms": 19899.055846043942
+    },
+    "s2:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:B2"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 19899.055846043942,
+      "end_ms": 19899.055846043942
+    },
+    "s2:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:1:2"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 19901.7698577131,
+      "end_ms": 19901.7698577131
+    },
+    "s2:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 19901.7698577131,
+      "end_ms": 19901.7698577131
+    },
+    "s2:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:2:3"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 19904.48386938226,
+      "end_ms": 19904.48386938226
+    },
+    "s2:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s2:call21:done",
+        "s2:F3"
+      ],
+      "kind": "B",
+      "stage": 2,
+      "start_ms": 19904.48386938226,
+      "end_ms": 20791.105126001523
+    },
+    "s2:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s2:B3"
+      ],
+      "kind": "ready",
+      "stage": 2,
+      "start_ms": 20791.105126001523,
+      "end_ms": 20791.105126001523
+    },
+    "s2:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:1:3"
+      ],
+      "kind": "done",
+      "stage": 2,
+      "start_ms": 20793.81913767068,
+      "end_ms": 20793.81913767068
+    },
+    "s3:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s3:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:2:0"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 875.239731428027,
+      "end_ms": 875.239731428027
+    },
+    "s3:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s3:call0:done"
+      ],
+      "kind": "F",
+      "stage": 3,
+      "start_ms": 875.239731428027,
+      "end_ms": 1226.132854864001
+    },
+    "s3:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:F0"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 1226.132854864001,
+      "end_ms": 1226.132854864001
+    },
+    "s3:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:3:0"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 1228.9445703476665,
+      "end_ms": 1228.9445703476665
+    },
+    "s3:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 1228.9445703476665,
+      "end_ms": 1228.9445703476665
+    },
+    "s3:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:2:1"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 1231.756285831332,
+      "end_ms": 1231.756285831332
+    },
+    "s3:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s3:call3:done"
+      ],
+      "kind": "F",
+      "stage": 3,
+      "start_ms": 1231.756285831332,
+      "end_ms": 1582.649409267306
+    },
+    "s3:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:F1"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 1582.649409267306,
+      "end_ms": 1582.649409267306
+    },
+    "s3:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:3:1"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 1585.4611247509715,
+      "end_ms": 1585.4611247509715
+    },
+    "s3:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 1585.4611247509715,
+      "end_ms": 1585.4611247509715
+    },
+    "s3:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:2:2"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 1588.272840234637,
+      "end_ms": 1588.272840234637
+    },
+    "s3:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s3:call6:done"
+      ],
+      "kind": "F",
+      "stage": 3,
+      "start_ms": 1588.272840234637,
+      "end_ms": 1939.165963670611
+    },
+    "s3:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:F2"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 1939.165963670611,
+      "end_ms": 1939.165963670611
+    },
+    "s3:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:3:2"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 1941.9776791542765,
+      "end_ms": 1941.9776791542765
+    },
+    "s3:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 1941.9776791542765,
+      "end_ms": 1941.9776791542765
+    },
+    "s3:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:2:3"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 1944.789394637942,
+      "end_ms": 1944.789394637942
+    },
+    "s3:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s3:call9:done"
+      ],
+      "kind": "F",
+      "stage": 3,
+      "start_ms": 1944.789394637942,
+      "end_ms": 2295.682518073916
+    },
+    "s3:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:F3"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 2295.682518073916,
+      "end_ms": 2295.682518073916
+    },
+    "s3:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:3:3"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 2298.4942335575815,
+      "end_ms": 2298.4942335575815
+    },
+    "s3:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 2298.4942335575815,
+      "end_ms": 2298.4942335575815
+    },
+    "s3:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:3:0"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 15637.019106720136,
+      "end_ms": 15637.019106720136
+    },
+    "s3:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s3:call12:done",
+        "s3:F0"
+      ],
+      "kind": "B",
+      "stage": 3,
+      "start_ms": 15637.019106720136,
+      "end_ms": 16523.6403633394
+    },
+    "s3:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:B0"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 16523.6403633394,
+      "end_ms": 16523.6403633394
+    },
+    "s3:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:2:0"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 16526.35437500856,
+      "end_ms": 16526.35437500856
+    },
+    "s3:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 16526.35437500856,
+      "end_ms": 16526.35437500856
+    },
+    "s3:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:3:1"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 16880.059213928198,
+      "end_ms": 16880.059213928198
+    },
+    "s3:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s3:call15:done",
+        "s3:F1"
+      ],
+      "kind": "B",
+      "stage": 3,
+      "start_ms": 16880.059213928198,
+      "end_ms": 17766.68047054746
+    },
+    "s3:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:B1"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 17766.68047054746,
+      "end_ms": 17766.68047054746
+    },
+    "s3:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:2:1"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 17769.39448221662,
+      "end_ms": 17769.39448221662
+    },
+    "s3:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 17769.39448221662,
+      "end_ms": 17769.39448221662
+    },
+    "s3:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:3:2"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 18123.09932113626,
+      "end_ms": 18123.09932113626
+    },
+    "s3:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s3:call18:done",
+        "s3:F2"
+      ],
+      "kind": "B",
+      "stage": 3,
+      "start_ms": 18123.09932113626,
+      "end_ms": 19009.72057775552
+    },
+    "s3:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:B2"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 19009.72057775552,
+      "end_ms": 19009.72057775552
+    },
+    "s3:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:2:2"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 19012.43458942468,
+      "end_ms": 19012.43458942468
+    },
+    "s3:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 19012.43458942468,
+      "end_ms": 19012.43458942468
+    },
+    "s3:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:3:3"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 19015.14860109384,
+      "end_ms": 19015.14860109384
+    },
+    "s3:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s3:call21:done",
+        "s3:F3"
+      ],
+      "kind": "B",
+      "stage": 3,
+      "start_ms": 19015.14860109384,
+      "end_ms": 19901.7698577131
+    },
+    "s3:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s3:B3"
+      ],
+      "kind": "ready",
+      "stage": 3,
+      "start_ms": 19901.7698577131,
+      "end_ms": 19901.7698577131
+    },
+    "s3:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:2:3"
+      ],
+      "kind": "done",
+      "stage": 3,
+      "start_ms": 19904.48386938226,
+      "end_ms": 19904.48386938226
+    },
+    "s4:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s4:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:3:0"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 1228.9445703476665,
+      "end_ms": 1228.9445703476665
+    },
+    "s4:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s4:call0:done"
+      ],
+      "kind": "F",
+      "stage": 4,
+      "start_ms": 1228.9445703476665,
+      "end_ms": 1579.8376937836406
+    },
+    "s4:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:F0"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 1579.8376937836406,
+      "end_ms": 1579.8376937836406
+    },
+    "s4:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:4:0"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 1582.649409267306,
+      "end_ms": 1582.649409267306
+    },
+    "s4:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 1582.649409267306,
+      "end_ms": 1582.649409267306
+    },
+    "s4:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:3:1"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 1585.4611247509715,
+      "end_ms": 1585.4611247509715
+    },
+    "s4:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s4:call3:done"
+      ],
+      "kind": "F",
+      "stage": 4,
+      "start_ms": 1585.4611247509715,
+      "end_ms": 1936.3542481869456
+    },
+    "s4:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:F1"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 1936.3542481869456,
+      "end_ms": 1936.3542481869456
+    },
+    "s4:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:4:1"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 1939.165963670611,
+      "end_ms": 1939.165963670611
+    },
+    "s4:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 1939.165963670611,
+      "end_ms": 1939.165963670611
+    },
+    "s4:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:3:2"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 1941.9776791542765,
+      "end_ms": 1941.9776791542765
+    },
+    "s4:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s4:call6:done"
+      ],
+      "kind": "F",
+      "stage": 4,
+      "start_ms": 1941.9776791542765,
+      "end_ms": 2292.8708025902506
+    },
+    "s4:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:F2"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 2292.8708025902506,
+      "end_ms": 2292.8708025902506
+    },
+    "s4:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:4:2"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 2295.682518073916,
+      "end_ms": 2295.682518073916
+    },
+    "s4:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 2295.682518073916,
+      "end_ms": 2295.682518073916
+    },
+    "s4:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:3:3"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 2298.4942335575815,
+      "end_ms": 2298.4942335575815
+    },
+    "s4:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s4:call9:done"
+      ],
+      "kind": "F",
+      "stage": 4,
+      "start_ms": 2298.4942335575815,
+      "end_ms": 2649.3873569935554
+    },
+    "s4:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:F3"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 2649.3873569935554,
+      "end_ms": 2649.3873569935554
+    },
+    "s4:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:4:3"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 2652.199072477221,
+      "end_ms": 2652.199072477221
+    },
+    "s4:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 2652.199072477221,
+      "end_ms": 2652.199072477221
+    },
+    "s4:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:4:0"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 14747.683838431714,
+      "end_ms": 14747.683838431714
+    },
+    "s4:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s4:call12:done",
+        "s4:F0"
+      ],
+      "kind": "B",
+      "stage": 4,
+      "start_ms": 14747.683838431714,
+      "end_ms": 15634.305095050977
+    },
+    "s4:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:B0"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 15634.305095050977,
+      "end_ms": 15634.305095050977
+    },
+    "s4:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:3:0"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 15637.019106720136,
+      "end_ms": 15637.019106720136
+    },
+    "s4:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 15637.019106720136,
+      "end_ms": 15637.019106720136
+    },
+    "s4:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:4:1"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 15990.723945639777,
+      "end_ms": 15990.723945639777
+    },
+    "s4:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s4:call15:done",
+        "s4:F1"
+      ],
+      "kind": "B",
+      "stage": 4,
+      "start_ms": 15990.723945639777,
+      "end_ms": 16877.34520225904
+    },
+    "s4:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:B1"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 16877.34520225904,
+      "end_ms": 16877.34520225904
+    },
+    "s4:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:3:1"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 16880.059213928198,
+      "end_ms": 16880.059213928198
+    },
+    "s4:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 16880.059213928198,
+      "end_ms": 16880.059213928198
+    },
+    "s4:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:4:2"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 17233.764052847837,
+      "end_ms": 17233.764052847837
+    },
+    "s4:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s4:call18:done",
+        "s4:F2"
+      ],
+      "kind": "B",
+      "stage": 4,
+      "start_ms": 17233.764052847837,
+      "end_ms": 18120.3853094671
+    },
+    "s4:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:B2"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 18120.3853094671,
+      "end_ms": 18120.3853094671
+    },
+    "s4:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:3:2"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 18123.09932113626,
+      "end_ms": 18123.09932113626
+    },
+    "s4:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 18123.09932113626,
+      "end_ms": 18123.09932113626
+    },
+    "s4:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:4:3"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 18125.813332805417,
+      "end_ms": 18125.813332805417
+    },
+    "s4:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s4:call21:done",
+        "s4:F3"
+      ],
+      "kind": "B",
+      "stage": 4,
+      "start_ms": 18125.813332805417,
+      "end_ms": 19012.43458942468
+    },
+    "s4:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s4:B3"
+      ],
+      "kind": "ready",
+      "stage": 4,
+      "start_ms": 19012.43458942468,
+      "end_ms": 19012.43458942468
+    },
+    "s4:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:3:3"
+      ],
+      "kind": "done",
+      "stage": 4,
+      "start_ms": 19015.14860109384,
+      "end_ms": 19015.14860109384
+    },
+    "s5:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s5:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:4:0"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 1582.649409267306,
+      "end_ms": 1582.649409267306
+    },
+    "s5:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s5:call0:done"
+      ],
+      "kind": "F",
+      "stage": 5,
+      "start_ms": 1582.649409267306,
+      "end_ms": 1933.5425327032801
+    },
+    "s5:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:F0"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 1933.5425327032801,
+      "end_ms": 1933.5425327032801
+    },
+    "s5:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:5:0"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 1936.3542481869456,
+      "end_ms": 1936.3542481869456
+    },
+    "s5:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 1936.3542481869456,
+      "end_ms": 1936.3542481869456
+    },
+    "s5:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:4:1"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 1939.165963670611,
+      "end_ms": 1939.165963670611
+    },
+    "s5:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s5:call3:done"
+      ],
+      "kind": "F",
+      "stage": 5,
+      "start_ms": 1939.165963670611,
+      "end_ms": 2290.059087106585
+    },
+    "s5:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:F1"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 2290.059087106585,
+      "end_ms": 2290.059087106585
+    },
+    "s5:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:5:1"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 2292.8708025902506,
+      "end_ms": 2292.8708025902506
+    },
+    "s5:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 2292.8708025902506,
+      "end_ms": 2292.8708025902506
+    },
+    "s5:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:4:2"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 2295.682518073916,
+      "end_ms": 2295.682518073916
+    },
+    "s5:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s5:call6:done"
+      ],
+      "kind": "F",
+      "stage": 5,
+      "start_ms": 2295.682518073916,
+      "end_ms": 2646.57564150989
+    },
+    "s5:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:F2"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 2646.57564150989,
+      "end_ms": 2646.57564150989
+    },
+    "s5:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:5:2"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 2649.3873569935554,
+      "end_ms": 2649.3873569935554
+    },
+    "s5:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 2649.3873569935554,
+      "end_ms": 2649.3873569935554
+    },
+    "s5:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:4:3"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 2652.199072477221,
+      "end_ms": 2652.199072477221
+    },
+    "s5:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s5:call9:done"
+      ],
+      "kind": "F",
+      "stage": 5,
+      "start_ms": 2652.199072477221,
+      "end_ms": 3003.0921959131947
+    },
+    "s5:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:F3"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 3003.0921959131947,
+      "end_ms": 3003.0921959131947
+    },
+    "s5:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:5:3"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 3005.90391139686,
+      "end_ms": 3005.90391139686
+    },
+    "s5:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 3005.90391139686,
+      "end_ms": 3005.90391139686
+    },
+    "s5:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:5:0"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 13858.348570143293,
+      "end_ms": 13858.348570143293
+    },
+    "s5:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s5:call12:done",
+        "s5:F0"
+      ],
+      "kind": "B",
+      "stage": 5,
+      "start_ms": 13858.348570143293,
+      "end_ms": 14744.969826762555
+    },
+    "s5:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:B0"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 14744.969826762555,
+      "end_ms": 14744.969826762555
+    },
+    "s5:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:4:0"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 14747.683838431714,
+      "end_ms": 14747.683838431714
+    },
+    "s5:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 14747.683838431714,
+      "end_ms": 14747.683838431714
+    },
+    "s5:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:5:1"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 15101.388677351355,
+      "end_ms": 15101.388677351355
+    },
+    "s5:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s5:call15:done",
+        "s5:F1"
+      ],
+      "kind": "B",
+      "stage": 5,
+      "start_ms": 15101.388677351355,
+      "end_ms": 15988.009933970618
+    },
+    "s5:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:B1"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 15988.009933970618,
+      "end_ms": 15988.009933970618
+    },
+    "s5:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:4:1"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 15990.723945639777,
+      "end_ms": 15990.723945639777
+    },
+    "s5:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 15990.723945639777,
+      "end_ms": 15990.723945639777
+    },
+    "s5:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:5:2"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 16344.428784559415,
+      "end_ms": 16344.428784559415
+    },
+    "s5:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s5:call18:done",
+        "s5:F2"
+      ],
+      "kind": "B",
+      "stage": 5,
+      "start_ms": 16344.428784559415,
+      "end_ms": 17231.050041178678
+    },
+    "s5:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:B2"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 17231.050041178678,
+      "end_ms": 17231.050041178678
+    },
+    "s5:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:4:2"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 17233.764052847837,
+      "end_ms": 17233.764052847837
+    },
+    "s5:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 17233.764052847837,
+      "end_ms": 17233.764052847837
+    },
+    "s5:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:5:3"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 17236.478064516996,
+      "end_ms": 17236.478064516996
+    },
+    "s5:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s5:call21:done",
+        "s5:F3"
+      ],
+      "kind": "B",
+      "stage": 5,
+      "start_ms": 17236.478064516996,
+      "end_ms": 18123.09932113626
+    },
+    "s5:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s5:B3"
+      ],
+      "kind": "ready",
+      "stage": 5,
+      "start_ms": 18123.09932113626,
+      "end_ms": 18123.09932113626
+    },
+    "s5:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:4:3"
+      ],
+      "kind": "done",
+      "stage": 5,
+      "start_ms": 18125.813332805417,
+      "end_ms": 18125.813332805417
+    },
+    "s6:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s6:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:5:0"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 1936.3542481869456,
+      "end_ms": 1936.3542481869456
+    },
+    "s6:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s6:call0:done"
+      ],
+      "kind": "F",
+      "stage": 6,
+      "start_ms": 1936.3542481869456,
+      "end_ms": 2287.2473716229197
+    },
+    "s6:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:F0"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 2287.2473716229197,
+      "end_ms": 2287.2473716229197
+    },
+    "s6:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:6:0"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 2290.059087106585,
+      "end_ms": 2290.059087106585
+    },
+    "s6:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 2290.059087106585,
+      "end_ms": 2290.059087106585
+    },
+    "s6:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:5:1"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 2292.8708025902506,
+      "end_ms": 2292.8708025902506
+    },
+    "s6:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s6:call3:done"
+      ],
+      "kind": "F",
+      "stage": 6,
+      "start_ms": 2292.8708025902506,
+      "end_ms": 2643.7639260262245
+    },
+    "s6:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:F1"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 2643.7639260262245,
+      "end_ms": 2643.7639260262245
+    },
+    "s6:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:6:1"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 2646.57564150989,
+      "end_ms": 2646.57564150989
+    },
+    "s6:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 2646.57564150989,
+      "end_ms": 2646.57564150989
+    },
+    "s6:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:5:2"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 2649.3873569935554,
+      "end_ms": 2649.3873569935554
+    },
+    "s6:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s6:call6:done"
+      ],
+      "kind": "F",
+      "stage": 6,
+      "start_ms": 2649.3873569935554,
+      "end_ms": 3000.2804804295292
+    },
+    "s6:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:F2"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 3000.2804804295292,
+      "end_ms": 3000.2804804295292
+    },
+    "s6:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:6:2"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 3003.0921959131947,
+      "end_ms": 3003.0921959131947
+    },
+    "s6:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 3003.0921959131947,
+      "end_ms": 3003.0921959131947
+    },
+    "s6:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:5:3"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 3005.90391139686,
+      "end_ms": 3005.90391139686
+    },
+    "s6:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s6:call9:done"
+      ],
+      "kind": "F",
+      "stage": 6,
+      "start_ms": 3005.90391139686,
+      "end_ms": 3356.797034832834
+    },
+    "s6:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:F3"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 3356.797034832834,
+      "end_ms": 3356.797034832834
+    },
+    "s6:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:6:3"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 3359.6087503164995,
+      "end_ms": 3359.6087503164995
+    },
+    "s6:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 3359.6087503164995,
+      "end_ms": 3359.6087503164995
+    },
+    "s6:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:6:0"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 12969.013301854871,
+      "end_ms": 12969.013301854871
+    },
+    "s6:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s6:call12:done",
+        "s6:F0"
+      ],
+      "kind": "B",
+      "stage": 6,
+      "start_ms": 12969.013301854871,
+      "end_ms": 13855.634558474134
+    },
+    "s6:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:B0"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 13855.634558474134,
+      "end_ms": 13855.634558474134
+    },
+    "s6:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:5:0"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 13858.348570143293,
+      "end_ms": 13858.348570143293
+    },
+    "s6:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 13858.348570143293,
+      "end_ms": 13858.348570143293
+    },
+    "s6:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:6:1"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 14212.053409062933,
+      "end_ms": 14212.053409062933
+    },
+    "s6:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s6:call15:done",
+        "s6:F1"
+      ],
+      "kind": "B",
+      "stage": 6,
+      "start_ms": 14212.053409062933,
+      "end_ms": 15098.674665682196
+    },
+    "s6:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:B1"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 15098.674665682196,
+      "end_ms": 15098.674665682196
+    },
+    "s6:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:5:1"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 15101.388677351355,
+      "end_ms": 15101.388677351355
+    },
+    "s6:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 15101.388677351355,
+      "end_ms": 15101.388677351355
+    },
+    "s6:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:6:2"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 15455.093516270994,
+      "end_ms": 15455.093516270994
+    },
+    "s6:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s6:call18:done",
+        "s6:F2"
+      ],
+      "kind": "B",
+      "stage": 6,
+      "start_ms": 15455.093516270994,
+      "end_ms": 16341.714772890256
+    },
+    "s6:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:B2"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 16341.714772890256,
+      "end_ms": 16341.714772890256
+    },
+    "s6:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:5:2"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 16344.428784559415,
+      "end_ms": 16344.428784559415
+    },
+    "s6:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 16344.428784559415,
+      "end_ms": 16344.428784559415
+    },
+    "s6:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:6:3"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 16347.142796228574,
+      "end_ms": 16347.142796228574
+    },
+    "s6:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s6:call21:done",
+        "s6:F3"
+      ],
+      "kind": "B",
+      "stage": 6,
+      "start_ms": 16347.142796228574,
+      "end_ms": 17233.764052847837
+    },
+    "s6:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s6:B3"
+      ],
+      "kind": "ready",
+      "stage": 6,
+      "start_ms": 17233.764052847837,
+      "end_ms": 17233.764052847837
+    },
+    "s6:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:5:3"
+      ],
+      "kind": "done",
+      "stage": 6,
+      "start_ms": 17236.478064516996,
+      "end_ms": 17236.478064516996
+    },
+    "s7:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s7:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:6:0"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 2290.059087106585,
+      "end_ms": 2290.059087106585
+    },
+    "s7:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s7:call0:done"
+      ],
+      "kind": "F",
+      "stage": 7,
+      "start_ms": 2290.059087106585,
+      "end_ms": 2640.952210542559
+    },
+    "s7:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:F0"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 2640.952210542559,
+      "end_ms": 2640.952210542559
+    },
+    "s7:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:7:0"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 2643.7639260262245,
+      "end_ms": 2643.7639260262245
+    },
+    "s7:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 2643.7639260262245,
+      "end_ms": 2643.7639260262245
+    },
+    "s7:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:6:1"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 2646.57564150989,
+      "end_ms": 2646.57564150989
+    },
+    "s7:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s7:call3:done"
+      ],
+      "kind": "F",
+      "stage": 7,
+      "start_ms": 2646.57564150989,
+      "end_ms": 2997.4687649458638
+    },
+    "s7:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:F1"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 2997.4687649458638,
+      "end_ms": 2997.4687649458638
+    },
+    "s7:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:7:1"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 3000.2804804295292,
+      "end_ms": 3000.2804804295292
+    },
+    "s7:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 3000.2804804295292,
+      "end_ms": 3000.2804804295292
+    },
+    "s7:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:6:2"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 3003.0921959131947,
+      "end_ms": 3003.0921959131947
+    },
+    "s7:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s7:call6:done"
+      ],
+      "kind": "F",
+      "stage": 7,
+      "start_ms": 3003.0921959131947,
+      "end_ms": 3353.9853193491685
+    },
+    "s7:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:F2"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 3353.9853193491685,
+      "end_ms": 3353.9853193491685
+    },
+    "s7:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:7:2"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 3356.797034832834,
+      "end_ms": 3356.797034832834
+    },
+    "s7:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 3356.797034832834,
+      "end_ms": 3356.797034832834
+    },
+    "s7:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:6:3"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 3359.6087503164995,
+      "end_ms": 3359.6087503164995
+    },
+    "s7:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s7:call9:done"
+      ],
+      "kind": "F",
+      "stage": 7,
+      "start_ms": 3359.6087503164995,
+      "end_ms": 3710.5018737524733
+    },
+    "s7:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:F3"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 3710.5018737524733,
+      "end_ms": 3710.5018737524733
+    },
+    "s7:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:7:3"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 3713.313589236139,
+      "end_ms": 3713.313589236139
+    },
+    "s7:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 3713.313589236139,
+      "end_ms": 3713.313589236139
+    },
+    "s7:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:7:0"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 12079.67803356645,
+      "end_ms": 12079.67803356645
+    },
+    "s7:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s7:call12:done",
+        "s7:F0"
+      ],
+      "kind": "B",
+      "stage": 7,
+      "start_ms": 12079.67803356645,
+      "end_ms": 12966.299290185712
+    },
+    "s7:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:B0"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 12966.299290185712,
+      "end_ms": 12966.299290185712
+    },
+    "s7:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:6:0"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 12969.013301854871,
+      "end_ms": 12969.013301854871
+    },
+    "s7:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 12969.013301854871,
+      "end_ms": 12969.013301854871
+    },
+    "s7:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:7:1"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 13322.718140774512,
+      "end_ms": 13322.718140774512
+    },
+    "s7:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s7:call15:done",
+        "s7:F1"
+      ],
+      "kind": "B",
+      "stage": 7,
+      "start_ms": 13322.718140774512,
+      "end_ms": 14209.339397393775
+    },
+    "s7:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:B1"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 14209.339397393775,
+      "end_ms": 14209.339397393775
+    },
+    "s7:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:6:1"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 14212.053409062933,
+      "end_ms": 14212.053409062933
+    },
+    "s7:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 14212.053409062933,
+      "end_ms": 14212.053409062933
+    },
+    "s7:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:7:2"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 14565.758247982572,
+      "end_ms": 14565.758247982572
+    },
+    "s7:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s7:call18:done",
+        "s7:F2"
+      ],
+      "kind": "B",
+      "stage": 7,
+      "start_ms": 14565.758247982572,
+      "end_ms": 15452.379504601835
+    },
+    "s7:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:B2"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 15452.379504601835,
+      "end_ms": 15452.379504601835
+    },
+    "s7:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:6:2"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 15455.093516270994,
+      "end_ms": 15455.093516270994
+    },
+    "s7:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 15455.093516270994,
+      "end_ms": 15455.093516270994
+    },
+    "s7:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:7:3"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 15457.807527940153,
+      "end_ms": 15457.807527940153
+    },
+    "s7:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s7:call21:done",
+        "s7:F3"
+      ],
+      "kind": "B",
+      "stage": 7,
+      "start_ms": 15457.807527940153,
+      "end_ms": 16344.428784559415
+    },
+    "s7:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s7:B3"
+      ],
+      "kind": "ready",
+      "stage": 7,
+      "start_ms": 16344.428784559415,
+      "end_ms": 16344.428784559415
+    },
+    "s7:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:6:3"
+      ],
+      "kind": "done",
+      "stage": 7,
+      "start_ms": 16347.142796228574,
+      "end_ms": 16347.142796228574
+    },
+    "s8:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s8:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:7:0"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 2643.7639260262245,
+      "end_ms": 2643.7639260262245
+    },
+    "s8:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s8:call0:done"
+      ],
+      "kind": "F",
+      "stage": 8,
+      "start_ms": 2643.7639260262245,
+      "end_ms": 2994.6570494621983
+    },
+    "s8:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:F0"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 2994.6570494621983,
+      "end_ms": 2994.6570494621983
+    },
+    "s8:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:8:0"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 2997.4687649458638,
+      "end_ms": 2997.4687649458638
+    },
+    "s8:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 2997.4687649458638,
+      "end_ms": 2997.4687649458638
+    },
+    "s8:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:7:1"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 3000.2804804295292,
+      "end_ms": 3000.2804804295292
+    },
+    "s8:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s8:call3:done"
+      ],
+      "kind": "F",
+      "stage": 8,
+      "start_ms": 3000.2804804295292,
+      "end_ms": 3351.173603865503
+    },
+    "s8:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:F1"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 3351.173603865503,
+      "end_ms": 3351.173603865503
+    },
+    "s8:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:8:1"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 3353.9853193491685,
+      "end_ms": 3353.9853193491685
+    },
+    "s8:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 3353.9853193491685,
+      "end_ms": 3353.9853193491685
+    },
+    "s8:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:7:2"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 3356.797034832834,
+      "end_ms": 3356.797034832834
+    },
+    "s8:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s8:call6:done"
+      ],
+      "kind": "F",
+      "stage": 8,
+      "start_ms": 3356.797034832834,
+      "end_ms": 3707.690158268808
+    },
+    "s8:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:F2"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 3707.690158268808,
+      "end_ms": 3707.690158268808
+    },
+    "s8:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:8:2"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 3710.5018737524733,
+      "end_ms": 3710.5018737524733
+    },
+    "s8:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 3710.5018737524733,
+      "end_ms": 3710.5018737524733
+    },
+    "s8:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:7:3"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 3713.313589236139,
+      "end_ms": 3713.313589236139
+    },
+    "s8:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s8:call9:done"
+      ],
+      "kind": "F",
+      "stage": 8,
+      "start_ms": 3713.313589236139,
+      "end_ms": 4064.2067126721126
+    },
+    "s8:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:F3"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 4064.2067126721126,
+      "end_ms": 4064.2067126721126
+    },
+    "s8:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:8:3"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 4067.018428155778,
+      "end_ms": 4067.018428155778
+    },
+    "s8:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 4067.018428155778,
+      "end_ms": 4067.018428155778
+    },
+    "s8:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:8:0"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 11190.342765278028,
+      "end_ms": 11190.342765278028
+    },
+    "s8:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s8:call12:done",
+        "s8:F0"
+      ],
+      "kind": "B",
+      "stage": 8,
+      "start_ms": 11190.342765278028,
+      "end_ms": 12076.96402189729
+    },
+    "s8:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:B0"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 12076.96402189729,
+      "end_ms": 12076.96402189729
+    },
+    "s8:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:7:0"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 12079.67803356645,
+      "end_ms": 12079.67803356645
+    },
+    "s8:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 12079.67803356645,
+      "end_ms": 12079.67803356645
+    },
+    "s8:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:8:1"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 12433.38287248609,
+      "end_ms": 12433.38287248609
+    },
+    "s8:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s8:call15:done",
+        "s8:F1"
+      ],
+      "kind": "B",
+      "stage": 8,
+      "start_ms": 12433.38287248609,
+      "end_ms": 13320.004129105353
+    },
+    "s8:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:B1"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 13320.004129105353,
+      "end_ms": 13320.004129105353
+    },
+    "s8:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:7:1"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 13322.718140774512,
+      "end_ms": 13322.718140774512
+    },
+    "s8:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 13322.718140774512,
+      "end_ms": 13322.718140774512
+    },
+    "s8:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:8:2"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 13676.42297969415,
+      "end_ms": 13676.42297969415
+    },
+    "s8:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s8:call18:done",
+        "s8:F2"
+      ],
+      "kind": "B",
+      "stage": 8,
+      "start_ms": 13676.42297969415,
+      "end_ms": 14563.044236313413
+    },
+    "s8:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:B2"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 14563.044236313413,
+      "end_ms": 14563.044236313413
+    },
+    "s8:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:7:2"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 14565.758247982572,
+      "end_ms": 14565.758247982572
+    },
+    "s8:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 14565.758247982572,
+      "end_ms": 14565.758247982572
+    },
+    "s8:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:8:3"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 14568.472259651731,
+      "end_ms": 14568.472259651731
+    },
+    "s8:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s8:call21:done",
+        "s8:F3"
+      ],
+      "kind": "B",
+      "stage": 8,
+      "start_ms": 14568.472259651731,
+      "end_ms": 15455.093516270994
+    },
+    "s8:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s8:B3"
+      ],
+      "kind": "ready",
+      "stage": 8,
+      "start_ms": 15455.093516270994,
+      "end_ms": 15455.093516270994
+    },
+    "s8:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:7:3"
+      ],
+      "kind": "done",
+      "stage": 8,
+      "start_ms": 15457.807527940153,
+      "end_ms": 15457.807527940153
+    },
+    "s9:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s9:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:8:0"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 2997.4687649458638,
+      "end_ms": 2997.4687649458638
+    },
+    "s9:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s9:call0:done"
+      ],
+      "kind": "F",
+      "stage": 9,
+      "start_ms": 2997.4687649458638,
+      "end_ms": 3348.3618883818376
+    },
+    "s9:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:F0"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 3348.3618883818376,
+      "end_ms": 3348.3618883818376
+    },
+    "s9:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:9:0"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 3351.173603865503,
+      "end_ms": 3351.173603865503
+    },
+    "s9:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 3351.173603865503,
+      "end_ms": 3351.173603865503
+    },
+    "s9:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:8:1"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 3353.9853193491685,
+      "end_ms": 3353.9853193491685
+    },
+    "s9:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s9:call3:done"
+      ],
+      "kind": "F",
+      "stage": 9,
+      "start_ms": 3353.9853193491685,
+      "end_ms": 3704.8784427851424
+    },
+    "s9:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:F1"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 3704.8784427851424,
+      "end_ms": 3704.8784427851424
+    },
+    "s9:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:9:1"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 3707.690158268808,
+      "end_ms": 3707.690158268808
+    },
+    "s9:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 3707.690158268808,
+      "end_ms": 3707.690158268808
+    },
+    "s9:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:8:2"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 3710.5018737524733,
+      "end_ms": 3710.5018737524733
+    },
+    "s9:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s9:call6:done"
+      ],
+      "kind": "F",
+      "stage": 9,
+      "start_ms": 3710.5018737524733,
+      "end_ms": 4061.394997188447
+    },
+    "s9:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:F2"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 4061.394997188447,
+      "end_ms": 4061.394997188447
+    },
+    "s9:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:9:2"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 4064.2067126721126,
+      "end_ms": 4064.2067126721126
+    },
+    "s9:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 4064.2067126721126,
+      "end_ms": 4064.2067126721126
+    },
+    "s9:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:8:3"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 4067.018428155778,
+      "end_ms": 4067.018428155778
+    },
+    "s9:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s9:call9:done"
+      ],
+      "kind": "F",
+      "stage": 9,
+      "start_ms": 4067.018428155778,
+      "end_ms": 4417.911551591752
+    },
+    "s9:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:F3"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 4417.911551591752,
+      "end_ms": 4417.911551591752
+    },
+    "s9:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:9:3"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 4420.723267075417,
+      "end_ms": 4420.723267075417
+    },
+    "s9:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 4420.723267075417,
+      "end_ms": 4420.723267075417
+    },
+    "s9:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:9:0"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 10301.007496989607,
+      "end_ms": 10301.007496989607
+    },
+    "s9:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s9:call12:done",
+        "s9:F0"
+      ],
+      "kind": "B",
+      "stage": 9,
+      "start_ms": 10301.007496989607,
+      "end_ms": 11187.62875360887
+    },
+    "s9:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:B0"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 11187.62875360887,
+      "end_ms": 11187.62875360887
+    },
+    "s9:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:8:0"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 11190.342765278028,
+      "end_ms": 11190.342765278028
+    },
+    "s9:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 11190.342765278028,
+      "end_ms": 11190.342765278028
+    },
+    "s9:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:9:1"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 11544.047604197669,
+      "end_ms": 11544.047604197669
+    },
+    "s9:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s9:call15:done",
+        "s9:F1"
+      ],
+      "kind": "B",
+      "stage": 9,
+      "start_ms": 11544.047604197669,
+      "end_ms": 12430.668860816932
+    },
+    "s9:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:B1"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 12430.668860816932,
+      "end_ms": 12430.668860816932
+    },
+    "s9:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:8:1"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 12433.38287248609,
+      "end_ms": 12433.38287248609
+    },
+    "s9:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 12433.38287248609,
+      "end_ms": 12433.38287248609
+    },
+    "s9:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:9:2"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 12787.08771140573,
+      "end_ms": 12787.08771140573
+    },
+    "s9:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s9:call18:done",
+        "s9:F2"
+      ],
+      "kind": "B",
+      "stage": 9,
+      "start_ms": 12787.08771140573,
+      "end_ms": 13673.708968024992
+    },
+    "s9:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:B2"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 13673.708968024992,
+      "end_ms": 13673.708968024992
+    },
+    "s9:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:8:2"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 13676.42297969415,
+      "end_ms": 13676.42297969415
+    },
+    "s9:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 13676.42297969415,
+      "end_ms": 13676.42297969415
+    },
+    "s9:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:9:3"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 13679.13699136331,
+      "end_ms": 13679.13699136331
+    },
+    "s9:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s9:call21:done",
+        "s9:F3"
+      ],
+      "kind": "B",
+      "stage": 9,
+      "start_ms": 13679.13699136331,
+      "end_ms": 14565.758247982572
+    },
+    "s9:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s9:B3"
+      ],
+      "kind": "ready",
+      "stage": 9,
+      "start_ms": 14565.758247982572,
+      "end_ms": 14565.758247982572
+    },
+    "s9:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:8:3"
+      ],
+      "kind": "done",
+      "stage": 9,
+      "start_ms": 14568.472259651731,
+      "end_ms": 14568.472259651731
+    },
+    "s10:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s10:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:9:0"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 3351.173603865503,
+      "end_ms": 3351.173603865503
+    },
+    "s10:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s10:call0:done"
+      ],
+      "kind": "F",
+      "stage": 10,
+      "start_ms": 3351.173603865503,
+      "end_ms": 3702.066727301477
+    },
+    "s10:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:F0"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 3702.066727301477,
+      "end_ms": 3702.066727301477
+    },
+    "s10:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:10:0"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 3704.8784427851424,
+      "end_ms": 3704.8784427851424
+    },
+    "s10:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 3704.8784427851424,
+      "end_ms": 3704.8784427851424
+    },
+    "s10:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:9:1"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 3707.690158268808,
+      "end_ms": 3707.690158268808
+    },
+    "s10:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s10:call3:done"
+      ],
+      "kind": "F",
+      "stage": 10,
+      "start_ms": 3707.690158268808,
+      "end_ms": 4058.5832817047817
+    },
+    "s10:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:F1"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 4058.5832817047817,
+      "end_ms": 4058.5832817047817
+    },
+    "s10:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:10:1"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 4061.394997188447,
+      "end_ms": 4061.394997188447
+    },
+    "s10:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 4061.394997188447,
+      "end_ms": 4061.394997188447
+    },
+    "s10:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:9:2"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 4064.2067126721126,
+      "end_ms": 4064.2067126721126
+    },
+    "s10:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s10:call6:done"
+      ],
+      "kind": "F",
+      "stage": 10,
+      "start_ms": 4064.2067126721126,
+      "end_ms": 4415.0998361080865
+    },
+    "s10:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:F2"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 4415.0998361080865,
+      "end_ms": 4415.0998361080865
+    },
+    "s10:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:10:2"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 4417.911551591752,
+      "end_ms": 4417.911551591752
+    },
+    "s10:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 4417.911551591752,
+      "end_ms": 4417.911551591752
+    },
+    "s10:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:9:3"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 4420.723267075417,
+      "end_ms": 4420.723267075417
+    },
+    "s10:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s10:call9:done"
+      ],
+      "kind": "F",
+      "stage": 10,
+      "start_ms": 4420.723267075417,
+      "end_ms": 4771.616390511392
+    },
+    "s10:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:F3"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 4771.616390511392,
+      "end_ms": 4771.616390511392
+    },
+    "s10:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:10:3"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 4774.428105995057,
+      "end_ms": 4774.428105995057
+    },
+    "s10:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 4774.428105995057,
+      "end_ms": 4774.428105995057
+    },
+    "s10:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:10:0"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 9411.672228701185,
+      "end_ms": 9411.672228701185
+    },
+    "s10:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s10:call12:done",
+        "s10:F0"
+      ],
+      "kind": "B",
+      "stage": 10,
+      "start_ms": 9411.672228701185,
+      "end_ms": 10298.293485320448
+    },
+    "s10:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:B0"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 10298.293485320448,
+      "end_ms": 10298.293485320448
+    },
+    "s10:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:9:0"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 10301.007496989607,
+      "end_ms": 10301.007496989607
+    },
+    "s10:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 10301.007496989607,
+      "end_ms": 10301.007496989607
+    },
+    "s10:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:10:1"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 10654.712335909247,
+      "end_ms": 10654.712335909247
+    },
+    "s10:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s10:call15:done",
+        "s10:F1"
+      ],
+      "kind": "B",
+      "stage": 10,
+      "start_ms": 10654.712335909247,
+      "end_ms": 11541.33359252851
+    },
+    "s10:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:B1"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 11541.33359252851,
+      "end_ms": 11541.33359252851
+    },
+    "s10:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:9:1"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 11544.047604197669,
+      "end_ms": 11544.047604197669
+    },
+    "s10:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 11544.047604197669,
+      "end_ms": 11544.047604197669
+    },
+    "s10:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:10:2"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 11897.752443117308,
+      "end_ms": 11897.752443117308
+    },
+    "s10:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s10:call18:done",
+        "s10:F2"
+      ],
+      "kind": "B",
+      "stage": 10,
+      "start_ms": 11897.752443117308,
+      "end_ms": 12784.37369973657
+    },
+    "s10:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:B2"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 12784.37369973657,
+      "end_ms": 12784.37369973657
+    },
+    "s10:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:9:2"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 12787.08771140573,
+      "end_ms": 12787.08771140573
+    },
+    "s10:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 12787.08771140573,
+      "end_ms": 12787.08771140573
+    },
+    "s10:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:10:3"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 12789.801723074888,
+      "end_ms": 12789.801723074888
+    },
+    "s10:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s10:call21:done",
+        "s10:F3"
+      ],
+      "kind": "B",
+      "stage": 10,
+      "start_ms": 12789.801723074888,
+      "end_ms": 13676.42297969415
+    },
+    "s10:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s10:B3"
+      ],
+      "kind": "ready",
+      "stage": 10,
+      "start_ms": 13676.42297969415,
+      "end_ms": 13676.42297969415
+    },
+    "s10:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:9:3"
+      ],
+      "kind": "done",
+      "stage": 10,
+      "start_ms": 13679.13699136331,
+      "end_ms": 13679.13699136331
+    },
+    "s11:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s11:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:10:0"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 3704.8784427851424,
+      "end_ms": 3704.8784427851424
+    },
+    "s11:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s11:call0:done"
+      ],
+      "kind": "F",
+      "stage": 11,
+      "start_ms": 3704.8784427851424,
+      "end_ms": 4055.7715662211162
+    },
+    "s11:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:F0"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 4055.7715662211162,
+      "end_ms": 4055.7715662211162
+    },
+    "s11:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:11:0"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 4058.5832817047817,
+      "end_ms": 4058.5832817047817
+    },
+    "s11:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 4058.5832817047817,
+      "end_ms": 4058.5832817047817
+    },
+    "s11:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:10:1"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 4061.394997188447,
+      "end_ms": 4061.394997188447
+    },
+    "s11:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s11:call3:done"
+      ],
+      "kind": "F",
+      "stage": 11,
+      "start_ms": 4061.394997188447,
+      "end_ms": 4412.288120624421
+    },
+    "s11:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:F1"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 4412.288120624421,
+      "end_ms": 4412.288120624421
+    },
+    "s11:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:11:1"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 4415.0998361080865,
+      "end_ms": 4415.0998361080865
+    },
+    "s11:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 4415.0998361080865,
+      "end_ms": 4415.0998361080865
+    },
+    "s11:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:10:2"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 4417.911551591752,
+      "end_ms": 4417.911551591752
+    },
+    "s11:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s11:call6:done"
+      ],
+      "kind": "F",
+      "stage": 11,
+      "start_ms": 4417.911551591752,
+      "end_ms": 4768.804675027726
+    },
+    "s11:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:F2"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 4768.804675027726,
+      "end_ms": 4768.804675027726
+    },
+    "s11:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:11:2"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 4771.616390511392,
+      "end_ms": 4771.616390511392
+    },
+    "s11:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 4771.616390511392,
+      "end_ms": 4771.616390511392
+    },
+    "s11:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:10:3"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 4774.428105995057,
+      "end_ms": 4774.428105995057
+    },
+    "s11:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s11:call9:done"
+      ],
+      "kind": "F",
+      "stage": 11,
+      "start_ms": 4774.428105995057,
+      "end_ms": 5125.3212294310315
+    },
+    "s11:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:F3"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 5125.3212294310315,
+      "end_ms": 5125.3212294310315
+    },
+    "s11:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:11:3"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 5128.132944914697,
+      "end_ms": 5128.132944914697
+    },
+    "s11:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:call11:done"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 5128.132944914697,
+      "end_ms": 5128.132944914697
+    },
+    "s11:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:11:0"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 8522.336960412764,
+      "end_ms": 8522.336960412764
+    },
+    "s11:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s11:call12:done",
+        "s11:F0"
+      ],
+      "kind": "B",
+      "stage": 11,
+      "start_ms": 8522.336960412764,
+      "end_ms": 9408.958217032026
+    },
+    "s11:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:B0"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 9408.958217032026,
+      "end_ms": 9408.958217032026
+    },
+    "s11:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:10:0"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 9411.672228701185,
+      "end_ms": 9411.672228701185
+    },
+    "s11:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 9411.672228701185,
+      "end_ms": 9411.672228701185
+    },
+    "s11:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:11:1"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 9765.377067620826,
+      "end_ms": 9765.377067620826
+    },
+    "s11:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s11:call15:done",
+        "s11:F1"
+      ],
+      "kind": "B",
+      "stage": 11,
+      "start_ms": 9765.377067620826,
+      "end_ms": 10651.998324240089
+    },
+    "s11:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:B1"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 10651.998324240089,
+      "end_ms": 10651.998324240089
+    },
+    "s11:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:10:1"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 10654.712335909247,
+      "end_ms": 10654.712335909247
+    },
+    "s11:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 10654.712335909247,
+      "end_ms": 10654.712335909247
+    },
+    "s11:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:11:2"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 11008.417174828886,
+      "end_ms": 11008.417174828886
+    },
+    "s11:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s11:call18:done",
+        "s11:F2"
+      ],
+      "kind": "B",
+      "stage": 11,
+      "start_ms": 11008.417174828886,
+      "end_ms": 11895.038431448149
+    },
+    "s11:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:B2"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 11895.038431448149,
+      "end_ms": 11895.038431448149
+    },
+    "s11:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:10:2"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 11897.752443117308,
+      "end_ms": 11897.752443117308
+    },
+    "s11:call21:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:call20:done"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 11897.752443117308,
+      "end_ms": 11897.752443117308
+    },
+    "s11:call21:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:11:3"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 11900.466454786467,
+      "end_ms": 11900.466454786467
+    },
+    "s11:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s11:call21:done",
+        "s11:F3"
+      ],
+      "kind": "B",
+      "stage": 11,
+      "start_ms": 11900.466454786467,
+      "end_ms": 12787.08771140573
+    },
+    "s11:call23:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s11:B3"
+      ],
+      "kind": "ready",
+      "stage": 11,
+      "start_ms": 12787.08771140573,
+      "end_ms": 12787.08771140573
+    },
+    "s11:call23:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:10:3"
+      ],
+      "kind": "done",
+      "stage": 11,
+      "start_ms": 12789.801723074888,
+      "end_ms": 12789.801723074888
+    },
+    "s12:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s12:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:11:0"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 4058.5832817047817,
+      "end_ms": 4058.5832817047817
+    },
+    "s12:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s12:call0:done"
+      ],
+      "kind": "F",
+      "stage": 12,
+      "start_ms": 4058.5832817047817,
+      "end_ms": 4409.476405140756
+    },
+    "s12:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:F0"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 4409.476405140756,
+      "end_ms": 4409.476405140756
+    },
+    "s12:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:12:0"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 4412.288120624421,
+      "end_ms": 4412.288120624421
+    },
+    "s12:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 4412.288120624421,
+      "end_ms": 4412.288120624421
+    },
+    "s12:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:11:1"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 4415.0998361080865,
+      "end_ms": 4415.0998361080865
+    },
+    "s12:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s12:call3:done"
+      ],
+      "kind": "F",
+      "stage": 12,
+      "start_ms": 4415.0998361080865,
+      "end_ms": 4765.992959544061
+    },
+    "s12:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:F1"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 4765.992959544061,
+      "end_ms": 4765.992959544061
+    },
+    "s12:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:12:1"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 4768.804675027726,
+      "end_ms": 4768.804675027726
+    },
+    "s12:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 4768.804675027726,
+      "end_ms": 4768.804675027726
+    },
+    "s12:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:11:2"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 4771.616390511392,
+      "end_ms": 4771.616390511392
+    },
+    "s12:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s12:call6:done"
+      ],
+      "kind": "F",
+      "stage": 12,
+      "start_ms": 4771.616390511392,
+      "end_ms": 5122.509513947366
+    },
+    "s12:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:F2"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 5122.509513947366,
+      "end_ms": 5122.509513947366
+    },
+    "s12:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:12:2"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 5125.3212294310315,
+      "end_ms": 5125.3212294310315
+    },
+    "s12:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:call8:done"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 5125.3212294310315,
+      "end_ms": 5125.3212294310315
+    },
+    "s12:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:11:3"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 5128.132944914697,
+      "end_ms": 5128.132944914697
+    },
+    "s12:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s12:call9:done"
+      ],
+      "kind": "F",
+      "stage": 12,
+      "start_ms": 5128.132944914697,
+      "end_ms": 5479.026068350671
+    },
+    "s12:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:F3"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 5479.026068350671,
+      "end_ms": 5479.026068350671
+    },
+    "s12:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:12:3",
+        "MSG:B:12:0"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 7633.001692124342,
+      "end_ms": 7633.001692124342
+    },
+    "s12:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s12:call11:done",
+        "s12:F0"
+      ],
+      "kind": "B",
+      "stage": 12,
+      "start_ms": 7633.001692124342,
+      "end_ms": 8519.622948743605
+    },
+    "s12:call13:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:B0"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 8519.622948743605,
+      "end_ms": 8519.622948743605
+    },
+    "s12:call13:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:11:0"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 8522.336960412764,
+      "end_ms": 8522.336960412764
+    },
+    "s12:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:call13:done"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 8522.336960412764,
+      "end_ms": 8522.336960412764
+    },
+    "s12:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:12:1"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 8876.041799332404,
+      "end_ms": 8876.041799332404
+    },
+    "s12:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s12:call14:done",
+        "s12:F1"
+      ],
+      "kind": "B",
+      "stage": 12,
+      "start_ms": 8876.041799332404,
+      "end_ms": 9762.663055951667
+    },
+    "s12:call16:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:B1"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 9762.663055951667,
+      "end_ms": 9762.663055951667
+    },
+    "s12:call16:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:11:1"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 9765.377067620826,
+      "end_ms": 9765.377067620826
+    },
+    "s12:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:call16:done"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 9765.377067620826,
+      "end_ms": 9765.377067620826
+    },
+    "s12:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:12:2"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 10119.081906540465,
+      "end_ms": 10119.081906540465
+    },
+    "s12:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s12:call17:done",
+        "s12:F2"
+      ],
+      "kind": "B",
+      "stage": 12,
+      "start_ms": 10119.081906540465,
+      "end_ms": 11005.703163159727
+    },
+    "s12:call19:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:B2"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 11005.703163159727,
+      "end_ms": 11005.703163159727
+    },
+    "s12:call19:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:11:2"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 11008.417174828886,
+      "end_ms": 11008.417174828886
+    },
+    "s12:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:call19:done"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 11008.417174828886,
+      "end_ms": 11008.417174828886
+    },
+    "s12:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:12:3"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 11011.131186498045,
+      "end_ms": 11011.131186498045
+    },
+    "s12:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s12:call20:done",
+        "s12:F3"
+      ],
+      "kind": "B",
+      "stage": 12,
+      "start_ms": 11011.131186498045,
+      "end_ms": 11897.752443117308
+    },
+    "s12:call22:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s12:B3"
+      ],
+      "kind": "ready",
+      "stage": 12,
+      "start_ms": 11897.752443117308,
+      "end_ms": 11897.752443117308
+    },
+    "s12:call22:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:11:3"
+      ],
+      "kind": "done",
+      "stage": 12,
+      "start_ms": 11900.466454786467,
+      "end_ms": 11900.466454786467
+    },
+    "s13:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s13:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:12:0"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 4412.288120624421,
+      "end_ms": 4412.288120624421
+    },
+    "s13:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s13:call0:done"
+      ],
+      "kind": "F",
+      "stage": 13,
+      "start_ms": 4412.288120624421,
+      "end_ms": 4763.181244060395
+    },
+    "s13:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:F0"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 4763.181244060395,
+      "end_ms": 4763.181244060395
+    },
+    "s13:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:13:0"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 4765.992959544061,
+      "end_ms": 4765.992959544061
+    },
+    "s13:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 4765.992959544061,
+      "end_ms": 4765.992959544061
+    },
+    "s13:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:12:1"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 4768.804675027726,
+      "end_ms": 4768.804675027726
+    },
+    "s13:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s13:call3:done"
+      ],
+      "kind": "F",
+      "stage": 13,
+      "start_ms": 4768.804675027726,
+      "end_ms": 5119.697798463701
+    },
+    "s13:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:F1"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 5119.697798463701,
+      "end_ms": 5119.697798463701
+    },
+    "s13:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:13:1"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 5122.509513947366,
+      "end_ms": 5122.509513947366
+    },
+    "s13:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:call5:done"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 5122.509513947366,
+      "end_ms": 5122.509513947366
+    },
+    "s13:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:12:2"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 5125.3212294310315,
+      "end_ms": 5125.3212294310315
+    },
+    "s13:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s13:call6:done"
+      ],
+      "kind": "F",
+      "stage": 13,
+      "start_ms": 5125.3212294310315,
+      "end_ms": 5476.214352867006
+    },
+    "s13:call8:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:F2"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 5476.214352867006,
+      "end_ms": 5476.214352867006
+    },
+    "s13:call8:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:13:2",
+        "MSG:B:13:0"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 6743.568720021413,
+      "end_ms": 6743.568720021413
+    },
+    "s13:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s13:call8:done",
+        "s13:F0"
+      ],
+      "kind": "B",
+      "stage": 13,
+      "start_ms": 6743.568720021413,
+      "end_ms": 7630.189976640677
+    },
+    "s13:call10:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:B0"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 7630.189976640677,
+      "end_ms": 7630.189976640677
+    },
+    "s13:call10:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:12:3",
+        "MSG:B:12:0"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 7633.001692124342,
+      "end_ms": 7633.001692124342
+    },
+    "s13:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s13:call10:done"
+      ],
+      "kind": "F",
+      "stage": 13,
+      "start_ms": 7633.001692124342,
+      "end_ms": 7983.894815560317
+    },
+    "s13:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:F3"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 7983.894815560317,
+      "end_ms": 7983.894815560317
+    },
+    "s13:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:13:3",
+        "MSG:B:13:1"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 7986.706531043982,
+      "end_ms": 7986.706531043982
+    },
+    "s13:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s13:call12:done",
+        "s13:F1"
+      ],
+      "kind": "B",
+      "stage": 13,
+      "start_ms": 7986.706531043982,
+      "end_ms": 8873.327787663246
+    },
+    "s13:call14:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:B1"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 8873.327787663246,
+      "end_ms": 8873.327787663246
+    },
+    "s13:call14:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:12:1"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 8876.041799332404,
+      "end_ms": 8876.041799332404
+    },
+    "s13:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:call14:done"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 8876.041799332404,
+      "end_ms": 8876.041799332404
+    },
+    "s13:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:13:2"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 9229.746638252043,
+      "end_ms": 9229.746638252043
+    },
+    "s13:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s13:call15:done",
+        "s13:F2"
+      ],
+      "kind": "B",
+      "stage": 13,
+      "start_ms": 9229.746638252043,
+      "end_ms": 10116.367894871306
+    },
+    "s13:call17:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:B2"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 10116.367894871306,
+      "end_ms": 10116.367894871306
+    },
+    "s13:call17:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:12:2"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 10119.081906540465,
+      "end_ms": 10119.081906540465
+    },
+    "s13:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:call17:done"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 10119.081906540465,
+      "end_ms": 10119.081906540465
+    },
+    "s13:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:13:3"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 10121.795918209624,
+      "end_ms": 10121.795918209624
+    },
+    "s13:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s13:call18:done",
+        "s13:F3"
+      ],
+      "kind": "B",
+      "stage": 13,
+      "start_ms": 10121.795918209624,
+      "end_ms": 11008.417174828886
+    },
+    "s13:call20:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s13:B3"
+      ],
+      "kind": "ready",
+      "stage": 13,
+      "start_ms": 11008.417174828886,
+      "end_ms": 11008.417174828886
+    },
+    "s13:call20:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:12:3"
+      ],
+      "kind": "done",
+      "stage": 13,
+      "start_ms": 11011.131186498045,
+      "end_ms": 11011.131186498045
+    },
+    "s14:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s14:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:13:0"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 4765.992959544061,
+      "end_ms": 4765.992959544061
+    },
+    "s14:F0": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s14:call0:done"
+      ],
+      "kind": "F",
+      "stage": 14,
+      "start_ms": 4765.992959544061,
+      "end_ms": 5116.886082980035
+    },
+    "s14:call2:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s14:F0"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 5116.886082980035,
+      "end_ms": 5116.886082980035
+    },
+    "s14:call2:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:14:0"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 5119.697798463701,
+      "end_ms": 5119.697798463701
+    },
+    "s14:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s14:call2:done"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 5119.697798463701,
+      "end_ms": 5119.697798463701
+    },
+    "s14:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:13:1"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 5122.509513947366,
+      "end_ms": 5122.509513947366
+    },
+    "s14:F1": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s14:call3:done"
+      ],
+      "kind": "F",
+      "stage": 14,
+      "start_ms": 5122.509513947366,
+      "end_ms": 5473.40263738334
+    },
+    "s14:call5:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s14:F1"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 5473.40263738334,
+      "end_ms": 5473.40263738334
+    },
+    "s14:call5:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:14:1",
+        "MSG:B:14:0"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 5854.135747918484,
+      "end_ms": 5854.135747918484
+    },
+    "s14:B0": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s14:call5:done",
+        "s14:F0"
+      ],
+      "kind": "B",
+      "stage": 14,
+      "start_ms": 5854.135747918484,
+      "end_ms": 6740.757004537748
+    },
+    "s14:call7:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s14:B0"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 6740.757004537748,
+      "end_ms": 6740.757004537748
+    },
+    "s14:call7:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:13:2",
+        "MSG:B:13:0"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 6743.568720021413,
+      "end_ms": 6743.568720021413
+    },
+    "s14:F2": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s14:call7:done"
+      ],
+      "kind": "F",
+      "stage": 14,
+      "start_ms": 6743.568720021413,
+      "end_ms": 7094.461843457388
+    },
+    "s14:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s14:F2"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 7094.461843457388,
+      "end_ms": 7094.461843457388
+    },
+    "s14:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:14:2",
+        "MSG:B:14:1"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 7097.273558941053,
+      "end_ms": 7097.273558941053
+    },
+    "s14:B1": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s14:call9:done",
+        "s14:F1"
+      ],
+      "kind": "B",
+      "stage": 14,
+      "start_ms": 7097.273558941053,
+      "end_ms": 7983.894815560317
+    },
+    "s14:call11:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s14:B1"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 7983.894815560317,
+      "end_ms": 7983.894815560317
+    },
+    "s14:call11:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:13:3",
+        "MSG:B:13:1"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 7986.706531043982,
+      "end_ms": 7986.706531043982
+    },
+    "s14:F3": {
+      "duration_ms": 350.893123435974,
+      "dependencies": [
+        "s14:call11:done"
+      ],
+      "kind": "F",
+      "stage": 14,
+      "start_ms": 7986.706531043982,
+      "end_ms": 8337.599654479956
+    },
+    "s14:call13:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s14:F3"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 8337.599654479956,
+      "end_ms": 8337.599654479956
+    },
+    "s14:call13:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:14:3",
+        "MSG:B:14:2"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 8340.411369963622,
+      "end_ms": 8340.411369963622
+    },
+    "s14:B2": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s14:call13:done",
+        "s14:F2"
+      ],
+      "kind": "B",
+      "stage": 14,
+      "start_ms": 8340.411369963622,
+      "end_ms": 9227.032626582884
+    },
+    "s14:call15:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s14:B2"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 9227.032626582884,
+      "end_ms": 9227.032626582884
+    },
+    "s14:call15:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:13:2"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 9229.746638252043,
+      "end_ms": 9229.746638252043
+    },
+    "s14:call16:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s14:call15:done"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 9229.746638252043,
+      "end_ms": 9229.746638252043
+    },
+    "s14:call16:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:14:3"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 9232.460649921202,
+      "end_ms": 9232.460649921202
+    },
+    "s14:B3": {
+      "duration_ms": 886.6212566192631,
+      "dependencies": [
+        "s14:call16:done",
+        "s14:F3"
+      ],
+      "kind": "B",
+      "stage": 14,
+      "start_ms": 9232.460649921202,
+      "end_ms": 10119.081906540465
+    },
+    "s14:call18:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s14:B3"
+      ],
+      "kind": "ready",
+      "stage": 14,
+      "start_ms": 10119.081906540465,
+      "end_ms": 10119.081906540465
+    },
+    "s14:call18:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:13:3"
+      ],
+      "kind": "done",
+      "stage": 14,
+      "start_ms": 10121.795918209624,
+      "end_ms": 10121.795918209624
+    },
+    "s15:call0:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "ENTRY"
+      ],
+      "kind": "ready",
+      "stage": 15,
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    "s15:call0:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:14:0"
+      ],
+      "kind": "done",
+      "stage": 15,
+      "start_ms": 5119.697798463701,
+      "end_ms": 5119.697798463701
+    },
+    "s15:F0": {
+      "duration_ms": 212.07026810646056,
+      "dependencies": [
+        "s15:call0:done"
+      ],
+      "kind": "F",
+      "stage": 15,
+      "start_ms": 5119.697798463701,
+      "end_ms": 5331.768066570161
+    },
+    "s15:B0": {
+      "duration_ms": 519.5559658646583,
+      "dependencies": [
+        "s15:LOSS0",
+        "s15:LOSS0"
+      ],
+      "kind": "B",
+      "stage": 15,
+      "start_ms": 5331.768066570161,
+      "end_ms": 5851.324032434819
+    },
+    "s15:call3:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s15:B0"
+      ],
+      "kind": "ready",
+      "stage": 15,
+      "start_ms": 5851.324032434819,
+      "end_ms": 5851.324032434819
+    },
+    "s15:call3:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:14:1",
+        "MSG:B:14:0"
+      ],
+      "kind": "done",
+      "stage": 15,
+      "start_ms": 5854.135747918484,
+      "end_ms": 5854.135747918484
+    },
+    "s15:F1": {
+      "duration_ms": 212.07026810646056,
+      "dependencies": [
+        "s15:call3:done"
+      ],
+      "kind": "F",
+      "stage": 15,
+      "start_ms": 5854.135747918484,
+      "end_ms": 6066.206016024945
+    },
+    "s15:B1": {
+      "duration_ms": 519.5559658646583,
+      "dependencies": [
+        "s15:LOSS1",
+        "s15:LOSS1"
+      ],
+      "kind": "B",
+      "stage": 15,
+      "start_ms": 6066.206016024945,
+      "end_ms": 6585.761981889603
+    },
+    "s15:call6:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s15:B1"
+      ],
+      "kind": "ready",
+      "stage": 15,
+      "start_ms": 6585.761981889603,
+      "end_ms": 6585.761981889603
+    },
+    "s15:call6:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:14:2",
+        "MSG:B:14:1"
+      ],
+      "kind": "done",
+      "stage": 15,
+      "start_ms": 7097.273558941053,
+      "end_ms": 7097.273558941053
+    },
+    "s15:F2": {
+      "duration_ms": 212.07026810646056,
+      "dependencies": [
+        "s15:call6:done"
+      ],
+      "kind": "F",
+      "stage": 15,
+      "start_ms": 7097.273558941053,
+      "end_ms": 7309.3438270475135
+    },
+    "s15:B2": {
+      "duration_ms": 519.5559658646583,
+      "dependencies": [
+        "s15:LOSS2",
+        "s15:LOSS2"
+      ],
+      "kind": "B",
+      "stage": 15,
+      "start_ms": 7309.3438270475135,
+      "end_ms": 7828.8997929121715
+    },
+    "s15:call9:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s15:B2"
+      ],
+      "kind": "ready",
+      "stage": 15,
+      "start_ms": 7828.8997929121715,
+      "end_ms": 7828.8997929121715
+    },
+    "s15:call9:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:F:14:3",
+        "MSG:B:14:2"
+      ],
+      "kind": "done",
+      "stage": 15,
+      "start_ms": 8340.411369963622,
+      "end_ms": 8340.411369963622
+    },
+    "s15:F3": {
+      "duration_ms": 212.07026810646056,
+      "dependencies": [
+        "s15:call9:done"
+      ],
+      "kind": "F",
+      "stage": 15,
+      "start_ms": 8340.411369963622,
+      "end_ms": 8552.481638070083
+    },
+    "s15:B3": {
+      "duration_ms": 519.5559658646583,
+      "dependencies": [
+        "s15:LOSS3",
+        "s15:LOSS3"
+      ],
+      "kind": "B",
+      "stage": 15,
+      "start_ms": 8552.481638070083,
+      "end_ms": 9072.037603934741
+    },
+    "s15:call12:ready": {
+      "duration_ms": 0,
+      "dependencies": [
+        "s15:B3"
+      ],
+      "kind": "ready",
+      "stage": 15,
+      "start_ms": 9072.037603934741,
+      "end_ms": 9072.037603934741
+    },
+    "s15:call12:done": {
+      "duration_ms": 0,
+      "dependencies": [
+        "MSG:B:14:3"
+      ],
+      "kind": "done",
+      "stage": 15,
+      "start_ms": 9232.460649921202,
+      "end_ms": 9232.460649921202
+    },
+    "MSG:F:0:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s0:call1:ready",
+        "s1:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 165.0183381050825,
+      "end_ms": 167.83005358874797
+    },
+    "MSG:F:0:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s0:call3:ready",
+        "s1:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 521.5348925083874,
+      "end_ms": 524.3466079920529
+    },
+    "MSG:F:0:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s0:call5:ready",
+        "s1:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 878.0514469116924,
+      "end_ms": 880.8631623953579
+    },
+    "MSG:F:0:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s0:call7:ready",
+        "s1:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1234.5680013149974,
+      "end_ms": 1237.379716798663
+    },
+    "MSG:B:0:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s0:call8:ready",
+        "s1:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 18302.310899916243,
+      "end_ms": 18305.024911585402
+    },
+    "MSG:B:0:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s0:call10:ready",
+        "s1:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 19545.351007124304,
+      "end_ms": 19548.065018793463
+    },
+    "MSG:B:0:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s0:call12:ready",
+        "s1:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 20788.391114332364,
+      "end_ms": 20791.105126001523
+    },
+    "MSG:B:0:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s0:call14:ready",
+        "s1:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 21680.440394289944,
+      "end_ms": 21683.154405959103
+    },
+    "MSG:F:1:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s1:call2:ready",
+        "s2:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 518.723177024722,
+      "end_ms": 521.5348925083874
+    },
+    "MSG:F:1:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s1:call5:ready",
+        "s2:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 875.239731428027,
+      "end_ms": 878.0514469116924
+    },
+    "MSG:F:1:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s1:call8:ready",
+        "s2:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1231.756285831332,
+      "end_ms": 1234.5680013149974
+    },
+    "MSG:F:1:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s1:call11:ready",
+        "s2:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1588.272840234637,
+      "end_ms": 1591.0845557183025
+    },
+    "MSG:B:1:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s1:call12:ready",
+        "s2:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 17412.97563162782,
+      "end_ms": 17415.68964329698
+    },
+    "MSG:B:1:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s1:call15:ready",
+        "s2:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 18656.015738835882,
+      "end_ms": 18658.72975050504
+    },
+    "MSG:B:1:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s1:call18:ready",
+        "s2:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 19899.055846043942,
+      "end_ms": 19901.7698577131
+    },
+    "MSG:B:1:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s1:call21:ready",
+        "s2:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 20791.105126001523,
+      "end_ms": 20793.81913767068
+    },
+    "MSG:F:2:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s2:call2:ready",
+        "s3:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 872.4280159443615,
+      "end_ms": 875.239731428027
+    },
+    "MSG:F:2:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s2:call5:ready",
+        "s3:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1228.9445703476665,
+      "end_ms": 1231.756285831332
+    },
+    "MSG:F:2:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s2:call8:ready",
+        "s3:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1585.4611247509715,
+      "end_ms": 1588.272840234637
+    },
+    "MSG:F:2:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s2:call11:ready",
+        "s3:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1941.9776791542765,
+      "end_ms": 1944.789394637942
+    },
+    "MSG:B:2:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s2:call12:ready",
+        "s3:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 16523.6403633394,
+      "end_ms": 16526.35437500856
+    },
+    "MSG:B:2:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s2:call15:ready",
+        "s3:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 17766.68047054746,
+      "end_ms": 17769.39448221662
+    },
+    "MSG:B:2:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s2:call18:ready",
+        "s3:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 19009.72057775552,
+      "end_ms": 19012.43458942468
+    },
+    "MSG:B:2:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s2:call21:ready",
+        "s3:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 19901.7698577131,
+      "end_ms": 19904.48386938226
+    },
+    "MSG:F:3:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s3:call2:ready",
+        "s4:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1226.132854864001,
+      "end_ms": 1228.9445703476665
+    },
+    "MSG:F:3:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s3:call5:ready",
+        "s4:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1582.649409267306,
+      "end_ms": 1585.4611247509715
+    },
+    "MSG:F:3:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s3:call8:ready",
+        "s4:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1939.165963670611,
+      "end_ms": 1941.9776791542765
+    },
+    "MSG:F:3:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s3:call11:ready",
+        "s4:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 2295.682518073916,
+      "end_ms": 2298.4942335575815
+    },
+    "MSG:B:3:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s3:call12:ready",
+        "s4:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 15634.305095050977,
+      "end_ms": 15637.019106720136
+    },
+    "MSG:B:3:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s3:call15:ready",
+        "s4:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 16877.34520225904,
+      "end_ms": 16880.059213928198
+    },
+    "MSG:B:3:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s3:call18:ready",
+        "s4:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 18120.3853094671,
+      "end_ms": 18123.09932113626
+    },
+    "MSG:B:3:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s3:call21:ready",
+        "s4:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 19012.43458942468,
+      "end_ms": 19015.14860109384
+    },
+    "MSG:F:4:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s4:call2:ready",
+        "s5:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1579.8376937836406,
+      "end_ms": 1582.649409267306
+    },
+    "MSG:F:4:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s4:call5:ready",
+        "s5:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1936.3542481869456,
+      "end_ms": 1939.165963670611
+    },
+    "MSG:F:4:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s4:call8:ready",
+        "s5:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 2292.8708025902506,
+      "end_ms": 2295.682518073916
+    },
+    "MSG:F:4:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s4:call11:ready",
+        "s5:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 2649.3873569935554,
+      "end_ms": 2652.199072477221
+    },
+    "MSG:B:4:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s4:call12:ready",
+        "s5:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 14744.969826762555,
+      "end_ms": 14747.683838431714
+    },
+    "MSG:B:4:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s4:call15:ready",
+        "s5:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 15988.009933970618,
+      "end_ms": 15990.723945639777
+    },
+    "MSG:B:4:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s4:call18:ready",
+        "s5:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 17231.050041178678,
+      "end_ms": 17233.764052847837
+    },
+    "MSG:B:4:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s4:call21:ready",
+        "s5:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 18123.09932113626,
+      "end_ms": 18125.813332805417
+    },
+    "MSG:F:5:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s5:call2:ready",
+        "s6:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 1933.5425327032801,
+      "end_ms": 1936.3542481869456
+    },
+    "MSG:F:5:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s5:call5:ready",
+        "s6:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 2290.059087106585,
+      "end_ms": 2292.8708025902506
+    },
+    "MSG:F:5:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s5:call8:ready",
+        "s6:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 2646.57564150989,
+      "end_ms": 2649.3873569935554
+    },
+    "MSG:F:5:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s5:call11:ready",
+        "s6:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 3003.0921959131947,
+      "end_ms": 3005.90391139686
+    },
+    "MSG:B:5:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s5:call12:ready",
+        "s6:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 13855.634558474134,
+      "end_ms": 13858.348570143293
+    },
+    "MSG:B:5:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s5:call15:ready",
+        "s6:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 15098.674665682196,
+      "end_ms": 15101.388677351355
+    },
+    "MSG:B:5:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s5:call18:ready",
+        "s6:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 16341.714772890256,
+      "end_ms": 16344.428784559415
+    },
+    "MSG:B:5:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s5:call21:ready",
+        "s6:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 17233.764052847837,
+      "end_ms": 17236.478064516996
+    },
+    "MSG:F:6:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s6:call2:ready",
+        "s7:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 2287.2473716229197,
+      "end_ms": 2290.059087106585
+    },
+    "MSG:F:6:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s6:call5:ready",
+        "s7:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 2643.7639260262245,
+      "end_ms": 2646.57564150989
+    },
+    "MSG:F:6:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s6:call8:ready",
+        "s7:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 3000.2804804295292,
+      "end_ms": 3003.0921959131947
+    },
+    "MSG:F:6:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s6:call11:ready",
+        "s7:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 3356.797034832834,
+      "end_ms": 3359.6087503164995
+    },
+    "MSG:B:6:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s6:call12:ready",
+        "s7:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 12966.299290185712,
+      "end_ms": 12969.013301854871
+    },
+    "MSG:B:6:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s6:call15:ready",
+        "s7:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 14209.339397393775,
+      "end_ms": 14212.053409062933
+    },
+    "MSG:B:6:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s6:call18:ready",
+        "s7:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 15452.379504601835,
+      "end_ms": 15455.093516270994
+    },
+    "MSG:B:6:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s6:call21:ready",
+        "s7:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 16344.428784559415,
+      "end_ms": 16347.142796228574
+    },
+    "MSG:F:7:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s7:call2:ready",
+        "s8:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 2640.952210542559,
+      "end_ms": 2643.7639260262245
+    },
+    "MSG:F:7:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s7:call5:ready",
+        "s8:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 2997.4687649458638,
+      "end_ms": 3000.2804804295292
+    },
+    "MSG:F:7:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s7:call8:ready",
+        "s8:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 3353.9853193491685,
+      "end_ms": 3356.797034832834
+    },
+    "MSG:F:7:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s7:call11:ready",
+        "s8:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 3710.5018737524733,
+      "end_ms": 3713.313589236139
+    },
+    "MSG:B:7:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s7:call12:ready",
+        "s8:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 12076.96402189729,
+      "end_ms": 12079.67803356645
+    },
+    "MSG:B:7:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s7:call15:ready",
+        "s8:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 13320.004129105353,
+      "end_ms": 13322.718140774512
+    },
+    "MSG:B:7:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s7:call18:ready",
+        "s8:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 14563.044236313413,
+      "end_ms": 14565.758247982572
+    },
+    "MSG:B:7:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s7:call21:ready",
+        "s8:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 15455.093516270994,
+      "end_ms": 15457.807527940153
+    },
+    "MSG:F:8:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s8:call2:ready",
+        "s9:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 2994.6570494621983,
+      "end_ms": 2997.4687649458638
+    },
+    "MSG:F:8:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s8:call5:ready",
+        "s9:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 3351.173603865503,
+      "end_ms": 3353.9853193491685
+    },
+    "MSG:F:8:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s8:call8:ready",
+        "s9:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 3707.690158268808,
+      "end_ms": 3710.5018737524733
+    },
+    "MSG:F:8:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s8:call11:ready",
+        "s9:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4064.2067126721126,
+      "end_ms": 4067.018428155778
+    },
+    "MSG:B:8:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s8:call12:ready",
+        "s9:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 11187.62875360887,
+      "end_ms": 11190.342765278028
+    },
+    "MSG:B:8:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s8:call15:ready",
+        "s9:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 12430.668860816932,
+      "end_ms": 12433.38287248609
+    },
+    "MSG:B:8:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s8:call18:ready",
+        "s9:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 13673.708968024992,
+      "end_ms": 13676.42297969415
+    },
+    "MSG:B:8:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s8:call21:ready",
+        "s9:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 14565.758247982572,
+      "end_ms": 14568.472259651731
+    },
+    "MSG:F:9:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s9:call2:ready",
+        "s10:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 3348.3618883818376,
+      "end_ms": 3351.173603865503
+    },
+    "MSG:F:9:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s9:call5:ready",
+        "s10:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 3704.8784427851424,
+      "end_ms": 3707.690158268808
+    },
+    "MSG:F:9:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s9:call8:ready",
+        "s10:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4061.394997188447,
+      "end_ms": 4064.2067126721126
+    },
+    "MSG:F:9:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s9:call11:ready",
+        "s10:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4417.911551591752,
+      "end_ms": 4420.723267075417
+    },
+    "MSG:B:9:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s9:call12:ready",
+        "s10:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 10298.293485320448,
+      "end_ms": 10301.007496989607
+    },
+    "MSG:B:9:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s9:call15:ready",
+        "s10:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 11541.33359252851,
+      "end_ms": 11544.047604197669
+    },
+    "MSG:B:9:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s9:call18:ready",
+        "s10:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 12784.37369973657,
+      "end_ms": 12787.08771140573
+    },
+    "MSG:B:9:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s9:call21:ready",
+        "s10:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 13676.42297969415,
+      "end_ms": 13679.13699136331
+    },
+    "MSG:F:10:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s10:call2:ready",
+        "s11:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 3702.066727301477,
+      "end_ms": 3704.8784427851424
+    },
+    "MSG:F:10:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s10:call5:ready",
+        "s11:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4058.5832817047817,
+      "end_ms": 4061.394997188447
+    },
+    "MSG:F:10:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s10:call8:ready",
+        "s11:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4415.0998361080865,
+      "end_ms": 4417.911551591752
+    },
+    "MSG:F:10:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s10:call11:ready",
+        "s11:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4771.616390511392,
+      "end_ms": 4774.428105995057
+    },
+    "MSG:B:10:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s10:call12:ready",
+        "s11:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 9408.958217032026,
+      "end_ms": 9411.672228701185
+    },
+    "MSG:B:10:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s10:call15:ready",
+        "s11:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 10651.998324240089,
+      "end_ms": 10654.712335909247
+    },
+    "MSG:B:10:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s10:call18:ready",
+        "s11:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 11895.038431448149,
+      "end_ms": 11897.752443117308
+    },
+    "MSG:B:10:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s10:call21:ready",
+        "s11:call23:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 12787.08771140573,
+      "end_ms": 12789.801723074888
+    },
+    "MSG:F:11:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s11:call2:ready",
+        "s12:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4055.7715662211162,
+      "end_ms": 4058.5832817047817
+    },
+    "MSG:F:11:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s11:call5:ready",
+        "s12:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4412.288120624421,
+      "end_ms": 4415.0998361080865
+    },
+    "MSG:F:11:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s11:call8:ready",
+        "s12:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4768.804675027726,
+      "end_ms": 4771.616390511392
+    },
+    "MSG:F:11:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s11:call11:ready",
+        "s12:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 5125.3212294310315,
+      "end_ms": 5128.132944914697
+    },
+    "MSG:B:11:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s11:call12:ready",
+        "s12:call13:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 8519.622948743605,
+      "end_ms": 8522.336960412764
+    },
+    "MSG:B:11:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s11:call15:ready",
+        "s12:call16:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 9762.663055951667,
+      "end_ms": 9765.377067620826
+    },
+    "MSG:B:11:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s11:call18:ready",
+        "s12:call19:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 11005.703163159727,
+      "end_ms": 11008.417174828886
+    },
+    "MSG:B:11:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s11:call21:ready",
+        "s12:call22:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 11897.752443117308,
+      "end_ms": 11900.466454786467
+    },
+    "MSG:F:12:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s12:call2:ready",
+        "s13:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4409.476405140756,
+      "end_ms": 4412.288120624421
+    },
+    "MSG:F:12:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s12:call5:ready",
+        "s13:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4765.992959544061,
+      "end_ms": 4768.804675027726
+    },
+    "MSG:F:12:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s12:call8:ready",
+        "s13:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 5122.509513947366,
+      "end_ms": 5125.3212294310315
+    },
+    "MSG:F:12:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s12:call11:ready",
+        "s13:call10:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 7630.189976640677,
+      "end_ms": 7633.001692124342
+    },
+    "MSG:B:12:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s12:call11:ready",
+        "s13:call10:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 7630.189976640677,
+      "end_ms": 7632.903988309836
+    },
+    "MSG:B:12:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s12:call14:ready",
+        "s13:call14:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 8873.327787663246,
+      "end_ms": 8876.041799332404
+    },
+    "MSG:B:12:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s12:call17:ready",
+        "s13:call17:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 10116.367894871306,
+      "end_ms": 10119.081906540465
+    },
+    "MSG:B:12:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s12:call20:ready",
+        "s13:call20:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 11008.417174828886,
+      "end_ms": 11011.131186498045
+    },
+    "MSG:F:13:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s13:call2:ready",
+        "s14:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 4763.181244060395,
+      "end_ms": 4765.992959544061
+    },
+    "MSG:F:13:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s13:call5:ready",
+        "s14:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 5119.697798463701,
+      "end_ms": 5122.509513947366
+    },
+    "MSG:F:13:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s13:call8:ready",
+        "s14:call7:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 6740.757004537748,
+      "end_ms": 6743.568720021413
+    },
+    "MSG:B:13:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s13:call8:ready",
+        "s14:call7:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 6740.757004537748,
+      "end_ms": 6743.471016206907
+    },
+    "MSG:F:13:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s13:call12:ready",
+        "s14:call11:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 7983.894815560317,
+      "end_ms": 7986.706531043982
+    },
+    "MSG:B:13:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s13:call12:ready",
+        "s14:call11:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 7983.894815560317,
+      "end_ms": 7986.6088272294755
+    },
+    "MSG:B:13:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s13:call15:ready",
+        "s14:call15:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 9227.032626582884,
+      "end_ms": 9229.746638252043
+    },
+    "MSG:B:13:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s13:call18:ready",
+        "s14:call18:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 10119.081906540465,
+      "end_ms": 10121.795918209624
+    },
+    "MSG:F:14:0": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s14:call2:ready",
+        "s15:call0:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 5116.886082980035,
+      "end_ms": 5119.697798463701
+    },
+    "MSG:F:14:1": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s14:call5:ready",
+        "s15:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 5851.324032434819,
+      "end_ms": 5854.135747918484
+    },
+    "MSG:B:14:0": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s14:call5:ready",
+        "s15:call3:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 5851.324032434819,
+      "end_ms": 5854.038044103978
+    },
+    "MSG:F:14:2": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s14:call9:ready",
+        "s15:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 7094.461843457388,
+      "end_ms": 7097.273558941053
+    },
+    "MSG:B:14:1": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s14:call9:ready",
+        "s15:call6:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 7094.461843457388,
+      "end_ms": 7097.175855126547
+    },
+    "MSG:F:14:3": {
+      "duration_ms": 2.8117154836654663,
+      "dependencies": [
+        "s14:call13:ready",
+        "s15:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 8337.599654479956,
+      "end_ms": 8340.411369963622
+    },
+    "MSG:B:14:2": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s14:call13:ready",
+        "s15:call9:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 8337.599654479956,
+      "end_ms": 8340.313666149115
+    },
+    "MSG:B:14:3": {
+      "duration_ms": 2.7140116691589355,
+      "dependencies": [
+        "s14:call16:ready",
+        "s15:call12:ready"
+      ],
+      "kind": "PP",
+      "stage": null,
+      "start_ms": 9229.746638252043,
+      "end_ms": 9232.460649921202
+    },
+    "s15:LOSS0": {
+      "duration_ms": 0.0,
+      "dependencies": [
+        "s15:F0"
+      ],
+      "kind": "LOSS",
+      "stage": 15,
+      "parameter": "loss_tail_ms",
+      "status": "RESERVED_NOT_CALIBRATED",
+      "start_ms": 5331.768066570161,
+      "end_ms": 5331.768066570161
+    },
+    "s15:LOSS1": {
+      "duration_ms": 0.0,
+      "dependencies": [
+        "s15:F1"
+      ],
+      "kind": "LOSS",
+      "stage": 15,
+      "parameter": "loss_tail_ms",
+      "status": "RESERVED_NOT_CALIBRATED",
+      "start_ms": 6066.206016024945,
+      "end_ms": 6066.206016024945
+    },
+    "s15:LOSS2": {
+      "duration_ms": 0.0,
+      "dependencies": [
+        "s15:F2"
+      ],
+      "kind": "LOSS",
+      "stage": 15,
+      "parameter": "loss_tail_ms",
+      "status": "RESERVED_NOT_CALIBRATED",
+      "start_ms": 7309.3438270475135,
+      "end_ms": 7309.3438270475135
+    },
+    "s15:LOSS3": {
+      "duration_ms": 0.0,
+      "dependencies": [
+        "s15:F3"
+      ],
+      "kind": "LOSS",
+      "stage": 15,
+      "parameter": "loss_tail_ms",
+      "status": "RESERVED_NOT_CALIBRATED",
+      "start_ms": 8552.481638070083,
+      "end_ms": 8552.481638070083
+    }
+  },
+  "window_ms": 22119.790913276527,
+  "paired_messages": 120,
+  "loss_slot": {
+    "parameter": "loss_tail_ms",
+    "value_ms": 0.0,
+    "scope": "last PP stage, per microbatch",
+    "status": "RESERVED_NOT_CALIBRATED",
+    "accounting": "additional cost only; avoid double counting last F"
+  }
+}

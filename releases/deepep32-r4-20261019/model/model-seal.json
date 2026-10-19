@@ -1,0 +1,47 @@
+{
+  "status": "PASS_SOURCE_SEAL",
+  "predicted_ms": 22119.790913276483,
+  "middle_ms": {
+    "F": 350.893123435974,
+    "B": 886.6212566192631
+  },
+  "expanded_nodes": 371429,
+  "bindings": 112,
+  "max_contraction_error_ms": 4.3655745685100555e-11,
+  "perturbation": [
+    {
+      "node": "s1:F0/L0:r10:expert",
+      "increment_ms": 1000,
+      "shift_ms": 994.6965734720106
+    },
+    {
+      "node": "s1:F0/L0:r10:CP0",
+      "increment_ms": 1000,
+      "shift_ms": 999.4995445966597
+    },
+    {
+      "node": "s1:B0/U0:moe:r10:s0:1",
+      "increment_ms": 1000,
+      "shift_ms": 295.75865441283895
+    },
+    {
+      "node": "s1:B0/R0:p10-11:CP0",
+      "increment_ms": 1000,
+      "shift_ms": 296.5280639560733
+    }
+  ],
+  "target_timing_read": false,
+  "target_token_fit": false,
+  "source_inputs": {
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/deepep-stable-20261016-r1/aligned-r4/F.json": "d8a03b3e497baba0739438d3931f7145dbbae919ff8e0de6f7c589a60f47c343",
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/deepep-stable-20261016-r1/aligned-r4/B.json": "b6984c970c8b0808fc570147b0e62c98ba1b8053ffca00c80c2656134b6823b7",
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/deepep-stable-20261016-r1/aligned-r4/audit.json": "02728ca2f51c29d56f75484f421245ccb66580e671ddc067a56c0a153204234c"
+  },
+  "files": {
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/deepep-stable-20261016-r1/model/B.json": "b6984c970c8b0808fc570147b0e62c98ba1b8053ffca00c80c2656134b6823b7",
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/deepep-stable-20261016-r1/model/parameters.json": "0662e8259ce9f957b055aa4f0ce3918d828ff06c2cec93159d5f28e4a15d9e86",
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/deepep-stable-20261016-r1/model/outer-prediction.json": "d2cf167437bf42f2fbf50060551e3a5c428752a56ef5906ffe1437d119bca208",
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/deepep-stable-20261016-r1/model/expanded-dag.json.gz": "630bae297cc158a66b41a71621f61102cb210c98ae7358835c2da1daf92cdfa4",
+    "/home/zjb/Desktop/worktrees/mfu-16to256/results/data-foundation/deepep-stable-20261016-r1/model/F.json": "d8a03b3e497baba0739438d3931f7145dbbae919ff8e0de6f7c589a60f47c343"
+  }
+}
