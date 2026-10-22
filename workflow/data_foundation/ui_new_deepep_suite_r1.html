@@ -219,6 +219,25 @@ if(D.mode==='overview'&&D.completion){
    prefixSection.append(supplementary);
    $('body').append(prefixSection);
  }
+ // Presentation r5: a single training-window definition; prefix is supplemental only.
+ $('title').textContent='32 → 256：DAG训练主体预测 · 1F1B与尾部更新';
+ primary.querySelector('h2').textContent='① 主要预测结果：1F1B＋尾部更新';
+ primary.querySelector('p').innerHTML='新32卡DeepEP iter155–200标定 → 256卡；主结果评价目标末4轮 <b>85 / 90 / 95 / 100</b>。源端与目标端统一采用本报告的迭代评估窗口：<b>首F的GPU活动开始 → 对应ProfilerStep结束</b>，包含1F1B与尾部更新。';
+ const windowNote=document.createElement('p');windowNote.className='muted';windowNote.textContent='窗口之前的日志计时统计、同步等开销单独列示，不纳入本次主要评价；这不是框架日志的完整iteration计时，也不表示这些开销在实际训练中不存在。';
+ primary.querySelector('p').after(windowNote);
+ firstChart.innerHTML=bodyBars.replaceAll('不含步间统计前缀的MFU','本评估窗口MFU');
+ bodyHighlights.style.cssText='padding:20px 24px;margin:18px 0;background:#eff6ff;border:1px solid #bfdbfe;border-radius:14px';
+ bodyHighlights.innerHTML=`<div style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap"><div><h3 style="margin:0">预测精度 · 末4轮</h3><span class="muted">85 / 90 / 95 / 100</span></div><div style="flex:1;min-width:220px"><div>耗时平均绝对百分比误差</div><strong style="font-size:36px;color:#1d4ed8">${f(bodyStats.mape_percent)}%</strong></div><div style="flex:1;min-width:220px"><div>MFU平均绝对百分比误差</div><strong style="font-size:36px;color:#1d4ed8">${f(bodyStats.mfu.mape_percent)}%</strong></div></div>`;
+ startupRow.remove();
+ primary.querySelector('.note').innerHTML=`<b>结论：</b>末4轮训练主体耗时平均绝对百分比误差为${f(bodyStats.mape_percent)}%，同口径MFU误差为${f(bodyStats.mfu.mape_percent)}%。1F1B平均高估${f(st.onef1b_ms.mean_delta_ms)}ms，尾部更新平均少估${f(-st.tail_ms.mean_delta_ms)}ms，主体平均少估${f(bodyStats.observed_mean_ms-bodyScope.predicted_ms)}ms；尾部是平均低估的主要来源，两段偏差存在抵消。`;
+ const oldLimit=[...primary.children].filter(el=>el.classList.contains('muted')).find(el=>el!==windowNote);
+ oldLimit.innerHTML=`模型与预测成本未改。末4轮是稳定尾段，不代表全部20轮：全部20轮训练主体耗时平均绝对百分比误差为${f(bodyScope.all20.mape_percent)}%。MFU沿用已登记FLOPs与峰值算力口径；实测值由逐轮耗时推导，不是日志直接报告值。<a href="scope-comparison.json">口径、FLOPs与逐轮数据</a>。`;
+ const prefixSection=$('profiler-prefix');
+ if(prefixSection){
+   prefixSection.replaceChildren();
+   const extra=document.createElement('details');extra.innerHTML='<summary>补充：完整Profiler窗口对照（非主评价窗口）</summary><p>完整Profiler窗口还包含首F之前的日志统计、同步等开销；它不是纯采集开销，也不等同于训练日志计时。以下保留同一预测的完整窗口对照，不作为新的模型精度。</p>';
+   extra.append(scopeTable);prefixSection.append(extra);
+ }
  // Use plain Chinese for the displayed metric, without changing data keys.
  const metricWalker=document.createTreeWalker($('body'),NodeFilter.SHOW_TEXT);
  const metricTexts=[];while(metricWalker.nextNode())metricTexts.push(metricWalker.currentNode);
