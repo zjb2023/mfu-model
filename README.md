@@ -1,4 +1,43 @@
-# mfu-model · F/B 冻结分支 `16to256`
+# mfu-model · 256卡iter60详细DAG标定与回放
+
+专用分支：`feat/256-iter60-dag-replay`。使用256卡iter60自身的成本与保留间隔，构建详细F/B、PP、首尾块与优化器尾段参数图，再回放同一轮。**这是同轮校准回放，不是32→256外推精度。**
+
+## 本分支结果
+
+评估窗口：首F设备开始至Profiler结束，即1F1B＋末B后尾段；不含启动前缀。沿用原rank0参考窗口，不宣称全部256rank关键路径验证。
+
+|指标|回放|实测/实测耗时推导|相对误差|
+|---|---:|---:|---:|
+|1F1B时间|20.378338秒|20.396013秒|−0.086662%|
+|训练主体时间|20.755335秒|20.773011秒|−0.085089%|
+|MFU|4.870326%|4.866182%|+0.085162%|
+
+14个中间stage × 两组EP8 × 四MB，共112标定单元通过。主图372571节点、419866边，保留四层前向、反向重计算和真正反向的计算/通信成本接口。尾部按570个活动及5条stream标定，未重复加总尾部时间。
+
+共同图候选修正15条条件依赖，保留原32卡源节点出口；原32→256封存版本不被本分支替代。目标实测就绪/间隔参与标定，因此小误差不能当独立泛化能力证明。
+
+## 同事快速查看与复现
+
+- [主报告HTML](results/data-foundation/iter60-fine-model-r1/index.html)：可直接用浏览器打开，图和成本表内嵌。
+- [完整说明、数据来源与边界](docs/data-foundation/ITER60_FINE_MODEL_R1.md)。
+- [结果](results/data-foundation/iter60-fine-model-r1/report.json)、[冻结清单](results/data-foundation/iter60-fine-model-r1/manifest.json)、[代码/原始数据来源](results/data-foundation/iter60-fine-model-r1/provenance.json)。
+- 在线研究页：http://192.168.8.16:43312/df-v001/iter60-fine-model-r1/ （仅所在内网可访问）。
+
+```bash
+git clone --branch feat/256-iter60-dag-replay --single-branch https://github.com/zjb2023/mfu-model.git
+cd mfu-model
+python3 workflow/data_foundation/replay256_iter60_fine_r1.py results/data-foundation/iter60-fine-model-r1
+```
+
+该命令只需Python标准库和仓库内冻结图，不需要原始trace；检查图无环、非负成本、文件哈希以及重放结果一致。看网页也可在仓库根目录执行 `python3 -m http.server 8080`，访问 `/results/data-foundation/iter60-fine-model-r1/`。
+
+原始trace仍只在研究机 `/var/local/zjb-data/gbs64/framework_256_gbs_64/2026-07-31-13_40`，没有上传。provenance中的绝对路径是原采集/研究证据路径，并非同事机器的必需目录。完整重新提取需这些原始数据及逐单元适配版本；本分支保证冻结图可独立重放，不承诺无原始数据重新提取。
+
+代码快照和逐步骤适配器另存于 `results/data-foundation/iter60-fine-model-r1/code-and-adapters.tar.gz`；未上传大批中间提取目录。历史清单中的“未提交”指冻结时状态，当前发布状态由本分支Git提交确定。下文是继承的旧分支说明，不是此次结果。
+
+---
+
+## 历史：F/B 冻结分支 `16to256`
 
 当前冻结的是 **32卡→256卡** 的CP2/EP8细化F/B与1F1B外推；分支名称沿用用户指定的`16to256`，不代表本版以16卡为源。
 

@@ -16,13 +16,14 @@ def union(intervals):
     for a,b in sorted(intervals):total+=max(0,b-max(a,end));end=max(end,b)
     return total
 
-def extract(rank, path=None, iteration=60):
-    meta=load(BASE/f'pp32-structure-r4/rank-{rank}.json');path=Path(path or meta['path']);raw=path.read_bytes();digest=hashlib.sha256(raw).hexdigest()
+def extract(rank, path=None, iteration=60, metadata=None, expected_world_size=32, expected_ep_members=None, microbatch=0):
+    meta=metadata if metadata is not None else load(BASE/f'pp32-structure-r4/rank-{rank}.json');path=Path(path or meta['path']);raw=path.read_bytes();digest=hashlib.sha256(raw).hexdigest()
     if iteration==60:assert digest==meta['sha256']
     data=json.loads(raw);es=data['traceEvents'];groups={str(g['pg_name']):g for g in meta['groups']}
-    assert data['distributedInfo']['world_size']==32 and data['distributedInfo']['rank']==rank
-    ep=next(g for g in meta['groups'] if g['pg_desc']=='EXPERT_MODEL_PARALLEL_GROUP' and rank in g['ranks']);assert ep['ranks']==list(range(8,16))
-    fidx,f=next((i,e) for i,e in enumerate(es) if e.get('cat')=='user_annotation' and e.get('name')=='forward_step')
+    assert data['distributedInfo']['world_size']==expected_world_size and data['distributedInfo']['rank']==rank
+    ep=next(g for g in meta['groups'] if g['pg_desc']=='EXPERT_MODEL_PARALLEL_GROUP' and rank in g['ranks']);assert ep['ranks']==(expected_ep_members if expected_ep_members is not None else list(range(8,16)))
+    forwards=sorted(((i,e) for i,e in enumerate(es) if e.get('cat')=='user_annotation' and e.get('name')=='forward_step'),key=lambda z:z[1]['ts'])
+    fidx,f=forwards[microbatch]
     def inside(e,a):return e['pid']==a['pid'] and a['ts']<=e['ts'] and e['ts']+e.get('dur',0)<=a['ts']+a['dur']+.01
     markers=[];counts=C.Counter()
     for i,e in sorted(enumerate(es),key=lambda z:z[1].get('ts',0)):
@@ -86,7 +87,7 @@ def extract(rank, path=None, iteration=60):
                 if prev is not None:edges.append(dict(source=prev['id'],target=run['id'],kind='same_GPU_stream'))
                 runs.append(run);prev=run
     for run in runs:run['device_active_union_ms']=union(run.pop('intervals'))
-    return dict(rank=rank,stage=1,iteration=iteration,microbatch=0,path=str(path),sha256=digest,cpu_F_event=fidx,origin_absolute_ms=origin,window_ms=end-origin,
+    return dict(rank=rank,stage=1,iteration=iteration,microbatch=microbatch,path=str(path),sha256=digest,cpu_F_event=fidx,origin_absolute_ms=origin,window_ms=end-origin,
         markers=markers,devices=devices,partition=partition,exclusive_time_ms=dict(totals),stream_runs=runs,stream_edges=edges,
         note='local kernels are non-identified-communication device work, not proven pure FLOPs; EP fused envelopes not pure communication')
 

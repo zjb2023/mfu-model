@@ -1,0 +1,187 @@
+[
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 33670,
+    "name": "recv_forward",
+    "start_ms": 2510067558.760522,
+    "end_ms": 2510072057.3214293,
+    "ready_ms": 2510067558.760522,
+    "messages": [
+      [
+        "F:13:0",
+        "recv"
+      ]
+    ]
+  },
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 36482,
+    "name": "send_forward",
+    "start_ms": 2510072404.643198,
+    "end_ms": 2510072409.755051,
+    "ready_ms": 2510072404.643198,
+    "messages": [
+      [
+        "F:14:0",
+        "send"
+      ]
+    ]
+  },
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 36498,
+    "name": "recv_forward",
+    "start_ms": 2510072409.88678,
+    "end_ms": 2510072414.9965777,
+    "ready_ms": 2510072409.88678,
+    "messages": [
+      [
+        "F:13:1",
+        "recv"
+      ]
+    ]
+  },
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 39319,
+    "name": "send_forward_recv_backward",
+    "start_ms": 2510072733.7563653,
+    "end_ms": 2510073090.7315874,
+    "ready_ms": 2510072733.7563653,
+    "messages": [
+      [
+        "F:14:1",
+        "send"
+      ],
+      [
+        "B:14:0",
+        "recv"
+      ]
+    ]
+  },
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 39332,
+    "name": "send_backward_recv_forward",
+    "start_ms": 2510073817.6462297,
+    "end_ms": 2510073916.5855927,
+    "ready_ms": 2510073911.2153177,
+    "messages": [
+      [
+        "F:13:2",
+        "recv"
+      ],
+      [
+        "B:13:0",
+        "send"
+      ]
+    ]
+  },
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 42155,
+    "name": "send_forward_recv_backward",
+    "start_ms": 2510074243.584893,
+    "end_ms": 2510074249.436108,
+    "ready_ms": 2510074243.584893,
+    "messages": [
+      [
+        "F:14:2",
+        "send"
+      ],
+      [
+        "B:14:1",
+        "recv"
+      ]
+    ]
+  },
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 42168,
+    "name": "send_backward_recv_forward",
+    "start_ms": 2510074954.11011,
+    "end_ms": 2510075053.43113,
+    "ready_ms": 2510075047.963418,
+    "messages": [
+      [
+        "F:13:3",
+        "recv"
+      ],
+      [
+        "B:13:1",
+        "send"
+      ]
+    ]
+  },
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 44991,
+    "name": "send_forward_recv_backward",
+    "start_ms": 2510075389.8096757,
+    "end_ms": 2510075395.4278407,
+    "ready_ms": 2510075389.8096757,
+    "messages": [
+      [
+        "F:14:3",
+        "send"
+      ],
+      [
+        "B:14:2",
+        "recv"
+      ]
+    ]
+  },
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 45004,
+    "name": "send_backward",
+    "start_ms": 2510076112.162732,
+    "end_ms": 2510076210.17744,
+    "ready_ms": 2510076205.3160954,
+    "messages": [
+      [
+        "B:13:2",
+        "send"
+      ]
+    ]
+  },
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 45009,
+    "name": "recv_backward",
+    "start_ms": 2510076210.255411,
+    "end_ms": 2510076215.4531593,
+    "ready_ms": 2510076210.255411,
+    "messages": [
+      [
+        "B:14:3",
+        "recv"
+      ]
+    ]
+  },
+  {
+    "stage": 14,
+    "rank": 224,
+    "event": 45016,
+    "name": "send_backward",
+    "start_ms": 2510076933.953249,
+    "end_ms": 2510077032.346872,
+    "ready_ms": 2510077027.449632,
+    "messages": [
+      [
+        "B:13:3",
+        "send"
+      ]
+    ]
+  }
+]

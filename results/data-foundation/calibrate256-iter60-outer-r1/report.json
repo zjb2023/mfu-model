@@ -1,0 +1,36 @@
+{
+  "status": "PARTIAL_TARGET_CALIBRATED_OUTER_DAG_REPLAY",
+  "iteration": 60,
+  "onef1b": {
+    "replay_ms": 20335.742443561554,
+    "truth_ms": 20396.01318693161,
+    "error_percent": -0.29550257110381173
+  },
+  "body": {
+    "replay_ms": 20712.739859580994,
+    "truth_ms": 20773.010603427887,
+    "error_percent": -0.2901396672707057,
+    "replay_mfu_percent": 4.880341310965748,
+    "truth_mfu_percent": 4.8661815049244375,
+    "mfu_error_percent": 0.29098392706849996
+  },
+  "pp_effective_ms": {
+    "F": 5.031935453414917,
+    "B": 4.965193748474121
+  },
+  "tail_event_nodes": 570,
+  "tail_max_event_error_ms": 0.0,
+  "checks": {
+    "outer_dependencies_unchanged": true,
+    "current_baseline_reproduced": true,
+    "raw_sha_verified": 16,
+    "fb_costs": 128
+  },
+  "limits": [
+    "Same-sample calibration, NOT prediction.",
+    "Current outer dependency graph preserved; fine F/B internal nodes are contracted, NOT individually256-calibrated.",
+    "PP median is effective host-endpoint overlap, not pure network service; clocks assumed comparable.",
+    "Tail observed-ready constraints make local replay exact by construction; not verified causal optimizer DAG.",
+    "Only rank0 tail; other-stage RS/EDP overlap and all-rank synchronization not validated."
+  ]
+}

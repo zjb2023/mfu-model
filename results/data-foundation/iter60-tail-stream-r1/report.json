@@ -1,0 +1,57 @@
+{
+  "status": "PASS_LOCAL_STREAM_CONDITIONAL_ACCOUNTING",
+  "tail_ms": 376.9974160194397,
+  "nodes": 1142,
+  "device_events": 570,
+  "streams": 5,
+  "max_event_error_ms": 0.0,
+  "activities": {
+    "other_GPU": {
+      "events": 13,
+      "sum_device_ms": 14.939968585968018
+    },
+    "copy_or_memset": {
+      "events": 13,
+      "sum_device_ms": 0.03799915313720703
+    },
+    "gradient_processing_GPU": {
+      "events": 38,
+      "sum_device_ms": 4.603417873382568
+    },
+    "optimizer_associated_GPU": {
+      "events": 496,
+      "sum_device_ms": 29.07777214050293
+    },
+    "sync_or_statistics_default_pg": {
+      "events": 2,
+      "sum_device_ms": 19.531543254852295
+    },
+    "Dense_RS": {
+      "events": 1,
+      "sum_device_ms": 23.797036170959473
+    },
+    "Dense_AG": {
+      "events": 2,
+      "sum_device_ms": 25.818284034729004
+    },
+    "EDP_RS": {
+      "events": 1,
+      "sum_device_ms": 55.19381618499756
+    },
+    "EDP_AG": {
+      "events": 2,
+      "sum_device_ms": 28.93257474899292
+    },
+    "sync_or_statistics_MODEL_PARALLEL_GROUP": {
+      "events": 2,
+      "sum_device_ms": 169.21187114715576
+    }
+  },
+  "limits": [
+    "No tail scalar addition; END retains only post-last-device residual.",
+    "Per-stream order is explicit; cross-stream/event-handle and other-stage readiness remain reserved parameters.",
+    "Collective durations include waiting, not pure network transfer.",
+    "Activity sums can overlap; never sum them as total tail.",
+    "World group members use distributedInfo metadata, not kernel-local group index strings."
+  ]
+}

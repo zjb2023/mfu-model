@@ -1,0 +1,2436 @@
+{
+  "aligned_ready::L0:combine": {
+    "deps": [
+      "L0:r10:expert",
+      "L0:r11:expert",
+      "L0:r12:expert",
+      "L0:r13:expert",
+      "L0:r14:expert",
+      "L0:r15:expert",
+      "L0:r8:expert",
+      "L0:r9:expert"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:combine": {
+    "deps": [
+      "aligned_ready::L0:combine"
+    ],
+    "cost_ms": 1.0720329284667969,
+    "kind": "EP_effective",
+    "rank": null,
+    "layer": 0
+  },
+  "aligned_ready::L0:notify": {
+    "deps": [
+      "L0:r10:prepare",
+      "L0:r11:prepare",
+      "L0:r12:prepare",
+      "L0:r13:prepare",
+      "L0:r14:prepare",
+      "L0:r15:prepare",
+      "L0:r8:prepare",
+      "L0:r9:prepare"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:notify": {
+    "deps": [
+      "aligned_ready::L0:notify"
+    ],
+    "cost_ms": 0.05664682388305664,
+    "kind": "notify",
+    "rank": null,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:A0": {
+    "deps": [],
+    "cost_ms": 0.14279890060424805,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:A0": {
+    "deps": [
+      "aligned_ready::L0:r10:A0"
+    ],
+    "cost_ms": 7.270801067352295,
+    "kind": "local_envelope",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:A1": {
+    "deps": [
+      "L0:r10:A0"
+    ],
+    "cost_ms": 0.0033202171325683594,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:A1": {
+    "deps": [
+      "aligned_ready::L0:r10:A1"
+    ],
+    "cost_ms": 0.9962062835693359,
+    "kind": "local_envelope",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:A2": {
+    "deps": [
+      "L0:r10:A1"
+    ],
+    "cost_ms": 0.006999492645263672,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:A2": {
+    "deps": [
+      "aligned_ready::L0:r10:A2"
+    ],
+    "cost_ms": 0.5962028503417969,
+    "kind": "local_envelope",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:A3": {
+    "deps": [
+      "L0:r10:A3:trace_handoff"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:A3": {
+    "deps": [
+      "aligned_ready::L0:r10:A3"
+    ],
+    "cost_ms": 8.68345022201538,
+    "kind": "local_envelope",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:A3:trace_handoff": {
+    "deps": [
+      "L0:r10:CP2"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:A3:trace_handoff": {
+    "deps": [
+      "aligned_ready::L0:r10:A3:trace_handoff"
+    ],
+    "cost_ms": 7.4452033042907715,
+    "kind": "attention_input_reorder_tail",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:CP0": {
+    "deps": [
+      "L0:r10:A0",
+      "L0:r11:A0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:CP0": {
+    "deps": [
+      "aligned_ready::L0:r10:CP0"
+    ],
+    "cost_ms": 11.536386013031006,
+    "kind": "CP_effective",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:CP1": {
+    "deps": [
+      "L0:r10:A1",
+      "L0:r10:CP0",
+      "L0:r11:A1",
+      "L0:r11:CP0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:CP1": {
+    "deps": [
+      "aligned_ready::L0:r10:CP1"
+    ],
+    "cost_ms": 10.643123149871826,
+    "kind": "CP_effective",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:CP2": {
+    "deps": [
+      "L0:r10:A2",
+      "L0:r10:CP1",
+      "L0:r11:A2",
+      "L0:r11:CP1"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:CP2": {
+    "deps": [
+      "aligned_ready::L0:r10:CP2"
+    ],
+    "cost_ms": 6.854838848114014,
+    "kind": "CP_effective",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:CP3": {
+    "deps": [
+      "L0:r10:A3",
+      "L0:r11:A3"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:CP3": {
+    "deps": [
+      "aligned_ready::L0:r10:CP3"
+    ],
+    "cost_ms": 7.721537113189697,
+    "kind": "CP_effective",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:dispatch": {
+    "deps": [
+      "L0:notify"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:dispatch": {
+    "deps": [
+      "aligned_ready::L0:r10:dispatch"
+    ],
+    "cost_ms": 2.0343785285949707,
+    "kind": "EP_effective",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:expert": {
+    "deps": [
+      "L0:r10:dispatch"
+    ],
+    "cost_ms": 0.4386415481567383,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:expert": {
+    "deps": [
+      "aligned_ready::L0:r10:expert"
+    ],
+    "cost_ms": 4.533666133880615,
+    "kind": "expert_envelope",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:prepare": {
+    "deps": [
+      "L0:r10:router"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:prepare": {
+    "deps": [
+      "aligned_ready::L0:r10:prepare"
+    ],
+    "cost_ms": 1.1724066734313965,
+    "kind": "preparation_envelope",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:router": {
+    "deps": [
+      "L0:r10:CP3"
+    ],
+    "cost_ms": 0.004160404205322266,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:router": {
+    "deps": [
+      "aligned_ready::L0:r10:router"
+    ],
+    "cost_ms": 5.67031192779541,
+    "kind": "local_envelope",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r10:tail0": {
+    "deps": [
+      "L0:r10:unpermute"
+    ],
+    "cost_ms": 0.40812158584594727,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:tail0": {
+    "deps": [
+      "aligned_ready::L0:r10:tail0"
+    ],
+    "cost_ms": 0.18020105361938477,
+    "kind": "tail_add",
+    "rank": 10,
+    "layer": 0,
+    "event": 158461,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r10:tail1": {
+    "deps": [
+      "L0:r10:tail0"
+    ],
+    "cost_ms": 0.022240161895751953,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:tail1": {
+    "deps": [
+      "aligned_ready::L0:r10:tail1"
+    ],
+    "cost_ms": 0.1783609390258789,
+    "kind": "tail_add",
+    "rank": 10,
+    "layer": 0,
+    "event": 158473,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r10:unpermute": {
+    "deps": [
+      "L0:combine"
+    ],
+    "cost_ms": 0.05021810531616211,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r10:unpermute": {
+    "deps": [
+      "aligned_ready::L0:r10:unpermute"
+    ],
+    "cost_ms": 0.20812225341796875,
+    "kind": "unpermute",
+    "rank": 10,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:A0": {
+    "deps": [],
+    "cost_ms": 0.1341090202331543,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:A0": {
+    "deps": [
+      "aligned_ready::L0:r11:A0"
+    ],
+    "cost_ms": 7.316771984100342,
+    "kind": "local_envelope",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:A1": {
+    "deps": [
+      "L0:r11:A0"
+    ],
+    "cost_ms": 0.005799770355224609,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:A1": {
+    "deps": [
+      "aligned_ready::L0:r11:A1"
+    ],
+    "cost_ms": 0.9641671180725098,
+    "kind": "local_envelope",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:A2": {
+    "deps": [
+      "L0:r11:A1"
+    ],
+    "cost_ms": 0.002880096435546875,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:A2": {
+    "deps": [
+      "aligned_ready::L0:r11:A2"
+    ],
+    "cost_ms": 0.5961246490478516,
+    "kind": "local_envelope",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:A3": {
+    "deps": [
+      "L0:r11:A3:trace_handoff"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:A3": {
+    "deps": [
+      "aligned_ready::L0:r11:A3"
+    ],
+    "cost_ms": 8.774582862854004,
+    "kind": "local_envelope",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:A3:trace_handoff": {
+    "deps": [
+      "L0:r11:CP2"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:A3:trace_handoff": {
+    "deps": [
+      "aligned_ready::L0:r11:A3:trace_handoff"
+    ],
+    "cost_ms": 7.6302947998046875,
+    "kind": "attention_input_reorder_tail",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:CP0": {
+    "deps": [
+      "L0:r10:A0",
+      "L0:r11:A0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:CP0": {
+    "deps": [
+      "aligned_ready::L0:r11:CP0"
+    ],
+    "cost_ms": 11.648603916168213,
+    "kind": "CP_effective",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:CP1": {
+    "deps": [
+      "L0:r10:A1",
+      "L0:r10:CP0",
+      "L0:r11:A1",
+      "L0:r11:CP0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:CP1": {
+    "deps": [
+      "aligned_ready::L0:r11:CP1"
+    ],
+    "cost_ms": 10.552476406097412,
+    "kind": "CP_effective",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:CP2": {
+    "deps": [
+      "L0:r10:A2",
+      "L0:r10:CP1",
+      "L0:r11:A2",
+      "L0:r11:CP1"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:CP2": {
+    "deps": [
+      "aligned_ready::L0:r11:CP2"
+    ],
+    "cost_ms": 6.943202972412109,
+    "kind": "CP_effective",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:CP3": {
+    "deps": [
+      "L0:r10:A3",
+      "L0:r11:A3"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:CP3": {
+    "deps": [
+      "aligned_ready::L0:r11:CP3"
+    ],
+    "cost_ms": 7.554733753204346,
+    "kind": "CP_effective",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:dispatch": {
+    "deps": [
+      "L0:notify"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:dispatch": {
+    "deps": [
+      "aligned_ready::L0:r11:dispatch"
+    ],
+    "cost_ms": 2.336155414581299,
+    "kind": "EP_effective",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:expert": {
+    "deps": [
+      "L0:r11:dispatch"
+    ],
+    "cost_ms": 0.4597625732421875,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:expert": {
+    "deps": [
+      "aligned_ready::L0:r11:expert"
+    ],
+    "cost_ms": 8.880983829498291,
+    "kind": "expert_envelope",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:prepare": {
+    "deps": [
+      "L0:r11:router"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:prepare": {
+    "deps": [
+      "aligned_ready::L0:r11:prepare"
+    ],
+    "cost_ms": 1.2224092483520508,
+    "kind": "preparation_envelope",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:router": {
+    "deps": [
+      "L0:r11:CP3"
+    ],
+    "cost_ms": 0.0038013458251953125,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:router": {
+    "deps": [
+      "aligned_ready::L0:r11:router"
+    ],
+    "cost_ms": 5.5629191398620605,
+    "kind": "local_envelope",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r11:tail0": {
+    "deps": [
+      "L0:r11:unpermute"
+    ],
+    "cost_ms": 0.4078025817871094,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:tail0": {
+    "deps": [
+      "aligned_ready::L0:r11:tail0"
+    ],
+    "cost_ms": 0.18140077590942383,
+    "kind": "tail_add",
+    "rank": 11,
+    "layer": 0,
+    "event": 156010,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r11:tail1": {
+    "deps": [
+      "L0:r11:tail0"
+    ],
+    "cost_ms": 0.020400524139404297,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:tail1": {
+    "deps": [
+      "aligned_ready::L0:r11:tail1"
+    ],
+    "cost_ms": 0.1788015365600586,
+    "kind": "tail_add",
+    "rank": 11,
+    "layer": 0,
+    "event": 156024,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r11:unpermute": {
+    "deps": [
+      "L0:combine"
+    ],
+    "cost_ms": 0.07917213439941406,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r11:unpermute": {
+    "deps": [
+      "aligned_ready::L0:r11:unpermute"
+    ],
+    "cost_ms": 0.18952131271362305,
+    "kind": "unpermute",
+    "rank": 11,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:A0": {
+    "deps": [],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:A0": {
+    "deps": [
+      "aligned_ready::L0:r12:A0"
+    ],
+    "cost_ms": 7.327434062957764,
+    "kind": "local_envelope",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:A1": {
+    "deps": [
+      "L0:r12:A0"
+    ],
+    "cost_ms": 0.005840301513671875,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:A1": {
+    "deps": [
+      "aligned_ready::L0:r12:A1"
+    ],
+    "cost_ms": 0.9911637306213379,
+    "kind": "local_envelope",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:A2": {
+    "deps": [
+      "L0:r12:A1"
+    ],
+    "cost_ms": 0.003920078277587891,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:A2": {
+    "deps": [
+      "aligned_ready::L0:r12:A2"
+    ],
+    "cost_ms": 0.5968828201293945,
+    "kind": "local_envelope",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:A3": {
+    "deps": [
+      "L0:r12:A3:trace_handoff"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:A3": {
+    "deps": [
+      "aligned_ready::L0:r12:A3"
+    ],
+    "cost_ms": 8.843879699707031,
+    "kind": "local_envelope",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:A3:trace_handoff": {
+    "deps": [
+      "L0:r12:CP2"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:A3:trace_handoff": {
+    "deps": [
+      "aligned_ready::L0:r12:A3:trace_handoff"
+    ],
+    "cost_ms": 7.535993576049805,
+    "kind": "attention_input_reorder_tail",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:CP0": {
+    "deps": [
+      "L0:r12:A0",
+      "L0:r13:A0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:CP0": {
+    "deps": [
+      "aligned_ready::L0:r12:CP0"
+    ],
+    "cost_ms": 11.57518720626831,
+    "kind": "CP_effective",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:CP1": {
+    "deps": [
+      "L0:r12:A1",
+      "L0:r12:CP0",
+      "L0:r13:A1",
+      "L0:r13:CP0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:CP1": {
+    "deps": [
+      "aligned_ready::L0:r12:CP1"
+    ],
+    "cost_ms": 10.905534267425537,
+    "kind": "CP_effective",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:CP2": {
+    "deps": [
+      "L0:r12:A2",
+      "L0:r12:CP1",
+      "L0:r13:A2",
+      "L0:r13:CP1"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:CP2": {
+    "deps": [
+      "aligned_ready::L0:r12:CP2"
+    ],
+    "cost_ms": 6.749991416931152,
+    "kind": "CP_effective",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:CP3": {
+    "deps": [
+      "L0:r12:A3",
+      "L0:r13:A3"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:CP3": {
+    "deps": [
+      "aligned_ready::L0:r12:CP3"
+    ],
+    "cost_ms": 7.619235515594482,
+    "kind": "CP_effective",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:dispatch": {
+    "deps": [
+      "L0:notify"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:dispatch": {
+    "deps": [
+      "aligned_ready::L0:r12:dispatch"
+    ],
+    "cost_ms": 2.0874972343444824,
+    "kind": "EP_effective",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:expert": {
+    "deps": [
+      "L0:r12:dispatch"
+    ],
+    "cost_ms": 0.43500185012817383,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:expert": {
+    "deps": [
+      "aligned_ready::L0:r12:expert"
+    ],
+    "cost_ms": 5.16066312789917,
+    "kind": "expert_envelope",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:prepare": {
+    "deps": [
+      "L0:r12:router"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:prepare": {
+    "deps": [
+      "aligned_ready::L0:r12:prepare"
+    ],
+    "cost_ms": 1.1284847259521484,
+    "kind": "preparation_envelope",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:router": {
+    "deps": [
+      "L0:r12:CP3"
+    ],
+    "cost_ms": 0.0035200119018554688,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:router": {
+    "deps": [
+      "aligned_ready::L0:r12:router"
+    ],
+    "cost_ms": 5.524904727935791,
+    "kind": "local_envelope",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r12:tail0": {
+    "deps": [
+      "L0:r12:unpermute"
+    ],
+    "cost_ms": 0.39388179779052734,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:tail0": {
+    "deps": [
+      "aligned_ready::L0:r12:tail0"
+    ],
+    "cost_ms": 0.1844010353088379,
+    "kind": "tail_add",
+    "rank": 12,
+    "layer": 0,
+    "event": 126943,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r12:tail1": {
+    "deps": [
+      "L0:r12:tail0"
+    ],
+    "cost_ms": 0.029680252075195312,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:tail1": {
+    "deps": [
+      "aligned_ready::L0:r12:tail1"
+    ],
+    "cost_ms": 0.17896080017089844,
+    "kind": "tail_add",
+    "rank": 12,
+    "layer": 0,
+    "event": 126955,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r12:unpermute": {
+    "deps": [
+      "L0:combine"
+    ],
+    "cost_ms": 0.10644340515136719,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r12:unpermute": {
+    "deps": [
+      "aligned_ready::L0:r12:unpermute"
+    ],
+    "cost_ms": 0.1941208839416504,
+    "kind": "unpermute",
+    "rank": 12,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:A0": {
+    "deps": [],
+    "cost_ms": 0.6863813400268555,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:A0": {
+    "deps": [
+      "aligned_ready::L0:r13:A0"
+    ],
+    "cost_ms": 7.535242080688477,
+    "kind": "local_envelope",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:A1": {
+    "deps": [
+      "L0:r13:A0"
+    ],
+    "cost_ms": 0.002079486846923828,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:A1": {
+    "deps": [
+      "aligned_ready::L0:r13:A1"
+    ],
+    "cost_ms": 0.9748849868774414,
+    "kind": "local_envelope",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:A2": {
+    "deps": [
+      "L0:r13:A1"
+    ],
+    "cost_ms": 0.0030012130737304688,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:A2": {
+    "deps": [
+      "aligned_ready::L0:r13:A2"
+    ],
+    "cost_ms": 0.5950832366943359,
+    "kind": "local_envelope",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:A3": {
+    "deps": [
+      "L0:r13:A3:trace_handoff"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:A3": {
+    "deps": [
+      "aligned_ready::L0:r13:A3"
+    ],
+    "cost_ms": 8.904290199279785,
+    "kind": "local_envelope",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:A3:trace_handoff": {
+    "deps": [
+      "L0:r13:CP2"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:A3:trace_handoff": {
+    "deps": [
+      "aligned_ready::L0:r13:A3:trace_handoff"
+    ],
+    "cost_ms": 7.4524407386779785,
+    "kind": "attention_input_reorder_tail",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:CP0": {
+    "deps": [
+      "L0:r12:A0",
+      "L0:r13:A0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:CP0": {
+    "deps": [
+      "aligned_ready::L0:r13:CP0"
+    ],
+    "cost_ms": 11.635103225708008,
+    "kind": "CP_effective",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:CP1": {
+    "deps": [
+      "L0:r12:A1",
+      "L0:r12:CP0",
+      "L0:r13:A1",
+      "L0:r13:CP0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:CP1": {
+    "deps": [
+      "aligned_ready::L0:r13:CP1"
+    ],
+    "cost_ms": 10.869141101837158,
+    "kind": "CP_effective",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:CP2": {
+    "deps": [
+      "L0:r12:A2",
+      "L0:r12:CP1",
+      "L0:r13:A2",
+      "L0:r13:CP1"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:CP2": {
+    "deps": [
+      "aligned_ready::L0:r13:CP2"
+    ],
+    "cost_ms": 6.74208402633667,
+    "kind": "CP_effective",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:CP3": {
+    "deps": [
+      "L0:r12:A3",
+      "L0:r13:A3"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:CP3": {
+    "deps": [
+      "aligned_ready::L0:r13:CP3"
+    ],
+    "cost_ms": 7.678232192993164,
+    "kind": "CP_effective",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:dispatch": {
+    "deps": [
+      "L0:notify"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:dispatch": {
+    "deps": [
+      "aligned_ready::L0:r13:dispatch"
+    ],
+    "cost_ms": 2.0999040603637695,
+    "kind": "EP_effective",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:expert": {
+    "deps": [
+      "L0:r13:dispatch"
+    ],
+    "cost_ms": 0.5030426979064941,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:expert": {
+    "deps": [
+      "aligned_ready::L0:r13:expert"
+    ],
+    "cost_ms": 4.564825057983398,
+    "kind": "expert_envelope",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:prepare": {
+    "deps": [
+      "L0:r13:router"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:prepare": {
+    "deps": [
+      "aligned_ready::L0:r13:prepare"
+    ],
+    "cost_ms": 1.258007526397705,
+    "kind": "preparation_envelope",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:router": {
+    "deps": [
+      "L0:r13:CP3"
+    ],
+    "cost_ms": 0.004960536956787109,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:router": {
+    "deps": [
+      "aligned_ready::L0:r13:router"
+    ],
+    "cost_ms": 5.575470447540283,
+    "kind": "local_envelope",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r13:tail0": {
+    "deps": [
+      "L0:r13:unpermute"
+    ],
+    "cost_ms": 0.4063229560852051,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:tail0": {
+    "deps": [
+      "aligned_ready::L0:r13:tail0"
+    ],
+    "cost_ms": 0.18300104141235352,
+    "kind": "tail_add",
+    "rank": 13,
+    "layer": 0,
+    "event": 105548,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r13:tail1": {
+    "deps": [
+      "L0:r13:tail0"
+    ],
+    "cost_ms": 0.02035999298095703,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:tail1": {
+    "deps": [
+      "aligned_ready::L0:r13:tail1"
+    ],
+    "cost_ms": 0.17928075790405273,
+    "kind": "tail_add",
+    "rank": 13,
+    "layer": 0,
+    "event": 105560,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r13:unpermute": {
+    "deps": [
+      "L0:combine"
+    ],
+    "cost_ms": 0.10934209823608398,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r13:unpermute": {
+    "deps": [
+      "aligned_ready::L0:r13:unpermute"
+    ],
+    "cost_ms": 0.19628095626831055,
+    "kind": "unpermute",
+    "rank": 13,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:A0": {
+    "deps": [],
+    "cost_ms": 1.6628379821777344,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:A0": {
+    "deps": [
+      "aligned_ready::L0:r14:A0"
+    ],
+    "cost_ms": 7.890124320983887,
+    "kind": "local_envelope",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:A1": {
+    "deps": [
+      "L0:r14:A0"
+    ],
+    "cost_ms": 0.006283760070800781,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:A1": {
+    "deps": [
+      "aligned_ready::L0:r14:A1"
+    ],
+    "cost_ms": 0.9815998077392578,
+    "kind": "local_envelope",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:A2": {
+    "deps": [
+      "L0:r14:A1"
+    ],
+    "cost_ms": 0.007400035858154297,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:A2": {
+    "deps": [
+      "aligned_ready::L0:r14:A2"
+    ],
+    "cost_ms": 0.5890007019042969,
+    "kind": "local_envelope",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:A3": {
+    "deps": [
+      "L0:r14:A3:trace_handoff"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:A3": {
+    "deps": [
+      "aligned_ready::L0:r14:A3"
+    ],
+    "cost_ms": 8.738082885742188,
+    "kind": "local_envelope",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:A3:trace_handoff": {
+    "deps": [
+      "L0:r14:CP2"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:A3:trace_handoff": {
+    "deps": [
+      "aligned_ready::L0:r14:A3:trace_handoff"
+    ],
+    "cost_ms": 7.640322208404541,
+    "kind": "attention_input_reorder_tail",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:CP0": {
+    "deps": [
+      "L0:r14:A0",
+      "L0:r15:A0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:CP0": {
+    "deps": [
+      "aligned_ready::L0:r14:CP0"
+    ],
+    "cost_ms": 11.651127815246582,
+    "kind": "CP_effective",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:CP1": {
+    "deps": [
+      "L0:r14:A1",
+      "L0:r14:CP0",
+      "L0:r15:A1",
+      "L0:r15:CP0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:CP1": {
+    "deps": [
+      "aligned_ready::L0:r14:CP1"
+    ],
+    "cost_ms": 10.784557342529297,
+    "kind": "CP_effective",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:CP2": {
+    "deps": [
+      "L0:r14:A2",
+      "L0:r14:CP1",
+      "L0:r15:A2",
+      "L0:r15:CP1"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:CP2": {
+    "deps": [
+      "aligned_ready::L0:r14:CP2"
+    ],
+    "cost_ms": 6.791403293609619,
+    "kind": "CP_effective",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:CP3": {
+    "deps": [
+      "L0:r14:A3",
+      "L0:r15:A3"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:CP3": {
+    "deps": [
+      "aligned_ready::L0:r14:CP3"
+    ],
+    "cost_ms": 7.519122123718262,
+    "kind": "CP_effective",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:dispatch": {
+    "deps": [
+      "L0:notify"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:dispatch": {
+    "deps": [
+      "aligned_ready::L0:r14:dispatch"
+    ],
+    "cost_ms": 2.545632839202881,
+    "kind": "EP_effective",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:expert": {
+    "deps": [
+      "L0:r14:dispatch"
+    ],
+    "cost_ms": 0.6664414405822754,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:expert": {
+    "deps": [
+      "aligned_ready::L0:r14:expert"
+    ],
+    "cost_ms": 7.2070417404174805,
+    "kind": "expert_envelope",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:prepare": {
+    "deps": [
+      "L0:r14:router"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:prepare": {
+    "deps": [
+      "aligned_ready::L0:r14:prepare"
+    ],
+    "cost_ms": 1.659961223602295,
+    "kind": "preparation_envelope",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:router": {
+    "deps": [
+      "L0:r14:CP3"
+    ],
+    "cost_ms": 0.0033998489379882812,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:router": {
+    "deps": [
+      "aligned_ready::L0:r14:router"
+    ],
+    "cost_ms": 5.64476203918457,
+    "kind": "local_envelope",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r14:tail0": {
+    "deps": [
+      "L0:r14:unpermute"
+    ],
+    "cost_ms": 0.4462404251098633,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:tail0": {
+    "deps": [
+      "aligned_ready::L0:r14:tail0"
+    ],
+    "cost_ms": 0.1841602325439453,
+    "kind": "tail_add",
+    "rank": 14,
+    "layer": 0,
+    "event": 105291,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r14:tail1": {
+    "deps": [
+      "L0:r14:tail0"
+    ],
+    "cost_ms": 0.02344036102294922,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:tail1": {
+    "deps": [
+      "aligned_ready::L0:r14:tail1"
+    ],
+    "cost_ms": 0.1807994842529297,
+    "kind": "tail_add",
+    "rank": 14,
+    "layer": 0,
+    "event": 105303,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r14:unpermute": {
+    "deps": [
+      "L0:combine"
+    ],
+    "cost_ms": 0.032727718353271484,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r14:unpermute": {
+    "deps": [
+      "aligned_ready::L0:r14:unpermute"
+    ],
+    "cost_ms": 0.17960023880004883,
+    "kind": "unpermute",
+    "rank": 14,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:A0": {
+    "deps": [],
+    "cost_ms": 0.26261281967163086,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:A0": {
+    "deps": [
+      "aligned_ready::L0:r15:A0"
+    ],
+    "cost_ms": 7.200148105621338,
+    "kind": "local_envelope",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:A1": {
+    "deps": [
+      "L0:r15:A0"
+    ],
+    "cost_ms": 0.005519866943359375,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:A1": {
+    "deps": [
+      "aligned_ready::L0:r15:A1"
+    ],
+    "cost_ms": 0.9948043823242188,
+    "kind": "local_envelope",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:A2": {
+    "deps": [
+      "L0:r15:A1"
+    ],
+    "cost_ms": 0.0030794143676757812,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:A2": {
+    "deps": [
+      "aligned_ready::L0:r15:A2"
+    ],
+    "cost_ms": 0.5947623252868652,
+    "kind": "local_envelope",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:A3": {
+    "deps": [
+      "L0:r15:A3:trace_handoff"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:A3": {
+    "deps": [
+      "aligned_ready::L0:r15:A3"
+    ],
+    "cost_ms": 8.640073776245117,
+    "kind": "local_envelope",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:A3:trace_handoff": {
+    "deps": [
+      "L0:r15:CP2"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:A3:trace_handoff": {
+    "deps": [
+      "aligned_ready::L0:r15:A3:trace_handoff"
+    ],
+    "cost_ms": 7.697230339050293,
+    "kind": "attention_input_reorder_tail",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:CP0": {
+    "deps": [
+      "L0:r14:A0",
+      "L0:r15:A0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:CP0": {
+    "deps": [
+      "aligned_ready::L0:r15:CP0"
+    ],
+    "cost_ms": 11.705812931060791,
+    "kind": "CP_effective",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:CP1": {
+    "deps": [
+      "L0:r14:A1",
+      "L0:r14:CP0",
+      "L0:r15:A1",
+      "L0:r15:CP0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:CP1": {
+    "deps": [
+      "aligned_ready::L0:r15:CP1"
+    ],
+    "cost_ms": 10.770522117614746,
+    "kind": "CP_effective",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:CP2": {
+    "deps": [
+      "L0:r14:A2",
+      "L0:r14:CP1",
+      "L0:r15:A2",
+      "L0:r15:CP1"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:CP2": {
+    "deps": [
+      "aligned_ready::L0:r15:CP2"
+    ],
+    "cost_ms": 6.750831127166748,
+    "kind": "CP_effective",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:CP3": {
+    "deps": [
+      "L0:r14:A3",
+      "L0:r15:A3"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:CP3": {
+    "deps": [
+      "aligned_ready::L0:r15:CP3"
+    ],
+    "cost_ms": 7.514117240905762,
+    "kind": "CP_effective",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:dispatch": {
+    "deps": [
+      "L0:notify"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:dispatch": {
+    "deps": [
+      "aligned_ready::L0:r15:dispatch"
+    ],
+    "cost_ms": 2.1647820472717285,
+    "kind": "EP_effective",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:expert": {
+    "deps": [
+      "L0:r15:dispatch"
+    ],
+    "cost_ms": 0.4744420051574707,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:expert": {
+    "deps": [
+      "aligned_ready::L0:r15:expert"
+    ],
+    "cost_ms": 7.598989963531494,
+    "kind": "expert_envelope",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:prepare": {
+    "deps": [
+      "L0:r15:router"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:prepare": {
+    "deps": [
+      "aligned_ready::L0:r15:prepare"
+    ],
+    "cost_ms": 1.1306052207946777,
+    "kind": "preparation_envelope",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:router": {
+    "deps": [
+      "L0:r15:CP3"
+    ],
+    "cost_ms": 0.010799884796142578,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:router": {
+    "deps": [
+      "aligned_ready::L0:r15:router"
+    ],
+    "cost_ms": 5.521580696105957,
+    "kind": "local_envelope",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r15:tail0": {
+    "deps": [
+      "L0:r15:unpermute"
+    ],
+    "cost_ms": 0.4206418991088867,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:tail0": {
+    "deps": [
+      "aligned_ready::L0:r15:tail0"
+    ],
+    "cost_ms": 0.18387985229492188,
+    "kind": "tail_add",
+    "rank": 15,
+    "layer": 0,
+    "event": 156066,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r15:tail1": {
+    "deps": [
+      "L0:r15:tail0"
+    ],
+    "cost_ms": 0.028720378875732422,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:tail1": {
+    "deps": [
+      "aligned_ready::L0:r15:tail1"
+    ],
+    "cost_ms": 0.18180084228515625,
+    "kind": "tail_add",
+    "rank": 15,
+    "layer": 0,
+    "event": 156078,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r15:unpermute": {
+    "deps": [
+      "L0:combine"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r15:unpermute": {
+    "deps": [
+      "aligned_ready::L0:r15:unpermute"
+    ],
+    "cost_ms": 0.17840099334716797,
+    "kind": "unpermute",
+    "rank": 15,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:A0": {
+    "deps": [],
+    "cost_ms": 0.5131769180297852,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:A0": {
+    "deps": [
+      "aligned_ready::L0:r8:A0"
+    ],
+    "cost_ms": 7.20689058303833,
+    "kind": "local_envelope",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:A1": {
+    "deps": [
+      "L0:r8:A0"
+    ],
+    "cost_ms": 0.005200386047363281,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:A1": {
+    "deps": [
+      "aligned_ready::L0:r8:A1"
+    ],
+    "cost_ms": 0.9998869895935059,
+    "kind": "local_envelope",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:A2": {
+    "deps": [
+      "L0:r8:A1"
+    ],
+    "cost_ms": 0.008881092071533203,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:A2": {
+    "deps": [
+      "aligned_ready::L0:r8:A2"
+    ],
+    "cost_ms": 0.6036839485168457,
+    "kind": "local_envelope",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:A3": {
+    "deps": [
+      "L0:r8:A3:trace_handoff"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:A3": {
+    "deps": [
+      "aligned_ready::L0:r8:A3"
+    ],
+    "cost_ms": 8.744822978973389,
+    "kind": "local_envelope",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:A3:trace_handoff": {
+    "deps": [
+      "L0:r8:CP2"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:A3:trace_handoff": {
+    "deps": [
+      "aligned_ready::L0:r8:A3:trace_handoff"
+    ],
+    "cost_ms": 7.719174861907959,
+    "kind": "attention_input_reorder_tail",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:CP0": {
+    "deps": [
+      "L0:r8:A0",
+      "L0:r9:A0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:CP0": {
+    "deps": [
+      "aligned_ready::L0:r8:CP0"
+    ],
+    "cost_ms": 11.511842250823975,
+    "kind": "CP_effective",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:CP1": {
+    "deps": [
+      "L0:r8:A1",
+      "L0:r8:CP0",
+      "L0:r9:A1",
+      "L0:r9:CP0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:CP1": {
+    "deps": [
+      "aligned_ready::L0:r8:CP1"
+    ],
+    "cost_ms": 10.952982902526855,
+    "kind": "CP_effective",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:CP2": {
+    "deps": [
+      "L0:r8:A2",
+      "L0:r8:CP1",
+      "L0:r9:A2",
+      "L0:r9:CP1"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:CP2": {
+    "deps": [
+      "aligned_ready::L0:r8:CP2"
+    ],
+    "cost_ms": 6.819306373596191,
+    "kind": "CP_effective",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:CP3": {
+    "deps": [
+      "L0:r8:A3",
+      "L0:r9:A3"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:CP3": {
+    "deps": [
+      "aligned_ready::L0:r8:CP3"
+    ],
+    "cost_ms": 7.526182651519775,
+    "kind": "CP_effective",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:dispatch": {
+    "deps": [
+      "L0:notify"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:dispatch": {
+    "deps": [
+      "aligned_ready::L0:r8:dispatch"
+    ],
+    "cost_ms": 2.11421537399292,
+    "kind": "EP_effective",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:expert": {
+    "deps": [
+      "L0:r8:dispatch"
+    ],
+    "cost_ms": 0.44628381729125977,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:expert": {
+    "deps": [
+      "aligned_ready::L0:r8:expert"
+    ],
+    "cost_ms": 4.52623176574707,
+    "kind": "expert_envelope",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:prepare": {
+    "deps": [
+      "L0:r8:router"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:prepare": {
+    "deps": [
+      "aligned_ready::L0:r8:prepare"
+    ],
+    "cost_ms": 1.14796781539917,
+    "kind": "preparation_envelope",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:router": {
+    "deps": [
+      "L0:r8:CP3"
+    ],
+    "cost_ms": 0.0042400360107421875,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:router": {
+    "deps": [
+      "aligned_ready::L0:r8:router"
+    ],
+    "cost_ms": 5.425599098205566,
+    "kind": "local_envelope",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r8:tail0": {
+    "deps": [
+      "L0:r8:unpermute"
+    ],
+    "cost_ms": 0.40732336044311523,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:tail0": {
+    "deps": [
+      "aligned_ready::L0:r8:tail0"
+    ],
+    "cost_ms": 0.1817612648010254,
+    "kind": "tail_add",
+    "rank": 8,
+    "layer": 0,
+    "event": 141809,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r8:tail1": {
+    "deps": [
+      "L0:r8:tail0"
+    ],
+    "cost_ms": 0.030599594116210938,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:tail1": {
+    "deps": [
+      "aligned_ready::L0:r8:tail1"
+    ],
+    "cost_ms": 0.17840099334716797,
+    "kind": "tail_add",
+    "rank": 8,
+    "layer": 0,
+    "event": 141821,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r8:unpermute": {
+    "deps": [
+      "L0:combine"
+    ],
+    "cost_ms": 0.14199304580688477,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r8:unpermute": {
+    "deps": [
+      "aligned_ready::L0:r8:unpermute"
+    ],
+    "cost_ms": 0.20280170440673828,
+    "kind": "unpermute",
+    "rank": 8,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:A0": {
+    "deps": [],
+    "cost_ms": 0.4174489974975586,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:A0": {
+    "deps": [
+      "aligned_ready::L0:r9:A0"
+    ],
+    "cost_ms": 7.187389373779297,
+    "kind": "local_envelope",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:A1": {
+    "deps": [
+      "L0:r9:A0"
+    ],
+    "cost_ms": 0.0072803497314453125,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:A1": {
+    "deps": [
+      "aligned_ready::L0:r9:A1"
+    ],
+    "cost_ms": 0.972684383392334,
+    "kind": "local_envelope",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:A2": {
+    "deps": [
+      "L0:r9:A1"
+    ],
+    "cost_ms": 0.0067996978759765625,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:A2": {
+    "deps": [
+      "aligned_ready::L0:r9:A2"
+    ],
+    "cost_ms": 0.5964016914367676,
+    "kind": "local_envelope",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:A3": {
+    "deps": [
+      "L0:r9:A3:trace_handoff"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:A3": {
+    "deps": [
+      "aligned_ready::L0:r9:A3"
+    ],
+    "cost_ms": 8.806155681610107,
+    "kind": "local_envelope",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:A3:trace_handoff": {
+    "deps": [
+      "L0:r9:CP2"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:A3:trace_handoff": {
+    "deps": [
+      "aligned_ready::L0:r9:A3:trace_handoff"
+    ],
+    "cost_ms": 7.720111846923828,
+    "kind": "attention_input_reorder_tail",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:CP0": {
+    "deps": [
+      "L0:r8:A0",
+      "L0:r9:A0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:CP0": {
+    "deps": [
+      "aligned_ready::L0:r9:CP0"
+    ],
+    "cost_ms": 11.51477861404419,
+    "kind": "CP_effective",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:CP1": {
+    "deps": [
+      "L0:r8:A1",
+      "L0:r8:CP0",
+      "L0:r9:A1",
+      "L0:r9:CP0"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:CP1": {
+    "deps": [
+      "aligned_ready::L0:r9:CP1"
+    ],
+    "cost_ms": 10.96412467956543,
+    "kind": "CP_effective",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:CP2": {
+    "deps": [
+      "L0:r8:A2",
+      "L0:r8:CP1",
+      "L0:r9:A2",
+      "L0:r9:CP1"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:CP2": {
+    "deps": [
+      "aligned_ready::L0:r9:CP2"
+    ],
+    "cost_ms": 6.80482816696167,
+    "kind": "CP_effective",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:CP3": {
+    "deps": [
+      "L0:r8:A3",
+      "L0:r9:A3"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:CP3": {
+    "deps": [
+      "aligned_ready::L0:r9:CP3"
+    ],
+    "cost_ms": 7.591151714324951,
+    "kind": "CP_effective",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:dispatch": {
+    "deps": [
+      "L0:notify"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:dispatch": {
+    "deps": [
+      "aligned_ready::L0:r9:dispatch"
+    ],
+    "cost_ms": 2.186591148376465,
+    "kind": "EP_effective",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:expert": {
+    "deps": [
+      "L0:r9:dispatch"
+    ],
+    "cost_ms": 0.4414815902709961,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:expert": {
+    "deps": [
+      "aligned_ready::L0:r9:expert"
+    ],
+    "cost_ms": 10.451483249664307,
+    "kind": "expert_envelope",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:prepare": {
+    "deps": [
+      "L0:r9:router"
+    ],
+    "cost_ms": 0.0,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:prepare": {
+    "deps": [
+      "aligned_ready::L0:r9:prepare"
+    ],
+    "cost_ms": 1.0353245735168457,
+    "kind": "preparation_envelope",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:router": {
+    "deps": [
+      "L0:r9:CP3"
+    ],
+    "cost_ms": 0.003039836883544922,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:router": {
+    "deps": [
+      "aligned_ready::L0:r9:router"
+    ],
+    "cost_ms": 5.651743412017822,
+    "kind": "local_envelope",
+    "rank": 9,
+    "layer": 0
+  },
+  "aligned_ready::L0:r9:tail0": {
+    "deps": [
+      "L0:r9:unpermute"
+    ],
+    "cost_ms": 0.38140106201171875,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:tail0": {
+    "deps": [
+      "aligned_ready::L0:r9:tail0"
+    ],
+    "cost_ms": 0.1839609146118164,
+    "kind": "tail_add",
+    "rank": 9,
+    "layer": 0,
+    "event": 105548,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r9:tail1": {
+    "deps": [
+      "L0:r9:tail0"
+    ],
+    "cost_ms": 0.028439998626708984,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:tail1": {
+    "deps": [
+      "aligned_ready::L0:r9:tail1"
+    ],
+    "cost_ms": 0.18268108367919922,
+    "kind": "tail_add",
+    "rank": 9,
+    "layer": 0,
+    "event": 105560,
+    "name": "void musa::dnn::binary::kernel_binary<__mt_bfloat16, musa::dnn::binary::AddOp, float, __mt_bfloat16, __mt_bfloat16, 128>(__mt_bfloat16*, __mt_bfloat16 const*, __mt_bfloat16 const*, long, float, float, void const*, void const*, musa::dnn::ParamType, musa::dnn::ParamType, float, float, float)"
+  },
+  "aligned_ready::L0:r9:unpermute": {
+    "deps": [
+      "L0:combine"
+    ],
+    "cost_ms": 0.13701200485229492,
+    "kind": "source_readiness_residual",
+    "policy": "trace_reserved",
+    "basis": "source residual after invariant producer dependencies; not pure idle or network service"
+  },
+  "L0:r9:unpermute": {
+    "deps": [
+      "aligned_ready::L0:r9:unpermute"
+    ],
+    "cost_ms": 0.17464113235473633,
+    "kind": "unpermute",
+    "rank": 9,
+    "layer": 0
+  }
+}

@@ -1,0 +1,2480 @@
+[
+  {
+    "node": "L0:r8:A0",
+    "physical_rank": 16,
+    "source_cost_ms": 7.269199824333191,
+    "target_cost_ms": 7.20689058303833,
+    "target_start_ms": 0.5131769180297852,
+    "target_end_ms": 7.720067501068115,
+    "reserved_ready_ms": 0.5131769180297852,
+    "events": [
+      53581,
+      53585,
+      53589,
+      53593,
+      53597,
+      53601,
+      53605,
+      53609,
+      53621,
+      53625,
+      53629,
+      53643
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r8:A1",
+    "physical_rank": 16,
+    "source_cost_ms": 0.9483761787414551,
+    "target_cost_ms": 0.9998869895935059,
+    "target_start_ms": 7.7252678871154785,
+    "target_end_ms": 8.725154876708984,
+    "reserved_ready_ms": 0.005200386047363281,
+    "events": [
+      53665
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r8:A2",
+    "physical_rank": 16,
+    "source_cost_ms": 0.5838823795318604,
+    "target_cost_ms": 0.6036839485168457,
+    "target_start_ms": 8.734035968780518,
+    "target_end_ms": 9.337719917297363,
+    "reserved_ready_ms": 0.008881092071533203,
+    "events": [
+      53693
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r8:A3",
+    "physical_rank": 16,
+    "source_cost_ms": 8.659030556678772,
+    "target_cost_ms": 8.744822978973389,
+    "target_start_ms": 44.737452030181885,
+    "target_end_ms": 53.48227500915527,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53731
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r8:router",
+    "physical_rank": 16,
+    "source_cost_ms": 5.5179921865463255,
+    "target_cost_ms": 5.425599098205566,
+    "target_start_ms": 61.06048917770386,
+    "target_end_ms": 66.48608827590942,
+    "reserved_ready_ms": 0.0042400360107421875,
+    "events": [
+      53763,
+      53777,
+      53781,
+      53785,
+      53789,
+      53793,
+      53797,
+      53801,
+      53805,
+      53811,
+      53815,
+      53819,
+      53823,
+      53827,
+      53833,
+      53837,
+      53841,
+      53845,
+      53849,
+      53853,
+      53857,
+      53861,
+      53865,
+      53869,
+      53873,
+      53879,
+      53883,
+      53887,
+      53891,
+      53895,
+      53899,
+      53903,
+      53917,
+      53927,
+      53931
+    ],
+    "definition": "local routing envelope"
+  },
+  {
+    "node": "L0:r8:expert",
+    "physical_rank": 16,
+    "source_cost_ms": 10.612539362907409,
+    "target_cost_ms": 4.52623176574707,
+    "target_start_ms": 72.65753221511841,
+    "target_end_ms": 77.18376398086548,
+    "reserved_ready_ms": 0.44628381729125977,
+    "events": [
+      54071,
+      54075,
+      54079,
+      54083,
+      54087,
+      54107,
+      54129,
+      54133,
+      54137,
+      54141,
+      54145,
+      54149,
+      54153,
+      54157,
+      54161,
+      54165,
+      54187,
+      54191,
+      54195,
+      54199,
+      54205
+    ],
+    "definition": "expert envelope; includes FC/activation and local gaps"
+  },
+  {
+    "node": "L0:r8:prepare",
+    "physical_rank": 16,
+    "source_cost_ms": 1.4488823175430299,
+    "target_cost_ms": 1.14796781539917,
+    "target_start_ms": 66.48608827590942,
+    "target_end_ms": 67.6340560913086,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54021
+    ],
+    "definition": "router exit to notify start; reserved preparation"
+  },
+  {
+    "node": "L0:r8:unpermute",
+    "physical_rank": 16,
+    "source_cost_ms": 0.30797748565673827,
+    "target_cost_ms": 0.20280170440673828,
+    "target_start_ms": 84.39061498641968,
+    "target_end_ms": 84.59341669082642,
+    "reserved_ready_ms": 0.14199304580688477,
+    "events": [
+      54217
+    ],
+    "definition": "FusedCombine visible device envelope, not pure unpermute proof"
+  },
+  {
+    "node": "L0:r8:tail0",
+    "physical_rank": 16,
+    "source_cost_ms": 0.17594456672668457,
+    "target_cost_ms": 0.1817612648010254,
+    "target_start_ms": 85.00074005126953,
+    "target_end_ms": 85.18250131607056,
+    "reserved_ready_ms": 0.40732336044311523,
+    "events": [
+      54243
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r8:tail1",
+    "physical_rank": 16,
+    "source_cost_ms": 0.18035688400268554,
+    "target_cost_ms": 0.17840099334716797,
+    "target_start_ms": 85.21310091018677,
+    "target_end_ms": 85.39150190353394,
+    "reserved_ready_ms": 0.030599594116210938,
+    "events": [
+      54259
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r8:A3:trace_handoff",
+    "physical_rank": 16,
+    "source_cost_ms": 7.582013583183288,
+    "target_cost_ms": 7.719174861907959,
+    "target_start_ms": 37.018277168273926,
+    "target_end_ms": 44.737452030181885,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53717,
+      53723
+    ],
+    "definition": "CP2 end to A3 start; two index_select tails"
+  },
+  {
+    "node": "L0:r9:A0",
+    "physical_rank": 17,
+    "source_cost_ms": 7.291240525245667,
+    "target_cost_ms": 7.187389373779297,
+    "target_start_ms": 0.4174489974975586,
+    "target_end_ms": 7.6048383712768555,
+    "reserved_ready_ms": 0.4174489974975586,
+    "events": [
+      53751,
+      53755,
+      53759,
+      53763,
+      53767,
+      53771,
+      53775,
+      53779,
+      53791,
+      53795,
+      53799,
+      53813
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r9:A1",
+    "physical_rank": 17,
+    "source_cost_ms": 0.9920960664749146,
+    "target_cost_ms": 0.972684383392334,
+    "target_start_ms": 7.612118721008301,
+    "target_end_ms": 8.584803104400635,
+    "reserved_ready_ms": 0.0072803497314453125,
+    "events": [
+      53835
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r9:A2",
+    "physical_rank": 17,
+    "source_cost_ms": 0.5963162899017334,
+    "target_cost_ms": 0.5964016914367676,
+    "target_start_ms": 8.591602802276611,
+    "target_end_ms": 9.188004493713379,
+    "reserved_ready_ms": 0.0067996978759765625,
+    "events": [
+      53863
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r9:A3",
+    "physical_rank": 17,
+    "source_cost_ms": 8.678019094467164,
+    "target_cost_ms": 8.806155681610107,
+    "target_start_ms": 44.72391080856323,
+    "target_end_ms": 53.53006649017334,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53901
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r9:router",
+    "physical_rank": 17,
+    "source_cost_ms": 5.601397848129272,
+    "target_cost_ms": 5.651743412017822,
+    "target_start_ms": 61.124258041381836,
+    "target_end_ms": 66.77600145339966,
+    "reserved_ready_ms": 0.003039836883544922,
+    "events": [
+      53933,
+      53947,
+      53951,
+      53955,
+      53959,
+      53963,
+      53967,
+      53971,
+      53975,
+      53981,
+      53985,
+      53989,
+      53993,
+      53997,
+      54003,
+      54007,
+      54011,
+      54015,
+      54019,
+      54023,
+      54027,
+      54031,
+      54035,
+      54039,
+      54043,
+      54049,
+      54053,
+      54057,
+      54061,
+      54065,
+      54069,
+      54073,
+      54087,
+      54097,
+      54101
+    ],
+    "definition": "local routing envelope"
+  },
+  {
+    "node": "L0:r9:expert",
+    "physical_rank": 17,
+    "source_cost_ms": 13.716523432731629,
+    "target_cost_ms": 10.451483249664307,
+    "target_start_ms": 72.72510576248169,
+    "target_end_ms": 83.176589012146,
+    "reserved_ready_ms": 0.4414815902709961,
+    "events": [
+      54235,
+      54239,
+      54243,
+      54247,
+      54251,
+      54271,
+      54307,
+      54311,
+      54315,
+      54319,
+      54323,
+      54327,
+      54331,
+      54335,
+      54339,
+      54343,
+      54347,
+      54351,
+      54355,
+      54359,
+      54363,
+      54367,
+      54371,
+      54407,
+      54411,
+      54415,
+      54419,
+      54423,
+      54427,
+      54431,
+      54435,
+      54439,
+      54443,
+      54447,
+      54453
+    ],
+    "definition": "expert envelope; includes FC/activation and local gaps"
+  },
+  {
+    "node": "L0:r9:prepare",
+    "physical_rank": 17,
+    "source_cost_ms": 1.4376922845840454,
+    "target_cost_ms": 1.0353245735168457,
+    "target_start_ms": 66.77600145339966,
+    "target_end_ms": 67.8113260269165,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54185
+    ],
+    "definition": "router exit to notify start; reserved preparation"
+  },
+  {
+    "node": "L0:r9:unpermute",
+    "physical_rank": 17,
+    "source_cost_ms": 0.29514029026031496,
+    "target_cost_ms": 0.17464113235473633,
+    "target_start_ms": 84.38563394546509,
+    "target_end_ms": 84.56027507781982,
+    "reserved_ready_ms": 0.13701200485229492,
+    "events": [
+      54465
+    ],
+    "definition": "FusedCombine visible device envelope, not pure unpermute proof"
+  },
+  {
+    "node": "L0:r9:tail0",
+    "physical_rank": 17,
+    "source_cost_ms": 0.1753999948501587,
+    "target_cost_ms": 0.1839609146118164,
+    "target_start_ms": 84.94167613983154,
+    "target_end_ms": 85.12563705444336,
+    "reserved_ready_ms": 0.38140106201171875,
+    "events": [
+      54493
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r9:tail1",
+    "physical_rank": 17,
+    "source_cost_ms": 0.17881598472595214,
+    "target_cost_ms": 0.18268108367919922,
+    "target_start_ms": 85.15407705307007,
+    "target_end_ms": 85.33675813674927,
+    "reserved_ready_ms": 0.028439998626708984,
+    "events": [
+      54505
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r9:A3:trace_handoff",
+    "physical_rank": 17,
+    "source_cost_ms": 7.499970650672912,
+    "target_cost_ms": 7.720111846923828,
+    "target_start_ms": 37.003798961639404,
+    "target_end_ms": 44.72391080856323,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53887,
+      53893
+    ],
+    "definition": "CP2 end to A3 start; two index_select tails"
+  },
+  {
+    "node": "L0:r10:A0",
+    "physical_rank": 18,
+    "source_cost_ms": 7.232081389427185,
+    "target_cost_ms": 7.270801067352295,
+    "target_start_ms": 0.14279890060424805,
+    "target_end_ms": 7.413599967956543,
+    "reserved_ready_ms": 0.14279890060424805,
+    "events": [
+      72069,
+      72073,
+      72077,
+      72081,
+      72085,
+      72089,
+      72093,
+      72097,
+      72109,
+      72113,
+      72117,
+      72131
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r10:A1",
+    "physical_rank": 18,
+    "source_cost_ms": 0.9785245180130004,
+    "target_cost_ms": 0.9962062835693359,
+    "target_start_ms": 7.416920185089111,
+    "target_end_ms": 8.413126468658447,
+    "reserved_ready_ms": 0.0033202171325683594,
+    "events": [
+      72153
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r10:A2",
+    "physical_rank": 18,
+    "source_cost_ms": 0.5892666578292847,
+    "target_cost_ms": 0.5962028503417969,
+    "target_start_ms": 8.420125961303711,
+    "target_end_ms": 9.016328811645508,
+    "reserved_ready_ms": 0.006999492645263672,
+    "events": [
+      72181
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r10:A3",
+    "physical_rank": 18,
+    "source_cost_ms": 8.634319758415222,
+    "target_cost_ms": 8.68345022201538,
+    "target_start_ms": 44.04265022277832,
+    "target_end_ms": 52.7261004447937,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      72219
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r10:router",
+    "physical_rank": 18,
+    "source_cost_ms": 5.552133798599243,
+    "target_cost_ms": 5.67031192779541,
+    "target_start_ms": 60.816386222839355,
+    "target_end_ms": 66.48669815063477,
+    "reserved_ready_ms": 0.004160404205322266,
+    "events": [
+      72251,
+      72265,
+      72269,
+      72273,
+      72277,
+      72281,
+      72285,
+      72289,
+      72293,
+      72299,
+      72303,
+      72307,
+      72311,
+      72315,
+      72321,
+      72325,
+      72329,
+      72333,
+      72337,
+      72341,
+      72345,
+      72349,
+      72353,
+      72357,
+      72361,
+      72367,
+      72371,
+      72375,
+      72379,
+      72383,
+      72387,
+      72391,
+      72405,
+      72415,
+      72419
+    ],
+    "definition": "local routing envelope"
+  },
+  {
+    "node": "L0:r10:expert",
+    "physical_rank": 18,
+    "source_cost_ms": 8.683336067199708,
+    "target_cost_ms": 4.533666133880615,
+    "target_start_ms": 72.57005310058594,
+    "target_end_ms": 77.10371923446655,
+    "reserved_ready_ms": 0.4386415481567383,
+    "events": [
+      72559,
+      72563,
+      72567,
+      72571,
+      72575,
+      72595,
+      72623,
+      72627,
+      72631,
+      72635,
+      72639,
+      72643,
+      72647,
+      72651,
+      72655,
+      72659,
+      72663,
+      72667,
+      72671,
+      72699,
+      72703,
+      72707,
+      72711,
+      72715,
+      72719,
+      72723,
+      72729
+    ],
+    "definition": "expert envelope; includes FC/activation and local gaps"
+  },
+  {
+    "node": "L0:r10:prepare",
+    "physical_rank": 18,
+    "source_cost_ms": 1.5014906883239747,
+    "target_cost_ms": 1.1724066734313965,
+    "target_start_ms": 66.48669815063477,
+    "target_end_ms": 67.65910482406616,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      72509
+    ],
+    "definition": "router exit to notify start; reserved preparation"
+  },
+  {
+    "node": "L0:r10:unpermute",
+    "physical_rank": 18,
+    "source_cost_ms": 0.31466538906097413,
+    "target_cost_ms": 0.20812225341796875,
+    "target_start_ms": 84.29884004592896,
+    "target_end_ms": 84.50696229934692,
+    "reserved_ready_ms": 0.05021810531616211,
+    "events": [
+      72741
+    ],
+    "definition": "FusedCombine visible device envelope, not pure unpermute proof"
+  },
+  {
+    "node": "L0:r10:tail0",
+    "physical_rank": 18,
+    "source_cost_ms": 0.17638044357299804,
+    "target_cost_ms": 0.18020105361938477,
+    "target_start_ms": 84.91508388519287,
+    "target_end_ms": 85.09528493881226,
+    "reserved_ready_ms": 0.40812158584594727,
+    "events": [
+      72769
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r10:tail1",
+    "physical_rank": 18,
+    "source_cost_ms": 0.17944459915161132,
+    "target_cost_ms": 0.1783609390258789,
+    "target_start_ms": 85.11752510070801,
+    "target_end_ms": 85.29588603973389,
+    "reserved_ready_ms": 0.022240161895751953,
+    "events": [
+      72781
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r10:A3:trace_handoff",
+    "physical_rank": 18,
+    "source_cost_ms": 7.5009348630905155,
+    "target_cost_ms": 7.4452033042907715,
+    "target_start_ms": 36.59744691848755,
+    "target_end_ms": 44.04265022277832,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      72205,
+      72211
+    ],
+    "definition": "CP2 end to A3 start; two index_select tails"
+  },
+  {
+    "node": "L0:r11:A0",
+    "physical_rank": 19,
+    "source_cost_ms": 7.271509122848511,
+    "target_cost_ms": 7.316771984100342,
+    "target_start_ms": 0.1341090202331543,
+    "target_end_ms": 7.450881004333496,
+    "reserved_ready_ms": 0.1341090202331543,
+    "events": [
+      53836,
+      53840,
+      53844,
+      53848,
+      53852,
+      53856,
+      53860,
+      53864,
+      53876,
+      53880,
+      53884,
+      53898
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r11:A1",
+    "physical_rank": 19,
+    "source_cost_ms": 0.961440896987915,
+    "target_cost_ms": 0.9641671180725098,
+    "target_start_ms": 7.456680774688721,
+    "target_end_ms": 8.42084789276123,
+    "reserved_ready_ms": 0.005799770355224609,
+    "events": [
+      53920
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r11:A2",
+    "physical_rank": 19,
+    "source_cost_ms": 0.5943547248840332,
+    "target_cost_ms": 0.5961246490478516,
+    "target_start_ms": 8.423727989196777,
+    "target_end_ms": 9.019852638244629,
+    "reserved_ready_ms": 0.002880096435546875,
+    "events": [
+      53948
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r11:A3",
+    "physical_rank": 19,
+    "source_cost_ms": 8.741033101081848,
+    "target_cost_ms": 8.774582862854004,
+    "target_start_ms": 44.31610584259033,
+    "target_end_ms": 53.090688705444336,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53986
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r11:router",
+    "physical_rank": 19,
+    "source_cost_ms": 5.621760869026184,
+    "target_cost_ms": 5.5629191398620605,
+    "target_start_ms": 60.64922380447388,
+    "target_end_ms": 66.21214294433594,
+    "reserved_ready_ms": 0.0038013458251953125,
+    "events": [
+      54018,
+      54032,
+      54036,
+      54040,
+      54044,
+      54048,
+      54052,
+      54056,
+      54060,
+      54066,
+      54070,
+      54074,
+      54078,
+      54082,
+      54088,
+      54092,
+      54096,
+      54100,
+      54104,
+      54108,
+      54112,
+      54116,
+      54120,
+      54124,
+      54128,
+      54134,
+      54138,
+      54142,
+      54146,
+      54150,
+      54154,
+      54158,
+      54172,
+      54182,
+      54186
+    ],
+    "definition": "local routing envelope"
+  },
+  {
+    "node": "L0:r11:expert",
+    "physical_rank": 19,
+    "source_cost_ms": 10.364061045646668,
+    "target_cost_ms": 8.880983829498291,
+    "target_start_ms": 72.89295101165771,
+    "target_end_ms": 81.773934841156,
+    "reserved_ready_ms": 0.4597625732421875,
+    "events": [
+      54320,
+      54324,
+      54328,
+      54332,
+      54336,
+      54356,
+      54390,
+      54394,
+      54398,
+      54402,
+      54406,
+      54410,
+      54414,
+      54418,
+      54422,
+      54426,
+      54430,
+      54434,
+      54438,
+      54442,
+      54446,
+      54450,
+      54484,
+      54488,
+      54492,
+      54496,
+      54500,
+      54504,
+      54508,
+      54512,
+      54516,
+      54520,
+      54526
+    ],
+    "definition": "expert envelope; includes FC/activation and local gaps"
+  },
+  {
+    "node": "L0:r11:prepare",
+    "physical_rank": 19,
+    "source_cost_ms": 1.5365919589996337,
+    "target_cost_ms": 1.2224092483520508,
+    "target_start_ms": 66.21214294433594,
+    "target_end_ms": 67.43455219268799,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54270
+    ],
+    "definition": "router exit to notify start; reserved preparation"
+  },
+  {
+    "node": "L0:r11:unpermute",
+    "physical_rank": 19,
+    "source_cost_ms": 0.31026172637939453,
+    "target_cost_ms": 0.18952131271362305,
+    "target_start_ms": 84.3277940750122,
+    "target_end_ms": 84.51731538772583,
+    "reserved_ready_ms": 0.07917213439941406,
+    "events": [
+      54538
+    ],
+    "definition": "FusedCombine visible device envelope, not pure unpermute proof"
+  },
+  {
+    "node": "L0:r11:tail0",
+    "physical_rank": 19,
+    "source_cost_ms": 0.17555267810821534,
+    "target_cost_ms": 0.18140077590942383,
+    "target_start_ms": 84.92511796951294,
+    "target_end_ms": 85.10651874542236,
+    "reserved_ready_ms": 0.4078025817871094,
+    "events": [
+      54566
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r11:tail1",
+    "physical_rank": 19,
+    "source_cost_ms": 0.18055295944213867,
+    "target_cost_ms": 0.1788015365600586,
+    "target_start_ms": 85.12691926956177,
+    "target_end_ms": 85.30572080612183,
+    "reserved_ready_ms": 0.020400524139404297,
+    "events": [
+      54578
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r11:A3:trace_handoff",
+    "physical_rank": 19,
+    "source_cost_ms": 7.591946864128113,
+    "target_cost_ms": 7.6302947998046875,
+    "target_start_ms": 36.685811042785645,
+    "target_end_ms": 44.31610584259033,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53972,
+      53978
+    ],
+    "definition": "CP2 end to A3 start; two index_select tails"
+  },
+  {
+    "node": "L0:r12:A0",
+    "physical_rank": 20,
+    "source_cost_ms": 7.2878166198730465,
+    "target_cost_ms": 7.327434062957764,
+    "target_start_ms": 0.0,
+    "target_end_ms": 7.327434062957764,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53581,
+      53585,
+      53589,
+      53593,
+      53597,
+      53601,
+      53605,
+      53609,
+      53621,
+      53625,
+      53629,
+      53643
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r12:A1",
+    "physical_rank": 20,
+    "source_cost_ms": 0.9723832368850708,
+    "target_cost_ms": 0.9911637306213379,
+    "target_start_ms": 7.3332743644714355,
+    "target_end_ms": 8.324438095092773,
+    "reserved_ready_ms": 0.005840301513671875,
+    "events": [
+      53665
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r12:A2",
+    "physical_rank": 20,
+    "source_cost_ms": 0.5882062196731568,
+    "target_cost_ms": 0.5968828201293945,
+    "target_start_ms": 8.328358173370361,
+    "target_end_ms": 8.925240993499756,
+    "reserved_ready_ms": 0.003920078277587891,
+    "events": [
+      53693
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r12:A3",
+    "physical_rank": 20,
+    "source_cost_ms": 8.76315896511078,
+    "target_cost_ms": 8.843879699707031,
+    "target_start_ms": 45.048245906829834,
+    "target_end_ms": 53.892125606536865,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53731
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r12:router",
+    "physical_rank": 20,
+    "source_cost_ms": 5.5982317447662355,
+    "target_cost_ms": 5.524904727935791,
+    "target_start_ms": 61.5148811340332,
+    "target_end_ms": 67.039785861969,
+    "reserved_ready_ms": 0.0035200119018554688,
+    "events": [
+      53763,
+      53777,
+      53781,
+      53785,
+      53789,
+      53793,
+      53797,
+      53801,
+      53805,
+      53811,
+      53815,
+      53819,
+      53823,
+      53827,
+      53833,
+      53837,
+      53841,
+      53845,
+      53849,
+      53853,
+      53857,
+      53861,
+      53865,
+      53869,
+      53873,
+      53879,
+      53883,
+      53887,
+      53891,
+      53895,
+      53899,
+      53903,
+      53917,
+      53927,
+      53931
+    ],
+    "definition": "local routing envelope"
+  },
+  {
+    "node": "L0:r12:expert",
+    "physical_rank": 20,
+    "source_cost_ms": 12.292615413665771,
+    "target_cost_ms": 5.16066312789917,
+    "target_start_ms": 72.61953210830688,
+    "target_end_ms": 77.78019523620605,
+    "reserved_ready_ms": 0.43500185012817383,
+    "events": [
+      54071,
+      54075,
+      54079,
+      54083,
+      54087,
+      54107,
+      54133,
+      54137,
+      54141,
+      54145,
+      54149,
+      54153,
+      54157,
+      54161,
+      54165,
+      54169,
+      54173,
+      54177,
+      54203,
+      54207,
+      54211,
+      54215,
+      54219,
+      54223,
+      54229
+    ],
+    "definition": "expert envelope; includes FC/activation and local gaps"
+  },
+  {
+    "node": "L0:r12:prepare",
+    "physical_rank": 20,
+    "source_cost_ms": 1.4685328483581543,
+    "target_cost_ms": 1.1284847259521484,
+    "target_start_ms": 67.039785861969,
+    "target_end_ms": 68.16827058792114,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54021
+    ],
+    "definition": "router exit to notify start; reserved preparation"
+  },
+  {
+    "node": "L0:r12:unpermute",
+    "physical_rank": 20,
+    "source_cost_ms": 0.30279719829559326,
+    "target_cost_ms": 0.1941208839416504,
+    "target_start_ms": 84.35506534576416,
+    "target_end_ms": 84.54918622970581,
+    "reserved_ready_ms": 0.10644340515136719,
+    "events": [
+      54241
+    ],
+    "definition": "FusedCombine visible device envelope, not pure unpermute proof"
+  },
+  {
+    "node": "L0:r12:tail0",
+    "physical_rank": 20,
+    "source_cost_ms": 0.1756286144256592,
+    "target_cost_ms": 0.1844010353088379,
+    "target_start_ms": 84.94306802749634,
+    "target_end_ms": 85.12746906280518,
+    "reserved_ready_ms": 0.39388179779052734,
+    "events": [
+      54269
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r12:tail1",
+    "physical_rank": 20,
+    "source_cost_ms": 0.17920072078704835,
+    "target_cost_ms": 0.17896080017089844,
+    "target_start_ms": 85.15714931488037,
+    "target_end_ms": 85.33611011505127,
+    "reserved_ready_ms": 0.029680252075195312,
+    "events": [
+      54281
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r12:A3:trace_handoff",
+    "physical_rank": 20,
+    "source_cost_ms": 7.607994866371155,
+    "target_cost_ms": 7.535993576049805,
+    "target_start_ms": 37.51225233078003,
+    "target_end_ms": 45.048245906829834,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53717,
+      53723
+    ],
+    "definition": "CP2 end to A3 start; two index_select tails"
+  },
+  {
+    "node": "L0:r13:A0",
+    "physical_rank": 21,
+    "source_cost_ms": 7.275112652778626,
+    "target_cost_ms": 7.535242080688477,
+    "target_start_ms": 0.6863813400268555,
+    "target_end_ms": 8.221623420715332,
+    "reserved_ready_ms": 0.6863813400268555,
+    "events": [
+      81843,
+      81847,
+      81851,
+      81855,
+      81859,
+      81863,
+      81867,
+      81871,
+      81883,
+      81887,
+      81891,
+      81905
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r13:A1",
+    "physical_rank": 21,
+    "source_cost_ms": 0.960904312133789,
+    "target_cost_ms": 0.9748849868774414,
+    "target_start_ms": 8.223702907562256,
+    "target_end_ms": 9.198587894439697,
+    "reserved_ready_ms": 0.002079486846923828,
+    "events": [
+      81927
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r13:A2",
+    "physical_rank": 21,
+    "source_cost_ms": 0.5805266380310059,
+    "target_cost_ms": 0.5950832366943359,
+    "target_start_ms": 9.201589107513428,
+    "target_end_ms": 9.796672344207764,
+    "reserved_ready_ms": 0.0030012130737304688,
+    "events": [
+      81955
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r13:A3",
+    "physical_rank": 21,
+    "source_cost_ms": 8.682799291610717,
+    "target_cost_ms": 8.904290199279785,
+    "target_start_ms": 44.956785678863525,
+    "target_end_ms": 53.86107587814331,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      81993
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r13:router",
+    "physical_rank": 21,
+    "source_cost_ms": 5.617001152038574,
+    "target_cost_ms": 5.575470447540283,
+    "target_start_ms": 61.575318336486816,
+    "target_end_ms": 67.1507887840271,
+    "reserved_ready_ms": 0.004960536956787109,
+    "events": [
+      82025,
+      82039,
+      82043,
+      82047,
+      82051,
+      82055,
+      82059,
+      82063,
+      82067,
+      82073,
+      82077,
+      82081,
+      82085,
+      82089,
+      82095,
+      82099,
+      82103,
+      82107,
+      82111,
+      82115,
+      82119,
+      82123,
+      82127,
+      82131,
+      82135,
+      82141,
+      82145,
+      82149,
+      82153,
+      82157,
+      82161,
+      82165,
+      82179,
+      82189,
+      82193
+    ],
+    "definition": "local routing envelope"
+  },
+  {
+    "node": "L0:r13:expert",
+    "physical_rank": 21,
+    "source_cost_ms": 11.838609194755554,
+    "target_cost_ms": 4.564825057983398,
+    "target_start_ms": 72.69997978210449,
+    "target_end_ms": 77.26480484008789,
+    "reserved_ready_ms": 0.5030426979064941,
+    "events": [
+      82325,
+      82329,
+      82333,
+      82337,
+      82341,
+      82361,
+      82387,
+      82391,
+      82395,
+      82399,
+      82403,
+      82407,
+      82411,
+      82415,
+      82419,
+      82423,
+      82427,
+      82431,
+      82457,
+      82461,
+      82465,
+      82469,
+      82473,
+      82477,
+      82483
+    ],
+    "definition": "expert envelope; includes FC/activation and local gaps"
+  },
+  {
+    "node": "L0:r13:prepare",
+    "physical_rank": 21,
+    "source_cost_ms": 1.4479345321655273,
+    "target_cost_ms": 1.258007526397705,
+    "target_start_ms": 67.1507887840271,
+    "target_end_ms": 68.4087963104248,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      82275
+    ],
+    "definition": "router exit to notify start; reserved preparation"
+  },
+  {
+    "node": "L0:r13:unpermute",
+    "physical_rank": 21,
+    "source_cost_ms": 0.29904952049255373,
+    "target_cost_ms": 0.19628095626831055,
+    "target_start_ms": 84.35796403884888,
+    "target_end_ms": 84.55424499511719,
+    "reserved_ready_ms": 0.10934209823608398,
+    "events": [
+      82495
+    ],
+    "definition": "FusedCombine visible device envelope, not pure unpermute proof"
+  },
+  {
+    "node": "L0:r13:tail0",
+    "physical_rank": 21,
+    "source_cost_ms": 0.17627267837524413,
+    "target_cost_ms": 0.18300104141235352,
+    "target_start_ms": 84.96056795120239,
+    "target_end_ms": 85.14356899261475,
+    "reserved_ready_ms": 0.4063229560852051,
+    "events": [
+      82523
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r13:tail1",
+    "physical_rank": 21,
+    "source_cost_ms": 0.1797489643096924,
+    "target_cost_ms": 0.17928075790405273,
+    "target_start_ms": 85.1639289855957,
+    "target_end_ms": 85.34320974349976,
+    "reserved_ready_ms": 0.02035999298095703,
+    "events": [
+      82535
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r13:A3:trace_handoff",
+    "physical_rank": 21,
+    "source_cost_ms": 7.5664819240570065,
+    "target_cost_ms": 7.4524407386779785,
+    "target_start_ms": 37.50434494018555,
+    "target_end_ms": 44.956785678863525,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      81979,
+      81985
+    ],
+    "definition": "CP2 end to A3 start; two index_select tails"
+  },
+  {
+    "node": "L0:r14:A0",
+    "physical_rank": 22,
+    "source_cost_ms": 7.2525224685668945,
+    "target_cost_ms": 7.890124320983887,
+    "target_start_ms": 1.6628379821777344,
+    "target_end_ms": 9.552962303161621,
+    "reserved_ready_ms": 1.6628379821777344,
+    "events": [
+      53751,
+      53755,
+      53759,
+      53763,
+      53767,
+      53771,
+      53775,
+      53779,
+      53791,
+      53795,
+      53799,
+      53813
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r14:A1",
+    "physical_rank": 22,
+    "source_cost_ms": 0.975269079208374,
+    "target_cost_ms": 0.9815998077392578,
+    "target_start_ms": 9.559246063232422,
+    "target_end_ms": 10.54084587097168,
+    "reserved_ready_ms": 0.006283760070800781,
+    "events": [
+      53835
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r14:A2",
+    "physical_rank": 22,
+    "source_cost_ms": 0.5929751396179199,
+    "target_cost_ms": 0.5890007019042969,
+    "target_start_ms": 10.548245906829834,
+    "target_end_ms": 11.13724660873413,
+    "reserved_ready_ms": 0.007400035858154297,
+    "events": [
+      53863
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r14:A3",
+    "physical_rank": 22,
+    "source_cost_ms": 8.796731448173523,
+    "target_cost_ms": 8.738082885742188,
+    "target_start_ms": 46.47505807876587,
+    "target_end_ms": 55.21314096450806,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53901
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r14:router",
+    "physical_rank": 22,
+    "source_cost_ms": 5.684630537033081,
+    "target_cost_ms": 5.64476203918457,
+    "target_start_ms": 62.73566293716431,
+    "target_end_ms": 68.38042497634888,
+    "reserved_ready_ms": 0.0033998489379882812,
+    "events": [
+      53933,
+      53947,
+      53951,
+      53955,
+      53959,
+      53963,
+      53967,
+      53971,
+      53975,
+      53981,
+      53985,
+      53989,
+      53993,
+      53997,
+      54003,
+      54007,
+      54011,
+      54015,
+      54019,
+      54023,
+      54027,
+      54031,
+      54035,
+      54039,
+      54043,
+      54049,
+      54053,
+      54057,
+      54061,
+      54065,
+      54069,
+      54073,
+      54087,
+      54095,
+      54099
+    ],
+    "definition": "local routing envelope"
+  },
+  {
+    "node": "L0:r14:expert",
+    "physical_rank": 22,
+    "source_cost_ms": 13.245208144187927,
+    "target_cost_ms": 7.2070417404174805,
+    "target_start_ms": 73.30910730361938,
+    "target_end_ms": 80.51614904403687,
+    "reserved_ready_ms": 0.6664414405822754,
+    "events": [
+      54231,
+      54235,
+      54239,
+      54243,
+      54247,
+      54267,
+      54297,
+      54301,
+      54305,
+      54309,
+      54313,
+      54317,
+      54321,
+      54325,
+      54329,
+      54333,
+      54337,
+      54341,
+      54345,
+      54349,
+      54379,
+      54383,
+      54387,
+      54391,
+      54395,
+      54399,
+      54403,
+      54407,
+      54413
+    ],
+    "definition": "expert envelope; includes FC/activation and local gaps"
+  },
+  {
+    "node": "L0:r14:prepare",
+    "physical_rank": 22,
+    "source_cost_ms": 1.6374247074127197,
+    "target_cost_ms": 1.659961223602295,
+    "target_start_ms": 68.38042497634888,
+    "target_end_ms": 70.04038619995117,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54181
+    ],
+    "definition": "router exit to notify start; reserved preparation"
+  },
+  {
+    "node": "L0:r14:unpermute",
+    "physical_rank": 22,
+    "source_cost_ms": 0.2941175699234009,
+    "target_cost_ms": 0.17960023880004883,
+    "target_start_ms": 84.28134965896606,
+    "target_end_ms": 84.46094989776611,
+    "reserved_ready_ms": 0.032727718353271484,
+    "events": [
+      54425
+    ],
+    "definition": "FusedCombine visible device envelope, not pure unpermute proof"
+  },
+  {
+    "node": "L0:r14:tail0",
+    "physical_rank": 22,
+    "source_cost_ms": 0.17587296962738036,
+    "target_cost_ms": 0.1841602325439453,
+    "target_start_ms": 84.90719032287598,
+    "target_end_ms": 85.09135055541992,
+    "reserved_ready_ms": 0.4462404251098633,
+    "events": [
+      54453
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r14:tail1",
+    "physical_rank": 22,
+    "source_cost_ms": 0.17966909408569337,
+    "target_cost_ms": 0.1807994842529297,
+    "target_start_ms": 85.11479091644287,
+    "target_end_ms": 85.2955904006958,
+    "reserved_ready_ms": 0.02344036102294922,
+    "events": [
+      54465
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r14:A3:trace_handoff",
+    "physical_rank": 22,
+    "source_cost_ms": 7.55565664768219,
+    "target_cost_ms": 7.640322208404541,
+    "target_start_ms": 38.83473587036133,
+    "target_end_ms": 46.47505807876587,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53887,
+      53893
+    ],
+    "definition": "CP2 end to A3 start; two index_select tails"
+  },
+  {
+    "node": "L0:r15:A0",
+    "physical_rank": 23,
+    "source_cost_ms": 7.28579204082489,
+    "target_cost_ms": 7.200148105621338,
+    "target_start_ms": 0.26261281967163086,
+    "target_end_ms": 7.462760925292969,
+    "reserved_ready_ms": 0.26261281967163086,
+    "events": [
+      53862,
+      53866,
+      53870,
+      53874,
+      53878,
+      53882,
+      53886,
+      53890,
+      53902,
+      53906,
+      53910,
+      53924
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r15:A1",
+    "physical_rank": 23,
+    "source_cost_ms": 0.9682475805282593,
+    "target_cost_ms": 0.9948043823242188,
+    "target_start_ms": 7.468280792236328,
+    "target_end_ms": 8.463085174560547,
+    "reserved_ready_ms": 0.005519866943359375,
+    "events": [
+      53946
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r15:A2",
+    "physical_rank": 23,
+    "source_cost_ms": 0.5866742849349975,
+    "target_cost_ms": 0.5947623252868652,
+    "target_start_ms": 8.466164588928223,
+    "target_end_ms": 9.060926914215088,
+    "reserved_ready_ms": 0.0030794143676757812,
+    "events": [
+      53974
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r15:A3",
+    "physical_rank": 23,
+    "source_cost_ms": 8.587380766868591,
+    "target_cost_ms": 8.640073776245117,
+    "target_start_ms": 46.49139404296875,
+    "target_end_ms": 55.13146781921387,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54012
+    ],
+    "definition": "same source LOCAL slot envelope; runtime association"
+  },
+  {
+    "node": "L0:r15:router",
+    "physical_rank": 23,
+    "source_cost_ms": 5.593041300773621,
+    "target_cost_ms": 5.521580696105957,
+    "target_start_ms": 62.73805809020996,
+    "target_end_ms": 68.25963878631592,
+    "reserved_ready_ms": 0.010799884796142578,
+    "events": [
+      54044,
+      54058,
+      54062,
+      54066,
+      54070,
+      54074,
+      54078,
+      54082,
+      54086,
+      54092,
+      54096,
+      54100,
+      54104,
+      54108,
+      54114,
+      54118,
+      54122,
+      54126,
+      54130,
+      54134,
+      54138,
+      54142,
+      54146,
+      54150,
+      54154,
+      54160,
+      54164,
+      54168,
+      54172,
+      54176,
+      54180,
+      54184,
+      54198,
+      54208,
+      54212
+    ],
+    "definition": "local routing envelope"
+  },
+  {
+    "node": "L0:r15:expert",
+    "physical_rank": 23,
+    "source_cost_ms": 12.238632559776306,
+    "target_cost_ms": 7.598989963531494,
+    "target_start_ms": 72.73625707626343,
+    "target_end_ms": 80.33524703979492,
+    "reserved_ready_ms": 0.4744420051574707,
+    "events": [
+      54346,
+      54350,
+      54354,
+      54358,
+      54362,
+      54382,
+      54410,
+      54414,
+      54418,
+      54422,
+      54426,
+      54430,
+      54434,
+      54438,
+      54442,
+      54446,
+      54450,
+      54454,
+      54458,
+      54486,
+      54490,
+      54494,
+      54498,
+      54502,
+      54506,
+      54510,
+      54516
+    ],
+    "definition": "expert envelope; includes FC/activation and local gaps"
+  },
+  {
+    "node": "L0:r15:prepare",
+    "physical_rank": 23,
+    "source_cost_ms": 1.4986693859100342,
+    "target_cost_ms": 1.1306052207946777,
+    "target_start_ms": 68.25963878631592,
+    "target_end_ms": 69.3902440071106,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54296
+    ],
+    "definition": "router exit to notify start; reserved preparation"
+  },
+  {
+    "node": "L0:r15:unpermute",
+    "physical_rank": 23,
+    "source_cost_ms": 0.30333311557769777,
+    "target_cost_ms": 0.17840099334716797,
+    "target_start_ms": 84.2486219406128,
+    "target_end_ms": 84.42702293395996,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54528
+    ],
+    "definition": "FusedCombine visible device envelope, not pure unpermute proof"
+  },
+  {
+    "node": "L0:r15:tail0",
+    "physical_rank": 23,
+    "source_cost_ms": 0.17576882839202881,
+    "target_cost_ms": 0.18387985229492188,
+    "target_start_ms": 84.84766483306885,
+    "target_end_ms": 85.03154468536377,
+    "reserved_ready_ms": 0.4206418991088867,
+    "events": [
+      54556
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r15:tail1",
+    "physical_rank": 23,
+    "source_cost_ms": 0.17886083126068114,
+    "target_cost_ms": 0.18180084228515625,
+    "target_start_ms": 85.0602650642395,
+    "target_end_ms": 85.24206590652466,
+    "reserved_ready_ms": 0.028720378875732422,
+    "events": [
+      54568
+    ],
+    "definition": "layer tail Add"
+  },
+  {
+    "node": "L0:r15:A3:trace_handoff",
+    "physical_rank": 23,
+    "source_cost_ms": 7.495696353912353,
+    "target_cost_ms": 7.697230339050293,
+    "target_start_ms": 38.79416370391846,
+    "target_end_ms": 46.49139404296875,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53998,
+      54004
+    ],
+    "definition": "CP2 end to A3 start; two index_select tails"
+  },
+  {
+    "node": "L0:r8:CP0",
+    "physical_rank": 16,
+    "source_cost_ms": 11.667958736419678,
+    "target_cost_ms": 11.511842250823975,
+    "target_start_ms": 7.720067501068115,
+    "target_end_ms": 19.23190975189209,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53655
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r8:CP1",
+    "physical_rank": 16,
+    "source_cost_ms": 10.85743088722229,
+    "target_cost_ms": 10.952982902526855,
+    "target_start_ms": 19.234846115112305,
+    "target_end_ms": 30.18782901763916,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53677
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r8:CP2",
+    "physical_rank": 16,
+    "source_cost_ms": 6.8982826471328735,
+    "target_cost_ms": 6.819306373596191,
+    "target_start_ms": 30.198970794677734,
+    "target_end_ms": 37.018277168273926,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53705
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r8:CP3",
+    "physical_rank": 16,
+    "source_cost_ms": 7.567042112350464,
+    "target_cost_ms": 7.526182651519775,
+    "target_start_ms": 53.53006649017334,
+    "target_end_ms": 61.056249141693115,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53751
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r9:CP0",
+    "physical_rank": 17,
+    "source_cost_ms": 11.574413084983826,
+    "target_cost_ms": 11.51477861404419,
+    "target_start_ms": 7.720067501068115,
+    "target_end_ms": 19.234846115112305,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53825
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r9:CP1",
+    "physical_rank": 17,
+    "source_cost_ms": 10.80484299659729,
+    "target_cost_ms": 10.96412467956543,
+    "target_start_ms": 19.234846115112305,
+    "target_end_ms": 30.198970794677734,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53847
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r9:CP2",
+    "physical_rank": 17,
+    "source_cost_ms": 6.901494145393372,
+    "target_cost_ms": 6.80482816696167,
+    "target_start_ms": 30.198970794677734,
+    "target_end_ms": 37.003798961639404,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53875
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r9:CP3",
+    "physical_rank": 17,
+    "source_cost_ms": 7.5840754270553585,
+    "target_cost_ms": 7.591151714324951,
+    "target_start_ms": 53.53006649017334,
+    "target_end_ms": 61.12121820449829,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53921
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r10:CP0",
+    "physical_rank": 18,
+    "source_cost_ms": 11.553847670555115,
+    "target_cost_ms": 11.536386013031006,
+    "target_start_ms": 7.450881004333496,
+    "target_end_ms": 18.987267017364502,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      72143
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r10:CP1",
+    "physical_rank": 18,
+    "source_cost_ms": 10.905086660385132,
+    "target_cost_ms": 10.643123149871826,
+    "target_start_ms": 19.09948492050171,
+    "target_end_ms": 29.742608070373535,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      72165
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r10:CP2",
+    "physical_rank": 18,
+    "source_cost_ms": 6.83482186794281,
+    "target_cost_ms": 6.854838848114014,
+    "target_start_ms": 29.742608070373535,
+    "target_end_ms": 36.59744691848755,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      72193
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r10:CP3",
+    "physical_rank": 18,
+    "source_cost_ms": 7.5043429136276245,
+    "target_cost_ms": 7.721537113189697,
+    "target_start_ms": 53.090688705444336,
+    "target_end_ms": 60.81222581863403,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      72239
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r11:CP0",
+    "physical_rank": 19,
+    "source_cost_ms": 11.547713422775269,
+    "target_cost_ms": 11.648603916168213,
+    "target_start_ms": 7.450881004333496,
+    "target_end_ms": 19.09948492050171,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53910
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r11:CP1",
+    "physical_rank": 19,
+    "source_cost_ms": 10.861955857276916,
+    "target_cost_ms": 10.552476406097412,
+    "target_start_ms": 19.09948492050171,
+    "target_end_ms": 29.65196132659912,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53932
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r11:CP2",
+    "physical_rank": 19,
+    "source_cost_ms": 6.870615267753601,
+    "target_cost_ms": 6.943202972412109,
+    "target_start_ms": 29.742608070373535,
+    "target_end_ms": 36.685811042785645,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53960
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r11:CP3",
+    "physical_rank": 19,
+    "source_cost_ms": 7.525568222999572,
+    "target_cost_ms": 7.554733753204346,
+    "target_start_ms": 53.090688705444336,
+    "target_end_ms": 60.64542245864868,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54006
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r12:CP0",
+    "physical_rank": 20,
+    "source_cost_ms": 11.526314997673035,
+    "target_cost_ms": 11.57518720626831,
+    "target_start_ms": 8.221623420715332,
+    "target_end_ms": 19.796810626983643,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53655
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r12:CP1",
+    "physical_rank": 20,
+    "source_cost_ms": 10.915123057365417,
+    "target_cost_ms": 10.905534267425537,
+    "target_start_ms": 19.85672664642334,
+    "target_end_ms": 30.762260913848877,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53677
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r12:CP2",
+    "physical_rank": 20,
+    "source_cost_ms": 6.842083048820496,
+    "target_cost_ms": 6.749991416931152,
+    "target_start_ms": 30.762260913848877,
+    "target_end_ms": 37.51225233078003,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53705
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r12:CP3",
+    "physical_rank": 20,
+    "source_cost_ms": 7.60779185295105,
+    "target_cost_ms": 7.619235515594482,
+    "target_start_ms": 53.892125606536865,
+    "target_end_ms": 61.51136112213135,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53751
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r13:CP0",
+    "physical_rank": 21,
+    "source_cost_ms": 11.506525421142578,
+    "target_cost_ms": 11.635103225708008,
+    "target_start_ms": 8.221623420715332,
+    "target_end_ms": 19.85672664642334,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      81917
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r13:CP1",
+    "physical_rank": 21,
+    "source_cost_ms": 10.962532544136048,
+    "target_cost_ms": 10.869141101837158,
+    "target_start_ms": 19.85672664642334,
+    "target_end_ms": 30.725867748260498,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      81939
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r13:CP2",
+    "physical_rank": 21,
+    "source_cost_ms": 6.826215744018555,
+    "target_cost_ms": 6.74208402633667,
+    "target_start_ms": 30.762260913848877,
+    "target_end_ms": 37.50434494018555,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      81967
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r13:CP3",
+    "physical_rank": 21,
+    "source_cost_ms": 7.573055768013001,
+    "target_cost_ms": 7.678232192993164,
+    "target_start_ms": 53.892125606536865,
+    "target_end_ms": 61.57035779953003,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      82013
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r14:CP0",
+    "physical_rank": 22,
+    "source_cost_ms": 11.567056131362914,
+    "target_cost_ms": 11.651127815246582,
+    "target_start_ms": 9.552962303161621,
+    "target_end_ms": 21.204090118408203,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53825
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r14:CP1",
+    "physical_rank": 22,
+    "source_cost_ms": 10.87605710029602,
+    "target_cost_ms": 10.784557342529297,
+    "target_start_ms": 21.258775234222412,
+    "target_end_ms": 32.04333257675171,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53847
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r14:CP2",
+    "physical_rank": 22,
+    "source_cost_ms": 6.887042784690857,
+    "target_cost_ms": 6.791403293609619,
+    "target_start_ms": 32.04333257675171,
+    "target_end_ms": 38.83473587036133,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53875
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r14:CP3",
+    "physical_rank": 22,
+    "source_cost_ms": 7.623325324058532,
+    "target_cost_ms": 7.519122123718262,
+    "target_start_ms": 55.21314096450806,
+    "target_end_ms": 62.73226308822632,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53921
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r15:CP0",
+    "physical_rank": 23,
+    "source_cost_ms": 11.568534922599792,
+    "target_cost_ms": 11.705812931060791,
+    "target_start_ms": 9.552962303161621,
+    "target_end_ms": 21.258775234222412,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53936
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r15:CP1",
+    "physical_rank": 23,
+    "source_cost_ms": 10.917650628089905,
+    "target_cost_ms": 10.770522117614746,
+    "target_start_ms": 21.258775234222412,
+    "target_end_ms": 32.02929735183716,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53958
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r15:CP2",
+    "physical_rank": 23,
+    "source_cost_ms": 6.91599326133728,
+    "target_cost_ms": 6.750831127166748,
+    "target_start_ms": 32.04333257675171,
+    "target_end_ms": 38.79416370391846,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53986
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:r15:CP3",
+    "physical_rank": 23,
+    "source_cost_ms": 7.574149465560913,
+    "target_cost_ms": 7.514117240905762,
+    "target_start_ms": 55.21314096450806,
+    "target_end_ms": 62.72725820541382,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54032
+    ],
+    "definition": "effective completion after both CP producers; not pure service"
+  },
+  {
+    "node": "L0:notify",
+    "physical_rank": null,
+    "source_cost_ms": 0.05689821243286133,
+    "target_cost_ms": 0.05664682388305664,
+    "target_start_ms": 70.04038619995117,
+    "target_end_ms": 70.09703302383423,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      {
+        "rank": 16,
+        "event": 54021
+      },
+      {
+        "rank": 17,
+        "event": 54185
+      },
+      {
+        "rank": 18,
+        "event": 72509
+      },
+      {
+        "rank": 19,
+        "event": 54270
+      },
+      {
+        "rank": 20,
+        "event": 54021
+      },
+      {
+        "rank": 21,
+        "event": 82275
+      },
+      {
+        "rank": 22,
+        "event": 54181
+      },
+      {
+        "rank": 23,
+        "event": 54296
+      }
+    ],
+    "definition": "source shared-notify convention"
+  },
+  {
+    "node": "L0:r8:dispatch",
+    "physical_rank": 16,
+    "source_cost_ms": 2.937056612968445,
+    "target_cost_ms": 2.11421537399292,
+    "target_start_ms": 70.09703302383423,
+    "target_end_ms": 72.21124839782715,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53947,
+      53957,
+      53961,
+      53967,
+      53973,
+      53983,
+      53987,
+      53991,
+      53995,
+      53999,
+      54003,
+      54007,
+      54017,
+      54021,
+      54041,
+      54045,
+      54051
+    ],
+    "definition": "effective dispatch exit after shared notify"
+  },
+  {
+    "node": "L0:r9:dispatch",
+    "physical_rank": 17,
+    "source_cost_ms": 3.0814464569091795,
+    "target_cost_ms": 2.186591148376465,
+    "target_start_ms": 70.09703302383423,
+    "target_end_ms": 72.2836241722107,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54115,
+      54121,
+      54125,
+      54131,
+      54137,
+      54147,
+      54151,
+      54155,
+      54159,
+      54163,
+      54167,
+      54171,
+      54181,
+      54185,
+      54205,
+      54209,
+      54215
+    ],
+    "definition": "effective dispatch exit after shared notify"
+  },
+  {
+    "node": "L0:r10:dispatch",
+    "physical_rank": 18,
+    "source_cost_ms": 2.8298933267593385,
+    "target_cost_ms": 2.0343785285949707,
+    "target_start_ms": 70.09703302383423,
+    "target_end_ms": 72.1314115524292,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      72437,
+      72445,
+      72449,
+      72455,
+      72461,
+      72471,
+      72475,
+      72479,
+      72483,
+      72487,
+      72491,
+      72495,
+      72505,
+      72509,
+      72529,
+      72533,
+      72539
+    ],
+    "definition": "effective dispatch exit after shared notify"
+  },
+  {
+    "node": "L0:r11:dispatch",
+    "physical_rank": 19,
+    "source_cost_ms": 2.9934762716293335,
+    "target_cost_ms": 2.336155414581299,
+    "target_start_ms": 70.09703302383423,
+    "target_end_ms": 72.43318843841553,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54200,
+      54206,
+      54210,
+      54216,
+      54222,
+      54232,
+      54236,
+      54240,
+      54244,
+      54248,
+      54252,
+      54256,
+      54266,
+      54270,
+      54290,
+      54294,
+      54300
+    ],
+    "definition": "effective dispatch exit after shared notify"
+  },
+  {
+    "node": "L0:r12:dispatch",
+    "physical_rank": 20,
+    "source_cost_ms": 3.0234955310821534,
+    "target_cost_ms": 2.0874972343444824,
+    "target_start_ms": 70.09703302383423,
+    "target_end_ms": 72.18453025817871,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      53947,
+      53957,
+      53961,
+      53967,
+      53973,
+      53983,
+      53987,
+      53991,
+      53995,
+      53999,
+      54003,
+      54007,
+      54017,
+      54021,
+      54041,
+      54045,
+      54051
+    ],
+    "definition": "effective dispatch exit after shared notify"
+  },
+  {
+    "node": "L0:r13:dispatch",
+    "physical_rank": 21,
+    "source_cost_ms": 2.8670002222061157,
+    "target_cost_ms": 2.0999040603637695,
+    "target_start_ms": 70.09703302383423,
+    "target_end_ms": 72.196937084198,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      82205,
+      82211,
+      82215,
+      82221,
+      82227,
+      82237,
+      82241,
+      82245,
+      82249,
+      82253,
+      82257,
+      82261,
+      82271,
+      82275,
+      82295,
+      82299,
+      82305
+    ],
+    "definition": "effective dispatch exit after shared notify"
+  },
+  {
+    "node": "L0:r14:dispatch",
+    "physical_rank": 22,
+    "source_cost_ms": 3.031014084815979,
+    "target_cost_ms": 2.545632839202881,
+    "target_start_ms": 70.09703302383423,
+    "target_end_ms": 72.64266586303711,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54111,
+      54117,
+      54121,
+      54127,
+      54133,
+      54143,
+      54147,
+      54151,
+      54155,
+      54159,
+      54163,
+      54167,
+      54177,
+      54181,
+      54201,
+      54205,
+      54211
+    ],
+    "definition": "effective dispatch exit after shared notify"
+  },
+  {
+    "node": "L0:r15:dispatch",
+    "physical_rank": 23,
+    "source_cost_ms": 3.607692289352417,
+    "target_cost_ms": 2.1647820472717285,
+    "target_start_ms": 70.09703302383423,
+    "target_end_ms": 72.26181507110596,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      54226,
+      54232,
+      54236,
+      54242,
+      54248,
+      54258,
+      54262,
+      54266,
+      54270,
+      54274,
+      54278,
+      54282,
+      54292,
+      54296,
+      54316,
+      54320,
+      54326
+    ],
+    "definition": "effective dispatch exit after shared notify"
+  },
+  {
+    "node": "L0:combine",
+    "physical_rank": null,
+    "source_cost_ms": 1.4319656133651733,
+    "target_cost_ms": 1.0720329284667969,
+    "target_start_ms": 83.176589012146,
+    "target_end_ms": 84.2486219406128,
+    "reserved_ready_ms": 0.0,
+    "events": [
+      {
+        "rank": 16,
+        "events": [
+          54217
+        ]
+      },
+      {
+        "rank": 17,
+        "events": [
+          54465
+        ]
+      },
+      {
+        "rank": 18,
+        "events": [
+          72741
+        ]
+      },
+      {
+        "rank": 19,
+        "events": [
+          54538
+        ]
+      },
+      {
+        "rank": 20,
+        "events": [
+          54241
+        ]
+      },
+      {
+        "rank": 21,
+        "events": [
+          82495
+        ]
+      },
+      {
+        "rank": 22,
+        "events": [
+          54425
+        ]
+      },
+      {
+        "rank": 23,
+        "events": [
+          54528
+        ]
+      }
+    ],
+    "definition": "source EP8 coupled completion before local visible combine"
+  }
+]

@@ -31,7 +31,7 @@ def process(task):
         assert events;logs[rank]=events
     anchor_layouts=sorted([e for (call,event),e in logs[first].items() if event=='dispatch_layout'],key=lambda e:e['record']['timestamp_ns'])
     times=[e['record']['timestamp_ns'] for e in anchor_layouts]
-    for iteration in ITERATIONS:
+    for iteration in options.get('iterations',ITERATIONS):
         p=Path(paths[str(iteration)][str(first)]);buf=p.read_bytes();inputs[str(p)]=hashlib.sha256(buf).hexdigest();trace=json.loads(buf);del buf
         es=trace['traceEvents'];base=trace['baseTimeNanoseconds'];assert trace['distributedInfo']['rank']==first
         ep=next(g['ranks'] for g in trace['distributedInfo']['pg_config'] if g['pg_desc']=='EXPERT_MODEL_PARALLEL_GROUP');assert ep==ranks

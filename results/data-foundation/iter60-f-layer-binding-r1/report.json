@@ -1,0 +1,28 @@
+{
+  "status": "PASS_CONDITIONAL_SAME_SAMPLE_LAYER_REPLAY",
+  "scope": "256 iter60 PP1 MB0 first executed layer F, ranks16–23 only",
+  "nodes": 260,
+  "edges": 330,
+  "conflicts": 0,
+  "origin_absolute_ms": 2510067726.899425,
+  "rank_map": {
+    "8": 16,
+    "9": 17,
+    "10": 18,
+    "11": 19,
+    "12": 20,
+    "13": 21,
+    "14": 22,
+    "15": 23
+  },
+  "limits": [
+    "First executed layer; global layer identity requires framework mapping.",
+    "Target-observed reserved readiness: accounting closure, not independent prediction or full causal validation.",
+    "EP8 second cohort, remaining layers, B, other MB/stages and optimizer excluded.",
+    "CP/EP effective duration includes waiting; cannot substitute pure network service without readiness model."
+  ],
+  "max_endpoint_error_ms": 0.0,
+  "target_layer_end_ms": 85.39150190353394,
+  "source_layer_end_ms": 88.60042498111727,
+  "same_edges": true
+}

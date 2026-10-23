@@ -13,7 +13,7 @@ def main():
     source=BASE/'b-attention-replay-r3/graphs.json';structure=BASE/'b-attention-structure-r2/evidence.json'
     gs=json.loads(source.read_text());us=json.loads(structure.read_text());um={(u['rank'],u['unit']):u for u in us}
     result={};pairs=[];tests=[]
-    for rank in [8,10,12,14]:
+    for rank in sorted({int(k.split(':')[0][1:]) for k in gs})[::2]:
         for unit in range(4):
             xs=[gs[f'r{r}:u{unit}'] for r in [rank,rank+1]];origin=min(x['origin_us'] for x in xs);g={};cp={};flash={}
             for r,x in zip([rank,rank+1],xs):

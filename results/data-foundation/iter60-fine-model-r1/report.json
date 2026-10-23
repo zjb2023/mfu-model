@@ -1,0 +1,40 @@
+{
+  "status": "PASS_CONDITIONAL_SAME_ITERATION_FINE_MODEL_REPLAY",
+  "iteration": 60,
+  "onef1b": {
+    "replay_ms": 20378.337575435617,
+    "truth_ms": 20396.01318693161,
+    "signed_error_percent": -0.08666209093902699
+  },
+  "body": {
+    "replay_ms": 20755.334991455056,
+    "truth_ms": 20773.010603427887,
+    "signed_error_percent": -0.08508931281204779,
+    "replay_mfu_percent": 4.87032563153602,
+    "truth_mfu_percent": 4.8661815049244375,
+    "mfu_signed_error_percent": 0.08516177638235867
+  },
+  "tail_ms": 376.9974160194397,
+  "nodes": 372571,
+  "edges": 419866,
+  "detailed_FB_bindings": 112,
+  "validated_EP8_MB_units": 112,
+  "primary_cohort": "first EP8 at each middle stage; original rank0 window convention",
+  "roundoff_only_nonnegative_normalization": [],
+  "physics": {
+    "model_flops_per_iteration": 1.293891072e+17,
+    "world_size": 256,
+    "peak_flops_per_gpu_s": 500000000000000.0,
+    "source": "/home/zjb/Desktop/mfu-model/case_256gpu_pp16_cp2_a2a/results/mfu_timeline/mfu_timeline_summary.json",
+    "basis": "legacy256 effective FLOPs inferred from training logs, not independently architectural; 500TFLOP/s convention, not new hardware validation"
+  },
+  "limits": [
+    "Same-iteration target calibration with observed reserved readiness; NOT independent prediction.",
+    "New shared-DAG candidate removes15 conditional V-pack edges; frozen32→256 release untouched.",
+    "Second EP8 cohort audited independently, not inserted as a false per-FB global barrier.",
+    "First/last stages remain target whole-FB interfaces, as in original model.",
+    "PP costs are calibrated effective F/B medians, not pure service; cross-host clocks assumed comparable.",
+    "Tail is same-stream conditional parameter graph; cross-stream/all-rank causal closure remains unproven.",
+    "MFU inherits the existing effective FLOPs and peak convention."
+  ]
+}
